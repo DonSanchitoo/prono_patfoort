@@ -1,8 +1,14 @@
 {
-  "generatedAt": "2026-10-20T14:41:04.425Z",
-  "source": "ESPN public scoreboard",
+  "generatedAt": "2026-10-20T14:55:11.463Z",
+  "source": "ESPN + football-data.org + The Odds API",
   "providerStatus": "ok",
   "failures": [],
+  "coverage": {
+    "historicalMatches": 381,
+    "oddsEvents": 133,
+    "statsMatches": 47,
+    "oddsMatches": 71
+  },
   "matches": [
     {
       "id": "espn-401915399",
@@ -14,15 +20,35 @@
       "priority": 102,
       "featured": true,
       "status": "Scheduled",
-      "homeGoals": 2.05,
-      "awayGoals": 1.6,
+      "homeGoals": 2.25,
+      "awayGoals": 1.69,
       "odds": {
-        "home": 1.68,
-        "draw": 3.4,
-        "away": 2.28,
+        "home": 2.46,
+        "draw": 4.39,
+        "away": 2.41,
         "over": 1.45,
         "btts": 1.72
-      }
+      },
+      "statsSource": "football-data.org",
+      "homeStats": {
+        "sample": 6,
+        "form": "VVVVVV",
+        "avgScored": 3.1666666666666665,
+        "avgConceded": 1
+      },
+      "awayStats": {
+        "sample": 6,
+        "form": "VDVVNV",
+        "avgScored": 2.6666666666666665,
+        "avgConceded": 1
+      },
+      "oddsSource": "The Odds API",
+      "bookmakerCount": 22,
+      "realOddsMarkets": [
+        "home",
+        "draw",
+        "away"
+      ]
     },
     {
       "id": "espn-401915404",
@@ -34,15 +60,35 @@
       "priority": 72,
       "featured": false,
       "status": "Scheduled",
-      "homeGoals": 1.5999999999999999,
-      "awayGoals": 1.6,
+      "homeGoals": 0.99,
+      "awayGoals": 1.61,
       "odds": {
-        "home": 2.16,
-        "draw": 3.15,
-        "away": 2.28,
+        "home": 9.46,
+        "draw": 6.05,
+        "away": 1.29,
         "over": 1.45,
         "btts": 1.72
-      }
+      },
+      "statsSource": "football-data.org",
+      "homeStats": {
+        "sample": 2,
+        "form": "VD",
+        "avgScored": 1,
+        "avgConceded": 2
+      },
+      "awayStats": {
+        "sample": 6,
+        "form": "NDNVVV",
+        "avgScored": 1.5,
+        "avgConceded": 0.8333333333333334
+      },
+      "oddsSource": "The Odds API",
+      "bookmakerCount": 22,
+      "realOddsMarkets": [
+        "home",
+        "draw",
+        "away"
+      ]
     },
     {
       "id": "espn-401915397",
@@ -54,15 +100,35 @@
       "priority": 72,
       "featured": false,
       "status": "Scheduled",
-      "homeGoals": 2.05,
-      "awayGoals": 1.25,
+      "homeGoals": 1.53,
+      "awayGoals": 1.38,
       "odds": {
-        "home": 1.68,
-        "draw": 3.59,
-        "away": 2.92,
+        "home": 1.49,
+        "draw": 4.73,
+        "away": 6.04,
         "over": 1.45,
         "btts": 2.2
-      }
+      },
+      "statsSource": "football-data.org",
+      "homeStats": {
+        "sample": 6,
+        "form": "VVDVNV",
+        "avgScored": 1.8333333333333333,
+        "avgConceded": 1.3333333333333333
+      },
+      "awayStats": {
+        "sample": 6,
+        "form": "NVDVVD",
+        "avgScored": 1.6666666666666667,
+        "avgConceded": 1
+      },
+      "oddsSource": "The Odds API",
+      "bookmakerCount": 22,
+      "realOddsMarkets": [
+        "home",
+        "draw",
+        "away"
+      ]
     },
     {
       "id": "espn-401915401",
@@ -77,12 +143,19 @@
       "homeGoals": 2.05,
       "awayGoals": 1.25,
       "odds": {
-        "home": 1.68,
-        "draw": 3.59,
-        "away": 2.92,
+        "home": 1.12,
+        "draw": 9.56,
+        "away": 18.8,
         "over": 1.45,
         "btts": 2.2
-      }
+      },
+      "oddsSource": "The Odds API",
+      "bookmakerCount": 22,
+      "realOddsMarkets": [
+        "home",
+        "draw",
+        "away"
+      ]
     },
     {
       "id": "espn-401915400",
@@ -114,15 +187,35 @@
       "priority": 72,
       "featured": false,
       "status": "Scheduled",
-      "homeGoals": 1.5999999999999999,
-      "awayGoals": 1.6,
+      "homeGoals": 0.99,
+      "awayGoals": 1.46,
       "odds": {
-        "home": 2.16,
-        "draw": 3.15,
-        "away": 2.28,
+        "home": 3.33,
+        "draw": 3.82,
+        "away": 2.05,
         "over": 1.45,
         "btts": 1.72
-      }
+      },
+      "statsSource": "football-data.org",
+      "homeStats": {
+        "sample": 6,
+        "form": "DVVDDV",
+        "avgScored": 1.5,
+        "avgConceded": 0.8333333333333334
+      },
+      "awayStats": {
+        "sample": 6,
+        "form": "VVVVVV",
+        "avgScored": 2.3333333333333335,
+        "avgConceded": 0.3333333333333333
+      },
+      "oddsSource": "The Odds API",
+      "bookmakerCount": 22,
+      "realOddsMarkets": [
+        "home",
+        "draw",
+        "away"
+      ]
     },
     {
       "id": "espn-401915403",
@@ -154,15 +247,35 @@
       "priority": 42,
       "featured": false,
       "status": "Scheduled",
-      "homeGoals": 1.45,
-      "awayGoals": 1.15,
+      "homeGoals": 3.33,
+      "awayGoals": 0.77,
       "odds": {
-        "home": 2.38,
-        "draw": 3.31,
-        "away": 3.17,
+        "home": 1.11,
+        "draw": 9.74,
+        "away": 21.68,
         "over": 1.45,
         "btts": 2.39
-      }
+      },
+      "statsSource": "football-data.org",
+      "homeStats": {
+        "sample": 6,
+        "form": "VDNNVN",
+        "avgScored": 1.6666666666666667,
+        "avgConceded": 1.1666666666666667
+      },
+      "awayStats": {
+        "sample": 2,
+        "form": "DD",
+        "avgScored": 0.5,
+        "avgConceded": 4.5
+      },
+      "oddsSource": "The Odds API",
+      "bookmakerCount": 22,
+      "realOddsMarkets": [
+        "home",
+        "draw",
+        "away"
+      ]
     },
     {
       "id": "espn-401915398",
@@ -177,12 +290,19 @@
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
-        "home": 2.38,
-        "draw": 3.31,
-        "away": 3.17,
+        "home": 1.51,
+        "draw": 4.66,
+        "away": 5.76,
         "over": 1.45,
         "btts": 2.39
-      }
+      },
+      "oddsSource": "The Odds API",
+      "bookmakerCount": 22,
+      "realOddsMarkets": [
+        "home",
+        "draw",
+        "away"
+      ]
     },
     {
       "id": "espn-401915312",
@@ -197,12 +317,19 @@
       "homeGoals": 2.05,
       "awayGoals": 1.6,
       "odds": {
-        "home": 1.68,
-        "draw": 3.4,
-        "away": 2.28,
+        "home": 2.04,
+        "draw": 3.83,
+        "away": 3.32,
         "over": 1.45,
         "btts": 1.72
-      }
+      },
+      "oddsSource": "The Odds API",
+      "bookmakerCount": 22,
+      "realOddsMarkets": [
+        "home",
+        "draw",
+        "away"
+      ]
     },
     {
       "id": "espn-401915395",
@@ -217,12 +344,19 @@
       "homeGoals": 1.5999999999999999,
       "awayGoals": 1.6,
       "odds": {
-        "home": 2.16,
-        "draw": 3.15,
-        "away": 2.28,
+        "home": 2.21,
+        "draw": 3.76,
+        "away": 3.01,
         "over": 1.45,
         "btts": 1.72
-      }
+      },
+      "oddsSource": "The Odds API",
+      "bookmakerCount": 22,
+      "realOddsMarkets": [
+        "home",
+        "draw",
+        "away"
+      ]
     },
     {
       "id": "espn-401915390",
@@ -234,14 +368,27 @@
       "priority": 72,
       "featured": false,
       "status": "Scheduled",
-      "homeGoals": 2.05,
-      "awayGoals": 1.25,
+      "homeGoals": 2.07,
+      "awayGoals": 1.84,
       "odds": {
         "home": 1.68,
         "draw": 3.59,
         "away": 2.92,
         "over": 1.45,
         "btts": 2.2
+      },
+      "statsSource": "football-data.org",
+      "homeStats": {
+        "sample": 6,
+        "form": "VDVNVD",
+        "avgScored": 2.8333333333333335,
+        "avgConceded": 2
+      },
+      "awayStats": {
+        "sample": 2,
+        "form": "VN",
+        "avgScored": 2,
+        "avgConceded": 1
       }
     },
     {
@@ -254,15 +401,35 @@
       "priority": 72,
       "featured": false,
       "status": "Scheduled",
-      "homeGoals": 2.05,
-      "awayGoals": 1.25,
+      "homeGoals": 2.61,
+      "awayGoals": 1.76,
       "odds": {
-        "home": 1.68,
-        "draw": 3.59,
-        "away": 2.92,
+        "home": 1.24,
+        "draw": 7,
+        "away": 9.8,
         "over": 1.45,
         "btts": 2.2
-      }
+      },
+      "statsSource": "football-data.org",
+      "homeStats": {
+        "sample": 6,
+        "form": "VVVDVV",
+        "avgScored": 2.8333333333333335,
+        "avgConceded": 1.5
+      },
+      "awayStats": {
+        "sample": 6,
+        "form": "DVVDVD",
+        "avgScored": 2.3333333333333335,
+        "avgConceded": 2
+      },
+      "oddsSource": "The Odds API",
+      "bookmakerCount": 22,
+      "realOddsMarkets": [
+        "home",
+        "draw",
+        "away"
+      ]
     },
     {
       "id": "espn-401915396",
@@ -277,12 +444,19 @@
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
-        "home": 2.38,
-        "draw": 3.31,
-        "away": 3.17,
+        "home": 2.19,
+        "draw": 3.68,
+        "away": 3.1,
         "over": 1.45,
         "btts": 2.39
-      }
+      },
+      "oddsSource": "The Odds API",
+      "bookmakerCount": 22,
+      "realOddsMarkets": [
+        "home",
+        "draw",
+        "away"
+      ]
     },
     {
       "id": "espn-401915394",
@@ -294,15 +468,35 @@
       "priority": 42,
       "featured": false,
       "status": "Scheduled",
-      "homeGoals": 1.45,
-      "awayGoals": 1.15,
+      "homeGoals": 3.06,
+      "awayGoals": 1.53,
       "odds": {
-        "home": 2.38,
-        "draw": 3.31,
-        "away": 3.17,
+        "home": 1.22,
+        "draw": 6.72,
+        "away": 11.74,
         "over": 1.45,
         "btts": 2.39
-      }
+      },
+      "statsSource": "football-data.org",
+      "homeStats": {
+        "sample": 6,
+        "form": "VVNVDV",
+        "avgScored": 2.6666666666666665,
+        "avgConceded": 1.3333333333333333
+      },
+      "awayStats": {
+        "sample": 2,
+        "form": "ND",
+        "avgScored": 2,
+        "avgConceded": 3
+      },
+      "oddsSource": "The Odds API",
+      "bookmakerCount": 22,
+      "realOddsMarkets": [
+        "home",
+        "draw",
+        "away"
+      ]
     },
     {
       "id": "espn-401915388",
@@ -334,15 +528,35 @@
       "priority": 42,
       "featured": false,
       "status": "Scheduled",
-      "homeGoals": 1.45,
-      "awayGoals": 1.15,
+      "homeGoals": 3.15,
+      "awayGoals": 1.76,
       "odds": {
-        "home": 2.38,
-        "draw": 3.31,
-        "away": 3.17,
+        "home": 1.55,
+        "draw": 4.7,
+        "away": 5.1,
         "over": 1.45,
         "btts": 2.39
-      }
+      },
+      "statsSource": "football-data.org",
+      "homeStats": {
+        "sample": 6,
+        "form": "DVVNVV",
+        "avgScored": 2.3333333333333335,
+        "avgConceded": 1.8333333333333333
+      },
+      "awayStats": {
+        "sample": 2,
+        "form": "VD",
+        "avgScored": 2,
+        "avgConceded": 3.5
+      },
+      "oddsSource": "The Odds API",
+      "bookmakerCount": 22,
+      "realOddsMarkets": [
+        "home",
+        "draw",
+        "away"
+      ]
     },
     {
       "id": "espn-401915391",
@@ -374,15 +588,35 @@
       "priority": 33,
       "featured": false,
       "status": "Scheduled",
-      "homeGoals": 1.45,
-      "awayGoals": 1.15,
+      "homeGoals": 1.35,
+      "awayGoals": 1.46,
       "odds": {
-        "home": 2.38,
-        "draw": 3.31,
-        "away": 3.17,
+        "home": 3.52,
+        "draw": 3.27,
+        "away": 2.15,
         "over": 1.45,
         "btts": 2.39
-      }
+      },
+      "statsSource": "football-data.org",
+      "homeStats": {
+        "sample": 6,
+        "form": "NNDDNV",
+        "avgScored": 2,
+        "avgConceded": 2.1666666666666665
+      },
+      "awayStats": {
+        "sample": 6,
+        "form": "NNNVVD",
+        "avgScored": 1,
+        "avgConceded": 0.5
+      },
+      "oddsSource": "The Odds API",
+      "bookmakerCount": 20,
+      "realOddsMarkets": [
+        "home",
+        "draw",
+        "away"
+      ]
     },
     {
       "id": "espn-401915547",
@@ -394,14 +628,27 @@
       "priority": 58,
       "featured": false,
       "status": "Scheduled",
-      "homeGoals": 1.9,
-      "awayGoals": 1.15,
+      "homeGoals": 1.8,
+      "awayGoals": 1.61,
       "odds": {
         "home": 1.82,
         "draw": 3.56,
         "away": 3.17,
         "over": 1.45,
         "btts": 2.39
+      },
+      "statsSource": "football-data.org",
+      "homeStats": {
+        "sample": 6,
+        "form": "DNVDNV",
+        "avgScored": 1.3333333333333333,
+        "avgConceded": 1.3333333333333333
+      },
+      "awayStats": {
+        "sample": 6,
+        "form": "DVDVVV",
+        "avgScored": 2.1666666666666665,
+        "avgConceded": 2
       }
     },
     {
@@ -417,12 +664,19 @@
       "homeGoals": 1.45,
       "awayGoals": 1.5,
       "odds": {
-        "home": 2.38,
-        "draw": 3.18,
-        "away": 2.43,
+        "home": 3.49,
+        "draw": 3.6,
+        "away": 2,
         "over": 1.45,
         "btts": 1.9
-      }
+      },
+      "oddsSource": "The Odds API",
+      "bookmakerCount": 20,
+      "realOddsMarkets": [
+        "home",
+        "draw",
+        "away"
+      ]
     },
     {
       "id": "espn-401915552",
@@ -434,15 +688,35 @@
       "priority": 58,
       "featured": false,
       "status": "Scheduled",
-      "homeGoals": 1.45,
-      "awayGoals": 1.5,
+      "homeGoals": 1.26,
+      "awayGoals": 1.76,
       "odds": {
-        "home": 2.38,
-        "draw": 3.18,
-        "away": 2.43,
+        "home": 2.14,
+        "draw": 3.61,
+        "away": 3.16,
         "over": 1.45,
         "btts": 1.9
-      }
+      },
+      "statsSource": "football-data.org",
+      "homeStats": {
+        "sample": 6,
+        "form": "VDDNNN",
+        "avgScored": 1.3333333333333333,
+        "avgConceded": 1.8333333333333333
+      },
+      "awayStats": {
+        "sample": 6,
+        "form": "VNVNNV",
+        "avgScored": 2,
+        "avgConceded": 1
+      },
+      "oddsSource": "The Odds API",
+      "bookmakerCount": 20,
+      "realOddsMarkets": [
+        "home",
+        "draw",
+        "away"
+      ]
     },
     {
       "id": "espn-401915548",
@@ -457,12 +731,19 @@
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
-        "home": 2.38,
-        "draw": 3.31,
-        "away": 3.17,
+        "home": 5.75,
+        "draw": 4.45,
+        "away": 1.5,
         "over": 1.45,
         "btts": 2.39
-      }
+      },
+      "oddsSource": "The Odds API",
+      "bookmakerCount": 20,
+      "realOddsMarkets": [
+        "home",
+        "draw",
+        "away"
+      ]
     },
     {
       "id": "espn-401915556",
@@ -477,12 +758,19 @@
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
-        "home": 2.38,
-        "draw": 3.31,
-        "away": 3.17,
+        "home": 1.65,
+        "draw": 4.14,
+        "away": 4.65,
         "over": 1.45,
         "btts": 2.39
-      }
+      },
+      "oddsSource": "The Odds API",
+      "bookmakerCount": 20,
+      "realOddsMarkets": [
+        "home",
+        "draw",
+        "away"
+      ]
     },
     {
       "id": "espn-401915558",
@@ -497,12 +785,19 @@
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
-        "home": 2.38,
-        "draw": 3.31,
-        "away": 3.17,
+        "home": 1.35,
+        "draw": 5.03,
+        "away": 8.02,
         "over": 1.45,
         "btts": 2.39
-      }
+      },
+      "oddsSource": "The Odds API",
+      "bookmakerCount": 20,
+      "realOddsMarkets": [
+        "home",
+        "draw",
+        "away"
+      ]
     },
     {
       "id": "espn-401915546",
@@ -517,12 +812,19 @@
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
-        "home": 2.38,
-        "draw": 3.31,
-        "away": 3.17,
+        "home": 4.8,
+        "draw": 3.99,
+        "away": 1.66,
         "over": 1.45,
         "btts": 2.39
-      }
+      },
+      "oddsSource": "The Odds API",
+      "bookmakerCount": 20,
+      "realOddsMarkets": [
+        "home",
+        "draw",
+        "away"
+      ]
     },
     {
       "id": "espn-401915559",
@@ -537,12 +839,19 @@
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
-        "home": 2.38,
-        "draw": 3.31,
-        "away": 3.17,
+        "home": 11.08,
+        "draw": 6.59,
+        "away": 1.22,
         "over": 1.45,
         "btts": 2.39
-      }
+      },
+      "oddsSource": "The Odds API",
+      "bookmakerCount": 20,
+      "realOddsMarkets": [
+        "home",
+        "draw",
+        "away"
+      ]
     },
     {
       "id": "espn-401915545",
@@ -577,12 +886,19 @@
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
-        "home": 2.38,
-        "draw": 3.31,
-        "away": 3.17,
+        "home": 2.09,
+        "draw": 3.74,
+        "away": 3.16,
         "over": 1.45,
         "btts": 2.39
-      }
+      },
+      "oddsSource": "The Odds API",
+      "bookmakerCount": 20,
+      "realOddsMarkets": [
+        "home",
+        "draw",
+        "away"
+      ]
     },
     {
       "id": "espn-401915555",
@@ -597,12 +913,19 @@
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
-        "home": 2.38,
-        "draw": 3.31,
-        "away": 3.17,
+        "home": 2.65,
+        "draw": 3.45,
+        "away": 2.54,
         "over": 1.45,
         "btts": 2.39
-      }
+      },
+      "oddsSource": "The Odds API",
+      "bookmakerCount": 20,
+      "realOddsMarkets": [
+        "home",
+        "draw",
+        "away"
+      ]
     },
     {
       "id": "espn-401915542",
@@ -637,12 +960,19 @@
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
-        "home": 2.38,
-        "draw": 3.31,
-        "away": 3.17,
+        "home": 5.74,
+        "draw": 4.51,
+        "away": 1.5,
         "over": 1.45,
         "btts": 2.39
-      }
+      },
+      "oddsSource": "The Odds API",
+      "bookmakerCount": 20,
+      "realOddsMarkets": [
+        "home",
+        "draw",
+        "away"
+      ]
     },
     {
       "id": "espn-401915541",
@@ -657,12 +987,19 @@
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
-        "home": 2.38,
-        "draw": 3.31,
-        "away": 3.17,
+        "home": 4.86,
+        "draw": 4.08,
+        "away": 1.64,
         "over": 1.45,
         "btts": 2.39
-      }
+      },
+      "oddsSource": "The Odds API",
+      "bookmakerCount": 20,
+      "realOddsMarkets": [
+        "home",
+        "draw",
+        "away"
+      ]
     },
     {
       "id": "espn-401915554",
@@ -717,12 +1054,19 @@
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
-        "home": 2.38,
-        "draw": 3.31,
-        "away": 3.17,
+        "home": 2.01,
+        "draw": 3.88,
+        "away": 3.28,
         "over": 1.45,
         "btts": 2.39
-      }
+      },
+      "oddsSource": "The Odds API",
+      "bookmakerCount": 20,
+      "realOddsMarkets": [
+        "home",
+        "draw",
+        "away"
+      ]
     },
     {
       "id": "espn-401915539",
@@ -737,12 +1081,19 @@
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
-        "home": 2.38,
-        "draw": 3.31,
-        "away": 3.17,
+        "home": 1.77,
+        "draw": 3.82,
+        "away": 4.22,
         "over": 1.45,
         "btts": 2.39
-      }
+      },
+      "oddsSource": "The Odds API",
+      "bookmakerCount": 20,
+      "realOddsMarkets": [
+        "home",
+        "draw",
+        "away"
+      ]
     },
     {
       "id": "espn-401879253",
@@ -754,15 +1105,35 @@
       "priority": 34,
       "featured": false,
       "status": "Scheduled",
-      "homeGoals": 1.45,
-      "awayGoals": 1.15,
+      "homeGoals": 1.53,
+      "awayGoals": 1.46,
       "odds": {
-        "home": 2.38,
-        "draw": 3.31,
-        "away": 3.17,
+        "home": 3.04,
+        "draw": 3.47,
+        "away": 2.28,
         "over": 1.45,
         "btts": 2.39
-      }
+      },
+      "statsSource": "football-data.org",
+      "homeStats": {
+        "sample": 6,
+        "form": "DVDVDD",
+        "avgScored": 1.5,
+        "avgConceded": 2.3333333333333335
+      },
+      "awayStats": {
+        "sample": 6,
+        "form": "DDDVNN",
+        "avgScored": 0.8333333333333334,
+        "avgConceded": 1.3333333333333333
+      },
+      "oddsSource": "The Odds API",
+      "bookmakerCount": 25,
+      "realOddsMarkets": [
+        "home",
+        "draw",
+        "away"
+      ]
     },
     {
       "id": "espn-401882836",
@@ -774,15 +1145,35 @@
       "priority": 33,
       "featured": false,
       "status": "Scheduled",
-      "homeGoals": 1.45,
-      "awayGoals": 1.15,
+      "homeGoals": 1.71,
+      "awayGoals": 1.07,
       "odds": {
-        "home": 2.38,
-        "draw": 3.31,
-        "away": 3.17,
+        "home": 1.76,
+        "draw": 3.62,
+        "away": 4.76,
         "over": 1.45,
         "btts": 2.39
-      }
+      },
+      "statsSource": "football-data.org",
+      "homeStats": {
+        "sample": 6,
+        "form": "DDNDDV",
+        "avgScored": 1.3333333333333333,
+        "avgConceded": 1.5
+      },
+      "awayStats": {
+        "sample": 6,
+        "form": "DNDDNN",
+        "avgScored": 0.8333333333333334,
+        "avgConceded": 1.8333333333333333
+      },
+      "oddsSource": "The Odds API",
+      "bookmakerCount": 20,
+      "realOddsMarkets": [
+        "home",
+        "draw",
+        "away"
+      ]
     },
     {
       "id": "espn-401884761",
@@ -794,15 +1185,35 @@
       "priority": 32,
       "featured": false,
       "status": "Scheduled",
-      "homeGoals": 1.45,
-      "awayGoals": 1.15,
+      "homeGoals": 2.61,
+      "awayGoals": 1,
       "odds": {
-        "home": 2.38,
-        "draw": 3.31,
-        "away": 3.17,
+        "home": 1.37,
+        "draw": 5.58,
+        "away": 6.62,
         "over": 1.45,
         "btts": 2.39
-      }
+      },
+      "statsSource": "football-data.org",
+      "homeStats": {
+        "sample": 6,
+        "form": "DVVDDV",
+        "avgScored": 1.5,
+        "avgConceded": 0.8333333333333334
+      },
+      "awayStats": {
+        "sample": 6,
+        "form": "DDDDDD",
+        "avgScored": 1.3333333333333333,
+        "avgConceded": 3.3333333333333335
+      },
+      "oddsSource": "The Odds API",
+      "bookmakerCount": 23,
+      "realOddsMarkets": [
+        "home",
+        "draw",
+        "away"
+      ]
     },
     {
       "id": "espn-401874957",
@@ -814,15 +1225,35 @@
       "priority": 31,
       "featured": false,
       "status": "Scheduled",
-      "homeGoals": 1.45,
-      "awayGoals": 1.15,
+      "homeGoals": 1.8,
+      "awayGoals": 1.46,
       "odds": {
-        "home": 2.38,
-        "draw": 3.31,
-        "away": 3.17,
+        "home": 2.11,
+        "draw": 3.39,
+        "away": 3.43,
         "over": 1.45,
         "btts": 2.39
-      }
+      },
+      "statsSource": "football-data.org",
+      "homeStats": {
+        "sample": 6,
+        "form": "VVNDVD",
+        "avgScored": 1.5,
+        "avgConceded": 1.1666666666666667
+      },
+      "awayStats": {
+        "sample": 6,
+        "form": "VDVDND",
+        "avgScored": 2,
+        "avgConceded": 1.8333333333333333
+      },
+      "oddsSource": "The Odds API",
+      "bookmakerCount": 24,
+      "realOddsMarkets": [
+        "home",
+        "draw",
+        "away"
+      ]
     },
     {
       "id": "espn-401876428",
@@ -837,12 +1268,19 @@
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
-        "home": 2.38,
-        "draw": 3.31,
-        "away": 3.17,
+        "home": 2.21,
+        "draw": 3.4,
+        "away": 3.18,
         "over": 1.45,
         "btts": 2.39
-      }
+      },
+      "oddsSource": "The Odds API",
+      "bookmakerCount": 22,
+      "realOddsMarkets": [
+        "home",
+        "draw",
+        "away"
+      ]
     },
     {
       "id": "espn-401879256",
@@ -854,15 +1292,35 @@
       "priority": 64,
       "featured": false,
       "status": "Scheduled",
-      "homeGoals": 1.5999999999999999,
-      "awayGoals": 1.6,
+      "homeGoals": 2.25,
+      "awayGoals": 1.84,
       "odds": {
-        "home": 2.16,
-        "draw": 3.15,
-        "away": 2.28,
+        "home": 4.42,
+        "draw": 4.15,
+        "away": 1.7,
         "over": 1.45,
         "btts": 1.72
-      }
+      },
+      "statsSource": "football-data.org",
+      "homeStats": {
+        "sample": 6,
+        "form": "VVNVDV",
+        "avgScored": 2.6666666666666665,
+        "avgConceded": 1.3333333333333333
+      },
+      "awayStats": {
+        "sample": 6,
+        "form": "VDVVVV",
+        "avgScored": 2.6666666666666665,
+        "avgConceded": 1.5
+      },
+      "oddsSource": "The Odds API",
+      "bookmakerCount": 25,
+      "realOddsMarkets": [
+        "home",
+        "draw",
+        "away"
+      ]
     },
     {
       "id": "espn-401878768",
@@ -874,15 +1332,35 @@
       "priority": 64,
       "featured": false,
       "status": "Scheduled",
-      "homeGoals": 2.05,
-      "awayGoals": 1.25,
+      "homeGoals": 1.44,
+      "awayGoals": 0.77,
       "odds": {
-        "home": 1.68,
-        "draw": 3.59,
-        "away": 2.92,
+        "home": 1.39,
+        "draw": 4.64,
+        "away": 8.37,
         "over": 1.45,
         "btts": 2.2
-      }
+      },
+      "statsSource": "football-data.org",
+      "homeStats": {
+        "sample": 6,
+        "form": "VVVDVV",
+        "avgScored": 1.5,
+        "avgConceded": 0.6666666666666666
+      },
+      "awayStats": {
+        "sample": 6,
+        "form": "DNVNNN",
+        "avgScored": 1,
+        "avgConceded": 1.1666666666666667
+      },
+      "oddsSource": "The Odds API",
+      "bookmakerCount": 25,
+      "realOddsMarkets": [
+        "home",
+        "draw",
+        "away"
+      ]
     },
     {
       "id": "espn-401878767",
@@ -894,15 +1372,35 @@
       "priority": 64,
       "featured": false,
       "status": "Scheduled",
-      "homeGoals": 2.05,
-      "awayGoals": 1.25,
+      "homeGoals": 1.89,
+      "awayGoals": 1.3,
       "odds": {
-        "home": 1.68,
-        "draw": 3.59,
-        "away": 2.92,
+        "home": 1.69,
+        "draw": 4.25,
+        "away": 4.42,
         "over": 1.45,
         "btts": 2.2
-      }
+      },
+      "statsSource": "football-data.org",
+      "homeStats": {
+        "sample": 6,
+        "form": "VVDNDV",
+        "avgScored": 2.3333333333333335,
+        "avgConceded": 1.8333333333333333
+      },
+      "awayStats": {
+        "sample": 6,
+        "form": "VNDNND",
+        "avgScored": 1,
+        "avgConceded": 1.1666666666666667
+      },
+      "oddsSource": "The Odds API",
+      "bookmakerCount": 25,
+      "realOddsMarkets": [
+        "home",
+        "draw",
+        "away"
+      ]
     },
     {
       "id": "espn-401882834",
@@ -914,15 +1412,35 @@
       "priority": 63,
       "featured": false,
       "status": "Scheduled",
-      "homeGoals": 2.05,
-      "awayGoals": 1.25,
+      "homeGoals": 2.07,
+      "awayGoals": 0.61,
       "odds": {
-        "home": 1.68,
-        "draw": 3.59,
-        "away": 2.92,
+        "home": 1.25,
+        "draw": 6.06,
+        "away": 10.67,
         "over": 1.45,
         "btts": 2.2
-      }
+      },
+      "statsSource": "football-data.org",
+      "homeStats": {
+        "sample": 6,
+        "form": "VVVVVV",
+        "avgScored": 2.3333333333333335,
+        "avgConceded": 0.3333333333333333
+      },
+      "awayStats": {
+        "sample": 6,
+        "form": "DNDDNN",
+        "avgScored": 1,
+        "avgConceded": 1.5
+      },
+      "oddsSource": "The Odds API",
+      "bookmakerCount": 17,
+      "realOddsMarkets": [
+        "home",
+        "draw",
+        "away"
+      ]
     },
     {
       "id": "espn-401884763",
@@ -934,15 +1452,35 @@
       "priority": 62,
       "featured": false,
       "status": "Scheduled",
-      "homeGoals": 2.05,
-      "awayGoals": 1.25,
+      "homeGoals": 2.25,
+      "awayGoals": 1.15,
       "odds": {
-        "home": 1.68,
-        "draw": 3.59,
-        "away": 2.92,
+        "home": 1.45,
+        "draw": 5.07,
+        "away": 5.82,
         "over": 1.45,
         "btts": 2.2
-      }
+      },
+      "statsSource": "football-data.org",
+      "homeStats": {
+        "sample": 6,
+        "form": "NDNVVV",
+        "avgScored": 1.5,
+        "avgConceded": 0.8333333333333334
+      },
+      "awayStats": {
+        "sample": 6,
+        "form": "VDNVDN",
+        "avgScored": 1.6666666666666667,
+        "avgConceded": 2.6666666666666665
+      },
+      "oddsSource": "The Odds API",
+      "bookmakerCount": 23,
+      "realOddsMarkets": [
+        "home",
+        "draw",
+        "away"
+      ]
     },
     {
       "id": "espn-401874948",
@@ -954,15 +1492,35 @@
       "priority": 61,
       "featured": false,
       "status": "Scheduled",
-      "homeGoals": 2.05,
-      "awayGoals": 1.25,
+      "homeGoals": 1.17,
+      "awayGoals": 1.23,
       "odds": {
-        "home": 1.68,
-        "draw": 3.59,
-        "away": 2.92,
+        "home": 2.8,
+        "draw": 3.38,
+        "away": 2.47,
         "over": 1.45,
         "btts": 2.2
-      }
+      },
+      "statsSource": "football-data.org",
+      "homeStats": {
+        "sample": 6,
+        "form": "DDVNVD",
+        "avgScored": 1,
+        "avgConceded": 1
+      },
+      "awayStats": {
+        "sample": 6,
+        "form": "VDNNVN",
+        "avgScored": 1.6666666666666667,
+        "avgConceded": 1.1666666666666667
+      },
+      "oddsSource": "The Odds API",
+      "bookmakerCount": 24,
+      "realOddsMarkets": [
+        "home",
+        "draw",
+        "away"
+      ]
     },
     {
       "id": "espn-401879255",
@@ -974,15 +1532,35 @@
       "priority": 34,
       "featured": false,
       "status": "Scheduled",
-      "homeGoals": 1.45,
-      "awayGoals": 1.15,
+      "homeGoals": 1.17,
+      "awayGoals": 1.23,
       "odds": {
-        "home": 2.38,
-        "draw": 3.31,
-        "away": 3.17,
+        "home": 2.93,
+        "draw": 3.48,
+        "away": 2.34,
         "over": 1.45,
         "btts": 2.39
-      }
+      },
+      "statsSource": "football-data.org",
+      "homeStats": {
+        "sample": 6,
+        "form": "DVVDDD",
+        "avgScored": 1,
+        "avgConceded": 1.8333333333333333
+      },
+      "awayStats": {
+        "sample": 6,
+        "form": "VDNNDD",
+        "avgScored": 0.8333333333333334,
+        "avgConceded": 1.1666666666666667
+      },
+      "oddsSource": "The Odds API",
+      "bookmakerCount": 25,
+      "realOddsMarkets": [
+        "home",
+        "draw",
+        "away"
+      ]
     },
     {
       "id": "espn-401882830",
@@ -994,15 +1572,35 @@
       "priority": 33,
       "featured": false,
       "status": "Scheduled",
-      "homeGoals": 1.45,
-      "awayGoals": 1.15,
+      "homeGoals": 1.62,
+      "awayGoals": 1.69,
       "odds": {
-        "home": 2.38,
-        "draw": 3.31,
-        "away": 3.17,
+        "home": 1.75,
+        "draw": 3.78,
+        "away": 4.49,
         "over": 1.45,
         "btts": 2.39
-      }
+      },
+      "statsSource": "football-data.org",
+      "homeStats": {
+        "sample": 6,
+        "form": "NNVDVD",
+        "avgScored": 1.6666666666666667,
+        "avgConceded": 2.3333333333333335
+      },
+      "awayStats": {
+        "sample": 6,
+        "form": "NNVDND",
+        "avgScored": 1.3333333333333333,
+        "avgConceded": 1.3333333333333333
+      },
+      "oddsSource": "The Odds API",
+      "bookmakerCount": 19,
+      "realOddsMarkets": [
+        "home",
+        "draw",
+        "away"
+      ]
     },
     {
       "id": "espn-401882831",
@@ -1014,15 +1612,35 @@
       "priority": 33,
       "featured": false,
       "status": "Scheduled",
-      "homeGoals": 1.45,
-      "awayGoals": 1.15,
+      "homeGoals": 1.44,
+      "awayGoals": 1.99,
       "odds": {
-        "home": 2.38,
-        "draw": 3.31,
-        "away": 3.17,
+        "home": 2.37,
+        "draw": 3.57,
+        "away": 2.8,
         "over": 1.45,
         "btts": 2.39
-      }
+      },
+      "statsSource": "football-data.org",
+      "homeStats": {
+        "sample": 6,
+        "form": "DNDDVD",
+        "avgScored": 1.3333333333333333,
+        "avgConceded": 3.3333333333333335
+      },
+      "awayStats": {
+        "sample": 6,
+        "form": "DNDDVN",
+        "avgScored": 1,
+        "avgConceded": 1.3333333333333333
+      },
+      "oddsSource": "The Odds API",
+      "bookmakerCount": 18,
+      "realOddsMarkets": [
+        "home",
+        "draw",
+        "away"
+      ]
     },
     {
       "id": "espn-401882827",
@@ -1034,15 +1652,35 @@
       "priority": 33,
       "featured": false,
       "status": "Scheduled",
-      "homeGoals": 1.45,
-      "awayGoals": 1.15,
+      "homeGoals": 0.99,
+      "awayGoals": 1.61,
       "odds": {
-        "home": 2.38,
-        "draw": 3.31,
-        "away": 3.17,
+        "home": 3.19,
+        "draw": 3.61,
+        "away": 2.14,
         "over": 1.45,
         "btts": 2.39
-      }
+      },
+      "statsSource": "football-data.org",
+      "homeStats": {
+        "sample": 6,
+        "form": "NNDVDD",
+        "avgScored": 0.8333333333333334,
+        "avgConceded": 1.8333333333333333
+      },
+      "awayStats": {
+        "sample": 6,
+        "form": "NVDVVD",
+        "avgScored": 1.6666666666666667,
+        "avgConceded": 1
+      },
+      "oddsSource": "The Odds API",
+      "bookmakerCount": 19,
+      "realOddsMarkets": [
+        "home",
+        "draw",
+        "away"
+      ]
     },
     {
       "id": "espn-401884758",
@@ -1054,15 +1692,35 @@
       "priority": 32,
       "featured": false,
       "status": "Scheduled",
-      "homeGoals": 1.45,
-      "awayGoals": 1.15,
+      "homeGoals": 2.97,
+      "awayGoals": 1.3,
       "odds": {
-        "home": 2.38,
-        "draw": 3.31,
-        "away": 3.17,
+        "home": 1.83,
+        "draw": 3.98,
+        "away": 3.82,
         "over": 1.45,
         "btts": 2.39
-      }
+      },
+      "statsSource": "football-data.org",
+      "homeStats": {
+        "sample": 6,
+        "form": "DNDNVV",
+        "avgScored": 2.6666666666666665,
+        "avgConceded": 2
+      },
+      "awayStats": {
+        "sample": 6,
+        "form": "NVDDDN",
+        "avgScored": 0.8333333333333334,
+        "avgConceded": 2.8333333333333335
+      },
+      "oddsSource": "The Odds API",
+      "bookmakerCount": 23,
+      "realOddsMarkets": [
+        "home",
+        "draw",
+        "away"
+      ]
     },
     {
       "id": "espn-401884756",
@@ -1117,12 +1775,19 @@
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
-        "home": 2.38,
-        "draw": 3.31,
-        "away": 3.17,
+        "home": 1.38,
+        "draw": 5.39,
+        "away": 6.62,
         "over": 1.45,
         "btts": 2.39
-      }
+      },
+      "oddsSource": "The Odds API",
+      "bookmakerCount": 23,
+      "realOddsMarkets": [
+        "home",
+        "draw",
+        "away"
+      ]
     },
     {
       "id": "espn-401884755",
@@ -1154,15 +1819,35 @@
       "priority": 31,
       "featured": false,
       "status": "Scheduled",
-      "homeGoals": 1.45,
-      "awayGoals": 1.15,
+      "homeGoals": 1.26,
+      "awayGoals": 1,
       "odds": {
-        "home": 2.38,
-        "draw": 3.31,
-        "away": 3.17,
+        "home": 3.13,
+        "draw": 3.04,
+        "away": 2.44,
         "over": 1.45,
         "btts": 2.39
-      }
+      },
+      "statsSource": "football-data.org",
+      "homeStats": {
+        "sample": 6,
+        "form": "DNVVVD",
+        "avgScored": 0.8333333333333334,
+        "avgConceded": 1.1666666666666667
+      },
+      "awayStats": {
+        "sample": 6,
+        "form": "DVNDND",
+        "avgScored": 1,
+        "avgConceded": 1.5
+      },
+      "oddsSource": "The Odds API",
+      "bookmakerCount": 24,
+      "realOddsMarkets": [
+        "home",
+        "draw",
+        "away"
+      ]
     },
     {
       "id": "espn-401874961",
@@ -1177,12 +1862,19 @@
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
-        "home": 2.38,
-        "draw": 3.31,
-        "away": 3.17,
+        "home": 1.45,
+        "draw": 4.7,
+        "away": 6.4,
         "over": 1.45,
         "btts": 2.39
-      }
+      },
+      "oddsSource": "The Odds API",
+      "bookmakerCount": 24,
+      "realOddsMarkets": [
+        "home",
+        "draw",
+        "away"
+      ]
     },
     {
       "id": "espn-401874955",
@@ -1197,12 +1889,19 @@
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
-        "home": 2.38,
-        "draw": 3.31,
-        "away": 3.17,
+        "home": 1.45,
+        "draw": 4.35,
+        "away": 7.16,
         "over": 1.45,
         "btts": 2.39
-      }
+      },
+      "oddsSource": "The Odds API",
+      "bookmakerCount": 24,
+      "realOddsMarkets": [
+        "home",
+        "draw",
+        "away"
+      ]
     },
     {
       "id": "espn-401876423",
@@ -1214,15 +1913,35 @@
       "priority": 30,
       "featured": false,
       "status": "Scheduled",
-      "homeGoals": 1.45,
-      "awayGoals": 1.15,
+      "homeGoals": 2.52,
+      "awayGoals": 1.07,
       "odds": {
-        "home": 2.38,
-        "draw": 3.31,
-        "away": 3.17,
+        "home": 1.63,
+        "draw": 4.13,
+        "away": 4.87,
         "over": 1.45,
         "btts": 2.39
-      }
+      },
+      "statsSource": "football-data.org",
+      "homeStats": {
+        "sample": 6,
+        "form": "VNVNDN",
+        "avgScored": 2,
+        "avgConceded": 1.5
+      },
+      "awayStats": {
+        "sample": 6,
+        "form": "DDDDDV",
+        "avgScored": 0.8333333333333334,
+        "avgConceded": 2.6666666666666665
+      },
+      "oddsSource": "The Odds API",
+      "bookmakerCount": 22,
+      "realOddsMarkets": [
+        "home",
+        "draw",
+        "away"
+      ]
     },
     {
       "id": "espn-401876427",
@@ -1254,15 +1973,35 @@
       "priority": 93,
       "featured": true,
       "status": "Scheduled",
-      "homeGoals": 2.05,
-      "awayGoals": 1.6,
+      "homeGoals": 2.25,
+      "awayGoals": 1.76,
       "odds": {
-        "home": 1.68,
-        "draw": 3.4,
-        "away": 2.28,
+        "home": 1.57,
+        "draw": 5.35,
+        "away": 4.33,
         "over": 1.45,
         "btts": 1.72
-      }
+      },
+      "statsSource": "football-data.org",
+      "homeStats": {
+        "sample": 6,
+        "form": "VDVVNV",
+        "avgScored": 2.6666666666666665,
+        "avgConceded": 1
+      },
+      "awayStats": {
+        "sample": 6,
+        "form": "VVVDVV",
+        "avgScored": 2.8333333333333335,
+        "avgConceded": 1.5
+      },
+      "oddsSource": "The Odds API",
+      "bookmakerCount": 20,
+      "realOddsMarkets": [
+        "home",
+        "draw",
+        "away"
+      ]
     },
     {
       "id": "espn-401878765",
@@ -1274,14 +2013,27 @@
       "priority": 64,
       "featured": false,
       "status": "Scheduled",
-      "homeGoals": 2.05,
-      "awayGoals": 1.25,
+      "homeGoals": 1.44,
+      "awayGoals": 2.07,
       "odds": {
         "home": 1.68,
         "draw": 3.59,
         "away": 2.92,
         "over": 1.45,
         "btts": 2.2
+      },
+      "statsSource": "football-data.org",
+      "homeStats": {
+        "sample": 6,
+        "form": "VVDVNV",
+        "avgScored": 1.8333333333333333,
+        "avgConceded": 1.3333333333333333
+      },
+      "awayStats": {
+        "sample": 6,
+        "form": "VVVVND",
+        "avgScored": 3.1666666666666665,
+        "avgConceded": 0.8333333333333334
       }
     },
     {
@@ -1294,15 +2046,35 @@
       "priority": 64,
       "featured": false,
       "status": "Scheduled",
-      "homeGoals": 2.05,
-      "awayGoals": 1.25,
+      "homeGoals": 1.62,
+      "awayGoals": 1.07,
       "odds": {
-        "home": 1.68,
-        "draw": 3.59,
-        "away": 2.92,
+        "home": 1.86,
+        "draw": 3.86,
+        "away": 3.87,
         "over": 1.45,
         "btts": 2.2
-      }
+      },
+      "statsSource": "football-data.org",
+      "homeStats": {
+        "sample": 6,
+        "form": "NDNNDV",
+        "avgScored": 1.1666666666666667,
+        "avgConceded": 1
+      },
+      "awayStats": {
+        "sample": 6,
+        "form": "VDDNNN",
+        "avgScored": 1.3333333333333333,
+        "avgConceded": 1.8333333333333333
+      },
+      "oddsSource": "The Odds API",
+      "bookmakerCount": 25,
+      "realOddsMarkets": [
+        "home",
+        "draw",
+        "away"
+      ]
     },
     {
       "id": "espn-401884759",
@@ -1317,12 +2089,19 @@
       "homeGoals": 1.5999999999999999,
       "awayGoals": 1.6,
       "odds": {
-        "home": 2.16,
-        "draw": 3.15,
-        "away": 2.28,
+        "home": 6.55,
+        "draw": 5.75,
+        "away": 1.36,
         "over": 1.45,
         "btts": 1.72
-      }
+      },
+      "oddsSource": "The Odds API",
+      "bookmakerCount": 23,
+      "realOddsMarkets": [
+        "home",
+        "draw",
+        "away"
+      ]
     },
     {
       "id": "espn-401875036",
@@ -1334,14 +2113,27 @@
       "priority": 61,
       "featured": false,
       "status": "Scheduled",
-      "homeGoals": 2.05,
-      "awayGoals": 1.25,
+      "homeGoals": 2.7,
+      "awayGoals": 1.53,
       "odds": {
         "home": 1.68,
         "draw": 3.59,
         "away": 2.92,
         "over": 1.45,
         "btts": 2.2
+      },
+      "statsSource": "football-data.org",
+      "homeStats": {
+        "sample": 6,
+        "form": "VDVNVD",
+        "avgScored": 2.8333333333333335,
+        "avgConceded": 2
+      },
+      "awayStats": {
+        "sample": 6,
+        "form": "DDNVDD",
+        "avgScored": 1.3333333333333333,
+        "avgConceded": 2.1666666666666665
       }
     },
     {
@@ -1357,12 +2149,19 @@
       "homeGoals": 1.5999999999999999,
       "awayGoals": 1.6,
       "odds": {
-        "home": 2.16,
-        "draw": 3.15,
-        "away": 2.28,
+        "home": 7.56,
+        "draw": 4.34,
+        "away": 1.44,
         "over": 1.45,
         "btts": 1.72
-      }
+      },
+      "oddsSource": "The Odds API",
+      "bookmakerCount": 24,
+      "realOddsMarkets": [
+        "home",
+        "draw",
+        "away"
+      ]
     },
     {
       "id": "espn-401874779",
@@ -1374,15 +2173,35 @@
       "priority": 61,
       "featured": false,
       "status": "Scheduled",
-      "homeGoals": 1.5999999999999999,
-      "awayGoals": 1.6,
+      "homeGoals": 1.26,
+      "awayGoals": 2.07,
       "odds": {
-        "home": 2.16,
-        "draw": 3.15,
-        "away": 2.28,
+        "home": 5.16,
+        "draw": 3.9,
+        "away": 1.65,
         "over": 1.45,
         "btts": 1.72
-      }
+      },
+      "statsSource": "football-data.org",
+      "homeStats": {
+        "sample": 6,
+        "form": "DDDDDV",
+        "avgScored": 1.3333333333333333,
+        "avgConceded": 2.5
+      },
+      "awayStats": {
+        "sample": 6,
+        "form": "VNVNNV",
+        "avgScored": 2,
+        "avgConceded": 1
+      },
+      "oddsSource": "The Odds API",
+      "bookmakerCount": 24,
+      "realOddsMarkets": [
+        "home",
+        "draw",
+        "away"
+      ]
     },
     {
       "id": "espn-401876426",
@@ -1394,15 +2213,35 @@
       "priority": 60,
       "featured": false,
       "status": "Scheduled",
-      "homeGoals": 1.9,
+      "homeGoals": 1.8,
       "awayGoals": 1.15,
       "odds": {
-        "home": 1.82,
-        "draw": 3.56,
-        "away": 3.17,
+        "home": 1.56,
+        "draw": 4.52,
+        "away": 5.08,
         "over": 1.45,
         "btts": 2.39
-      }
+      },
+      "statsSource": "football-data.org",
+      "homeStats": {
+        "sample": 6,
+        "form": "VVDDDD",
+        "avgScored": 1.6666666666666667,
+        "avgConceded": 1.6666666666666667
+      },
+      "awayStats": {
+        "sample": 6,
+        "form": "DDDNDN",
+        "avgScored": 0.8333333333333334,
+        "avgConceded": 1.6666666666666667
+      },
+      "oddsSource": "The Odds API",
+      "bookmakerCount": 22,
+      "realOddsMarkets": [
+        "home",
+        "draw",
+        "away"
+      ]
     },
     {
       "id": "espn-401876422",
@@ -1417,12 +2256,19 @@
       "homeGoals": 1.9,
       "awayGoals": 1.15,
       "odds": {
-        "home": 1.82,
-        "draw": 3.56,
-        "away": 3.17,
+        "home": 1.35,
+        "draw": 5.59,
+        "away": 7.12,
         "over": 1.45,
         "btts": 2.39
-      }
+      },
+      "oddsSource": "The Odds API",
+      "bookmakerCount": 22,
+      "realOddsMarkets": [
+        "home",
+        "draw",
+        "away"
+      ]
     },
     {
       "id": "espn-401879254",
@@ -1434,15 +2280,35 @@
       "priority": 34,
       "featured": false,
       "status": "Scheduled",
-      "homeGoals": 1.45,
-      "awayGoals": 1.15,
+      "homeGoals": 1.89,
+      "awayGoals": 1.76,
       "odds": {
-        "home": 2.38,
-        "draw": 3.31,
-        "away": 3.17,
+        "home": 2.85,
+        "draw": 3.57,
+        "away": 2.34,
         "over": 1.45,
         "btts": 2.39
-      }
+      },
+      "statsSource": "football-data.org",
+      "homeStats": {
+        "sample": 6,
+        "form": "DVNDVD",
+        "avgScored": 1.5,
+        "avgConceded": 2.5
+      },
+      "awayStats": {
+        "sample": 6,
+        "form": "DDVDNV",
+        "avgScored": 1.3333333333333333,
+        "avgConceded": 2
+      },
+      "oddsSource": "The Odds API",
+      "bookmakerCount": 25,
+      "realOddsMarkets": [
+        "home",
+        "draw",
+        "away"
+      ]
     },
     {
       "id": "espn-401878766",
@@ -1454,15 +2320,35 @@
       "priority": 34,
       "featured": false,
       "status": "Scheduled",
-      "homeGoals": 1.45,
-      "awayGoals": 1.15,
+      "homeGoals": 1.26,
+      "awayGoals": 1.3,
       "odds": {
-        "home": 2.38,
-        "draw": 3.31,
-        "away": 3.17,
+        "home": 4.38,
+        "draw": 3.9,
+        "away": 1.75,
         "over": 1.45,
         "btts": 2.39
-      }
+      },
+      "statsSource": "football-data.org",
+      "homeStats": {
+        "sample": 6,
+        "form": "DNDNNV",
+        "avgScored": 1,
+        "avgConceded": 1.1666666666666667
+      },
+      "awayStats": {
+        "sample": 6,
+        "form": "DNVNNN",
+        "avgScored": 1.6666666666666667,
+        "avgConceded": 1.3333333333333333
+      },
+      "oddsSource": "The Odds API",
+      "bookmakerCount": 25,
+      "realOddsMarkets": [
+        "home",
+        "draw",
+        "away"
+      ]
     },
     {
       "id": "espn-401878764",
@@ -1474,15 +2360,35 @@
       "priority": 34,
       "featured": false,
       "status": "Scheduled",
-      "homeGoals": 1.45,
-      "awayGoals": 1.15,
+      "homeGoals": 0.99,
+      "awayGoals": 1.53,
       "odds": {
-        "home": 2.38,
-        "draw": 3.31,
-        "away": 3.17,
+        "home": 2.89,
+        "draw": 3.24,
+        "away": 2.49,
         "over": 1.45,
         "btts": 2.39
-      }
+      },
+      "statsSource": "football-data.org",
+      "homeStats": {
+        "sample": 6,
+        "form": "DDDDNV",
+        "avgScored": 0.8333333333333334,
+        "avgConceded": 2
+      },
+      "awayStats": {
+        "sample": 6,
+        "form": "NDNVNN",
+        "avgScored": 1.3333333333333333,
+        "avgConceded": 1
+      },
+      "oddsSource": "The Odds API",
+      "bookmakerCount": 25,
+      "realOddsMarkets": [
+        "home",
+        "draw",
+        "away"
+      ]
     },
     {
       "id": "espn-401882835",
@@ -1494,15 +2400,35 @@
       "priority": 33,
       "featured": false,
       "status": "Scheduled",
-      "homeGoals": 1.45,
-      "awayGoals": 1.15,
+      "homeGoals": 1.17,
+      "awayGoals": 0.54,
       "odds": {
-        "home": 2.38,
-        "draw": 3.31,
-        "away": 3.17,
+        "home": 1.61,
+        "draw": 3.87,
+        "away": 5.64,
         "over": 1.45,
         "btts": 2.39
-      }
+      },
+      "statsSource": "football-data.org",
+      "homeStats": {
+        "sample": 6,
+        "form": "NNNVVD",
+        "avgScored": 1,
+        "avgConceded": 0.5
+      },
+      "awayStats": {
+        "sample": 6,
+        "form": "NDVDNN",
+        "avgScored": 0.6666666666666666,
+        "avgConceded": 1.1666666666666667
+      },
+      "oddsSource": "The Odds API",
+      "bookmakerCount": 19,
+      "realOddsMarkets": [
+        "home",
+        "draw",
+        "away"
+      ]
     },
     {
       "id": "espn-401882833",
@@ -1514,15 +2440,35 @@
       "priority": 33,
       "featured": false,
       "status": "Scheduled",
-      "homeGoals": 1.45,
-      "awayGoals": 1.15,
+      "homeGoals": 1.8,
+      "awayGoals": 1.3,
       "odds": {
-        "home": 2.38,
-        "draw": 3.31,
-        "away": 3.17,
+        "home": 2.74,
+        "draw": 3.42,
+        "away": 2.49,
         "over": 1.45,
         "btts": 2.39
-      }
+      },
+      "statsSource": "football-data.org",
+      "homeStats": {
+        "sample": 6,
+        "form": "VNVNNN",
+        "avgScored": 1.5,
+        "avgConceded": 0.5
+      },
+      "awayStats": {
+        "sample": 6,
+        "form": "DVVNVV",
+        "avgScored": 2.3333333333333335,
+        "avgConceded": 1.8333333333333333
+      },
+      "oddsSource": "The Odds API",
+      "bookmakerCount": 19,
+      "realOddsMarkets": [
+        "home",
+        "draw",
+        "away"
+      ]
     },
     {
       "id": "espn-401882829",
@@ -1534,15 +2480,35 @@
       "priority": 33,
       "featured": false,
       "status": "Scheduled",
-      "homeGoals": 1.45,
-      "awayGoals": 1.15,
+      "homeGoals": 2.43,
+      "awayGoals": 1.76,
       "odds": {
-        "home": 2.38,
-        "draw": 3.31,
-        "away": 3.17,
+        "home": 1.71,
+        "draw": 4.05,
+        "away": 4.42,
         "over": 1.45,
         "btts": 2.39
-      }
+      },
+      "statsSource": "football-data.org",
+      "homeStats": {
+        "sample": 6,
+        "form": "VVVDVN",
+        "avgScored": 2.3333333333333335,
+        "avgConceded": 1.8333333333333333
+      },
+      "awayStats": {
+        "sample": 6,
+        "form": "NNDDNV",
+        "avgScored": 2,
+        "avgConceded": 2.1666666666666665
+      },
+      "oddsSource": "The Odds API",
+      "bookmakerCount": 19,
+      "realOddsMarkets": [
+        "home",
+        "draw",
+        "away"
+      ]
     },
     {
       "id": "espn-401884760",
@@ -1557,12 +2523,19 @@
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
-        "home": 2.38,
-        "draw": 3.31,
-        "away": 3.17,
+        "home": 2.66,
+        "draw": 3.97,
+        "away": 2.32,
         "over": 1.45,
         "btts": 2.39
-      }
+      },
+      "oddsSource": "The Odds API",
+      "bookmakerCount": 23,
+      "realOddsMarkets": [
+        "home",
+        "draw",
+        "away"
+      ]
     },
     {
       "id": "espn-401874972",
@@ -1574,15 +2547,35 @@
       "priority": 31,
       "featured": false,
       "status": "Scheduled",
-      "homeGoals": 1.45,
-      "awayGoals": 1.15,
+      "homeGoals": 1.44,
+      "awayGoals": 1.76,
       "odds": {
-        "home": 2.38,
-        "draw": 3.31,
-        "away": 3.17,
+        "home": 1.75,
+        "draw": 4.16,
+        "away": 4.08,
         "over": 1.45,
         "btts": 2.39
-      }
+      },
+      "statsSource": "football-data.org",
+      "homeStats": {
+        "sample": 6,
+        "form": "DVDDDV",
+        "avgScored": 1.3333333333333333,
+        "avgConceded": 1.6666666666666667
+      },
+      "awayStats": {
+        "sample": 6,
+        "form": "VDVNVV",
+        "avgScored": 2.1666666666666665,
+        "avgConceded": 1.3333333333333333
+      },
+      "oddsSource": "The Odds API",
+      "bookmakerCount": 24,
+      "realOddsMarkets": [
+        "home",
+        "draw",
+        "away"
+      ]
     },
     {
       "id": "espn-401874952",
@@ -1597,12 +2590,19 @@
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
-        "home": 2.38,
-        "draw": 3.31,
-        "away": 3.17,
+        "home": 2.08,
+        "draw": 3.33,
+        "away": 3.6,
         "over": 1.45,
         "btts": 2.39
-      }
+      },
+      "oddsSource": "The Odds API",
+      "bookmakerCount": 24,
+      "realOddsMarkets": [
+        "home",
+        "draw",
+        "away"
+      ]
     },
     {
       "id": "espn-401876425",
@@ -1617,12 +2617,19 @@
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
-        "home": 2.38,
-        "draw": 3.31,
-        "away": 3.17,
+        "home": 2.12,
+        "draw": 3.33,
+        "away": 3.46,
         "over": 1.45,
         "btts": 2.39
-      }
+      },
+      "oddsSource": "The Odds API",
+      "bookmakerCount": 22,
+      "realOddsMarkets": [
+        "home",
+        "draw",
+        "away"
+      ]
     },
     {
       "id": "espn-401876429",
@@ -1634,15 +2641,35 @@
       "priority": 30,
       "featured": false,
       "status": "Scheduled",
-      "homeGoals": 1.45,
-      "awayGoals": 1.15,
+      "homeGoals": 1.98,
+      "awayGoals": 1.53,
       "odds": {
-        "home": 2.38,
-        "draw": 3.31,
-        "away": 3.17,
+        "home": 2.12,
+        "draw": 3.56,
+        "away": 3.23,
         "over": 1.45,
         "btts": 2.39
-      }
+      },
+      "statsSource": "football-data.org",
+      "homeStats": {
+        "sample": 6,
+        "form": "VDVVDD",
+        "avgScored": 1.5,
+        "avgConceded": 2
+      },
+      "awayStats": {
+        "sample": 6,
+        "form": "DDVNND",
+        "avgScored": 1.3333333333333333,
+        "avgConceded": 2.1666666666666665
+      },
+      "oddsSource": "The Odds API",
+      "bookmakerCount": 22,
+      "realOddsMarkets": [
+        "home",
+        "draw",
+        "away"
+      ]
     },
     {
       "id": "espn-401876430",
@@ -1654,15 +2681,35 @@
       "priority": 30,
       "featured": false,
       "status": "Scheduled",
-      "homeGoals": 1.45,
-      "awayGoals": 1.15,
+      "homeGoals": 1.35,
+      "awayGoals": 1.53,
       "odds": {
-        "home": 2.38,
-        "draw": 3.31,
-        "away": 3.17,
+        "home": 2.84,
+        "draw": 3.25,
+        "away": 2.49,
         "over": 1.45,
         "btts": 2.39
-      }
+      },
+      "statsSource": "football-data.org",
+      "homeStats": {
+        "sample": 6,
+        "form": "DDVNDV",
+        "avgScored": 1.5,
+        "avgConceded": 2.1666666666666665
+      },
+      "awayStats": {
+        "sample": 6,
+        "form": "VVDNVD",
+        "avgScored": 1.1666666666666667,
+        "avgConceded": 1
+      },
+      "oddsSource": "The Odds API",
+      "bookmakerCount": 22,
+      "realOddsMarkets": [
+        "home",
+        "draw",
+        "away"
+      ]
     },
     {
       "id": "espn-401876424",
@@ -1674,14 +2721,27 @@
       "priority": 30,
       "featured": false,
       "status": "Scheduled",
-      "homeGoals": 1.45,
-      "awayGoals": 1.15,
+      "homeGoals": 2.16,
+      "awayGoals": 1.84,
       "odds": {
         "home": 2.38,
         "draw": 3.31,
         "away": 3.17,
         "over": 1.45,
         "btts": 2.39
+      },
+      "statsSource": "football-data.org",
+      "homeStats": {
+        "sample": 6,
+        "form": "DVDVVV",
+        "avgScored": 2.1666666666666665,
+        "avgConceded": 2
+      },
+      "awayStats": {
+        "sample": 6,
+        "form": "DDDNVV",
+        "avgScored": 2,
+        "avgConceded": 1.8333333333333333
       }
     },
     {
@@ -1694,15 +2754,35 @@
       "priority": 33,
       "featured": false,
       "status": "Scheduled",
-      "homeGoals": 1.45,
-      "awayGoals": 1.15,
+      "homeGoals": 2.25,
+      "awayGoals": 1.38,
       "odds": {
-        "home": 2.38,
-        "draw": 3.31,
-        "away": 3.17,
+        "home": 1.93,
+        "draw": 3.34,
+        "away": 4.01,
         "over": 1.45,
         "btts": 2.39
-      }
+      },
+      "statsSource": "football-data.org",
+      "homeStats": {
+        "sample": 6,
+        "form": "DNDVVN",
+        "avgScored": 1.3333333333333333,
+        "avgConceded": 1.8333333333333333
+      },
+      "awayStats": {
+        "sample": 6,
+        "form": "VDNDDD",
+        "avgScored": 1.1666666666666667,
+        "avgConceded": 2.8333333333333335
+      },
+      "oddsSource": "The Odds API",
+      "bookmakerCount": 19,
+      "realOddsMarkets": [
+        "home",
+        "draw",
+        "away"
+      ]
     },
     {
       "id": "espn-401874980",
@@ -1717,12 +2797,19 @@
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
-        "home": 2.38,
-        "draw": 3.31,
-        "away": 3.17,
+        "home": 2.79,
+        "draw": 3.36,
+        "away": 2.39,
         "over": 1.45,
         "btts": 2.39
-      }
+      },
+      "oddsSource": "The Odds API",
+      "bookmakerCount": 17,
+      "realOddsMarkets": [
+        "home",
+        "draw",
+        "away"
+      ]
     },
     {
       "id": "espn-401874780",
@@ -1734,15 +2821,35 @@
       "priority": 31,
       "featured": false,
       "status": "Scheduled",
-      "homeGoals": 1.45,
-      "awayGoals": 1.15,
+      "homeGoals": 1.53,
+      "awayGoals": 0.92,
       "odds": {
-        "home": 2.38,
-        "draw": 3.31,
-        "away": 3.17,
+        "home": 1.34,
+        "draw": 4.87,
+        "away": 8.45,
         "over": 1.45,
         "btts": 2.39
-      }
+      },
+      "statsSource": "football-data.org",
+      "homeStats": {
+        "sample": 6,
+        "form": "VDNNVN",
+        "avgScored": 1.6666666666666667,
+        "avgConceded": 1.1666666666666667
+      },
+      "awayStats": {
+        "sample": 6,
+        "form": "DNVVVD",
+        "avgScored": 0.8333333333333334,
+        "avgConceded": 1.1666666666666667
+      },
+      "oddsSource": "The Odds API",
+      "bookmakerCount": 17,
+      "realOddsMarkets": [
+        "home",
+        "draw",
+        "away"
+      ]
     },
     {
       "id": "espn-401874786",
@@ -1757,12 +2864,19 @@
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
-        "home": 2.38,
-        "draw": 3.31,
-        "away": 3.17,
+        "home": 4.35,
+        "draw": 3.69,
+        "away": 1.75,
         "over": 1.45,
         "btts": 2.39
-      }
+      },
+      "oddsSource": "The Odds API",
+      "bookmakerCount": 17,
+      "realOddsMarkets": [
+        "home",
+        "draw",
+        "away"
+      ]
     }
   ]
 }
