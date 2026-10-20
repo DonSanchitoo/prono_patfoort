@@ -1,5 +1,15 @@
 {
-  "generatedAt": null,
+  "generatedAt": "2026-10-20T14:37:54.014Z",
   "source": "ESPN public scoreboard",
+  "providerStatus": "partial",
+  "failures": [
+    "eng.1: eng.1: HTTP 400",
+    "fra.1: fra.1: HTTP 400",
+    "esp.1: esp.1: HTTP 400",
+    "ita.1: ita.1: HTTP 400",
+    "ger.1: ger.1: HTTP 400",
+    "uefa.champions: uefa.champions: HTTP 400",
+    "uefa.europa: uefa.europa: HTTP 400"
+  ],
   "matches": []
 }
