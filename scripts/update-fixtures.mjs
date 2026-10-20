@@ -10,7 +10,7 @@ const giants = ['Real Madrid','Barcelona','Manchester City','Manchester United',
 const dateKey = date => date.toISOString().slice(0, 10).replaceAll('-', '');
 const start = new Date(); start.setUTCHours(0, 0, 0, 0);
 const end = new Date(start); end.setUTCDate(end.getUTCDate() + 7);
-const range = `${dateKey(start)}-${dateKey(end)}`;
+const days = Array.from({ length: 8 }, (_, offset) => { const date = new Date(start); date.setUTCDate(date.getUTCDate() + offset); return dateKey(date); });
 
 function model(home, away, priority) {
   const homeBig = giants.some(name => home.includes(name));
@@ -31,11 +31,15 @@ function model(home, away, priority) {
 }
 
 const results = await Promise.allSettled(leagues.map(async ([slug, label, weight]) => {
-  const url = `https://site.api.espn.com/apis/site/v2/sports/soccer/${slug}/scoreboard?dates=${range}&limit=100`;
-  const response = await fetch(url, { headers: { 'User-Agent': 'BetMaster-Fixtures/1.0' } });
-  if (!response.ok) throw new Error(`${slug}: HTTP ${response.status}`);
-  const data = await response.json();
-  return (data.events ?? []).map(event => {
+  const events = [];
+  for (const day of days) {
+    const url = `https://site.api.espn.com/apis/site/v2/sports/soccer/${slug}/scoreboard?dates=${day}&limit=100`;
+    const response = await fetch(url, { headers: { 'User-Agent': 'BetMaster-Fixtures/1.0' } });
+    if (!response.ok) throw new Error(`${slug}: HTTP ${response.status} (${day})`);
+    const data = await response.json();
+    events.push(...(data.events ?? []));
+  }
+  return events.map(event => {
     const competition = event.competitions?.[0];
     const homeTeam = competition?.competitors?.find(team => team.homeAway === 'home')?.team?.displayName;
     const awayTeam = competition?.competitors?.find(team => team.homeAway === 'away')?.team?.displayName;
