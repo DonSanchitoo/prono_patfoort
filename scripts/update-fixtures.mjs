@@ -17,7 +17,7 @@ const giants = ['Real Madrid','Barcelona','Manchester City','Manchester United',
 const dateKey = date => date.toISOString().slice(0, 10).replaceAll('-', '');
 const start = new Date(); start.setUTCHours(0, 0, 0, 0);
 const end = new Date(start); end.setUTCDate(end.getUTCDate() + 7);
-const days = Array.from({ length: 8 }, (_, offset) => { const date = new Date(start); date.setUTCDate(date.getUTCDate() + offset); return dateKey(date); });
+const days = Array.from({ length: 15 }, (_, index) => { const date = new Date(start); date.setUTCDate(date.getUTCDate() + index - 7); return dateKey(date); });
 
 function model(home, away, priority) {
   const homeBig = giants.some(name => home.includes(name));
@@ -112,8 +112,10 @@ const results = await Promise.allSettled(leagues.map(async ([slug, label, weight
   }
   return events.map(event => {
     const competition = event.competitions?.[0];
-    const homeTeam = competition?.competitors?.find(team => team.homeAway === 'home')?.team?.displayName;
-    const awayTeam = competition?.competitors?.find(team => team.homeAway === 'away')?.team?.displayName;
+    const homeCompetitor = competition?.competitors?.find(team => team.homeAway === 'home');
+    const awayCompetitor = competition?.competitors?.find(team => team.homeAway === 'away');
+    const homeTeam = homeCompetitor?.team?.displayName;
+    const awayTeam = awayCompetitor?.team?.displayName;
     if (!homeTeam || !awayTeam) return null;
     const giantCount = giants.filter(name => homeTeam.includes(name) || awayTeam.includes(name)).length;
     const priority = weight + giantCount * 30;
@@ -123,6 +125,9 @@ const results = await Promise.allSettled(leagues.map(async ([slug, label, weight
       time: kickoff.toLocaleTimeString('fr-FR', { timeZone: 'Europe/Paris', hour: '2-digit', minute: '2-digit' }),
       league: label, home: homeTeam, away: awayTeam,
       priority, featured: priority >= 75, status: event.status?.type?.description ?? 'Programmé',
+      completed: event.status?.type?.completed === true,
+      homeScore: homeCompetitor?.score == null ? null : Number(homeCompetitor.score),
+      awayScore: awayCompetitor?.score == null ? null : Number(awayCompetitor.score),
       ...model(homeTeam, awayTeam, priority)
     };
   }).filter(Boolean);
@@ -130,9 +135,12 @@ const results = await Promise.allSettled(leagues.map(async ([slug, label, weight
 
 const matches = results.flatMap(result => result.status === 'fulfilled' ? result.value : []);
 const failures = results.flatMap((result, index) => result.status === 'rejected' ? [`${leagues[index][0]}: ${result.reason?.message ?? 'échec inconnu'}`] : []);
-const unique = [...new Map(matches.map(match => [match.id, match])).values()]
+const allUnique = [...new Map(matches.map(match => [match.id, match])).values()];
+const unique = allUnique
   .filter(match => match.date >= start.toISOString().slice(0, 10) && match.date <= end.toISOString().slice(0, 10))
   .sort((a, b) => a.date.localeCompare(b.date) || b.priority - a.priority);
+const settlements = allUnique.filter(match => match.completed && Number.isFinite(match.homeScore) && Number.isFinite(match.awayScore))
+  .map(({id,date,home,away,homeScore,awayScore,completed})=>({id,date,home,away,homeScore,awayScore,completed}));
 const providerFailures = [...failures];
 let history = [], oddsEvents = [];
 try { history = await footballHistory(); } catch (error) { providerFailures.push(error.message); }
@@ -152,6 +160,6 @@ const enriched = unique.map(match => {
   return match;
 });
 await mkdir('data', { recursive: true });
-await writeFile('data/fixtures.json', `${JSON.stringify({ generatedAt: new Date().toISOString(), source: 'ESPN + football-data.org + The Odds API', providerStatus: providerFailures.length ? 'partial' : 'ok', failures: providerFailures, coverage:{historicalMatches:history.length,oddsEvents:oddsEvents.length,statsMatches:enriched.filter(x=>x.statsSource).length,oddsMatches:enriched.filter(x=>x.oddsSource).length}, matches: enriched }, null, 2)}\n`);
-console.log(`${enriched.length} rencontres, ${history.length} résultats historiques, ${oddsEvents.length} événements cotés.`);
+await writeFile('data/fixtures.json', `${JSON.stringify({ generatedAt: new Date().toISOString(), source: 'ESPN + football-data.org + The Odds API', providerStatus: providerFailures.length ? 'partial' : 'ok', failures: providerFailures, coverage:{historicalMatches:history.length,oddsEvents:oddsEvents.length,statsMatches:enriched.filter(x=>x.statsSource).length,oddsMatches:enriched.filter(x=>x.oddsSource).length,settlements:settlements.length}, settlements, matches: enriched }, null, 2)}\n`);
+console.log(`${enriched.length} rencontres, ${settlements.length} résultats récents, ${history.length} historiques, ${oddsEvents.length} événements cotés.`);
 if (providerFailures.length) console.warn(providerFailures.join('\n'));
