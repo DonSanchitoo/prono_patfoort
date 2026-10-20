@@ -42,30 +42,31 @@
       <article><span class="stat-icon purple">▥</span><div><small>PARIS PLACÉS</small><strong id="bets-stat">0</strong></div></article>
     </section>
 
-    <section id="matches" class="section-block">
-      <div class="section-heading"><div><p class="eyebrow">CALENDRIER</p><h2 id="match-period-title">Les grandes affiches de la semaine</h2><p class="section-subtitle" id="match-count"></p><p class="data-source" id="data-source"><span class="source-dot loading"></span> Chargement du calendrier officiel…</p></div><div class="heading-actions"><button class="button secondary" id="refresh-fixtures">↻ Actualiser</button><button class="button secondary" id="open-add-match">＋ Ajouter un match</button></div></div>
-      <div class="date-navigator card" id="date-navigator" role="group" aria-label="Choisir une période"></div>
-      <div class="filters" id="filters" role="group" aria-label="Filtrer les compétitions"></div>
-      <div id="match-list" class="match-list" aria-live="polite"></div>
-    </section>
-
-    <section id="builder" class="section-block builder-layout">
+    <section id="builder" class="section-block builder-layout builder-featured">
       <div>
         <p class="eyebrow">COMBINÉ INTELLIGENT</p><h2>Composez votre ticket</h2>
-        <p class="muted">Sélectionnez des matchs ou laissez l’algorithme retenir les choix au meilleur rapport confiance / valeur. Les cotes affichées sont des estimations du modèle, pas des cotes bookmaker en direct.</p>
+        <p class="muted">Fixez une cote cible et un nombre maximum de matchs. Le moteur cherche la combinaison la plus proche en privilégiant la confiance.</p>
+        <div class="safe-picks"><div class="safe-picks-head"><strong>Les choix les plus sûrs</strong><span>Période affichée</span></div><div id="safe-picks-list"></div></div>
         <div class="builder-controls card">
           <label>Cote cible <output id="target-output">3.00</output><input id="target-odds" type="range" min="1.5" max="10" value="3" step="0.1"></label>
-          <label>Nombre de sélections <select id="selection-count"><option>2</option><option selected>3</option><option>4</option><option>5</option></select></label>
-          <button class="button primary full" id="generate-combo">⚡ Optimiser mon combiné</button>
+          <label>Nombre maximum de matchs <select id="selection-count"><option>2</option><option selected>3</option><option>4</option><option>5</option></select></label>
+          <button class="button primary full" id="generate-combo">⚡ Trouver le combiné le plus proche</button>
         </div>
       </div>
       <aside class="ticket card" aria-live="polite">
         <div class="ticket-head"><div><small>VOTRE TICKET</small><h3>Combiné</h3></div><button class="text-button" id="clear-ticket">Effacer</button></div>
         <div id="ticket-items" class="ticket-items"><p class="empty">Ajoutez une sélection depuis les matchs.</p></div>
-        <div class="ticket-summary"><span>Cote totale <strong id="total-odds">1.00</strong></span><label>Mise (€)<input id="stake" type="number" min="1" step="1" value="20"></label><span>Gain potentiel <strong id="potential-win">20,00 €</strong></span><small id="stake-advice">Mise conseillée : —</small></div>
+        <div class="ticket-summary"><span>Cote totale <strong id="total-odds">1.00</strong></span><span>Écart à la cible <strong id="target-gap">—</strong></span><label>Mise (€)<input id="stake" type="number" min="1" step="1" value="20"></label><span>Gain potentiel <strong id="potential-win">20,00 €</strong></span><small id="stake-advice">Mise conseillée : —</small></div>
         <button class="button primary full" id="place-bet" disabled>Placer le pari virtuel</button>
         <p class="responsible">18+ · Jouez de façon responsable. Ceci est une simulation.</p>
       </aside>
+    </section>
+
+    <section id="matches" class="section-block">
+      <div class="section-heading"><div><p class="eyebrow">CALENDRIER</p><h2 id="match-period-title">Les grandes affiches de la semaine</h2><p class="section-subtitle" id="match-count"></p><p class="data-source" id="data-source"><span class="source-dot loading"></span> Chargement du calendrier officiel…</p></div><div class="heading-actions"><button class="button secondary" id="refresh-fixtures">↻ Actualiser</button><button class="button secondary" id="open-add-match">＋ Ajouter un match</button></div></div>
+      <div class="date-navigator card" id="date-navigator" role="group" aria-label="Choisir une période"></div>
+      <div class="filters" id="filters" role="group" aria-label="Filtrer les compétitions"></div>
+      <div id="match-list" class="match-list" aria-live="polite"></div>
     </section>
 
     <section id="bankroll" class="section-block">
