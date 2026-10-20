@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#07120f">
+  <meta name="description" content="BetMaster — analyse de matchs, value bets et combinés responsables.">
+  <title>BetMaster — Hub de paris sportifs</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%2363ec9c%22/><text x=%2250%22 y=%2263%22 text-anchor=%22middle%22 font-size=%2240%22 font-family=%22sans-serif%22 font-weight=%22bold%22 fill=%22%2307110e%22>BM</text></svg>">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#dashboard" aria-label="BetMaster, accueil">
+      <span class="brand-mark">BM</span>
+      <span>Bet<span>Master</span></span>
+    </a>
+    <nav aria-label="Navigation principale">
+      <a href="#matches">Matchs</a><a href="#builder">Combiné</a><a href="#bankroll">Bankroll</a>
+    </nav>
+    <button class="icon-button" id="theme-toggle" aria-label="Changer de thème" title="Changer de thème">☼</button>
+  </header>
+
+  <main id="dashboard">
+    <section class="hero">
+      <div>
+        <p class="eyebrow"><span class="live-dot"></span> ANALYSE DU JOUR</p>
+        <h1>Pariez avec des données.<br><em>Pas avec des intuitions.</em></h1>
+        <p class="hero-copy">Notre moteur compare probabilités statistiques et cotes bookmaker pour faire ressortir les opportunités — simplement.</p>
+        <div class="hero-actions"><a class="button primary" href="#matches">Voir les matchs →</a><button class="button ghost" id="quick-combo">Générer un combiné</button></div>
+      </div>
+      <div class="hero-score" aria-label="Indice de confiance du jour">
+        <div class="orb"><span>87</span><small>/100</small></div>
+        <p>Indice confiance</p><strong>3 value bets détectés</strong>
+      </div>
+    </section>
+
+    <section class="stats-grid" aria-label="Résumé bankroll">
+      <article><span class="stat-icon green">€</span><div><small>BANKROLL</small><strong id="bankroll-stat">1 000,00 €</strong></div></article>
+      <article><span class="stat-icon blue">↗</span><div><small>PROFIT / PERTE</small><strong id="profit-stat">0,00 €</strong></div></article>
+      <article><span class="stat-icon amber">◎</span><div><small>TAUX DE RÉUSSITE</small><strong id="winrate-stat">—</strong></div></article>
+      <article><span class="stat-icon purple">▥</span><div><small>PARIS PLACÉS</small><strong id="bets-stat">0</strong></div></article>
+    </section>
+
+    <section id="matches" class="section-block">
+      <div class="section-heading"><div><p class="eyebrow">CATALOGUE</p><h2>Matchs du jour</h2></div><button class="button secondary" id="open-add-match">＋ Ajouter un match</button></div>
+      <div class="filters" id="filters" role="group" aria-label="Filtrer les compétitions"></div>
+      <div id="match-list" class="match-list" aria-live="polite"></div>
+    </section>
+
+    <section id="builder" class="section-block builder-layout">
+      <div>
+        <p class="eyebrow">COMBINÉ INTELLIGENT</p><h2>Composez votre ticket</h2>
+        <p class="muted">Sélectionnez des matchs ou laissez l’algorithme retenir les choix au meilleur rapport confiance / valeur.</p>
+        <div class="builder-controls card">
+          <label>Cote cible <output id="target-output">3.00</output><input id="target-odds" type="range" min="1.5" max="10" value="3" step="0.1"></label>
+          <label>Nombre de sélections <select id="selection-count"><option>2</option><option selected>3</option><option>4</option><option>5</option></select></label>
+          <button class="button primary full" id="generate-combo">⚡ Optimiser mon combiné</button>
+        </div>
+      </div>
+      <aside class="ticket card" aria-live="polite">
+        <div class="ticket-head"><div><small>VOTRE TICKET</small><h3>Combiné</h3></div><button class="text-button" id="clear-ticket">Effacer</button></div>
+        <div id="ticket-items" class="ticket-items"><p class="empty">Ajoutez une sélection depuis les matchs.</p></div>
+        <div class="ticket-summary"><span>Cote totale <strong id="total-odds">1.00</strong></span><label>Mise (€)<input id="stake" type="number" min="1" step="1" value="20"></label><span>Gain potentiel <strong id="potential-win">20,00 €</strong></span><small id="stake-advice">Mise conseillée : —</small></div>
+        <button class="button primary full" id="place-bet" disabled>Placer le pari virtuel</button>
+        <p class="responsible">18+ · Jouez de façon responsable. Ceci est une simulation.</p>
+      </aside>
+    </section>
+
+    <section id="bankroll" class="section-block">
+      <div class="section-heading"><div><p class="eyebrow">SUIVI</p><h2>Historique & bankroll</h2></div><button class="button secondary" id="edit-bankroll">Modifier le capital</button></div>
+      <div class="history-wrap card"><table><thead><tr><th>Date</th><th>Sélections</th><th>Cote</th><th>Mise</th><th>Résultat</th><th>Retour</th></tr></thead><tbody id="history-body"></tbody></table><p id="empty-history" class="empty">Aucun pari placé pour le moment.</p></div>
+    </section>
+  </main>
+
+  <dialog id="match-dialog"><form id="match-form" method="dialog"><div class="modal-head"><h2>Ajouter un match</h2><button class="icon-button" value="cancel" formnovalidate aria-label="Fermer">×</button></div><div class="form-grid">
+    <label>Compétition<input name="league" required placeholder="Ligue 1"></label><label>Heure<input name="time" type="time" required value="20:45"></label>
+    <label>Équipe domicile<input name="home" required></label><label>Équipe extérieure<input name="away" required></label>
+    <label>Buts moy. domicile<input name="homeGoals" type="number" min="0.1" max="5" step="0.1" value="1.7" required></label><label>Buts moy. extérieur<input name="awayGoals" type="number" min="0.1" max="5" step="0.1" value="1.2" required></label>
+    <label>Cote 1<input name="oddHome" type="number" min="1.01" step="0.01" value="2.00" required></label><label>Cote N<input name="oddDraw" type="number" min="1.01" step="0.01" value="3.30" required></label><label>Cote 2<input name="oddAway" type="number" min="1.01" step="0.01" value="3.60" required></label>
+  </div><button class="button primary full" value="default">Analyser et ajouter</button></form></dialog>
+
+  <dialog id="bankroll-dialog"><form id="bankroll-form" method="dialog"><div class="modal-head"><h2>Capital virtuel</h2><button class="icon-button" value="cancel" formnovalidate>×</button></div><label>Nouveau capital (€)<input name="amount" type="number" min="0" step="10" required></label><button class="button primary full" value="default">Enregistrer</button></form></dialog>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
