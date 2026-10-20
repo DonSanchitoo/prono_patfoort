@@ -1,15 +1,1768 @@
 {
-  "generatedAt": "2026-10-20T14:37:54.014Z",
+  "generatedAt": "2026-10-20T14:39:22.898Z",
   "source": "ESPN public scoreboard",
-  "providerStatus": "partial",
-  "failures": [
-    "eng.1: eng.1: HTTP 400",
-    "fra.1: fra.1: HTTP 400",
-    "esp.1: esp.1: HTTP 400",
-    "ita.1: ita.1: HTTP 400",
-    "ger.1: ger.1: HTTP 400",
-    "uefa.champions: uefa.champions: HTTP 400",
-    "uefa.europa: uefa.europa: HTTP 400"
-  ],
-  "matches": []
+  "providerStatus": "ok",
+  "failures": [],
+  "matches": [
+    {
+      "id": "espn-401915399",
+      "date": "2026-10-20",
+      "time": "21:00",
+      "league": "Ligue des champions",
+      "home": "Paris Saint-Germain",
+      "away": "Barcelona",
+      "priority": 102,
+      "featured": true,
+      "status": "Scheduled",
+      "homeGoals": 2.05,
+      "awayGoals": 1.6,
+      "odds": {
+        "home": 1.68,
+        "draw": 3.4,
+        "away": 2.28,
+        "over": 1.45,
+        "btts": 1.72
+      }
+    },
+    {
+      "id": "espn-401915404",
+      "date": "2026-10-20",
+      "time": "18:45",
+      "league": "Ligue des champions",
+      "home": "Sabah FK",
+      "away": "Borussia Dortmund",
+      "priority": 72,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 1.5999999999999999,
+      "awayGoals": 1.6,
+      "odds": {
+        "home": 2.16,
+        "draw": 3.15,
+        "away": 2.28,
+        "over": 1.45,
+        "btts": 1.72
+      }
+    },
+    {
+      "id": "espn-401915397",
+      "date": "2026-10-20",
+      "time": "21:00",
+      "league": "Ligue des champions",
+      "home": "Liverpool",
+      "away": "Villarreal",
+      "priority": 72,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 2.05,
+      "awayGoals": 1.25,
+      "odds": {
+        "home": 1.68,
+        "draw": 3.59,
+        "away": 2.92,
+        "over": 1.45,
+        "btts": 2.2
+      }
+    },
+    {
+      "id": "espn-401915401",
+      "date": "2026-10-20",
+      "time": "21:00",
+      "league": "Ligue des champions",
+      "home": "Manchester City",
+      "away": "AEK Athens",
+      "priority": 72,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 2.05,
+      "awayGoals": 1.25,
+      "odds": {
+        "home": 1.68,
+        "draw": 3.59,
+        "away": 2.92,
+        "over": 1.45,
+        "btts": 2.2
+      }
+    },
+    {
+      "id": "espn-401915400",
+      "date": "2026-10-20",
+      "time": "21:00",
+      "league": "Ligue des champions",
+      "home": "Napoli",
+      "away": "Bodo/Glimt",
+      "priority": 72,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 2.05,
+      "awayGoals": 1.25,
+      "odds": {
+        "home": 1.68,
+        "draw": 3.59,
+        "away": 2.92,
+        "over": 1.45,
+        "btts": 2.2
+      }
+    },
+    {
+      "id": "espn-401915392",
+      "date": "2026-10-20",
+      "time": "21:00",
+      "league": "Ligue des champions",
+      "home": "VfB Stuttgart",
+      "away": "Atlético Madrid",
+      "priority": 72,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 1.5999999999999999,
+      "awayGoals": 1.6,
+      "odds": {
+        "home": 2.16,
+        "draw": 3.15,
+        "away": 2.28,
+        "over": 1.45,
+        "btts": 1.72
+      }
+    },
+    {
+      "id": "espn-401915403",
+      "date": "2026-10-20",
+      "time": "18:45",
+      "league": "Ligue des champions",
+      "home": "Fenerbahce",
+      "away": "Slavia Prague",
+      "priority": 42,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 1.45,
+      "awayGoals": 1.15,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 1.45,
+        "btts": 2.39
+      }
+    },
+    {
+      "id": "espn-401915402",
+      "date": "2026-10-20",
+      "time": "21:00",
+      "league": "Ligue des champions",
+      "home": "AS Roma",
+      "away": "Slovan Bratislava",
+      "priority": 42,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 1.45,
+      "awayGoals": 1.15,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 1.45,
+        "btts": 2.39
+      }
+    },
+    {
+      "id": "espn-401915398",
+      "date": "2026-10-20",
+      "time": "21:00",
+      "league": "Ligue des champions",
+      "home": "FC Porto",
+      "away": "PSV Eindhoven",
+      "priority": 42,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 1.45,
+      "awayGoals": 1.15,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 1.45,
+        "btts": 2.39
+      }
+    },
+    {
+      "id": "espn-401915312",
+      "date": "2026-10-21",
+      "time": "21:00",
+      "league": "Ligue des champions",
+      "home": "Bayern Munich",
+      "away": "Arsenal",
+      "priority": 102,
+      "featured": true,
+      "status": "Scheduled",
+      "homeGoals": 2.05,
+      "awayGoals": 1.6,
+      "odds": {
+        "home": 1.68,
+        "draw": 3.4,
+        "away": 2.28,
+        "over": 1.45,
+        "btts": 1.72
+      }
+    },
+    {
+      "id": "espn-401915395",
+      "date": "2026-10-21",
+      "time": "18:45",
+      "league": "Ligue des champions",
+      "home": "Como",
+      "away": "Manchester United",
+      "priority": 72,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 1.5999999999999999,
+      "awayGoals": 1.6,
+      "odds": {
+        "home": 2.16,
+        "draw": 3.15,
+        "away": 2.28,
+        "over": 1.45,
+        "btts": 1.72
+      }
+    },
+    {
+      "id": "espn-401915390",
+      "date": "2026-10-21",
+      "time": "21:00",
+      "league": "Ligue des champions",
+      "home": "Internazionale",
+      "away": "Shakhtar Donetsk",
+      "priority": 72,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 2.05,
+      "awayGoals": 1.25,
+      "odds": {
+        "home": 1.68,
+        "draw": 3.59,
+        "away": 2.92,
+        "over": 1.45,
+        "btts": 2.2
+      }
+    },
+    {
+      "id": "espn-401915313",
+      "date": "2026-10-21",
+      "time": "21:00",
+      "league": "Ligue des champions",
+      "home": "Real Madrid",
+      "away": "RB Leipzig",
+      "priority": 72,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 2.05,
+      "awayGoals": 1.25,
+      "odds": {
+        "home": 1.68,
+        "draw": 3.59,
+        "away": 2.92,
+        "over": 1.45,
+        "btts": 2.2
+      }
+    },
+    {
+      "id": "espn-401915396",
+      "date": "2026-10-21",
+      "time": "18:45",
+      "league": "Ligue des champions",
+      "home": "Lille",
+      "away": "Galatasaray",
+      "priority": 42,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 1.45,
+      "awayGoals": 1.15,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 1.45,
+        "btts": 2.39
+      }
+    },
+    {
+      "id": "espn-401915394",
+      "date": "2026-10-21",
+      "time": "21:00",
+      "league": "Ligue des champions",
+      "home": "Aston Villa",
+      "away": "Viking FK",
+      "priority": 42,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 1.45,
+      "awayGoals": 1.15,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 1.45,
+        "btts": 2.39
+      }
+    },
+    {
+      "id": "espn-401915388",
+      "date": "2026-10-21",
+      "time": "21:00",
+      "league": "Ligue des champions",
+      "home": "Club Brugge",
+      "away": "Lens",
+      "priority": 42,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 1.45,
+      "awayGoals": 1.15,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 1.45,
+        "btts": 2.39
+      }
+    },
+    {
+      "id": "espn-401915389",
+      "date": "2026-10-21",
+      "time": "21:00",
+      "league": "Ligue des champions",
+      "home": "Real Betis",
+      "away": "Feyenoord Rotterdam",
+      "priority": 42,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 1.45,
+      "awayGoals": 1.15,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 1.45,
+        "btts": 2.39
+      }
+    },
+    {
+      "id": "espn-401915391",
+      "date": "2026-10-21",
+      "time": "21:00",
+      "league": "Ligue des champions",
+      "home": "Sporting CP",
+      "away": "LASK Linz",
+      "priority": 42,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 1.45,
+      "awayGoals": 1.15,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 1.45,
+        "btts": 2.39
+      }
+    },
+    {
+      "id": "espn-401882870",
+      "date": "2026-10-21",
+      "time": "20:00",
+      "league": "La Liga",
+      "home": "Levante",
+      "away": "Athletic Club",
+      "priority": 33,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 1.45,
+      "awayGoals": 1.15,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 1.45,
+        "btts": 2.39
+      }
+    },
+    {
+      "id": "espn-401915547",
+      "date": "2026-10-22",
+      "time": "18:45",
+      "league": "Europa League",
+      "home": "Juventus",
+      "away": "Stade Rennais",
+      "priority": 58,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 1.9,
+      "awayGoals": 1.15,
+      "odds": {
+        "home": 1.82,
+        "draw": 3.56,
+        "away": 3.17,
+        "over": 1.45,
+        "btts": 2.39
+      }
+    },
+    {
+      "id": "espn-401915557",
+      "date": "2026-10-22",
+      "time": "18:45",
+      "league": "Europa League",
+      "home": "SK Sturm Graz",
+      "away": "Marseille",
+      "priority": 58,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 1.45,
+      "awayGoals": 1.5,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.18,
+        "away": 2.43,
+        "over": 1.45,
+        "btts": 1.9
+      }
+    },
+    {
+      "id": "espn-401915552",
+      "date": "2026-10-22",
+      "time": "21:00",
+      "league": "Europa League",
+      "home": "AFC Bournemouth",
+      "away": "AC Milan",
+      "priority": 58,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 1.45,
+      "awayGoals": 1.5,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.18,
+        "away": 2.43,
+        "over": 1.45,
+        "btts": 1.9
+      }
+    },
+    {
+      "id": "espn-401915548",
+      "date": "2026-10-22",
+      "time": "18:45",
+      "league": "Europa League",
+      "home": "Ararat-Armenia",
+      "away": "AZ Alkmaar",
+      "priority": 28,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 1.45,
+      "awayGoals": 1.15,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 1.45,
+        "btts": 2.39
+      }
+    },
+    {
+      "id": "espn-401915556",
+      "date": "2026-10-22",
+      "time": "18:45",
+      "league": "Europa League",
+      "home": "Dinamo Zagreb",
+      "away": "NEC Nijmegen",
+      "priority": 28,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 1.45,
+      "awayGoals": 1.15,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 1.45,
+        "btts": 2.39
+      }
+    },
+    {
+      "id": "espn-401915558",
+      "date": "2026-10-22",
+      "time": "18:45",
+      "league": "Europa League",
+      "home": "Ferencvaros",
+      "away": "Torreense",
+      "priority": 28,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 1.45,
+      "awayGoals": 1.15,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 1.45,
+        "btts": 2.39
+      }
+    },
+    {
+      "id": "espn-401915546",
+      "date": "2026-10-22",
+      "time": "18:45",
+      "league": "Europa League",
+      "home": "Lech Poznan",
+      "away": "Sunderland",
+      "priority": 28,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 1.45,
+      "awayGoals": 1.15,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 1.45,
+        "btts": 2.39
+      }
+    },
+    {
+      "id": "espn-401915559",
+      "date": "2026-10-22",
+      "time": "18:45",
+      "league": "Europa League",
+      "home": "OFI Crete",
+      "away": "Bayer Leverkusen",
+      "priority": 28,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 1.45,
+      "awayGoals": 1.15,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 1.45,
+        "btts": 2.39
+      }
+    },
+    {
+      "id": "espn-401915545",
+      "date": "2026-10-22",
+      "time": "18:45",
+      "league": "Europa League",
+      "home": "Union St.-Gilloise",
+      "away": "Hapoel Be'er",
+      "priority": 28,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 1.45,
+      "awayGoals": 1.15,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 1.45,
+        "btts": 2.39
+      }
+    },
+    {
+      "id": "espn-401915553",
+      "date": "2026-10-22",
+      "time": "21:00",
+      "league": "Europa League",
+      "home": "Besiktas",
+      "away": "Crystal Palace",
+      "priority": 28,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 1.45,
+      "awayGoals": 1.15,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 1.45,
+        "btts": 2.39
+      }
+    },
+    {
+      "id": "espn-401915555",
+      "date": "2026-10-22",
+      "time": "21:00",
+      "league": "Europa League",
+      "home": "Celtic",
+      "away": "Celta Vigo",
+      "priority": 28,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 1.45,
+      "awayGoals": 1.15,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 1.45,
+        "btts": 2.39
+      }
+    },
+    {
+      "id": "espn-401915542",
+      "date": "2026-10-22",
+      "time": "21:00",
+      "league": "Europa League",
+      "home": "Jagiellonia Bialystok",
+      "away": "Anderlecht",
+      "priority": 28,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 1.45,
+      "awayGoals": 1.15,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 1.45,
+        "btts": 2.39
+      }
+    },
+    {
+      "id": "espn-401915540",
+      "date": "2026-10-22",
+      "time": "21:00",
+      "league": "Europa League",
+      "home": "Lillestrom",
+      "away": "Real Sociedad",
+      "priority": 28,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 1.45,
+      "awayGoals": 1.15,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 1.45,
+        "btts": 2.39
+      }
+    },
+    {
+      "id": "espn-401915541",
+      "date": "2026-10-22",
+      "time": "21:00",
+      "league": "Europa League",
+      "home": "NK Celje",
+      "away": "RB Salzburg",
+      "priority": 28,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 1.45,
+      "awayGoals": 1.15,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 1.45,
+        "btts": 2.39
+      }
+    },
+    {
+      "id": "espn-401915554",
+      "date": "2026-10-22",
+      "time": "21:00",
+      "league": "Europa League",
+      "home": "Olympiacos",
+      "away": "Sparta Prague",
+      "priority": 28,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 1.45,
+      "awayGoals": 1.15,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 1.45,
+        "btts": 2.39
+      }
+    },
+    {
+      "id": "espn-401915544",
+      "date": "2026-10-22",
+      "time": "21:00",
+      "league": "Europa League",
+      "home": "Omonia Nicosia",
+      "away": "Benfica",
+      "priority": 28,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 1.45,
+      "awayGoals": 1.15,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 1.45,
+        "btts": 2.39
+      }
+    },
+    {
+      "id": "espn-401915543",
+      "date": "2026-10-22",
+      "time": "21:00",
+      "league": "Europa League",
+      "home": "TSG Hoffenheim",
+      "away": "Lyon",
+      "priority": 28,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 1.45,
+      "awayGoals": 1.15,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 1.45,
+        "btts": 2.39
+      }
+    },
+    {
+      "id": "espn-401915539",
+      "date": "2026-10-22",
+      "time": "21:00",
+      "league": "Europa League",
+      "home": "Viktoria Plzen",
+      "away": "Levski Sofia",
+      "priority": 28,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 1.45,
+      "awayGoals": 1.15,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 1.45,
+        "btts": 2.39
+      }
+    },
+    {
+      "id": "espn-401879253",
+      "date": "2026-10-23",
+      "time": "21:00",
+      "league": "Premier League",
+      "home": "Ipswich Town",
+      "away": "Nottingham Forest",
+      "priority": 34,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 1.45,
+      "awayGoals": 1.15,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 1.45,
+        "btts": 2.39
+      }
+    },
+    {
+      "id": "espn-401882836",
+      "date": "2026-10-23",
+      "time": "21:00",
+      "league": "La Liga",
+      "home": "Alavés",
+      "away": "Málaga",
+      "priority": 33,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 1.45,
+      "awayGoals": 1.15,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 1.45,
+        "btts": 2.39
+      }
+    },
+    {
+      "id": "espn-401884761",
+      "date": "2026-10-23",
+      "time": "20:30",
+      "league": "Bundesliga",
+      "home": "VfB Stuttgart",
+      "away": "Borussia Mönchengladbach",
+      "priority": 32,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 1.45,
+      "awayGoals": 1.15,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 1.45,
+        "btts": 2.39
+      }
+    },
+    {
+      "id": "espn-401874957",
+      "date": "2026-10-23",
+      "time": "20:45",
+      "league": "Serie A",
+      "home": "Torino",
+      "away": "Monza",
+      "priority": 31,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 1.45,
+      "awayGoals": 1.15,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 1.45,
+        "btts": 2.39
+      }
+    },
+    {
+      "id": "espn-401876428",
+      "date": "2026-10-23",
+      "time": "20:45",
+      "league": "Ligue 1",
+      "home": "Brest",
+      "away": "Nice",
+      "priority": 30,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 1.45,
+      "awayGoals": 1.15,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 1.45,
+        "btts": 2.39
+      }
+    },
+    {
+      "id": "espn-401879256",
+      "date": "2026-10-24",
+      "time": "13:30",
+      "league": "Premier League",
+      "home": "Aston Villa",
+      "away": "Manchester City",
+      "priority": 64,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 1.5999999999999999,
+      "awayGoals": 1.6,
+      "odds": {
+        "home": 2.16,
+        "draw": 3.15,
+        "away": 2.28,
+        "over": 1.45,
+        "btts": 1.72
+      }
+    },
+    {
+      "id": "espn-401878768",
+      "date": "2026-10-24",
+      "time": "16:00",
+      "league": "Premier League",
+      "home": "Arsenal",
+      "away": "Everton",
+      "priority": 64,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 2.05,
+      "awayGoals": 1.25,
+      "odds": {
+        "home": 1.68,
+        "draw": 3.59,
+        "away": 2.92,
+        "over": 1.45,
+        "btts": 2.2
+      }
+    },
+    {
+      "id": "espn-401878767",
+      "date": "2026-10-24",
+      "time": "18:30",
+      "league": "Premier League",
+      "home": "Chelsea",
+      "away": "Tottenham Hotspur",
+      "priority": 64,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 2.05,
+      "awayGoals": 1.25,
+      "odds": {
+        "home": 1.68,
+        "draw": 3.59,
+        "away": 2.92,
+        "over": 1.45,
+        "btts": 2.2
+      }
+    },
+    {
+      "id": "espn-401882834",
+      "date": "2026-10-24",
+      "time": "21:00",
+      "league": "La Liga",
+      "home": "Atlético Madrid",
+      "away": "Deportivo",
+      "priority": 63,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 2.05,
+      "awayGoals": 1.25,
+      "odds": {
+        "home": 1.68,
+        "draw": 3.59,
+        "away": 2.92,
+        "over": 1.45,
+        "btts": 2.2
+      }
+    },
+    {
+      "id": "espn-401884763",
+      "date": "2026-10-24",
+      "time": "18:30",
+      "league": "Bundesliga",
+      "home": "Borussia Dortmund",
+      "away": "Eintracht Frankfurt",
+      "priority": 62,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 2.05,
+      "awayGoals": 1.25,
+      "odds": {
+        "home": 1.68,
+        "draw": 3.59,
+        "away": 2.92,
+        "over": 1.45,
+        "btts": 2.2
+      }
+    },
+    {
+      "id": "espn-401874948",
+      "date": "2026-10-24",
+      "time": "18:00",
+      "league": "Serie A",
+      "home": "Napoli",
+      "away": "AS Roma",
+      "priority": 61,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 2.05,
+      "awayGoals": 1.25,
+      "odds": {
+        "home": 1.68,
+        "draw": 3.59,
+        "away": 2.92,
+        "over": 1.45,
+        "btts": 2.2
+      }
+    },
+    {
+      "id": "espn-401879255",
+      "date": "2026-10-24",
+      "time": "16:00",
+      "league": "Premier League",
+      "home": "Coventry City",
+      "away": "Fulham",
+      "priority": 34,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 1.45,
+      "awayGoals": 1.15,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 1.45,
+        "btts": 2.39
+      }
+    },
+    {
+      "id": "espn-401882830",
+      "date": "2026-10-24",
+      "time": "14:00",
+      "league": "La Liga",
+      "home": "Rayo Vallecano",
+      "away": "Elche",
+      "priority": 33,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 1.45,
+      "awayGoals": 1.15,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 1.45,
+        "btts": 2.39
+      }
+    },
+    {
+      "id": "espn-401882831",
+      "date": "2026-10-24",
+      "time": "16:15",
+      "league": "La Liga",
+      "home": "Racing Santander",
+      "away": "Espanyol",
+      "priority": 33,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 1.45,
+      "awayGoals": 1.15,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 1.45,
+        "btts": 2.39
+      }
+    },
+    {
+      "id": "espn-401882827",
+      "date": "2026-10-24",
+      "time": "18:30",
+      "league": "La Liga",
+      "home": "Valencia",
+      "away": "Villarreal",
+      "priority": 33,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 1.45,
+      "awayGoals": 1.15,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 1.45,
+        "btts": 2.39
+      }
+    },
+    {
+      "id": "espn-401884758",
+      "date": "2026-10-24",
+      "time": "15:30",
+      "league": "Bundesliga",
+      "home": "FC Augsburg",
+      "away": "1. FC Union Berlin",
+      "priority": 32,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 1.45,
+      "awayGoals": 1.15,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 1.45,
+        "btts": 2.39
+      }
+    },
+    {
+      "id": "espn-401884756",
+      "date": "2026-10-24",
+      "time": "15:30",
+      "league": "Bundesliga",
+      "home": "FC Cologne",
+      "away": "Schalke 04",
+      "priority": 32,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 1.45,
+      "awayGoals": 1.15,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 1.45,
+        "btts": 2.39
+      }
+    },
+    {
+      "id": "espn-401884757",
+      "date": "2026-10-24",
+      "time": "15:30",
+      "league": "Bundesliga",
+      "home": "Mainz",
+      "away": "Werder Bremen",
+      "priority": 32,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 1.45,
+      "awayGoals": 1.15,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 1.45,
+        "btts": 2.39
+      }
+    },
+    {
+      "id": "espn-401884762",
+      "date": "2026-10-24",
+      "time": "15:30",
+      "league": "Bundesliga",
+      "home": "RB Leipzig",
+      "away": "SV Elversberg",
+      "priority": 32,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 1.45,
+      "awayGoals": 1.15,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 1.45,
+        "btts": 2.39
+      }
+    },
+    {
+      "id": "espn-401884755",
+      "date": "2026-10-24",
+      "time": "15:30",
+      "league": "Bundesliga",
+      "home": "SC Paderborn 07",
+      "away": "Hamburg SV",
+      "priority": 32,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 1.45,
+      "awayGoals": 1.15,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 1.45,
+        "btts": 2.39
+      }
+    },
+    {
+      "id": "espn-401874958",
+      "date": "2026-10-24",
+      "time": "15:00",
+      "league": "Serie A",
+      "home": "Cagliari",
+      "away": "Bologna",
+      "priority": 31,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 1.45,
+      "awayGoals": 1.15,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 1.45,
+        "btts": 2.39
+      }
+    },
+    {
+      "id": "espn-401874961",
+      "date": "2026-10-24",
+      "time": "15:00",
+      "league": "Serie A",
+      "home": "Como",
+      "away": "Sassuolo",
+      "priority": 31,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 1.45,
+      "awayGoals": 1.15,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 1.45,
+        "btts": 2.39
+      }
+    },
+    {
+      "id": "espn-401874955",
+      "date": "2026-10-24",
+      "time": "20:45",
+      "league": "Serie A",
+      "home": "Lazio",
+      "away": "Parma",
+      "priority": 31,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 1.45,
+      "awayGoals": 1.15,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 1.45,
+        "btts": 2.39
+      }
+    },
+    {
+      "id": "espn-401876423",
+      "date": "2026-10-24",
+      "time": "17:15",
+      "league": "Ligue 1",
+      "home": "Toulouse",
+      "away": "Troyes",
+      "priority": 30,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 1.45,
+      "awayGoals": 1.15,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 1.45,
+        "btts": 2.39
+      }
+    },
+    {
+      "id": "espn-401876427",
+      "date": "2026-10-24",
+      "time": "20:45",
+      "league": "Ligue 1",
+      "home": "Lens",
+      "away": "Paris FC",
+      "priority": 30,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 1.45,
+      "awayGoals": 1.15,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 1.45,
+        "btts": 2.39
+      }
+    },
+    {
+      "id": "espn-401882832",
+      "date": "2026-10-25",
+      "time": "21:00",
+      "league": "La Liga",
+      "home": "Barcelona",
+      "away": "Real Madrid",
+      "priority": 93,
+      "featured": true,
+      "status": "Scheduled",
+      "homeGoals": 2.05,
+      "awayGoals": 1.6,
+      "odds": {
+        "home": 1.68,
+        "draw": 3.4,
+        "away": 2.28,
+        "over": 1.45,
+        "btts": 1.72
+      }
+    },
+    {
+      "id": "espn-401878765",
+      "date": "2026-10-25",
+      "time": "15:00",
+      "league": "Premier League",
+      "home": "Liverpool",
+      "away": "Brighton & Hove Albion",
+      "priority": 64,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 2.05,
+      "awayGoals": 1.25,
+      "odds": {
+        "home": 1.68,
+        "draw": 3.59,
+        "away": 2.92,
+        "over": 1.45,
+        "btts": 2.2
+      }
+    },
+    {
+      "id": "espn-401879252",
+      "date": "2026-10-25",
+      "time": "15:00",
+      "league": "Premier League",
+      "home": "Manchester United",
+      "away": "AFC Bournemouth",
+      "priority": 64,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 2.05,
+      "awayGoals": 1.25,
+      "odds": {
+        "home": 1.68,
+        "draw": 3.59,
+        "away": 2.92,
+        "over": 1.45,
+        "btts": 2.2
+      }
+    },
+    {
+      "id": "espn-401884759",
+      "date": "2026-10-25",
+      "time": "17:30",
+      "league": "Bundesliga",
+      "home": "SC Freiburg",
+      "away": "Bayern Munich",
+      "priority": 62,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 1.5999999999999999,
+      "awayGoals": 1.6,
+      "odds": {
+        "home": 2.16,
+        "draw": 3.15,
+        "away": 2.28,
+        "over": 1.45,
+        "btts": 1.72
+      }
+    },
+    {
+      "id": "espn-401875036",
+      "date": "2026-10-25",
+      "time": "12:30",
+      "league": "Serie A",
+      "home": "Internazionale",
+      "away": "Fiorentina",
+      "priority": 61,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 2.05,
+      "awayGoals": 1.25,
+      "odds": {
+        "home": 1.68,
+        "draw": 3.59,
+        "away": 2.92,
+        "over": 1.45,
+        "btts": 2.2
+      }
+    },
+    {
+      "id": "espn-401874772",
+      "date": "2026-10-25",
+      "time": "18:00",
+      "league": "Serie A",
+      "home": "Lecce",
+      "away": "Juventus",
+      "priority": 61,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 1.5999999999999999,
+      "awayGoals": 1.6,
+      "odds": {
+        "home": 2.16,
+        "draw": 3.15,
+        "away": 2.28,
+        "over": 1.45,
+        "btts": 1.72
+      }
+    },
+    {
+      "id": "espn-401874779",
+      "date": "2026-10-25",
+      "time": "20:45",
+      "league": "Serie A",
+      "home": "Udinese",
+      "away": "AC Milan",
+      "priority": 61,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 1.5999999999999999,
+      "awayGoals": 1.6,
+      "odds": {
+        "home": 2.16,
+        "draw": 3.15,
+        "away": 2.28,
+        "over": 1.45,
+        "btts": 1.72
+      }
+    },
+    {
+      "id": "espn-401876426",
+      "date": "2026-10-25",
+      "time": "17:15",
+      "league": "Ligue 1",
+      "home": "Marseille",
+      "away": "Le Havre AC",
+      "priority": 60,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 1.9,
+      "awayGoals": 1.15,
+      "odds": {
+        "home": 1.82,
+        "draw": 3.56,
+        "away": 3.17,
+        "over": 1.45,
+        "btts": 2.39
+      }
+    },
+    {
+      "id": "espn-401876422",
+      "date": "2026-10-25",
+      "time": "20:45",
+      "league": "Ligue 1",
+      "home": "Paris Saint-Germain",
+      "away": "Lyon",
+      "priority": 60,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 1.9,
+      "awayGoals": 1.15,
+      "odds": {
+        "home": 1.82,
+        "draw": 3.56,
+        "away": 3.17,
+        "over": 1.45,
+        "btts": 2.39
+      }
+    },
+    {
+      "id": "espn-401879254",
+      "date": "2026-10-25",
+      "time": "15:00",
+      "league": "Premier League",
+      "home": "Crystal Palace",
+      "away": "Newcastle United",
+      "priority": 34,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 1.45,
+      "awayGoals": 1.15,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 1.45,
+        "btts": 2.39
+      }
+    },
+    {
+      "id": "espn-401878766",
+      "date": "2026-10-25",
+      "time": "15:00",
+      "league": "Premier League",
+      "home": "Hull City",
+      "away": "Brentford",
+      "priority": 34,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 1.45,
+      "awayGoals": 1.15,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 1.45,
+        "btts": 2.39
+      }
+    },
+    {
+      "id": "espn-401878764",
+      "date": "2026-10-25",
+      "time": "17:30",
+      "league": "Premier League",
+      "home": "Sunderland",
+      "away": "Leeds United",
+      "priority": 34,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 1.45,
+      "awayGoals": 1.15,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 1.45,
+        "btts": 2.39
+      }
+    },
+    {
+      "id": "espn-401882835",
+      "date": "2026-10-25",
+      "time": "14:00",
+      "league": "La Liga",
+      "home": "Athletic Club",
+      "away": "Getafe",
+      "priority": 33,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 1.45,
+      "awayGoals": 1.15,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 1.45,
+        "btts": 2.39
+      }
+    },
+    {
+      "id": "espn-401882833",
+      "date": "2026-10-25",
+      "time": "16:15",
+      "league": "La Liga",
+      "home": "Celta Vigo",
+      "away": "Real Betis",
+      "priority": 33,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 1.45,
+      "awayGoals": 1.15,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 1.45,
+        "btts": 2.39
+      }
+    },
+    {
+      "id": "espn-401882829",
+      "date": "2026-10-25",
+      "time": "18:30",
+      "league": "La Liga",
+      "home": "Real Sociedad",
+      "away": "Levante",
+      "priority": 33,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 1.45,
+      "awayGoals": 1.15,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 1.45,
+        "btts": 2.39
+      }
+    },
+    {
+      "id": "espn-401884760",
+      "date": "2026-10-25",
+      "time": "15:30",
+      "league": "Bundesliga",
+      "home": "TSG Hoffenheim",
+      "away": "Bayer Leverkusen",
+      "priority": 32,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 1.45,
+      "awayGoals": 1.15,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 1.45,
+        "btts": 2.39
+      }
+    },
+    {
+      "id": "espn-401874972",
+      "date": "2026-10-25",
+      "time": "15:00",
+      "league": "Serie A",
+      "home": "Atalanta",
+      "away": "Frosinone",
+      "priority": 31,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 1.45,
+      "awayGoals": 1.15,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 1.45,
+        "btts": 2.39
+      }
+    },
+    {
+      "id": "espn-401874952",
+      "date": "2026-10-25",
+      "time": "15:00",
+      "league": "Serie A",
+      "home": "Genoa",
+      "away": "Venezia",
+      "priority": 31,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 1.45,
+      "awayGoals": 1.15,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 1.45,
+        "btts": 2.39
+      }
+    },
+    {
+      "id": "espn-401876425",
+      "date": "2026-10-25",
+      "time": "15:00",
+      "league": "Ligue 1",
+      "home": "AS Monaco",
+      "away": "Lille",
+      "priority": 30,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 1.45,
+      "awayGoals": 1.15,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 1.45,
+        "btts": 2.39
+      }
+    },
+    {
+      "id": "espn-401876429",
+      "date": "2026-10-25",
+      "time": "17:15",
+      "league": "Ligue 1",
+      "home": "AJ Auxerre",
+      "away": "Le Mans",
+      "priority": 30,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 1.45,
+      "awayGoals": 1.15,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 1.45,
+        "btts": 2.39
+      }
+    },
+    {
+      "id": "espn-401876430",
+      "date": "2026-10-25",
+      "time": "17:15",
+      "league": "Ligue 1",
+      "home": "Angers",
+      "away": "Lorient",
+      "priority": 30,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 1.45,
+      "awayGoals": 1.15,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 1.45,
+        "btts": 2.39
+      }
+    },
+    {
+      "id": "espn-401876424",
+      "date": "2026-10-25",
+      "time": "17:15",
+      "league": "Ligue 1",
+      "home": "Stade Rennais",
+      "away": "Strasbourg",
+      "priority": 30,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 1.45,
+      "awayGoals": 1.15,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 1.45,
+        "btts": 2.39
+      }
+    },
+    {
+      "id": "espn-401882828",
+      "date": "2026-10-26",
+      "time": "21:00",
+      "league": "La Liga",
+      "home": "Sevilla",
+      "away": "Osasuna",
+      "priority": 33,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 1.45,
+      "awayGoals": 1.15,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 1.45,
+        "btts": 2.39
+      }
+    },
+    {
+      "id": "espn-401874980",
+      "date": "2026-10-27",
+      "time": "18:30",
+      "league": "Serie A",
+      "home": "Sassuolo",
+      "away": "Lazio",
+      "priority": 31,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 1.45,
+      "awayGoals": 1.15,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 1.45,
+        "btts": 2.39
+      }
+    },
+    {
+      "id": "espn-401874780",
+      "date": "2026-10-27",
+      "time": "20:45",
+      "league": "Serie A",
+      "home": "AS Roma",
+      "away": "Cagliari",
+      "priority": 31,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 1.45,
+      "awayGoals": 1.15,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 1.45,
+        "btts": 2.39
+      }
+    },
+    {
+      "id": "espn-401874786",
+      "date": "2026-10-27",
+      "time": "20:45",
+      "league": "Serie A",
+      "home": "Torino",
+      "away": "Como",
+      "priority": 31,
+      "featured": false,
+      "status": "Scheduled",
+      "homeGoals": 1.45,
+      "awayGoals": 1.15,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 1.45,
+        "btts": 2.39
+      }
+    }
+  ]
 }
