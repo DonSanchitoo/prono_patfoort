@@ -54,10 +54,11 @@ const results = await Promise.allSettled(leagues.map(async ([slug, label, weight
 }));
 
 const matches = results.flatMap(result => result.status === 'fulfilled' ? result.value : []);
+const failures = results.flatMap((result, index) => result.status === 'rejected' ? [`${leagues[index][0]}: ${result.reason?.message ?? 'échec inconnu'}`] : []);
 const unique = [...new Map(matches.map(match => [match.id, match])).values()]
   .filter(match => match.date >= start.toISOString().slice(0, 10) && match.date <= end.toISOString().slice(0, 10))
   .sort((a, b) => a.date.localeCompare(b.date) || b.priority - a.priority);
-if (!unique.length) throw new Error('Aucune rencontre reçue des calendriers ESPN');
 await mkdir('data', { recursive: true });
-await writeFile('data/fixtures.json', `${JSON.stringify({ generatedAt: new Date().toISOString(), source: 'ESPN public scoreboard', matches: unique }, null, 2)}\n`);
+await writeFile('data/fixtures.json', `${JSON.stringify({ generatedAt: new Date().toISOString(), source: 'ESPN public scoreboard', providerStatus: failures.length ? 'partial' : 'ok', failures, matches: unique }, null, 2)}\n`);
 console.log(`${unique.length} rencontres officielles enregistrées (${results.filter(r => r.status === 'fulfilled').length}/${leagues.length} compétitions).`);
+if (failures.length) console.warn(failures.join('\n'));
