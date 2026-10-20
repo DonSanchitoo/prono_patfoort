@@ -2,7 +2,7 @@ name: Actualiser les matchs
 
 on:
   schedule:
-    - cron: '15 5,11,17 * * *'
+    - cron: '15 6 * * *'
   workflow_dispatch:
   push:
     branches: [main]
@@ -31,6 +31,9 @@ jobs:
         with:
           node-version: 20
       - name: Télécharger les calendriers officiels
+        env:
+          FOOTBALL_DATA_TOKEN: ${{ secrets.FOOTBALL_DATA_TOKEN }}
+          THE_ODDS_API_KEY: ${{ secrets.THE_ODDS_API_KEY }}
         run: node scripts/update-fixtures.mjs
       - name: Publier les nouvelles données
         run: |
