@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-20T14:55:11.463Z",
+  "generatedAt": "2026-10-20T15:10:09.053Z",
   "source": "ESPN + football-data.org + The Odds API",
   "providerStatus": "ok",
   "failures": [],
@@ -7,8 +7,767 @@
     "historicalMatches": 381,
     "oddsEvents": 133,
     "statsMatches": 47,
-    "oddsMatches": 71
+    "oddsMatches": 71,
+    "settlements": 84
   },
+  "settlements": [
+    {
+      "id": "espn-401878771",
+      "date": "2026-10-17",
+      "home": "Everton",
+      "away": "Chelsea",
+      "homeScore": 0,
+      "awayScore": 2,
+      "completed": true
+    },
+    {
+      "id": "espn-401879262",
+      "date": "2026-10-17",
+      "home": "Brentford",
+      "away": "Liverpool",
+      "homeScore": 1,
+      "awayScore": 2,
+      "completed": true
+    },
+    {
+      "id": "espn-401878770",
+      "date": "2026-10-17",
+      "home": "Fulham",
+      "away": "Hull City",
+      "homeScore": 1,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401879259",
+      "date": "2026-10-17",
+      "home": "Manchester City",
+      "away": "Ipswich Town",
+      "homeScore": 3,
+      "awayScore": 2,
+      "completed": true
+    },
+    {
+      "id": "espn-401879258",
+      "date": "2026-10-17",
+      "home": "Newcastle United",
+      "away": "Aston Villa",
+      "homeScore": 0,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401879263",
+      "date": "2026-10-18",
+      "home": "AFC Bournemouth",
+      "away": "Sunderland",
+      "homeScore": 2,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401879261",
+      "date": "2026-10-18",
+      "home": "Brighton & Hove Albion",
+      "away": "Crystal Palace",
+      "homeScore": 5,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401879260",
+      "date": "2026-10-18",
+      "home": "Leeds United",
+      "away": "Manchester United",
+      "homeScore": 1,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401878769",
+      "date": "2026-10-18",
+      "home": "Nottingham Forest",
+      "away": "Arsenal",
+      "homeScore": 0,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401879257",
+      "date": "2026-10-19",
+      "home": "Tottenham Hotspur",
+      "away": "Coventry City",
+      "homeScore": 3,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401876437",
+      "date": "2026-10-16",
+      "home": "Le Mans",
+      "away": "Toulouse",
+      "homeScore": 0,
+      "awayScore": 3,
+      "completed": true
+    },
+    {
+      "id": "espn-401876432",
+      "date": "2026-10-17",
+      "home": "Strasbourg",
+      "away": "Paris Saint-Germain",
+      "homeScore": 1,
+      "awayScore": 3,
+      "completed": true
+    },
+    {
+      "id": "espn-401876436",
+      "date": "2026-10-17",
+      "home": "Lille",
+      "away": "Brest",
+      "homeScore": 1,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401876431",
+      "date": "2026-10-17",
+      "home": "Troyes",
+      "away": "Lens",
+      "homeScore": 1,
+      "awayScore": 3,
+      "completed": true
+    },
+    {
+      "id": "espn-401876439",
+      "date": "2026-10-18",
+      "home": "Angers",
+      "away": "Marseille",
+      "homeScore": 2,
+      "awayScore": 5,
+      "completed": true
+    },
+    {
+      "id": "espn-401876438",
+      "date": "2026-10-18",
+      "home": "Le Havre AC",
+      "away": "AJ Auxerre",
+      "homeScore": 1,
+      "awayScore": 3,
+      "completed": true
+    },
+    {
+      "id": "espn-401876435",
+      "date": "2026-10-18",
+      "home": "Lorient",
+      "away": "AS Monaco",
+      "homeScore": 1,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401876433",
+      "date": "2026-10-18",
+      "home": "Paris FC",
+      "away": "Stade Rennais",
+      "homeScore": 4,
+      "awayScore": 3,
+      "completed": true
+    },
+    {
+      "id": "espn-401876434",
+      "date": "2026-10-18",
+      "home": "Lyon",
+      "away": "Nice",
+      "homeScore": 2,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401882844",
+      "date": "2026-10-16",
+      "home": "Deportivo",
+      "away": "Levante",
+      "homeScore": 1,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401882843",
+      "date": "2026-10-17",
+      "home": "Espanyol",
+      "away": "Atlético Madrid",
+      "homeScore": 0,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401882837",
+      "date": "2026-10-17",
+      "home": "Villarreal",
+      "away": "Elche",
+      "homeScore": 0,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401882846",
+      "date": "2026-10-17",
+      "home": "Real Betis",
+      "away": "Barcelona",
+      "homeScore": 2,
+      "awayScore": 5,
+      "completed": true
+    },
+    {
+      "id": "espn-401882838",
+      "date": "2026-10-17",
+      "home": "Valencia",
+      "away": "Athletic Club",
+      "homeScore": 0,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401882840",
+      "date": "2026-10-18",
+      "home": "Osasuna",
+      "away": "Racing Santander",
+      "homeScore": 2,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401882845",
+      "date": "2026-10-18",
+      "home": "Celta Vigo",
+      "away": "Alavés",
+      "homeScore": 2,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401882841",
+      "date": "2026-10-18",
+      "home": "Málaga",
+      "away": "Real Sociedad",
+      "homeScore": 2,
+      "awayScore": 5,
+      "completed": true
+    },
+    {
+      "id": "espn-401882839",
+      "date": "2026-10-18",
+      "home": "Real Madrid",
+      "away": "Sevilla",
+      "homeScore": 4,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401882842",
+      "date": "2026-10-19",
+      "home": "Getafe",
+      "away": "Rayo Vallecano",
+      "homeScore": 1,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401874959",
+      "date": "2026-10-16",
+      "home": "Frosinone",
+      "away": "Sassuolo",
+      "homeScore": 4,
+      "awayScore": 2,
+      "completed": true
+    },
+    {
+      "id": "espn-401874760",
+      "date": "2026-10-17",
+      "home": "Venezia",
+      "away": "Napoli",
+      "homeScore": 1,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401874953",
+      "date": "2026-10-17",
+      "home": "Bologna",
+      "away": "Internazionale",
+      "homeScore": 1,
+      "awayScore": 3,
+      "completed": true
+    },
+    {
+      "id": "espn-401874935",
+      "date": "2026-10-17",
+      "home": "AS Roma",
+      "away": "Genoa",
+      "homeScore": 2,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401874771",
+      "date": "2026-10-18",
+      "home": "Udinese",
+      "away": "Lecce",
+      "homeScore": 0,
+      "awayScore": 3,
+      "completed": true
+    },
+    {
+      "id": "espn-401874774",
+      "date": "2026-10-18",
+      "home": "Fiorentina",
+      "away": "Como",
+      "homeScore": 1,
+      "awayScore": 3,
+      "completed": true
+    },
+    {
+      "id": "espn-401874978",
+      "date": "2026-10-18",
+      "home": "AC Milan",
+      "away": "Atalanta",
+      "homeScore": 3,
+      "awayScore": 2,
+      "completed": true
+    },
+    {
+      "id": "espn-401874765",
+      "date": "2026-10-18",
+      "home": "Juventus",
+      "away": "Lazio",
+      "homeScore": 0,
+      "awayScore": 3,
+      "completed": true
+    },
+    {
+      "id": "espn-401874762",
+      "date": "2026-10-19",
+      "home": "Monza",
+      "away": "Cagliari",
+      "homeScore": 4,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401874784",
+      "date": "2026-10-19",
+      "home": "Parma",
+      "away": "Torino",
+      "homeScore": 0,
+      "awayScore": 3,
+      "completed": true
+    },
+    {
+      "id": "espn-401884770",
+      "date": "2026-10-16",
+      "home": "Eintracht Frankfurt",
+      "away": "FC Cologne",
+      "homeScore": 1,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401884769",
+      "date": "2026-10-17",
+      "home": "1. FC Union Berlin",
+      "away": "Borussia Dortmund",
+      "homeScore": 0,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401884767",
+      "date": "2026-10-17",
+      "home": "Hamburg SV",
+      "away": "VfB Stuttgart",
+      "homeScore": 1,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401884765",
+      "date": "2026-10-17",
+      "home": "Schalke 04",
+      "away": "Mainz",
+      "homeScore": 0,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401884764",
+      "date": "2026-10-17",
+      "home": "SV Elversberg",
+      "away": "FC Augsburg",
+      "homeScore": 4,
+      "awayScore": 3,
+      "completed": true
+    },
+    {
+      "id": "espn-401884766",
+      "date": "2026-10-17",
+      "home": "Werder Bremen",
+      "away": "SC Paderborn 07",
+      "homeScore": 2,
+      "awayScore": 2,
+      "completed": true
+    },
+    {
+      "id": "espn-401884772",
+      "date": "2026-10-17",
+      "home": "Bayern Munich",
+      "away": "RB Leipzig",
+      "homeScore": 6,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401884771",
+      "date": "2026-10-18",
+      "home": "Bayer Leverkusen",
+      "away": "SC Freiburg",
+      "homeScore": 2,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401884768",
+      "date": "2026-10-18",
+      "home": "Borussia Mönchengladbach",
+      "away": "TSG Hoffenheim",
+      "homeScore": 1,
+      "awayScore": 2,
+      "completed": true
+    },
+    {
+      "id": "espn-401915418",
+      "date": "2026-10-13",
+      "home": "Lens",
+      "away": "Sporting CP",
+      "homeScore": 0,
+      "awayScore": 2,
+      "completed": true
+    },
+    {
+      "id": "espn-401915436",
+      "date": "2026-10-13",
+      "home": "Sabah FK",
+      "away": "Slavia Prague",
+      "homeScore": 2,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401915417",
+      "date": "2026-10-13",
+      "home": "Arsenal",
+      "away": "Lille",
+      "homeScore": 3,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401915412",
+      "date": "2026-10-13",
+      "home": "Atlético Madrid",
+      "away": "Manchester United",
+      "homeScore": 2,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401915435",
+      "date": "2026-10-13",
+      "home": "Galatasaray",
+      "away": "Barcelona",
+      "homeScore": 1,
+      "awayScore": 4,
+      "completed": true
+    },
+    {
+      "id": "espn-401915413",
+      "date": "2026-10-13",
+      "home": "Internazionale",
+      "away": "Club Brugge",
+      "homeScore": 3,
+      "awayScore": 4,
+      "completed": true
+    },
+    {
+      "id": "espn-401915434",
+      "date": "2026-10-13",
+      "home": "RB Leipzig",
+      "away": "PSV Eindhoven",
+      "homeScore": 1,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401915411",
+      "date": "2026-10-13",
+      "home": "Viking FK",
+      "away": "Bayern Munich",
+      "homeScore": 3,
+      "awayScore": 3,
+      "completed": true
+    },
+    {
+      "id": "espn-401915410",
+      "date": "2026-10-13",
+      "home": "Villarreal",
+      "away": "Napoli",
+      "homeScore": 3,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401915416",
+      "date": "2026-10-14",
+      "home": "Feyenoord Rotterdam",
+      "away": "Como",
+      "homeScore": 3,
+      "awayScore": 2,
+      "completed": true
+    },
+    {
+      "id": "espn-401915415",
+      "date": "2026-10-14",
+      "home": "LASK Linz",
+      "away": "Liverpool",
+      "homeScore": 3,
+      "awayScore": 6,
+      "completed": true
+    },
+    {
+      "id": "espn-401915414",
+      "date": "2026-10-14",
+      "home": "AS Roma",
+      "away": "Real Madrid",
+      "homeScore": 3,
+      "awayScore": 4,
+      "completed": true
+    },
+    {
+      "id": "espn-401915409",
+      "date": "2026-10-14",
+      "home": "Aston Villa",
+      "away": "Fenerbahce",
+      "homeScore": 6,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401915393",
+      "date": "2026-10-14",
+      "home": "Bodo/Glimt",
+      "away": "Borussia Dortmund",
+      "homeScore": 1,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401915407",
+      "date": "2026-10-14",
+      "home": "Manchester City",
+      "away": "Paris Saint-Germain",
+      "homeScore": 2,
+      "awayScore": 4,
+      "completed": true
+    },
+    {
+      "id": "espn-401915408",
+      "date": "2026-10-14",
+      "home": "Real Betis",
+      "away": "FC Porto",
+      "homeScore": 3,
+      "awayScore": 2,
+      "completed": true
+    },
+    {
+      "id": "espn-401915406",
+      "date": "2026-10-14",
+      "home": "Shakhtar Donetsk",
+      "away": "AEK Athens",
+      "homeScore": 3,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401915405",
+      "date": "2026-10-14",
+      "home": "Slovan Bratislava",
+      "away": "VfB Stuttgart",
+      "homeScore": 0,
+      "awayScore": 3,
+      "completed": true
+    },
+    {
+      "id": "espn-401915573",
+      "date": "2026-10-15",
+      "home": "AZ Alkmaar",
+      "away": "Hapoel Be'er",
+      "homeScore": 2,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401915576",
+      "date": "2026-10-15",
+      "home": "Lech Poznan",
+      "away": "Bayer Leverkusen",
+      "homeScore": 0,
+      "awayScore": 4,
+      "completed": true
+    },
+    {
+      "id": "espn-401915566",
+      "date": "2026-10-15",
+      "home": "Lyon",
+      "away": "Crystal Palace",
+      "homeScore": 3,
+      "awayScore": 2,
+      "completed": true
+    },
+    {
+      "id": "espn-401915577",
+      "date": "2026-10-15",
+      "home": "NK Celje",
+      "away": "Omonia Nicosia",
+      "homeScore": 0,
+      "awayScore": 3,
+      "completed": true
+    },
+    {
+      "id": "espn-401915568",
+      "date": "2026-10-15",
+      "home": "RB Salzburg",
+      "away": "AC Milan",
+      "homeScore": 0,
+      "awayScore": 4,
+      "completed": true
+    },
+    {
+      "id": "espn-401915567",
+      "date": "2026-10-15",
+      "home": "Sparta Prague",
+      "away": "Lillestrom",
+      "homeScore": 1,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401915575",
+      "date": "2026-10-15",
+      "home": "Torreense",
+      "away": "Sunderland",
+      "homeScore": 1,
+      "awayScore": 2,
+      "completed": true
+    },
+    {
+      "id": "espn-401915574",
+      "date": "2026-10-15",
+      "home": "Union St.-Gilloise",
+      "away": "Real Sociedad",
+      "homeScore": 1,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401915571",
+      "date": "2026-10-15",
+      "home": "AFC Bournemouth",
+      "away": "SK Sturm Graz",
+      "homeScore": 3,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401915562",
+      "date": "2026-10-15",
+      "home": "Benfica",
+      "away": "Celtic",
+      "homeScore": 4,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401915560",
+      "date": "2026-10-15",
+      "home": "Celta Vigo",
+      "away": "Juventus",
+      "homeScore": 1,
+      "awayScore": 2,
+      "completed": true
+    },
+    {
+      "id": "espn-401915549",
+      "date": "2026-10-15",
+      "home": "Dinamo Zagreb",
+      "away": "Anderlecht",
+      "homeScore": 1,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401915564",
+      "date": "2026-10-15",
+      "home": "Ferencvaros",
+      "away": "Viktoria Plzen",
+      "homeScore": 2,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401915561",
+      "date": "2026-10-15",
+      "home": "Jagiellonia Bialystok",
+      "away": "Ararat-Armenia",
+      "homeScore": 3,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401915550",
+      "date": "2026-10-15",
+      "home": "Marseille",
+      "away": "Olympiacos",
+      "homeScore": 0,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401915565",
+      "date": "2026-10-15",
+      "home": "NEC Nijmegen",
+      "away": "Levski Sofia",
+      "homeScore": 1,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401915572",
+      "date": "2026-10-15",
+      "home": "Stade Rennais",
+      "away": "OFI Crete",
+      "homeScore": 2,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401915563",
+      "date": "2026-10-15",
+      "home": "TSG Hoffenheim",
+      "away": "Besiktas",
+      "homeScore": 2,
+      "awayScore": 3,
+      "completed": true
+    }
+  ],
   "matches": [
     {
       "id": "espn-401915399",
@@ -20,11 +779,14 @@
       "priority": 102,
       "featured": true,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 2.25,
       "awayGoals": 1.69,
       "odds": {
         "home": 2.46,
-        "draw": 4.39,
+        "draw": 4.4,
         "away": 2.41,
         "over": 1.45,
         "btts": 1.72
@@ -60,12 +822,15 @@
       "priority": 72,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 0.99,
       "awayGoals": 1.61,
       "odds": {
-        "home": 9.46,
-        "draw": 6.05,
-        "away": 1.29,
+        "home": 9.57,
+        "draw": 6.1,
+        "away": 1.28,
         "over": 1.45,
         "btts": 1.72
       },
@@ -100,12 +865,15 @@
       "priority": 72,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 1.53,
       "awayGoals": 1.38,
       "odds": {
         "home": 1.49,
-        "draw": 4.73,
-        "away": 6.04,
+        "draw": 4.72,
+        "away": 6,
         "over": 1.45,
         "btts": 2.2
       },
@@ -140,12 +908,15 @@
       "priority": 72,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 2.05,
       "awayGoals": 1.25,
       "odds": {
-        "home": 1.12,
-        "draw": 9.56,
-        "away": 18.8,
+        "home": 1.13,
+        "draw": 9.6,
+        "away": 18.44,
         "over": 1.45,
         "btts": 2.2
       },
@@ -167,6 +938,9 @@
       "priority": 72,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 2.05,
       "awayGoals": 1.25,
       "odds": {
@@ -187,12 +961,15 @@
       "priority": 72,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 0.99,
       "awayGoals": 1.46,
       "odds": {
         "home": 3.33,
-        "draw": 3.82,
-        "away": 2.05,
+        "draw": 3.83,
+        "away": 2.04,
         "over": 1.45,
         "btts": 1.72
       },
@@ -227,6 +1004,9 @@
       "priority": 42,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
@@ -247,12 +1027,15 @@
       "priority": 42,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 3.33,
       "awayGoals": 0.77,
       "odds": {
         "home": 1.11,
-        "draw": 9.74,
-        "away": 21.68,
+        "draw": 9.78,
+        "away": 21.59,
         "over": 1.45,
         "btts": 2.39
       },
@@ -287,6 +1070,9 @@
       "priority": 42,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
@@ -314,10 +1100,13 @@
       "priority": 102,
       "featured": true,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 2.05,
       "awayGoals": 1.6,
       "odds": {
-        "home": 2.04,
+        "home": 2.05,
         "draw": 3.83,
         "away": 3.32,
         "over": 1.45,
@@ -341,12 +1130,15 @@
       "priority": 72,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 1.5999999999999999,
       "awayGoals": 1.6,
       "odds": {
-        "home": 2.21,
-        "draw": 3.76,
-        "away": 3.01,
+        "home": 2.2,
+        "draw": 3.75,
+        "away": 3.02,
         "over": 1.45,
         "btts": 1.72
       },
@@ -368,6 +1160,9 @@
       "priority": 72,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 2.07,
       "awayGoals": 1.84,
       "odds": {
@@ -401,6 +1196,9 @@
       "priority": 72,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 2.61,
       "awayGoals": 1.76,
       "odds": {
@@ -441,12 +1239,15 @@
       "priority": 42,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
         "home": 2.19,
-        "draw": 3.68,
-        "away": 3.1,
+        "draw": 3.69,
+        "away": 3.09,
         "over": 1.45,
         "btts": 2.39
       },
@@ -468,6 +1269,9 @@
       "priority": 42,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 3.06,
       "awayGoals": 1.53,
       "odds": {
@@ -508,6 +1312,9 @@
       "priority": 42,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
@@ -528,11 +1335,14 @@
       "priority": 42,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 3.15,
       "awayGoals": 1.76,
       "odds": {
         "home": 1.55,
-        "draw": 4.7,
+        "draw": 4.71,
         "away": 5.1,
         "over": 1.45,
         "btts": 2.39
@@ -568,6 +1378,9 @@
       "priority": 42,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
@@ -588,11 +1401,14 @@
       "priority": 33,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 1.35,
       "awayGoals": 1.46,
       "odds": {
-        "home": 3.52,
-        "draw": 3.27,
+        "home": 3.53,
+        "draw": 3.25,
         "away": 2.15,
         "over": 1.45,
         "btts": 2.39
@@ -611,7 +1427,7 @@
         "avgConceded": 0.5
       },
       "oddsSource": "The Odds API",
-      "bookmakerCount": 20,
+      "bookmakerCount": 21,
       "realOddsMarkets": [
         "home",
         "draw",
@@ -628,6 +1444,9 @@
       "priority": 58,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 1.8,
       "awayGoals": 1.61,
       "odds": {
@@ -661,6 +1480,9 @@
       "priority": 58,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 1.45,
       "awayGoals": 1.5,
       "odds": {
@@ -688,12 +1510,15 @@
       "priority": 58,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 1.26,
       "awayGoals": 1.76,
       "odds": {
-        "home": 2.14,
+        "home": 2.13,
         "draw": 3.61,
-        "away": 3.16,
+        "away": 3.17,
         "over": 1.45,
         "btts": 1.9
       },
@@ -728,6 +1553,9 @@
       "priority": 28,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
@@ -755,6 +1583,9 @@
       "priority": 28,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
@@ -782,12 +1613,15 @@
       "priority": 28,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
         "home": 1.35,
-        "draw": 5.03,
-        "away": 8.02,
+        "draw": 5.07,
+        "away": 8.16,
         "over": 1.45,
         "btts": 2.39
       },
@@ -809,6 +1643,9 @@
       "priority": 28,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
@@ -836,6 +1673,9 @@
       "priority": 28,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
@@ -863,6 +1703,9 @@
       "priority": 28,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
@@ -883,12 +1726,15 @@
       "priority": 28,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
         "home": 2.09,
         "draw": 3.74,
-        "away": 3.16,
+        "away": 3.15,
         "over": 1.45,
         "btts": 2.39
       },
@@ -910,6 +1756,9 @@
       "priority": 28,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
@@ -937,6 +1786,9 @@
       "priority": 28,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
@@ -957,6 +1809,9 @@
       "priority": 28,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
@@ -984,12 +1839,15 @@
       "priority": 28,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
         "home": 4.86,
-        "draw": 4.08,
-        "away": 1.64,
+        "draw": 4.11,
+        "away": 1.63,
         "over": 1.45,
         "btts": 2.39
       },
@@ -1011,6 +1869,9 @@
       "priority": 28,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
@@ -1031,6 +1892,9 @@
       "priority": 28,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
@@ -1051,6 +1915,9 @@
       "priority": 28,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
@@ -1078,6 +1945,9 @@
       "priority": 28,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
@@ -1105,6 +1975,9 @@
       "priority": 34,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 1.53,
       "awayGoals": 1.46,
       "odds": {
@@ -1145,12 +2018,15 @@
       "priority": 33,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 1.71,
       "awayGoals": 1.07,
       "odds": {
-        "home": 1.76,
+        "home": 1.75,
         "draw": 3.62,
-        "away": 4.76,
+        "away": 4.74,
         "over": 1.45,
         "btts": 2.39
       },
@@ -1168,7 +2044,7 @@
         "avgConceded": 1.8333333333333333
       },
       "oddsSource": "The Odds API",
-      "bookmakerCount": 20,
+      "bookmakerCount": 21,
       "realOddsMarkets": [
         "home",
         "draw",
@@ -1185,6 +2061,9 @@
       "priority": 32,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 2.61,
       "awayGoals": 1,
       "odds": {
@@ -1225,12 +2104,15 @@
       "priority": 31,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 1.8,
       "awayGoals": 1.46,
       "odds": {
-        "home": 2.11,
-        "draw": 3.39,
-        "away": 3.43,
+        "home": 2.1,
+        "draw": 3.4,
+        "away": 3.47,
         "over": 1.45,
         "btts": 2.39
       },
@@ -1248,7 +2130,7 @@
         "avgConceded": 1.8333333333333333
       },
       "oddsSource": "The Odds API",
-      "bookmakerCount": 24,
+      "bookmakerCount": 23,
       "realOddsMarkets": [
         "home",
         "draw",
@@ -1265,6 +2147,9 @@
       "priority": 30,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
@@ -1292,6 +2177,9 @@
       "priority": 64,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 2.25,
       "awayGoals": 1.84,
       "odds": {
@@ -1332,6 +2220,9 @@
       "priority": 64,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 1.44,
       "awayGoals": 0.77,
       "odds": {
@@ -1372,6 +2263,9 @@
       "priority": 64,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 1.89,
       "awayGoals": 1.3,
       "odds": {
@@ -1412,12 +2306,15 @@
       "priority": 63,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 2.07,
       "awayGoals": 0.61,
       "odds": {
         "home": 1.25,
-        "draw": 6.06,
-        "away": 10.67,
+        "draw": 6.03,
+        "away": 10.6,
         "over": 1.45,
         "btts": 2.2
       },
@@ -1435,7 +2332,7 @@
         "avgConceded": 1.5
       },
       "oddsSource": "The Odds API",
-      "bookmakerCount": 17,
+      "bookmakerCount": 18,
       "realOddsMarkets": [
         "home",
         "draw",
@@ -1452,6 +2349,9 @@
       "priority": 62,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 2.25,
       "awayGoals": 1.15,
       "odds": {
@@ -1492,6 +2392,9 @@
       "priority": 61,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 1.17,
       "awayGoals": 1.23,
       "odds": {
@@ -1515,7 +2418,7 @@
         "avgConceded": 1.1666666666666667
       },
       "oddsSource": "The Odds API",
-      "bookmakerCount": 24,
+      "bookmakerCount": 23,
       "realOddsMarkets": [
         "home",
         "draw",
@@ -1532,6 +2435,9 @@
       "priority": 34,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 1.17,
       "awayGoals": 1.23,
       "odds": {
@@ -1572,12 +2478,15 @@
       "priority": 33,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 1.62,
       "awayGoals": 1.69,
       "odds": {
         "home": 1.75,
         "draw": 3.78,
-        "away": 4.49,
+        "away": 4.48,
         "over": 1.45,
         "btts": 2.39
       },
@@ -1595,7 +2504,7 @@
         "avgConceded": 1.3333333333333333
       },
       "oddsSource": "The Odds API",
-      "bookmakerCount": 19,
+      "bookmakerCount": 20,
       "realOddsMarkets": [
         "home",
         "draw",
@@ -1612,10 +2521,13 @@
       "priority": 33,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 1.44,
       "awayGoals": 1.99,
       "odds": {
-        "home": 2.37,
+        "home": 2.36,
         "draw": 3.57,
         "away": 2.8,
         "over": 1.45,
@@ -1635,7 +2547,7 @@
         "avgConceded": 1.3333333333333333
       },
       "oddsSource": "The Odds API",
-      "bookmakerCount": 18,
+      "bookmakerCount": 19,
       "realOddsMarkets": [
         "home",
         "draw",
@@ -1652,11 +2564,14 @@
       "priority": 33,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 0.99,
       "awayGoals": 1.61,
       "odds": {
-        "home": 3.19,
-        "draw": 3.61,
+        "home": 3.18,
+        "draw": 3.6,
         "away": 2.14,
         "over": 1.45,
         "btts": 2.39
@@ -1675,7 +2590,7 @@
         "avgConceded": 1
       },
       "oddsSource": "The Odds API",
-      "bookmakerCount": 19,
+      "bookmakerCount": 20,
       "realOddsMarkets": [
         "home",
         "draw",
@@ -1692,6 +2607,9 @@
       "priority": 32,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 2.97,
       "awayGoals": 1.3,
       "odds": {
@@ -1732,6 +2650,9 @@
       "priority": 32,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
@@ -1752,6 +2673,9 @@
       "priority": 32,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
@@ -1772,6 +2696,9 @@
       "priority": 32,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
@@ -1799,6 +2726,9 @@
       "priority": 32,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
@@ -1819,12 +2749,15 @@
       "priority": 31,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 1.26,
       "awayGoals": 1,
       "odds": {
         "home": 3.13,
-        "draw": 3.04,
-        "away": 2.44,
+        "draw": 3.06,
+        "away": 2.43,
         "over": 1.45,
         "btts": 2.39
       },
@@ -1842,7 +2775,7 @@
         "avgConceded": 1.5
       },
       "oddsSource": "The Odds API",
-      "bookmakerCount": 24,
+      "bookmakerCount": 23,
       "realOddsMarkets": [
         "home",
         "draw",
@@ -1859,17 +2792,20 @@
       "priority": 31,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
-        "home": 1.45,
+        "home": 1.46,
         "draw": 4.7,
-        "away": 6.4,
+        "away": 6.32,
         "over": 1.45,
         "btts": 2.39
       },
       "oddsSource": "The Odds API",
-      "bookmakerCount": 24,
+      "bookmakerCount": 23,
       "realOddsMarkets": [
         "home",
         "draw",
@@ -1886,17 +2822,20 @@
       "priority": 31,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
         "home": 1.45,
-        "draw": 4.35,
-        "away": 7.16,
+        "draw": 4.36,
+        "away": 7.17,
         "over": 1.45,
         "btts": 2.39
       },
       "oddsSource": "The Odds API",
-      "bookmakerCount": 24,
+      "bookmakerCount": 23,
       "realOddsMarkets": [
         "home",
         "draw",
@@ -1913,6 +2852,9 @@
       "priority": 30,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 2.52,
       "awayGoals": 1.07,
       "odds": {
@@ -1953,6 +2895,9 @@
       "priority": 30,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
@@ -1973,12 +2918,15 @@
       "priority": 93,
       "featured": true,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 2.25,
       "awayGoals": 1.76,
       "odds": {
-        "home": 1.57,
+        "home": 1.56,
         "draw": 5.35,
-        "away": 4.33,
+        "away": 4.31,
         "over": 1.45,
         "btts": 1.72
       },
@@ -1996,7 +2944,7 @@
         "avgConceded": 1.5
       },
       "oddsSource": "The Odds API",
-      "bookmakerCount": 20,
+      "bookmakerCount": 21,
       "realOddsMarkets": [
         "home",
         "draw",
@@ -2013,6 +2961,9 @@
       "priority": 64,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 1.44,
       "awayGoals": 2.07,
       "odds": {
@@ -2046,6 +2997,9 @@
       "priority": 64,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 1.62,
       "awayGoals": 1.07,
       "odds": {
@@ -2086,6 +3040,9 @@
       "priority": 62,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 1.5999999999999999,
       "awayGoals": 1.6,
       "odds": {
@@ -2113,6 +3070,9 @@
       "priority": 61,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 2.7,
       "awayGoals": 1.53,
       "odds": {
@@ -2146,17 +3106,20 @@
       "priority": 61,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 1.5999999999999999,
       "awayGoals": 1.6,
       "odds": {
         "home": 7.56,
-        "draw": 4.34,
+        "draw": 4.36,
         "away": 1.44,
         "over": 1.45,
         "btts": 1.72
       },
       "oddsSource": "The Odds API",
-      "bookmakerCount": 24,
+      "bookmakerCount": 23,
       "realOddsMarkets": [
         "home",
         "draw",
@@ -2173,11 +3136,14 @@
       "priority": 61,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 1.26,
       "awayGoals": 2.07,
       "odds": {
-        "home": 5.16,
-        "draw": 3.9,
+        "home": 5.17,
+        "draw": 3.91,
         "away": 1.65,
         "over": 1.45,
         "btts": 1.72
@@ -2196,7 +3162,7 @@
         "avgConceded": 1
       },
       "oddsSource": "The Odds API",
-      "bookmakerCount": 24,
+      "bookmakerCount": 23,
       "realOddsMarkets": [
         "home",
         "draw",
@@ -2213,6 +3179,9 @@
       "priority": 60,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 1.8,
       "awayGoals": 1.15,
       "odds": {
@@ -2253,6 +3222,9 @@
       "priority": 60,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 1.9,
       "awayGoals": 1.15,
       "odds": {
@@ -2280,6 +3252,9 @@
       "priority": 34,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 1.89,
       "awayGoals": 1.76,
       "odds": {
@@ -2320,6 +3295,9 @@
       "priority": 34,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 1.26,
       "awayGoals": 1.3,
       "odds": {
@@ -2360,6 +3338,9 @@
       "priority": 34,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 0.99,
       "awayGoals": 1.53,
       "odds": {
@@ -2400,12 +3381,15 @@
       "priority": 33,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 1.17,
       "awayGoals": 0.54,
       "odds": {
-        "home": 1.61,
+        "home": 1.6,
         "draw": 3.87,
-        "away": 5.64,
+        "away": 5.61,
         "over": 1.45,
         "btts": 2.39
       },
@@ -2423,7 +3407,7 @@
         "avgConceded": 1.1666666666666667
       },
       "oddsSource": "The Odds API",
-      "bookmakerCount": 19,
+      "bookmakerCount": 20,
       "realOddsMarkets": [
         "home",
         "draw",
@@ -2440,12 +3424,15 @@
       "priority": 33,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 1.8,
       "awayGoals": 1.3,
       "odds": {
         "home": 2.74,
         "draw": 3.42,
-        "away": 2.49,
+        "away": 2.48,
         "over": 1.45,
         "btts": 2.39
       },
@@ -2463,7 +3450,7 @@
         "avgConceded": 1.8333333333333333
       },
       "oddsSource": "The Odds API",
-      "bookmakerCount": 19,
+      "bookmakerCount": 20,
       "realOddsMarkets": [
         "home",
         "draw",
@@ -2480,12 +3467,15 @@
       "priority": 33,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 2.43,
       "awayGoals": 1.76,
       "odds": {
         "home": 1.71,
-        "draw": 4.05,
-        "away": 4.42,
+        "draw": 4.04,
+        "away": 4.4,
         "over": 1.45,
         "btts": 2.39
       },
@@ -2503,7 +3493,7 @@
         "avgConceded": 2.1666666666666665
       },
       "oddsSource": "The Odds API",
-      "bookmakerCount": 19,
+      "bookmakerCount": 20,
       "realOddsMarkets": [
         "home",
         "draw",
@@ -2520,6 +3510,9 @@
       "priority": 32,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
@@ -2547,12 +3540,15 @@
       "priority": 31,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 1.44,
       "awayGoals": 1.76,
       "odds": {
         "home": 1.75,
-        "draw": 4.16,
-        "away": 4.08,
+        "draw": 4.17,
+        "away": 4.09,
         "over": 1.45,
         "btts": 2.39
       },
@@ -2570,7 +3566,7 @@
         "avgConceded": 1.3333333333333333
       },
       "oddsSource": "The Odds API",
-      "bookmakerCount": 24,
+      "bookmakerCount": 23,
       "realOddsMarkets": [
         "home",
         "draw",
@@ -2587,17 +3583,20 @@
       "priority": 31,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
         "home": 2.08,
-        "draw": 3.33,
+        "draw": 3.34,
         "away": 3.6,
         "over": 1.45,
         "btts": 2.39
       },
       "oddsSource": "The Odds API",
-      "bookmakerCount": 24,
+      "bookmakerCount": 23,
       "realOddsMarkets": [
         "home",
         "draw",
@@ -2614,6 +3613,9 @@
       "priority": 30,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
@@ -2641,6 +3643,9 @@
       "priority": 30,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 1.98,
       "awayGoals": 1.53,
       "odds": {
@@ -2681,6 +3686,9 @@
       "priority": 30,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 1.35,
       "awayGoals": 1.53,
       "odds": {
@@ -2721,6 +3729,9 @@
       "priority": 30,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 2.16,
       "awayGoals": 1.84,
       "odds": {
@@ -2754,11 +3765,14 @@
       "priority": 33,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 2.25,
       "awayGoals": 1.38,
       "odds": {
         "home": 1.93,
-        "draw": 3.34,
+        "draw": 3.33,
         "away": 4.01,
         "over": 1.45,
         "btts": 2.39
@@ -2777,7 +3791,7 @@
         "avgConceded": 2.8333333333333335
       },
       "oddsSource": "The Odds API",
-      "bookmakerCount": 19,
+      "bookmakerCount": 20,
       "realOddsMarkets": [
         "home",
         "draw",
@@ -2794,6 +3808,9 @@
       "priority": 31,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
@@ -2821,6 +3838,9 @@
       "priority": 31,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 1.53,
       "awayGoals": 0.92,
       "odds": {
@@ -2861,6 +3881,9 @@
       "priority": 31,
       "featured": false,
       "status": "Scheduled",
+      "completed": false,
+      "homeScore": 0,
+      "awayScore": 0,
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
