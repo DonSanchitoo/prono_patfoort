@@ -1,4 +1,4 @@
-import { SUPABASE_URL, SUPABASE_ANON_KEY } from './supabase-config.js?v=accounts-3';
+import { SUPABASE_URL, SUPABASE_ANON_KEY } from './supabase-config.js?v=accounts-4';
 
 const $=selector=>document.querySelector(selector);
 
@@ -34,8 +34,8 @@ export async function initAccountSync({getState,applyState,resetState,registerCl
     status.textContent='Synchronisation à jour';status.className='sync-status';
   };
 
-  form.addEventListener('submit',async event=>{event.preventDefault();setBusy(true);showMessage('Connexion en cours…');const values=new FormData(form);const {data,error}=await client.auth.signInWithPassword({email:String(values.get('email')).trim(),password:String(values.get('password'))});setBusy(false);if(error){showMessage(error.message,true);return}showMessage('Connexion réussie.');await loadUser(data.user);dialog.close();toast('Compte connecté · données synchronisées')});
-  $('#create-account').addEventListener('click',async()=>{if(!form.reportValidity())return;setBusy(true);showMessage('Création du compte…');const values=new FormData(form);const {data,error}=await client.auth.signUp({email:String(values.get('email')).trim(),password:String(values.get('password'))});setBusy(false);if(error){showMessage(error.message,true);return}if(data.session){showMessage('Compte créé et connecté.');await loadUser(data.user);dialog.close();toast('Compte créé · synchronisation activée')}else showMessage('Compte créé. Consultez votre e-mail pour confirmer votre adresse.')});
+  form.addEventListener('submit',async event=>{event.preventDefault();const values=new FormData(form),email=String(values.get('email')??'').trim(),password=String(values.get('password')??'');setBusy(true);showMessage('Connexion en cours…');const {data,error}=await client.auth.signInWithPassword({email,password});setBusy(false);if(error){showMessage(error.message,true);return}showMessage('Connexion réussie.');await loadUser(data.user);dialog.close();toast('Compte connecté · données synchronisées')});
+  $('#create-account').addEventListener('click',async()=>{if(!form.reportValidity())return;const values=new FormData(form),email=String(values.get('email')??'').trim(),password=String(values.get('password')??'');if(password.length<6){showMessage(`Mot de passe incomplet (${password.length}/6 caractères).`,true);return}setBusy(true);showMessage('Création du compte…');const {data,error}=await client.auth.signUp({email,password});setBusy(false);if(error){showMessage(error.message,true);return}if(data.session){showMessage('Compte créé et connecté.');await loadUser(data.user);dialog.close();toast('Compte créé · synchronisation activée')}else showMessage('Compte créé. Consultez votre e-mail pour confirmer votre adresse.')});
   $('#logout-account').addEventListener('click',async()=>{const {error}=await client.auth.signOut();if(error){showMessage(error.message,true);return}currentUser=null;loadedUserId=null;clearTimeout(saveTimer);setView(null);resetState();dialog.close();toast('Vous êtes déconnecté')});
 
   client.auth.onAuthStateChange((event,session)=>{if(event==='SIGNED_OUT'){currentUser=null;loadedUserId=null;setView(null);resetState();return}if(session?.user)setTimeout(()=>loadUser(session.user),0)});
