@@ -41,6 +41,11 @@ jobs:
           git add data/fixtures.json
           git diff --cached --quiet || git commit -m "chore: actualise les scores officiels"
           git push
+      - name: Configurer la synchronisation des comptes
+        env:
+          SUPABASE_URL: ${{ vars.SUPABASE_URL }}
+          SUPABASE_ANON_KEY: ${{ vars.SUPABASE_ANON_KEY }}
+        run: node scripts/configure-supabase.mjs
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

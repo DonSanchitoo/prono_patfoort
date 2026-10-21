@@ -1,5 +1,7 @@
 # BetMaster / BotPari
 
+> Pour activer les comptes et retrouver la même bankroll sur plusieurs appareils, suivez [le guide Supabase](SUPABASE_SETUP.md).
+
 Application web statique d’aide à la décision pour des paris sportifs **virtuels**. Elle analyse des matchs avec une distribution de Poisson, repère les écarts de valeur, construit des combinés et suit une bankroll locale.
 
 ## Lancer le projet
