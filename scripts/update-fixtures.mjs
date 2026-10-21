@@ -25,14 +25,17 @@ function model(home, away, priority) {
   const homeGoals = 1.45 + (homeBig ? .45 : 0) + (priority > 60 ? .15 : 0);
   const awayGoals = 1.15 + (awayBig ? .35 : 0) + (priority > 60 ? .1 : 0);
   const total = homeGoals + awayGoals;
+  const overProbability = 1 - Math.exp(-total) * (1 + total + total ** 2 / 2);
+  const bttsProbability = (1 - Math.exp(-homeGoals)) * (1 - Math.exp(-awayGoals));
+  const fairOdd = probability => Number(Math.min(4.5, Math.max(1.15, 1 / (probability * .95))).toFixed(2));
   return {
     homeGoals, awayGoals,
     odds: {
       home: Number(Math.max(1.3, 3.45 / homeGoals).toFixed(2)),
       draw: Number((3.15 + Math.abs(homeGoals - awayGoals) * .55).toFixed(2)),
       away: Number(Math.max(1.45, 3.65 / awayGoals).toFixed(2)),
-      over: Number(Math.max(1.45, 3.75 / total).toFixed(2)),
-      btts: Number(Math.max(1.45, 2.75 / Math.min(homeGoals, awayGoals)).toFixed(2))
+      over: fairOdd(overProbability),
+      btts: fairOdd(bttsProbability)
     }
   };
 }
@@ -58,7 +61,7 @@ async function footballHistory() {
   return responses;
 }
 
-async function bookmakerOdds() {
+async function bookmakerOdds(upcomingMatches) {
   const key = process.env.THE_ODDS_API_KEY;
   if (!key) throw new Error('secret THE_ODDS_API_KEY absent');
   const sports = [...new Set(Object.values(providerMap).map(([, sport]) => sport))];
@@ -68,7 +71,19 @@ async function bookmakerOdds() {
     const response = await fetch(`https://api.the-odds-api.com/v4/sports/${sport}/odds?${params}`);
     if (response.status === 404) continue;
     if (!response.ok) throw new Error(`The Odds API ${sport}: HTTP ${response.status}`);
-    responses.push(...await response.json());
+    responses.push(...(await response.json()).map(event => ({...event, _sport:sport})));
+  }
+  const featured = upcomingMatches.slice().sort((a,b) => b.priority-a.priority).map(match => responses.find(event => sameTeam(event.home_team,match.home)&&sameTeam(event.away_team,match.away))).filter(Boolean).slice(0,5);
+  for (const event of featured) {
+    const params = new URLSearchParams({ apiKey:key, regions:'eu', markets:'btts', oddsFormat:'decimal', dateFormat:'iso' });
+    const response = await fetch(`https://api.the-odds-api.com/v4/sports/${event._sport}/events/${event.id}/odds?${params}`);
+    if (!response.ok) continue;
+    const extra = await response.json();
+    for (const bookmaker of extra.bookmakers ?? []) {
+      const target = event.bookmakers?.find(item => item.key === bookmaker.key);
+      if (target) target.markets.push(...(bookmaker.markets ?? []));
+      else event.bookmakers?.push(bookmaker);
+    }
   }
   return responses;
 }
@@ -87,18 +102,22 @@ function teamForm(team, history) {
 function consensus(match, oddsEvents) {
   const event = oddsEvents.find(item => sameTeam(item.home_team, match.home) && sameTeam(item.away_team, match.away));
   if (!event) return null;
-  const prices = {home:[],draw:[],away:[]};
+  const offers = [];
   for (const bookmaker of event.bookmakers ?? []) {
-    const market = bookmaker.markets?.find(item => item.key === 'h2h');
-    for (const outcome of market?.outcomes ?? []) {
-      if (sameTeam(outcome.name, match.home)) prices.home.push(outcome.price);
-      else if (sameTeam(outcome.name, match.away)) prices.away.push(outcome.price);
-      else if (outcome.name === 'Draw') prices.draw.push(outcome.price);
+    const offer = { name: bookmaker.title };
+    const h2h = bookmaker.markets?.find(item => item.key === 'h2h');
+    for (const outcome of h2h?.outcomes ?? []) {
+      if (sameTeam(outcome.name, match.home)) offer.home = outcome.price;
+      else if (sameTeam(outcome.name, match.away)) offer.away = outcome.price;
+      else if (outcome.name === 'Draw') offer.draw = outcome.price;
     }
+    const btts = bookmaker.markets?.find(item => item.key === 'btts');
+    offer.btts = btts?.outcomes?.find(outcome => /^(yes|oui)$/i.test(outcome.name))?.price;
+    if (offer.home || offer.draw || offer.away || offer.btts) offers.push(offer);
   }
-  if (!prices.home.length || !prices.draw.length || !prices.away.length) return null;
-  const average = values => Number((values.reduce((a,b)=>a+b,0)/values.length).toFixed(2));
-  return {home:average(prices.home),draw:average(prices.draw),away:average(prices.away),bookmakerCount:Math.max(...Object.values(prices).map(x=>x.length))};
+  if (!offers.length) return null;
+  const best = key => Math.max(...offers.map(offer => Number(offer[key]) || 0));
+  return { offers, home:best('home'), draw:best('draw'), away:best('away'), btts:best('btts') || null };
 }
 
 const results = await Promise.allSettled(leagues.map(async ([slug, label, weight]) => {
@@ -144,7 +163,7 @@ const settlements = allUnique.filter(match => match.completed && Number.isFinite
 const providerFailures = [...failures];
 let history = [], oddsEvents = [];
 try { history = await footballHistory(); } catch (error) { providerFailures.push(error.message); }
-try { oddsEvents = await bookmakerOdds(); } catch (error) { providerFailures.push(error.message); }
+try { oddsEvents = await bookmakerOdds(unique); } catch (error) { providerFailures.push(error.message); }
 const enriched = unique.map(match => {
   const homeStats = teamForm(match.home, history), awayStats = teamForm(match.away, history);
   if (homeStats.sample >= 2 && awayStats.sample >= 2) {
@@ -154,8 +173,9 @@ const enriched = unique.map(match => {
   }
   const realOdds = consensus(match, oddsEvents);
   if (realOdds) {
-    match.odds = {...match.odds,home:realOdds.home,draw:realOdds.draw,away:realOdds.away};
-    match.oddsSource = 'The Odds API'; match.bookmakerCount = realOdds.bookmakerCount; match.realOddsMarkets = ['home','draw','away'];
+    const realMarkets = ['home','draw','away','btts'].filter(key => realOdds[key]);
+    match.odds = {...match.odds,...Object.fromEntries(realMarkets.map(key => [key,realOdds[key]]))};
+    match.oddsSource = 'The Odds API'; match.bookmakerOffers = realOdds.offers; match.bookmakerCount = realOdds.offers.length; match.realOddsMarkets = realMarkets;
   }
   return match;
 });

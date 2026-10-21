@@ -1,6 +1,7 @@
 import test from 'node:test';import assert from 'node:assert/strict';
 globalThis.localStorage={getItem:()=>null,setItem:()=>{}};
-globalThis.document={querySelector:()=>({addEventListener:()=>{},classList:{add:()=>{},toggle:()=>{},contains:()=>false},style:{},set textContent(v){},set innerHTML(v){}}),documentElement:{classList:{add:()=>{},toggle:()=>{},contains:()=>false}}};
+globalThis.location={hash:''};
+globalThis.document={querySelector:()=>({addEventListener:()=>{},classList:{add:()=>{},toggle:()=>{},contains:()=>false},style:{},dataset:{},set textContent(v){},set innerHTML(v){}}),querySelectorAll:()=>[],documentElement:{classList:{add:()=>{},toggle:()=>{},contains:()=>false}}};
 const {poisson,analyseMatch,recommendedMarket,optimizeCombo,settleBet}=await import('./app.js');
 test('Poisson produit une distribution normalisée',()=>{let total=0;for(let i=0;i<20;i++)total+=poisson(i,1.8);assert.ok(Math.abs(total-1)<1e-8)});
 test('analyse les probabilités 1N2 et les marchés',()=>{const a=analyseMatch({home:'A',away:'B',homeGoals:2,awayGoals:1,odds:{home:2,draw:3,away:4,over:2,btts:2}});assert.ok(Math.abs(a.probs.home+a.probs.draw+a.probs.away-1)<.001);assert.equal(a.markets.length,5);assert.ok(a.probs.home>a.probs.away)});

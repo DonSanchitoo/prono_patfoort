@@ -1,0 +1,48 @@
+name: Actualiser les scores
+
+on:
+  schedule:
+    - cron: '20 */3 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - scripts/update-results.mjs
+      - .github/workflows/update-results.yml
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: betmaster-pages
+  cancel-in-progress: false
+
+jobs:
+  update:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Télécharger les scores officiels récents
+        run: node scripts/update-results.mjs
+      - name: Publier les nouveaux résultats
+        run: |
+          git config user.name "betmaster-results[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/fixtures.json
+          git diff --cached --quiet || git commit -m "chore: actualise les scores officiels"
+          git push
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+      - name: Déployer les scores actualisés
+        id: deployment
+        uses: actions/deploy-pages@v4

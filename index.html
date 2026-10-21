@@ -15,8 +15,8 @@
       <span class="brand-mark">BM</span>
       <span>Bet<span>Master</span></span>
     </a>
-    <nav aria-label="Navigation principale">
-      <a href="#matches">Matchs</a><a href="#builder">Combiné</a><a href="#bankroll">Bankroll</a>
+    <nav aria-label="Navigation principale" class="tabs">
+      <button class="tab-button active" data-tab="matches">Matchs & combinés</button><button class="tab-button" data-tab="bankroll">Mes paris & bankroll</button>
     </nav>
     <button class="icon-button" id="theme-toggle" aria-label="Changer de thème" title="Changer de thème">☼</button>
   </header>
@@ -27,7 +27,7 @@
         <p class="eyebrow"><span class="live-dot"></span> ANALYSE DU JOUR</p>
         <h1>Pariez avec des données.<br><em>Pas avec des intuitions.</em></h1>
         <p class="hero-copy">Notre moteur compare probabilités statistiques et cotes bookmaker pour faire ressortir les opportunités — simplement.</p>
-        <div class="hero-actions"><a class="button primary" href="#matches">Voir les matchs →</a><button class="button ghost" id="quick-combo">Générer un combiné</button></div>
+        <div class="hero-actions"><button class="button primary" data-open-tab="matches">Voir les matchs →</button><button class="button ghost" id="quick-combo">Générer un combiné</button></div>
       </div>
       <div class="hero-score" aria-label="Indice de confiance du jour">
         <div class="orb"><span>87</span><small>/100</small></div>
@@ -35,14 +35,14 @@
       </div>
     </section>
 
-    <section class="stats-grid" aria-label="Résumé bankroll">
+    <section class="stats-grid tab-hidden" data-view="bankroll" aria-label="Résumé bankroll">
       <article><span class="stat-icon green">€</span><div><small>BANKROLL</small><strong id="bankroll-stat">1 000,00 €</strong></div></article>
       <article><span class="stat-icon blue">↗</span><div><small>PROFIT / PERTE</small><strong id="profit-stat">0,00 €</strong></div></article>
       <article><span class="stat-icon amber">◎</span><div><small>TAUX DE RÉUSSITE</small><strong id="winrate-stat">—</strong></div></article>
       <article><span class="stat-icon purple">▥</span><div><small>PARIS PLACÉS</small><strong id="bets-stat">0</strong></div></article>
     </section>
 
-    <section id="builder" class="section-block builder-layout builder-featured">
+    <section id="builder" class="section-block builder-layout builder-featured" data-view="matches">
       <div>
         <p class="eyebrow">COMBINÉ INTELLIGENT</p><h2>Composez votre ticket</h2>
         <p class="muted">Fixez une cote cible et un nombre maximum de matchs. Le moteur cherche la combinaison la plus proche en privilégiant la confiance.</p>
@@ -62,14 +62,14 @@
       </aside>
     </section>
 
-    <section id="matches" class="section-block">
+    <section id="matches" class="section-block" data-view="matches">
       <div class="section-heading"><div><p class="eyebrow">CALENDRIER</p><h2 id="match-period-title">Les grandes affiches de la semaine</h2><p class="section-subtitle" id="match-count"></p><p class="data-source" id="data-source"><span class="source-dot loading"></span> Chargement du calendrier officiel…</p></div><div class="heading-actions"><button class="button secondary" id="refresh-fixtures">↻ Actualiser</button><button class="button secondary" id="open-add-match">＋ Ajouter un match</button></div></div>
       <div class="date-navigator card" id="date-navigator" role="group" aria-label="Choisir une période"></div>
       <div class="filters" id="filters" role="group" aria-label="Filtrer les compétitions"></div>
       <div id="match-list" class="match-list" aria-live="polite"></div>
     </section>
 
-    <section id="bankroll" class="section-block">
+    <section id="bankroll" class="section-block tab-hidden" data-view="bankroll">
       <div class="section-heading"><div><p class="eyebrow">SUIVI</p><h2>Historique & bankroll</h2></div><button class="button secondary" id="edit-bankroll">Modifier le capital</button></div>
       <div class="history-wrap card"><table><thead><tr><th>Date</th><th>Sélections</th><th>Cote</th><th>Mise</th><th>Résultat</th><th>Retour</th></tr></thead><tbody id="history-body"></tbody></table><p id="empty-history" class="empty">Aucun pari placé pour le moment.</p></div>
     </section>
