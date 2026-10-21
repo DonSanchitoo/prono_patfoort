@@ -18,7 +18,7 @@ Ouvrir ensuite `http://localhost:4173`. Aucun build, compte ou secret n’est n�
 npm test
 ```
 
-Les données utilisateur sont conservées uniquement dans `localStorage`. Les probabilités sont indicatives et ne garantissent aucun résultat. 18+ — jouez de façon responsable.
+Sans compte, les données utilisateur restent dans `localStorage`. Avec un compte Supabase, bankroll, paris, favoris et profil sont synchronisés ; seules les statistiques agrégées et le profil choisi apparaissent dans le classement public. Les probabilités sont indicatives et ne garantissent aucun résultat. 18+ — jouez de façon responsable.
 
 ## Données sportives
 

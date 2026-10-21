@@ -2,7 +2,7 @@ import test from 'node:test';import assert from 'node:assert/strict';
 globalThis.localStorage={getItem:()=>null,setItem:()=>{}};
 globalThis.location={hash:''};
 globalThis.document={querySelector:()=>({addEventListener:()=>{},classList:{add:()=>{},toggle:()=>{},contains:()=>false},style:{},dataset:{},set textContent(v){},set innerHTML(v){}}),querySelectorAll:()=>[],documentElement:{classList:{add:()=>{},toggle:()=>{},contains:()=>false}}};
-const {poisson,analyseMatch,recommendedMarket,optimizeCombo,selectionResult,settleBet}=await import('./model.js');
+const {poisson,analyseMatch,recommendedMarket,optimizeCombo,selectionResult,settleBet,systemLines,settleSystemBet}=await import('./model.js');
 test('app.js se charge avec les calculs partagés',async()=>{await import('./app.js')});
 test('Poisson produit une distribution normalisée',()=>{let total=0;for(let i=0;i<20;i++)total+=poisson(i,1.8);assert.ok(Math.abs(total-1)<1e-8)});
 test('analyse les probabilités 1N2 et les marchés',()=>{const a=analyseMatch({home:'A',away:'B',homeGoals:2,awayGoals:1,odds:{home:2,draw:3,away:4,over:2,btts:2}});assert.ok(Math.abs(a.probs.home+a.probs.draw+a.probs.away-1)<.001);assert.equal(a.markets.length,5);assert.ok(a.probs.home>a.probs.away)});
@@ -14,3 +14,6 @@ test('un combiné gagné est réglé seulement quand tous les matchs sont termin
 test('une sélection perdante clôture automatiquement le ticket',()=>{const bet={items:[{matchId:'a',key:'over'},{matchId:'b',key:'away'}]};assert.equal(settleBet(bet,[{id:'a',completed:true,homeScore:1,awayScore:0}]),'lost')});
 test('un résultat peut être rapproché par les équipes si son identifiant a changé',()=>{const bet={items:[{matchId:'ancien-id',match:'Paris – Lyon',key:'home'}]};assert.equal(settleBet(bet,[{id:'nouvel-id',home:'Paris',away:'Lyon',completed:true,homeScore:2,awayScore:0}]),'won')});
 test('chaque ligne du combiné expose son résultat et son score',()=>{const item={matchId:'a',key:'btts'};const result={id:'a',completed:true,homeScore:2,awayScore:1};assert.deepEqual(selectionResult(item,[result]),{status:'won',result});assert.equal(selectionResult({...item,key:'away'},[result]).status,'lost')});
+test('un système 2/3 crée trois doubles et tolère une erreur',()=>{const items=['a','b','c'].map(matchId=>({matchId,key:'home',odd:2})),lines=systemLines(items,'2of3').map(line=>({...line,stake:3})),results=[{id:'a',completed:true,homeScore:2,awayScore:0},{id:'b',completed:true,homeScore:1,awayScore:0},{id:'c',completed:true,homeScore:0,awayScore:1}],settled=settleSystemBet({items,systemLines:lines},results);assert.equal(lines.length,3);assert.equal(settled.status,'won');assert.equal(settled.wonLines,1);assert.equal(settled.returnAmount,12)});
+test('un Yankee crée onze sous-paris',()=>{assert.equal(systemLines([1,2,3,4].map(odd=>({odd})),'yankee').length,11)});
+test('une formule système refuse un nombre de sélections incompatible',()=>{const items=[1,2,3,4].map(odd=>({odd}));assert.deepEqual(systemLines(items,'2of3'),[]);assert.deepEqual(systemLines(items.slice(0,3),'yankee'),[])});

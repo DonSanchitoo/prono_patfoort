@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="theme-color" content="#0A0C0B">
+  <meta name="theme-color" content="#F2F4F0">
   <meta name="description" content="BetMaster : analyse de matchs, value bets et combinés responsables.">
   <title>BetMaster · Hub de paris sportifs</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22><rect width=%2264%22 height=%2264%22 rx=%2216%22 fill=%22%23C8F03C%22/><path d=%22M32 8L52 15V30C52 43 43 51 32 55C21 51 12 43 12 30V15Z%22 fill=%22none%22 stroke=%22%230A0C0B%22 stroke-width=%225%22 stroke-linejoin=%22round%22/><path d=%22M21 38L28 31L34 35L43 25%22 fill=%22none%22 stroke=%22%230A0C0B%22 stroke-width=%225%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/></svg>">
@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <script>try{const t=localStorage.getItem('betmaster-theme');if(t==='light'||(!t&&matchMedia('(prefers-color-scheme: light)').matches))document.documentElement.classList.add('light')}catch{}try{if(!sessionStorage.getItem('betmaster-intro')&&!matchMedia('(prefers-reduced-motion: reduce)').matches){document.documentElement.classList.add('intro');sessionStorage.setItem('betmaster-intro','1')}}catch{}</script>
+  <script>try{if(localStorage.getItem('betmaster-theme')!=='dark')document.documentElement.classList.add('light')}catch{document.documentElement.classList.add('light')}try{if(!sessionStorage.getItem('betmaster-intro')&&!matchMedia('(prefers-reduced-motion: reduce)').matches){document.documentElement.classList.add('intro');sessionStorage.setItem('betmaster-intro','1')}}catch{}</script>
 </head>
 <body>
   <div class="intro-screen" aria-hidden="true">
@@ -24,7 +24,7 @@
       <span class="brand-name">Bet<span>Master</span></span>
     </a>
     <nav aria-label="Navigation principale" class="tabs">
-      <button class="tab-button active" data-tab="matches"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7l4 3-1.5 4.5h-5L8 10z"/></svg>Matchs &amp; combinés</button><button class="tab-button" data-tab="standings"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0zM17 6h3v2a3 3 0 0 1-3 3M7 6H4v2a3 3 0 0 0 3 3"/></svg>Classements</button><button class="tab-button" data-tab="bankroll"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V5M4 19h16M8 15l4-4 3 3 5-6"/></svg>Mes paris &amp; bankroll</button>
+      <button class="tab-button active" data-tab="matches"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7l4 3-1.5 4.5h-5L8 10z"/></svg>Matchs &amp; combinés</button><button class="tab-button" data-tab="standings"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0zM17 6h3v2a3 3 0 0 1-3 3M7 6H4v2a3 3 0 0 0 3 3"/></svg>Classements</button><button class="tab-button" data-tab="community"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="8" r="3"/><circle cx="17" cy="9" r="2"/><path d="M2 20c1-5 3-7 6-7s5 2 6 7M14 14c4-1 6 1 7 5"/></svg>Challenges</button><button class="tab-button" data-tab="bankroll"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V5M4 19h16M8 15l4-4 3 3 5-6"/></svg>Mes paris &amp; bankroll</button>
     </nav>
     <div class="topbar-actions">
       <div class="topbar-bankroll"><small>BANKROLL</small><strong id="topbar-bankroll">1 000,00 €</strong></div>
@@ -96,6 +96,7 @@
         <div class="ticket" aria-live="polite">
           <div class="ticket-head"><div><small>VOTRE TICKET</small><h3 id="ticket-title">Combiné</h3></div><button class="text-button" id="clear-ticket">Effacer</button></div>
           <div class="bet-mode" id="bet-mode" role="group" aria-label="Type de pari"><button data-bet-mode="single">Simple</button><button class="active" data-bet-mode="combined">Combiné</button><button data-bet-mode="multiple">Multiple</button></div>
+          <label class="system-control" id="system-control" hidden>Formule système<select id="system-formula"><option value="auto">Automatique</option><option value="2of3">2 sur 3</option><option value="2of4">2 sur 4</option><option value="3of4">3 sur 4</option><option value="trixie">Trixie (4 paris)</option><option value="yankee">Yankee (11 paris)</option></select></label>
           <div id="ticket-items" class="ticket-items"><p class="empty">Ajoutez une sélection depuis les matchs.</p></div>
           <div class="ticket-summary">
             <div class="ticket-totals"><span class="total-main"><b id="odds-label">Cote totale</b><strong id="total-odds">1.00</strong></span><span id="target-gap-row">Écart à la cible <strong id="target-gap">-</strong></span></div>
@@ -110,15 +111,22 @@
     </div>
 
     <section id="bankroll" class="section-block tab-hidden" data-view="bankroll">
-      <div class="section-heading"><div><p class="eyebrow">SUIVI</p><h2>Historique &amp; bankroll</h2></div><button class="button secondary" id="edit-bankroll">Modifier le capital</button></div>
-      <div class="performance-grid"><div class="chart-card card"><div><strong>Évolution de la bankroll</strong><small>Après chaque pari enregistré</small></div><div class="chart-wrap"><svg id="bankroll-chart" viewBox="0 0 700 220" preserveAspectRatio="none" role="img" aria-label="Courbe d’évolution de la bankroll"></svg><span class="chart-label max" id="chart-max"></span><span class="chart-label min" id="chart-min"></span><p class="chart-empty" id="chart-empty" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V5M4 19h16M8 15l4-4 3 3 5-6"/></svg>La courbe apparaîtra après votre premier pari.</p></div></div><div class="league-card card"><strong>Réussite par compétition</strong><div id="league-performance"></div></div></div>
+      <div class="section-heading"><div><p class="eyebrow">SUIVI</p><h2>Historique &amp; bankroll</h2></div><button class="button secondary" id="edit-bankroll">Rajouter du capital</button></div>
+      <div class="performance-grid"><div class="chart-card card"><div><strong>Évolution de la bankroll</strong><small>Paris et apports de capital inclus</small></div><div class="chart-wrap"><svg id="bankroll-chart" viewBox="0 0 700 220" preserveAspectRatio="none" role="img" aria-label="Courbe d’évolution de la bankroll"></svg><span class="chart-label max" id="chart-max"></span><span class="chart-label min" id="chart-min"></span><p class="chart-empty" id="chart-empty" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V5M4 19h16M8 15l4-4 3 3 5-6"/></svg>La courbe apparaîtra après votre premier mouvement.</p></div></div><div class="league-card card"><strong>Réussite par compétition</strong><div id="league-performance"></div></div></div>
+      <div class="site-performance card"><div><p class="eyebrow">TRANSPARENCE</p><h3>Historique des pronostics BetMaster</h3></div><div class="site-kpis"><span><small>Analysés</small><b id="site-predictions">0</b></span><span><small>Réussite</small><b id="site-winrate">-</b></span><span><small>ROI théorique</small><b id="site-roi">-</b></span></div><div id="prediction-history" class="prediction-history"></div></div>
       <div class="history-wrap card"><table><thead><tr><th>Date</th><th>Sélections</th><th>Cote</th><th>Mise</th><th>Résultat</th><th>Retour</th></tr></thead><tbody id="history-body"></tbody></table><p id="empty-history" class="empty">Aucun pari placé pour le moment.</p></div>
+      <div class="capital-log card"><strong>Apports de capital</strong><div id="capital-events"><p class="empty">Aucun apport supplémentaire.</p></div></div>
     </section>
 
     <section id="standings" class="section-block tab-hidden" data-view="standings">
       <div class="section-heading"><div><p class="eyebrow">COMPÉTITIONS</p><h2>Classements</h2></div><div class="mode-switch" role="group" aria-label="Type de classement"><button class="active" data-standings-mode="teams">Équipes</button><button data-standings-mode="scorers">Buteurs</button><button data-standings-mode="assists">Passeurs</button></div></div>
       <div class="scroller"><button class="scroll-btn prev" data-scroll="-1" aria-label="Compétitions précédentes"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></button><div class="filters" id="standings-leagues" role="group" aria-label="Choisir une compétition"></div><button class="scroll-btn next" data-scroll="1" aria-label="Compétitions suivantes"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button></div>
       <div id="standings-body" class="standings-body card"></div>
+    </section>
+    <section id="community" class="section-block tab-hidden" data-view="community">
+      <div class="section-heading"><div><p class="eyebrow">COMMUNAUTÉ</p><h2>Challenges &amp; meilleurs parieurs</h2></div><div class="period-switch" id="leaderboard-period"><button data-period="day">Jour</button><button class="active" data-period="week">Semaine</button><button data-period="month">Mois</button><button data-period="year">Année</button></div></div>
+      <div class="community-grid"><article class="profile-card card"><div class="avatar-3d lime" id="profile-avatar"><i></i><span></span><b>BM</b></div><form id="profile-form"><label>Pseudo<input name="nickname" maxlength="24" required></label><label>Avatar<select name="avatar"><option value="lime">Citron</option><option value="blue">Azur</option><option value="purple">Violet</option><option value="orange">Orange</option></select></label><button class="button primary" type="submit">Enregistrer mon profil</button></form></article><article class="leaderboard-card card"><div class="leaderboard-head"><strong>Top parieurs</strong><small id="leaderboard-status">Classement synchronisé</small></div><div id="player-leaderboard"></div></article></div>
+      <div class="challenge-list" id="challenge-list"><article class="challenge-card card" data-challenge="safe-week"><span>7 JOURS</span><h3>La semaine sécurisée</h3><p>Obtenir le meilleur score avec des cotes inférieures à 2,00.</p><small data-challenge-ranking>Rejoignez le challenge pour être classé.</small><button class="button secondary" data-join-challenge="safe-week">Participer</button></article><article class="challenge-card card" data-challenge="value-hunter"><span>DU MOIS</span><h3>Chasseur de value</h3><p>Marquer un maximum de points sur les value bets gagnants.</p><small data-challenge-ranking>Rejoignez le challenge pour être classé.</small><button class="button secondary" data-join-challenge="value-hunter">Participer</button></article><article class="challenge-card card" data-challenge="perfect-five"><span>PERMANENT</span><h3>Perfect Five</h3><p>Construire la plus longue série de paris gagnants.</p><small data-challenge-ranking>Rejoignez le challenge pour être classé.</small><button class="button secondary" data-join-challenge="perfect-five">Participer</button></article></div>
     </section>
   </main>
   <footer class="site-footer">
@@ -137,6 +145,7 @@
         <button data-footer-nav="builder">Combiné intelligent</button>
         <button data-footer-nav="standings">Classements</button>
         <button data-footer-nav="bankroll">Mes paris et bankroll</button>
+        <button data-footer-nav="community">Challenges et communauté</button>
         <button data-open-dialog="help-dialog">Aide et lexique</button>
       </nav>
       <nav class="footer-col" aria-label="À propos">
@@ -196,7 +205,8 @@
     <h3>Sans compte</h3>
     <p>Vos paris virtuels, votre bankroll et vos préférences restent dans votre navigateur. Rien n'est envoyé à un serveur.</p>
     <h3>Avec un compte</h3>
-    <p>Si vous créez un compte, nous enregistrons votre adresse email, votre mot de passe (chiffré par Supabase, illisible par nous) et l'état de votre compte : bankroll, historique des paris et matchs ajoutés. Ces données servent uniquement à synchroniser vos paris entre vos appareils. Elles sont hébergées par Supabase et protégées par des règles qui réservent l'accès à votre seul compte. Elles ne sont ni vendues, ni partagées, ni utilisées pour de la publicité.</p>
+    <p>Si vous créez un compte, Supabase enregistre votre adresse email, votre mot de passe sous forme sécurisée et l'état privé de votre compte : bankroll, apports, historique, favoris, challenges et préférences. Ces données servent à synchroniser l'application entre vos appareils et sont protégées par des règles qui réservent leur accès à votre compte.</p>
+    <p>Votre pseudo, votre avatar et vos statistiques agrégées (nombre de paris, victoires, ROI et meilleure cote) sont publics dans le classement. Votre email, le détail de vos paris et votre bankroll ne sont jamais affichés publiquement.</p>
     <h3 id="stockage">Cookies et stockage</h3>
     <p>BetMaster n'utilise ni cookie publicitaire, ni outil de mesure d'audience. Le stockage local du navigateur conserve votre thème, vos paris virtuels, une copie du calendrier pour un affichage rapide et, si vous êtes connecté, votre session. Ces éléments sont nécessaires au fonctionnement du site et ne demandent donc pas de consentement.</p>
     <p>Pour afficher le site, votre navigateur contacte aussi Google Fonts (polices), ESPN (logos et scores en direct) et jsDelivr (connexion au compte). Comme pour tout site, ces services reçoivent votre adresse IP.</p>
@@ -223,7 +233,7 @@
   </div><button class="button primary full" value="default">Analyser et ajouter</button></form></dialog>
 
   <dialog id="league-dialog" class="sheet"><div class="modal-head"><div><p class="eyebrow">FILTRER</p><h2>Compétitions</h2></div><button class="icon-button" data-close-dialog aria-label="Fermer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div><div id="league-list" class="league-list"></div></dialog>
-  <dialog id="bankroll-dialog"><form id="bankroll-form" method="dialog"><div class="modal-head"><h2>Capital virtuel</h2><button class="icon-button" value="cancel" formnovalidate aria-label="Fermer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div><label>Nouveau capital (€)<input name="amount" type="number" min="0" step="10" required></label><button class="button primary full" value="default">Enregistrer</button></form></dialog>
+  <dialog id="bankroll-dialog"><form id="bankroll-form" method="dialog"><div class="modal-head"><h2>Rajouter du capital</h2><button class="icon-button" value="cancel" formnovalidate aria-label="Fermer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div><p class="muted">Cet apport sera tracé séparément pour ne pas fausser votre bénéfice net.</p><label>Montant à ajouter (€)<input name="amount" type="number" min="1" step="10" value="100" required></label><button class="button primary full" value="default">Ajouter à la bankroll</button></form></dialog>
   <dialog id="confidence-dialog"><div class="modal-head"><div><p class="eyebrow">TRANSPARENCE</p><h2>Indice de confiance</h2></div><button class="icon-button" data-close-dialog aria-label="Fermer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div><div id="confidence-content"></div></dialog>
   <dialog id="help-dialog"><div class="modal-head"><div><p class="eyebrow">AIDE</p><h2>Comprendre BetMaster</h2></div><button class="icon-button" data-close-dialog aria-label="Fermer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div><div class="lexicon"><article><strong>Value bet</strong><p>Une cote est intéressante lorsque la probabilité estimée par le modèle est supérieure à la probabilité implicite de la cote. Cela ne garantit jamais un gain.</p></article><article><strong>Indice de confiance</strong><p>Il résume la forme récente, le modèle de buts et la solidité statistique du marché. Il mesure la cohérence des données, pas la certitude du résultat.</p></article><article><strong>ROI</strong><p>Le retour sur investissement compare le profit net aux mises des paris déjà réglés.</p></article><article><strong>Limiter les biais</strong><p>Le modèle applique les mêmes critères à chaque rencontre pour réduire les décisions émotionnelles. Vérifiez toujours la cote finale chez le bookmaker.</p></article></div></dialog>
   <dialog id="account-dialog"><div class="modal-head"><div><p class="eyebrow">COMPTE BETMASTER</p><h2>Synchroniser mes paris</h2></div><button class="icon-button" data-close-dialog aria-label="Fermer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div><div id="account-logged-out"><p class="muted">Connectez-vous avec le même compte sur votre téléphone et votre ordinateur pour retrouver votre bankroll et vos paris.</p><form id="account-form" class="account-form"><label>Adresse email<input name="email" type="email" autocomplete="email" required placeholder="vous@exemple.fr"></label><label>Mot de passe<input name="password" type="password" autocomplete="current-password" minlength="6" required></label><button class="button primary full" type="submit">Se connecter</button><button class="button secondary full" type="button" id="create-account">Créer mon compte</button></form></div><div id="account-logged-in" hidden><div class="account-profile"><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg></span><div><small>CONNECTÉ ET SYNCHRONISÉ</small><strong id="account-email"></strong></div></div><p class="sync-status" id="sync-status">Synchronisation à jour</p><button class="button secondary full" id="logout-account">Se déconnecter</button></div><div id="account-config-required" hidden><p class="config-warning">La gestion des comptes est installée mais le projet Supabase doit encore être relié au site.</p></div><p class="account-message" id="account-message" aria-live="polite"></p></dialog>
@@ -232,9 +242,10 @@
     <button class="active" data-mobile-target="matches"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7l4 3-1.5 4.5h-5L8 10z"/></svg>Matchs</button>
     <button data-mobile-target="builder"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h18v3a2 2 0 0 0 0 4v3H3v-3a2 2 0 0 0 0-4z"/></svg>Combiné<i id="mobile-ticket-count" hidden></i></button>
     <button data-mobile-target="standings"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0zM17 6h3v2a3 3 0 0 1-3 3M7 6H4v2a3 3 0 0 0 3 3"/></svg>Classements</button>
+    <button data-mobile-target="community"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="8" r="3"/><circle cx="17" cy="9" r="2"/><path d="M2 20c1-5 3-7 6-7s5 2 6 7"/></svg>Challenges</button>
     <button data-mobile-target="bankroll"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V5M4 19h16M8 15l4-4 3 3 5-6"/></svg>Mes paris</button>
   </nav>
   <div id="toast" role="status" aria-live="polite"></div>
-  <script type="module" src="app.js?v=refonte-1"></script>
+  <script type="module" src="app.js?v=v3-1"></script>
 </body>
 </html>
