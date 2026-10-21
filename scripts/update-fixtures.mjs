@@ -43,6 +43,16 @@ function model(home, away, priority) {
   };
 }
 
+function suggestedPick(match) {
+  let home=0,draw=0,away=0,under=0,bttsNo=0;
+  const poisson=(goals,lambda)=>{let factorial=1;for(let i=2;i<=goals;i++)factorial*=i;return Math.exp(-lambda)*lambda**goals/factorial};
+  for(let i=0;i<=8;i++)for(let j=0;j<=8;j++){const probability=poisson(i,match.homeGoals)*poisson(j,match.awayGoals);if(i>j)home+=probability;else if(i===j)draw+=probability;else away+=probability;if(i+j<=2)under+=probability;if(i===0||j===0)bttsNo+=probability}
+  const probabilities={home,draw,away,over:1-under,btts:1-bttsNo};
+  const markets=[['home',match.home],['draw','Match nul'],['away',match.away],['over','Plus de 2,5 buts'],['btts','Les deux marquent']].map(([key,label])=>({key,label,odd:match.odds[key],probability:probabilities[key],value:probabilities[key]*match.odds[key]-1}));
+  const eligible=markets.filter(market=>market.odd>=1.08&&market.odd<=5&&market.value>=-.18);
+  return (eligible.length?eligible:markets).sort((a,b)=>(b.probability+Math.min(.15,b.value)*.18)-(a.probability+Math.min(.15,a.value)*.18))[0];
+}
+
 const normalize = value => value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase()
   .replace(/\b(fc|afc|cf|ac|ssc|calcio|football|club|de|the)\b/g, '').replace(/[^a-z0-9]/g, '');
 const sameTeam = (a, b) => { const x = normalize(a), y = normalize(b); return x === y || (x.length > 5 && y.length > 5 && (x.includes(y) || y.includes(x))); };
@@ -186,6 +196,7 @@ const enriched = unique.map(match => {
   }
   const previous = previousData.matches?.find(item=>item.id===match.id);
   if (previous?.odds) match.oddsMovement=Object.fromEntries(Object.keys(match.odds).map(key=>{const before=Number(previous.odds[key]),current=Number(match.odds[key]),percent=before&&current?Number(((current-before)/before*100).toFixed(1)):0;return[key,{previous:before,current,percent,significant:Math.abs(percent)>=5}]}));
+  match.suggestedPick=match.completed&&previous?.suggestedPick?previous.suggestedPick:{...suggestedPick(match),capturedAt:new Date().toISOString()};
   return match;
 });
 await mkdir('data', { recursive: true });
