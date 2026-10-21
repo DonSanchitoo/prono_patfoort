@@ -35,10 +35,6 @@ jobs:
       - uses: actions/upload-pages-artifact@v3
         with:
           path: .
-      # Protection temporaire si Pages est encore configuré sur « Deploy from a branch » :
-      # laisser finir cette publication concurrente avant de déployer l'artefact configuré.
-      - name: Attendre l'ancienne publication Pages
-        run: sleep 35
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
