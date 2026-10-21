@@ -13,5 +13,10 @@ if (url && !/^https:\/\/.+\.supabase\.co\/?$/.test(url)) {
   process.exit(1);
 }
 
+if (key && key.length <= 20) {
+  console.error('La clé publique Supabase semble incomplète. Copiez la clé anon ou publishable complète.');
+  process.exit(1);
+}
+
 await writeFile('supabase-config.js', `export const SUPABASE_URL = ${JSON.stringify(url)};\nexport const SUPABASE_ANON_KEY = ${JSON.stringify(key)};\n`);
 console.log(url && key ? 'Configuration Supabase injectée.' : 'Supabase non configuré : mode local conservé.');
