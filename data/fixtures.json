@@ -1,5 +1,8 @@
 {
-  "generatedAt": "2026-10-21T08:08:57.141Z",
+  "generatedAt": "2026-10-21T08:15:07.994Z",
+  "oddsRefreshedAt": "2026-10-21T08:15:07.994Z",
+  "refreshIntervalHours": 2,
+  "movementThresholdPercent": 5,
   "source": "ESPN + football-data.org + The Odds API",
   "providerStatus": "ok",
   "failures": [],
@@ -803,6 +806,38 @@
         "form": "NDNNDV",
         "avgScored": 1.1666666666666667,
         "avgConceded": 1
+      },
+      "oddsMovement": {
+        "home": {
+          "previous": 2.16,
+          "current": 2.16,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.15,
+          "current": 3.15,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 2.28,
+          "current": 2.28,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 1.7,
+          "current": 1.7,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 1.65,
+          "current": 1.65,
+          "percent": 0,
+          "significant": false
+        }
       }
     },
     {
@@ -839,6 +874,38 @@
         "form": "VVVDVV",
         "avgScored": 1.5,
         "avgConceded": 0.6666666666666666
+      },
+      "oddsMovement": {
+        "home": {
+          "previous": 2.16,
+          "current": 2.16,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.15,
+          "current": 3.15,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 2.28,
+          "current": 2.28,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 1.7,
+          "current": 1.7,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 1.65,
+          "current": 1.65,
+          "percent": 0,
+          "significant": false
+        }
       }
     },
     {
@@ -875,6 +942,38 @@
         "form": "DNDVVN",
         "avgScored": 1.3333333333333333,
         "avgConceded": 1.8333333333333333
+      },
+      "oddsMovement": {
+        "home": {
+          "previous": 1.68,
+          "current": 1.68,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.59,
+          "current": 3.59,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 2.92,
+          "current": 2.92,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 1.64,
+          "current": 1.64,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 1.69,
+          "current": 1.69,
+          "percent": 0,
+          "significant": false
+        }
       }
     },
     {
@@ -911,6 +1010,38 @@
         "form": "DVDDDV",
         "avgScored": 1.3333333333333333,
         "avgConceded": 1.6666666666666667
+      },
+      "oddsMovement": {
+        "home": {
+          "previous": 1.68,
+          "current": 1.68,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.59,
+          "current": 3.59,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 2.92,
+          "current": 2.92,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 1.64,
+          "current": 1.64,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 1.69,
+          "current": 1.69,
+          "percent": 0,
+          "significant": false
+        }
       }
     },
     {
@@ -934,6 +1065,38 @@
         "away": 2.92,
         "over": 1.64,
         "btts": 1.69
+      },
+      "oddsMovement": {
+        "home": {
+          "previous": 1.68,
+          "current": 1.68,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.59,
+          "current": 3.59,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 2.92,
+          "current": 2.92,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 1.64,
+          "current": 1.64,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 1.69,
+          "current": 1.69,
+          "percent": 0,
+          "significant": false
+        }
       }
     },
     {
@@ -970,6 +1133,38 @@
         "form": "VVDDDD",
         "avgScored": 1.6666666666666667,
         "avgConceded": 1.6666666666666667
+      },
+      "oddsMovement": {
+        "home": {
+          "previous": 2.38,
+          "current": 2.38,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.18,
+          "current": 3.18,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 2.43,
+          "current": 2.43,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 1.86,
+          "current": 1.86,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 1.77,
+          "current": 1.77,
+          "percent": 0,
+          "significant": false
+        }
       }
     },
     {
@@ -1006,6 +1201,38 @@
         "form": "DDDDNV",
         "avgScored": 0.8333333333333334,
         "avgConceded": 2
+      },
+      "oddsMovement": {
+        "home": {
+          "previous": 2.38,
+          "current": 2.38,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.31,
+          "current": 3.31,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 3.17,
+          "current": 3.17,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
       }
     },
     {
@@ -1042,6 +1269,38 @@
         "form": "DVNDVD",
         "avgScored": 1.5,
         "avgConceded": 2.5
+      },
+      "oddsMovement": {
+        "home": {
+          "previous": 2.38,
+          "current": 2.38,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.31,
+          "current": 3.31,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 3.17,
+          "current": 3.17,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
       }
     },
     {
@@ -1078,6 +1337,38 @@
         "form": "DNDDVD",
         "avgScored": 1.3333333333333333,
         "avgConceded": 3.3333333333333335
+      },
+      "oddsMovement": {
+        "home": {
+          "previous": 2.38,
+          "current": 2.38,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.31,
+          "current": 3.31,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 3.17,
+          "current": 3.17,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
       }
     },
     {
@@ -1114,6 +1405,38 @@
         "form": "DDNDDV",
         "avgScored": 1.3333333333333333,
         "avgConceded": 1.5
+      },
+      "oddsMovement": {
+        "home": {
+          "previous": 2.38,
+          "current": 2.38,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.31,
+          "current": 3.31,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 3.17,
+          "current": 3.17,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
       }
     },
     {
@@ -1150,6 +1473,38 @@
         "form": "VVVDVN",
         "avgScored": 2.3333333333333335,
         "avgConceded": 1.8333333333333333
+      },
+      "oddsMovement": {
+        "home": {
+          "previous": 2.38,
+          "current": 2.38,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.31,
+          "current": 3.31,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 3.17,
+          "current": 3.17,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
       }
     },
     {
@@ -1173,6 +1528,38 @@
         "away": 3.17,
         "over": 2.19,
         "btts": 2.01
+      },
+      "oddsMovement": {
+        "home": {
+          "previous": 2.38,
+          "current": 2.38,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.31,
+          "current": 3.31,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 3.17,
+          "current": 3.17,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
       }
     },
     {
@@ -1196,6 +1583,38 @@
         "away": 3.17,
         "over": 2.19,
         "btts": 2.01
+      },
+      "oddsMovement": {
+        "home": {
+          "previous": 2.38,
+          "current": 2.38,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.31,
+          "current": 3.31,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 3.17,
+          "current": 3.17,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
       }
     },
     {
@@ -1219,6 +1638,38 @@
         "away": 3.17,
         "over": 2.19,
         "btts": 2.01
+      },
+      "oddsMovement": {
+        "home": {
+          "previous": 2.38,
+          "current": 2.38,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.31,
+          "current": 3.31,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 3.17,
+          "current": 3.17,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
       }
     },
     {
@@ -1242,6 +1693,38 @@
         "away": 3.17,
         "over": 2.19,
         "btts": 2.01
+      },
+      "oddsMovement": {
+        "home": {
+          "previous": 2.38,
+          "current": 2.38,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.31,
+          "current": 3.31,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 3.17,
+          "current": 3.17,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
       }
     },
     {
@@ -1278,6 +1761,38 @@
         "form": "VDVVDD",
         "avgScored": 1.5,
         "avgConceded": 2
+      },
+      "oddsMovement": {
+        "home": {
+          "previous": 2.38,
+          "current": 2.38,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.31,
+          "current": 3.31,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 3.17,
+          "current": 3.17,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
       }
     },
     {
@@ -1314,6 +1829,38 @@
         "form": "DNVNVV",
         "avgScored": 1.5,
         "avgConceded": 1
+      },
+      "oddsMovement": {
+        "home": {
+          "previous": 2.38,
+          "current": 2.38,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.31,
+          "current": 3.31,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 3.17,
+          "current": 3.17,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
       }
     },
     {
@@ -1350,6 +1897,38 @@
         "form": "DVDVVV",
         "avgScored": 2.1666666666666665,
         "avgConceded": 2
+      },
+      "oddsMovement": {
+        "home": {
+          "previous": 2.38,
+          "current": 2.38,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.31,
+          "current": 3.31,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 3.17,
+          "current": 3.17,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
       }
     },
     {
@@ -1373,6 +1952,38 @@
         "away": 3.17,
         "over": 2.19,
         "btts": 2.01
+      },
+      "oddsMovement": {
+        "home": {
+          "previous": 2.38,
+          "current": 2.38,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.31,
+          "current": 3.31,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 3.17,
+          "current": 3.17,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
       }
     },
     {
@@ -1409,6 +2020,38 @@
         "form": "DVVDDD",
         "avgScored": 1,
         "avgConceded": 1.8333333333333333
+      },
+      "oddsMovement": {
+        "home": {
+          "previous": 2.38,
+          "current": 2.38,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.31,
+          "current": 3.31,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 3.17,
+          "current": 3.17,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
       }
     },
     {
@@ -1445,6 +2088,38 @@
         "form": "NNVDVD",
         "avgScored": 1.6666666666666667,
         "avgConceded": 2.3333333333333335
+      },
+      "oddsMovement": {
+        "home": {
+          "previous": 2.38,
+          "current": 2.38,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.31,
+          "current": 3.31,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 3.17,
+          "current": 3.17,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
       }
     },
     {
@@ -1481,6 +2156,38 @@
         "form": "DNVVVD",
         "avgScored": 0.8333333333333334,
         "avgConceded": 1.1666666666666667
+      },
+      "oddsMovement": {
+        "home": {
+          "previous": 2.38,
+          "current": 2.38,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.31,
+          "current": 3.31,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 3.17,
+          "current": 3.17,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
       }
     },
     {
@@ -1504,6 +2211,38 @@
         "away": 3.17,
         "over": 2.19,
         "btts": 2.01
+      },
+      "oddsMovement": {
+        "home": {
+          "previous": 2.38,
+          "current": 2.38,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.31,
+          "current": 3.31,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 3.17,
+          "current": 3.17,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
       }
     },
     {
@@ -1540,6 +2279,38 @@
         "form": "DVDVVN",
         "avgScored": 2.5,
         "avgConceded": 1.5
+      },
+      "oddsMovement": {
+        "home": {
+          "previous": 1.68,
+          "current": 1.68,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.4,
+          "current": 3.4,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 2.28,
+          "current": 2.28,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 1.49,
+          "current": 1.49,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 1.51,
+          "current": 1.51,
+          "percent": 0,
+          "significant": false
+        }
       }
     },
     {
@@ -1576,6 +2347,38 @@
         "form": "VNDNVV",
         "avgScored": 1.3333333333333333,
         "avgConceded": 0.6666666666666666
+      },
+      "oddsMovement": {
+        "home": {
+          "previous": 2.16,
+          "current": 2.16,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.15,
+          "current": 3.15,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 2.28,
+          "current": 2.28,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 1.7,
+          "current": 1.7,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 1.65,
+          "current": 1.65,
+          "percent": 0,
+          "significant": false
+        }
       }
     },
     {
@@ -1612,6 +2415,38 @@
         "form": "DNVDVV",
         "avgScored": 2,
         "avgConceded": 1.3333333333333333
+      },
+      "oddsMovement": {
+        "home": {
+          "previous": 1.68,
+          "current": 1.68,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.59,
+          "current": 3.59,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 2.92,
+          "current": 2.92,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 1.64,
+          "current": 1.64,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 1.69,
+          "current": 1.69,
+          "percent": 0,
+          "significant": false
+        }
       }
     },
     {
@@ -1635,6 +2470,38 @@
         "away": 2.92,
         "over": 1.64,
         "btts": 1.69
+      },
+      "oddsMovement": {
+        "home": {
+          "previous": 1.68,
+          "current": 1.68,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.59,
+          "current": 3.59,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 2.92,
+          "current": 2.92,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 1.64,
+          "current": 1.64,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 1.69,
+          "current": 1.69,
+          "percent": 0,
+          "significant": false
+        }
       }
     },
     {
@@ -1658,6 +2525,38 @@
         "away": 2.92,
         "over": 1.64,
         "btts": 1.69
+      },
+      "oddsMovement": {
+        "home": {
+          "previous": 1.68,
+          "current": 1.68,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.59,
+          "current": 3.59,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 2.92,
+          "current": 2.92,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 1.64,
+          "current": 1.64,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 1.69,
+          "current": 1.69,
+          "percent": 0,
+          "significant": false
+        }
       }
     },
     {
@@ -1694,6 +2593,38 @@
         "form": "NVVVVV",
         "avgScored": 2,
         "avgConceded": 0.5
+      },
+      "oddsMovement": {
+        "home": {
+          "previous": 2.16,
+          "current": 2.16,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.15,
+          "current": 3.15,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 2.28,
+          "current": 2.28,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 1.7,
+          "current": 1.7,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 1.65,
+          "current": 1.65,
+          "percent": 0,
+          "significant": false
+        }
       }
     },
     {
@@ -1717,6 +2648,38 @@
         "away": 3.17,
         "over": 2.19,
         "btts": 2.01
+      },
+      "oddsMovement": {
+        "home": {
+          "previous": 2.38,
+          "current": 2.38,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.31,
+          "current": 3.31,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 3.17,
+          "current": 3.17,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
       }
     },
     {
@@ -1753,6 +2716,38 @@
         "form": "DDD",
         "avgScored": 0.3333333333333333,
         "avgConceded": 4.333333333333333
+      },
+      "oddsMovement": {
+        "home": {
+          "previous": 2.38,
+          "current": 2.38,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.31,
+          "current": 3.31,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 3.17,
+          "current": 3.17,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
       }
     },
     {
@@ -1776,6 +2771,38 @@
         "away": 3.17,
         "over": 2.19,
         "btts": 2.01
+      },
+      "oddsMovement": {
+        "home": {
+          "previous": 2.38,
+          "current": 2.38,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.31,
+          "current": 3.31,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 3.17,
+          "current": 3.17,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
       }
     },
     {
@@ -1795,10 +2822,10 @@
       "awayGoals": 1.6,
       "odds": {
         "home": 2.06,
-        "draw": 3.88,
+        "draw": 3.87,
         "away": 3.27,
         "over": 1.52,
-        "btts": 1.5
+        "btts": 1.51
       },
       "oddsSource": "The Odds API",
       "bookmakerOffers": [
@@ -1841,9 +2868,9 @@
         },
         {
           "name": "Pinnacle",
-          "away": 3.32,
-          "home": 2.08,
-          "draw": 3.97,
+          "away": 3.28,
+          "home": 2.11,
+          "draw": 3.92,
           "btts": 1.51
         },
         {
@@ -1851,7 +2878,7 @@
           "away": 3.45,
           "home": 2.16,
           "draw": 4,
-          "btts": 1.54
+          "btts": 1.55
         },
         {
           "name": "888sport",
@@ -1960,7 +2987,39 @@
         "away",
         "over",
         "btts"
-      ]
+      ],
+      "oddsMovement": {
+        "home": {
+          "previous": 2.06,
+          "current": 2.06,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.88,
+          "current": 3.87,
+          "percent": -0.3,
+          "significant": false
+        },
+        "away": {
+          "previous": 3.27,
+          "current": 3.27,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 1.52,
+          "current": 1.52,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 1.5,
+          "current": 1.51,
+          "percent": 0.7,
+          "significant": false
+        }
+      }
     },
     {
       "id": "espn-401915395",
@@ -1978,8 +3037,8 @@
       "homeGoals": 1.5999999999999999,
       "awayGoals": 1.6,
       "odds": {
-        "home": 2.27,
-        "draw": 3.81,
+        "home": 2.28,
+        "draw": 3.8,
         "away": 2.87,
         "over": 1.52,
         "btts": 1.46
@@ -2013,9 +3072,9 @@
         },
         {
           "name": "Pinnacle",
-          "home": 2.32,
-          "away": 2.95,
-          "draw": 3.81,
+          "home": 2.35,
+          "away": 2.91,
+          "draw": 3.79,
           "btts": 1.47
         },
         {
@@ -2028,8 +3087,8 @@
           "name": "Matchbook",
           "home": 2.4,
           "away": 2.98,
-          "draw": 4,
-          "btts": 1.52
+          "draw": 3.95,
+          "btts": 1.51
         },
         {
           "name": "888sport",
@@ -2055,7 +3114,7 @@
           "name": "Betfair",
           "home": 2.4,
           "away": 2.98,
-          "draw": 4
+          "draw": 3.95
         },
         {
           "name": "Winamax (FR)",
@@ -2140,7 +3199,39 @@
         "away",
         "over",
         "btts"
-      ]
+      ],
+      "oddsMovement": {
+        "home": {
+          "previous": 2.27,
+          "current": 2.28,
+          "percent": 0.4,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.81,
+          "current": 3.8,
+          "percent": -0.3,
+          "significant": false
+        },
+        "away": {
+          "previous": 2.87,
+          "current": 2.87,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 1.52,
+          "current": 1.52,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 1.46,
+          "current": 1.46,
+          "percent": 0,
+          "significant": false
+        }
+      }
     },
     {
       "id": "espn-401915390",
@@ -2176,6 +3267,38 @@
         "form": "VN",
         "avgScored": 2,
         "avgConceded": 1
+      },
+      "oddsMovement": {
+        "home": {
+          "previous": 1.68,
+          "current": 1.68,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.59,
+          "current": 3.59,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 2.92,
+          "current": 2.92,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 1.64,
+          "current": 1.64,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 1.69,
+          "current": 1.69,
+          "percent": 0,
+          "significant": false
+        }
       }
     },
     {
@@ -2195,8 +3318,8 @@
       "awayGoals": 1.76,
       "odds": {
         "home": 1.23,
-        "draw": 7.39,
-        "away": 10.14,
+        "draw": 7.37,
+        "away": 10.22,
         "over": 1.19,
         "btts": 1.5
       },
@@ -2242,7 +3365,7 @@
         },
         {
           "name": "Unibet (FR)",
-          "away": 9.25,
+          "away": 9.5,
           "home": 1.18,
           "draw": 7
         },
@@ -2254,7 +3377,7 @@
         },
         {
           "name": "Matchbook",
-          "away": 11.5,
+          "away": 12,
           "home": 1.26,
           "draw": 8,
           "btts": 1.55
@@ -2267,10 +3390,10 @@
         },
         {
           "name": "Pinnacle",
-          "away": 10.66,
-          "home": 1.22,
-          "draw": 7.54,
-          "btts": 1.5
+          "away": 10.64,
+          "home": 1.23,
+          "draw": 7.37,
+          "btts": 1.49
         },
         {
           "name": "William Hill",
@@ -2337,9 +3460,9 @@
         },
         {
           "name": "Betsson",
-          "away": 10.5,
-          "home": 1.21,
-          "draw": 7.7,
+          "away": 11.5,
+          "home": 1.2,
+          "draw": 7.4,
           "over": 1.18
         },
         {
@@ -2369,7 +3492,39 @@
         "away",
         "over",
         "btts"
-      ]
+      ],
+      "oddsMovement": {
+        "home": {
+          "previous": 1.23,
+          "current": 1.23,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 7.39,
+          "current": 7.37,
+          "percent": -0.3,
+          "significant": false
+        },
+        "away": {
+          "previous": 10.14,
+          "current": 10.22,
+          "percent": 0.8,
+          "significant": false
+        },
+        "over": {
+          "previous": 1.19,
+          "current": 1.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 1.5,
+          "current": 1.5,
+          "percent": 0,
+          "significant": false
+        }
+      }
     },
     {
       "id": "espn-401915396",
@@ -2399,7 +3554,7 @@
           "name": "Pinnacle",
           "away": 3.22,
           "home": 2.19,
-          "draw": 3.76
+          "draw": 3.74
         },
         {
           "name": "1xBet",
@@ -2540,7 +3695,39 @@
         "home",
         "draw",
         "away"
-      ]
+      ],
+      "oddsMovement": {
+        "home": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.66,
+          "current": 3.66,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 3.11,
+          "current": 3.11,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
+      }
     },
     {
       "id": "espn-401915394",
@@ -2559,8 +3746,8 @@
       "awayGoals": 1.53,
       "odds": {
         "home": 1.22,
-        "draw": 6.88,
-        "away": 11.99,
+        "draw": 6.87,
+        "away": 11.98,
         "over": 2.19,
         "btts": 2.01
       },
@@ -2588,8 +3775,8 @@
         {
           "name": "Pinnacle",
           "home": 1.22,
-          "away": 12.09,
-          "draw": 7.14
+          "away": 12.06,
+          "draw": 6.98
         },
         {
           "name": "888sport",
@@ -2641,7 +3828,7 @@
         },
         {
           "name": "Betfair",
-          "home": 1.26,
+          "home": 1.25,
           "away": 13.5,
           "draw": 7.4
         },
@@ -2695,7 +3882,7 @@
         },
         {
           "name": "Matchbook",
-          "home": 1.26,
+          "home": 1.25,
           "away": 13.5,
           "draw": 7.4
         },
@@ -2724,7 +3911,39 @@
         "home",
         "draw",
         "away"
-      ]
+      ],
+      "oddsMovement": {
+        "home": {
+          "previous": 1.22,
+          "current": 1.22,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 6.88,
+          "current": 6.87,
+          "percent": -0.1,
+          "significant": false
+        },
+        "away": {
+          "previous": 11.99,
+          "current": 11.98,
+          "percent": -0.1,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
+      }
     },
     {
       "id": "espn-401915388",
@@ -2747,6 +3966,38 @@
         "away": 3.17,
         "over": 2.19,
         "btts": 2.01
+      },
+      "oddsMovement": {
+        "home": {
+          "previous": 2.38,
+          "current": 2.38,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.31,
+          "current": 3.31,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 3.17,
+          "current": 3.17,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
       }
     },
     {
@@ -2818,9 +4069,9 @@
         },
         {
           "name": "Pinnacle",
-          "away": 4.59,
-          "home": 1.66,
-          "draw": 4.63
+          "away": 4.66,
+          "home": 1.65,
+          "draw": 4.6
         },
         {
           "name": "1xBet",
@@ -2843,7 +4094,7 @@
         {
           "name": "Betfair",
           "away": 5,
-          "home": 1.69,
+          "home": 1.68,
           "draw": 4.7
         },
         {
@@ -2931,7 +4182,39 @@
         "home",
         "draw",
         "away"
-      ]
+      ],
+      "oddsMovement": {
+        "home": {
+          "previous": 1.62,
+          "current": 1.62,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 4.55,
+          "current": 4.55,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 4.69,
+          "current": 4.69,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
+      }
     },
     {
       "id": "espn-401915391",
@@ -2954,6 +4237,38 @@
         "away": 3.17,
         "over": 2.19,
         "btts": 2.01
+      },
+      "oddsMovement": {
+        "home": {
+          "previous": 2.38,
+          "current": 2.38,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.31,
+          "current": 3.31,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 3.17,
+          "current": 3.17,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
       }
     },
     {
@@ -3132,7 +4447,39 @@
         "home",
         "draw",
         "away"
-      ]
+      ],
+      "oddsMovement": {
+        "home": {
+          "previous": 3.56,
+          "current": 3.56,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.28,
+          "current": 3.28,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 2.13,
+          "current": 2.13,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
+      }
     },
     {
       "id": "espn-401915547",
@@ -3168,6 +4515,38 @@
         "form": "DVDVVV",
         "avgScored": 2.1666666666666665,
         "avgConceded": 2
+      },
+      "oddsMovement": {
+        "home": {
+          "previous": 1.82,
+          "current": 1.82,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.56,
+          "current": 3.56,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 3.17,
+          "current": 3.17,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 1.79,
+          "current": 1.79,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 1.81,
+          "current": 1.81,
+          "percent": 0,
+          "significant": false
+        }
       }
     },
     {
@@ -3327,7 +4706,39 @@
         "home",
         "draw",
         "away"
-      ]
+      ],
+      "oddsMovement": {
+        "home": {
+          "previous": 3.51,
+          "current": 3.51,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.62,
+          "current": 3.62,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 2,
+          "current": 2,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 1.86,
+          "current": 1.86,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 1.77,
+          "current": 1.77,
+          "percent": 0,
+          "significant": false
+        }
+      }
     },
     {
       "id": "espn-401915552",
@@ -3499,7 +4910,39 @@
         "home",
         "draw",
         "away"
-      ]
+      ],
+      "oddsMovement": {
+        "home": {
+          "previous": 2.07,
+          "current": 2.07,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.65,
+          "current": 3.65,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 3.3,
+          "current": 3.3,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 1.86,
+          "current": 1.86,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 1.77,
+          "current": 1.77,
+          "percent": 0,
+          "significant": false
+        }
+      }
     },
     {
       "id": "espn-401915548",
@@ -3658,7 +5101,39 @@
         "home",
         "draw",
         "away"
-      ]
+      ],
+      "oddsMovement": {
+        "home": {
+          "previous": 5.78,
+          "current": 5.78,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 4.46,
+          "current": 4.46,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 1.51,
+          "current": 1.51,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
+      }
     },
     {
       "id": "espn-401915556",
@@ -3817,7 +5292,39 @@
         "home",
         "draw",
         "away"
-      ]
+      ],
+      "oddsMovement": {
+        "home": {
+          "previous": 1.64,
+          "current": 1.64,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 4.19,
+          "current": 4.19,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 4.74,
+          "current": 4.74,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
+      }
     },
     {
       "id": "espn-401915558",
@@ -3976,7 +5483,39 @@
         "home",
         "draw",
         "away"
-      ]
+      ],
+      "oddsMovement": {
+        "home": {
+          "previous": 1.33,
+          "current": 1.33,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 5.15,
+          "current": 5.15,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 8.54,
+          "current": 8.54,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
+      }
     },
     {
       "id": "espn-401915546",
@@ -4135,7 +5674,39 @@
         "home",
         "draw",
         "away"
-      ]
+      ],
+      "oddsMovement": {
+        "home": {
+          "previous": 4.82,
+          "current": 4.82,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.98,
+          "current": 3.98,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 1.66,
+          "current": 1.66,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
+      }
     },
     {
       "id": "espn-401915559",
@@ -4294,7 +5865,39 @@
         "home",
         "draw",
         "away"
-      ]
+      ],
+      "oddsMovement": {
+        "home": {
+          "previous": 11.16,
+          "current": 11.16,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 6.63,
+          "current": 6.63,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 1.22,
+          "current": 1.22,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
+      }
     },
     {
       "id": "espn-401915545",
@@ -4317,6 +5920,38 @@
         "away": 3.17,
         "over": 2.19,
         "btts": 2.01
+      },
+      "oddsMovement": {
+        "home": {
+          "previous": 2.38,
+          "current": 2.38,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.31,
+          "current": 3.31,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 3.17,
+          "current": 3.17,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
       }
     },
     {
@@ -4476,7 +6111,39 @@
         "home",
         "draw",
         "away"
-      ]
+      ],
+      "oddsMovement": {
+        "home": {
+          "previous": 2.08,
+          "current": 2.08,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.75,
+          "current": 3.75,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 3.18,
+          "current": 3.18,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
+      }
     },
     {
       "id": "espn-401915555",
@@ -4588,8 +6255,8 @@
         },
         {
           "name": "Pinnacle",
-          "away": 2.56,
-          "home": 2.72,
+          "away": 2.59,
+          "home": 2.69,
           "draw": 3.43
         },
         {
@@ -4635,7 +6302,39 @@
         "home",
         "draw",
         "away"
-      ]
+      ],
+      "oddsMovement": {
+        "home": {
+          "previous": 2.66,
+          "current": 2.66,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.45,
+          "current": 3.45,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 2.52,
+          "current": 2.52,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
+      }
     },
     {
       "id": "espn-401915542",
@@ -4658,6 +6357,38 @@
         "away": 3.17,
         "over": 2.19,
         "btts": 2.01
+      },
+      "oddsMovement": {
+        "home": {
+          "previous": 2.38,
+          "current": 2.38,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.31,
+          "current": 3.31,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 3.17,
+          "current": 3.17,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
       }
     },
     {
@@ -4817,7 +6548,39 @@
         "home",
         "draw",
         "away"
-      ]
+      ],
+      "oddsMovement": {
+        "home": {
+          "previous": 5.74,
+          "current": 5.74,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 4.52,
+          "current": 4.52,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 1.5,
+          "current": 1.5,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
+      }
     },
     {
       "id": "espn-401915541",
@@ -4976,7 +6739,39 @@
         "home",
         "draw",
         "away"
-      ]
+      ],
+      "oddsMovement": {
+        "home": {
+          "previous": 5.06,
+          "current": 5.06,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 4.16,
+          "current": 4.16,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 1.61,
+          "current": 1.61,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
+      }
     },
     {
       "id": "espn-401915554",
@@ -4999,6 +6794,38 @@
         "away": 3.17,
         "over": 2.19,
         "btts": 2.01
+      },
+      "oddsMovement": {
+        "home": {
+          "previous": 2.38,
+          "current": 2.38,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.31,
+          "current": 3.31,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 3.17,
+          "current": 3.17,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
       }
     },
     {
@@ -5022,6 +6849,38 @@
         "away": 3.17,
         "over": 2.19,
         "btts": 2.01
+      },
+      "oddsMovement": {
+        "home": {
+          "previous": 2.38,
+          "current": 2.38,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.31,
+          "current": 3.31,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 3.17,
+          "current": 3.17,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
       }
     },
     {
@@ -5140,7 +6999,7 @@
         },
         {
           "name": "Matchbook",
-          "away": 3.5,
+          "away": 3.45,
           "home": 2.1,
           "draw": 4.2
         },
@@ -5181,7 +7040,39 @@
         "home",
         "draw",
         "away"
-      ]
+      ],
+      "oddsMovement": {
+        "home": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.9,
+          "current": 3.9,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 3.27,
+          "current": 3.27,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
+      }
     },
     {
       "id": "espn-401915539",
@@ -5340,7 +7231,39 @@
         "home",
         "draw",
         "away"
-      ]
+      ],
+      "oddsMovement": {
+        "home": {
+          "previous": 1.77,
+          "current": 1.77,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.8,
+          "current": 3.8,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 4.21,
+          "current": 4.21,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
+      }
     },
     {
       "id": "espn-401879253",
@@ -5542,7 +7465,39 @@
         "home",
         "draw",
         "away"
-      ]
+      ],
+      "oddsMovement": {
+        "home": {
+          "previous": 3.05,
+          "current": 3.05,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.46,
+          "current": 3.46,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 2.28,
+          "current": 2.28,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
+      }
     },
     {
       "id": "espn-401882836",
@@ -5720,7 +7675,39 @@
         "home",
         "draw",
         "away"
-      ]
+      ],
+      "oddsMovement": {
+        "home": {
+          "previous": 1.75,
+          "current": 1.75,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.61,
+          "current": 3.61,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 4.77,
+          "current": 4.77,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
+      }
     },
     {
       "id": "espn-401884761",
@@ -5910,7 +7897,39 @@
         "home",
         "draw",
         "away"
-      ]
+      ],
+      "oddsMovement": {
+        "home": {
+          "previous": 1.37,
+          "current": 1.37,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 5.58,
+          "current": 5.58,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 6.73,
+          "current": 6.73,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
+      }
     },
     {
       "id": "espn-401874957",
@@ -6106,7 +8125,39 @@
         "home",
         "draw",
         "away"
-      ]
+      ],
+      "oddsMovement": {
+        "home": {
+          "previous": 2.12,
+          "current": 2.12,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.39,
+          "current": 3.39,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 3.41,
+          "current": 3.41,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
+      }
     },
     {
       "id": "espn-401876428",
@@ -6277,7 +8328,39 @@
         "home",
         "draw",
         "away"
-      ]
+      ],
+      "oddsMovement": {
+        "home": {
+          "previous": 2.22,
+          "current": 2.22,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.39,
+          "current": 3.39,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 3.16,
+          "current": 3.16,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
+      }
     },
     {
       "id": "espn-401879256",
@@ -6489,7 +8572,39 @@
         "away",
         "over",
         "btts"
-      ]
+      ],
+      "oddsMovement": {
+        "home": {
+          "previous": 4.44,
+          "current": 4.44,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 4.16,
+          "current": 4.16,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 1.7,
+          "current": 1.7,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 1.51,
+          "current": 1.51,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 1.57,
+          "current": 1.57,
+          "percent": 0,
+          "significant": false
+        }
+      }
     },
     {
       "id": "espn-401878768",
@@ -6691,7 +8806,39 @@
         "home",
         "draw",
         "away"
-      ]
+      ],
+      "oddsMovement": {
+        "home": {
+          "previous": 1.39,
+          "current": 1.39,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 4.65,
+          "current": 4.65,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 8.36,
+          "current": 8.36,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 1.64,
+          "current": 1.64,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 1.69,
+          "current": 1.69,
+          "percent": 0,
+          "significant": false
+        }
+      }
     },
     {
       "id": "espn-401878767",
@@ -6893,7 +9040,39 @@
         "home",
         "draw",
         "away"
-      ]
+      ],
+      "oddsMovement": {
+        "home": {
+          "previous": 1.68,
+          "current": 1.68,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 4.25,
+          "current": 4.25,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 4.44,
+          "current": 4.44,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 1.64,
+          "current": 1.64,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 1.69,
+          "current": 1.69,
+          "percent": 0,
+          "significant": false
+        }
+      }
     },
     {
       "id": "espn-401882834",
@@ -7059,7 +9238,39 @@
         "home",
         "draw",
         "away"
-      ]
+      ],
+      "oddsMovement": {
+        "home": {
+          "previous": 1.26,
+          "current": 1.26,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 5.96,
+          "current": 5.96,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 10.55,
+          "current": 10.55,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 1.64,
+          "current": 1.64,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 1.69,
+          "current": 1.69,
+          "percent": 0,
+          "significant": false
+        }
+      }
     },
     {
       "id": "espn-401884763",
@@ -7249,7 +9460,39 @@
         "home",
         "draw",
         "away"
-      ]
+      ],
+      "oddsMovement": {
+        "home": {
+          "previous": 1.45,
+          "current": 1.45,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 5.05,
+          "current": 5.05,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 5.79,
+          "current": 5.79,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 1.64,
+          "current": 1.64,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 1.69,
+          "current": 1.69,
+          "percent": 0,
+          "significant": false
+        }
+      }
     },
     {
       "id": "espn-401874948",
@@ -7445,7 +9688,39 @@
         "home",
         "draw",
         "away"
-      ]
+      ],
+      "oddsMovement": {
+        "home": {
+          "previous": 2.8,
+          "current": 2.8,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.39,
+          "current": 3.39,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 2.47,
+          "current": 2.47,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 1.64,
+          "current": 1.64,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 1.69,
+          "current": 1.69,
+          "percent": 0,
+          "significant": false
+        }
+      }
     },
     {
       "id": "espn-401879255",
@@ -7647,7 +9922,39 @@
         "home",
         "draw",
         "away"
-      ]
+      ],
+      "oddsMovement": {
+        "home": {
+          "previous": 2.94,
+          "current": 2.94,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.47,
+          "current": 3.47,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 2.34,
+          "current": 2.34,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
+      }
     },
     {
       "id": "espn-401882830",
@@ -7825,7 +10132,39 @@
         "home",
         "draw",
         "away"
-      ]
+      ],
+      "oddsMovement": {
+        "home": {
+          "previous": 1.75,
+          "current": 1.75,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.78,
+          "current": 3.78,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 4.52,
+          "current": 4.52,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
+      }
     },
     {
       "id": "espn-401882831",
@@ -7997,7 +10336,39 @@
         "home",
         "draw",
         "away"
-      ]
+      ],
+      "oddsMovement": {
+        "home": {
+          "previous": 2.34,
+          "current": 2.34,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.58,
+          "current": 3.58,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 2.83,
+          "current": 2.83,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
+      }
     },
     {
       "id": "espn-401882827",
@@ -8175,7 +10546,39 @@
         "home",
         "draw",
         "away"
-      ]
+      ],
+      "oddsMovement": {
+        "home": {
+          "previous": 3.23,
+          "current": 3.23,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.61,
+          "current": 3.61,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 2.13,
+          "current": 2.13,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
+      }
     },
     {
       "id": "espn-401884758",
@@ -8365,7 +10768,39 @@
         "home",
         "draw",
         "away"
-      ]
+      ],
+      "oddsMovement": {
+        "home": {
+          "previous": 1.83,
+          "current": 1.83,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.98,
+          "current": 3.98,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 3.82,
+          "current": 3.82,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
+      }
     },
     {
       "id": "espn-401884756",
@@ -8388,6 +10823,38 @@
         "away": 3.17,
         "over": 2.19,
         "btts": 2.01
+      },
+      "oddsMovement": {
+        "home": {
+          "previous": 2.38,
+          "current": 2.38,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.31,
+          "current": 3.31,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 3.17,
+          "current": 3.17,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
       }
     },
     {
@@ -8411,6 +10878,38 @@
         "away": 3.17,
         "over": 2.19,
         "btts": 2.01
+      },
+      "oddsMovement": {
+        "home": {
+          "previous": 2.38,
+          "current": 2.38,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.31,
+          "current": 3.31,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 3.17,
+          "current": 3.17,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
       }
     },
     {
@@ -8588,7 +11087,39 @@
         "home",
         "draw",
         "away"
-      ]
+      ],
+      "oddsMovement": {
+        "home": {
+          "previous": 1.38,
+          "current": 1.38,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 5.39,
+          "current": 5.39,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 6.61,
+          "current": 6.61,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
+      }
     },
     {
       "id": "espn-401884755",
@@ -8611,6 +11142,38 @@
         "away": 3.17,
         "over": 2.19,
         "btts": 2.01
+      },
+      "oddsMovement": {
+        "home": {
+          "previous": 2.38,
+          "current": 2.38,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.31,
+          "current": 3.31,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 3.17,
+          "current": 3.17,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
       }
     },
     {
@@ -8807,7 +11370,39 @@
         "home",
         "draw",
         "away"
-      ]
+      ],
+      "oddsMovement": {
+        "home": {
+          "previous": 3.13,
+          "current": 3.13,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.04,
+          "current": 3.04,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 2.44,
+          "current": 2.44,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
+      }
     },
     {
       "id": "espn-401874961",
@@ -8990,7 +11585,39 @@
         "home",
         "draw",
         "away"
-      ]
+      ],
+      "oddsMovement": {
+        "home": {
+          "previous": 1.51,
+          "current": 1.51,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 4.53,
+          "current": 4.53,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 5.68,
+          "current": 5.68,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
+      }
     },
     {
       "id": "espn-401874955",
@@ -9173,7 +11800,39 @@
         "home",
         "draw",
         "away"
-      ]
+      ],
+      "oddsMovement": {
+        "home": {
+          "previous": 1.43,
+          "current": 1.43,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 4.46,
+          "current": 4.46,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 7.58,
+          "current": 7.58,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
+      }
     },
     {
       "id": "espn-401876423",
@@ -9357,7 +12016,39 @@
         "home",
         "draw",
         "away"
-      ]
+      ],
+      "oddsMovement": {
+        "home": {
+          "previous": 1.62,
+          "current": 1.62,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 4.13,
+          "current": 4.13,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 4.91,
+          "current": 4.91,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
+      }
     },
     {
       "id": "espn-401876427",
@@ -9380,6 +12071,38 @@
         "away": 3.17,
         "over": 2.19,
         "btts": 2.01
+      },
+      "oddsMovement": {
+        "home": {
+          "previous": 2.38,
+          "current": 2.38,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.31,
+          "current": 3.31,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 3.17,
+          "current": 3.17,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
       }
     },
     {
@@ -9544,7 +12267,7 @@
           "home": 1.65,
           "away": 4.1,
           "draw": 6.4,
-          "btts": 1.32
+          "btts": 1.31
         },
         {
           "name": "BetOnline.ag",
@@ -9567,7 +12290,39 @@
         "away",
         "over",
         "btts"
-      ]
+      ],
+      "oddsMovement": {
+        "home": {
+          "previous": 1.59,
+          "current": 1.59,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 5.41,
+          "current": 5.41,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 4.13,
+          "current": 4.13,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 1.19,
+          "current": 1.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 1.29,
+          "current": 1.29,
+          "percent": 0,
+          "significant": false
+        }
+      }
     },
     {
       "id": "espn-401878765",
@@ -9603,6 +12358,38 @@
         "form": "VVVVND",
         "avgScored": 3.1666666666666665,
         "avgConceded": 0.8333333333333334
+      },
+      "oddsMovement": {
+        "home": {
+          "previous": 1.68,
+          "current": 1.68,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.59,
+          "current": 3.59,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 2.92,
+          "current": 2.92,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 1.64,
+          "current": 1.64,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 1.69,
+          "current": 1.69,
+          "percent": 0,
+          "significant": false
+        }
       }
     },
     {
@@ -9693,7 +12480,7 @@
         {
           "name": "Betfair",
           "away": 4,
-          "home": 1.96,
+          "home": 1.97,
           "draw": 3.95
         },
         {
@@ -9765,7 +12552,7 @@
         {
           "name": "Matchbook",
           "away": 4,
-          "home": 1.96,
+          "home": 1.97,
           "draw": 3.95
         },
         {
@@ -9805,7 +12592,39 @@
         "home",
         "draw",
         "away"
-      ]
+      ],
+      "oddsMovement": {
+        "home": {
+          "previous": 1.86,
+          "current": 1.86,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.83,
+          "current": 3.83,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 3.87,
+          "current": 3.87,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 1.64,
+          "current": 1.64,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 1.69,
+          "current": 1.69,
+          "percent": 0,
+          "significant": false
+        }
+      }
     },
     {
       "id": "espn-401884759",
@@ -9982,7 +12801,39 @@
         "home",
         "draw",
         "away"
-      ]
+      ],
+      "oddsMovement": {
+        "home": {
+          "previous": 6.52,
+          "current": 6.52,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 5.75,
+          "current": 5.75,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 1.36,
+          "current": 1.36,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 1.7,
+          "current": 1.7,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 1.65,
+          "current": 1.65,
+          "percent": 0,
+          "significant": false
+        }
+      }
     },
     {
       "id": "espn-401875036",
@@ -10018,6 +12869,38 @@
         "form": "DDNVDD",
         "avgScored": 1.3333333333333333,
         "avgConceded": 2.1666666666666665
+      },
+      "oddsMovement": {
+        "home": {
+          "previous": 1.68,
+          "current": 1.68,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.59,
+          "current": 3.59,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 2.92,
+          "current": 2.92,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 1.64,
+          "current": 1.64,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 1.69,
+          "current": 1.69,
+          "percent": 0,
+          "significant": false
+        }
       }
     },
     {
@@ -10201,7 +13084,39 @@
         "home",
         "draw",
         "away"
-      ]
+      ],
+      "oddsMovement": {
+        "home": {
+          "previous": 7.56,
+          "current": 7.56,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 4.33,
+          "current": 4.33,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 1.44,
+          "current": 1.44,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 1.7,
+          "current": 1.7,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 1.65,
+          "current": 1.65,
+          "percent": 0,
+          "significant": false
+        }
+      }
     },
     {
       "id": "espn-401874779",
@@ -10397,7 +13312,39 @@
         "home",
         "draw",
         "away"
-      ]
+      ],
+      "oddsMovement": {
+        "home": {
+          "previous": 5.2,
+          "current": 5.2,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.91,
+          "current": 3.91,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 1.64,
+          "current": 1.64,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 1.7,
+          "current": 1.7,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 1.65,
+          "current": 1.65,
+          "percent": 0,
+          "significant": false
+        }
+      }
     },
     {
       "id": "espn-401876426",
@@ -10581,7 +13528,39 @@
         "home",
         "draw",
         "away"
-      ]
+      ],
+      "oddsMovement": {
+        "home": {
+          "previous": 1.55,
+          "current": 1.55,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 4.52,
+          "current": 4.52,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 5.09,
+          "current": 5.09,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 1.79,
+          "current": 1.79,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 1.81,
+          "current": 1.81,
+          "percent": 0,
+          "significant": false
+        }
+      }
     },
     {
       "id": "espn-401876422",
@@ -10665,7 +13644,7 @@
           "name": "Betfair",
           "away": 7,
           "home": 1.46,
-          "draw": 5.4
+          "draw": 5.5
         },
         {
           "name": "Pinnacle",
@@ -10752,7 +13731,39 @@
         "home",
         "draw",
         "away"
-      ]
+      ],
+      "oddsMovement": {
+        "home": {
+          "previous": 1.42,
+          "current": 1.42,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 5.15,
+          "current": 5.15,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 6.15,
+          "current": 6.15,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 1.79,
+          "current": 1.79,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 1.81,
+          "current": 1.81,
+          "percent": 0,
+          "significant": false
+        }
+      }
     },
     {
       "id": "espn-401879254",
@@ -10954,7 +13965,39 @@
         "home",
         "draw",
         "away"
-      ]
+      ],
+      "oddsMovement": {
+        "home": {
+          "previous": 2.85,
+          "current": 2.85,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.58,
+          "current": 3.58,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 2.34,
+          "current": 2.34,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
+      }
     },
     {
       "id": "espn-401878766",
@@ -11156,7 +14199,39 @@
         "home",
         "draw",
         "away"
-      ]
+      ],
+      "oddsMovement": {
+        "home": {
+          "previous": 4.58,
+          "current": 4.58,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.95,
+          "current": 3.95,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 1.72,
+          "current": 1.72,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
+      }
     },
     {
       "id": "espn-401878764",
@@ -11174,7 +14249,7 @@
       "homeGoals": 0.99,
       "awayGoals": 1.53,
       "odds": {
-        "home": 2.92,
+        "home": 2.93,
         "draw": 3.23,
         "away": 2.48,
         "over": 2.19,
@@ -11251,9 +14326,9 @@
         },
         {
           "name": "Marathon Bet",
-          "away": 2.56,
-          "home": 2.82,
-          "draw": 3.35
+          "away": 2.5,
+          "home": 2.99,
+          "draw": 3.24
         },
         {
           "name": "Tipico",
@@ -11358,7 +14433,39 @@
         "home",
         "draw",
         "away"
-      ]
+      ],
+      "oddsMovement": {
+        "home": {
+          "previous": 2.92,
+          "current": 2.93,
+          "percent": 0.3,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.23,
+          "current": 3.23,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 2.48,
+          "current": 2.48,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
+      }
     },
     {
       "id": "espn-401882835",
@@ -11536,7 +14643,39 @@
         "home",
         "draw",
         "away"
-      ]
+      ],
+      "oddsMovement": {
+        "home": {
+          "previous": 1.61,
+          "current": 1.61,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.85,
+          "current": 3.85,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 5.65,
+          "current": 5.65,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
+      }
     },
     {
       "id": "espn-401882833",
@@ -11714,7 +14853,39 @@
         "home",
         "draw",
         "away"
-      ]
+      ],
+      "oddsMovement": {
+        "home": {
+          "previous": 2.73,
+          "current": 2.73,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.44,
+          "current": 3.44,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 2.49,
+          "current": 2.49,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
+      }
     },
     {
       "id": "espn-401882829",
@@ -11892,7 +15063,39 @@
         "home",
         "draw",
         "away"
-      ]
+      ],
+      "oddsMovement": {
+        "home": {
+          "previous": 1.71,
+          "current": 1.71,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 4.04,
+          "current": 4.04,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 4.41,
+          "current": 4.41,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
+      }
     },
     {
       "id": "espn-401884760",
@@ -12069,7 +15272,39 @@
         "home",
         "draw",
         "away"
-      ]
+      ],
+      "oddsMovement": {
+        "home": {
+          "previous": 2.7,
+          "current": 2.7,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.97,
+          "current": 3.97,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 2.29,
+          "current": 2.29,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
+      }
     },
     {
       "id": "espn-401874972",
@@ -12224,7 +15459,7 @@
         },
         {
           "name": "Matchbook",
-          "home": 1.88,
+          "home": 1.89,
           "away": 3.95,
           "draw": 4.4
         },
@@ -12265,7 +15500,39 @@
         "home",
         "draw",
         "away"
-      ]
+      ],
+      "oddsMovement": {
+        "home": {
+          "previous": 1.77,
+          "current": 1.77,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 4.13,
+          "current": 4.13,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 4,
+          "current": 4,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
+      }
     },
     {
       "id": "espn-401874952",
@@ -12448,7 +15715,39 @@
         "home",
         "draw",
         "away"
-      ]
+      ],
+      "oddsMovement": {
+        "home": {
+          "previous": 2.08,
+          "current": 2.08,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.33,
+          "current": 3.33,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 3.62,
+          "current": 3.62,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
+      }
     },
     {
       "id": "espn-401876425",
@@ -12619,7 +15918,39 @@
         "home",
         "draw",
         "away"
-      ]
+      ],
+      "oddsMovement": {
+        "home": {
+          "previous": 2.11,
+          "current": 2.11,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.33,
+          "current": 3.33,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 3.48,
+          "current": 3.48,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
+      }
     },
     {
       "id": "espn-401876429",
@@ -12803,7 +16134,39 @@
         "home",
         "draw",
         "away"
-      ]
+      ],
+      "oddsMovement": {
+        "home": {
+          "previous": 2.12,
+          "current": 2.12,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.55,
+          "current": 3.55,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 3.24,
+          "current": 3.24,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
+      }
     },
     {
       "id": "espn-401876430",
@@ -12987,7 +16350,39 @@
         "home",
         "draw",
         "away"
-      ]
+      ],
+      "oddsMovement": {
+        "home": {
+          "previous": 2.99,
+          "current": 2.99,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.28,
+          "current": 3.28,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 2.38,
+          "current": 2.38,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
+      }
     },
     {
       "id": "espn-401876424",
@@ -13023,6 +16418,38 @@
         "form": "DDDNVV",
         "avgScored": 2,
         "avgConceded": 1.8333333333333333
+      },
+      "oddsMovement": {
+        "home": {
+          "previous": 2.38,
+          "current": 2.38,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.31,
+          "current": 3.31,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 3.17,
+          "current": 3.17,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
       }
     },
     {
@@ -13201,7 +16628,39 @@
         "home",
         "draw",
         "away"
-      ]
+      ],
+      "oddsMovement": {
+        "home": {
+          "previous": 1.92,
+          "current": 1.92,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.36,
+          "current": 3.36,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 4.12,
+          "current": 4.12,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
+      }
     },
     {
       "id": "espn-401874980",
@@ -13354,7 +16813,39 @@
         "home",
         "draw",
         "away"
-      ]
+      ],
+      "oddsMovement": {
+        "home": {
+          "previous": 2.8,
+          "current": 2.8,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.35,
+          "current": 3.35,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 2.39,
+          "current": 2.39,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
+      }
     },
     {
       "id": "espn-401874780",
@@ -13526,7 +17017,39 @@
         "home",
         "draw",
         "away"
-      ]
+      ],
+      "oddsMovement": {
+        "home": {
+          "previous": 1.33,
+          "current": 1.33,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 4.84,
+          "current": 4.84,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 8.52,
+          "current": 8.52,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
+      }
     },
     {
       "id": "espn-401874786",
@@ -13679,7 +17202,39 @@
         "home",
         "draw",
         "away"
-      ]
+      ],
+      "oddsMovement": {
+        "home": {
+          "previous": 4.39,
+          "current": 4.39,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.67,
+          "current": 3.67,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 1.75,
+          "current": 1.75,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
+      }
     },
     {
       "id": "espn-401874993",
@@ -13827,7 +17382,39 @@
         "home",
         "draw",
         "away"
-      ]
+      ],
+      "oddsMovement": {
+        "home": {
+          "previous": 1.58,
+          "current": 1.58,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.98,
+          "current": 3.98,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 5.21,
+          "current": 5.21,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 1.64,
+          "current": 1.64,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 1.69,
+          "current": 1.69,
+          "percent": 0,
+          "significant": false
+        }
+      }
     },
     {
       "id": "espn-401874773",
@@ -13863,6 +17450,38 @@
         "form": "VDVNVD",
         "avgScored": 2.8333333333333335,
         "avgConceded": 2
+      },
+      "oddsMovement": {
+        "home": {
+          "previous": 2.16,
+          "current": 2.16,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.15,
+          "current": 3.15,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 2.28,
+          "current": 2.28,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 1.7,
+          "current": 1.7,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 1.65,
+          "current": 1.65,
+          "percent": 0,
+          "significant": false
+        }
       }
     },
     {
@@ -13998,7 +17617,39 @@
         "home",
         "draw",
         "away"
-      ]
+      ],
+      "oddsMovement": {
+        "home": {
+          "previous": 5.3,
+          "current": 5.3,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.7,
+          "current": 3.7,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 1.62,
+          "current": 1.62,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 1.7,
+          "current": 1.7,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 1.65,
+          "current": 1.65,
+          "percent": 0,
+          "significant": false
+        }
+      }
     },
     {
       "id": "espn-401874799",
@@ -14146,7 +17797,39 @@
         "home",
         "draw",
         "away"
-      ]
+      ],
+      "oddsMovement": {
+        "home": {
+          "previous": 3.72,
+          "current": 3.72,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.66,
+          "current": 3.66,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 1.87,
+          "current": 1.87,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 1.7,
+          "current": 1.7,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 1.65,
+          "current": 1.65,
+          "percent": 0,
+          "significant": false
+        }
+      }
     },
     {
       "id": "espn-401874965",
@@ -14281,7 +17964,39 @@
         "home",
         "draw",
         "away"
-      ]
+      ],
+      "oddsMovement": {
+        "home": {
+          "previous": 2.93,
+          "current": 2.93,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.17,
+          "current": 3.17,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 2.39,
+          "current": 2.39,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
+      }
     }
   ]
 }
