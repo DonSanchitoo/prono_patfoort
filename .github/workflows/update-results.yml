@@ -43,9 +43,10 @@ jobs:
           git push
       - name: Configurer la synchronisation des comptes
         env:
-          SUPABASE_URL: ${{ vars.SUPABASE_URL }}
-          SUPABASE_ANON_KEY: ${{ vars.SUPABASE_ANON_KEY }}
-        run: node scripts/configure-supabase.mjs
+          SUPABASE_URL: ${{ vars.SUPABASE_URL || secrets.SUPABASE_URL }}
+          SUPABASE_ANON_KEY: ${{ vars.SUPABASE_ANON_KEY || secrets.SUPABASE_ANON_KEY }}
+          SUPABASE_PUBLISHABLE_KEY: ${{ vars.SUPABASE_PUBLISHABLE_KEY || secrets.SUPABASE_PUBLISHABLE_KEY }}
+        run: node scripts/configure-supabase.mjs --required
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

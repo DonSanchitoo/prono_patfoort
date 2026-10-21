@@ -9,6 +9,7 @@ La synchronisation utilise l'offre gratuite de Supabase. Les données de chaque 
 3. Dans le dépôt GitHub, ouvrez **Settings > Secrets and variables > Actions > Variables**, puis ajoutez :
    - `SUPABASE_URL` : l'URL du projet Supabase ;
    - `SUPABASE_ANON_KEY` : la clé publique `anon` / `publishable` du projet.
+   Le déploiement accepte également ces valeurs dans **Secrets**. Si Supabase affiche une clé au nouveau format, vous pouvez la nommer `SUPABASE_PUBLISHABLE_KEY`.
 4. Relancez le workflow **Deploy GitHub Pages** ou poussez un commit sur `main`.
 
 N'ajoutez jamais la clé `service_role` : elle est secrète et n'est ni nécessaire ni sûre dans une application web. La clé `anon` est publique ; la confidentialité repose sur les politiques RLS fournies dans le script SQL.
