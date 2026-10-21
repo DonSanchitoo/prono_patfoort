@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-21T07:16:40.551Z",
+  "generatedAt": "2026-10-21T07:18:04.563Z",
   "source": "ESPN + football-data.org + The Odds API",
   "providerStatus": "ok",
   "failures": [],
@@ -1507,7 +1507,7 @@
       "odds": {
         "home": 1.26,
         "draw": 7.4,
-        "away": 13.5,
+        "away": 13.8,
         "over": 2.19,
         "btts": 2.01
       },
@@ -1528,9 +1528,9 @@
       "bookmakerOffers": [
         {
           "name": "1xBet",
-          "home": 1.26,
-          "away": 12.7,
-          "draw": 6.88
+          "home": 1.24,
+          "away": 13.8,
+          "draw": 7.18
         },
         {
           "name": "Pinnacle",
@@ -1571,7 +1571,7 @@
         {
           "name": "William Hill",
           "home": 1.18,
-          "away": 11,
+          "away": 10,
           "draw": 6.5
         },
         {
@@ -4760,12 +4760,12 @@
         {
           "name": "Unibet (FR)",
           "away": 3.3,
-          "home": 1.97,
+          "home": 1.98,
           "draw": 3.3
         },
         {
           "name": "Betclic (FR)",
-          "away": 3.25,
+          "away": 3.22,
           "home": 2,
           "draw": 3.22
         },
@@ -6686,6 +6686,12 @@
           "draw": 3.5
         },
         {
+          "name": "Coolbet",
+          "home": 3.25,
+          "away": 2.2,
+          "draw": 3.7
+        },
+        {
           "name": "1xBet",
           "home": 3.45,
           "away": 2.17,
@@ -6788,7 +6794,7 @@
           "draw": 3.67
         }
       ],
-      "bookmakerCount": 19,
+      "bookmakerCount": 20,
       "realOddsMarkets": [
         "home",
         "draw",
@@ -7942,7 +7948,7 @@
         "draw": 6.4,
         "away": 4.57,
         "over": 1.49,
-        "btts": 1.32
+        "btts": 1.31
       },
       "statsSource": "football-data.org",
       "homeStats": {
@@ -8075,7 +8081,7 @@
           "home": 1.66,
           "away": 4.1,
           "draw": 6.4,
-          "btts": 1.32
+          "btts": 1.31
         },
         {
           "name": "BetOnline.ag",
