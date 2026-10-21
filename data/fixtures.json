@@ -1,16 +1,529 @@
 {
-  "generatedAt": "2026-10-21T07:18:04.563Z",
+  "generatedAt": "2026-10-21T07:28:26.687Z",
   "source": "ESPN + football-data.org + The Odds API",
   "providerStatus": "ok",
   "failures": [],
   "coverage": {
     "historicalMatches": 390,
     "oddsEvents": 124,
-    "statsMatches": 45,
+    "statsMatches": 66,
     "oddsMatches": 68,
     "settlements": 84
   },
   "settlements": [
+    {
+      "id": "espn-401878771",
+      "date": "2026-10-17",
+      "home": "Everton",
+      "away": "Chelsea",
+      "homeScore": 0,
+      "awayScore": 2,
+      "completed": true
+    },
+    {
+      "id": "espn-401879262",
+      "date": "2026-10-17",
+      "home": "Brentford",
+      "away": "Liverpool",
+      "homeScore": 1,
+      "awayScore": 2,
+      "completed": true
+    },
+    {
+      "id": "espn-401878770",
+      "date": "2026-10-17",
+      "home": "Fulham",
+      "away": "Hull City",
+      "homeScore": 1,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401879259",
+      "date": "2026-10-17",
+      "home": "Manchester City",
+      "away": "Ipswich Town",
+      "homeScore": 3,
+      "awayScore": 2,
+      "completed": true
+    },
+    {
+      "id": "espn-401879258",
+      "date": "2026-10-17",
+      "home": "Newcastle United",
+      "away": "Aston Villa",
+      "homeScore": 0,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401879263",
+      "date": "2026-10-18",
+      "home": "AFC Bournemouth",
+      "away": "Sunderland",
+      "homeScore": 2,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401879261",
+      "date": "2026-10-18",
+      "home": "Brighton & Hove Albion",
+      "away": "Crystal Palace",
+      "homeScore": 5,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401879260",
+      "date": "2026-10-18",
+      "home": "Leeds United",
+      "away": "Manchester United",
+      "homeScore": 1,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401878769",
+      "date": "2026-10-18",
+      "home": "Nottingham Forest",
+      "away": "Arsenal",
+      "homeScore": 0,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401879257",
+      "date": "2026-10-19",
+      "home": "Tottenham Hotspur",
+      "away": "Coventry City",
+      "homeScore": 3,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401876437",
+      "date": "2026-10-16",
+      "home": "Le Mans",
+      "away": "Toulouse",
+      "homeScore": 0,
+      "awayScore": 3,
+      "completed": true
+    },
+    {
+      "id": "espn-401876432",
+      "date": "2026-10-17",
+      "home": "Strasbourg",
+      "away": "Paris Saint-Germain",
+      "homeScore": 1,
+      "awayScore": 3,
+      "completed": true
+    },
+    {
+      "id": "espn-401876436",
+      "date": "2026-10-17",
+      "home": "Lille",
+      "away": "Brest",
+      "homeScore": 1,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401876431",
+      "date": "2026-10-17",
+      "home": "Troyes",
+      "away": "Lens",
+      "homeScore": 1,
+      "awayScore": 3,
+      "completed": true
+    },
+    {
+      "id": "espn-401876439",
+      "date": "2026-10-18",
+      "home": "Angers",
+      "away": "Marseille",
+      "homeScore": 2,
+      "awayScore": 5,
+      "completed": true
+    },
+    {
+      "id": "espn-401876438",
+      "date": "2026-10-18",
+      "home": "Le Havre AC",
+      "away": "AJ Auxerre",
+      "homeScore": 1,
+      "awayScore": 3,
+      "completed": true
+    },
+    {
+      "id": "espn-401876435",
+      "date": "2026-10-18",
+      "home": "Lorient",
+      "away": "AS Monaco",
+      "homeScore": 1,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401876433",
+      "date": "2026-10-18",
+      "home": "Paris FC",
+      "away": "Stade Rennais",
+      "homeScore": 4,
+      "awayScore": 3,
+      "completed": true
+    },
+    {
+      "id": "espn-401876434",
+      "date": "2026-10-18",
+      "home": "Lyon",
+      "away": "Nice",
+      "homeScore": 2,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401882844",
+      "date": "2026-10-16",
+      "home": "Deportivo",
+      "away": "Levante",
+      "homeScore": 1,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401882843",
+      "date": "2026-10-17",
+      "home": "Espanyol",
+      "away": "Atlético Madrid",
+      "homeScore": 0,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401882837",
+      "date": "2026-10-17",
+      "home": "Villarreal",
+      "away": "Elche",
+      "homeScore": 0,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401882846",
+      "date": "2026-10-17",
+      "home": "Real Betis",
+      "away": "Barcelona",
+      "homeScore": 2,
+      "awayScore": 5,
+      "completed": true
+    },
+    {
+      "id": "espn-401882838",
+      "date": "2026-10-17",
+      "home": "Valencia",
+      "away": "Athletic Club",
+      "homeScore": 0,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401882840",
+      "date": "2026-10-18",
+      "home": "Osasuna",
+      "away": "Racing Santander",
+      "homeScore": 2,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401882845",
+      "date": "2026-10-18",
+      "home": "Celta Vigo",
+      "away": "Alavés",
+      "homeScore": 2,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401882841",
+      "date": "2026-10-18",
+      "home": "Málaga",
+      "away": "Real Sociedad",
+      "homeScore": 2,
+      "awayScore": 5,
+      "completed": true
+    },
+    {
+      "id": "espn-401882839",
+      "date": "2026-10-18",
+      "home": "Real Madrid",
+      "away": "Sevilla",
+      "homeScore": 4,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401882842",
+      "date": "2026-10-19",
+      "home": "Getafe",
+      "away": "Rayo Vallecano",
+      "homeScore": 1,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401874959",
+      "date": "2026-10-16",
+      "home": "Frosinone",
+      "away": "Sassuolo",
+      "homeScore": 4,
+      "awayScore": 2,
+      "completed": true
+    },
+    {
+      "id": "espn-401874760",
+      "date": "2026-10-17",
+      "home": "Venezia",
+      "away": "Napoli",
+      "homeScore": 1,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401874953",
+      "date": "2026-10-17",
+      "home": "Bologna",
+      "away": "Internazionale",
+      "homeScore": 1,
+      "awayScore": 3,
+      "completed": true
+    },
+    {
+      "id": "espn-401874935",
+      "date": "2026-10-17",
+      "home": "AS Roma",
+      "away": "Genoa",
+      "homeScore": 2,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401874771",
+      "date": "2026-10-18",
+      "home": "Udinese",
+      "away": "Lecce",
+      "homeScore": 0,
+      "awayScore": 3,
+      "completed": true
+    },
+    {
+      "id": "espn-401874774",
+      "date": "2026-10-18",
+      "home": "Fiorentina",
+      "away": "Como",
+      "homeScore": 1,
+      "awayScore": 3,
+      "completed": true
+    },
+    {
+      "id": "espn-401874978",
+      "date": "2026-10-18",
+      "home": "AC Milan",
+      "away": "Atalanta",
+      "homeScore": 3,
+      "awayScore": 2,
+      "completed": true
+    },
+    {
+      "id": "espn-401874765",
+      "date": "2026-10-18",
+      "home": "Juventus",
+      "away": "Lazio",
+      "homeScore": 0,
+      "awayScore": 3,
+      "completed": true
+    },
+    {
+      "id": "espn-401874762",
+      "date": "2026-10-19",
+      "home": "Monza",
+      "away": "Cagliari",
+      "homeScore": 4,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401874784",
+      "date": "2026-10-19",
+      "home": "Parma",
+      "away": "Torino",
+      "homeScore": 0,
+      "awayScore": 3,
+      "completed": true
+    },
+    {
+      "id": "espn-401884770",
+      "date": "2026-10-16",
+      "home": "Eintracht Frankfurt",
+      "away": "FC Cologne",
+      "homeScore": 1,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401884769",
+      "date": "2026-10-17",
+      "home": "1. FC Union Berlin",
+      "away": "Borussia Dortmund",
+      "homeScore": 0,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401884767",
+      "date": "2026-10-17",
+      "home": "Hamburg SV",
+      "away": "VfB Stuttgart",
+      "homeScore": 1,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401884765",
+      "date": "2026-10-17",
+      "home": "Schalke 04",
+      "away": "Mainz",
+      "homeScore": 0,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401884764",
+      "date": "2026-10-17",
+      "home": "SV Elversberg",
+      "away": "FC Augsburg",
+      "homeScore": 4,
+      "awayScore": 3,
+      "completed": true
+    },
+    {
+      "id": "espn-401884766",
+      "date": "2026-10-17",
+      "home": "Werder Bremen",
+      "away": "SC Paderborn 07",
+      "homeScore": 2,
+      "awayScore": 2,
+      "completed": true
+    },
+    {
+      "id": "espn-401884772",
+      "date": "2026-10-17",
+      "home": "Bayern Munich",
+      "away": "RB Leipzig",
+      "homeScore": 6,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401884771",
+      "date": "2026-10-18",
+      "home": "Bayer Leverkusen",
+      "away": "SC Freiburg",
+      "homeScore": 2,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401884768",
+      "date": "2026-10-18",
+      "home": "Borussia Mönchengladbach",
+      "away": "TSG Hoffenheim",
+      "homeScore": 1,
+      "awayScore": 2,
+      "completed": true
+    },
+    {
+      "id": "espn-401915416",
+      "date": "2026-10-14",
+      "home": "Feyenoord Rotterdam",
+      "away": "Como",
+      "homeScore": 3,
+      "awayScore": 2,
+      "completed": true
+    },
+    {
+      "id": "espn-401915415",
+      "date": "2026-10-14",
+      "home": "LASK Linz",
+      "away": "Liverpool",
+      "homeScore": 3,
+      "awayScore": 6,
+      "completed": true
+    },
+    {
+      "id": "espn-401915414",
+      "date": "2026-10-14",
+      "home": "AS Roma",
+      "away": "Real Madrid",
+      "homeScore": 3,
+      "awayScore": 4,
+      "completed": true
+    },
+    {
+      "id": "espn-401915409",
+      "date": "2026-10-14",
+      "home": "Aston Villa",
+      "away": "Fenerbahce",
+      "homeScore": 6,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401915393",
+      "date": "2026-10-14",
+      "home": "Bodo/Glimt",
+      "away": "Borussia Dortmund",
+      "homeScore": 1,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401915407",
+      "date": "2026-10-14",
+      "home": "Manchester City",
+      "away": "Paris Saint-Germain",
+      "homeScore": 2,
+      "awayScore": 4,
+      "completed": true
+    },
+    {
+      "id": "espn-401915408",
+      "date": "2026-10-14",
+      "home": "Real Betis",
+      "away": "FC Porto",
+      "homeScore": 3,
+      "awayScore": 2,
+      "completed": true
+    },
+    {
+      "id": "espn-401915406",
+      "date": "2026-10-14",
+      "home": "Shakhtar Donetsk",
+      "away": "AEK Athens",
+      "homeScore": 3,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401915405",
+      "date": "2026-10-14",
+      "home": "Slovan Bratislava",
+      "away": "VfB Stuttgart",
+      "homeScore": 0,
+      "awayScore": 3,
+      "completed": true
+    },
     {
       "id": "espn-401915403",
       "date": "2026-10-20",
@@ -90,438 +603,6 @@
       "away": "Atlético Madrid",
       "homeScore": 1,
       "awayScore": 1,
-      "completed": true
-    },
-    {
-      "id": "espn-401879257",
-      "date": "2026-10-19",
-      "home": "Tottenham Hotspur",
-      "away": "Coventry City",
-      "homeScore": 3,
-      "awayScore": 1,
-      "completed": true
-    },
-    {
-      "id": "espn-401882842",
-      "date": "2026-10-19",
-      "home": "Getafe",
-      "away": "Rayo Vallecano",
-      "homeScore": 1,
-      "awayScore": 1,
-      "completed": true
-    },
-    {
-      "id": "espn-401874762",
-      "date": "2026-10-19",
-      "home": "Monza",
-      "away": "Cagliari",
-      "homeScore": 4,
-      "awayScore": 0,
-      "completed": true
-    },
-    {
-      "id": "espn-401874784",
-      "date": "2026-10-19",
-      "home": "Parma",
-      "away": "Torino",
-      "homeScore": 0,
-      "awayScore": 3,
-      "completed": true
-    },
-    {
-      "id": "espn-401879263",
-      "date": "2026-10-18",
-      "home": "AFC Bournemouth",
-      "away": "Sunderland",
-      "homeScore": 2,
-      "awayScore": 0,
-      "completed": true
-    },
-    {
-      "id": "espn-401879261",
-      "date": "2026-10-18",
-      "home": "Brighton & Hove Albion",
-      "away": "Crystal Palace",
-      "homeScore": 5,
-      "awayScore": 0,
-      "completed": true
-    },
-    {
-      "id": "espn-401879260",
-      "date": "2026-10-18",
-      "home": "Leeds United",
-      "away": "Manchester United",
-      "homeScore": 1,
-      "awayScore": 1,
-      "completed": true
-    },
-    {
-      "id": "espn-401878769",
-      "date": "2026-10-18",
-      "home": "Nottingham Forest",
-      "away": "Arsenal",
-      "homeScore": 0,
-      "awayScore": 1,
-      "completed": true
-    },
-    {
-      "id": "espn-401876439",
-      "date": "2026-10-18",
-      "home": "Angers",
-      "away": "Marseille",
-      "homeScore": 2,
-      "awayScore": 5,
-      "completed": true
-    },
-    {
-      "id": "espn-401876438",
-      "date": "2026-10-18",
-      "home": "Le Havre AC",
-      "away": "AJ Auxerre",
-      "homeScore": 1,
-      "awayScore": 3,
-      "completed": true
-    },
-    {
-      "id": "espn-401876435",
-      "date": "2026-10-18",
-      "home": "Lorient",
-      "away": "AS Monaco",
-      "homeScore": 1,
-      "awayScore": 0,
-      "completed": true
-    },
-    {
-      "id": "espn-401876433",
-      "date": "2026-10-18",
-      "home": "Paris FC",
-      "away": "Stade Rennais",
-      "homeScore": 4,
-      "awayScore": 3,
-      "completed": true
-    },
-    {
-      "id": "espn-401876434",
-      "date": "2026-10-18",
-      "home": "Lyon",
-      "away": "Nice",
-      "homeScore": 2,
-      "awayScore": 1,
-      "completed": true
-    },
-    {
-      "id": "espn-401882840",
-      "date": "2026-10-18",
-      "home": "Osasuna",
-      "away": "Racing Santander",
-      "homeScore": 2,
-      "awayScore": 0,
-      "completed": true
-    },
-    {
-      "id": "espn-401882845",
-      "date": "2026-10-18",
-      "home": "Celta Vigo",
-      "away": "Alavés",
-      "homeScore": 2,
-      "awayScore": 1,
-      "completed": true
-    },
-    {
-      "id": "espn-401882841",
-      "date": "2026-10-18",
-      "home": "Málaga",
-      "away": "Real Sociedad",
-      "homeScore": 2,
-      "awayScore": 5,
-      "completed": true
-    },
-    {
-      "id": "espn-401882839",
-      "date": "2026-10-18",
-      "home": "Real Madrid",
-      "away": "Sevilla",
-      "homeScore": 4,
-      "awayScore": 1,
-      "completed": true
-    },
-    {
-      "id": "espn-401874771",
-      "date": "2026-10-18",
-      "home": "Udinese",
-      "away": "Lecce",
-      "homeScore": 0,
-      "awayScore": 3,
-      "completed": true
-    },
-    {
-      "id": "espn-401874774",
-      "date": "2026-10-18",
-      "home": "Fiorentina",
-      "away": "Como",
-      "homeScore": 1,
-      "awayScore": 3,
-      "completed": true
-    },
-    {
-      "id": "espn-401874978",
-      "date": "2026-10-18",
-      "home": "AC Milan",
-      "away": "Atalanta",
-      "homeScore": 3,
-      "awayScore": 2,
-      "completed": true
-    },
-    {
-      "id": "espn-401874765",
-      "date": "2026-10-18",
-      "home": "Juventus",
-      "away": "Lazio",
-      "homeScore": 0,
-      "awayScore": 3,
-      "completed": true
-    },
-    {
-      "id": "espn-401884771",
-      "date": "2026-10-18",
-      "home": "Bayer Leverkusen",
-      "away": "SC Freiburg",
-      "homeScore": 2,
-      "awayScore": 1,
-      "completed": true
-    },
-    {
-      "id": "espn-401884768",
-      "date": "2026-10-18",
-      "home": "Borussia Mönchengladbach",
-      "away": "TSG Hoffenheim",
-      "homeScore": 1,
-      "awayScore": 2,
-      "completed": true
-    },
-    {
-      "id": "espn-401878771",
-      "date": "2026-10-17",
-      "home": "Everton",
-      "away": "Chelsea",
-      "homeScore": 0,
-      "awayScore": 2,
-      "completed": true
-    },
-    {
-      "id": "espn-401879262",
-      "date": "2026-10-17",
-      "home": "Brentford",
-      "away": "Liverpool",
-      "homeScore": 1,
-      "awayScore": 2,
-      "completed": true
-    },
-    {
-      "id": "espn-401878770",
-      "date": "2026-10-17",
-      "home": "Fulham",
-      "away": "Hull City",
-      "homeScore": 1,
-      "awayScore": 0,
-      "completed": true
-    },
-    {
-      "id": "espn-401879259",
-      "date": "2026-10-17",
-      "home": "Manchester City",
-      "away": "Ipswich Town",
-      "homeScore": 3,
-      "awayScore": 2,
-      "completed": true
-    },
-    {
-      "id": "espn-401879258",
-      "date": "2026-10-17",
-      "home": "Newcastle United",
-      "away": "Aston Villa",
-      "homeScore": 0,
-      "awayScore": 1,
-      "completed": true
-    },
-    {
-      "id": "espn-401876432",
-      "date": "2026-10-17",
-      "home": "Strasbourg",
-      "away": "Paris Saint-Germain",
-      "homeScore": 1,
-      "awayScore": 3,
-      "completed": true
-    },
-    {
-      "id": "espn-401876436",
-      "date": "2026-10-17",
-      "home": "Lille",
-      "away": "Brest",
-      "homeScore": 1,
-      "awayScore": 1,
-      "completed": true
-    },
-    {
-      "id": "espn-401876431",
-      "date": "2026-10-17",
-      "home": "Troyes",
-      "away": "Lens",
-      "homeScore": 1,
-      "awayScore": 3,
-      "completed": true
-    },
-    {
-      "id": "espn-401882843",
-      "date": "2026-10-17",
-      "home": "Espanyol",
-      "away": "Atlético Madrid",
-      "homeScore": 0,
-      "awayScore": 1,
-      "completed": true
-    },
-    {
-      "id": "espn-401882837",
-      "date": "2026-10-17",
-      "home": "Villarreal",
-      "away": "Elche",
-      "homeScore": 0,
-      "awayScore": 0,
-      "completed": true
-    },
-    {
-      "id": "espn-401882846",
-      "date": "2026-10-17",
-      "home": "Real Betis",
-      "away": "Barcelona",
-      "homeScore": 2,
-      "awayScore": 5,
-      "completed": true
-    },
-    {
-      "id": "espn-401882838",
-      "date": "2026-10-17",
-      "home": "Valencia",
-      "away": "Athletic Club",
-      "homeScore": 0,
-      "awayScore": 0,
-      "completed": true
-    },
-    {
-      "id": "espn-401874760",
-      "date": "2026-10-17",
-      "home": "Venezia",
-      "away": "Napoli",
-      "homeScore": 1,
-      "awayScore": 0,
-      "completed": true
-    },
-    {
-      "id": "espn-401874953",
-      "date": "2026-10-17",
-      "home": "Bologna",
-      "away": "Internazionale",
-      "homeScore": 1,
-      "awayScore": 3,
-      "completed": true
-    },
-    {
-      "id": "espn-401874935",
-      "date": "2026-10-17",
-      "home": "AS Roma",
-      "away": "Genoa",
-      "homeScore": 2,
-      "awayScore": 0,
-      "completed": true
-    },
-    {
-      "id": "espn-401884769",
-      "date": "2026-10-17",
-      "home": "1. FC Union Berlin",
-      "away": "Borussia Dortmund",
-      "homeScore": 0,
-      "awayScore": 0,
-      "completed": true
-    },
-    {
-      "id": "espn-401884767",
-      "date": "2026-10-17",
-      "home": "Hamburg SV",
-      "away": "VfB Stuttgart",
-      "homeScore": 1,
-      "awayScore": 0,
-      "completed": true
-    },
-    {
-      "id": "espn-401884765",
-      "date": "2026-10-17",
-      "home": "Schalke 04",
-      "away": "Mainz",
-      "homeScore": 0,
-      "awayScore": 1,
-      "completed": true
-    },
-    {
-      "id": "espn-401884764",
-      "date": "2026-10-17",
-      "home": "SV Elversberg",
-      "away": "FC Augsburg",
-      "homeScore": 4,
-      "awayScore": 3,
-      "completed": true
-    },
-    {
-      "id": "espn-401884766",
-      "date": "2026-10-17",
-      "home": "Werder Bremen",
-      "away": "SC Paderborn 07",
-      "homeScore": 2,
-      "awayScore": 2,
-      "completed": true
-    },
-    {
-      "id": "espn-401884772",
-      "date": "2026-10-17",
-      "home": "Bayern Munich",
-      "away": "RB Leipzig",
-      "homeScore": 6,
-      "awayScore": 1,
-      "completed": true
-    },
-    {
-      "id": "espn-401876437",
-      "date": "2026-10-16",
-      "home": "Le Mans",
-      "away": "Toulouse",
-      "homeScore": 0,
-      "awayScore": 3,
-      "completed": true
-    },
-    {
-      "id": "espn-401882844",
-      "date": "2026-10-16",
-      "home": "Deportivo",
-      "away": "Levante",
-      "homeScore": 1,
-      "awayScore": 1,
-      "completed": true
-    },
-    {
-      "id": "espn-401874959",
-      "date": "2026-10-16",
-      "home": "Frosinone",
-      "away": "Sassuolo",
-      "homeScore": 4,
-      "awayScore": 2,
-      "completed": true
-    },
-    {
-      "id": "espn-401884770",
-      "date": "2026-10-16",
-      "home": "Eintracht Frankfurt",
-      "away": "FC Cologne",
-      "homeScore": 1,
-      "awayScore": 0,
       "completed": true
     },
     {
@@ -685,90 +766,1018 @@
       "homeScore": 2,
       "awayScore": 3,
       "completed": true
-    },
-    {
-      "id": "espn-401915416",
-      "date": "2026-10-14",
-      "home": "Feyenoord Rotterdam",
-      "away": "Como",
-      "homeScore": 3,
-      "awayScore": 2,
-      "completed": true
-    },
-    {
-      "id": "espn-401915415",
-      "date": "2026-10-14",
-      "home": "LASK Linz",
-      "away": "Liverpool",
-      "homeScore": 3,
-      "awayScore": 6,
-      "completed": true
-    },
-    {
-      "id": "espn-401915414",
-      "date": "2026-10-14",
-      "home": "AS Roma",
-      "away": "Real Madrid",
-      "homeScore": 3,
-      "awayScore": 4,
-      "completed": true
-    },
-    {
-      "id": "espn-401915409",
-      "date": "2026-10-14",
-      "home": "Aston Villa",
-      "away": "Fenerbahce",
-      "homeScore": 6,
-      "awayScore": 0,
-      "completed": true
-    },
-    {
-      "id": "espn-401915393",
-      "date": "2026-10-14",
-      "home": "Bodo/Glimt",
-      "away": "Borussia Dortmund",
-      "homeScore": 1,
-      "awayScore": 0,
-      "completed": true
-    },
-    {
-      "id": "espn-401915407",
-      "date": "2026-10-14",
-      "home": "Manchester City",
-      "away": "Paris Saint-Germain",
-      "homeScore": 2,
-      "awayScore": 4,
-      "completed": true
-    },
-    {
-      "id": "espn-401915408",
-      "date": "2026-10-14",
-      "home": "Real Betis",
-      "away": "FC Porto",
-      "homeScore": 3,
-      "awayScore": 2,
-      "completed": true
-    },
-    {
-      "id": "espn-401915406",
-      "date": "2026-10-14",
-      "home": "Shakhtar Donetsk",
-      "away": "AEK Athens",
-      "homeScore": 3,
-      "awayScore": 1,
-      "completed": true
-    },
-    {
-      "id": "espn-401915405",
-      "date": "2026-10-14",
-      "home": "Slovan Bratislava",
-      "away": "VfB Stuttgart",
-      "homeScore": 0,
-      "awayScore": 3,
-      "completed": true
     }
   ],
   "matches": [
+    {
+      "id": "espn-401879260",
+      "date": "2026-10-18",
+      "time": "15:00",
+      "league": "Premier League",
+      "home": "Leeds United",
+      "away": "Manchester United",
+      "priority": 64,
+      "featured": false,
+      "status": "Full Time",
+      "completed": true,
+      "homeScore": 1,
+      "awayScore": 1,
+      "homeGoals": 1.26,
+      "awayGoals": 1,
+      "odds": {
+        "home": 2.16,
+        "draw": 3.15,
+        "away": 2.28,
+        "over": 1.7,
+        "btts": 1.65
+      },
+      "statsSource": "football-data.org",
+      "homeStats": {
+        "sample": 6,
+        "form": "NDNVNN",
+        "avgScored": 1.3333333333333333,
+        "avgConceded": 1
+      },
+      "awayStats": {
+        "sample": 6,
+        "form": "NDNNDV",
+        "avgScored": 1.1666666666666667,
+        "avgConceded": 1
+      }
+    },
+    {
+      "id": "espn-401878769",
+      "date": "2026-10-18",
+      "time": "17:30",
+      "league": "Premier League",
+      "home": "Nottingham Forest",
+      "away": "Arsenal",
+      "priority": 64,
+      "featured": false,
+      "status": "Full Time",
+      "completed": true,
+      "homeScore": 0,
+      "awayScore": 1,
+      "homeGoals": 0.81,
+      "awayGoals": 1.3,
+      "odds": {
+        "home": 2.16,
+        "draw": 3.15,
+        "away": 2.28,
+        "over": 1.7,
+        "btts": 1.65
+      },
+      "statsSource": "football-data.org",
+      "homeStats": {
+        "sample": 6,
+        "form": "DDDVNN",
+        "avgScored": 0.8333333333333334,
+        "avgConceded": 1.3333333333333333
+      },
+      "awayStats": {
+        "sample": 6,
+        "form": "VVVDVV",
+        "avgScored": 1.5,
+        "avgConceded": 0.6666666666666666
+      }
+    },
+    {
+      "id": "espn-401882839",
+      "date": "2026-10-18",
+      "time": "21:00",
+      "league": "La Liga",
+      "home": "Real Madrid",
+      "away": "Sevilla",
+      "priority": 63,
+      "featured": false,
+      "status": "Full Time",
+      "completed": true,
+      "homeScore": 4,
+      "awayScore": 1,
+      "homeGoals": 2.52,
+      "awayGoals": 1.3,
+      "odds": {
+        "home": 1.68,
+        "draw": 3.59,
+        "away": 2.92,
+        "over": 1.64,
+        "btts": 1.69
+      },
+      "statsSource": "football-data.org",
+      "homeStats": {
+        "sample": 6,
+        "form": "VVVDVV",
+        "avgScored": 2.8333333333333335,
+        "avgConceded": 1.5
+      },
+      "awayStats": {
+        "sample": 6,
+        "form": "DNDVVN",
+        "avgScored": 1.3333333333333333,
+        "avgConceded": 1.8333333333333333
+      }
+    },
+    {
+      "id": "espn-401874978",
+      "date": "2026-10-18",
+      "time": "18:00",
+      "league": "Serie A",
+      "home": "AC Milan",
+      "away": "Atalanta",
+      "priority": 61,
+      "featured": false,
+      "status": "Full Time",
+      "completed": true,
+      "homeScore": 3,
+      "awayScore": 2,
+      "homeGoals": 1.98,
+      "awayGoals": 1.07,
+      "odds": {
+        "home": 1.68,
+        "draw": 3.59,
+        "away": 2.92,
+        "over": 1.64,
+        "btts": 1.69
+      },
+      "statsSource": "football-data.org",
+      "homeStats": {
+        "sample": 6,
+        "form": "VNVNNV",
+        "avgScored": 2,
+        "avgConceded": 1
+      },
+      "awayStats": {
+        "sample": 6,
+        "form": "DVDDDV",
+        "avgScored": 1.3333333333333333,
+        "avgConceded": 1.6666666666666667
+      }
+    },
+    {
+      "id": "espn-401874765",
+      "date": "2026-10-18",
+      "time": "20:45",
+      "league": "Serie A",
+      "home": "Juventus",
+      "away": "Lazio",
+      "priority": 61,
+      "featured": false,
+      "status": "Full Time",
+      "completed": true,
+      "homeScore": 0,
+      "awayScore": 3,
+      "homeGoals": 2.05,
+      "awayGoals": 1.25,
+      "odds": {
+        "home": 1.68,
+        "draw": 3.59,
+        "away": 2.92,
+        "over": 1.64,
+        "btts": 1.69
+      }
+    },
+    {
+      "id": "espn-401876439",
+      "date": "2026-10-18",
+      "time": "15:00",
+      "league": "Ligue 1",
+      "home": "Angers",
+      "away": "Marseille",
+      "priority": 60,
+      "featured": false,
+      "status": "Full Time",
+      "completed": true,
+      "homeScore": 2,
+      "awayScore": 5,
+      "homeGoals": 1.71,
+      "awayGoals": 1.76,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.18,
+        "away": 2.43,
+        "over": 1.86,
+        "btts": 1.77
+      },
+      "statsSource": "football-data.org",
+      "homeStats": {
+        "sample": 6,
+        "form": "DDVNDV",
+        "avgScored": 1.5,
+        "avgConceded": 2.1666666666666665
+      },
+      "awayStats": {
+        "sample": 6,
+        "form": "VVDDDD",
+        "avgScored": 1.6666666666666667,
+        "avgConceded": 1.6666666666666667
+      }
+    },
+    {
+      "id": "espn-401879263",
+      "date": "2026-10-18",
+      "time": "15:00",
+      "league": "Premier League",
+      "home": "AFC Bournemouth",
+      "away": "Sunderland",
+      "priority": 34,
+      "featured": false,
+      "status": "Full Time",
+      "completed": true,
+      "homeScore": 2,
+      "awayScore": 0,
+      "homeGoals": 1.8,
+      "awayGoals": 1.23,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 2.19,
+        "btts": 2.01
+      },
+      "statsSource": "football-data.org",
+      "homeStats": {
+        "sample": 6,
+        "form": "VDDNNN",
+        "avgScored": 1.3333333333333333,
+        "avgConceded": 1.8333333333333333
+      },
+      "awayStats": {
+        "sample": 6,
+        "form": "DDDDNV",
+        "avgScored": 0.8333333333333334,
+        "avgConceded": 2
+      }
+    },
+    {
+      "id": "espn-401879261",
+      "date": "2026-10-18",
+      "time": "15:00",
+      "league": "Premier League",
+      "home": "Brighton & Hove Albion",
+      "away": "Crystal Palace",
+      "priority": 34,
+      "featured": false,
+      "status": "Full Time",
+      "completed": true,
+      "homeScore": 5,
+      "awayScore": 0,
+      "homeGoals": 3.06,
+      "awayGoals": 1.07,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 2.19,
+        "btts": 2.01
+      },
+      "statsSource": "football-data.org",
+      "homeStats": {
+        "sample": 6,
+        "form": "VVVVND",
+        "avgScored": 3.1666666666666665,
+        "avgConceded": 0.8333333333333334
+      },
+      "awayStats": {
+        "sample": 6,
+        "form": "DVNDVD",
+        "avgScored": 1.5,
+        "avgConceded": 2.5
+      }
+    },
+    {
+      "id": "espn-401882840",
+      "date": "2026-10-18",
+      "time": "14:00",
+      "league": "La Liga",
+      "home": "Osasuna",
+      "away": "Racing Santander",
+      "priority": 33,
+      "featured": false,
+      "status": "Full Time",
+      "completed": true,
+      "homeScore": 2,
+      "awayScore": 0,
+      "homeGoals": 2.43,
+      "awayGoals": 1.92,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 2.19,
+        "btts": 2.01
+      },
+      "statsSource": "football-data.org",
+      "homeStats": {
+        "sample": 6,
+        "form": "VDNDDD",
+        "avgScored": 1.1666666666666667,
+        "avgConceded": 2.8333333333333335
+      },
+      "awayStats": {
+        "sample": 6,
+        "form": "DNDDVD",
+        "avgScored": 1.3333333333333333,
+        "avgConceded": 3.3333333333333335
+      }
+    },
+    {
+      "id": "espn-401882845",
+      "date": "2026-10-18",
+      "time": "16:15",
+      "league": "La Liga",
+      "home": "Celta Vigo",
+      "away": "Alavés",
+      "priority": 33,
+      "featured": false,
+      "status": "Full Time",
+      "completed": true,
+      "homeScore": 2,
+      "awayScore": 1,
+      "homeGoals": 1.62,
+      "awayGoals": 0.84,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 2.19,
+        "btts": 2.01
+      },
+      "statsSource": "football-data.org",
+      "homeStats": {
+        "sample": 6,
+        "form": "VNVNNN",
+        "avgScored": 1.5,
+        "avgConceded": 0.5
+      },
+      "awayStats": {
+        "sample": 6,
+        "form": "DDNDDV",
+        "avgScored": 1.3333333333333333,
+        "avgConceded": 1.5
+      }
+    },
+    {
+      "id": "espn-401882841",
+      "date": "2026-10-18",
+      "time": "18:30",
+      "league": "La Liga",
+      "home": "Málaga",
+      "away": "Real Sociedad",
+      "priority": 33,
+      "featured": false,
+      "status": "Full Time",
+      "completed": true,
+      "homeScore": 2,
+      "awayScore": 5,
+      "homeGoals": 1.44,
+      "awayGoals": 1.92,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 2.19,
+        "btts": 2.01
+      },
+      "statsSource": "football-data.org",
+      "homeStats": {
+        "sample": 6,
+        "form": "DNDDNN",
+        "avgScored": 0.8333333333333334,
+        "avgConceded": 1.8333333333333333
+      },
+      "awayStats": {
+        "sample": 6,
+        "form": "VVVDVN",
+        "avgScored": 2.3333333333333335,
+        "avgConceded": 1.8333333333333333
+      }
+    },
+    {
+      "id": "espn-401884771",
+      "date": "2026-10-18",
+      "time": "15:30",
+      "league": "Bundesliga",
+      "home": "Bayer Leverkusen",
+      "away": "SC Freiburg",
+      "priority": 32,
+      "featured": false,
+      "status": "Full Time",
+      "completed": true,
+      "homeScore": 2,
+      "awayScore": 1,
+      "homeGoals": 1.45,
+      "awayGoals": 1.15,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 2.19,
+        "btts": 2.01
+      }
+    },
+    {
+      "id": "espn-401884768",
+      "date": "2026-10-18",
+      "time": "17:30",
+      "league": "Bundesliga",
+      "home": "Borussia Mönchengladbach",
+      "away": "TSG Hoffenheim",
+      "priority": 32,
+      "featured": false,
+      "status": "Full Time",
+      "completed": true,
+      "homeScore": 1,
+      "awayScore": 2,
+      "homeGoals": 1.45,
+      "awayGoals": 1.15,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 2.19,
+        "btts": 2.01
+      }
+    },
+    {
+      "id": "espn-401874771",
+      "date": "2026-10-18",
+      "time": "12:30",
+      "league": "Serie A",
+      "home": "Udinese",
+      "away": "Lecce",
+      "priority": 31,
+      "featured": false,
+      "status": "Full Time",
+      "completed": true,
+      "homeScore": 0,
+      "awayScore": 3,
+      "homeGoals": 1.45,
+      "awayGoals": 1.15,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 2.19,
+        "btts": 2.01
+      }
+    },
+    {
+      "id": "espn-401874774",
+      "date": "2026-10-18",
+      "time": "15:00",
+      "league": "Serie A",
+      "home": "Fiorentina",
+      "away": "Como",
+      "priority": 31,
+      "featured": false,
+      "status": "Full Time",
+      "completed": true,
+      "homeScore": 1,
+      "awayScore": 3,
+      "homeGoals": 1.45,
+      "awayGoals": 1.15,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 2.19,
+        "btts": 2.01
+      }
+    },
+    {
+      "id": "espn-401876438",
+      "date": "2026-10-18",
+      "time": "17:15",
+      "league": "Ligue 1",
+      "home": "Le Havre AC",
+      "away": "AJ Auxerre",
+      "priority": 30,
+      "featured": false,
+      "status": "Full Time",
+      "completed": true,
+      "homeScore": 1,
+      "awayScore": 3,
+      "homeGoals": 1.53,
+      "awayGoals": 1.46,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 2.19,
+        "btts": 2.01
+      },
+      "statsSource": "football-data.org",
+      "homeStats": {
+        "sample": 6,
+        "form": "DDDNDN",
+        "avgScored": 0.8333333333333334,
+        "avgConceded": 1.6666666666666667
+      },
+      "awayStats": {
+        "sample": 6,
+        "form": "VDVVDD",
+        "avgScored": 1.5,
+        "avgConceded": 2
+      }
+    },
+    {
+      "id": "espn-401876435",
+      "date": "2026-10-18",
+      "time": "17:15",
+      "league": "Ligue 1",
+      "home": "Lorient",
+      "away": "AS Monaco",
+      "priority": 30,
+      "featured": false,
+      "status": "Full Time",
+      "completed": true,
+      "homeScore": 1,
+      "awayScore": 0,
+      "homeGoals": 1.17,
+      "awayGoals": 1.15,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 2.19,
+        "btts": 2.01
+      },
+      "statsSource": "football-data.org",
+      "homeStats": {
+        "sample": 6,
+        "form": "VVDNVD",
+        "avgScored": 1.1666666666666667,
+        "avgConceded": 1
+      },
+      "awayStats": {
+        "sample": 6,
+        "form": "DNVNVV",
+        "avgScored": 1.5,
+        "avgConceded": 1
+      }
+    },
+    {
+      "id": "espn-401876433",
+      "date": "2026-10-18",
+      "time": "17:15",
+      "league": "Ligue 1",
+      "home": "Paris FC",
+      "away": "Stade Rennais",
+      "priority": 30,
+      "featured": false,
+      "status": "Full Time",
+      "completed": true,
+      "homeScore": 4,
+      "awayScore": 3,
+      "homeGoals": 2.16,
+      "awayGoals": 1.53,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 2.19,
+        "btts": 2.01
+      },
+      "statsSource": "football-data.org",
+      "homeStats": {
+        "sample": 6,
+        "form": "VDVNVV",
+        "avgScored": 2,
+        "avgConceded": 1.1666666666666667
+      },
+      "awayStats": {
+        "sample": 6,
+        "form": "DVDVVV",
+        "avgScored": 2.1666666666666665,
+        "avgConceded": 2
+      }
+    },
+    {
+      "id": "espn-401876434",
+      "date": "2026-10-18",
+      "time": "20:45",
+      "league": "Ligue 1",
+      "home": "Lyon",
+      "away": "Nice",
+      "priority": 30,
+      "featured": false,
+      "status": "Full Time",
+      "completed": true,
+      "homeScore": 2,
+      "awayScore": 1,
+      "homeGoals": 1.45,
+      "awayGoals": 1.15,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 2.19,
+        "btts": 2.01
+      }
+    },
+    {
+      "id": "espn-401879257",
+      "date": "2026-10-19",
+      "time": "21:00",
+      "league": "Premier League",
+      "home": "Tottenham Hotspur",
+      "away": "Coventry City",
+      "priority": 34,
+      "featured": false,
+      "status": "Full Time",
+      "completed": true,
+      "homeScore": 3,
+      "awayScore": 1,
+      "homeGoals": 1.53,
+      "awayGoals": 1,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 2.19,
+        "btts": 2.01
+      },
+      "statsSource": "football-data.org",
+      "homeStats": {
+        "sample": 6,
+        "form": "VNDNND",
+        "avgScored": 1,
+        "avgConceded": 1.1666666666666667
+      },
+      "awayStats": {
+        "sample": 6,
+        "form": "DVVDDD",
+        "avgScored": 1,
+        "avgConceded": 1.8333333333333333
+      }
+    },
+    {
+      "id": "espn-401882842",
+      "date": "2026-10-19",
+      "time": "21:00",
+      "league": "La Liga",
+      "home": "Getafe",
+      "away": "Rayo Vallecano",
+      "priority": 33,
+      "featured": false,
+      "status": "Full Time",
+      "completed": true,
+      "homeScore": 1,
+      "awayScore": 1,
+      "homeGoals": 1.62,
+      "awayGoals": 1.3,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 2.19,
+        "btts": 2.01
+      },
+      "statsSource": "football-data.org",
+      "homeStats": {
+        "sample": 6,
+        "form": "NDVDNN",
+        "avgScored": 0.6666666666666666,
+        "avgConceded": 1.1666666666666667
+      },
+      "awayStats": {
+        "sample": 6,
+        "form": "NNVDVD",
+        "avgScored": 1.6666666666666667,
+        "avgConceded": 2.3333333333333335
+      }
+    },
+    {
+      "id": "espn-401874762",
+      "date": "2026-10-19",
+      "time": "18:30",
+      "league": "Serie A",
+      "home": "Monza",
+      "away": "Cagliari",
+      "priority": 31,
+      "featured": false,
+      "status": "Full Time",
+      "completed": true,
+      "homeScore": 4,
+      "awayScore": 0,
+      "homeGoals": 1.71,
+      "awayGoals": 1.23,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 2.19,
+        "btts": 2.01
+      },
+      "statsSource": "football-data.org",
+      "homeStats": {
+        "sample": 6,
+        "form": "VDVDND",
+        "avgScored": 2,
+        "avgConceded": 1.8333333333333333
+      },
+      "awayStats": {
+        "sample": 6,
+        "form": "DNVVVD",
+        "avgScored": 0.8333333333333334,
+        "avgConceded": 1.1666666666666667
+      }
+    },
+    {
+      "id": "espn-401874784",
+      "date": "2026-10-19",
+      "time": "20:45",
+      "league": "Serie A",
+      "home": "Parma",
+      "away": "Torino",
+      "priority": 31,
+      "featured": false,
+      "status": "Full Time",
+      "completed": true,
+      "homeScore": 0,
+      "awayScore": 3,
+      "homeGoals": 1.45,
+      "awayGoals": 1.15,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 2.19,
+        "btts": 2.01
+      }
+    },
+    {
+      "id": "espn-401915399",
+      "date": "2026-10-20",
+      "time": "21:00",
+      "league": "Ligue des champions",
+      "home": "Paris Saint-Germain",
+      "away": "Barcelona",
+      "priority": 102,
+      "featured": true,
+      "status": "Full Time",
+      "completed": true,
+      "homeScore": 4,
+      "awayScore": 2,
+      "homeGoals": 2.34,
+      "awayGoals": 1.69,
+      "odds": {
+        "home": 1.68,
+        "draw": 3.4,
+        "away": 2.28,
+        "over": 1.49,
+        "btts": 1.51
+      },
+      "statsSource": "football-data.org",
+      "homeStats": {
+        "sample": 6,
+        "form": "VVVVVV",
+        "avgScored": 2.8333333333333335,
+        "avgConceded": 1.1666666666666667
+      },
+      "awayStats": {
+        "sample": 6,
+        "form": "DVDVVN",
+        "avgScored": 2.5,
+        "avgConceded": 1.5
+      }
+    },
+    {
+      "id": "espn-401915404",
+      "date": "2026-10-20",
+      "time": "18:45",
+      "league": "Ligue des champions",
+      "home": "Sabah FK",
+      "away": "Borussia Dortmund",
+      "priority": 72,
+      "featured": false,
+      "status": "Full Time",
+      "completed": true,
+      "homeScore": 1,
+      "awayScore": 2,
+      "homeGoals": 0.9,
+      "awayGoals": 1.53,
+      "odds": {
+        "home": 2.16,
+        "draw": 3.15,
+        "away": 2.28,
+        "over": 1.7,
+        "btts": 1.65
+      },
+      "statsSource": "football-data.org",
+      "homeStats": {
+        "sample": 3,
+        "form": "DVD",
+        "avgScored": 1,
+        "avgConceded": 2
+      },
+      "awayStats": {
+        "sample": 6,
+        "form": "VNDNVV",
+        "avgScored": 1.3333333333333333,
+        "avgConceded": 0.6666666666666666
+      }
+    },
+    {
+      "id": "espn-401915397",
+      "date": "2026-10-20",
+      "time": "21:00",
+      "league": "Ligue des champions",
+      "home": "Liverpool",
+      "away": "Villarreal",
+      "priority": 72,
+      "featured": false,
+      "status": "Full Time",
+      "completed": true,
+      "homeScore": 4,
+      "awayScore": 3,
+      "homeGoals": 1.89,
+      "awayGoals": 1.69,
+      "odds": {
+        "home": 1.68,
+        "draw": 3.59,
+        "away": 2.92,
+        "over": 1.64,
+        "btts": 1.69
+      },
+      "statsSource": "football-data.org",
+      "homeStats": {
+        "sample": 6,
+        "form": "VVVDVN",
+        "avgScored": 2.1666666666666665,
+        "avgConceded": 1.6666666666666667
+      },
+      "awayStats": {
+        "sample": 6,
+        "form": "DNVDVV",
+        "avgScored": 2,
+        "avgConceded": 1.3333333333333333
+      }
+    },
+    {
+      "id": "espn-401915401",
+      "date": "2026-10-20",
+      "time": "21:00",
+      "league": "Ligue des champions",
+      "home": "Manchester City",
+      "away": "AEK Athens",
+      "priority": 72,
+      "featured": false,
+      "status": "Full Time",
+      "completed": true,
+      "homeScore": 5,
+      "awayScore": 1,
+      "homeGoals": 2.05,
+      "awayGoals": 1.25,
+      "odds": {
+        "home": 1.68,
+        "draw": 3.59,
+        "away": 2.92,
+        "over": 1.64,
+        "btts": 1.69
+      }
+    },
+    {
+      "id": "espn-401915400",
+      "date": "2026-10-20",
+      "time": "21:00",
+      "league": "Ligue des champions",
+      "home": "Napoli",
+      "away": "Bodo/Glimt",
+      "priority": 72,
+      "featured": false,
+      "status": "Full Time",
+      "completed": true,
+      "homeScore": 4,
+      "awayScore": 3,
+      "homeGoals": 2.05,
+      "awayGoals": 1.25,
+      "odds": {
+        "home": 1.68,
+        "draw": 3.59,
+        "away": 2.92,
+        "over": 1.64,
+        "btts": 1.69
+      }
+    },
+    {
+      "id": "espn-401915392",
+      "date": "2026-10-20",
+      "time": "21:00",
+      "league": "Ligue des champions",
+      "home": "VfB Stuttgart",
+      "away": "Atlético Madrid",
+      "priority": 72,
+      "featured": false,
+      "status": "Full Time",
+      "completed": true,
+      "homeScore": 1,
+      "awayScore": 1,
+      "homeGoals": 0.9,
+      "awayGoals": 1.3,
+      "odds": {
+        "home": 2.16,
+        "draw": 3.15,
+        "away": 2.28,
+        "over": 1.7,
+        "btts": 1.65
+      },
+      "statsSource": "football-data.org",
+      "homeStats": {
+        "sample": 6,
+        "form": "NDVVDD",
+        "avgScored": 1.1666666666666667,
+        "avgConceded": 0.8333333333333334
+      },
+      "awayStats": {
+        "sample": 6,
+        "form": "NVVVVV",
+        "avgScored": 2,
+        "avgConceded": 0.5
+      }
+    },
+    {
+      "id": "espn-401915403",
+      "date": "2026-10-20",
+      "time": "18:45",
+      "league": "Ligue des champions",
+      "home": "Fenerbahce",
+      "away": "Slavia Prague",
+      "priority": 42,
+      "featured": false,
+      "status": "Full Time",
+      "completed": true,
+      "homeScore": 2,
+      "awayScore": 2,
+      "homeGoals": 1.45,
+      "awayGoals": 1.15,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 2.19,
+        "btts": 2.01
+      }
+    },
+    {
+      "id": "espn-401915402",
+      "date": "2026-10-20",
+      "time": "21:00",
+      "league": "Ligue des champions",
+      "home": "AS Roma",
+      "away": "Slovan Bratislava",
+      "priority": 42,
+      "featured": false,
+      "status": "Full Time",
+      "completed": true,
+      "homeScore": 4,
+      "awayScore": 0,
+      "homeGoals": 3.5,
+      "awayGoals": 0.61,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 2.19,
+        "btts": 2.01
+      },
+      "statsSource": "football-data.org",
+      "homeStats": {
+        "sample": 6,
+        "form": "VVDNNV",
+        "avgScored": 2.1666666666666665,
+        "avgConceded": 1
+      },
+      "awayStats": {
+        "sample": 3,
+        "form": "DDD",
+        "avgScored": 0.3333333333333333,
+        "avgConceded": 4.333333333333333
+      }
+    },
+    {
+      "id": "espn-401915398",
+      "date": "2026-10-20",
+      "time": "21:00",
+      "league": "Ligue des champions",
+      "home": "FC Porto",
+      "away": "PSV Eindhoven",
+      "priority": 42,
+      "featured": false,
+      "status": "Full Time",
+      "completed": true,
+      "homeScore": 0,
+      "awayScore": 1,
+      "homeGoals": 1.45,
+      "awayGoals": 1.15,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 2.19,
+        "btts": 2.01
+      }
+    },
     {
       "id": "espn-401915312",
       "date": "2026-10-21",
@@ -788,7 +1797,7 @@
         "home": 2.16,
         "draw": 4.04,
         "away": 3.45,
-        "over": 1.49,
+        "over": 1.57,
         "btts": 1.55
       },
       "oddsSource": "The Odds API",
@@ -815,8 +1824,8 @@
         {
           "name": "Unibet (FR)",
           "away": 3.25,
-          "home": 1.94,
-          "draw": 3.8
+          "home": 1.93,
+          "draw": 3.85
         },
         {
           "name": "GTbets",
@@ -832,14 +1841,14 @@
         },
         {
           "name": "Pinnacle",
-          "away": 3.28,
-          "home": 2.09,
-          "draw": 3.98,
+          "away": 3.33,
+          "home": 2.08,
+          "draw": 3.97,
           "btts": 1.51
         },
         {
           "name": "Matchbook",
-          "away": 3.45,
+          "away": 3.4,
           "home": 2.16,
           "draw": 4,
           "btts": 1.55
@@ -855,7 +1864,8 @@
           "away": 3.1,
           "home": 2.05,
           "draw": 3.7,
-          "btts": 1.5
+          "btts": 1.5,
+          "over": 1.57
         },
         {
           "name": "Marathon Bet",
@@ -885,37 +1895,43 @@
           "name": "LeoVegas (SE)",
           "away": 3.3,
           "home": 2,
-          "draw": 3.8
+          "draw": 3.8,
+          "over": 1.55
         },
         {
           "name": "PMU (FR)",
           "away": 3.2,
           "home": 1.93,
-          "draw": 3.65
+          "draw": 3.65,
+          "over": 1.43
         },
         {
           "name": "Unibet (SE)",
           "away": 3.45,
           "home": 2.06,
-          "draw": 4
+          "draw": 4,
+          "over": 1.55
         },
         {
           "name": "Unibet (NL)",
           "away": 3.45,
           "home": 2.06,
-          "draw": 4
+          "draw": 4,
+          "over": 1.53
         },
         {
           "name": "Betsson",
           "away": 3.3,
-          "home": 2.05,
-          "draw": 3.8
+          "home": 2.08,
+          "draw": 3.75,
+          "over": 1.53
         },
         {
           "name": "Nordic Bet",
           "away": 3.35,
-          "home": 2.08,
-          "draw": 3.85
+          "home": 2.1,
+          "draw": 3.8,
+          "over": 1.52
         },
         {
           "name": "BetOnline.ag",
@@ -935,6 +1951,7 @@
         "home",
         "draw",
         "away",
+        "over",
         "btts"
       ]
     },
@@ -956,9 +1973,9 @@
       "odds": {
         "home": 2.4,
         "draw": 4,
-        "away": 3.02,
-        "over": 1.7,
-        "btts": 1.51
+        "away": 3.1,
+        "over": 1.53,
+        "btts": 1.52
       },
       "oddsSource": "The Odds API",
       "bookmakerOffers": [
@@ -977,9 +1994,9 @@
         },
         {
           "name": "Unibet (FR)",
-          "home": 2.15,
-          "away": 2.7,
-          "draw": 3.8
+          "home": 2.1,
+          "away": 2.8,
+          "draw": 3.7
         },
         {
           "name": "Coolbet",
@@ -989,23 +2006,23 @@
         },
         {
           "name": "Pinnacle",
-          "home": 2.31,
-          "away": 2.96,
-          "draw": 3.8,
+          "home": 2.3,
+          "away": 2.97,
+          "draw": 3.81,
           "btts": 1.47
         },
         {
           "name": "Betclic (FR)",
-          "home": 2.18,
-          "away": 2.78,
-          "draw": 3.68
+          "home": 2.15,
+          "away": 2.77,
+          "draw": 3.8
         },
         {
           "name": "Matchbook",
           "home": 2.4,
           "away": 2.98,
           "draw": 4,
-          "btts": 1.51
+          "btts": 1.52
         },
         {
           "name": "888sport",
@@ -1018,7 +2035,8 @@
           "home": 2.2,
           "away": 2.88,
           "draw": 3.6,
-          "btts": 1.44
+          "btts": 1.44,
+          "over": 1.53
         },
         {
           "name": "Marathon Bet",
@@ -1029,8 +2047,8 @@
         {
           "name": "Betfair",
           "home": 2.4,
-          "away": 2.98,
-          "draw": 3.95
+          "away": 2.96,
+          "draw": 4
         },
         {
           "name": "Winamax (FR)",
@@ -1046,39 +2064,41 @@
         },
         {
           "name": "Betsson",
-          "home": 2.3,
+          "home": 2.32,
           "away": 2.85,
-          "draw": 3.75
+          "draw": 3.7,
+          "over": 1.52
         },
         {
           "name": "LeoVegas (SE)",
-          "home": 2.28,
-          "away": 2.85,
-          "draw": 3.65
+          "home": 2.17,
+          "away": 3,
+          "draw": 3.7
         },
         {
           "name": "Nordic Bet",
-          "home": 2.32,
+          "home": 2.35,
           "away": 2.88,
-          "draw": 3.8
+          "draw": 3.75,
+          "over": 1.52
         },
         {
           "name": "PMU (FR)",
-          "home": 2.2,
-          "away": 2.75,
-          "draw": 3.5
+          "home": 2.12,
+          "away": 2.88,
+          "draw": 3.55
         },
         {
           "name": "Unibet (SE)",
-          "home": 2.35,
-          "away": 2.95,
-          "draw": 3.85
+          "home": 2.25,
+          "away": 3.1,
+          "draw": 3.9
         },
         {
           "name": "Unibet (NL)",
-          "home": 2.35,
-          "away": 2.95,
-          "draw": 3.85
+          "home": 2.25,
+          "away": 3.1,
+          "draw": 3.9
         },
         {
           "name": "GTbets",
@@ -1104,6 +2124,7 @@
         "home",
         "draw",
         "away",
+        "over",
         "btts"
       ]
     },
@@ -1162,7 +2183,7 @@
         "home": 1.26,
         "draw": 8,
         "away": 12,
-        "over": 1.64,
+        "over": 1.2,
         "btts": 1.55
       },
       "statsSource": "football-data.org",
@@ -1242,7 +2263,8 @@
           "away": 9.5,
           "home": 1.22,
           "draw": 6.5,
-          "btts": 1.5
+          "btts": 1.5,
+          "over": 1.2
         },
         {
           "name": "Betfair",
@@ -1295,20 +2317,22 @@
         {
           "name": "Nordic Bet",
           "away": 12,
-          "home": 1.22,
-          "draw": 7.4
+          "home": 1.21,
+          "draw": 7.6,
+          "over": 1.18
         },
         {
           "name": "Betsson",
           "away": 11.5,
-          "home": 1.21,
-          "draw": 7.3
+          "home": 1.2,
+          "draw": 7.4,
+          "over": 1.18
         },
         {
           "name": "BetOnline.ag",
-          "away": 10,
-          "home": 1.25,
-          "draw": 7.39
+          "away": 10.25,
+          "home": 1.24,
+          "draw": 7.5
         },
         {
           "name": "BetAnything",
@@ -1322,6 +2346,7 @@
         "home",
         "draw",
         "away",
+        "over",
         "btts"
       ]
     },
@@ -1353,7 +2378,7 @@
           "name": "Pinnacle",
           "away": 3.18,
           "home": 2.21,
-          "draw": 3.74
+          "draw": 3.75
         },
         {
           "name": "1xBet",
@@ -1401,7 +2426,7 @@
           "name": "Matchbook",
           "away": 3.25,
           "home": 2.3,
-          "draw": 3.8
+          "draw": 3.85
         },
         {
           "name": "William Hill",
@@ -1534,14 +2559,14 @@
         },
         {
           "name": "Pinnacle",
-          "home": 1.22,
-          "away": 11.68,
-          "draw": 7.15
+          "home": 1.23,
+          "away": 11.59,
+          "draw": 7
         },
         {
           "name": "888sport",
           "home": 1.22,
-          "away": 11,
+          "away": 12,
           "draw": 6
         },
         {
@@ -1559,8 +2584,8 @@
         {
           "name": "GTbets",
           "home": 1.26,
-          "away": 11.4,
-          "draw": 6.48
+          "away": 12.09,
+          "draw": 6.86
         },
         {
           "name": "Coolbet",
@@ -1571,7 +2596,7 @@
         {
           "name": "William Hill",
           "home": 1.18,
-          "away": 10,
+          "away": 12,
           "draw": 6.5
         },
         {
@@ -1630,15 +2655,15 @@
         },
         {
           "name": "Nordic Bet",
-          "home": 1.22,
-          "away": 13,
-          "draw": 7.1
+          "home": 1.2,
+          "away": 13.5,
+          "draw": 7.2
         },
         {
           "name": "Betsson",
-          "home": 1.21,
-          "away": 12.5,
-          "draw": 7
+          "home": 1.2,
+          "away": 13.5,
+          "draw": 7.1
         },
         {
           "name": "Matchbook",
@@ -1649,14 +2674,14 @@
         {
           "name": "BetOnline.ag",
           "home": 1.24,
-          "away": 12,
-          "draw": 7
+          "away": 11,
+          "draw": 7.1
         },
         {
           "name": "BetAnything",
           "home": 1.23,
-          "away": 12,
-          "draw": 6.75
+          "away": 11.7,
+          "draw": 6.85
         }
       ],
       "bookmakerCount": 22,
@@ -1707,7 +2732,7 @@
       "odds": {
         "home": 1.69,
         "draw": 4.8,
-        "away": 5.1,
+        "away": 5,
         "over": 2.19,
         "btts": 2.01
       },
@@ -1776,14 +2801,14 @@
         },
         {
           "name": "Matchbook",
-          "away": 5.1,
-          "home": 1.69,
+          "away": 5,
+          "home": 1.68,
           "draw": 4.7
         },
         {
           "name": "Betfair",
           "away": 5,
-          "home": 1.68,
+          "home": 1.69,
           "draw": 4.7
         },
         {
@@ -1832,13 +2857,13 @@
           "name": "Betsson",
           "away": 4.65,
           "home": 1.62,
-          "draw": 4.5
+          "draw": 4.45
         },
         {
           "name": "Nordic Bet",
           "away": 4.7,
           "home": 1.65,
-          "draw": 4.55
+          "draw": 4.5
         },
         {
           "name": "GTbets",
@@ -1934,15 +2959,15 @@
         },
         {
           "name": "Tipico",
-          "away": 2.1,
-          "home": 3.7,
-          "draw": 3.2
+          "away": 2.05,
+          "home": 3.6,
+          "draw": 3.4
         },
         {
           "name": "Winamax (FR)",
           "away": 2,
           "home": 3.3,
-          "draw": 3.1
+          "draw": 3.15
         },
         {
           "name": "1xBet",
@@ -1952,7 +2977,7 @@
         },
         {
           "name": "Unibet (FR)",
-          "away": 2,
+          "away": 1.98,
           "home": 3.5,
           "draw": 3.3
         },
@@ -1976,8 +3001,8 @@
         },
         {
           "name": "Betfair",
-          "away": 2.22,
-          "home": 3.75,
+          "away": 2.2,
+          "home": 3.8,
           "draw": 3.45
         },
         {
@@ -1994,31 +3019,31 @@
         },
         {
           "name": "Unibet (SE)",
-          "away": 2.23,
-          "home": 3.65,
-          "draw": 3.35
+          "away": 2.17,
+          "home": 3.75,
+          "draw": 3.4
         },
         {
           "name": "Unibet (NL)",
-          "away": 2.23,
-          "home": 3.65,
-          "draw": 3.35
+          "away": 2.17,
+          "home": 3.75,
+          "draw": 3.4
         },
         {
           "name": "LeoVegas (SE)",
-          "away": 2.12,
-          "home": 3.4,
+          "away": 2.06,
+          "home": 3.5,
           "draw": 3.15
         },
         {
           "name": "PMU (FR)",
-          "away": 2.07,
-          "home": 3.3,
-          "draw": 3.05
+          "away": 2.02,
+          "home": 3.4,
+          "draw": 3.1
         },
         {
           "name": "Matchbook",
-          "away": 2.22,
+          "away": 2.2,
           "home": 3.8,
           "draw": 3.45
         },
@@ -2463,7 +3488,7 @@
         },
         {
           "name": "Betfair",
-          "away": 1.58,
+          "away": 1.59,
           "home": 6,
           "draw": 4.6
         },
@@ -2518,7 +3543,7 @@
         {
           "name": "Matchbook",
           "away": 1.59,
-          "home": 6,
+          "home": 6.2,
           "draw": 4.7
         },
         {
@@ -2585,9 +3610,9 @@
       "bookmakerOffers": [
         {
           "name": "Winamax (DE)",
-          "home": 1.64,
-          "away": 4.4,
-          "draw": 4.2
+          "home": 1.6,
+          "away": 4.5,
+          "draw": 4.3
         },
         {
           "name": "Coolbet",
@@ -2597,21 +3622,21 @@
         },
         {
           "name": "Winamax (FR)",
-          "home": 1.62,
-          "away": 4.3,
+          "home": 1.58,
+          "away": 4.4,
           "draw": 4.1
         },
         {
           "name": "Unibet (FR)",
-          "home": 1.55,
-          "away": 4.4,
-          "draw": 3.9
+          "home": 1.52,
+          "away": 4.5,
+          "draw": 4
         },
         {
           "name": "Betclic (FR)",
-          "home": 1.57,
-          "away": 4.4,
-          "draw": 3.93
+          "home": 1.54,
+          "away": 4.55,
+          "draw": 4
         },
         {
           "name": "1xBet",
@@ -2633,14 +3658,14 @@
         },
         {
           "name": "Nordic Bet",
-          "home": 1.68,
-          "away": 4.8,
-          "draw": 4.3
+          "home": 1.65,
+          "away": 5,
+          "draw": 4.25
         },
         {
           "name": "Betsson",
           "home": 1.65,
-          "away": 4.75,
+          "away": 4.95,
           "draw": 4.2
         },
         {
@@ -2675,9 +3700,9 @@
         },
         {
           "name": "Pinnacle",
-          "home": 1.64,
-          "away": 4.72,
-          "draw": 4.29
+          "home": 1.62,
+          "away": 4.77,
+          "draw": 4.34
         },
         {
           "name": "William Hill",
@@ -2693,9 +3718,9 @@
         },
         {
           "name": "Codere (IT)",
-          "home": 1.68,
-          "away": 4.7,
-          "draw": 4.2
+          "home": 1.64,
+          "away": 4.9,
+          "draw": 4.3
         },
         {
           "name": "BetOnline.ag",
@@ -3206,7 +4231,7 @@
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
-        "home": 2.15,
+        "home": 2.16,
         "draw": 4.1,
         "away": 3.4,
         "over": 2.19,
@@ -3264,7 +4289,7 @@
         },
         {
           "name": "Betfair",
-          "home": 2.14,
+          "home": 2.16,
           "away": 3.4,
           "draw": 4.1
         },
@@ -3306,7 +4331,7 @@
         },
         {
           "name": "Matchbook",
-          "home": 2.14,
+          "home": 2.16,
           "away": 3.4,
           "draw": 4.1
         },
@@ -4222,27 +5247,27 @@
         },
         {
           "name": "Winamax (FR)",
-          "home": 2.85,
+          "home": 2.9,
           "away": 2.2,
-          "draw": 3.45
+          "draw": 3.4
         },
         {
           "name": "Unibet (FR)",
-          "home": 2.9,
+          "home": 2.95,
           "away": 2.15,
           "draw": 3.3
         },
         {
           "name": "Winamax (DE)",
-          "home": 2.95,
+          "home": 3,
           "away": 2.25,
-          "draw": 3.55
+          "draw": 3.5
         },
         {
           "name": "Betclic (FR)",
-          "home": 2.88,
+          "home": 2.93,
           "away": 2.12,
-          "draw": 3.3
+          "draw": 3.25
         },
         {
           "name": "Betfair",
@@ -4306,15 +5331,15 @@
         },
         {
           "name": "Betsson",
-          "home": 3.14,
-          "away": 2.26,
-          "draw": 3.42
+          "home": 3.1,
+          "away": 2.25,
+          "draw": 3.52
         },
         {
           "name": "Nordic Bet",
-          "home": 3.15,
+          "home": 3.1,
           "away": 2.25,
-          "draw": 3.4
+          "draw": 3.5
         },
         {
           "name": "Matchbook",
@@ -4405,8 +5430,8 @@
         },
         {
           "name": "Unibet (FR)",
-          "home": 1.67,
-          "away": 4.4,
+          "home": 1.66,
+          "away": 4.5,
           "draw": 3.4
         },
         {
@@ -4424,7 +5449,7 @@
         {
           "name": "Winamax (FR)",
           "home": 1.68,
-          "away": 4.3,
+          "away": 4.4,
           "draw": 3.55
         },
         {
@@ -4588,7 +5613,7 @@
         },
         {
           "name": "Unibet (FR)",
-          "away": 6.1,
+          "away": 6.2,
           "home": 1.32,
           "draw": 5.3
         },
@@ -4612,7 +5637,7 @@
         },
         {
           "name": "Betclic (FR)",
-          "away": 6.25,
+          "away": 6.4,
           "home": 1.29,
           "draw": 5.4
         },
@@ -4718,7 +5743,7 @@
       "homeGoals": 1.8,
       "awayGoals": 1.46,
       "odds": {
-        "home": 2.24,
+        "home": 2.28,
         "draw": 3.6,
         "away": 3.65,
         "over": 2.19,
@@ -4741,33 +5766,33 @@
       "bookmakerOffers": [
         {
           "name": "Pinnacle",
-          "away": 3.48,
-          "home": 2.18,
-          "draw": 3.48
+          "away": 3.49,
+          "home": 2.19,
+          "draw": 3.45
         },
         {
           "name": "Winamax (DE)",
           "away": 3.3,
           "home": 2.1,
-          "draw": 3.45
+          "draw": 3.4
         },
         {
           "name": "Winamax (FR)",
           "away": 3.2,
           "home": 2.05,
-          "draw": 3.35
+          "draw": 3.3
         },
         {
           "name": "Unibet (FR)",
           "away": 3.3,
           "home": 1.98,
-          "draw": 3.3
+          "draw": 3.2
         },
         {
           "name": "Betclic (FR)",
-          "away": 3.22,
+          "away": 3.25,
           "home": 2,
-          "draw": 3.22
+          "draw": 3.18
         },
         {
           "name": "1xBet",
@@ -4838,7 +5863,7 @@
         {
           "name": "Matchbook",
           "away": 3.5,
-          "home": 2.24,
+          "home": 2.28,
           "draw": 3.55
         },
         {
@@ -4849,14 +5874,14 @@
         },
         {
           "name": "Codere (IT)",
-          "away": 3.45,
-          "home": 2.15,
+          "away": 3.4,
+          "home": 2.17,
           "draw": 3.4
         },
         {
           "name": "Betfair",
           "away": 3.5,
-          "home": 2.24,
+          "home": 2.28,
           "draw": 3.55
         },
         {
@@ -4924,14 +5949,14 @@
         {
           "name": "Winamax (FR)",
           "home": 2.15,
-          "away": 3.1,
-          "draw": 3.2
+          "away": 3.2,
+          "draw": 3.15
         },
         {
           "name": "Unibet (FR)",
           "home": 2.15,
-          "away": 2.95,
-          "draw": 3.4
+          "away": 3,
+          "draw": 3.3
         },
         {
           "name": "William Hill",
@@ -4948,7 +5973,7 @@
         {
           "name": "Winamax (DE)",
           "home": 2.15,
-          "away": 3.2,
+          "away": 3.25,
           "draw": 3.25
         },
         {
@@ -5062,7 +6087,7 @@
         "home": 4.72,
         "draw": 4.5,
         "away": 1.76,
-        "over": 1.7,
+        "over": 1.52,
         "btts": 1.62
       },
       "statsSource": "football-data.org",
@@ -5096,13 +6121,13 @@
         {
           "name": "Unibet (FR)",
           "home": 4.2,
-          "away": 1.63,
+          "away": 1.62,
           "draw": 3.9
         },
         {
           "name": "Winamax (FR)",
           "home": 4.1,
-          "away": 1.66,
+          "away": 1.64,
           "draw": 4
         },
         {
@@ -5129,7 +6154,8 @@
           "home": 4.33,
           "away": 1.7,
           "draw": 3.9,
-          "btts": 1.57
+          "btts": 1.57,
+          "over": 1.5
         },
         {
           "name": "Betfair",
@@ -5184,13 +6210,15 @@
           "name": "Betsson",
           "home": 4.56,
           "away": 1.68,
-          "draw": 4.22
+          "draw": 4.22,
+          "over": 1.52
         },
         {
           "name": "Nordic Bet",
           "home": 4.55,
           "away": 1.68,
-          "draw": 4.2
+          "draw": 4.2,
+          "over": 1.5
         },
         {
           "name": "Matchbook",
@@ -5235,6 +6263,7 @@
         "home",
         "draw",
         "away",
+        "over",
         "btts"
       ]
     },
@@ -5283,8 +6312,8 @@
         },
         {
           "name": "Unibet (FR)",
-          "home": 1.34,
-          "away": 7.1,
+          "home": 1.33,
+          "away": 7.2,
           "draw": 4.5
         },
         {
@@ -5301,7 +6330,7 @@
         },
         {
           "name": "Winamax (FR)",
-          "home": 1.36,
+          "home": 1.35,
           "away": 7.5,
           "draw": 4.4
         },
@@ -5485,8 +6514,8 @@
         {
           "name": "Unibet (FR)",
           "home": 1.61,
-          "away": 4.3,
-          "draw": 4
+          "away": 4.2,
+          "draw": 3.9
         },
         {
           "name": "Winamax (DE)",
@@ -5496,8 +6525,8 @@
         },
         {
           "name": "Betclic (FR)",
-          "home": 1.59,
-          "away": 4.25,
+          "home": 1.6,
+          "away": 4.2,
           "draw": 3.93
         },
         {
@@ -5684,6 +6713,12 @@
           "draw": 5.5
         },
         {
+          "name": "Coolbet",
+          "home": 1.28,
+          "away": 12,
+          "draw": 6
+        },
+        {
           "name": "Marathon Bet",
           "home": 1.29,
           "away": 9.6,
@@ -5756,7 +6791,7 @@
           "draw": 6.1
         }
       ],
-      "bookmakerCount": 17,
+      "bookmakerCount": 18,
       "realOddsMarkets": [
         "home",
         "draw",
@@ -6162,9 +7197,9 @@
       "bookmakerOffers": [
         {
           "name": "Winamax (DE)",
-          "home": 2.8,
+          "home": 2.85,
           "away": 2.3,
-          "draw": 3.5
+          "draw": 3.45
         },
         {
           "name": "1xBet",
@@ -6176,7 +7211,7 @@
           "name": "Winamax (FR)",
           "home": 2.75,
           "away": 2.25,
-          "draw": 3.4
+          "draw": 3.35
         },
         {
           "name": "Unibet (FR)",
@@ -6186,9 +7221,9 @@
         },
         {
           "name": "Betclic (FR)",
-          "home": 2.77,
+          "home": 2.8,
           "away": 2.2,
-          "draw": 3.28
+          "draw": 3.25
         },
         {
           "name": "MyBookie.ag",
@@ -6518,7 +7553,7 @@
           "name": "Winamax (DE)",
           "away": 2.75,
           "home": 2.3,
-          "draw": 3.7
+          "draw": 3.65
         },
         {
           "name": "William Hill",
@@ -6547,8 +7582,8 @@
         {
           "name": "Winamax (FR)",
           "away": 2.65,
-          "home": 2.2,
-          "draw": 3.55
+          "home": 2.25,
+          "draw": 3.5
         },
         {
           "name": "Unibet (FR)",
@@ -6559,8 +7594,8 @@
         {
           "name": "Betclic (FR)",
           "away": 2.7,
-          "home": 2.17,
-          "draw": 3.43
+          "home": 2.18,
+          "draw": 3.42
         },
         {
           "name": "Marathon Bet",
@@ -6677,7 +7712,7 @@
           "name": "Winamax (DE)",
           "home": 3.1,
           "away": 2.15,
-          "draw": 3.65
+          "draw": 3.6
         },
         {
           "name": "William Hill",
@@ -6705,7 +7740,7 @@
         },
         {
           "name": "Winamax (FR)",
-          "home": 2.95,
+          "home": 3,
           "away": 2.05,
           "draw": 3.45
         },
@@ -6713,13 +7748,13 @@
           "name": "Unibet (FR)",
           "home": 3,
           "away": 2.05,
-          "draw": 3.4
+          "draw": 3.3
         },
         {
           "name": "Betclic (FR)",
-          "home": 3.02,
+          "home": 3.05,
           "away": 2.03,
-          "draw": 3.38
+          "draw": 3.35
         },
         {
           "name": "Marathon Bet",
@@ -6778,7 +7813,7 @@
         {
           "name": "Matchbook",
           "home": 3.4,
-          "away": 2.22,
+          "away": 2.2,
           "draw": 3.75
         },
         {
@@ -6900,9 +7935,9 @@
         },
         {
           "name": "Betsson",
-          "home": 1.85,
-          "away": 3.75,
-          "draw": 3.9
+          "home": 1.82,
+          "away": 3.85,
+          "draw": 3.95
         },
         {
           "name": "Nordic Bet",
@@ -6944,7 +7979,7 @@
           "name": "Matchbook",
           "home": 1.9,
           "away": 3.9,
-          "draw": 4.1
+          "draw": 4.2
         },
         {
           "name": "GTbets",
@@ -7262,21 +8297,21 @@
         },
         {
           "name": "Winamax (FR)",
-          "away": 2.4,
-          "home": 2.9,
+          "away": 2.35,
+          "home": 2.95,
           "draw": 2.95
         },
         {
           "name": "Unibet (FR)",
           "away": 2.25,
           "home": 2.95,
-          "draw": 3
+          "draw": 2.95
         },
         {
           "name": "Betclic (FR)",
           "away": 2.28,
-          "home": 2.9,
-          "draw": 2.97
+          "home": 2.93,
+          "draw": 2.93
         },
         {
           "name": "1xBet",
@@ -7444,9 +8479,9 @@
         },
         {
           "name": "Betclic (FR)",
-          "home": 1.45,
-          "away": 5,
-          "draw": 4.4
+          "home": 1.44,
+          "away": 5.1,
+          "draw": 4.35
         },
         {
           "name": "1xBet",
@@ -7774,13 +8809,13 @@
         {
           "name": "Winamax (FR)",
           "home": 1.56,
-          "away": 4.6,
+          "away": 4.7,
           "draw": 4.1
         },
         {
           "name": "Betclic (FR)",
-          "home": 1.54,
-          "away": 4.7,
+          "home": 1.53,
+          "away": 4.75,
           "draw": 3.93
         },
         {
@@ -7798,13 +8833,13 @@
         {
           "name": "Winamax (DE)",
           "home": 1.58,
-          "away": 4.7,
+          "away": 4.8,
           "draw": 4.2
         },
         {
           "name": "Unibet (FR)",
-          "home": 1.56,
-          "away": 4.8,
+          "home": 1.55,
+          "away": 4.9,
           "draw": 4
         },
         {
@@ -7947,8 +8982,8 @@
         "home": 1.66,
         "draw": 6.4,
         "away": 4.57,
-        "over": 1.49,
-        "btts": 1.31
+        "over": 1.2,
+        "btts": 1.32
       },
       "statsSource": "football-data.org",
       "homeStats": {
@@ -8004,16 +9039,17 @@
         },
         {
           "name": "Unibet (FR)",
-          "home": 1.53,
+          "home": 1.52,
           "away": 3.9,
-          "draw": 4.8
+          "draw": 4.9
         },
         {
           "name": "William Hill",
           "home": 1.57,
           "away": 4,
           "draw": 5,
-          "btts": 1.29
+          "btts": 1.29,
+          "over": 1.2
         },
         {
           "name": "Marathon Bet",
@@ -8056,13 +9092,15 @@
           "name": "Nordic Bet",
           "home": 1.52,
           "away": 4.4,
-          "draw": 5.55
+          "draw": 5.55,
+          "over": 1.18
         },
         {
           "name": "Betsson",
           "home": 1.52,
           "away": 4.45,
-          "draw": 5.6
+          "draw": 5.6,
+          "over": 1.19
         },
         {
           "name": "Betfair",
@@ -8081,7 +9119,7 @@
           "home": 1.66,
           "away": 4.1,
           "draw": 6.4,
-          "btts": 1.31
+          "btts": 1.32
         },
         {
           "name": "BetOnline.ag",
@@ -8095,6 +9133,7 @@
         "home",
         "draw",
         "away",
+        "over",
         "btts"
       ]
     },
@@ -8738,14 +9777,14 @@
         },
         {
           "name": "Unibet (FR)",
-          "away": 1.54,
-          "home": 4.9,
+          "away": 1.53,
+          "home": 5,
           "draw": 3.7
         },
         {
           "name": "Betclic (FR)",
-          "away": 1.56,
-          "home": 4.85,
+          "away": 1.55,
+          "home": 4.95,
           "draw": 3.68
         },
         {
@@ -8757,19 +9796,19 @@
         {
           "name": "Codere (IT)",
           "away": 1.65,
-          "home": 5.2,
+          "home": 5.4,
           "draw": 3.95
         },
         {
           "name": "Winamax (FR)",
-          "away": 1.6,
-          "home": 4.7,
+          "away": 1.58,
+          "home": 4.8,
           "draw": 3.85
         },
         {
           "name": "Winamax (DE)",
           "away": 1.62,
-          "home": 4.9,
+          "home": 5,
           "draw": 4
         },
         {
@@ -9257,8 +10296,8 @@
         {
           "name": "Winamax (FR)",
           "home": 2.65,
-          "away": 2.25,
-          "draw": 3.55
+          "away": 2.3,
+          "draw": 3.5
         },
         {
           "name": "Unibet (FR)",
@@ -9270,13 +10309,13 @@
           "name": "Winamax (DE)",
           "home": 2.75,
           "away": 2.35,
-          "draw": 3.65
+          "draw": 3.6
         },
         {
           "name": "Betclic (FR)",
-          "home": 2.68,
-          "away": 2.2,
-          "draw": 3.4
+          "home": 2.7,
+          "away": 2.22,
+          "draw": 3.35
         },
         {
           "name": "888sport",
@@ -9411,7 +10450,7 @@
       "awayGoals": 1.3,
       "odds": {
         "home": 4.9,
-        "draw": 4.2,
+        "draw": 4.11,
         "away": 1.79,
         "over": 2.19,
         "btts": 2.01
@@ -9453,13 +10492,13 @@
           "name": "Betclic (FR)",
           "away": 1.63,
           "home": 4.25,
-          "draw": 3.73
+          "draw": 3.7
         },
         {
           "name": "Winamax (FR)",
           "away": 1.66,
-          "home": 4.1,
-          "draw": 3.9
+          "home": 4.2,
+          "draw": 3.85
         },
         {
           "name": "MyBookie.ag",
@@ -9482,7 +10521,7 @@
         {
           "name": "Betfair",
           "away": 1.78,
-          "home": 4.8,
+          "home": 4.9,
           "draw": 4.1
         },
         {
@@ -9554,8 +10593,8 @@
         {
           "name": "Matchbook",
           "away": 1.78,
-          "home": 4.8,
-          "draw": 4.2
+          "home": 4.9,
+          "draw": 4.1
         },
         {
           "name": "GTbets",
@@ -9658,9 +10697,9 @@
         },
         {
           "name": "Betclic (FR)",
-          "away": 2.27,
+          "away": 2.28,
           "home": 2.82,
-          "draw": 3.08
+          "draw": 3.07
         },
         {
           "name": "MyBookie.ag",
@@ -9754,9 +10793,9 @@
         },
         {
           "name": "BetAnything",
-          "away": 2.46,
-          "home": 3.1,
-          "draw": 3.21
+          "away": 2.48,
+          "home": 3.09,
+          "draw": 3.2
         },
         {
           "name": "BetOnline.ag",
@@ -9812,8 +10851,8 @@
         {
           "name": "Winamax (DE)",
           "home": 1.62,
-          "away": 5.1,
-          "draw": 3.9
+          "away": 5.2,
+          "draw": 3.95
         },
         {
           "name": "William Hill",
@@ -9835,21 +10874,21 @@
         },
         {
           "name": "Winamax (FR)",
-          "home": 1.58,
+          "home": 1.56,
           "away": 4.9,
-          "draw": 3.7
+          "draw": 3.75
         },
         {
           "name": "Unibet (FR)",
-          "home": 1.54,
+          "home": 1.53,
           "away": 5.3,
-          "draw": 3.5
+          "draw": 3.6
         },
         {
           "name": "Betclic (FR)",
-          "home": 1.54,
+          "home": 1.53,
           "away": 5.25,
-          "draw": 3.55
+          "draw": 3.58
         },
         {
           "name": "Marathon Bet",
@@ -10108,7 +11147,7 @@
       "odds": {
         "home": 1.77,
         "draw": 4.26,
-        "away": 4.8,
+        "away": 4.72,
         "over": 2.19,
         "btts": 2.01
       },
@@ -10141,7 +11180,7 @@
         },
         {
           "name": "Winamax (FR)",
-          "away": 4,
+          "away": 4.1,
           "home": 1.64,
           "draw": 3.95
         },
@@ -10149,18 +11188,18 @@
           "name": "Betclic (FR)",
           "away": 4.2,
           "home": 1.61,
-          "draw": 3.83
+          "draw": 3.8
         },
         {
           "name": "Unibet (FR)",
           "away": 4.2,
-          "home": 1.62,
+          "home": 1.61,
           "draw": 3.8
         },
         {
           "name": "Winamax (DE)",
-          "away": 4.2,
-          "home": 1.7,
+          "away": 4.3,
+          "home": 1.68,
           "draw": 4.1
         },
         {
@@ -10183,27 +11222,27 @@
         },
         {
           "name": "Unibet (SE)",
-          "away": 4.8,
-          "home": 1.73,
+          "away": 4.7,
+          "home": 1.75,
           "draw": 4.2
         },
         {
           "name": "Unibet (NL)",
-          "away": 4.8,
-          "home": 1.73,
+          "away": 4.7,
+          "home": 1.75,
           "draw": 4.2
         },
         {
           "name": "LeoVegas (SE)",
-          "away": 4.4,
-          "home": 1.66,
-          "draw": 3.9
+          "away": 4.3,
+          "home": 1.68,
+          "draw": 3.85
         },
         {
           "name": "PMU (FR)",
-          "away": 4.25,
-          "home": 1.63,
-          "draw": 3.8
+          "away": 4.2,
+          "home": 1.65,
+          "draw": 3.75
         },
         {
           "name": "Nordic Bet",
@@ -10640,15 +11679,15 @@
         },
         {
           "name": "Unibet (FR)",
-          "home": 1.93,
+          "home": 1.92,
           "away": 3.4,
           "draw": 3.3
         },
         {
           "name": "Betclic (FR)",
           "home": 1.95,
-          "away": 3.33,
-          "draw": 3.25
+          "away": 3.37,
+          "draw": 3.23
         },
         {
           "name": "1xBet",
@@ -10658,9 +11697,9 @@
         },
         {
           "name": "Tipico",
-          "home": 2.1,
+          "home": 2.05,
           "away": 3.7,
-          "draw": 3.2
+          "draw": 3.3
         },
         {
           "name": "Marathon Bet",
@@ -10818,7 +11857,7 @@
           "name": "Unibet (FR)",
           "home": 2.05,
           "away": 3.3,
-          "draw": 3.3
+          "draw": 3.2
         },
         {
           "name": "Tipico",
@@ -10835,8 +11874,8 @@
         {
           "name": "Betclic (FR)",
           "home": 2,
-          "away": 3.2,
-          "draw": 3.23
+          "away": 3.25,
+          "draw": 3.2
         },
         {
           "name": "Marathon Bet",
@@ -11359,21 +12398,21 @@
         },
         {
           "name": "Winamax (FR)",
-          "away": 3.65,
+          "away": 3.7,
           "home": 1.8,
           "draw": 3.2
         },
         {
           "name": "Winamax (DE)",
-          "away": 3.85,
+          "away": 3.9,
           "home": 1.88,
           "draw": 3.4
         },
         {
           "name": "Betclic (FR)",
-          "away": 3.88,
+          "away": 3.93,
           "home": 1.81,
-          "draw": 3.23
+          "draw": 3.22
         },
         {
           "name": "William Hill",
@@ -11437,7 +12476,7 @@
         },
         {
           "name": "Codere (IT)",
-          "away": 4.1,
+          "away": 4.2,
           "home": 1.94,
           "draw": 3.4
         },
@@ -11494,7 +12533,7 @@
         {
           "name": "Unibet (FR)",
           "away": 2.2,
-          "home": 2.65,
+          "home": 2.7,
           "draw": 3.3
         },
         {
@@ -11506,20 +12545,20 @@
         {
           "name": "Betclic (FR)",
           "away": 2.28,
-          "home": 2.65,
-          "draw": 3.28
+          "home": 2.67,
+          "draw": 3.25
         },
         {
           "name": "Winamax (FR)",
           "away": 2.25,
           "home": 2.5,
-          "draw": 3.2
+          "draw": 3.15
         },
         {
           "name": "Winamax (DE)",
-          "away": 2.35,
+          "away": 2.4,
           "home": 2.65,
-          "draw": 3.45
+          "draw": 3.4
         },
         {
           "name": "1xBet",
@@ -12109,20 +13148,20 @@
         },
         {
           "name": "Unibet (FR)",
-          "home": 5,
+          "home": 5.1,
           "away": 1.53,
           "draw": 3.6
         },
         {
           "name": "Betclic (FR)",
-          "home": 4.95,
+          "home": 5,
           "away": 1.57,
           "draw": 3.53
         },
         {
           "name": "Winamax (FR)",
           "home": 4.5,
-          "away": 1.56,
+          "away": 1.54,
           "draw": 3.45
         },
         {
@@ -12474,6 +13513,5 @@
         "away"
       ]
     }
-  ],
-  "scoresUpdatedAt": "2026-10-21T07:27:58.472Z"
+  ]
 }
