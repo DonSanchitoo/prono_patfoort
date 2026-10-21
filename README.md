@@ -28,4 +28,4 @@ Deux secrets GitHub Actions sont requis : `FOOTBALL_DATA_TOKEN` et `THE_ODDS_API
 
 Les scores ESPN des sept derniers jours sont également conservés dans le flux. À chaque chargement, les paris virtuels en attente sont réglés automatiquement : la mise est débitée au placement, un ticket gagnant crédite `mise × cote`, et un ticket perdant ne crédite aucun retour. Un ticket ne peut être réglé qu’une seule fois.
 
-Chaque pronostic conseillé terminé est archivé dans `data/predictions-history.json`. La page « Bilan des pronos » publie le taux de réussite, le ROI et le profit théorique avec une mise identique de 10 € sur chaque proposition, sans retirer les échecs de l’historique.
+Chaque pronostic conseillé terminé est archivé sans limite de durée dans `data/predictions-history.json`. La page « Bilan des pronos » permet de filtrer cette archive par période, compétition, marché et résultat ; elle publie le taux de réussite, le ROI et le profit théorique avec une mise identique de 10 € sur chaque proposition, sans retirer les échecs de l’historique. Ce fichier versionné sert de registre public durable sans ajouter de coût de base de données.

@@ -45,6 +45,6 @@ for(const match of data.matches??[]){
   if(status==='pending')continue;
   predictions.set(match.id,{id:match.id,date:match.date,league:match.league,match:`${match.home} – ${match.away}`,label:pick.label,key:pick.key,odd:pick.odd,probability:pick.probability,status,score:`${match.homeScore} : ${match.awayScore}`});
 }
-predictionHistory=[...predictions.values()].sort((a,b)=>b.date.localeCompare(a.date)).slice(0,2000);
+predictionHistory=[...predictions.values()].sort((a,b)=>b.date.localeCompare(a.date));
 await writeFile(historyFile,`${JSON.stringify(predictionHistory,null,2)}\n`);
 console.log(`${settlements.length} résultats contrôlés, ${data.settlements.length} disponibles pour régler les paris.`);
