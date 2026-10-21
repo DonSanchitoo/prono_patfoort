@@ -119,8 +119,10 @@ function consensus(match, oddsEvents) {
     if (offer.home || offer.draw || offer.away || offer.btts || offer.over) offers.push(offer);
   }
   if (!offers.length) return null;
-  const best = key => Math.max(...offers.map(offer => Number(offer[key]) || 0));
-  return { offers, home:best('home'), draw:best('draw'), away:best('away'), over:best('over') || null, btts:best('btts') || null };
+  const prices = key => offers.map(offer => Number(offer[key])).filter(price => Number.isFinite(price) && price > 0);
+  const average = key => { const values=prices(key); return values.length ? Number((values.reduce((sum,price)=>sum+price,0)/values.length).toFixed(2)) : null };
+  const counts = Object.fromEntries(['home','draw','away','over','btts'].map(key=>[key,prices(key).length]));
+  return { offers, counts, home:average('home'), draw:average('draw'), away:average('away'), over:average('over'), btts:average('btts') };
 }
 
 const results = await Promise.allSettled(leagues.map(async ([slug, label, weight]) => {
@@ -178,7 +180,7 @@ const enriched = unique.map(match => {
   if (realOdds) {
     const realMarkets = ['home','draw','away','over','btts'].filter(key => realOdds[key]);
     match.odds = {...match.odds,...Object.fromEntries(realMarkets.map(key => [key,realOdds[key]]))};
-    match.oddsSource = 'The Odds API'; match.bookmakerOffers = realOdds.offers; match.bookmakerCount = realOdds.offers.length; match.realOddsMarkets = realMarkets;
+    match.oddsSource = 'The Odds API'; match.bookmakerOffers = realOdds.offers; match.bookmakerCount = realOdds.offers.length; match.oddsBookmakerCounts = realOdds.counts; match.realOddsMarkets = realMarkets;
   }
   return match;
 });
