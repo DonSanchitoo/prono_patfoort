@@ -1,4 +1,5 @@
 import { readFile, writeFile } from 'node:fs/promises';
+import { selectionResult } from '../model.js';
 
 const leagues = ['eng.1','fra.1','esp.1','ita.1','ger.1','uefa.champions','uefa.europa','uefa.europa.conf','uefa.super_cup','fifa.cwc','fra.2','fra.coupe_de_france','eng.fa','eng.league_cup','esp.copa_del_rey','ita.coppa_italia','ger.dfb_pokal','uefa.nations','fifa.worldq.uefa'];
 const dateKey = date => date.toISOString().slice(0, 10).replaceAll('-', '');
@@ -34,4 +35,16 @@ for (const match of data.matches ?? []) {
 data.scoresUpdatedAt = new Date().toISOString();
 data.coverage = {...data.coverage, settlements:data.settlements.length};
 await writeFile(file, `${JSON.stringify(data, null, 2)}\n`);
+const historyFile='data/predictions-history.json';
+let predictionHistory=[];
+try{predictionHistory=JSON.parse(await readFile(historyFile,'utf8'))}catch{}
+const predictions=new Map(predictionHistory.map(item=>[item.id,item]));
+for(const match of data.matches??[]){
+  if(!match.completed||!match.suggestedPick||predictions.has(match.id))continue;
+  const pick=match.suggestedPick,status=selectionResult({...pick,matchId:match.id},[match]).status;
+  if(status==='pending')continue;
+  predictions.set(match.id,{id:match.id,date:match.date,league:match.league,match:`${match.home} – ${match.away}`,label:pick.label,key:pick.key,odd:pick.odd,probability:pick.probability,status,score:`${match.homeScore} : ${match.awayScore}`});
+}
+predictionHistory=[...predictions.values()].sort((a,b)=>b.date.localeCompare(a.date)).slice(0,2000);
+await writeFile(historyFile,`${JSON.stringify(predictionHistory,null,2)}\n`);
 console.log(`${settlements.length} résultats contrôlés, ${data.settlements.length} disponibles pour régler les paris.`);

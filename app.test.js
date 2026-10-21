@@ -1,4 +1,5 @@
 import test from 'node:test';import assert from 'node:assert/strict';
+import {readFile} from 'node:fs/promises';
 globalThis.localStorage={getItem:()=>null,setItem:()=>{}};
 globalThis.location={hash:''};
 globalThis.document={querySelector:()=>({addEventListener:()=>{},classList:{add:()=>{},toggle:()=>{},contains:()=>false},style:{},dataset:{},set textContent(v){},set innerHTML(v){}}),querySelectorAll:()=>[],documentElement:{classList:{add:()=>{},toggle:()=>{},contains:()=>false}}};
@@ -17,3 +18,4 @@ test('chaque ligne du combiné expose son résultat et son score',()=>{const ite
 test('un système 2/3 crée trois doubles et tolère une erreur',()=>{const items=['a','b','c'].map(matchId=>({matchId,key:'home',odd:2})),lines=systemLines(items,'2of3').map(line=>({...line,stake:3})),results=[{id:'a',completed:true,homeScore:2,awayScore:0},{id:'b',completed:true,homeScore:1,awayScore:0},{id:'c',completed:true,homeScore:0,awayScore:1}],settled=settleSystemBet({items,systemLines:lines},results);assert.equal(lines.length,3);assert.equal(settled.status,'won');assert.equal(settled.wonLines,1);assert.equal(settled.returnAmount,12)});
 test('un Yankee crée onze sous-paris',()=>{assert.equal(systemLines([1,2,3,4].map(odd=>({odd})),'yankee').length,11)});
 test('une formule système refuse un nombre de sélections incompatible',()=>{const items=[1,2,3,4].map(odd=>({odd}));assert.deepEqual(systemLines(items,'2of3'),[]);assert.deepEqual(systemLines(items.slice(0,3),'yankee'),[])});
+test('l’historique public des pronostics contient des résultats auditables',async()=>{const items=JSON.parse(await readFile(new URL('./data/predictions-history.json',import.meta.url)));assert.ok(items.length>0);assert.ok(items.every(item=>item.id&&item.date&&item.match&&Number(item.odd)>1&&['won','lost'].includes(item.status)));assert.ok(items.some(item=>item.status==='won'));assert.ok(items.some(item=>item.status==='lost'))});

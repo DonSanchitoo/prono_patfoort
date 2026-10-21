@@ -3,7 +3,7 @@
 La synchronisation utilise l'offre gratuite de Supabase. Les données de chaque compte sont isolées par les règles RLS de la base.
 
 1. Créez un projet sur [supabase.com](https://supabase.com/), puis ouvrez **SQL Editor** et exécutez le contenu de `supabase-schema.sql`.
-   Pour activer les profils et classements de la V3, exécutez ensuite `supabase-v3-schema.sql` dans le même éditeur.
+   Pour activer les profils, avatars et classements de la V3, exécutez ensuite `supabase-v3-schema.sql` dans le même éditeur. Le script est réexécutable : relancez-le après une mise à jour de ces fonctions.
 2. Dans **Authentication > URL Configuration**, renseignez :
    - Site URL : `https://patfoort47-gif.github.io/prono_patfoort/`
    - Redirect URL : `https://patfoort47-gif.github.io/prono_patfoort/`
