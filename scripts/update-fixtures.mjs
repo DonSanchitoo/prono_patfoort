@@ -16,6 +16,7 @@ const providerMap = {
 const giants = ['Real Madrid','Barcelona','Manchester City','Manchester United','Liverpool','Arsenal','Chelsea','Bayern','Paris Saint-Germain','Marseille','Internazionale','Milan','Juventus','Napoli','Atlético Madrid','Borussia Dortmund'];
 const dateKey = date => date.toISOString().slice(0, 10).replaceAll('-', '');
 const start = new Date(); start.setUTCHours(0, 0, 0, 0);
+const historyStart = new Date(start); historyStart.setUTCDate(historyStart.getUTCDate() - 3);
 const end = new Date(start); end.setUTCDate(end.getUTCDate() + 7);
 const days = Array.from({ length: 15 }, (_, index) => { const date = new Date(start); date.setUTCDate(date.getUTCDate() + index - 7); return dateKey(date); });
 
@@ -73,9 +74,9 @@ async function bookmakerOdds(upcomingMatches) {
     if (!response.ok) throw new Error(`The Odds API ${sport}: HTTP ${response.status}`);
     responses.push(...(await response.json()).map(event => ({...event, _sport:sport})));
   }
-  const featured = upcomingMatches.slice().sort((a,b) => b.priority-a.priority).map(match => responses.find(event => sameTeam(event.home_team,match.home)&&sameTeam(event.away_team,match.away))).filter(Boolean).slice(0,5);
+  const featured = upcomingMatches.filter(match=>!match.completed).slice().sort((a,b) => b.priority-a.priority).map(match => responses.find(event => sameTeam(event.home_team,match.home)&&sameTeam(event.away_team,match.away))).filter(Boolean).slice(0,5);
   for (const event of featured) {
-    const params = new URLSearchParams({ apiKey:key, regions:'eu', markets:'btts', oddsFormat:'decimal', dateFormat:'iso' });
+    const params = new URLSearchParams({ apiKey:key, regions:'eu', markets:'btts,totals', oddsFormat:'decimal', dateFormat:'iso' });
     const response = await fetch(`https://api.the-odds-api.com/v4/sports/${event._sport}/events/${event.id}/odds?${params}`);
     if (!response.ok) continue;
     const extra = await response.json();
@@ -113,11 +114,13 @@ function consensus(match, oddsEvents) {
     }
     const btts = bookmaker.markets?.find(item => item.key === 'btts');
     offer.btts = btts?.outcomes?.find(outcome => /^(yes|oui)$/i.test(outcome.name))?.price;
-    if (offer.home || offer.draw || offer.away || offer.btts) offers.push(offer);
+    const totals = bookmaker.markets?.find(item => item.key === 'totals');
+    offer.over = totals?.outcomes?.find(outcome => /^over$/i.test(outcome.name) && Number(outcome.point) === 2.5)?.price;
+    if (offer.home || offer.draw || offer.away || offer.btts || offer.over) offers.push(offer);
   }
   if (!offers.length) return null;
   const best = key => Math.max(...offers.map(offer => Number(offer[key]) || 0));
-  return { offers, home:best('home'), draw:best('draw'), away:best('away'), btts:best('btts') || null };
+  return { offers, home:best('home'), draw:best('draw'), away:best('away'), over:best('over') || null, btts:best('btts') || null };
 }
 
 const results = await Promise.allSettled(leagues.map(async ([slug, label, weight]) => {
@@ -156,7 +159,7 @@ const matches = results.flatMap(result => result.status === 'fulfilled' ? result
 const failures = results.flatMap((result, index) => result.status === 'rejected' ? [`${leagues[index][0]}: ${result.reason?.message ?? 'échec inconnu'}`] : []);
 const allUnique = [...new Map(matches.map(match => [match.id, match])).values()];
 const unique = allUnique
-  .filter(match => match.date >= start.toISOString().slice(0, 10) && match.date <= end.toISOString().slice(0, 10))
+  .filter(match => match.date >= historyStart.toISOString().slice(0, 10) && match.date <= end.toISOString().slice(0, 10))
   .sort((a, b) => a.date.localeCompare(b.date) || b.priority - a.priority);
 const settlements = allUnique.filter(match => match.completed && Number.isFinite(match.homeScore) && Number.isFinite(match.awayScore))
   .map(({id,date,home,away,homeScore,awayScore,completed})=>({id,date,home,away,homeScore,awayScore,completed}));
@@ -173,7 +176,7 @@ const enriched = unique.map(match => {
   }
   const realOdds = consensus(match, oddsEvents);
   if (realOdds) {
-    const realMarkets = ['home','draw','away','btts'].filter(key => realOdds[key]);
+    const realMarkets = ['home','draw','away','over','btts'].filter(key => realOdds[key]);
     match.odds = {...match.odds,...Object.fromEntries(realMarkets.map(key => [key,realOdds[key]]))};
     match.oddsSource = 'The Odds API'; match.bookmakerOffers = realOdds.offers; match.bookmakerCount = realOdds.offers.length; match.realOddsMarkets = realMarkets;
   }

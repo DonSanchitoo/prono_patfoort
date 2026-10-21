@@ -3,8 +3,7 @@ import { readFile, writeFile } from 'node:fs/promises';
 const leagues = ['eng.1','fra.1','esp.1','ita.1','ger.1','uefa.champions','uefa.europa'];
 const dateKey = date => date.toISOString().slice(0, 10).replaceAll('-', '');
 const today = new Date(); today.setUTCHours(0, 0, 0, 0);
-const yesterday = new Date(today); yesterday.setUTCDate(yesterday.getUTCDate() - 1);
-const days = [yesterday, today].map(dateKey);
+const days = Array.from({length:4},(_,index)=>{const date=new Date(today);date.setUTCDate(date.getUTCDate()+index-3);return dateKey(date)});
 const settlements = [];
 
 for (const league of leagues) {
@@ -27,6 +26,11 @@ const data = JSON.parse(await readFile(file, 'utf8'));
 const merged = new Map((data.settlements ?? []).map(result => [result.id, result]));
 for (const result of settlements) merged.set(result.id, result);
 data.settlements = [...merged.values()].sort((a,b) => b.date.localeCompare(a.date));
+for (const match of data.matches ?? []) {
+  const result = merged.get(match.id);
+  if (!result) continue;
+  match.completed = true; match.status = 'Terminé'; match.homeScore = result.homeScore; match.awayScore = result.awayScore;
+}
 data.scoresUpdatedAt = new Date().toISOString();
 data.coverage = {...data.coverage, settlements:data.settlements.length};
 await writeFile(file, `${JSON.stringify(data, null, 2)}\n`);
