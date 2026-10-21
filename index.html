@@ -59,9 +59,10 @@
         </div>
       </div>
       <aside class="ticket card" aria-live="polite">
-        <div class="ticket-head"><div><small>VOTRE TICKET</small><h3>Combiné</h3></div><button class="text-button" id="clear-ticket">Effacer</button></div>
+        <div class="ticket-head"><div><small>VOTRE TICKET</small><h3 id="ticket-title">Combiné</h3></div><button class="text-button" id="clear-ticket">Effacer</button></div>
+        <div class="bet-mode" id="bet-mode" role="group" aria-label="Type de pari"><button data-bet-mode="single">Simple</button><button class="active" data-bet-mode="combined">Combiné</button><button data-bet-mode="multiple">Multiple</button></div>
         <div id="ticket-items" class="ticket-items"><p class="empty">Ajoutez une sélection depuis les matchs.</p></div>
-        <div class="ticket-summary"><span>Cote totale <strong id="total-odds">1.00</strong></span><span>Écart à la cible <strong id="target-gap">—</strong></span><label>Mise (€)<input id="stake" type="number" min="1" step="1" value="20"></label><span>Gain potentiel <strong id="potential-win">20,00 €</strong></span><small id="stake-advice">Mise conseillée : —</small></div>
+        <div class="ticket-summary"><span><b id="odds-label">Cote totale</b><strong id="total-odds">1.00</strong></span><span id="target-gap-row">Écart à la cible <strong id="target-gap">—</strong></span><label><b id="stake-label">Mise (€)</b><input id="stake" type="number" min="1" step="1" value="20"></label><span>Total engagé <strong id="stake-total">20,00 €</strong></span><span>Gain potentiel <strong id="potential-win">20,00 €</strong></span><small id="stake-advice">Mise conseillée : —</small></div>
         <button class="button primary full" id="place-bet" disabled>Placer le pari virtuel</button>
         <button class="button secondary full" id="share-combo" disabled>↗ Partager le combiné</button>
         <p class="responsible">18+ · Jouez de façon responsable. Ceci est une simulation.</p>
@@ -99,6 +100,6 @@
     <button data-mobile-target="bankroll"><span>▥</span>Mes paris</button>
   </nav>
   <div id="toast" role="status" aria-live="polite"></div>
-  <script type="module" src="app.js?v=accounts-5"></script>
+  <script type="module" src="app.js?v=bets-1"></script>
 </body>
 </html>
