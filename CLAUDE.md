@@ -51,3 +51,13 @@ Trois morceaux qui communiquent uniquement par le fichier `data/fixtures.json` :
 - Les pages Confidentialité et Mentions légales (fenêtres en bas de `index.html`) décrivent les données réellement collectées et les services tiers contactés (Supabase, Google Fonts, ESPN, jsDelivr) : les mettre à jour à chaque nouveau service ou nouvelle donnée.
 - Pas de tiret cadratin (—) ni demi-cadratin (–) dans les textes affichés : utiliser « · », « : » ou « - ».
 - Le site doit rester utilisable sur téléphone (barre de navigation du bas sous 700 px) comme sur PC (colonne combiné fixe au-delà de 1100 px).
+
+## Tickets et travail à deux
+
+Le projet est développé à deux : l'un avec Claude Code (ce fichier), l'autre avec Codex (`AGENTS.md`). Les deux fichiers doivent rester cohérents : toute règle commune ajoutée ici va aussi dans `AGENTS.md`.
+
+- **Tickets BetMaster uniquement dans la connexion MCP `youtrack-betoptimum`** (instance `betoptimum.youtrack.cloud`, projet `BET`). Ne jamais lire, créer ni modifier de ticket de ce dépôt avec la connexion `youtrack` ni avec une autre instance, et ne jamais citer dans ce dépôt ou dans YouTrack BetOptimum le contenu d'un autre YouTrack.
+- Une branche par ticket, créée depuis `main` : `BET-<n>-<descriptif-court>` (ex. `BET-12-classement-buteurs`).
+- Le numéro du ticket figure dans chaque message de commit et dans le titre de la pull request (ex. `BET-12 Ajoute le classement des buteurs`).
+- Le ticket est fermé quand la pull request est fusionnée dans `main`.
+- Aucun jeton YouTrack dans le dépôt : chacun garde le sien dans la configuration de son IA.
