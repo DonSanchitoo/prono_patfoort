@@ -1,6 +1,6 @@
 import { readFile, writeFile } from 'node:fs/promises';
 
-const leagues = ['eng.1','fra.1','esp.1','ita.1','ger.1','uefa.champions','uefa.europa'];
+const leagues = ['eng.1','fra.1','esp.1','ita.1','ger.1','uefa.champions','uefa.europa','uefa.europa.conf','uefa.super_cup','fifa.cwc','fra.2','fra.coupe_de_france','eng.fa','eng.league_cup','esp.copa_del_rey','ita.coppa_italia','ger.dfb_pokal','uefa.nations','fifa.worldq.uefa'];
 const dateKey = date => date.toISOString().slice(0, 10).replaceAll('-', '');
 const today = new Date(); today.setUTCHours(0, 0, 0, 0);
 const days = Array.from({length:4},(_,index)=>{const date=new Date(today);date.setUTCDate(date.getUTCDate()+index-3);return dateKey(date)});
@@ -9,7 +9,7 @@ const settlements = [];
 for (const league of leagues) {
   for (const day of days) {
     const response = await fetch(`https://site.api.espn.com/apis/site/v2/sports/soccer/${league}/scoreboard?dates=${day}&limit=100`, { headers:{'User-Agent':'BetMaster-Results/1.0'} });
-    if (!response.ok) throw new Error(`${league}: HTTP ${response.status}`);
+    if (!response.ok) { console.warn(`${league}: HTTP ${response.status} (${day})`); continue; }
     const data = await response.json();
     for (const event of data.events ?? []) {
       const competition = event.competitions?.[0];

@@ -5,7 +5,13 @@ const leagues = [
   ['eng.1', 'Premier League', 34], ['fra.1', 'Ligue 1', 30],
   ['esp.1', 'La Liga', 33], ['ita.1', 'Serie A', 31],
   ['ger.1', 'Bundesliga', 32], ['uefa.champions', 'Ligue des champions', 42],
-  ['uefa.europa', 'Europa League', 28]
+  ['uefa.europa', 'Europa League', 28], ['uefa.europa.conf', 'Conference League', 24],
+  ['uefa.super_cup', "Supercoupe d'Europe", 36], ['fifa.cwc', 'Coupe du monde des clubs', 38],
+  ['fra.2', 'Ligue 2', 18], ['fra.coupe_de_france', 'Coupe de France', 26],
+  ['eng.fa', 'FA Cup', 27], ['eng.league_cup', 'Carabao Cup', 24],
+  ['esp.copa_del_rey', 'Copa del Rey', 26], ['ita.coppa_italia', 'Coppa Italia', 25],
+  ['ger.dfb_pokal', 'DFB-Pokal', 25], ['uefa.nations', 'Ligue des nations', 30],
+  ['fifa.worldq.uefa', 'Qualifications Coupe du monde', 30]
 ];
 const providerMap = {
   'Premier League': ['PL', 'soccer_epl'], 'Ligue 1': ['FL1', 'soccer_france_ligue_one'],
@@ -130,12 +136,16 @@ function consensus(match, oddsEvents) {
 
 const results = await Promise.allSettled(leagues.map(async ([slug, label, weight]) => {
   const events = [];
+  let leagueLogo = null, leagueLogoDark = null;
   for (const day of days) {
     const url = `https://site.api.espn.com/apis/site/v2/sports/soccer/${slug}/scoreboard?dates=${day}&limit=100`;
     const response = await fetch(url, { headers: { 'User-Agent': 'BetMaster-Fixtures/1.0' } });
     if (!response.ok) throw new Error(`${slug}: HTTP ${response.status} (${day})`);
     const data = await response.json();
     events.push(...(data.events ?? []));
+    const logos = data.leagues?.[0]?.logos ?? [];
+    leagueLogo ??= logos.find(logo => !logo.rel?.includes('dark'))?.href ?? null;
+    leagueLogoDark ??= logos.find(logo => logo.rel?.includes('dark') && logo.href.includes('/500-dark/'))?.href ?? null;
   }
   return events.map(event => {
     const competition = event.competitions?.[0];
@@ -148,9 +158,10 @@ const results = await Promise.allSettled(leagues.map(async ([slug, label, weight
     const priority = weight + giantCount * 30;
     const kickoff = new Date(event.date);
     return {
-      id: `espn-${event.id}`, date: kickoff.toISOString().slice(0, 10),
+      id: `espn-${event.id}`, date: kickoff.toISOString().slice(0, 10), kickoff: kickoff.toISOString(),
       time: kickoff.toLocaleTimeString('fr-FR', { timeZone: 'Europe/Paris', hour: '2-digit', minute: '2-digit' }),
       league: label, home: homeTeam, away: awayTeam,
+      leagueLogo, leagueLogoDark, homeId: homeCompetitor?.team?.id ?? null, awayId: awayCompetitor?.team?.id ?? null, homeLogo: homeCompetitor?.team?.logo ?? null, awayLogo: awayCompetitor?.team?.logo ?? null,
       priority, featured: priority >= 75, status: event.status?.type?.description ?? 'Programmé',
       completed: event.status?.type?.completed === true,
       homeScore: homeCompetitor?.score == null ? null : Number(homeCompetitor.score),
