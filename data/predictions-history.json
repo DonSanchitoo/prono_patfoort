@@ -24,6 +24,54 @@
     "score": "2 : 4"
   },
   {
+    "id": "espn-401915312",
+    "date": "2026-10-21",
+    "league": "Ligue des champions",
+    "match": "Bayern Munich – Arsenal",
+    "label": "Plus de 2,5 buts",
+    "key": "over",
+    "odd": 1.49,
+    "probability": 0.7060078446013036,
+    "status": "won",
+    "score": "2 : 2"
+  },
+  {
+    "id": "espn-401915388",
+    "date": "2026-10-21",
+    "league": "Ligue des champions",
+    "match": "Club Brugge – Lens",
+    "label": "Les deux marquent",
+    "key": "btts",
+    "odd": 2.01,
+    "probability": 0.5230740993676228,
+    "status": "lost",
+    "score": "3 : 0"
+  },
+  {
+    "id": "espn-401915389",
+    "date": "2026-10-21",
+    "league": "Ligue des champions",
+    "match": "Real Betis – Feyenoord Rotterdam",
+    "label": "Plus de 2,5 buts",
+    "key": "over",
+    "odd": 2.19,
+    "probability": 0.8675602509908884,
+    "status": "lost",
+    "score": "1 : 0"
+  },
+  {
+    "id": "espn-401882870",
+    "date": "2026-10-21",
+    "league": "La Liga",
+    "match": "Levante – Athletic Club",
+    "label": "Les deux marquent",
+    "key": "btts",
+    "odd": 2.01,
+    "probability": 0.5687371488476349,
+    "status": "won",
+    "score": "3 : 1"
+  },
+  {
     "id": "espn-401915399",
     "date": "2026-10-20",
     "league": "Ligue des champions",
