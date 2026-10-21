@@ -91,6 +91,11 @@
   <dialog id="bankroll-dialog"><form id="bankroll-form" method="dialog"><div class="modal-head"><h2>Capital virtuel</h2><button class="icon-button" value="cancel" formnovalidate>×</button></div><label>Nouveau capital (€)<input name="amount" type="number" min="0" step="10" required></label><button class="button primary full" value="default">Enregistrer</button></form></dialog>
   <dialog id="confidence-dialog"><div class="modal-head"><div><p class="eyebrow">TRANSPARENCE</p><h2>Indice de confiance</h2></div><button class="icon-button" data-close-dialog aria-label="Fermer">×</button></div><div id="confidence-content"></div></dialog>
   <dialog id="help-dialog"><div class="modal-head"><div><p class="eyebrow">AIDE</p><h2>Comprendre BetMaster</h2></div><button class="icon-button" data-close-dialog aria-label="Fermer">×</button></div><div class="lexicon"><article><strong>Value bet</strong><p>Une cote est intéressante lorsque la probabilité estimée par le modèle est supérieure à la probabilité implicite de la cote. Cela ne garantit jamais un gain.</p></article><article><strong>Indice de confiance</strong><p>Il résume la forme récente, le modèle de buts et la solidité statistique du marché. Il mesure la cohérence des données, pas la certitude du résultat.</p></article><article><strong>ROI</strong><p>Le retour sur investissement compare le profit net aux mises des paris déjà réglés.</p></article><article><strong>Limiter les biais</strong><p>Le modèle applique les mêmes critères à chaque rencontre pour réduire les décisions émotionnelles. Vérifiez toujours la cote finale chez le bookmaker.</p></article></div></dialog>
+  <nav class="mobile-nav" aria-label="Navigation mobile">
+    <button class="active" data-mobile-target="matches"><span>⚽</span>Matchs</button>
+    <button data-mobile-target="builder"><span>⚡</span>Combiné</button>
+    <button data-mobile-target="bankroll"><span>▥</span>Mes paris</button>
+  </nav>
   <div id="toast" role="status" aria-live="polite"></div>
   <script type="module" src="app.js"></script>
 </body>
