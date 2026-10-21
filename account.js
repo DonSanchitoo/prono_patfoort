@@ -1,14 +1,14 @@
-import { SUPABASE_URL, SUPABASE_ANON_KEY } from './supabase-config.js?v=accounts-4';
+import { SUPABASE_URL, SUPABASE_ANON_KEY } from './supabase-config.js?v=accounts-5';
 
 const $=selector=>document.querySelector(selector);
 
-export async function initAccountSync({getState,applyState,resetState,registerCloudSave,toast}){
+export async function initAccountSync({getState,applyState,resetState,registerCloudSave,onAuthChange=()=>{},toast}){
   const dialog=$('#account-dialog'),button=$('#account-button'),label=$('#account-label'),form=$('#account-form'),loggedOut=$('#account-logged-out'),loggedIn=$('#account-logged-in'),configRequired=$('#account-config-required'),message=$('#account-message'),status=$('#sync-status');
   let client=null,currentUser=null,loadedUserId=null,saveTimer=null;
   const configured=/^https:\/\/.+\.supabase\.co\/?$/.test(SUPABASE_URL)&&SUPABASE_ANON_KEY.length>20;
   const showMessage=(value,error=false)=>{message.textContent=value;message.classList.toggle('error',error)};
   const setBusy=busy=>form.querySelectorAll('button,input').forEach(element=>element.disabled=busy);
-  const setView=user=>{currentUser=user??null;loggedOut.hidden=Boolean(user)||!configured;loggedIn.hidden=!user;configRequired.hidden=configured;label.textContent=user?(user.email?.split('@')[0]||'Mon compte'):(configured?'Connexion':'Compte');button.classList.toggle('connected',Boolean(user));if(user)$('#account-email').textContent=user.email??''};
+  const setView=user=>{currentUser=user??null;loggedOut.hidden=Boolean(user)||!configured;loggedIn.hidden=!user;configRequired.hidden=configured;label.textContent=user?(user.email?.split('@')[0]||'Mon compte'):(configured?'Connexion':'Compte');button.classList.toggle('connected',Boolean(user));if(user)$('#account-email').textContent=user.email??'';onAuthChange(Boolean(user))};
 
   button.addEventListener('click',()=>dialog.showModal());
   if(!configured){setView(null);showMessage('Ajoutez les variables Supabase au dépôt pour activer la synchronisation.');return}
