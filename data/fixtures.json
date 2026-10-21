@@ -11,7 +11,7 @@
     "oddsEvents": 124,
     "statsMatches": 74,
     "oddsMatches": 65,
-    "settlements": 117
+    "settlements": 121
   },
   "settlements": [
     {
@@ -66,6 +66,42 @@
       "away": "Feyenoord Rotterdam",
       "homeScore": 1,
       "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401915394",
+      "date": "2026-10-21",
+      "home": "Aston Villa",
+      "away": "Viking FK",
+      "homeScore": 3,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401915390",
+      "date": "2026-10-21",
+      "home": "Internazionale",
+      "away": "Shakhtar Donetsk",
+      "homeScore": 1,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401915313",
+      "date": "2026-10-21",
+      "home": "Real Madrid",
+      "away": "RB Leipzig",
+      "homeScore": 4,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401915391",
+      "date": "2026-10-21",
+      "home": "Sporting CP",
+      "away": "LASK Linz",
+      "homeScore": 2,
+      "awayScore": 3,
       "completed": true
     },
     {
@@ -3916,8 +3952,8 @@
       "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/493.png",
       "priority": 72,
       "featured": false,
-      "status": "Second Half",
-      "completed": false,
+      "status": "Terminé",
+      "completed": true,
       "homeScore": 1,
       "awayScore": 0,
       "homeGoals": 2.07,
@@ -3999,10 +4035,10 @@
       "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/11420.png",
       "priority": 72,
       "featured": false,
-      "status": "Second Half",
-      "completed": false,
-      "homeScore": 2,
-      "awayScore": 0,
+      "status": "Terminé",
+      "completed": true,
+      "homeScore": 4,
+      "awayScore": 1,
       "homeGoals": 2.61,
       "awayGoals": 1.76,
       "odds": {
@@ -4253,10 +4289,10 @@
       "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/510.png",
       "priority": 42,
       "featured": false,
-      "status": "Second Half",
-      "completed": false,
+      "status": "Terminé",
+      "completed": true,
       "homeScore": 3,
-      "awayScore": 0,
+      "awayScore": 1,
       "homeGoals": 3.06,
       "awayGoals": 1.53,
       "odds": {
@@ -4629,9 +4665,9 @@
       "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/4411.png",
       "priority": 42,
       "featured": false,
-      "status": "Second Half",
-      "completed": false,
-      "homeScore": 1,
+      "status": "Terminé",
+      "completed": true,
+      "homeScore": 2,
       "awayScore": 3,
       "homeGoals": 1.45,
       "awayGoals": 1.15,
@@ -22925,5 +22961,5 @@
       }
     }
   ],
-  "scoresUpdatedAt": "2026-10-21T20:53:44.378Z"
+  "scoresUpdatedAt": "2026-10-21T21:54:39.906Z"
 }

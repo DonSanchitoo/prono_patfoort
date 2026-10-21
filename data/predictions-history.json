@@ -72,6 +72,54 @@
     "score": "3 : 1"
   },
   {
+    "id": "espn-401915390",
+    "date": "2026-10-21",
+    "league": "Ligue des champions",
+    "match": "Internazionale – Shakhtar Donetsk",
+    "label": "Plus de 2,5 buts",
+    "key": "over",
+    "odd": 1.64,
+    "probability": 0.7484105476465657,
+    "status": "lost",
+    "score": "1 : 0"
+  },
+  {
+    "id": "espn-401915313",
+    "date": "2026-10-21",
+    "league": "Ligue des champions",
+    "match": "Real Madrid – RB Leipzig",
+    "label": "Plus de 2,5 buts",
+    "key": "over",
+    "odd": 1.64,
+    "probability": 0.8112631001482412,
+    "status": "won",
+    "score": "4 : 1"
+  },
+  {
+    "id": "espn-401915394",
+    "date": "2026-10-21",
+    "league": "Ligue des champions",
+    "match": "Aston Villa – Viking FK",
+    "label": "Plus de 2,5 buts",
+    "key": "over",
+    "odd": 2.19,
+    "probability": 0.8362948039448673,
+    "status": "won",
+    "score": "3 : 1"
+  },
+  {
+    "id": "espn-401915391",
+    "date": "2026-10-21",
+    "league": "Ligue des champions",
+    "match": "Sporting CP – LASK Linz",
+    "label": "Les deux marquent",
+    "key": "btts",
+    "odd": 2.01,
+    "probability": 0.5230740993676228,
+    "status": "won",
+    "score": "2 : 3"
+  },
+  {
     "id": "espn-401915399",
     "date": "2026-10-20",
     "league": "Ligue des champions",
