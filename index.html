@@ -18,6 +18,7 @@
     <nav aria-label="Navigation principale" class="tabs">
       <button class="tab-button active" data-tab="matches">Matchs & combinés</button><button class="tab-button" data-tab="bankroll">Mes paris & bankroll</button>
     </nav>
+    <button class="help-button" id="open-help">Aide & lexique</button>
     <button class="icon-button" id="theme-toggle" aria-label="Changer de thème" title="Changer de thème">☼</button>
   </header>
 
@@ -30,7 +31,7 @@
         <div class="hero-actions"><button class="button primary" data-open-tab="matches">Voir les matchs →</button><button class="button ghost" id="quick-combo">Générer un combiné</button></div>
       </div>
       <div class="hero-score" aria-label="Indice de confiance du jour">
-        <div class="orb"><span>87</span><small>/100</small></div>
+        <button class="orb" id="hero-confidence" aria-label="Comprendre l’indice de confiance"><span>87</span><small>/100</small></button>
         <p>Indice confiance</p><strong>3 value bets détectés</strong>
       </div>
     </section>
@@ -40,6 +41,8 @@
       <article><span class="stat-icon blue">↗</span><div><small>PROFIT / PERTE</small><strong id="profit-stat">0,00 €</strong></div></article>
       <article><span class="stat-icon amber">◎</span><div><small>TAUX DE RÉUSSITE</small><strong id="winrate-stat">—</strong></div></article>
       <article><span class="stat-icon purple">▥</span><div><small>PARIS PLACÉS</small><strong id="bets-stat">0</strong></div></article>
+      <article><span class="stat-icon green">%</span><div><small>ROI</small><strong id="roi-stat">—</strong></div></article>
+      <article><span class="stat-icon blue">★</span><div><small>MEILLEURE COMPÉTITION</small><strong id="best-league-stat">—</strong></div></article>
     </section>
 
     <section id="builder" class="section-block builder-layout builder-featured" data-view="matches">
@@ -50,6 +53,7 @@
         <div class="builder-controls card">
           <label>Cote cible <output id="target-output">3.00</output><input id="target-odds" type="range" min="1.5" max="10" value="3" step="0.1"></label>
           <label>Nombre maximum de matchs <select id="selection-count"><option>2</option><option selected>3</option><option>4</option><option>5</option></select></label>
+          <label>Profil de risque <select id="risk-profile"><option value="safe">Sécurisé</option><option value="balanced" selected>Équilibré</option><option value="bold">Audacieux</option></select></label>
           <button class="button primary full" id="generate-combo">⚡ Trouver le combiné le plus proche</button>
         </div>
       </div>
@@ -58,12 +62,13 @@
         <div id="ticket-items" class="ticket-items"><p class="empty">Ajoutez une sélection depuis les matchs.</p></div>
         <div class="ticket-summary"><span>Cote totale <strong id="total-odds">1.00</strong></span><span>Écart à la cible <strong id="target-gap">—</strong></span><label>Mise (€)<input id="stake" type="number" min="1" step="1" value="20"></label><span>Gain potentiel <strong id="potential-win">20,00 €</strong></span><small id="stake-advice">Mise conseillée : —</small></div>
         <button class="button primary full" id="place-bet" disabled>Placer le pari virtuel</button>
+        <button class="button secondary full" id="share-combo" disabled>↗ Partager le combiné</button>
         <p class="responsible">18+ · Jouez de façon responsable. Ceci est une simulation.</p>
       </aside>
     </section>
 
     <section id="matches" class="section-block" data-view="matches">
-      <div class="section-heading"><div><p class="eyebrow">CALENDRIER</p><h2 id="match-period-title">Les grandes affiches de la semaine</h2><p class="section-subtitle" id="match-count"></p><p class="data-source" id="data-source"><span class="source-dot loading"></span> Chargement du calendrier officiel…</p></div><div class="heading-actions"><button class="button secondary" id="refresh-fixtures">↻ Actualiser</button><button class="button secondary" id="open-add-match">＋ Ajouter un match</button></div></div>
+      <div class="section-heading"><div><p class="eyebrow">CALENDRIER</p><h2 id="match-period-title">Les grandes affiches de la semaine</h2><p class="section-subtitle" id="match-count"></p><p class="freshness-badge" id="odds-freshness">Cotes : synchronisation en cours…</p><p class="data-source" id="data-source"><span class="source-dot loading"></span> Chargement du calendrier officiel…</p></div><div class="heading-actions"><button class="button secondary" id="refresh-fixtures">↻ Actualiser</button><button class="button secondary" id="open-add-match">＋ Ajouter un match</button></div></div>
       <div class="date-navigator card" id="date-navigator" role="group" aria-label="Choisir une période"></div>
       <div class="filters" id="filters" role="group" aria-label="Filtrer les compétitions"></div>
       <div id="match-list" class="match-list" aria-live="polite"></div>
@@ -71,6 +76,7 @@
 
     <section id="bankroll" class="section-block tab-hidden" data-view="bankroll">
       <div class="section-heading"><div><p class="eyebrow">SUIVI</p><h2>Historique & bankroll</h2></div><button class="button secondary" id="edit-bankroll">Modifier le capital</button></div>
+      <div class="performance-grid"><div class="chart-card card"><div><strong>Évolution de la bankroll</strong><small>Après chaque pari enregistré</small></div><svg id="bankroll-chart" viewBox="0 0 700 220" role="img" aria-label="Courbe d’évolution de la bankroll"></svg></div><div class="league-card card"><strong>Réussite par compétition</strong><div id="league-performance"></div></div></div>
       <div class="history-wrap card"><table><thead><tr><th>Date</th><th>Sélections</th><th>Cote</th><th>Mise</th><th>Résultat</th><th>Retour</th></tr></thead><tbody id="history-body"></tbody></table><p id="empty-history" class="empty">Aucun pari placé pour le moment.</p></div>
     </section>
   </main>
@@ -83,6 +89,8 @@
   </div><button class="button primary full" value="default">Analyser et ajouter</button></form></dialog>
 
   <dialog id="bankroll-dialog"><form id="bankroll-form" method="dialog"><div class="modal-head"><h2>Capital virtuel</h2><button class="icon-button" value="cancel" formnovalidate>×</button></div><label>Nouveau capital (€)<input name="amount" type="number" min="0" step="10" required></label><button class="button primary full" value="default">Enregistrer</button></form></dialog>
+  <dialog id="confidence-dialog"><div class="modal-head"><div><p class="eyebrow">TRANSPARENCE</p><h2>Indice de confiance</h2></div><button class="icon-button" data-close-dialog aria-label="Fermer">×</button></div><div id="confidence-content"></div></dialog>
+  <dialog id="help-dialog"><div class="modal-head"><div><p class="eyebrow">AIDE</p><h2>Comprendre BetMaster</h2></div><button class="icon-button" data-close-dialog aria-label="Fermer">×</button></div><div class="lexicon"><article><strong>Value bet</strong><p>Une cote est intéressante lorsque la probabilité estimée par le modèle est supérieure à la probabilité implicite de la cote. Cela ne garantit jamais un gain.</p></article><article><strong>Indice de confiance</strong><p>Il résume la forme récente, le modèle de buts et la solidité statistique du marché. Il mesure la cohérence des données, pas la certitude du résultat.</p></article><article><strong>ROI</strong><p>Le retour sur investissement compare le profit net aux mises des paris déjà réglés.</p></article><article><strong>Limiter les biais</strong><p>Le modèle applique les mêmes critères à chaque rencontre pour réduire les décisions émotionnelles. Vérifiez toujours la cote finale chez le bookmaker.</p></article></div></dialog>
   <div id="toast" role="status" aria-live="polite"></div>
   <script type="module" src="app.js"></script>
 </body>

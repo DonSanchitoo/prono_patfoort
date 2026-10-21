@@ -1,4 +1,4 @@
-import { mkdir, writeFile } from 'node:fs/promises';
+import { mkdir, readFile, writeFile } from 'node:fs/promises';
 
 const leagues = [
   ['eng.1', 'Premier League', 34], ['fra.1', 'Ligue 1', 30],
@@ -19,6 +19,8 @@ const start = new Date(); start.setUTCHours(0, 0, 0, 0);
 const historyStart = new Date(start); historyStart.setUTCDate(historyStart.getUTCDate() - 3);
 const end = new Date(start); end.setUTCDate(end.getUTCDate() + 7);
 const days = Array.from({ length: 15 }, (_, index) => { const date = new Date(start); date.setUTCDate(date.getUTCDate() + index - 7); return dateKey(date); });
+let previousData = {matches:[]};
+try { previousData = JSON.parse(await readFile('data/fixtures.json','utf8')); } catch {}
 
 function model(home, away, priority) {
   const homeBig = giants.some(name => home.includes(name));
@@ -182,9 +184,12 @@ const enriched = unique.map(match => {
     match.odds = {...match.odds,...Object.fromEntries(realMarkets.map(key => [key,realOdds[key]]))};
     match.oddsSource = 'The Odds API'; match.bookmakerOffers = realOdds.offers; match.bookmakerCount = realOdds.offers.length; match.oddsBookmakerCounts = realOdds.counts; match.realOddsMarkets = realMarkets;
   }
+  const previous = previousData.matches?.find(item=>item.id===match.id);
+  if (previous?.odds) match.oddsMovement=Object.fromEntries(Object.keys(match.odds).map(key=>{const before=Number(previous.odds[key]),current=Number(match.odds[key]),percent=before&&current?Number(((current-before)/before*100).toFixed(1)):0;return[key,{previous:before,current,percent,significant:Math.abs(percent)>=5}]}));
   return match;
 });
 await mkdir('data', { recursive: true });
-await writeFile('data/fixtures.json', `${JSON.stringify({ generatedAt: new Date().toISOString(), source: 'ESPN + football-data.org + The Odds API', providerStatus: providerFailures.length ? 'partial' : 'ok', failures: providerFailures, coverage:{historicalMatches:history.length,oddsEvents:oddsEvents.length,statsMatches:enriched.filter(x=>x.statsSource).length,oddsMatches:enriched.filter(x=>x.oddsSource).length,settlements:settlements.length}, settlements, matches: enriched }, null, 2)}\n`);
+const refreshedAt = new Date().toISOString();
+await writeFile('data/fixtures.json', `${JSON.stringify({ generatedAt: refreshedAt, oddsRefreshedAt:refreshedAt, refreshIntervalHours:2, movementThresholdPercent:5, source: 'ESPN + football-data.org + The Odds API', providerStatus: providerFailures.length ? 'partial' : 'ok', failures: providerFailures, coverage:{historicalMatches:history.length,oddsEvents:oddsEvents.length,statsMatches:enriched.filter(x=>x.statsSource).length,oddsMatches:enriched.filter(x=>x.oddsSource).length,settlements:settlements.length}, settlements, matches: enriched }, null, 2)}\n`);
 console.log(`${enriched.length} rencontres, ${settlements.length} résultats récents, ${history.length} historiques, ${oddsEvents.length} événements cotés.`);
 if (providerFailures.length) console.warn(providerFailures.join('\n'));
