@@ -137,7 +137,7 @@ export function closeSeason(players, { barrage = {} } = {}) {
     } else if (down.has(player.id) && !up.has(player.id)) { to = Math.max(player.echelon - 1, 0); outcome = 'RELEGUE'; }
     if (to > top) to = top;
     if (to < player.echelon && player.echelon > top) outcome = 'RELEGUE';
-    move(player, to, outcome, { ...extra, protectedNext: divisionIndex(to) > divisionIndex(player.echelon) });
+    move(player, to, outcome, { ...extra, barrage: up.get(player.id) === 'barrage' && outcome === 'PROMU', protectedNext: divisionIndex(to) > divisionIndex(player.echelon) });
   }
 
   // Fusion des échelons trop petits (hors Champions et Master), puis nouveaux groupes en serpentin.
@@ -147,7 +147,7 @@ export function closeSeason(players, { barrage = {} } = {}) {
     if (members.length && members.length < MIN_ECHELON) { const target = echelon > 0 ? echelon - 1 : 1; for (const id of members) finalEchelon.set(id, target); }
   }
   // Une fusion peut annuler une montée ou une descente : le résultat suit l'échelon final.
-  for (const [id, to] of finalEchelon) { const item = moves.get(id), settled = item.from == null || item.outcome === 'PLACE'; Object.assign(item, { to, outcome: settled ? item.outcome : to > item.from ? 'PROMU' : to < item.from ? 'RELEGUE' : 'MAINTENU', protectedNext: !settled && divisionIndex(to) > divisionIndex(item.from) }); }
+  for (const [id, to] of finalEchelon) { const item = moves.get(id), settled = item.from == null || item.outcome === 'PLACE'; Object.assign(item, { to, barrage: Boolean(item.barrage) && to > item.from, outcome: settled ? item.outcome : to > item.from ? 'PROMU' : to < item.from ? 'RELEGUE' : 'MAINTENU', protectedNext: !settled && divisionIndex(to) > divisionIndex(item.from) }); }
   const data = new Map(players.map(player => [player.id, player])), groups = [];
   for (let echelon = 0; echelon <= MASTER; echelon++) {
     const members = [...finalEchelon].filter(([, value]) => value === echelon).map(([id]) => data.get(id)).sort(byRank).map(player => player.id);

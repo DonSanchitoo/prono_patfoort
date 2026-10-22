@@ -1,11 +1,18 @@
 // Moteur d'XP, de trophées et de défis hebdomadaires (BET-57). Décisions pures dans rewards.js ; ce fichier assemble les données et écrit avec la clé service_role.
 import { streakState, weekKey } from '../model.js';
-import { challengeScore, challengeXp, dayStreak, evaluateBadges, planXpEvents, rankChallenge } from '../rewards.js';
+import { challengeScore, challengeTokens, challengeXp, dayStreak, evaluateBadges, planXpEvents, rankChallenge } from '../rewards.js';
 
 const parisDay = date => new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Paris', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date(date));
-const group = (rows, key) => { const map = new Map(); for (const row of rows) map.set(row[key], [...(map.get(row[key]) ?? []), row]); return map; };
+export const group = (rows, key) => { const map = new Map(); for (const row of rows) map.set(row[key], [...(map.get(row[key]) ?? []), row]); return map; };
 const effectiveOdds = bet => bet.status === 'won' && Number(bet.stake) > 0 ? Number(bet.payout) / Number(bet.stake) : Number(bet.odds);
 
+// Pronos de ligue générale par joueur, du plus ancien au plus récent, avec la cote du ticket ou du prono du défi.
+export function entrySequences(entries, betById, pickById) {
+  const sequences = {};
+  for (const [user, list] of group(entries.slice().sort((a, b) => String(a.settled_at).localeCompare(String(b.settled_at))), 'user_id'))
+    sequences[user] = list.map(entry => ({ id: entry.id, points: entry.points, odds: entry.bet_id ? Number(betById.get(entry.bet_id)?.odds ?? 0) : Number(pickById.get(entry.daily_pick_id)?.odd ?? 0) }));
+  return sequences;
+}
 // Assemble les entrées de planXpEvents et les statistiques de trophées à partir des lignes de la base (fonction pure, testée).
 export function buildXpInputs({ entries, bets, dailyPicks, challenges, specialPicks, seasonResults, standings, titles }) {
   const betById = new Map(bets.map(bet => [bet.id, bet])), pickById = new Map(dailyPicks.map(pick => [pick.id, pick]));
@@ -16,9 +23,7 @@ export function buildXpInputs({ entries, bets, dailyPicks, challenges, specialPi
     ...specialPicks.filter(pick => pick.source === 'grid' && pick.status === 'won').map(pick => ({ user_id: pick.user_id, ref: `grid:${pick.id}`, odds: Number(pick.odd) }))];
   const offered = new Map(challenges.map(item => [item.day, item.picks.length])), dailyDays = [];
   for (const [user, picks] of group(dailyPicks, 'user_id')) for (const [day, list] of group(picks, 'day')) dailyDays.push({ user_id: user, day, played: list.length, offered: offered.get(day) ?? 0, settled: list.every(pick => pick.status !== 'pending') });
-  const sequences = {};
-  for (const [user, list] of group(entries.slice().sort((a, b) => String(a.settled_at).localeCompare(String(b.settled_at))), 'user_id'))
-    sequences[user] = list.map(entry => ({ id: entry.id, points: entry.points, odds: entry.bet_id ? Number(betById.get(entry.bet_id)?.odds ?? 0) : Number(pickById.get(entry.daily_pick_id)?.odd ?? 0) }));
+  const sequences = entrySequences(entries, betById, pickById);
   const titled = new Set(titles.map(title => `${title.league_id}|${title.season}`)), specials = [];
   for (const [league, rows] of group(standings.filter(row => row.scope === 'season' && row.picks > 0), 'league_id')) for (const season of [...titled].filter(key => key.startsWith(`${league}|`)).map(key => key.split('|')[1])) for (const row of rows) specials.push({ user_id: row.user_id, league_id: league, season, rank: row.rank, size: rows.length });
   const stats = {};
@@ -67,6 +72,7 @@ export async function closeWeeklyChallenges(admin, now = new Date()) {
       const rows = rankChallenge(list.map(entry => ({ user_id: entry.user_id, ...challengeScore(challenge, bets.filter(bet => bet.user_id === entry.user_id)) })));
       await admin.insertIgnore('challenge_results', rows.map(row => ({ week_start: week, challenge_id: challenge, user_id: row.user_id, score: row.score, bets: row.bets, wins: row.wins, rank: row.rank })), 'week_start,challenge_id,user_id');
       await admin.insertIgnore('xp_events', rows.map(row => ({ user_id: row.user_id, event_key: `challenge:${week}:${challenge}`, kind: 'challenge', xp: challengeXp(row.rank) })), 'user_id,event_key');
+      await admin.insertIgnore('token_ledger', rows.filter(row => challengeTokens(row.rank) > 0).map(row => ({ user_id: row.user_id, delta: challengeTokens(row.rank), reason: 'challenge', ref: `${week}:${challenge}` })), 'user_id,reason,ref');
       written += rows.length;
     }
   }

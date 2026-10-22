@@ -61,3 +61,50 @@ test('les entrées d’XP sont assemblées depuis la base : pronos comptés, vic
   assert.ok(R.evaluateBadges(stats).includes('streak-5'));assert.ok(R.evaluateBadges(stats).includes('perfect-day'));
   const events=R.planXpEvents(inputs),keys=events.map(e=>e.event_key);assert.equal(new Set(keys).size,keys.length);assert.ok(keys.includes('daily-full:2026-10-06')&&keys.includes('streak:5:5')&&keys.includes('special-title:ldc:2026-27'));
 });
+// BET-58 · jetons et récompenses de saison
+test('exemple de la proposition : (640 × 1,25 + 570) × 2 = 2 740 jetons',()=>{
+  const reward=R.seasonReward({piggy:640,share:.85,prize:570,difficulty:2,feats:[]});assert.equal(reward.total,2740);assert.equal(reward.regularity,1.25);
+});
+test('la régularité : 100 % ×1,5 ; 80 % et plus ×1,25 ; 60 % et plus ×1,1 ; en dessous ×1',()=>{assert.deepEqual([1,.9,.8,.7,.6,.59,0].map(R.regularityMultiplier),[1.5,1.25,1.25,1.1,1.1,1,1])});
+test('la prime de classement partage une cagnotte de 500 jetons par joueur : 1 800 au 1er, 570 au 5e, 250 au 20e pour un groupe de 20',()=>{
+  const prizes=Array.from({length:20},(_,i)=>R.rankPrize(i+1,20));assert.ok(Math.abs(prizes[0]-1800)<=5);assert.ok(Math.abs(prizes[4]-570)<=5);assert.ok(Math.abs(prizes[19]-250)<=8);
+  assert.ok(Math.abs(prizes.reduce((a,b)=>a+b,0)-10000)<=20);assert.ok(prizes.every((p,i)=>i===0||p<=prizes[i-1]));assert.equal(R.rankPrize(1,1),500);assert.equal(R.rankPrize(0,20),0);assert.equal(R.rankPrize(21,20),0);
+});
+test('la difficulté et les primes d’exploit sont multipliées par la division',()=>{
+  assert.deepEqual([0,1,2,3,4,5,6].map(R.divisionDifficulty),[1,1.25,1.5,2,3,4,5]);
+  const reward=R.seasonReward({piggy:100,share:0,prize:100,difficulty:3,feats:['promotion','group-champion']});assert.equal(reward.total,(100+100)*3+(300+1000)*3);assert.equal(R.seasonReward({piggy:0,share:1,prize:0,difficulty:5,feats:['master-champion']}).total,50000);
+});
+test('les primes d’exploit viennent du résultat de saison : montée, barrage, champion de groupe, champion du Master',()=>{
+  assert.deepEqual(R.featsOf({outcome:'PROMU',barrage:true,group_rank:1,group_size:20,from_echelon:5}),['promotion','barrage','group-champion']);assert.deepEqual(R.featsOf({outcome:'MAINTENU',group_rank:3,group_size:20}),[]);
+  assert.deepEqual(R.featsOf({outcome:'MAINTENU',group_rank:1,group_size:20,from_echelon:16}),['group-champion','master-champion']);assert.deepEqual(R.featsOf({outcome:'INACTIF',group_rank:1,group_size:20}),[]);assert.deepEqual(R.featsOf({outcome:'MAINTENU',group_rank:1,group_size:5,from_echelon:2}),[]);
+});
+test('la tirelire ajoute les gains au multiplicateur de série du moment, un prono perdu ne retire rien',()=>{
+  const w=(id,odds)=>({id,points:(odds-1)*10,odds}),l=id=>({id,points:-10,odds:2});
+  const bank=R.piggyBank([w(1,2),w(2,2),w(3,2),w(4,2),l(5),w(6,2)]);
+  assert.deepEqual(bank.parts.map(p=>p.gain),[10,10,12,12,10]);assert.equal(bank.total,54);assert.equal(bank.streak,1);
+  assert.equal(R.piggyBank([w(1,1.2),w(2,1.2)]).total,4);assert.equal(R.piggyBank([l(1)]).total,0);assert.equal(R.piggyBank([{id:1,points:0,odds:2}]).total,0);
+  assert.equal(R.piggyBank(Array.from({length:12},(_,i)=>w(i,2))).parts.at(-1).gain,30);
+});
+test('défis hebdomadaires : jetons 500, 300 et 150 pour le podium',()=>{assert.deepEqual([1,2,3,4].map(R.challengeTokens),[500,300,150,0])});
+const T=await import('./scripts/token-engine.mjs');
+test('séries et tirelires de la saison par ligue',()=>{
+  const w=(id,odds)=>({id,points:(odds-1)*10,odds}),rows=T.planStreaks({season:'2026-10',sequences:{a:[w(1,2),w(2,2),w(3,2)]},specialSequences:{ldc:{a:[w(9,2)],b:[{id:8,points:-10,odds:2}]}}}),by=(u,l)=>rows.find(r=>r.user_id===u&&r.league===l);
+  assert.deepEqual([by('a','general').current,by('a','general').multiplier,by('a','general').piggy],[3,1.2,32]);assert.equal(by('a','ldc').current,1);assert.equal(by('b','ldc').piggy,0);assert.equal(rows.length,3);
+});
+test('la fin de saison de la ligue générale verse les jetons du barème et ignore les inactifs',()=>{
+  const results=[{user_id:'a',from_echelon:11,to_echelon:12,outcome:'PROMU',group_rank:1,group_size:20,barrage:false},{user_id:'b',from_echelon:11,to_echelon:11,outcome:'MAINTENU',group_rank:20,group_size:20},{user_id:'c',from_echelon:11,to_echelon:10,outcome:'INACTIF',group_rank:null,group_size:null}];
+  const sequences={a:Array.from({length:4},(_,i)=>({id:i,points:10,odds:2}))},plan=T.planGeneralRewards({season:'2026-10',results,participation:{a:{played:4,offered:4},b:{played:2,offered:4}},sequences});
+  assert.equal(plan.rewards.length,2);const a=plan.rewards.find(r=>r.user_id==='a'),b=plan.rewards.find(r=>r.user_id==='b');
+  assert.deepEqual(a.feats,['promotion','group-champion']);assert.equal(a.regularity,1.5);assert.equal(a.difficulty,2);assert.equal(a.piggy,44);assert.equal(a.total,Math.round((44*1.5+R.rankPrize(1,20))*2+(300+1000)*2));
+  assert.equal(b.regularity,1);assert.equal(b.total,Math.round(R.rankPrize(20,20)*2));assert.deepEqual(plan.ledger.map(l=>[l.user_id,l.reason,l.ref]),[['a','season','2026-10:general'],['b','season','2026-10:general']]);
+});
+test('fin de compétition d’une ligue spéciale : difficulté de la ligue et prime de champion',()=>{
+  const league={id:'ldc',difficulty:1.5},rounds=[1,2,3,4].map(i=>({id:'r'+i,starts_at:`2026-10-0${i}T19:00:00Z`})),members=[{user_id:'a',joined_at:'2026-09-01'},{user_id:'b',joined_at:'2026-10-03'}],pick=(id,user,round,points)=>({id,user_id:user,round_id:round,odd:2,points,status:points>0?'won':'lost',settled_at:`2026-10-0${id}`});
+  const picks=[pick(1,'a','r1',10),pick(2,'a','r2',10),pick(3,'b','r3',10),pick(4,'b','r4',-10)],ranked=[{user_id:'a',picks:2,rank:1},{user_id:'b',picks:2,rank:2},{user_id:'z',picks:0,rank:3}];
+  const plan=T.planSpecialRewards({league,season:'2026-27',rounds,members,picks,ranked,titles:[{user_id:'a',kind:'champion'}]}),a=plan.rewards.find(r=>r.user_id==='a'),b=plan.rewards.find(r=>r.user_id==='b');
+  assert.equal(plan.rewards.length,2);assert.deepEqual(a.feats,['special-champion']);assert.equal(a.difficulty,1.5);assert.equal(a.regularity,1);assert.equal(b.regularity,1.5);assert.equal(a.total,Math.round((20*1+R.rankPrize(1,2))*1.5+1000*1.5));assert.equal(plan.ledger[0].ref,'2026-27:ldc');
+});
+test('primes mensuelles des ligues spéciales : 300, 200 et 100 jetons au podium du mois, multipliés par la difficulté',()=>{
+  const prizes=T.planMonthlyPrizes({league:{id:'liga',difficulty:1.25},month:'2026-09',standings:[{user_id:'c',picks:3,rank:3},{user_id:'a',picks:5,rank:1},{user_id:'b',picks:2,rank:2},{user_id:'d',picks:1,rank:4},{user_id:'z',picks:0,rank:1}]});
+  assert.deepEqual(prizes.map(p=>[p.user_id,p.delta]),[['a',375],['b',250],['c',125]]);assert.ok(prizes.every(p=>p.reason==='special-month'&&p.ref==='liga:2026-09'));
+});

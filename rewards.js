@@ -1,6 +1,6 @@
 // Récompenses du Club (BET-57) : barème d'XP, trophées et défis hebdomadaires. Fonctions pures, sans DOM ni réseau.
 // Le niveau est du prestige seul : il ne débloque rien et ne compte dans aucun classement. Chaque événement n'est enregistré qu'une fois (clé unique).
-import { streakState } from './model.js';
+import { streakMultiplier, streakState } from './model.js';
 
 export const XP = { counted: 2, won: 10, bigOdds: 5, bigOddsFrom: 2.5, dailyFull: 10, promotion: 200, groupChampion: 500, specialChampion: 1000, streak: { 3: 15, 5: 25, 8: 50, 12: 100 } };
 // XP de fin de saison selon la place : de `max` pour le premier à `min` pour le dernier.
@@ -74,3 +74,49 @@ export function rankChallenge(rows) {
   return rows.filter(row => row.bets > 0).sort((a, b) => b.score - a.score || b.wins - a.wins || String(a.user_id).localeCompare(String(b.user_id))).map((row, index) => ({ ...row, rank: index + 1 }));
 }
 export const challengeXp = rank => CHALLENGE_XP[rank - 1] ?? CHALLENGE_PARTICIPATION_XP;
+
+// Jetons (BET-58) : monnaie fictive, jamais achetable, jamais convertible, sans valeur. Distincte de la bankroll en euros fictifs.
+// Tirelire d'une ligue : chaque prono gagné compté ajoute (cote - 1) × 10 × le multiplicateur de série du moment. Un prono perdu ne retire rien.
+// entries : du plus ancien au plus récent [{id, points, odds}] (points = (cote - 1) × 10 pour un gagné).
+export function piggyBank(entries) {
+  let streak = 0, total = 0;
+  const parts = [];
+  for (const entry of entries) {
+    const points = Number(entry.points);
+    if (points < 0) { streak = 0; continue; }
+    if (points > 0) { if (Number(entry.odds) >= 1.5) streak++; const gain = Math.round(points * streakMultiplier(streak) * 100) / 100; total += gain; parts.push({ id: entry.id, gain }); }
+  }
+  return { total: Math.round(total * 100) / 100, parts, streak };
+}
+// Régularité : part des défis du jour (ou des journées) joués.
+export const regularityMultiplier = share => share >= 1 ? 1.5 : share >= .8 ? 1.25 : share >= .6 ? 1.1 : 1;
+// Prime de classement : cagnotte de 500 jetons par joueur du groupe, 20 % partagés à parts égales, 80 % selon 1 / rang^0,8.
+export const POOL_PER_PLAYER = 500;
+export function rankPrize(rank, size) {
+  if (!size || rank < 1 || rank > size) return 0;
+  let weights = 0;
+  for (let position = 1; position <= size; position++) weights += position ** -.8;
+  return Math.round(POOL_PER_PLAYER * size * (.2 / size + .8 * (rank ** -.8) / weights));
+}
+// Difficulté de la ligue générale selon la division (District ×1 ... Élite ×3, Champions ×4, Master ×5). Ligues spéciales : special_leagues.difficulty.
+export const DIVISION_DIFFICULTY = [1, 1.25, 1.5, 2, 3, 4, 5];
+export const divisionDifficulty = division => DIVISION_DIFFICULTY[division] ?? 1;
+export const FEATS = { promotion: 300, barrage: 500, 'group-champion': 1000, 'master-champion': 10000, 'special-champion': 1000 };
+// Fin de saison : (tirelire × régularité + prime de classement) × difficulté, plus les primes d'exploit × difficulté.
+export function seasonReward({ piggy, share, prize, difficulty, feats = [] }) {
+  const regularity = regularityMultiplier(share), featTotal = feats.reduce((sum, feat) => sum + (FEATS[feat] ?? 0), 0);
+  return { piggy: Math.round(piggy * 100) / 100, regularity, prize, difficulty, feats, total: Math.round((piggy * regularity + prize) * difficulty + featTotal * difficulty) };
+}
+// Primes d'exploit d'une ligne de season_results (la prime de barrage est enregistrée par la clôture).
+export function featsOf(result) {
+  const feats = [];
+  if (result.outcome === 'PROMU') feats.push('promotion');
+  if (result.barrage) feats.push('barrage');
+  if (result.group_rank === 1 && result.group_size >= 10 && result.outcome !== 'INACTIF') feats.push('group-champion');
+  if (result.from_echelon === 16 && result.group_rank === 1 && result.group_size >= 2) feats.push('master-champion');
+  return feats;
+}
+export const CHALLENGE_TOKENS = [500, 300, 150], SPECIAL_MONTH_TOKENS = [300, 200, 100], SPECIAL_CHAMPION_BONUS = 1000;
+export const challengeTokens = rank => CHALLENGE_TOKENS[rank - 1] ?? 0;
+// Autres usages des jetons (BET-62) : prix et plafonds fixés ici pour que le site et le serveur partagent les mêmes valeurs.
+export const TOKEN_USES = { shield: 800, bankrollRefill: { price: 500, amount: 1000, below: 50 } };

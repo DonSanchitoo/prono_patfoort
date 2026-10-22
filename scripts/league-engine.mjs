@@ -48,7 +48,7 @@ export function planClosure({ season, players, standings, groups, groupMembers, 
   });
   const result = closeSeason(input, { barrage: weekendPoints });
   const points = new Map(input.map(player => [player.id, player.points]));
-  const results = result.moves.map(move => ({ user_id: move.id, from_echelon: move.from, to_echelon: move.to, outcome: move.outcome, group_rank: move.groupRank ?? null, group_size: move.groupSize ?? null, points: points.get(move.id), protected: move.protectedNext, inactive: move.inactive, ...unlockPlan(move) }));
+  const results = result.moves.map(move => ({ user_id: move.id, from_echelon: move.from, to_echelon: move.to, outcome: move.outcome, group_rank: move.groupRank ?? null, group_size: move.groupSize ?? null, points: points.get(move.id), protected: move.protectedNext, inactive: move.inactive, barrage: Boolean(move.barrage), ...unlockPlan(move) }));
   return { season, next: nextSeason(season), results, groups: result.groups };
 }
 
