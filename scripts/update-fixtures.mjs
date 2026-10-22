@@ -1,6 +1,7 @@
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { recommendedMarket } from '../model.js';
 import { ODDS_REFRESH_HOURS, SECONDARY_ODDS_WINDOW_HOURS, isInSecondaryOddsWindow, mergeCachedSecondaryOffers } from '../odds-cache.js';
+import { sameTeam } from '../team-match.js';
 
 const leagues = [
   ['eng.1', 'Premier League', 34], ['fra.1', 'Ligue 1', 30],
@@ -19,7 +20,8 @@ const providerMap = {
   'La Liga': ['PD', 'soccer_spain_la_liga'], 'Serie A': ['SA', 'soccer_italy_serie_a'],
   'Bundesliga': ['BL1', 'soccer_germany_bundesliga'],
   'Ligue des champions': ['CL', 'soccer_uefa_champs_league'],
-  'Europa League': [null, 'soccer_uefa_europa_league']
+  'Europa League': [null, 'soccer_uefa_europa_league'],
+  'Conference League': [null, 'soccer_uefa_europa_conference_league']
 };
 const giants = ['Real Madrid','Barcelona','Manchester City','Manchester United','Liverpool','Arsenal','Chelsea','Bayern','Paris Saint-Germain','Marseille','Internazionale','Milan','Juventus','Napoli','Atlético Madrid','Borussia Dortmund'];
 const dateKey = date => date.toISOString().slice(0, 10).replaceAll('-', '');
@@ -51,9 +53,6 @@ function model(home, away, priority) {
   };
 }
 
-const normalize = value => value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase()
-  .replace(/\b(fc|afc|cf|ac|ssc|calcio|football|club|de|the)\b/g, '').replace(/[^a-z0-9]/g, '');
-const sameTeam = (a, b) => { const x = normalize(a), y = normalize(b); return x === y || (x.length > 5 && y.length > 5 && (x.includes(y) || y.includes(x))); };
 const clamp = value => Math.max(.3, Math.min(3.5, value));
 
 async function footballHistory() {
@@ -186,6 +185,8 @@ const providerFailures = [...failures];
 let history = [], oddsEvents = [], secondaryOddsResult = { secondarySuccesses:0, secondaryRequested:0 };
 try { history = await footballHistory(); } catch (error) { providerFailures.push(error.message); }
 try { secondaryOddsResult = await bookmakerOdds(unique, true); oddsEvents = secondaryOddsResult.events; } catch (error) { providerFailures.push(error.message); }
+const unmatchedOddsEvents=oddsEvents.filter(event=>{const date=String(event.commence_time??'').slice(0,10);return date>=start.toISOString().slice(0,10)&&date<=end.toISOString().slice(0,10)&&!unique.some(match=>sameTeam(event.home_team,match.home)&&sameTeam(event.away_team,match.away))});
+if(unmatchedOddsEvents.length)console.warn(`Événements de cotes non rapprochés (${unmatchedOddsEvents.length}) :\n${unmatchedOddsEvents.slice(0,20).map(event=>`${event.home_team} / ${event.away_team}`).join('\n')}`);
 const enriched = unique.map(match => {
   const homeStats = teamForm(match.home, history), awayStats = teamForm(match.away, history);
   if (homeStats.sample >= 2 && awayStats.sample >= 2) {
