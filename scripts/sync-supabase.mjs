@@ -2,10 +2,11 @@
 // Lancé par les workflows après la mise à jour de data/fixtures.json ; sans SUPABASE_SERVICE_ROLE_KEY il ne fait rien.
 import { readFile } from 'node:fs/promises';
 import { pathToFileURL } from 'node:url';
-import { leaguePoints, selectionResult, settleTicket } from '../model.js';
+import { analyseMatch, leaguePoints, selectionResult, settleTicket } from '../model.js';
 import { createAdmin } from './supabase-admin.mjs';
 import { recomputeStandings } from './league-engine.mjs';
 import { recomputeSpecialStandings, settleGridPicks, syncSpecialRounds } from './special-engine.mjs';
+import { awardXp } from './xp-engine.mjs';
 
 const MARKETS = ['home', 'draw', 'away', 'over', 'btts'];
 const STALE_DAYS = 10;
@@ -70,12 +71,24 @@ export async function loadResults(admin, settlements, now = Date.now()) {
   const since = new Date(now - 60 * 864e5).toISOString();
   return buildResults(settlements, await admin.select('fixtures', `kickoff=gte.${since}&select=id,home,away,kickoff,completed,voided,home_score,away_score&limit=5000`), now);
 }
-export async function settleServerBets(admin, results) {
-  const pending = await admin.select('bets', 'status=eq.pending&select=id,bet_type,stake,counts_general,selections,system_lines&order=placed_at.asc&limit=1000');
-  let settled = 0;
+// Value bets gagnés : paris simples dont la cote dépassait de plus de 3 % la probabilité du modèle au moment du règlement.
+export function valueBetIds(decisions, bets, matches) {
+  const byMatch = new Map(matches.map(match => [match.id, match])), ids = [];
+  for (const decision of decisions) {
+    const bet = bets.find(item => item.id === decision.id), item = bet?.selections?.[0], match = byMatch.get(item?.matchId);
+    if (decision.status !== 'won' || bet.bet_type !== 'single' || !match?.odds) continue;
+    const market = analyseMatch(match).markets.find(entry => entry.key === item.key);
+    if (market && market.probability * Number(item.odd) - 1 > .03) ids.push(decision.id);
+  }
+  return ids;
+}
+export async function settleServerBets(admin, results, matches = []) {
+  const pending = await admin.select('bets', 'status=eq.pending&select=id,bet_type,stake,counts_general,selections,system_lines&order=placed_at.asc&limit=1000'), accepted = [];
   for (const decision of planSettlements(pending, results))
-    if (await admin.rpc('settle_bet', { p_bet_id: decision.id, p_status: decision.status, p_payout: decision.payout, p_points: decision.points })) settled++;
-  return settled;
+    if (await admin.rpc('settle_bet', { p_bet_id: decision.id, p_status: decision.status, p_payout: decision.payout, p_points: decision.points })) accepted.push(decision);
+  const valueIds = valueBetIds(accepted, pending, matches);
+  if (valueIds.length) await admin.rpc('mark_value_bets', { p_ids: valueIds });
+  return accepted.length;
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
@@ -86,7 +99,7 @@ if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) 
   const rounds = await syncSpecialRounds(admin, data.matches ?? []);
   const challenge = await syncDailyChallenge(admin, data.dailyChallenge);
   const results = await loadResults(admin, data.settlements ?? []);
-  const settled = await settleServerBets(admin, results), daily = await settleDailyPicks(admin, results), grid = await settleGridPicks(admin, results);
-  const ranked = await recomputeStandings(admin), special = await recomputeSpecialStandings(admin);
-  console.log(`${synced} matchs synchronisés, défi du jour : ${challenge} matchs, ${settled} paris certifiés et ${daily} pronos du défi réglés, ${ranked} classements de ligue générale et ${special} de ligues spéciales recalculés, ${rounds} journées de ligues spéciales, ${grid} pronos de grille réglés.`);
+  const settled = await settleServerBets(admin, results, data.matches ?? []), daily = await settleDailyPicks(admin, results), grid = await settleGridPicks(admin, results);
+  const ranked = await recomputeStandings(admin), special = await recomputeSpecialStandings(admin), xp = await awardXp(admin);
+  console.log(`${synced} matchs synchronisés, défi du jour : ${challenge} matchs, ${settled} paris certifiés et ${daily} pronos du défi réglés, ${ranked} classements de ligue générale et ${special} de ligues spéciales recalculés, ${rounds} journées de ligues spéciales, ${grid} pronos de grille réglés, ${xp} événements d’XP.`);
 }

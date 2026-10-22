@@ -55,3 +55,16 @@ export function pickDailyChallenge(matches,day,weights={},previous=null,now=Date
   const added=matches.filter(match=>parisDate(match.kickoff)===day&&!match.completed&&!match.voided&&real(match)&&!taken.has(match.id)&&new Date(match.kickoff)>now).sort((a,b)=>(weights[b.league]??0)-(weights[a.league]??0)||spread(a)-spread(b)||String(a.id).localeCompare(String(b.id))).slice(0,Math.max(0,size-kept.length)).map(match=>({matchId:match.id,league:match.league,home:match.home,away:match.away,kickoff:match.kickoff,odds:{home:match.odds.home,draw:match.odds.draw,away:match.odds.away},bookmakers:match.oddsBookmakerCounts?.home??match.bookmakerCount??null}));
   return{date:day,picks:[...kept,...added]};
 }
+// Niveaux 1 à 1000 (BET-57) : XP pour passer du niveau n au niveau n+1 = 80 + 4 × n^0,75, arrondi à 5. Le niveau ne débloque rien.
+export const MAX_LEVEL=1000;
+export const xpForLevel=n=>Math.round((80+4*Math.pow(n,.75))/5)*5;
+const levelStarts=(()=>{const starts=[0,0];for(let n=1;n<MAX_LEVEL;n++)starts.push(starts[n]+xpForLevel(n));return starts})();
+export const totalXpForLevel=level=>levelStarts[Math.min(MAX_LEVEL,Math.max(1,level))];
+export function levelFromXp(xp){const total=Math.max(0,Number(xp)||0);let low=1,high=MAX_LEVEL;while(low<high){const mid=Math.ceil((low+high)/2);if(levelStarts[mid]<=total)low=mid;else high=mid-1}const next=low<MAX_LEVEL?xpForLevel(low):0,into=total-levelStarts[low];return{level:low,into,next,progress:next?into/next:1,total}}
+export const TITLES=[[1,'Rookie'],[25,'Titulaire'],[100,'Confirmé'],[250,'Expert'],[500,'Vétéran'],[750,'Légende'],[1000,'Immortel']];
+export const titleForLevel=level=>TITLES.filter(([from])=>level>=from).at(-1)[1];
+// Série de pronos comptés (BET-58 s'appuie dessus) : entries triées du plus ancien au plus récent [{id, points, odds}]. Seuls les pronos gagnés à 1,50 ou plus
+// font avancer la série, une défaite la remet à zéro, un prono annulé ou gagné sous 1,50 ne la change pas. Multiplicateurs : 3 → ×1,2 ; 5 → ×1,5 ; 8 → ×2 ; 12 → ×3.
+export const STREAK_STEPS=[[12,3],[8,2],[5,1.5],[3,1.2]];
+export const streakMultiplier=count=>(STREAK_STEPS.find(([from])=>count>=from)??[0,1])[1];
+export function streakState(entries){let current=0,best=0;const milestones=[];for(const entry of entries){const points=Number(entry.points);if(points<0)current=0;else if(points>0&&Number(entry.odds)>=1.5){current++;best=Math.max(best,current);if([3,5,8,12].includes(current))milestones.push({at:current,id:entry.id})}}return{current,best,multiplier:streakMultiplier(current),milestones}}
