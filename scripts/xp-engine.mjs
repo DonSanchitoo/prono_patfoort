@@ -1,5 +1,6 @@
 // Moteur d'XP, de trophées et de défis hebdomadaires (BET-57). Décisions pures dans rewards.js ; ce fichier assemble les données et écrit avec la clé service_role.
 import { streakState, weekKey } from '../model.js';
+import { completedCollections } from '../shop.js';
 import { challengeScore, challengeTokens, challengeXp, dayStreak, evaluateBadges, planXpEvents, rankChallenge } from '../rewards.js';
 
 const parisDay = date => new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Paris', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date(date));
@@ -10,11 +11,11 @@ const effectiveOdds = bet => bet.status === 'won' && Number(bet.stake) > 0 ? Num
 export function entrySequences(entries, betById, pickById) {
   const sequences = {};
   for (const [user, list] of group(entries.slice().sort((a, b) => String(a.settled_at).localeCompare(String(b.settled_at))), 'user_id'))
-    sequences[user] = list.map(entry => ({ id: entry.id, points: entry.points, odds: entry.bet_id ? Number(betById.get(entry.bet_id)?.odds ?? 0) : Number(pickById.get(entry.daily_pick_id)?.odd ?? 0) }));
+    sequences[user] = list.map(entry => ({ id: entry.id, settled_at: entry.settled_at, points: entry.points, odds: entry.bet_id ? Number(betById.get(entry.bet_id)?.odds ?? 0) : Number(pickById.get(entry.daily_pick_id)?.odd ?? 0) }));
   return sequences;
 }
 // Assemble les entrées de planXpEvents et les statistiques de trophées à partir des lignes de la base (fonction pure, testée).
-export function buildXpInputs({ entries, bets, dailyPicks, challenges, specialPicks, seasonResults, standings, titles }) {
+export function buildXpInputs({ entries, bets, dailyPicks, challenges, specialPicks, seasonResults, standings, titles, collectors = new Set() }) {
   const betById = new Map(bets.map(bet => [bet.id, bet])), pickById = new Map(dailyPicks.map(pick => [pick.id, pick]));
   const counted = [...entries.map(entry => ({ user_id: entry.user_id, ref: `le:${entry.id}` })), ...specialPicks.filter(pick => pick.status !== 'pending').map(pick => ({ user_id: pick.user_id, ref: `sp:${pick.id}` }))];
   const countedBets = new Set([...entries.map(entry => entry.bet_id), ...specialPicks.map(pick => pick.bet_id)].filter(Boolean));
@@ -33,14 +34,14 @@ export function buildXpInputs({ entries, bets, dailyPicks, challenges, specialPi
     const perDay = dailyDays.filter(day => day.user_id === user && day.offered === 4 && day.played === 4);
     stats[user] = { picks: counted.filter(item => item.user_id === user).length, bestStreak: streakState(own).best, wonOdds: ownBets.map(effectiveOdds), valueWins: ownBets.filter(bet => bet.value_bet).length,
       perfectDay: perDay.some(day => dailyPicks.filter(pick => pick.user_id === user && pick.day === day.day).every(pick => pick.status === 'won')), promoted: results.some(result => result.outcome === 'PROMU'),
-      groupChampion: results.some(result => result.group_rank === 1 && result.group_size >= 10 && result.outcome !== 'INACTIF'), specialChampion: titles.some(title => title.user_id === user && title.kind === 'champion'), dayStreak: dayStreak(days), seasons: results.filter(result => result.outcome !== 'INACTIF').length, collector: false };
+      groupChampion: results.some(result => result.group_rank === 1 && result.group_size >= 10 && result.outcome !== 'INACTIF'), specialChampion: titles.some(title => title.user_id === user && title.kind === 'champion'), dayStreak: dayStreak(days), seasons: results.filter(result => result.outcome !== 'INACTIF').length, collector: collectors.has(user) };
   }
   return { counted, wins, dailyDays, sequences, seasons: seasonResults, specials, titles, stats };
 }
 
 export async function awardXp(admin, now = new Date()) {
   const since = new Date(now.getTime() - 120 * 864e5).toISOString(), sinceDay = since.slice(0, 10);
-  const [entries, bets, dailyPicks, challenges, specialPicks, seasonResults, standings, titles, owned] = await Promise.all([
+  const [entries, bets, dailyPicks, challenges, specialPicks, seasonResults, standings, titles, owned, inventories, shopItems] = await Promise.all([
     admin.selectAll('league_entries', `league=eq.general&settled_at=gte.${since}&select=id,user_id,bet_id,daily_pick_id,points,settled_at`),
     admin.selectAll('bets', `status=in.(won,lost,void)&settled_at=gte.${since}&select=id,user_id,odds,stake,payout,status,value_bet,counts_general`),
     admin.selectAll('daily_picks', `day=gte.${sinceDay}&select=id,user_id,day,odd,status`),
@@ -49,9 +50,12 @@ export async function awardXp(admin, now = new Date()) {
     admin.selectAll('season_results', 'select=season,user_id,outcome,group_rank,group_size'),
     admin.selectAll('special_standings', 'scope=eq.season&select=league_id,scope,user_id,picks,rank'),
     admin.selectAll('special_titles', 'select=league_id,season,user_id,kind'),
-    admin.selectAll('user_badges', 'select=user_id,badge')
+    admin.selectAll('user_badges', 'select=user_id,badge'),
+    admin.selectAll('inventories', 'select=user_id,item_id'),
+    admin.selectAll('shop_items', 'collection=not.is.null&select=id,collection')
   ]);
-  const inputs = buildXpInputs({ entries, bets, dailyPicks, challenges, specialPicks, seasonResults, standings, titles }), have = new Set(owned.map(item => `${item.user_id}|${item.badge}`)), earned = [];
+  const catalog = shopItems, collectors = new Set([...group(inventories, 'user_id')].filter(([, rows]) => completedCollections(catalog, rows.map(row => row.item_id)).length).map(([user]) => user));
+  const inputs = buildXpInputs({ entries, bets, dailyPicks, challenges, specialPicks, seasonResults, standings, titles, collectors }), have = new Set(owned.map(item => `${item.user_id}|${item.badge}`)), earned = [];
   for (const [user, stats] of Object.entries(inputs.stats)) for (const badge of evaluateBadges(stats)) if (!have.has(`${user}|${badge}`)) earned.push({ user_id: user, badge });
   await admin.insertIgnore('user_badges', earned, 'user_id,badge');
   const badgeRows = [...owned, ...earned], events = planXpEvents({ ...inputs, badges: badgeRows });

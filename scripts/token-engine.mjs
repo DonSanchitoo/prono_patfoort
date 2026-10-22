@@ -6,8 +6,8 @@ import { divisionIndex, seasonKey } from '../league.js';
 import { entrySequences, group } from './xp-engine.mjs';
 
 // Séries et tirelires de la saison : une ligne par joueur et par ligue ('general' ou identifiant de ligue spéciale).
-export function planStreaks({ season, sequences, specialSequences = {} }) {
-  const rows = [], row = (user_id, league, entries) => { const state = streakState(entries), bank = piggyBank(entries); rows.push({ user_id, league, season, current: state.current, best: state.best, multiplier: state.multiplier, piggy: bank.total, updated_at: new Date().toISOString() }); };
+export function planStreaks({ season, sequences, specialSequences = {}, shields = {} }) {
+  const rows = [], row = (user_id, league, entries) => { const shield = shields[`${user_id}|${league}`] ?? null, state = streakState(entries, shield), bank = piggyBank(entries, shield); rows.push({ user_id, league, season, current: state.current, best: state.best, multiplier: state.multiplier, piggy: bank.total, updated_at: new Date().toISOString() }); };
   for (const [user, entries] of Object.entries(sequences)) row(user, 'general', entries);
   for (const [league, perUser] of Object.entries(specialSequences)) for (const [user, entries] of Object.entries(perUser)) row(user, league, entries);
   return rows;
@@ -48,14 +48,15 @@ export function planMonthlyPrizes({ league, month, standings }) {
 const DAY = 864e5;
 export async function updateStreaks(admin, now = new Date()) {
   const season = seasonKey(now), since = new Date(now.getTime() - 40 * DAY).toISOString();
-  const [entries, bets, dailyPicks, specialPicks] = await Promise.all([
+  const [entries, bets, dailyPicks, specialPicks, shieldRows] = await Promise.all([
     admin.selectAll('league_entries', `league=eq.general&season=eq.${season}&select=id,user_id,bet_id,daily_pick_id,points,settled_at`),
     admin.selectAll('bets', `settled_at=gte.${since}&select=id,odds`), admin.selectAll('daily_picks', `placed_at=gte.${since}&select=id,odd`),
-    admin.selectAll('special_picks', 'status=neq.pending&select=id,league_id,user_id,odd,points,settled_at')
+    admin.selectAll('special_picks', 'status=neq.pending&select=id,league_id,user_id,odd,points,settled_at'), admin.selectAll('streak_shields', 'select=user_id,league,season,created_at')
   ]);
+  const shields = Object.fromEntries(shieldRows.filter(row => row.league !== 'general' || row.season === season).map(row => [`${row.user_id}|${row.league}`, { from: row.created_at }]));
   const sequences = entrySequences(entries, new Map(bets.map(bet => [bet.id, bet])), new Map(dailyPicks.map(pick => [pick.id, pick]))), specialSequences = {};
-  for (const [league, rows] of group(specialPicks, 'league_id')) specialSequences[league] = Object.fromEntries([...group(rows.sort((a, b) => String(a.settled_at).localeCompare(String(b.settled_at))), 'user_id')].map(([user, list]) => [user, list.map(pick => ({ id: pick.id, points: pick.points, odds: Number(pick.odd) }))]));
-  const rows = planStreaks({ season, sequences, specialSequences });
+  for (const [league, rows] of group(specialPicks, 'league_id')) specialSequences[league] = Object.fromEntries([...group(rows.sort((a, b) => String(a.settled_at).localeCompare(String(b.settled_at))), 'user_id')].map(([user, list]) => [user, list.map(pick => ({ id: pick.id, settled_at: pick.settled_at, points: pick.points, odds: Number(pick.odd) }))]));
+  const rows = planStreaks({ season, sequences, specialSequences, shields });
   await admin.upsert('league_streaks', rows, 'user_id,league,season');
   return rows.length;
 }

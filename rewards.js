@@ -78,12 +78,12 @@ export const challengeXp = rank => CHALLENGE_XP[rank - 1] ?? CHALLENGE_PARTICIPA
 // Jetons (BET-58) : monnaie fictive, jamais achetable, jamais convertible, sans valeur. Distincte de la bankroll en euros fictifs.
 // Tirelire d'une ligue : chaque prono gagné compté ajoute (cote - 1) × 10 × le multiplicateur de série du moment. Un prono perdu ne retire rien.
 // entries : du plus ancien au plus récent [{id, points, odds}] (points = (cote - 1) × 10 pour un gagné).
-export function piggyBank(entries) {
-  let streak = 0, total = 0;
+export function piggyBank(entries, shield = null) {
+  let streak = 0, total = 0, shielded = false;
   const parts = [];
   for (const entry of entries) {
     const points = Number(entry.points);
-    if (points < 0) { streak = 0; continue; }
+    if (points < 0) { if (shield && !shielded && String(entry.settled_at ?? '') >= String(shield.from)) shielded = true; else streak = 0; continue; }
     if (points > 0) { if (Number(entry.odds) >= 1.5) streak++; const gain = Math.round(points * streakMultiplier(streak) * 100) / 100; total += gain; parts.push({ id: entry.id, gain }); }
   }
   return { total: Math.round(total * 100) / 100, parts, streak };

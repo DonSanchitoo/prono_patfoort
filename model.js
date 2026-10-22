@@ -67,7 +67,8 @@ export const titleForLevel=level=>TITLES.filter(([from])=>level>=from).at(-1)[1]
 // font avancer la série, une défaite la remet à zéro, un prono annulé ou gagné sous 1,50 ne la change pas. Multiplicateurs : 3 → ×1,2 ; 5 → ×1,5 ; 8 → ×2 ; 12 → ×3.
 export const STREAK_STEPS=[[12,3],[8,2],[5,1.5],[3,1.2]];
 export const streakMultiplier=count=>(STREAK_STEPS.find(([from])=>count>=from)??[0,1])[1];
-export function streakState(entries){let current=0,best=0;const milestones=[];for(const entry of entries){const points=Number(entry.points);if(points<0)current=0;else if(points>0&&Number(entry.odds)>=1.5){current++;best=Math.max(best,current);if([3,5,8,12].includes(current))milestones.push({at:current,id:entry.id})}}return{current,best,multiplier:streakMultiplier(current),milestones}}
+// shield : {from} (date ISO d'achat du bouclier) ; la première défaite réglée à partir de cette date ne remet pas la série à zéro (usage unique).
+export function streakState(entries,shield=null){let current=0,best=0,shielded=false;const milestones=[];for(const entry of entries){const points=Number(entry.points);if(points<0){if(shield&&!shielded&&String(entry.settled_at??'')>=String(shield.from)){shielded=true}else current=0}else if(points>0&&Number(entry.odds)>=1.5){current++;best=Math.max(best,current);if([3,5,8,12].includes(current))milestones.push({at:current,id:entry.id})}}return{current,best,multiplier:streakMultiplier(current),milestones,shieldUsed:shielded}}
 // Carte joueur (BET-50) : 6 attributs sur 99 calculés à partir de chiffres bruts publics (vue public_player_card), note générale pondérée.
 // raw : {settled, wins, staked, returned, avgOdds, tickets30, activeDays30, avgStakeRatio}. Provisoire tant que moins de 10 paris sont réglés.
 export const CARD_ATTRIBUTES=['PRÉ','VAL','RÉG','AUD','VOL','DIS'];
