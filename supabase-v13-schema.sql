@@ -114,3 +114,7 @@ begin
 end $$;
 revoke all on function public.delete_my_account(text) from public, anon;
 grant execute on function public.delete_my_account(text) to authenticated;
+
+-- Durcissement : aucune suppression directe de profil (la suppression passe par delete_my_account) et l'état synchronisé n'est jamais exposé au rôle anonyme.
+revoke delete on table public.profiles from authenticated;
+revoke all on table public.user_states from anon;
