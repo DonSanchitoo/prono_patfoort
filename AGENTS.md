@@ -21,7 +21,7 @@ Aucun linter ni formateur n'est configuré. Lance `npm test` avant chaque commit
 
 ## Repères d'architecture
 
-- `data/fixtures.json` est le seul lien entre le pipeline (`scripts/*.mjs`, lancé par GitHub Actions) et le front. Il est régénéré et commité par un bot plusieurs fois par heure : fais `git pull --rebase` avant de pousser, et ne le modifie pas à la main.
+- `data/fixtures.json` est le seul lien entre le pipeline (`scripts/*.mjs`, lancé par GitHub Actions) et le front. Il est régénéré et commité par un bot plusieurs fois par jour : fais `git pull --rebase` avant de pousser, et ne le modifie pas à la main.
 - `model.js` : calculs purs (Poisson, value, combinés, règlement), importés à la fois par `app.js` et par `scripts/update-fixtures.mjs`. Changer la logique de pronostic ici change le site **et** les pronostics enregistrés par le pipeline.
 - `app.js` : interface, rendu par `innerHTML` depuis un objet `state` global. `details.js` et `account.js` sont chargés à la demande.
 - `app.js` et `model.js` sont écrits en style très compact (une fonction par ligne) : garder ce style.

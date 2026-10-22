@@ -1,6 +1,6 @@
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { recommendedMarket } from '../model.js';
-import { SECONDARY_ODDS_INTERVAL_HOURS, SECONDARY_ODDS_WINDOW_HOURS, isInSecondaryOddsWindow, mergeCachedSecondaryOffers, shouldRefreshSecondaryOdds } from '../odds-cache.js';
+import { ODDS_REFRESH_HOURS, SECONDARY_ODDS_WINDOW_HOURS, isInSecondaryOddsWindow, mergeCachedSecondaryOffers } from '../odds-cache.js';
 
 const leagues = [
   ['eng.1', 'Premier League', 34], ['fra.1', 'Ligue 1', 30],
@@ -183,10 +183,9 @@ const unique = allUnique
 const settlements = allUnique.filter(match => match.completed && Number.isFinite(match.homeScore) && Number.isFinite(match.awayScore))
   .map(({id,date,home,away,homeScore,awayScore,completed})=>({id,date,home,away,homeScore,awayScore,completed}));
 const providerFailures = [...failures];
-const refreshSecondaryOdds = shouldRefreshSecondaryOdds(previousData.secondaryOddsRefreshedAt);
 let history = [], oddsEvents = [], secondaryOddsResult = { secondarySuccesses:0, secondaryRequested:0 };
 try { history = await footballHistory(); } catch (error) { providerFailures.push(error.message); }
-try { secondaryOddsResult = await bookmakerOdds(unique, refreshSecondaryOdds); oddsEvents = secondaryOddsResult.events; } catch (error) { providerFailures.push(error.message); }
+try { secondaryOddsResult = await bookmakerOdds(unique, true); oddsEvents = secondaryOddsResult.events; } catch (error) { providerFailures.push(error.message); }
 const enriched = unique.map(match => {
   const homeStats = teamForm(match.home, history), awayStats = teamForm(match.away, history);
   if (homeStats.sample >= 2 && awayStats.sample >= 2) {
@@ -207,7 +206,7 @@ const enriched = unique.map(match => {
 });
 await mkdir('data', { recursive: true });
 const refreshedAt = new Date().toISOString();
-const secondaryOddsRefreshedAt = refreshSecondaryOdds && secondaryOddsResult.secondarySuccesses ? refreshedAt : previousData.secondaryOddsRefreshedAt ?? null;
-await writeFile('data/fixtures.json', `${JSON.stringify({ generatedAt: refreshedAt, oddsRefreshedAt:refreshedAt, refreshIntervalHours:2, secondaryOddsRefreshedAt, secondaryOddsRefreshIntervalHours:SECONDARY_ODDS_INTERVAL_HOURS, secondaryOddsWindowHours:SECONDARY_ODDS_WINDOW_HOURS, movementThresholdPercent:5, source: 'ESPN + football-data.org + The Odds API', providerStatus: providerFailures.length ? 'partial' : 'ok', failures: providerFailures, coverage:{historicalMatches:history.length,oddsEvents:oddsEvents.length,secondaryOddsRequested:secondaryOddsResult.secondaryRequested,secondaryOddsEvents:secondaryOddsResult.secondarySuccesses,secondaryOddsMatches:enriched.filter(match=>match.realOddsMarkets?.some(key=>key==='over'||key==='btts')).length,statsMatches:enriched.filter(x=>x.statsSource).length,oddsMatches:enriched.filter(x=>x.oddsSource).length,settlements:settlements.length}, settlements, matches: enriched }, null, 2)}\n`);
+const secondaryOddsRefreshedAt = secondaryOddsResult.secondarySuccesses ? refreshedAt : previousData.secondaryOddsRefreshedAt ?? null;
+await writeFile('data/fixtures.json', `${JSON.stringify({ generatedAt: refreshedAt, oddsRefreshedAt:refreshedAt, oddsRefreshHours:ODDS_REFRESH_HOURS, oddsRefreshTimezone:'Europe/Paris', secondaryOddsRefreshedAt, secondaryOddsWindowHours:SECONDARY_ODDS_WINDOW_HOURS, movementThresholdPercent:5, source: 'ESPN + football-data.org + The Odds API', providerStatus: providerFailures.length ? 'partial' : 'ok', failures: providerFailures, coverage:{historicalMatches:history.length,oddsEvents:oddsEvents.length,secondaryOddsRequested:secondaryOddsResult.secondaryRequested,secondaryOddsEvents:secondaryOddsResult.secondarySuccesses,secondaryOddsMatches:enriched.filter(match=>match.realOddsMarkets?.some(key=>key==='over'||key==='btts')).length,statsMatches:enriched.filter(x=>x.statsSource).length,oddsMatches:enriched.filter(x=>x.oddsSource).length,settlements:settlements.length}, settlements, matches: enriched }, null, 2)}\n`);
 console.log(`${enriched.length} rencontres, ${settlements.length} résultats récents, ${history.length} historiques, ${oddsEvents.length} événements cotés.`);
 if (providerFailures.length) console.warn(providerFailures.join('\n'));

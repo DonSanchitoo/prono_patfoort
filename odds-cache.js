@@ -1,9 +1,10 @@
-export const SECONDARY_ODDS_INTERVAL_HOURS = 6;
 export const SECONDARY_ODDS_WINDOW_HOURS = 48;
+export const ODDS_REFRESH_HOURS = [7, 14, 19];
 
-export function shouldRefreshSecondaryOdds(lastRefresh, now = Date.now()) {
-  const previous = new Date(lastRefresh).getTime();
-  return !Number.isFinite(previous) || now - previous >= SECONDARY_ODDS_INTERVAL_HOURS * 3600000;
+export function nextOddsRefresh(hours = ODDS_REFRESH_HOURS, now = new Date()) {
+  const parts = Object.fromEntries(new Intl.DateTimeFormat('fr-FR', { timeZone:'Europe/Paris', hour:'2-digit', minute:'2-digit', hour12:false }).formatToParts(now).filter(part => part.type !== 'literal').map(part => [part.type, Number(part.value)]));
+  const next = hours.find(hour => hour * 60 > parts.hour * 60 + parts.minute);
+  return { hour: next ?? hours[0], tomorrow: next == null };
 }
 
 export function isInSecondaryOddsWindow(match, now = Date.now()) {
