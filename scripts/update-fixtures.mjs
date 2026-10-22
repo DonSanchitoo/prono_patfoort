@@ -71,6 +71,8 @@ async function footballHistory() {
   return responses;
 }
 
+async function oddsFailure(response,context){let detail='';try{const body=await response.json();detail=body.error_code??body.message??body.error??''}catch{}return `${context}: HTTP ${response.status}${detail?` (${detail})`:''}`}
+
 async function bookmakerOdds(upcomingMatches, refreshSecondary) {
   const key = process.env.THE_ODDS_API_KEY;
   if (!key) throw new Error('secret THE_ODDS_API_KEY absent');
@@ -80,7 +82,7 @@ async function bookmakerOdds(upcomingMatches, refreshSecondary) {
     const params = new URLSearchParams({ apiKey:key, regions:'eu', markets:'h2h', oddsFormat:'decimal', dateFormat:'iso' });
     const response = await fetch(`https://api.the-odds-api.com/v4/sports/${sport}/odds?${params}`);
     if (response.status === 404) continue;
-    if (!response.ok) { failures.push(`The Odds API ${sport}: HTTP ${response.status}`); continue; }
+    if (!response.ok) { failures.push(await oddsFailure(response,`The Odds API ${sport}`)); continue; }
     responses.push(...(await response.json()).map(event => ({...event, _sport:sport})));
   }
   const secondaryEvents = refreshSecondary ? upcomingMatches.filter(match=>isInSecondaryOddsWindow(match)).map(match => responses.find(event => sameTeam(event.home_team,match.home)&&sameTeam(event.away_team,match.away))).filter(Boolean) : [];
@@ -88,7 +90,7 @@ async function bookmakerOdds(upcomingMatches, refreshSecondary) {
   for (const event of secondaryEvents) {
     const params = new URLSearchParams({ apiKey:key, regions:'eu,uk', markets:'btts,totals', oddsFormat:'decimal', dateFormat:'iso' });
     const response = await fetch(`https://api.the-odds-api.com/v4/sports/${event._sport}/events/${event.id}/odds?${params}`);
-    if (!response.ok) { failures.push(`The Odds API ${event._sport} ${event.id}: HTTP ${response.status}`); continue; }
+    if (!response.ok) { failures.push(await oddsFailure(response,`The Odds API ${event._sport} ${event.id}`)); continue; }
     secondarySuccesses++;
     const extra = await response.json();
     for (const bookmaker of extra.bookmakers ?? []) {
