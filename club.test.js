@@ -45,12 +45,12 @@ test('les résultats ignorent les matchs en cours et annulent les matchs jamais 
 test('le règlement rapproche les sélections par identifiant seulement, pas par noms d’équipes',()=>{
   const bets=[{id:'b1',bet_type:'single',stake:10,selections:[{matchId:'espn-2',key:'home',odd:2,home:'Paris',away:'Lyon',match:'Paris - Lyon'}]}],old={id:'espn-1',home:'Paris',away:'Lyon',completed:true,homeScore:3,awayScore:0};
   assert.deepEqual(planSettlements(bets,[old]),[]);
-  assert.deepEqual(planSettlements(bets,[old,done('espn-2',1,0)]),[{id:'b1',status:'won',payout:20,points:0}]);
+  assert.deepEqual(planSettlements(bets,[old,done('espn-2',1,0)]),[{id:'b1',status:'won',payout:20,points:10}]);
 });
 test('le règlement est idempotent : seuls les paris acceptés par le serveur sont comptés',async()=>{
   const calls=[],admin={select:async table=>table==='bets'?[{id:'b1',bet_type:'single',stake:10,selections:[leg('espn-1','home',2)],system_lines:null},{id:'b2',bet_type:'single',stake:10,selections:[leg('espn-9','home',2)],system_lines:null}]:[{id:'espn-1',home:'A',away:'B',kickoff:'2026-10-22T10:00:00Z',completed:true,voided:false,home_score:1,away_score:0}],rpc:async(name,args)=>{calls.push([name,args]);return args.p_bet_id!=='b1'}};
   assert.equal(await settleServerBets(admin,await loadResults(admin,[],Date.parse('2026-10-22T14:00:00Z'))),0);
-  assert.deepEqual(calls,[['settle_bet',{p_bet_id:'b1',p_status:'won',p_payout:20,p_points:0}]]);
+  assert.deepEqual(calls,[['settle_bet',{p_bet_id:'b1',p_status:'won',p_payout:20,p_points:10}]]);
 });
 test('la synchronisation des matchs ignore les matchs incomplets et envoie les autres par lots',async()=>{
   const sent=[],admin={upsert:async(table,rows)=>sent.push([table,rows.map(r=>r.id)])};
@@ -70,7 +70,7 @@ test('les points de ligue : mise fixe de 10, cote plafonnée à 10,00, annulé �
 test('le règlement attribue les points d’un combiné compté avec sa cote totale, et 0 à un ticket non compté',()=>{
   const bet={id:'c',bet_type:'combined',stake:10,counts_general:true,selections:[leg('a','home',2),leg('b','over',2.5)]};
   assert.deepEqual(planSettlements([bet],[done('a',1,0),done('b',2,1)]),[{id:'c',status:'won',payout:50,points:40}]);
-  assert.equal(planSettlements([{...bet,counts_general:false}],[done('a',1,0),done('b',2,1)])[0].points,0);
+  assert.equal(planSettlements([{...bet,counts_general:false}],[done('a',1,0),done('b',2,1)])[0].points,40);
   assert.equal(planSettlements([bet],[done('a',1,0),{id:'b',voided:true}])[0].points,10);
   assert.equal(planSettlements([bet],[done('a',0,1)])[0].points,-10);
 });

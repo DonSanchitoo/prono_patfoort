@@ -5,6 +5,7 @@ import { pathToFileURL } from 'node:url';
 import { leaguePoints, selectionResult, settleTicket } from '../model.js';
 import { createAdmin } from './supabase-admin.mjs';
 import { recomputeStandings } from './league-engine.mjs';
+import { recomputeSpecialStandings, settleGridPicks, syncSpecialRounds } from './special-engine.mjs';
 
 const MARKETS = ['home', 'draw', 'away', 'over', 'btts'];
 const STALE_DAYS = 10;
@@ -34,9 +35,9 @@ export function planSettlements(bets, results) {
     const items = (bet.selections ?? []).map(({ home, away, match, ...rest }) => rest);
     const outcome = settleTicket({ betType: bet.bet_type, stake: bet.stake, items, systemLines: bet.system_lines ?? [] }, results);
     if (outcome.status === 'pending') continue;
-    // Points de ligue : cote effective du ticket (une sélection annulée est retirée), 0 si remboursé.
+    // Points de ligue : cote effective du ticket (une sélection annulée est retirée), 0 si remboursé. Le serveur ne les inscrit en ligue générale que si le ticket compte ; les ligues spéciales les utilisent aussi.
     const odds = outcome.status === 'won' ? outcome.payout / Number(bet.stake) : 1;
-    plan.push({ id: bet.id, status: outcome.status, payout: outcome.payout, points: bet.counts_general ? leaguePoints({ status: outcome.status, odds }) : 0 });
+    plan.push({ id: bet.id, status: outcome.status, payout: outcome.payout, points: leaguePoints({ status: outcome.status, odds }) });
   }
   return plan;
 }
@@ -82,9 +83,10 @@ if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) 
   if (!admin) { console.log('Supabase (service_role) non configuré : synchronisation des matchs et règlement des paris ignorés.'); process.exit(0); }
   const data = JSON.parse(await readFile('data/fixtures.json', 'utf8'));
   const synced = await syncFixtures(admin, data.matches ?? []);
+  const rounds = await syncSpecialRounds(admin, data.matches ?? []);
   const challenge = await syncDailyChallenge(admin, data.dailyChallenge);
   const results = await loadResults(admin, data.settlements ?? []);
-  const settled = await settleServerBets(admin, results), daily = await settleDailyPicks(admin, results);
-  const ranked = await recomputeStandings(admin);
-  console.log(`${synced} matchs synchronisés, défi du jour : ${challenge} matchs, ${settled} paris certifiés et ${daily} pronos du défi réglés, ${ranked} classements de ligue recalculés.`);
+  const settled = await settleServerBets(admin, results), daily = await settleDailyPicks(admin, results), grid = await settleGridPicks(admin, results);
+  const ranked = await recomputeStandings(admin), special = await recomputeSpecialStandings(admin);
+  console.log(`${synced} matchs synchronisés, défi du jour : ${challenge} matchs, ${settled} paris certifiés et ${daily} pronos du défi réglés, ${ranked} classements de ligue générale et ${special} de ligues spéciales recalculés, ${rounds} journées de ligues spéciales, ${grid} pronos de grille réglés.`);
 }

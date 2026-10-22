@@ -167,7 +167,7 @@ const results = await Promise.allSettled(leagues.map(async ([slug, label, weight
       league: label, home: homeTeam, away: awayTeam,
       leagueLogo, leagueLogoDark, homeId: homeCompetitor?.team?.id ?? null, awayId: awayCompetitor?.team?.id ?? null, homeLogo: homeCompetitor?.team?.logo ?? null, awayLogo: awayCompetitor?.team?.logo ?? null,
       priority, featured: priority >= 75, status: event.status?.type?.description ?? 'Programmé',
-      completed: event.status?.type?.completed === true, voided: voidStatuses.has(event.status?.type?.name),
+      completed: event.status?.type?.completed === true, voided: voidStatuses.has(event.status?.type?.name), knockout: /round of|quarter|semi|final|knockout|play-?off/i.test(competition?.notes?.[0]?.headline ?? ''),
       homeScore: homeCompetitor?.score == null ? null : Number(homeCompetitor.score),
       awayScore: awayCompetitor?.score == null ? null : Number(awayCompetitor.score),
       ...model(homeTeam, awayTeam, priority)
