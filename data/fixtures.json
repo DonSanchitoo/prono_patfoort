@@ -30,9 +30,18 @@
     "secondaryOddsMatches": 21,
     "statsMatches": 86,
     "oddsMatches": 63,
-    "settlements": 112
+    "settlements": 113
   },
   "settlements": [
+    {
+      "id": "espn-401915846",
+      "date": "2026-10-22",
+      "home": "Kairat Almaty",
+      "away": "Panathinaikos",
+      "homeScore": 1,
+      "awayScore": 5,
+      "completed": true
+    },
     {
       "id": "espn-401882870",
       "date": "2026-10-21",
@@ -7770,10 +7779,10 @@
       "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/443.png",
       "priority": 24,
       "featured": false,
-      "status": "Scheduled",
-      "completed": false,
-      "homeScore": 0,
-      "awayScore": 0,
+      "status": "Terminé",
+      "completed": true,
+      "homeScore": 1,
+      "awayScore": 5,
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
@@ -27469,5 +27478,5 @@
       }
     }
   ],
-  "scoresUpdatedAt": "2026-10-22T15:53:59.656Z"
+  "scoresUpdatedAt": "2026-10-22T16:55:14.233Z"
 }
