@@ -68,3 +68,23 @@ export const titleForLevel=level=>TITLES.filter(([from])=>level>=from).at(-1)[1]
 export const STREAK_STEPS=[[12,3],[8,2],[5,1.5],[3,1.2]];
 export const streakMultiplier=count=>(STREAK_STEPS.find(([from])=>count>=from)??[0,1])[1];
 export function streakState(entries){let current=0,best=0;const milestones=[];for(const entry of entries){const points=Number(entry.points);if(points<0)current=0;else if(points>0&&Number(entry.odds)>=1.5){current++;best=Math.max(best,current);if([3,5,8,12].includes(current))milestones.push({at:current,id:entry.id})}}return{current,best,multiplier:streakMultiplier(current),milestones}}
+// Carte joueur (BET-50) : 6 attributs sur 99 calculés à partir de chiffres bruts publics (vue public_player_card), note générale pondérée.
+// raw : {settled, wins, staked, returned, avgOdds, tickets30, activeDays30, avgStakeRatio}. Provisoire tant que moins de 10 paris sont réglés.
+export const CARD_ATTRIBUTES=['PRÉ','VAL','RÉG','AUD','VOL','DIS'];
+export const CARD_PROVISIONAL_BELOW=10;
+const scale99=(value,low,high)=>Math.round(20+79*Math.min(1,Math.max(0,(value-low)/(high-low))));
+export function cardAttributes(raw={}){
+  const settled=Number(raw.settled)||0,rate=settled?Number(raw.wins||0)/settled:0,staked=Number(raw.staked)||0,roi=staked>0?(Number(raw.returned||0)-staked)/staked*100:0;
+  return{
+    PRÉ:settled?scale99(rate,.2,.7):20, // précision : part de paris gagnés
+    VAL:settled?scale99(roi,-30,40):20, // value : rendement des mises
+    RÉG:scale99(Number(raw.activeDays30)||0,0,20), // régularité : jours actifs sur 30
+    AUD:Number(raw.avgOdds)>0?scale99(Number(raw.avgOdds),1.3,4):20, // audace : cote moyenne
+    VOL:scale99(Math.log10(1+(Number(raw.tickets30)||0)),0,Math.log10(101)), // volume : tickets sur 30 jours
+    DIS:raw.avgStakeRatio==null?50:scale99(.2-Number(raw.avgStakeRatio),0,.18) // discipline : mise moyenne rapportée au capital initial
+  };
+}
+export const cardOverall=attributes=>Math.min(99,Math.max(1,Math.round(.2*attributes.PRÉ+.2*attributes.VAL+.2*attributes.RÉG+.1*attributes.AUD+.1*attributes.VOL+.2*attributes.DIS)));
+export const cardProvisional=raw=>(Number(raw?.settled)||0)<CARD_PROVISIONAL_BELOW;
+// Moyenne des attributs d'un groupe de joueurs, pour le radar comparé.
+export function averageAttributes(list){const out={};for(const key of CARD_ATTRIBUTES)out[key]=list.length?Math.round(list.reduce((sum,item)=>sum+item[key],0)/list.length):0;return out}

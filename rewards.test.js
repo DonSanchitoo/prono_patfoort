@@ -108,3 +108,18 @@ test('primes mensuelles des ligues spéciales : 300, 200 et 100 jetons au podium
   const prizes=T.planMonthlyPrizes({league:{id:'liga',difficulty:1.25},month:'2026-09',standings:[{user_id:'c',picks:3,rank:3},{user_id:'a',picks:5,rank:1},{user_id:'b',picks:2,rank:2},{user_id:'d',picks:1,rank:4},{user_id:'z',picks:0,rank:1}]});
   assert.deepEqual(prizes.map(p=>[p.user_id,p.delta]),[['a',375],['b',250],['c',125]]);assert.ok(prizes.every(p=>p.reason==='special-month'&&p.ref==='liga:2026-09'));
 });
+// BET-50 · carte joueur
+test('la carte joueur : 6 attributs entre 20 et 99, note générale entre 1 et 99',()=>{
+  const none=M.cardAttributes({});assert.deepEqual(Object.keys(none),M.CARD_ATTRIBUTES);assert.ok(Object.values(none).every(v=>v>=20&&v<=99));assert.equal(none.PRÉ,20);assert.equal(none.DIS,50);assert.ok(M.cardOverall(none)>=1&&M.cardOverall(none)<=99);
+  const star=M.cardAttributes({settled:200,wins:140,staked:2000,returned:2800,avgOdds:4,tickets30:100,activeDays30:20,avgStakeRatio:.02});assert.deepEqual(Object.values(star),[99,99,99,99,99,99]);assert.equal(M.cardOverall(star),99);
+  const bad=M.cardAttributes({settled:50,wins:5,staked:500,returned:100,avgOdds:1.2,tickets30:0,activeDays30:0,avgStakeRatio:.5});assert.deepEqual(Object.values(bad),[20,20,20,20,20,20]);assert.equal(M.cardOverall(bad),20);
+});
+test('chaque attribut suit sa formule : précision, value, régularité, audace, volume, discipline',()=>{
+  const base={settled:100,wins:45,staked:1000,returned:1000,avgOdds:2.65,tickets30:10,activeDays30:10,avgStakeRatio:.11},a=M.cardAttributes(base);
+  assert.equal(a.PRÉ,60);assert.equal(M.cardAttributes({...base,wins:70}).PRÉ,99);assert.ok(M.cardAttributes({...base,wins:60}).PRÉ>a.PRÉ);assert.ok(M.cardAttributes({...base,returned:1300}).VAL>a.VAL);assert.ok(M.cardAttributes({...base,activeDays30:15}).RÉG>a.RÉG);assert.ok(M.cardAttributes({...base,avgOdds:3.5}).AUD>a.AUD);assert.ok(M.cardAttributes({...base,tickets30:50}).VOL>a.VOL);assert.ok(M.cardAttributes({...base,avgStakeRatio:.05}).DIS>a.DIS);
+  assert.equal(M.cardAttributes({...base,settled:0,wins:0}).PRÉ,20);
+});
+test('la carte est provisoire sous 10 paris réglés, la moyenne du groupe arrondit chaque attribut',()=>{
+  assert.equal(M.cardProvisional({settled:9}),true);assert.equal(M.cardProvisional({settled:10}),false);assert.equal(M.cardProvisional(undefined),true);
+  assert.deepEqual(M.averageAttributes([{PRÉ:40,VAL:50,RÉG:60,AUD:70,VOL:80,DIS:90},{PRÉ:60,VAL:51,RÉG:61,AUD:71,VOL:81,DIS:91}]),{PRÉ:50,VAL:51,RÉG:61,AUD:71,VOL:81,DIS:91});assert.deepEqual(M.averageAttributes([]),{PRÉ:0,VAL:0,RÉG:0,AUD:0,VOL:0,DIS:0});
+});
