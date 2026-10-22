@@ -10,7 +10,7 @@ BetMaster / BotPari : application web **statique** (HTML + JS vanilla en module 
 
 ```bash
 npm start          # python3 -m http.server 4173 → http://localhost:4173
-npm test           # node --test (exécute app.test.js)
+npm test           # node --test (exécute app.test.js et club.test.js)
 node --test --test-name-pattern="combiné" app.test.js   # un seul test (filtre sur le nom)
 node scripts/update-fixtures.mjs   # régénère data/fixtures.json (requiert FOOTBALL_DATA_TOKEN et THE_ODDS_API_KEY, sinon données partielles)
 node scripts/update-results.mjs    # met à jour uniquement les scores ESPN (sans clé)
@@ -20,7 +20,7 @@ Aucun linter ni formateur n'est configuré.
 
 ## Architecture
 
-Trois morceaux qui communiquent uniquement par le fichier `data/fixtures.json` :
+Trois morceaux qui communiquent par le fichier `data/fixtures.json` (et, pour les comptes, les paris et les ligues, par la base Supabase, voir « Club » plus bas) :
 
 1. **Pipeline de données (Node 20, GitHub Actions)**
    - `scripts/update-fixtures.mjs` (workflow `update-fixtures.yml`, à 7 h, 14 h et 19 h en heure de Paris) : calendriers ESPN (19 compétitions de la liste `leagues` : championnats, coupes d'Europe, coupes nationales et sélections ; J-7 à J+7, conservés J-3 à J+7). Les cotes réelles et la forme ne couvrent que les compétitions de `providerMap`, les autres gardent les cotes du modèle. La liste `leagues` de `scripts/update-results.mjs` et l'objet `LEAGUES` de `app.js` (logo, importance, famille) doivent suivre les mêmes libellés, historique football-data.org pour la forme des équipes (remplace `homeGoals`/`awayGoals` si au moins 2 matchs par équipe), cotes The Odds API (moyenne des bookmakers par marché, avec `bookmakerOffers`, `realOddsMarkets`, `oddsBookmakerCounts`). Toutes les cotes 1N2, BTTS et Over 2,5 sont actualisées ensemble, sans appel nocturne. BTTS et Over 2,5 couvrent les rencontres des prochaines 48 h, interrogent les régions `eu,uk` et conservent la dernière cote réelle de chaque bookmaker lorsqu'une réponse manque ; `odds-cache.js` porte les règles pures de fenêtre, horaires et fusion. Sans cotes réelles, les cotes viennent d'un modèle interne (`model()`). Compare avec le fichier précédent pour calculer `oddsMovement` (significatif à ±5 %), et fige `suggestedPick` une fois le match terminé pour que le pronostic affiché a posteriori soit celui proposé avant le match.
@@ -42,11 +42,21 @@ Trois morceaux qui communiquent uniquement par le fichier `data/fixtures.json` :
    - État utilisateur (bankroll, historique des paris, matchs personnalisés) uniquement dans `localStorage` (`betmaster-state-v1`) ; thème dans `betmaster-theme`. Pas de backend.
    - Règlement automatique : la mise est débitée au placement ; `settlePendingBets` règle chaque ticket `pending` une seule fois contre `settlements` + matchs terminés (gagné → crédit `mise × cote`). Le rapprochement se fait par `matchId`, sinon par noms d'équipes (les IDs peuvent changer).
 
-3. **Tests (`app.test.js`)** : `node:test`. Les calculs sont testés depuis `model.js`. Un test charge aussi `app.js` après avoir simulé `localStorage`, `location` et `document`, car le module exécute du code DOM au chargement : tout nouvel accès global au DOM ou au navigateur au niveau module doit rester compatible avec ces stubs (ou être protégé par `typeof window !== 'undefined'`).
+3. **Tests (`app.test.js`, `club.test.js`)** : `node:test`. `club.test.js` couvre les règles du Club (règlement serveur, ligues, niveaux, jetons). Les calculs sont testés depuis `model.js`. Un test charge aussi `app.js` après avoir simulé `localStorage`, `location` et `document`, car le module exécute du code DOM au chargement : tout nouvel accès global au DOM ou au navigateur au niveau module doit rester compatible avec ces stubs (ou être protégé par `typeof window !== 'undefined'`).
+
+## Club : comptes, paris certifiés et ligues (lots 8 à 10)
+
+Les paris des joueurs connectés sont **enregistrés et réglés côté serveur** (Supabase). Le navigateur affiche et demande, il n'écrit plus aucune bankroll, aucun statut, aucune statistique.
+
+- Scripts SQL à exécuter dans l'ordre par le propriétaire du projet Supabase (`SUPABASE_SETUP.md`) : `supabase-schema.sql`, `supabase-v3-schema.sql`, `supabase-v4-schema.sql` (annuaire, pseudo unique), `supabase-v5-schema.sql` (tickets certifiés). Tous sont réexécutables. `supabase-v5-recette.sql` est la recette de sécurité à jouer à la main.
+- Tables `fixtures` (alimentée par le pipeline), `player_accounts`, `capital_events`, `bets`. RLS : lecture par le propriétaire seulement, aucune écriture directe. Écritures par RPC `security definer` : `ensure_player_account`, `add_capital`, `place_bet` (contrôle connexion, coup d'envoi, cotes à 2 % près, mise couverte) et, pour la clé `service_role` seulement, `settle_bet` (idempotent).
+- `scripts/sync-supabase.mjs` (étape finale des workflows `update-fixtures.yml` et `update-results.yml`) envoie les matchs dans `fixtures` puis règle les paris en attente avec `settleTicket` de `model.js` (même logique que le site). Rapprochement par identifiant de match uniquement. Un match annulé (`voided`) rembourse la sélection ; un match jamais joué au bout de 10 jours est annulé. `scripts/supabase-admin.mjs` est le client REST `service_role` (sans dépendance npm).
+- Côté site, `account.js` expose `placeBet`, `addCapital`, `refreshServer` ; `app.js` garde `state.serverBets` (paris certifiés) et `state.legacy` (anciens paris du navigateur, « avant saison 1 »), et reconstruit `state.history` avec `rebuildHistory()`. Les statistiques publiques viennent de la vue `public_profiles` (calculées depuis `bets`).
+- Sans connexion au serveur de jeu, aucun pari n'est possible (le bouton l'indique) : il n'existe pas de pari « non certifié ».
 
 ## Contraintes
 
-- Les secrets `FOOTBALL_DATA_TOKEN` et `THE_ODDS_API_KEY` n'existent que dans GitHub Actions ; rien ne doit les exposer dans `data/fixtures.json` ni côté navigateur.
+- Les secrets `FOOTBALL_DATA_TOKEN`, `THE_ODDS_API_KEY` et `SUPABASE_SERVICE_ROLE_KEY` n'existent que dans GitHub Actions ; rien ne doit les exposer dans `data/fixtures.json` ni côté navigateur.
 - Les marchés +2,5 buts et BTTS sont souvent des estimations internes ; l'interface distingue cotes réelles (« MOYENNE · n bookmakers ») et estimées. Conserver cette distinction et les mentions « paris virtuels / 18+ / aucune garantie ».
 - Les pages Confidentialité et Mentions légales (fenêtres en bas de `index.html`) décrivent les données réellement collectées et les services tiers contactés (Supabase, Google Fonts, ESPN, jsDelivr) : les mettre à jour à chaque nouveau service ou nouvelle donnée.
 - Pas de tiret cadratin (—) ni demi-cadratin (–) dans les textes affichés : utiliser « · », « : » ou « - ».

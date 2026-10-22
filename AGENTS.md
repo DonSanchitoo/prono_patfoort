@@ -12,7 +12,7 @@ BetMaster / BotPari : application web **statique** (HTML + JS vanilla en module 
 
 ```bash
 npm start          # python3 -m http.server 4173 → http://localhost:4173
-npm test           # node --test (exécute app.test.js)
+npm test           # node --test (exécute app.test.js et club.test.js)
 node --test --test-name-pattern="combiné" app.test.js   # un seul test
 node scripts/update-results.mjs    # met à jour uniquement les scores ESPN (sans clé)
 ```
@@ -29,9 +29,13 @@ Aucun linter ni formateur n'est configuré. Lance `npm test` avant chaque commit
 - La liste `leagues` de `scripts/update-fixtures.mjs`, celle de `scripts/update-results.mjs` et l'objet `LEAGUES` de `app.js` doivent garder les mêmes libellés.
 - Thèmes : couleurs en variables CSS, sombre sur `:root`, clair sur `:root.light`. `--accent` pour les aplats, `--accent-text` pour le texte et les traits.
 
+## Club : comptes, paris certifiés et ligues
+
+Les paris des joueurs connectés sont enregistrés et réglés côté serveur (Supabase) : tables `fixtures`, `player_accounts`, `bets`, RPC `place_bet` et `settle_bet`, scripts `supabase-v4-schema.sql` et `supabase-v5-schema.sql` (ordre dans `SUPABASE_SETUP.md`). `scripts/sync-supabase.mjs` envoie les matchs et règle les paris avec `settleTicket` de `model.js` (clé `service_role` seulement dans GitHub Actions). Le navigateur n'écrit ni bankroll, ni statut, ni statistique : tout passe par des RPC `security definer`. Détail complet dans `CLAUDE.md` (section « Club »). Les tests du Club sont dans `club.test.js`.
+
 ## Contraintes
 
-- Les secrets `FOOTBALL_DATA_TOKEN` et `THE_ODDS_API_KEY` n'existent que dans GitHub Actions ; rien ne doit les exposer dans `data/fixtures.json` ni côté navigateur.
+- Les secrets `FOOTBALL_DATA_TOKEN`, `THE_ODDS_API_KEY` et `SUPABASE_SERVICE_ROLE_KEY` n'existent que dans GitHub Actions ; rien ne doit les exposer dans `data/fixtures.json` ni côté navigateur.
 - L'interface distingue cotes réelles (« MOYENNE · n bookmakers ») et estimées. Conserver cette distinction et les mentions « paris virtuels / 18+ / aucune garantie ».
 - Les pages Confidentialité et Mentions légales (bas de `index.html`) décrivent les données collectées et les services tiers contactés (Supabase, Google Fonts, ESPN, jsDelivr) : les mettre à jour à chaque nouveau service ou nouvelle donnée.
 - Pas de tiret cadratin ni demi-cadratin dans les textes affichés : utiliser « · », « : » ou « - ».
