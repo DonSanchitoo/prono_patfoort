@@ -30,7 +30,7 @@
     "secondaryOddsMatches": 21,
     "statsMatches": 86,
     "oddsMatches": 63,
-    "settlements": 138
+    "settlements": 148
   },
   "settlements": [
     {
@@ -265,6 +265,96 @@
       "away": "Hajduk Split",
       "homeScore": 0,
       "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401915552",
+      "date": "2026-10-22",
+      "home": "AFC Bournemouth",
+      "away": "AC Milan",
+      "homeScore": 3,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401915553",
+      "date": "2026-10-22",
+      "home": "Besiktas",
+      "away": "Crystal Palace",
+      "homeScore": 2,
+      "awayScore": 2,
+      "completed": true
+    },
+    {
+      "id": "espn-401915542",
+      "date": "2026-10-22",
+      "home": "Jagiellonia Bialystok",
+      "away": "Anderlecht",
+      "homeScore": 0,
+      "awayScore": 3,
+      "completed": true
+    },
+    {
+      "id": "espn-401915541",
+      "date": "2026-10-22",
+      "home": "NK Celje",
+      "away": "RB Salzburg",
+      "homeScore": 2,
+      "awayScore": 2,
+      "completed": true
+    },
+    {
+      "id": "espn-401915544",
+      "date": "2026-10-22",
+      "home": "Omonia Nicosia",
+      "away": "Benfica",
+      "homeScore": 1,
+      "awayScore": 4,
+      "completed": true
+    },
+    {
+      "id": "espn-401915543",
+      "date": "2026-10-22",
+      "home": "TSG Hoffenheim",
+      "away": "Lyon",
+      "homeScore": 3,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401915744",
+      "date": "2026-10-22",
+      "home": "AGF",
+      "away": "Egnatia",
+      "homeScore": 1,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401915836",
+      "date": "2026-10-22",
+      "home": "AS Monaco",
+      "away": "SC Freiburg",
+      "homeScore": 3,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401915832",
+      "date": "2026-10-22",
+      "home": "Braga",
+      "away": "KAA Gent",
+      "homeScore": 2,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401915833",
+      "date": "2026-10-22",
+      "home": "Lincoln Red Imps",
+      "away": "FC Twente",
+      "homeScore": 1,
+      "awayScore": 4,
       "completed": true
     },
     {
@@ -3650,9 +3740,9 @@
       "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/103.png",
       "priority": 58,
       "featured": false,
-      "status": "Scheduled",
-      "completed": false,
-      "homeScore": 0,
+      "status": "Terminé",
+      "completed": true,
+      "homeScore": 3,
       "awayScore": 0,
       "homeGoals": 1.26,
       "awayGoals": 1.76,
@@ -5755,10 +5845,10 @@
       "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/384.png",
       "priority": 28,
       "featured": false,
-      "status": "Scheduled",
-      "completed": false,
-      "homeScore": 0,
-      "awayScore": 0,
+      "status": "Terminé",
+      "completed": true,
+      "homeScore": 2,
+      "awayScore": 2,
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
@@ -6419,10 +6509,10 @@
       "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/441.png",
       "priority": 28,
       "featured": false,
-      "status": "Scheduled",
-      "completed": false,
+      "status": "Terminé",
+      "completed": true,
       "homeScore": 0,
-      "awayScore": 0,
+      "awayScore": 3,
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
@@ -6834,10 +6924,10 @@
       "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/2790.png",
       "priority": 28,
       "featured": false,
-      "status": "Scheduled",
-      "completed": false,
-      "homeScore": 0,
-      "awayScore": 0,
+      "status": "Terminé",
+      "completed": true,
+      "homeScore": 2,
+      "awayScore": 2,
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
@@ -7251,10 +7341,10 @@
       "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/1929.png",
       "priority": 28,
       "featured": false,
-      "status": "Scheduled",
-      "completed": false,
-      "homeScore": 0,
-      "awayScore": 0,
+      "status": "Terminé",
+      "completed": true,
+      "homeScore": 1,
+      "awayScore": 4,
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
@@ -7321,9 +7411,9 @@
       "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/167.png",
       "priority": 28,
       "featured": false,
-      "status": "Scheduled",
-      "completed": false,
-      "homeScore": 0,
+      "status": "Terminé",
+      "completed": true,
+      "homeScore": 3,
       "awayScore": 0,
       "homeGoals": 1.44,
       "awayGoals": 1.92,
@@ -8704,10 +8794,10 @@
       "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/21943.png",
       "priority": 24,
       "featured": false,
-      "status": "Scheduled",
-      "completed": false,
-      "homeScore": 0,
-      "awayScore": 0,
+      "status": "Terminé",
+      "completed": true,
+      "homeScore": 1,
+      "awayScore": 1,
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
@@ -8844,9 +8934,9 @@
       "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/126.png",
       "priority": 24,
       "featured": false,
-      "status": "Scheduled",
-      "completed": false,
-      "homeScore": 0,
+      "status": "Terminé",
+      "completed": true,
+      "homeScore": 3,
       "awayScore": 0,
       "homeGoals": 1.35,
       "awayGoals": 1.61,
@@ -8997,9 +9087,9 @@
       "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/3611.png",
       "priority": 24,
       "featured": false,
-      "status": "Scheduled",
-      "completed": false,
-      "homeScore": 0,
+      "status": "Terminé",
+      "completed": true,
+      "homeScore": 2,
       "awayScore": 0,
       "homeGoals": 1.45,
       "awayGoals": 1.15,
@@ -9207,10 +9297,10 @@
       "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/152.png",
       "priority": 24,
       "featured": false,
-      "status": "Scheduled",
-      "completed": false,
-      "homeScore": 0,
-      "awayScore": 0,
+      "status": "Terminé",
+      "completed": true,
+      "homeScore": 1,
+      "awayScore": 4,
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
@@ -29831,5 +29921,5 @@
       }
     }
   ],
-  "scoresUpdatedAt": "2026-10-22T20:53:31.028Z"
+  "scoresUpdatedAt": "2026-10-22T21:52:11.517Z"
 }
