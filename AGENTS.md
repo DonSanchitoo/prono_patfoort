@@ -40,6 +40,7 @@ Aucun linter ni formateur n'est configuré. Lance `npm test` avant chaque commit
 ## Tickets et travail à deux
 
 - **Tickets BetMaster uniquement dans le YouTrack BetOptimum** (`betoptimum.youtrack.cloud`, projet `BET`), via le serveur MCP YouTrack configuré dans Codex. N'utilise aucune autre instance YouTrack pour ce dépôt.
+- Affecte immédiatement chaque nouveau ticket à l'utilisateur YouTrack `Victor.patfoort3`. Avant toute modification ou tout commentaire sur un ticket existant, vérifie qu'il est affecté à cet utilisateur ; sinon, n'y touche pas. La seule modification autorisée sur un ticket nouvellement créé et encore non affecté est son affectation immédiate à `Victor.patfoort3`.
 - Une branche par ticket, créée depuis `main` : `BET-<n>-<descriptif-court>` (ex. `BET-12-classement-buteurs`).
 - Le numéro du ticket figure dans chaque message de commit et dans le titre de la pull request (ex. `BET-12 Ajoute le classement des buteurs`).
 - Le ticket est fermé quand la pull request est fusionnée dans `main`.

@@ -57,6 +57,7 @@ Trois morceaux qui communiquent uniquement par le fichier `data/fixtures.json` :
 Le projet est développé à deux : l'un avec Claude Code (ce fichier), l'autre avec Codex (`AGENTS.md`). Les deux fichiers doivent rester cohérents : toute règle commune ajoutée ici va aussi dans `AGENTS.md`.
 
 - **Tickets BetMaster uniquement dans la connexion MCP `youtrack-betoptimum`** (instance `betoptimum.youtrack.cloud`, projet `BET`). Ne jamais lire, créer ni modifier de ticket de ce dépôt avec la connexion `youtrack` ni avec une autre instance, et ne jamais citer dans ce dépôt ou dans YouTrack BetOptimum le contenu d'un autre YouTrack.
+- Affecte immédiatement chaque nouveau ticket à l'utilisateur YouTrack `Victor.patfoort3`. Avant toute modification ou tout commentaire sur un ticket existant, vérifie qu'il est affecté à cet utilisateur ; sinon, n'y touche pas. La seule modification autorisée sur un ticket nouvellement créé et encore non affecté est son affectation immédiate à `Victor.patfoort3`.
 - Une branche par ticket, créée depuis `main` : `BET-<n>-<descriptif-court>` (ex. `BET-12-classement-buteurs`).
 - Le numéro du ticket figure dans chaque message de commit et dans le titre de la pull request (ex. `BET-12 Ajoute le classement des buteurs`).
 - Le ticket est fermé quand la pull request est fusionnée dans `main`.
