@@ -2,7 +2,7 @@
 // Lancé par les workflows après la mise à jour de data/fixtures.json ; sans SUPABASE_SERVICE_ROLE_KEY il ne fait rien.
 import { readFile } from 'node:fs/promises';
 import { pathToFileURL } from 'node:url';
-import { leaguePoints, settleTicket } from '../model.js';
+import { leaguePoints, selectionResult, settleTicket } from '../model.js';
 import { createAdmin } from './supabase-admin.mjs';
 
 const MARKETS = ['home', 'draw', 'away', 'over', 'btts'];
@@ -43,13 +43,35 @@ export async function syncFixtures(admin, matches, now = new Date()) {
   await admin.upsert('fixtures', matches.filter(match => match.id && match.home && match.away).map(match => fixtureRow(match, now)));
   return matches.length;
 }
-export async function settleServerBets(admin, settlements, now = Date.now()) {
-  const pending = await admin.select('bets', 'status=eq.pending&select=id,bet_type,stake,counts_general,selections,system_lines&order=placed_at.asc&limit=1000');
-  if (!pending.length) return 0;
-  const since = new Date(now - 60 * 864e5).toISOString();
-  const rows = await admin.select('fixtures', `kickoff=gte.${since}&select=id,home,away,kickoff,completed,voided,home_score,away_score&limit=5000`);
+export async function syncDailyChallenge(admin, challenge) {
+  if (!challenge?.date || !challenge.picks?.length) return 0;
+  await admin.upsert('daily_challenges', [{ day: challenge.date, picks: challenge.picks, updated_at: new Date().toISOString() }], 'day');
+  return challenge.picks.length;
+}
+// Pronos du défi du jour en attente : même barème que la ligue générale (mise fixe de 10).
+export function planDailySettlements(picks, results) {
+  const plan = [];
+  for (const pick of picks) {
+    const { status } = selectionResult({ matchId: pick.match_id, key: pick.pick }, results);
+    if (status !== 'pending') plan.push({ id: pick.id, status, points: leaguePoints({ status, odds: Number(pick.odd) }) });
+  }
+  return plan;
+}
+export async function settleDailyPicks(admin, results) {
+  const pending = await admin.select('daily_picks', 'status=eq.pending&select=id,match_id,pick,odd&limit=2000');
   let settled = 0;
-  for (const decision of planSettlements(pending, buildResults(settlements, rows, now)))
+  for (const decision of planDailySettlements(pending, results))
+    if (await admin.rpc('settle_daily_pick', { p_id: decision.id, p_status: decision.status, p_points: decision.points })) settled++;
+  return settled;
+}
+export async function loadResults(admin, settlements, now = Date.now()) {
+  const since = new Date(now - 60 * 864e5).toISOString();
+  return buildResults(settlements, await admin.select('fixtures', `kickoff=gte.${since}&select=id,home,away,kickoff,completed,voided,home_score,away_score&limit=5000`), now);
+}
+export async function settleServerBets(admin, results) {
+  const pending = await admin.select('bets', 'status=eq.pending&select=id,bet_type,stake,counts_general,selections,system_lines&order=placed_at.asc&limit=1000');
+  let settled = 0;
+  for (const decision of planSettlements(pending, results))
     if (await admin.rpc('settle_bet', { p_bet_id: decision.id, p_status: decision.status, p_payout: decision.payout, p_points: decision.points })) settled++;
   return settled;
 }
@@ -59,6 +81,8 @@ if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) 
   if (!admin) { console.log('Supabase (service_role) non configuré : synchronisation des matchs et règlement des paris ignorés.'); process.exit(0); }
   const data = JSON.parse(await readFile('data/fixtures.json', 'utf8'));
   const synced = await syncFixtures(admin, data.matches ?? []);
-  const settled = await settleServerBets(admin, data.settlements ?? []);
-  console.log(`${synced} matchs synchronisés, ${settled} paris certifiés réglés.`);
+  const challenge = await syncDailyChallenge(admin, data.dailyChallenge);
+  const results = await loadResults(admin, data.settlements ?? []);
+  const settled = await settleServerBets(admin, results), daily = await settleDailyPicks(admin, results);
+  console.log(`${synced} matchs synchronisés, défi du jour : ${challenge} matchs, ${settled} paris certifiés et ${daily} pronos du défi réglés.`);
 }

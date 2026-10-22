@@ -46,3 +46,12 @@ export function quotaRemaining(bets,now=Date.now(),limit=WEEKLY_QUOTA){return Ma
 export function leagueEligibility(matchIds,bets,now=Date.now()){const remaining=quotaRemaining(bets,now);if(!remaining)return{counts:false,reason:'QUOTA',remaining};const used=new Set(bets.filter(bet=>bet.countsGeneral).flatMap(bet=>bet.items.map(item=>item.matchId)));return matchIds.some(id=>used.has(id))?{counts:false,reason:'MATCH_DEJA_COMPTE',remaining}:{counts:true,reason:null,remaining}}
 // Départage : points, puis ROI, puis bons pronos au défi du jour, puis ancienneté (le plus ancien d'abord).
 export function tieBreak(a,b){return b.points-a.points||b.roi-a.roi||(b.dailyGood??0)-(a.dailyGood??0)||new Date(a.joinedAt)-new Date(b.joinedAt)}
+// Défi du jour (BET-54) : 4 matchs du jour (heure de Paris) avec cotes 1N2 réelles, classés par importance de la compétition puis cotes les plus serrées.
+// `previous` est le défi déjà publié : ses matchs et ses cotes restent figés, seules les places libres sont complétées avec des matchs pas encore commencés.
+export const parisDate=date=>parisDay.format(new Date(date));
+export function pickDailyChallenge(matches,day,weights={},previous=null,now=Date.now(),size=4){
+  const real=match=>['home','draw','away'].every(key=>match.realOddsMarkets?.includes(key)&&Number(match.odds?.[key])>1),spread=match=>Math.max(match.odds.home,match.odds.draw,match.odds.away)-Math.min(match.odds.home,match.odds.draw,match.odds.away);
+  const kept=previous?.date===day?previous.picks:[],taken=new Set(kept.map(pick=>pick.matchId));
+  const added=matches.filter(match=>parisDate(match.kickoff)===day&&!match.completed&&!match.voided&&real(match)&&!taken.has(match.id)&&new Date(match.kickoff)>now).sort((a,b)=>(weights[b.league]??0)-(weights[a.league]??0)||spread(a)-spread(b)||String(a.id).localeCompare(String(b.id))).slice(0,Math.max(0,size-kept.length)).map(match=>({matchId:match.id,league:match.league,home:match.home,away:match.away,kickoff:match.kickoff,odds:{home:match.odds.home,draw:match.odds.draw,away:match.odds.away},bookmakers:match.oddsBookmakerCounts?.home??match.bookmakerCount??null}));
+  return{date:day,picks:[...kept,...added]};
+}

@@ -460,3 +460,12 @@ dialog[open]{animation:pop .25s ease-out}
 /* BetMaster Club (lots 8 à 10) */
 .status.void{background:var(--surface-3);color:var(--muted)}.cert-tag{color:var(--accent-text);font-weight:800}.cert-tag.legacy{color:var(--muted);font-weight:700}
 .league-toggle{display:flex;gap:10px;align-items:flex-start;margin:10px 0 0;padding:10px 12px;border:1px solid var(--ticket-line);border-radius:var(--radius-sm);font-size:13px;cursor:pointer}.league-toggle[hidden]{display:none}.league-toggle input{margin-top:3px;accent-color:var(--accent)}.league-toggle b{display:block}.league-toggle small{color:var(--ticket-muted)}.league-toggle input:disabled+span{opacity:.7}
+/* Défi du jour */
+.daily-challenge{padding:20px 22px;margin:0 0 18px;display:flex;flex-direction:column;gap:14px;border-color:var(--accent-text)}.daily-challenge[hidden]{display:none}
+.daily-head{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;flex-wrap:wrap}.daily-head h3{margin:2px 0 4px;font-family:var(--display);font-size:24px}.daily-head small{color:var(--muted)}.daily-count{padding:6px 12px;border-radius:999px;background:var(--accent-soft);color:var(--accent-text);font-size:13px}
+.daily-list{display:grid;gap:10px}.daily-row{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1.6fr) auto;gap:6px 14px;align-items:center;padding:12px;border:1px solid var(--line);border-radius:var(--radius-sm);background:var(--surface-2)}
+.daily-league{display:flex;gap:8px;align-items:center;font-size:12px;color:var(--muted)}.daily-teams{display:flex;gap:8px;align-items:center;flex-wrap:wrap;min-width:0}.daily-teams em{font-style:normal;color:var(--muted);font-size:12px}
+.daily-odds{display:flex;gap:6px}.daily-odd{display:flex;flex-direction:column;align-items:center;min-width:58px;padding:7px 10px;border:1px solid var(--line-strong);border-radius:12px;background:var(--surface);color:var(--text);cursor:pointer}.daily-odd span{font-size:11px;color:var(--muted)}.daily-odd strong{font-size:15px}
+.daily-odd.selected{background:var(--accent);color:var(--on-accent);border-color:var(--accent)}.daily-odd.selected span{color:inherit}.daily-odd:disabled{cursor:default;opacity:.65}.daily-odd.selected:disabled{opacity:1}
+.daily-note,.daily-result{grid-column:1/-1;font-size:12px;color:var(--muted)}.daily-result.won{color:var(--accent-text)}.daily-result.lost{color:var(--danger)}.daily-row.closed .daily-teams{opacity:.8}
+@media(max-width:700px){.daily-row{grid-template-columns:1fr}.daily-odds{justify-content:space-between}.daily-odd{flex:1}.daily-challenge{padding:16px}}
