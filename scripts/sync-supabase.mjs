@@ -2,7 +2,7 @@
 // Lancé par les workflows après la mise à jour de data/fixtures.json ; sans SUPABASE_SERVICE_ROLE_KEY il ne fait rien.
 import { readFile } from 'node:fs/promises';
 import { pathToFileURL } from 'node:url';
-import { settleTicket } from '../model.js';
+import { leaguePoints, settleTicket } from '../model.js';
 import { createAdmin } from './supabase-admin.mjs';
 
 const MARKETS = ['home', 'draw', 'away', 'over', 'btts'];
@@ -32,7 +32,10 @@ export function planSettlements(bets, results) {
   for (const bet of bets) {
     const items = (bet.selections ?? []).map(({ home, away, match, ...rest }) => rest);
     const outcome = settleTicket({ betType: bet.bet_type, stake: bet.stake, items, systemLines: bet.system_lines ?? [] }, results);
-    if (outcome.status !== 'pending') plan.push({ id: bet.id, status: outcome.status, payout: outcome.payout });
+    if (outcome.status === 'pending') continue;
+    // Points de ligue : cote effective du ticket (une sélection annulée est retirée), 0 si remboursé.
+    const odds = outcome.status === 'won' ? outcome.payout / Number(bet.stake) : 1;
+    plan.push({ id: bet.id, status: outcome.status, payout: outcome.payout, points: bet.counts_general ? leaguePoints({ status: outcome.status, odds }) : 0 });
   }
   return plan;
 }
@@ -41,13 +44,13 @@ export async function syncFixtures(admin, matches, now = new Date()) {
   return matches.length;
 }
 export async function settleServerBets(admin, settlements, now = Date.now()) {
-  const pending = await admin.select('bets', 'status=eq.pending&select=id,bet_type,stake,selections,system_lines&order=placed_at.asc&limit=1000');
+  const pending = await admin.select('bets', 'status=eq.pending&select=id,bet_type,stake,counts_general,selections,system_lines&order=placed_at.asc&limit=1000');
   if (!pending.length) return 0;
   const since = new Date(now - 60 * 864e5).toISOString();
   const rows = await admin.select('fixtures', `kickoff=gte.${since}&select=id,home,away,kickoff,completed,voided,home_score,away_score&limit=5000`);
   let settled = 0;
   for (const decision of planSettlements(pending, buildResults(settlements, rows, now)))
-    if (await admin.rpc('settle_bet', { p_bet_id: decision.id, p_status: decision.status, p_payout: decision.payout })) settled++;
+    if (await admin.rpc('settle_bet', { p_bet_id: decision.id, p_status: decision.status, p_payout: decision.payout, p_points: decision.points })) settled++;
   return settled;
 }
 

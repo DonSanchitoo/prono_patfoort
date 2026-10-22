@@ -33,3 +33,16 @@ export function settleTicket(bet,results){
   const played=legs.filter(leg=>leg.status==='won');
   return played.length?{status:'won',payout:cents(stake*played.reduce((product,leg)=>product*leg.odd,1))}:{status:'void',payout:cents(stake)};
 }
+// Ligue générale (BET-53) : chaque prono compte comme une mise fixe de 10, cote plafonnée à 10,00. Gagné (cote - 1) × 10, perdu -10, annulé 0.
+export const WEEKLY_QUOTA=10,LEAGUE_ODDS_CAP=10;
+export function leaguePoints({status,odds}){return status==='won'?Math.round((Math.min(Number(odds)||1,LEAGUE_ODDS_CAP)-1)*1000)/100:status==='lost'?-10:0}
+const parisDay=new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Paris',year:'numeric',month:'2-digit',day:'2-digit'});
+// Lundi (heure de Paris) de la semaine d'un instant, au format AAAA-MM-JJ : la semaine va du lundi 00:00 au dimanche 23:59.
+export function weekKey(date){const [y,m,d]=parisDay.format(new Date(date)).split('-').map(Number),day=new Date(Date.UTC(y,m-1,d));day.setUTCDate(day.getUTCDate()-(day.getUTCDay()+6)%7);return day.toISOString().slice(0,10)}
+// Paris certifiés (forme du site : date, countsGeneral, items) comptés dans la semaine de `now` et places restantes.
+export function quotaUsed(bets,now=Date.now()){const week=weekKey(now);return bets.filter(bet=>bet.countsGeneral&&weekKey(bet.date)===week).length}
+export function quotaRemaining(bets,now=Date.now(),limit=WEEKLY_QUOTA){return Math.max(0,limit-quotaUsed(bets,now))}
+// Un ticket compte en ligue s'il reste du quota et si aucun de ses matchs n'a déjà servi à un ticket compté (mêmes règles que le serveur).
+export function leagueEligibility(matchIds,bets,now=Date.now()){const remaining=quotaRemaining(bets,now);if(!remaining)return{counts:false,reason:'QUOTA',remaining};const used=new Set(bets.filter(bet=>bet.countsGeneral).flatMap(bet=>bet.items.map(item=>item.matchId)));return matchIds.some(id=>used.has(id))?{counts:false,reason:'MATCH_DEJA_COMPTE',remaining}:{counts:true,reason:null,remaining}}
+// Départage : points, puis ROI, puis bons pronos au défi du jour, puis ancienneté (le plus ancien d'abord).
+export function tieBreak(a,b){return b.points-a.points||b.roi-a.roi||(b.dailyGood??0)-(a.dailyGood??0)||new Date(a.joinedAt)-new Date(b.joinedAt)}

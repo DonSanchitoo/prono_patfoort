@@ -1,5 +1,5 @@
 import test from 'node:test';import assert from 'node:assert/strict';
-const {settleTicket,settleBet,selectionResult}=await import('./model.js');
+const {settleTicket,settleBet,selectionResult,leaguePoints,weekKey,quotaUsed,quotaRemaining,leagueEligibility,tieBreak}=await import('./model.js');
 const {fixtureRow,buildResults,planSettlements,settleServerBets,syncFixtures}=await import('./scripts/sync-supabase.mjs');
 const {createAdmin}=await import('./scripts/supabase-admin.mjs');
 // BET-52 · tickets certifiés : règlement côté serveur
@@ -45,12 +45,12 @@ test('les résultats ignorent les matchs en cours et annulent les matchs jamais 
 test('le règlement rapproche les sélections par identifiant seulement, pas par noms d’équipes',()=>{
   const bets=[{id:'b1',bet_type:'single',stake:10,selections:[{matchId:'espn-2',key:'home',odd:2,home:'Paris',away:'Lyon',match:'Paris - Lyon'}]}],old={id:'espn-1',home:'Paris',away:'Lyon',completed:true,homeScore:3,awayScore:0};
   assert.deepEqual(planSettlements(bets,[old]),[]);
-  assert.deepEqual(planSettlements(bets,[old,done('espn-2',1,0)]),[{id:'b1',status:'won',payout:20}]);
+  assert.deepEqual(planSettlements(bets,[old,done('espn-2',1,0)]),[{id:'b1',status:'won',payout:20,points:0}]);
 });
 test('le règlement est idempotent : seuls les paris acceptés par le serveur sont comptés',async()=>{
   const calls=[],admin={select:async table=>table==='bets'?[{id:'b1',bet_type:'single',stake:10,selections:[leg('espn-1','home',2)],system_lines:null},{id:'b2',bet_type:'single',stake:10,selections:[leg('espn-9','home',2)],system_lines:null}]:[{id:'espn-1',home:'A',away:'B',kickoff:'2026-10-22T10:00:00Z',completed:true,voided:false,home_score:1,away_score:0}],rpc:async(name,args)=>{calls.push([name,args]);return args.p_bet_id!=='b1'}};
   assert.equal(await settleServerBets(admin,[],Date.parse('2026-10-22T14:00:00Z')),0);
-  assert.deepEqual(calls,[['settle_bet',{p_bet_id:'b1',p_status:'won',p_payout:20}]]);
+  assert.deepEqual(calls,[['settle_bet',{p_bet_id:'b1',p_status:'won',p_payout:20,p_points:0}]]);
 });
 test('la synchronisation des matchs ignore les matchs incomplets et envoie les autres par lots',async()=>{
   const sent=[],admin={upsert:async(table,rows)=>sent.push([table,rows.map(r=>r.id)])};
@@ -61,4 +61,43 @@ test('le client service_role refuse une configuration incomplète et ne fuit pas
   assert.equal(createAdmin({}),null);assert.equal(createAdmin({SUPABASE_URL:'https://x.supabase.co',SUPABASE_SERVICE_ROLE_KEY:'court'}),null);assert.equal(createAdmin({SUPABASE_URL:'http://evil.example',SUPABASE_SERVICE_ROLE_KEY:'a'.repeat(40)}),null);
   const secret='s'.repeat(40),admin=createAdmin({SUPABASE_URL:'https://x.supabase.co/',SUPABASE_SERVICE_ROLE_KEY:secret},async()=>({ok:false,status:401,text:async()=>'refusé'}));
   await assert.rejects(()=>admin.select('bets'),error=>error.message.includes('HTTP 401')&&!error.message.includes(secret));
+});
+// BET-53 · points de ligue et quota hebdomadaire
+test('les points de ligue : mise fixe de 10, cote plafonnée à 10,00, annulé à 0',()=>{
+  assert.equal(leaguePoints({status:'won',odds:1.01}),.1);assert.equal(leaguePoints({status:'won',odds:10}),90);assert.equal(leaguePoints({status:'won',odds:25}),90);
+  assert.equal(leaguePoints({status:'lost',odds:3}),-10);assert.equal(leaguePoints({status:'void',odds:3}),0);assert.equal(leaguePoints({status:'won',odds:1.9}),9);
+});
+test('le règlement attribue les points d’un combiné compté avec sa cote totale, et 0 à un ticket non compté',()=>{
+  const bet={id:'c',bet_type:'combined',stake:10,counts_general:true,selections:[leg('a','home',2),leg('b','over',2.5)]};
+  assert.deepEqual(planSettlements([bet],[done('a',1,0),done('b',2,1)]),[{id:'c',status:'won',payout:50,points:40}]);
+  assert.equal(planSettlements([{...bet,counts_general:false}],[done('a',1,0),done('b',2,1)])[0].points,0);
+  assert.equal(planSettlements([bet],[done('a',1,0),{id:'b',voided:true}])[0].points,10);
+  assert.equal(planSettlements([bet],[done('a',0,1)])[0].points,-10);
+});
+test('exemple de la proposition : A devant B devant C au classement par points',()=>{
+  const score=(count,won,odds)=>won*leaguePoints({status:'won',odds})+(count-won)*leaguePoints({status:'lost'}),A=score(50,30,1.9),B=score(2,2,2.5),C=score(120,38,3);
+  assert.deepEqual([A,B,C].map(Math.round),[70,30,-60]);assert.ok(A>B&&B>C);
+});
+test('la semaine de quota va du lundi 00:00 au dimanche 23:59, heure de Paris',()=>{
+  assert.equal(weekKey('2026-10-19T00:00:00+02:00'),'2026-10-19');assert.equal(weekKey('2026-10-25T23:59:59+01:00'),'2026-10-19');assert.equal(weekKey('2026-10-26T00:00:00+01:00'),'2026-10-26');
+  assert.equal(weekKey('2026-10-25T22:30:00Z'),'2026-10-19');assert.equal(weekKey('2026-10-25T23:30:00Z'),'2026-10-26');
+});
+test('le changement d’heure ne décale pas la semaine (passage à l’heure d’hiver le 25 octobre 2026)',()=>{
+  assert.equal(weekKey('2026-10-24T22:30:00Z'),'2026-10-19');assert.equal(weekKey('2026-10-25T01:30:00Z'),'2026-10-19');assert.equal(weekKey('2026-03-29T00:30:00Z'),'2026-03-23');assert.equal(weekKey('2026-03-29T21:30:00Z'),'2026-03-23');assert.equal(weekKey('2026-03-29T23:30:00Z'),'2026-03-30');
+});
+test('une semaine à cheval sur deux mois reste une seule semaine de quota',()=>{
+  assert.equal(weekKey('2026-09-30T10:00:00Z'),'2026-09-28');assert.equal(weekKey('2026-10-02T10:00:00Z'),'2026-09-28');assert.equal(weekKey('2026-10-05T10:00:00Z'),'2026-10-05');
+});
+test('le 11e pari de la semaine ne compte pas et le motif est donné avant validation',()=>{
+  const now=Date.parse('2026-10-22T12:00:00Z'),counted=Array.from({length:10},(_,i)=>({countsGeneral:true,date:'2026-10-20T10:00:00Z',items:[{matchId:'m'+i}]}));
+  assert.equal(quotaUsed(counted,now),10);assert.equal(quotaRemaining(counted,now),0);
+  assert.deepEqual(leagueEligibility(['m11'],counted,now),{counts:false,reason:'QUOTA',remaining:0});
+  assert.deepEqual(leagueEligibility(['m11'],counted.slice(1),now),{counts:true,reason:null,remaining:1});
+  assert.equal(leagueEligibility(['m1'],counted.slice(0,3),now).reason,'MATCH_DEJA_COMPTE');
+  assert.equal(quotaRemaining([...counted,{countsGeneral:true,date:'2026-10-12T10:00:00Z',items:[]}],now),0);
+  assert.equal(quotaRemaining([{countsGeneral:false,date:'2026-10-20T10:00:00Z',items:[]}],now),10);
+});
+test('le départage suit points, ROI, bons pronos du défi du jour, puis ancienneté',()=>{
+  const p={points:50,roi:5,dailyGood:3,joinedAt:'2026-01-01'};
+  assert.ok(tieBreak({...p,points:60},p)<0);assert.ok(tieBreak({...p,roi:9},p)<0);assert.ok(tieBreak({...p,dailyGood:4},p)<0);assert.ok(tieBreak({...p,joinedAt:'2025-01-01'},p)<0);assert.equal(tieBreak(p,{...p}),0);
 });
