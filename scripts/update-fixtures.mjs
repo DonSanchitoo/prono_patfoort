@@ -1,6 +1,6 @@
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { recommendedMarket } from '../model.js';
-import { ODDS_REFRESH_HOURS, SECONDARY_ODDS_WINDOW_HOURS, isInSecondaryOddsWindow, mergeCachedOffers } from '../odds-cache.js';
+import { ODDS_REFRESH_HOURS, SECONDARY_ODDS_WINDOW_HOURS, isInSecondaryOddsWindow, mergeCachedOffers, summarizeOffers } from '../odds-cache.js';
 import { sameTeam } from '../team-match.js';
 
 const leagues = [
@@ -132,10 +132,8 @@ function consensus(match, oddsEvents, previousOffers = []) {
   }
   const mergedOffers = mergeCachedOffers(offers, previousOffers);
   if (!mergedOffers.length) return null;
-  const prices = key => mergedOffers.map(offer => Number(offer[key])).filter(price => Number.isFinite(price) && price > 0);
-  const average = key => { const values=prices(key); return values.length ? Number((values.reduce((sum,price)=>sum+price,0)/values.length).toFixed(2)) : null };
-  const counts = Object.fromEntries(['home','draw','away','over','btts'].map(key=>[key,prices(key).length]));
-  return { offers:mergedOffers, counts, home:average('home'), draw:average('draw'), away:average('away'), over:average('over'), btts:average('btts') };
+  const summary=summarizeOffers(mergedOffers);
+  return { offers:mergedOffers, counts:summary.counts, cachedMarkets:summary.cachedMarkets, ...summary.averages };
 }
 
 const results = await Promise.allSettled(leagues.map(async ([slug, label, weight]) => {
@@ -202,15 +200,15 @@ const enriched = unique.map(match => {
   if (realOdds) {
     const realMarkets = ['home','draw','away','over','btts'].filter(key => realOdds[key]);
     match.odds = {...match.odds,...Object.fromEntries(realMarkets.map(key => [key,realOdds[key]]))};
-    match.oddsSource = 'The Odds API'; match.bookmakerOffers = realOdds.offers; match.bookmakerCount = realOdds.offers.length; match.oddsBookmakerCounts = realOdds.counts; match.realOddsMarkets = realMarkets;
+    match.oddsSource = 'The Odds API'; match.bookmakerOffers = realOdds.offers; match.bookmakerCount = realOdds.offers.length; match.oddsBookmakerCounts = realOdds.counts; match.realOddsMarkets = realMarkets; match.oddsCachedMarkets=realOdds.cachedMarkets;
   }
   if (previous?.odds) match.oddsMovement=Object.fromEntries(Object.keys(match.odds).map(key=>{const before=Number(previous.odds[key]),current=Number(match.odds[key]),percent=before&&current?Number(((current-before)/before*100).toFixed(1)):0;return[key,{previous:before,current,percent,significant:Math.abs(percent)>=5}]}));
   match.suggestedPick=match.completed&&previous?.suggestedPick?previous.suggestedPick:{...recommendedMarket(match),capturedAt:new Date().toISOString()};
   return match;
 });
 await mkdir('data', { recursive: true });
-const refreshedAt = new Date().toISOString();
+const refreshedAt = new Date().toISOString(), oddsRefreshedAt=oddsEvents.length?refreshedAt:previousData.oddsRefreshedAt??null;
 const secondaryOddsRefreshedAt = secondaryOddsResult.secondarySuccesses ? refreshedAt : previousData.secondaryOddsRefreshedAt ?? null;
-await writeFile('data/fixtures.json', `${JSON.stringify({ generatedAt: refreshedAt, oddsRefreshedAt:refreshedAt, oddsRefreshHours:ODDS_REFRESH_HOURS, oddsRefreshTimezone:'Europe/Paris', secondaryOddsRefreshedAt, secondaryOddsWindowHours:SECONDARY_ODDS_WINDOW_HOURS, movementThresholdPercent:5, source: 'ESPN + football-data.org + The Odds API', providerStatus: providerFailures.length ? 'partial' : 'ok', failures: providerFailures, coverage:{historicalMatches:history.length,oddsEvents:oddsEvents.length,secondaryOddsRequested:secondaryOddsResult.secondaryRequested,secondaryOddsEvents:secondaryOddsResult.secondarySuccesses,secondaryOddsMatches:enriched.filter(match=>match.realOddsMarkets?.some(key=>key==='over'||key==='btts')).length,statsMatches:enriched.filter(x=>x.statsSource).length,oddsMatches:enriched.filter(x=>x.oddsSource).length,settlements:settlements.length}, settlements, matches: enriched }, null, 2)}\n`);
+await writeFile('data/fixtures.json', `${JSON.stringify({ generatedAt: refreshedAt, oddsRefreshedAt, oddsRefreshHours:ODDS_REFRESH_HOURS, oddsRefreshTimezone:'Europe/Paris', secondaryOddsRefreshedAt, secondaryOddsWindowHours:SECONDARY_ODDS_WINDOW_HOURS, movementThresholdPercent:5, source: 'ESPN + football-data.org + The Odds API', providerStatus: providerFailures.length ? 'partial' : 'ok', failures: providerFailures, coverage:{historicalMatches:history.length,oddsEvents:oddsEvents.length,secondaryOddsRequested:secondaryOddsResult.secondaryRequested,secondaryOddsEvents:secondaryOddsResult.secondarySuccesses,secondaryOddsMatches:enriched.filter(match=>match.realOddsMarkets?.some(key=>key==='over'||key==='btts')).length,statsMatches:enriched.filter(x=>x.statsSource).length,oddsMatches:enriched.filter(x=>x.oddsSource).length,settlements:settlements.length}, settlements, matches: enriched }, null, 2)}\n`);
 console.log(`${enriched.length} rencontres, ${settlements.length} résultats récents, ${history.length} historiques, ${oddsEvents.length} événements cotés.`);
 if (providerFailures.length) console.warn(providerFailures.join('\n'));

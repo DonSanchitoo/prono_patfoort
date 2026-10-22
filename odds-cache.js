@@ -30,3 +30,11 @@ export function mergeCachedOffers(currentOffers = [], previousOffers = [], marke
   }
   return offers;
 }
+
+export function summarizeOffers(offers = [], markets = ['home', 'draw', 'away', 'over', 'btts']) {
+  const prices = market => offers.map(offer => Number(offer[market])).filter(price => Number.isFinite(price) && price > 1);
+  const counts = Object.fromEntries(markets.map(market => [market, prices(market).length]));
+  const averages = Object.fromEntries(markets.map(market => { const values=prices(market); return [market,values.length?Number((values.reduce((sum,price)=>sum+price,0)/values.length).toFixed(2)):null] }));
+  const cachedMarkets = markets.filter(market => counts[market] > 0 && offers.filter(offer => Number(offer[market]) > 1).every(offer => offer[`${market}Cached`]));
+  return { counts, averages, cachedMarkets };
+}
