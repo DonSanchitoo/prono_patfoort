@@ -75,12 +75,12 @@ async function bookmakerOdds(upcomingMatches, refreshSecondary) {
   const key = process.env.THE_ODDS_API_KEY;
   if (!key) throw new Error('secret THE_ODDS_API_KEY absent');
   const sports = [...new Set(Object.values(providerMap).map(([, sport]) => sport))];
-  const responses = [];
+  const responses = [], failures = [];
   for (const sport of sports) {
     const params = new URLSearchParams({ apiKey:key, regions:'eu', markets:'h2h', oddsFormat:'decimal', dateFormat:'iso' });
     const response = await fetch(`https://api.the-odds-api.com/v4/sports/${sport}/odds?${params}`);
     if (response.status === 404) continue;
-    if (!response.ok) throw new Error(`The Odds API ${sport}: HTTP ${response.status}`);
+    if (!response.ok) { failures.push(`The Odds API ${sport}: HTTP ${response.status}`); continue; }
     responses.push(...(await response.json()).map(event => ({...event, _sport:sport})));
   }
   const secondaryEvents = refreshSecondary ? upcomingMatches.filter(match=>isInSecondaryOddsWindow(match)).map(match => responses.find(event => sameTeam(event.home_team,match.home)&&sameTeam(event.away_team,match.away))).filter(Boolean) : [];
@@ -88,7 +88,7 @@ async function bookmakerOdds(upcomingMatches, refreshSecondary) {
   for (const event of secondaryEvents) {
     const params = new URLSearchParams({ apiKey:key, regions:'eu,uk', markets:'btts,totals', oddsFormat:'decimal', dateFormat:'iso' });
     const response = await fetch(`https://api.the-odds-api.com/v4/sports/${event._sport}/events/${event.id}/odds?${params}`);
-    if (!response.ok) continue;
+    if (!response.ok) { failures.push(`The Odds API ${event._sport} ${event.id}: HTTP ${response.status}`); continue; }
     secondarySuccesses++;
     const extra = await response.json();
     for (const bookmaker of extra.bookmakers ?? []) {
@@ -97,7 +97,7 @@ async function bookmakerOdds(upcomingMatches, refreshSecondary) {
       else event.bookmakers?.push(bookmaker);
     }
   }
-  return { events:responses, secondarySuccesses, secondaryRequested:secondaryEvents.length };
+  return { events:responses, secondarySuccesses, secondaryRequested:secondaryEvents.length, failures };
 }
 
 function teamForm(team, history) {
@@ -182,9 +182,10 @@ const unique = allUnique
 const settlements = allUnique.filter(match => match.completed && Number.isFinite(match.homeScore) && Number.isFinite(match.awayScore))
   .map(({id,date,home,away,homeScore,awayScore,completed})=>({id,date,home,away,homeScore,awayScore,completed}));
 const providerFailures = [...failures];
-let history = [], oddsEvents = [], secondaryOddsResult = { secondarySuccesses:0, secondaryRequested:0 };
+let history = [], oddsEvents = [], secondaryOddsResult = { secondarySuccesses:0, secondaryRequested:0, failures:[] };
 try { history = await footballHistory(); } catch (error) { providerFailures.push(error.message); }
 try { secondaryOddsResult = await bookmakerOdds(unique, true); oddsEvents = secondaryOddsResult.events; } catch (error) { providerFailures.push(error.message); }
+providerFailures.push(...secondaryOddsResult.failures);
 const unmatchedOddsEvents=oddsEvents.filter(event=>{const date=String(event.commence_time??'').slice(0,10);return date>=start.toISOString().slice(0,10)&&date<=end.toISOString().slice(0,10)&&!unique.some(match=>sameTeam(event.home_team,match.home)&&sameTeam(event.away_team,match.away))});
 if(unmatchedOddsEvents.length)console.warn(`Événements de cotes non rapprochés (${unmatchedOddsEvents.length}) :\n${unmatchedOddsEvents.slice(0,20).map(event=>`${event.home_team} / ${event.away_team}`).join('\n')}`);
 const enriched = unique.map(match => {
