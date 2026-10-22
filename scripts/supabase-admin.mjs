@@ -11,6 +11,9 @@ export function createAdmin(env = process.env, fetcher = fetch) {
   };
   return {
     select: (table, query = '') => call(`${table}?${query}`),
+    // Lecture complète par pages de 1 000 lignes (limite par défaut de PostgREST).
+    selectAll: async (table, query = '') => { const rows = []; for (let offset = 0; ; offset += 1000) { const page = await call(`${table}?${query}&limit=1000&offset=${offset}`); rows.push(...page); if (page.length < 1000) return rows; } },
+    patch: (table, query, body) => call(`${table}?${query}`, { method: 'PATCH', headers: { Prefer: 'return=minimal' }, body: JSON.stringify(body) }),
     insert: (table, rows) => rows.length ? call(table, { method: 'POST', headers: { Prefer: 'return=minimal' }, body: JSON.stringify(rows) }) : null,
     upsert: async (table, rows, conflict = 'id') => { for (let i = 0; i < rows.length; i += 500) await call(`${table}?on_conflict=${conflict}`, { method: 'POST', headers: { Prefer: 'resolution=merge-duplicates,return=minimal' }, body: JSON.stringify(rows.slice(i, i + 500)) }); },
     rpc: (name, args = {}) => call(`rpc/${name}`, { method: 'POST', body: JSON.stringify(args) })

@@ -4,6 +4,7 @@ import { readFile } from 'node:fs/promises';
 import { pathToFileURL } from 'node:url';
 import { leaguePoints, selectionResult, settleTicket } from '../model.js';
 import { createAdmin } from './supabase-admin.mjs';
+import { recomputeStandings } from './league-engine.mjs';
 
 const MARKETS = ['home', 'draw', 'away', 'over', 'btts'];
 const STALE_DAYS = 10;
@@ -84,5 +85,6 @@ if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) 
   const challenge = await syncDailyChallenge(admin, data.dailyChallenge);
   const results = await loadResults(admin, data.settlements ?? []);
   const settled = await settleServerBets(admin, results), daily = await settleDailyPicks(admin, results);
-  console.log(`${synced} matchs synchronisés, défi du jour : ${challenge} matchs, ${settled} paris certifiés et ${daily} pronos du défi réglés.`);
+  const ranked = await recomputeStandings(admin);
+  console.log(`${synced} matchs synchronisés, défi du jour : ${challenge} matchs, ${settled} paris certifiés et ${daily} pronos du défi réglés, ${ranked} classements de ligue recalculés.`);
 }

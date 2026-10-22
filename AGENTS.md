@@ -12,7 +12,7 @@ BetMaster / BotPari : application web **statique** (HTML + JS vanilla en module 
 
 ```bash
 npm start          # python3 -m http.server 4173 → http://localhost:4173
-npm test           # node --test (exécute app.test.js et club.test.js)
+npm test           # node --test (exécute app.test.js, club.test.js et league.test.js)
 node --test --test-name-pattern="combiné" app.test.js   # un seul test
 node scripts/update-results.mjs    # met à jour uniquement les scores ESPN (sans clé)
 ```
@@ -31,7 +31,7 @@ Aucun linter ni formateur n'est configuré. Lance `npm test` avant chaque commit
 
 ## Club : comptes, paris certifiés et ligues
 
-Les paris des joueurs connectés sont enregistrés et réglés côté serveur (Supabase) : tables `fixtures`, `player_accounts`, `bets`, RPC `place_bet` et `settle_bet`, scripts `supabase-v4-schema.sql` et `supabase-v5-schema.sql` (ordre dans `SUPABASE_SETUP.md`). `scripts/sync-supabase.mjs` envoie les matchs et règle les paris avec `settleTicket` de `model.js` (clé `service_role` seulement dans GitHub Actions). Le navigateur n'écrit ni bankroll, ni statut, ni statistique : tout passe par des RPC `security definer`. Détail complet dans `CLAUDE.md` (section « Club »). Points de ligue et quota hebdomadaire : `supabase-v6-schema.sql`, `leaguePoints` et `leagueEligibility` dans `model.js`. Défi du jour (`supabase-v7-schema.sql`, `pickDailyChallenge`, carte `#daily-challenge`) : 4 matchs imposés par jour, gratuits, réglés avec le barème de la ligue. Les tests du Club sont dans `club.test.js`.
+Les paris des joueurs connectés sont enregistrés et réglés côté serveur (Supabase) : tables `fixtures`, `player_accounts`, `bets`, RPC `place_bet` et `settle_bet`, scripts `supabase-v4-schema.sql` et `supabase-v5-schema.sql` (ordre dans `SUPABASE_SETUP.md`). `scripts/sync-supabase.mjs` envoie les matchs et règle les paris avec `settleTicket` de `model.js` (clé `service_role` seulement dans GitHub Actions). Le navigateur n'écrit ni bankroll, ni statut, ni statistique : tout passe par des RPC `security definer`. Détail complet dans `CLAUDE.md` (section « Club »). Points de ligue et quota hebdomadaire : `supabase-v6-schema.sql`, `leaguePoints` et `leagueEligibility` dans `model.js`. Défi du jour (`supabase-v7-schema.sql`, `pickDailyChallenge`, carte `#daily-challenge`) : 4 matchs imposés par jour, gratuits, réglés avec le barème de la ligue. Ligue générale : `league.js` (échelons, groupes, clôture de saison, pur), `supabase-v8-schema.sql`, `scripts/league-engine.mjs`, `scripts/close-season.mjs` et le workflow `close-season.yml`, bloc « Ma ligue » du site. Les tests du Club sont dans `club.test.js` et `league.test.js`.
 
 ## Contraintes
 
