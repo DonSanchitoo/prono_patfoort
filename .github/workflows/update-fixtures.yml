@@ -9,6 +9,9 @@ on:
     branches: [main]
     paths:
       - scripts/update-fixtures.mjs
+      - team-match.js
+      - model.js
+      - odds-cache.js
       - .github/workflows/update-fixtures.yml
 
 permissions:

@@ -1,6 +1,6 @@
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { recommendedMarket } from '../model.js';
-import { ODDS_REFRESH_HOURS, SECONDARY_ODDS_WINDOW_HOURS, isInSecondaryOddsWindow, mergeCachedSecondaryOffers } from '../odds-cache.js';
+import { ODDS_REFRESH_HOURS, SECONDARY_ODDS_WINDOW_HOURS, isInSecondaryOddsWindow, mergeCachedOffers } from '../odds-cache.js';
 import { sameTeam } from '../team-match.js';
 
 const leagues = [
@@ -128,7 +128,7 @@ function consensus(match, oddsEvents, previousOffers = []) {
     offer.over = totals?.outcomes?.find(outcome => /^over$/i.test(outcome.name) && Number(outcome.point) === 2.5)?.price;
     if (offer.home || offer.draw || offer.away || offer.btts || offer.over) offers.push(offer);
   }
-  const mergedOffers = mergeCachedSecondaryOffers(offers, previousOffers);
+  const mergedOffers = mergeCachedOffers(offers, previousOffers);
   if (!mergedOffers.length) return null;
   const prices = key => mergedOffers.map(offer => Number(offer[key])).filter(price => Number.isFinite(price) && price > 0);
   const average = key => { const values=prices(key); return values.length ? Number((values.reduce((sum,price)=>sum+price,0)/values.length).toFixed(2)) : null };
