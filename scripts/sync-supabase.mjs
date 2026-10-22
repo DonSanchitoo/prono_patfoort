@@ -8,6 +8,7 @@ import { recomputeStandings } from './league-engine.mjs';
 import { recomputeSpecialStandings, settleGridPicks, syncSpecialRounds } from './special-engine.mjs';
 import { awardXp } from './xp-engine.mjs';
 import { updateStreaks } from './token-engine.mjs';
+import { emitActivities } from './activity-engine.mjs';
 
 const MARKETS = ['home', 'draw', 'away', 'over', 'btts'];
 const STALE_DAYS = 10;
@@ -101,6 +102,6 @@ if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) 
   const challenge = await syncDailyChallenge(admin, data.dailyChallenge);
   const results = await loadResults(admin, data.settlements ?? []);
   const settled = await settleServerBets(admin, results, data.matches ?? []), daily = await settleDailyPicks(admin, results), grid = await settleGridPicks(admin, results);
-  const ranked = await recomputeStandings(admin), special = await recomputeSpecialStandings(admin), xp = await awardXp(admin), streaks = await updateStreaks(admin);
-  console.log(`${synced} matchs synchronisés, défi du jour : ${challenge} matchs, ${settled} paris certifiés et ${daily} pronos du défi réglés, ${ranked} classements de ligue générale et ${special} de ligues spéciales recalculés, ${rounds} journées de ligues spéciales, ${grid} pronos de grille réglés, ${xp} événements d’XP, ${streaks} séries et tirelires.`);
+  const ranked = await recomputeStandings(admin), special = await recomputeSpecialStandings(admin), xp = await awardXp(admin), streaks = await updateStreaks(admin), activities = await emitActivities(admin);
+  console.log(`${synced} matchs synchronisés, défi du jour : ${challenge} matchs, ${settled} paris certifiés et ${daily} pronos du défi réglés, ${ranked} classements de ligue générale et ${special} de ligues spéciales recalculés, ${rounds} journées de ligues spéciales, ${grid} pronos de grille réglés, ${xp} événements d’XP, ${streaks} séries et tirelires, ${activities} événements du fil d’activité.`);
 }
