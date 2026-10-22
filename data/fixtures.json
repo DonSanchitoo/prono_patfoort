@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-22T04:38:03.322Z",
-  "oddsRefreshedAt": "2026-10-22T04:38:03.322Z",
+  "generatedAt": "2026-10-22T06:47:17.243Z",
+  "oddsRefreshedAt": "2026-10-22T06:47:17.243Z",
   "refreshIntervalHours": 2,
   "movementThresholdPercent": 5,
   "source": "ESPN + football-data.org + The Odds API",
@@ -15,6 +15,267 @@
   },
   "settlements": [
     {
+      "id": "espn-401878771",
+      "date": "2026-10-17",
+      "home": "Everton",
+      "away": "Chelsea",
+      "homeScore": 0,
+      "awayScore": 2,
+      "completed": true
+    },
+    {
+      "id": "espn-401879262",
+      "date": "2026-10-17",
+      "home": "Brentford",
+      "away": "Liverpool",
+      "homeScore": 1,
+      "awayScore": 2,
+      "completed": true
+    },
+    {
+      "id": "espn-401878770",
+      "date": "2026-10-17",
+      "home": "Fulham",
+      "away": "Hull City",
+      "homeScore": 1,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401879259",
+      "date": "2026-10-17",
+      "home": "Manchester City",
+      "away": "Ipswich Town",
+      "homeScore": 3,
+      "awayScore": 2,
+      "completed": true
+    },
+    {
+      "id": "espn-401879258",
+      "date": "2026-10-17",
+      "home": "Newcastle United",
+      "away": "Aston Villa",
+      "homeScore": 0,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401879263",
+      "date": "2026-10-18",
+      "home": "AFC Bournemouth",
+      "away": "Sunderland",
+      "homeScore": 2,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401879261",
+      "date": "2026-10-18",
+      "home": "Brighton & Hove Albion",
+      "away": "Crystal Palace",
+      "homeScore": 5,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401879260",
+      "date": "2026-10-18",
+      "home": "Leeds United",
+      "away": "Manchester United",
+      "homeScore": 1,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401878769",
+      "date": "2026-10-18",
+      "home": "Nottingham Forest",
+      "away": "Arsenal",
+      "homeScore": 0,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401879257",
+      "date": "2026-10-19",
+      "home": "Tottenham Hotspur",
+      "away": "Coventry City",
+      "homeScore": 3,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401876437",
+      "date": "2026-10-16",
+      "home": "Le Mans",
+      "away": "Toulouse",
+      "homeScore": 0,
+      "awayScore": 3,
+      "completed": true
+    },
+    {
+      "id": "espn-401876432",
+      "date": "2026-10-17",
+      "home": "Strasbourg",
+      "away": "Paris Saint-Germain",
+      "homeScore": 1,
+      "awayScore": 3,
+      "completed": true
+    },
+    {
+      "id": "espn-401876436",
+      "date": "2026-10-17",
+      "home": "Lille",
+      "away": "Brest",
+      "homeScore": 1,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401876431",
+      "date": "2026-10-17",
+      "home": "Troyes",
+      "away": "Lens",
+      "homeScore": 1,
+      "awayScore": 3,
+      "completed": true
+    },
+    {
+      "id": "espn-401876439",
+      "date": "2026-10-18",
+      "home": "Angers",
+      "away": "Marseille",
+      "homeScore": 2,
+      "awayScore": 5,
+      "completed": true
+    },
+    {
+      "id": "espn-401876438",
+      "date": "2026-10-18",
+      "home": "Le Havre AC",
+      "away": "AJ Auxerre",
+      "homeScore": 1,
+      "awayScore": 3,
+      "completed": true
+    },
+    {
+      "id": "espn-401876435",
+      "date": "2026-10-18",
+      "home": "Lorient",
+      "away": "AS Monaco",
+      "homeScore": 1,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401876433",
+      "date": "2026-10-18",
+      "home": "Paris FC",
+      "away": "Stade Rennais",
+      "homeScore": 4,
+      "awayScore": 3,
+      "completed": true
+    },
+    {
+      "id": "espn-401876434",
+      "date": "2026-10-18",
+      "home": "Lyon",
+      "away": "Nice",
+      "homeScore": 2,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401882844",
+      "date": "2026-10-16",
+      "home": "Deportivo",
+      "away": "Levante",
+      "homeScore": 1,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401882843",
+      "date": "2026-10-17",
+      "home": "Espanyol",
+      "away": "Atlético Madrid",
+      "homeScore": 0,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401882837",
+      "date": "2026-10-17",
+      "home": "Villarreal",
+      "away": "Elche",
+      "homeScore": 0,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401882846",
+      "date": "2026-10-17",
+      "home": "Real Betis",
+      "away": "Barcelona",
+      "homeScore": 2,
+      "awayScore": 5,
+      "completed": true
+    },
+    {
+      "id": "espn-401882838",
+      "date": "2026-10-17",
+      "home": "Valencia",
+      "away": "Athletic Club",
+      "homeScore": 0,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401882840",
+      "date": "2026-10-18",
+      "home": "Osasuna",
+      "away": "Racing Santander",
+      "homeScore": 2,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401882845",
+      "date": "2026-10-18",
+      "home": "Celta Vigo",
+      "away": "Alavés",
+      "homeScore": 2,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401882841",
+      "date": "2026-10-18",
+      "home": "Málaga",
+      "away": "Real Sociedad",
+      "homeScore": 2,
+      "awayScore": 5,
+      "completed": true
+    },
+    {
+      "id": "espn-401882839",
+      "date": "2026-10-18",
+      "home": "Real Madrid",
+      "away": "Sevilla",
+      "homeScore": 4,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401882842",
+      "date": "2026-10-19",
+      "home": "Getafe",
+      "away": "Rayo Vallecano",
+      "homeScore": 1,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
       "id": "espn-401882870",
       "date": "2026-10-21",
       "home": "Levante",
@@ -24,84 +285,174 @@
       "completed": true
     },
     {
-      "id": "espn-401915395",
-      "date": "2026-10-21",
-      "home": "Como",
-      "away": "Manchester United",
+      "id": "espn-401874959",
+      "date": "2026-10-16",
+      "home": "Frosinone",
+      "away": "Sassuolo",
       "homeScore": 4,
-      "awayScore": 1,
+      "awayScore": 2,
       "completed": true
     },
     {
-      "id": "espn-401915396",
-      "date": "2026-10-21",
-      "home": "Lille",
-      "away": "Galatasaray",
+      "id": "espn-401874760",
+      "date": "2026-10-17",
+      "home": "Venezia",
+      "away": "Napoli",
+      "homeScore": 1,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401874953",
+      "date": "2026-10-17",
+      "home": "Bologna",
+      "away": "Internazionale",
+      "homeScore": 1,
+      "awayScore": 3,
+      "completed": true
+    },
+    {
+      "id": "espn-401874935",
+      "date": "2026-10-17",
+      "home": "AS Roma",
+      "away": "Genoa",
       "homeScore": 2,
-      "awayScore": 4,
+      "awayScore": 0,
       "completed": true
     },
     {
-      "id": "espn-401915394",
-      "date": "2026-10-21",
-      "home": "Aston Villa",
-      "away": "Viking FK",
+      "id": "espn-401874771",
+      "date": "2026-10-18",
+      "home": "Udinese",
+      "away": "Lecce",
+      "homeScore": 0,
+      "awayScore": 3,
+      "completed": true
+    },
+    {
+      "id": "espn-401874774",
+      "date": "2026-10-18",
+      "home": "Fiorentina",
+      "away": "Como",
+      "homeScore": 1,
+      "awayScore": 3,
+      "completed": true
+    },
+    {
+      "id": "espn-401874978",
+      "date": "2026-10-18",
+      "home": "AC Milan",
+      "away": "Atalanta",
       "homeScore": 3,
+      "awayScore": 2,
+      "completed": true
+    },
+    {
+      "id": "espn-401874765",
+      "date": "2026-10-18",
+      "home": "Juventus",
+      "away": "Lazio",
+      "homeScore": 0,
+      "awayScore": 3,
+      "completed": true
+    },
+    {
+      "id": "espn-401874762",
+      "date": "2026-10-19",
+      "home": "Monza",
+      "away": "Cagliari",
+      "homeScore": 4,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401874784",
+      "date": "2026-10-19",
+      "home": "Parma",
+      "away": "Torino",
+      "homeScore": 0,
+      "awayScore": 3,
+      "completed": true
+    },
+    {
+      "id": "espn-401884770",
+      "date": "2026-10-16",
+      "home": "Eintracht Frankfurt",
+      "away": "FC Cologne",
+      "homeScore": 1,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401884769",
+      "date": "2026-10-17",
+      "home": "1. FC Union Berlin",
+      "away": "Borussia Dortmund",
+      "homeScore": 0,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401884767",
+      "date": "2026-10-17",
+      "home": "Hamburg SV",
+      "away": "VfB Stuttgart",
+      "homeScore": 1,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401884765",
+      "date": "2026-10-17",
+      "home": "Schalke 04",
+      "away": "Mainz",
+      "homeScore": 0,
       "awayScore": 1,
       "completed": true
     },
     {
-      "id": "espn-401915312",
-      "date": "2026-10-21",
-      "home": "Bayern Munich",
-      "away": "Arsenal",
+      "id": "espn-401884764",
+      "date": "2026-10-17",
+      "home": "SV Elversberg",
+      "away": "FC Augsburg",
+      "homeScore": 4,
+      "awayScore": 3,
+      "completed": true
+    },
+    {
+      "id": "espn-401884766",
+      "date": "2026-10-17",
+      "home": "Werder Bremen",
+      "away": "SC Paderborn 07",
       "homeScore": 2,
       "awayScore": 2,
       "completed": true
     },
     {
-      "id": "espn-401915388",
-      "date": "2026-10-21",
-      "home": "Club Brugge",
-      "away": "Lens",
-      "homeScore": 3,
-      "awayScore": 0,
-      "completed": true
-    },
-    {
-      "id": "espn-401915390",
-      "date": "2026-10-21",
-      "home": "Internazionale",
-      "away": "Shakhtar Donetsk",
-      "homeScore": 1,
-      "awayScore": 0,
-      "completed": true
-    },
-    {
-      "id": "espn-401915389",
-      "date": "2026-10-21",
-      "home": "Real Betis",
-      "away": "Feyenoord Rotterdam",
-      "homeScore": 1,
-      "awayScore": 0,
-      "completed": true
-    },
-    {
-      "id": "espn-401915313",
-      "date": "2026-10-21",
-      "home": "Real Madrid",
+      "id": "espn-401884772",
+      "date": "2026-10-17",
+      "home": "Bayern Munich",
       "away": "RB Leipzig",
-      "homeScore": 4,
+      "homeScore": 6,
       "awayScore": 1,
       "completed": true
     },
     {
-      "id": "espn-401915391",
-      "date": "2026-10-21",
-      "home": "Sporting CP",
-      "away": "LASK Linz",
+      "id": "espn-401884771",
+      "date": "2026-10-18",
+      "home": "Bayer Leverkusen",
+      "away": "SC Freiburg",
       "homeScore": 2,
-      "awayScore": 3,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401884768",
+      "date": "2026-10-18",
+      "home": "Borussia Mönchengladbach",
+      "away": "TSG Hoffenheim",
+      "homeScore": 1,
+      "awayScore": 2,
       "completed": true
     },
     {
@@ -186,515 +537,83 @@
       "completed": true
     },
     {
-      "id": "espn-401879257",
-      "date": "2026-10-19",
-      "home": "Tottenham Hotspur",
-      "away": "Coventry City",
-      "homeScore": 3,
-      "awayScore": 1,
-      "completed": true
-    },
-    {
-      "id": "espn-401882842",
-      "date": "2026-10-19",
-      "home": "Getafe",
-      "away": "Rayo Vallecano",
-      "homeScore": 1,
-      "awayScore": 1,
-      "completed": true
-    },
-    {
-      "id": "espn-401874762",
-      "date": "2026-10-19",
-      "home": "Monza",
-      "away": "Cagliari",
-      "homeScore": 4,
-      "awayScore": 0,
-      "completed": true
-    },
-    {
-      "id": "espn-401874784",
-      "date": "2026-10-19",
-      "home": "Parma",
-      "away": "Torino",
-      "homeScore": 0,
-      "awayScore": 3,
-      "completed": true
-    },
-    {
-      "id": "espn-401876719",
-      "date": "2026-10-19",
-      "home": "Rodez Aveyron",
-      "away": "Montpellier",
-      "homeScore": 0,
-      "awayScore": 3,
-      "completed": true
-    },
-    {
-      "id": "espn-401879263",
-      "date": "2026-10-18",
-      "home": "AFC Bournemouth",
-      "away": "Sunderland",
-      "homeScore": 2,
-      "awayScore": 0,
-      "completed": true
-    },
-    {
-      "id": "espn-401879261",
-      "date": "2026-10-18",
-      "home": "Brighton & Hove Albion",
-      "away": "Crystal Palace",
-      "homeScore": 5,
-      "awayScore": 0,
-      "completed": true
-    },
-    {
-      "id": "espn-401879260",
-      "date": "2026-10-18",
-      "home": "Leeds United",
+      "id": "espn-401915395",
+      "date": "2026-10-21",
+      "home": "Como",
       "away": "Manchester United",
-      "homeScore": 1,
-      "awayScore": 1,
-      "completed": true
-    },
-    {
-      "id": "espn-401878769",
-      "date": "2026-10-18",
-      "home": "Nottingham Forest",
-      "away": "Arsenal",
-      "homeScore": 0,
-      "awayScore": 1,
-      "completed": true
-    },
-    {
-      "id": "espn-401876439",
-      "date": "2026-10-18",
-      "home": "Angers",
-      "away": "Marseille",
-      "homeScore": 2,
-      "awayScore": 5,
-      "completed": true
-    },
-    {
-      "id": "espn-401876438",
-      "date": "2026-10-18",
-      "home": "Le Havre AC",
-      "away": "AJ Auxerre",
-      "homeScore": 1,
-      "awayScore": 3,
-      "completed": true
-    },
-    {
-      "id": "espn-401876435",
-      "date": "2026-10-18",
-      "home": "Lorient",
-      "away": "AS Monaco",
-      "homeScore": 1,
-      "awayScore": 0,
-      "completed": true
-    },
-    {
-      "id": "espn-401876433",
-      "date": "2026-10-18",
-      "home": "Paris FC",
-      "away": "Stade Rennais",
-      "homeScore": 4,
-      "awayScore": 3,
-      "completed": true
-    },
-    {
-      "id": "espn-401876434",
-      "date": "2026-10-18",
-      "home": "Lyon",
-      "away": "Nice",
-      "homeScore": 2,
-      "awayScore": 1,
-      "completed": true
-    },
-    {
-      "id": "espn-401882840",
-      "date": "2026-10-18",
-      "home": "Osasuna",
-      "away": "Racing Santander",
-      "homeScore": 2,
-      "awayScore": 0,
-      "completed": true
-    },
-    {
-      "id": "espn-401882845",
-      "date": "2026-10-18",
-      "home": "Celta Vigo",
-      "away": "Alavés",
-      "homeScore": 2,
-      "awayScore": 1,
-      "completed": true
-    },
-    {
-      "id": "espn-401882841",
-      "date": "2026-10-18",
-      "home": "Málaga",
-      "away": "Real Sociedad",
-      "homeScore": 2,
-      "awayScore": 5,
-      "completed": true
-    },
-    {
-      "id": "espn-401882839",
-      "date": "2026-10-18",
-      "home": "Real Madrid",
-      "away": "Sevilla",
       "homeScore": 4,
       "awayScore": 1,
       "completed": true
     },
     {
-      "id": "espn-401874771",
-      "date": "2026-10-18",
-      "home": "Udinese",
-      "away": "Lecce",
-      "homeScore": 0,
-      "awayScore": 3,
-      "completed": true
-    },
-    {
-      "id": "espn-401874774",
-      "date": "2026-10-18",
-      "home": "Fiorentina",
-      "away": "Como",
-      "homeScore": 1,
-      "awayScore": 3,
-      "completed": true
-    },
-    {
-      "id": "espn-401874978",
-      "date": "2026-10-18",
-      "home": "AC Milan",
-      "away": "Atalanta",
-      "homeScore": 3,
-      "awayScore": 2,
-      "completed": true
-    },
-    {
-      "id": "espn-401874765",
-      "date": "2026-10-18",
-      "home": "Juventus",
-      "away": "Lazio",
-      "homeScore": 0,
-      "awayScore": 3,
-      "completed": true
-    },
-    {
-      "id": "espn-401884771",
-      "date": "2026-10-18",
-      "home": "Bayer Leverkusen",
-      "away": "SC Freiburg",
-      "homeScore": 2,
-      "awayScore": 1,
-      "completed": true
-    },
-    {
-      "id": "espn-401884768",
-      "date": "2026-10-18",
-      "home": "Borussia Mönchengladbach",
-      "away": "TSG Hoffenheim",
-      "homeScore": 1,
-      "awayScore": 2,
-      "completed": true
-    },
-    {
-      "id": "espn-401878771",
-      "date": "2026-10-17",
-      "home": "Everton",
-      "away": "Chelsea",
-      "homeScore": 0,
-      "awayScore": 2,
-      "completed": true
-    },
-    {
-      "id": "espn-401879262",
-      "date": "2026-10-17",
-      "home": "Brentford",
-      "away": "Liverpool",
-      "homeScore": 1,
-      "awayScore": 2,
-      "completed": true
-    },
-    {
-      "id": "espn-401878770",
-      "date": "2026-10-17",
-      "home": "Fulham",
-      "away": "Hull City",
-      "homeScore": 1,
-      "awayScore": 0,
-      "completed": true
-    },
-    {
-      "id": "espn-401879259",
-      "date": "2026-10-17",
-      "home": "Manchester City",
-      "away": "Ipswich Town",
-      "homeScore": 3,
-      "awayScore": 2,
-      "completed": true
-    },
-    {
-      "id": "espn-401879258",
-      "date": "2026-10-17",
-      "home": "Newcastle United",
-      "away": "Aston Villa",
-      "homeScore": 0,
-      "awayScore": 1,
-      "completed": true
-    },
-    {
-      "id": "espn-401876432",
-      "date": "2026-10-17",
-      "home": "Strasbourg",
-      "away": "Paris Saint-Germain",
-      "homeScore": 1,
-      "awayScore": 3,
-      "completed": true
-    },
-    {
-      "id": "espn-401876436",
-      "date": "2026-10-17",
+      "id": "espn-401915396",
+      "date": "2026-10-21",
       "home": "Lille",
-      "away": "Brest",
-      "homeScore": 1,
+      "away": "Galatasaray",
+      "homeScore": 2,
+      "awayScore": 4,
+      "completed": true
+    },
+    {
+      "id": "espn-401915394",
+      "date": "2026-10-21",
+      "home": "Aston Villa",
+      "away": "Viking FK",
+      "homeScore": 3,
       "awayScore": 1,
       "completed": true
     },
     {
-      "id": "espn-401876431",
-      "date": "2026-10-17",
-      "home": "Troyes",
-      "away": "Lens",
-      "homeScore": 1,
-      "awayScore": 3,
-      "completed": true
-    },
-    {
-      "id": "espn-401882843",
-      "date": "2026-10-17",
-      "home": "Espanyol",
-      "away": "Atlético Madrid",
-      "homeScore": 0,
-      "awayScore": 1,
-      "completed": true
-    },
-    {
-      "id": "espn-401882837",
-      "date": "2026-10-17",
-      "home": "Villarreal",
-      "away": "Elche",
-      "homeScore": 0,
-      "awayScore": 0,
-      "completed": true
-    },
-    {
-      "id": "espn-401882846",
-      "date": "2026-10-17",
-      "home": "Real Betis",
-      "away": "Barcelona",
-      "homeScore": 2,
-      "awayScore": 5,
-      "completed": true
-    },
-    {
-      "id": "espn-401882838",
-      "date": "2026-10-17",
-      "home": "Valencia",
-      "away": "Athletic Club",
-      "homeScore": 0,
-      "awayScore": 0,
-      "completed": true
-    },
-    {
-      "id": "espn-401874760",
-      "date": "2026-10-17",
-      "home": "Venezia",
-      "away": "Napoli",
-      "homeScore": 1,
-      "awayScore": 0,
-      "completed": true
-    },
-    {
-      "id": "espn-401874953",
-      "date": "2026-10-17",
-      "home": "Bologna",
-      "away": "Internazionale",
-      "homeScore": 1,
-      "awayScore": 3,
-      "completed": true
-    },
-    {
-      "id": "espn-401874935",
-      "date": "2026-10-17",
-      "home": "AS Roma",
-      "away": "Genoa",
-      "homeScore": 2,
-      "awayScore": 0,
-      "completed": true
-    },
-    {
-      "id": "espn-401884769",
-      "date": "2026-10-17",
-      "home": "1. FC Union Berlin",
-      "away": "Borussia Dortmund",
-      "homeScore": 0,
-      "awayScore": 0,
-      "completed": true
-    },
-    {
-      "id": "espn-401884767",
-      "date": "2026-10-17",
-      "home": "Hamburg SV",
-      "away": "VfB Stuttgart",
-      "homeScore": 1,
-      "awayScore": 0,
-      "completed": true
-    },
-    {
-      "id": "espn-401884765",
-      "date": "2026-10-17",
-      "home": "Schalke 04",
-      "away": "Mainz",
-      "homeScore": 0,
-      "awayScore": 1,
-      "completed": true
-    },
-    {
-      "id": "espn-401884764",
-      "date": "2026-10-17",
-      "home": "SV Elversberg",
-      "away": "FC Augsburg",
-      "homeScore": 4,
-      "awayScore": 3,
-      "completed": true
-    },
-    {
-      "id": "espn-401884766",
-      "date": "2026-10-17",
-      "home": "Werder Bremen",
-      "away": "SC Paderborn 07",
-      "homeScore": 2,
-      "awayScore": 2,
-      "completed": true
-    },
-    {
-      "id": "espn-401884772",
-      "date": "2026-10-17",
+      "id": "espn-401915312",
+      "date": "2026-10-21",
       "home": "Bayern Munich",
-      "away": "RB Leipzig",
-      "homeScore": 6,
-      "awayScore": 1,
-      "completed": true
-    },
-    {
-      "id": "espn-401876723",
-      "date": "2026-10-17",
-      "home": "Metz",
-      "away": "Sochaux",
-      "homeScore": 3,
-      "awayScore": 2,
-      "completed": true
-    },
-    {
-      "id": "espn-401876722",
-      "date": "2026-10-17",
-      "home": "Nantes",
-      "away": "Dunkerque",
+      "away": "Arsenal",
       "homeScore": 2,
-      "awayScore": 3,
-      "completed": true
-    },
-    {
-      "id": "espn-401876721",
-      "date": "2026-10-17",
-      "home": "Red Star FC 93",
-      "away": "Saint-Étienne",
-      "homeScore": 0,
-      "awayScore": 1,
-      "completed": true
-    },
-    {
-      "id": "espn-401876437",
-      "date": "2026-10-16",
-      "home": "Le Mans",
-      "away": "Toulouse",
-      "homeScore": 0,
-      "awayScore": 3,
-      "completed": true
-    },
-    {
-      "id": "espn-401882844",
-      "date": "2026-10-16",
-      "home": "Deportivo",
-      "away": "Levante",
-      "homeScore": 1,
-      "awayScore": 1,
-      "completed": true
-    },
-    {
-      "id": "espn-401874959",
-      "date": "2026-10-16",
-      "home": "Frosinone",
-      "away": "Sassuolo",
-      "homeScore": 4,
       "awayScore": 2,
       "completed": true
     },
     {
-      "id": "espn-401884770",
-      "date": "2026-10-16",
-      "home": "Eintracht Frankfurt",
-      "away": "FC Cologne",
+      "id": "espn-401915388",
+      "date": "2026-10-21",
+      "home": "Club Brugge",
+      "away": "Lens",
+      "homeScore": 3,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401915390",
+      "date": "2026-10-21",
+      "home": "Internazionale",
+      "away": "Shakhtar Donetsk",
       "homeScore": 1,
       "awayScore": 0,
       "completed": true
     },
     {
-      "id": "espn-401876727",
-      "date": "2026-10-16",
-      "home": "Annecy",
-      "away": "AS Nancy Lorraine",
+      "id": "espn-401915389",
+      "date": "2026-10-21",
+      "home": "Real Betis",
+      "away": "Feyenoord Rotterdam",
       "homeScore": 1,
-      "awayScore": 2,
+      "awayScore": 0,
       "completed": true
     },
     {
-      "id": "espn-401876726",
-      "date": "2026-10-16",
-      "home": "Grenoble",
-      "away": "Boulogne",
-      "homeScore": 0,
-      "awayScore": 2,
-      "completed": true
-    },
-    {
-      "id": "espn-401876725",
-      "date": "2026-10-16",
-      "home": "Guingamp",
-      "away": "Pau",
-      "homeScore": 1,
-      "awayScore": 2,
-      "completed": true
-    },
-    {
-      "id": "espn-401876720",
-      "date": "2026-10-16",
-      "home": "Stade de Reims",
-      "away": "Dijon FCO",
+      "id": "espn-401915313",
+      "date": "2026-10-21",
+      "home": "Real Madrid",
+      "away": "RB Leipzig",
       "homeScore": 4,
-      "awayScore": 2,
+      "awayScore": 1,
       "completed": true
     },
     {
-      "id": "espn-401876724",
-      "date": "2026-10-16",
-      "home": "Stade Laval",
-      "away": "Clermont Foot",
-      "homeScore": 3,
+      "id": "espn-401915391",
+      "date": "2026-10-21",
+      "home": "Sporting CP",
+      "away": "LASK Linz",
+      "homeScore": 2,
       "awayScore": 3,
       "completed": true
     },
@@ -1021,6 +940,87 @@
       "homeScore": 2,
       "awayScore": 1,
       "completed": true
+    },
+    {
+      "id": "espn-401876727",
+      "date": "2026-10-16",
+      "home": "Annecy",
+      "away": "AS Nancy Lorraine",
+      "homeScore": 1,
+      "awayScore": 2,
+      "completed": true
+    },
+    {
+      "id": "espn-401876726",
+      "date": "2026-10-16",
+      "home": "Grenoble",
+      "away": "Boulogne",
+      "homeScore": 0,
+      "awayScore": 2,
+      "completed": true
+    },
+    {
+      "id": "espn-401876725",
+      "date": "2026-10-16",
+      "home": "Guingamp",
+      "away": "Pau",
+      "homeScore": 1,
+      "awayScore": 2,
+      "completed": true
+    },
+    {
+      "id": "espn-401876720",
+      "date": "2026-10-16",
+      "home": "Stade de Reims",
+      "away": "Dijon FCO",
+      "homeScore": 4,
+      "awayScore": 2,
+      "completed": true
+    },
+    {
+      "id": "espn-401876724",
+      "date": "2026-10-16",
+      "home": "Stade Laval",
+      "away": "Clermont Foot",
+      "homeScore": 3,
+      "awayScore": 3,
+      "completed": true
+    },
+    {
+      "id": "espn-401876723",
+      "date": "2026-10-17",
+      "home": "Metz",
+      "away": "Sochaux",
+      "homeScore": 3,
+      "awayScore": 2,
+      "completed": true
+    },
+    {
+      "id": "espn-401876722",
+      "date": "2026-10-17",
+      "home": "Nantes",
+      "away": "Dunkerque",
+      "homeScore": 2,
+      "awayScore": 3,
+      "completed": true
+    },
+    {
+      "id": "espn-401876721",
+      "date": "2026-10-17",
+      "home": "Red Star FC 93",
+      "away": "Saint-Étienne",
+      "homeScore": 0,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401876719",
+      "date": "2026-10-19",
+      "home": "Rodez Aveyron",
+      "away": "Montpellier",
+      "homeScore": 0,
+      "awayScore": 3,
+      "completed": true
     }
   ],
   "matches": [
@@ -1040,7 +1040,7 @@
       "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/388.png",
       "priority": 34,
       "featured": false,
-      "status": "Terminé",
+      "status": "Full Time",
       "completed": true,
       "homeScore": 3,
       "awayScore": 1,
@@ -1123,7 +1123,7 @@
       "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/101.png",
       "priority": 33,
       "featured": false,
-      "status": "Terminé",
+      "status": "Full Time",
       "completed": true,
       "homeScore": 1,
       "awayScore": 1,
@@ -1206,7 +1206,7 @@
       "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/2925.png",
       "priority": 31,
       "featured": false,
-      "status": "Terminé",
+      "status": "Full Time",
       "completed": true,
       "homeScore": 4,
       "awayScore": 0,
@@ -1289,7 +1289,7 @@
       "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/239.png",
       "priority": 31,
       "featured": false,
-      "status": "Terminé",
+      "status": "Full Time",
       "completed": true,
       "homeScore": 0,
       "awayScore": 3,
@@ -1359,7 +1359,7 @@
       "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/274.png",
       "priority": 18,
       "featured": false,
-      "status": "Terminé",
+      "status": "Full Time",
       "completed": true,
       "homeScore": 0,
       "awayScore": 3,
@@ -1429,7 +1429,7 @@
       "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/83.png",
       "priority": 102,
       "featured": true,
-      "status": "Terminé",
+      "status": "Full Time",
       "completed": true,
       "homeScore": 4,
       "awayScore": 2,
@@ -1512,7 +1512,7 @@
       "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/124.png",
       "priority": 72,
       "featured": false,
-      "status": "Terminé",
+      "status": "Full Time",
       "completed": true,
       "homeScore": 1,
       "awayScore": 2,
@@ -1595,7 +1595,7 @@
       "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/102.png",
       "priority": 72,
       "featured": false,
-      "status": "Terminé",
+      "status": "Full Time",
       "completed": true,
       "homeScore": 4,
       "awayScore": 3,
@@ -1678,7 +1678,7 @@
       "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/887.png",
       "priority": 72,
       "featured": false,
-      "status": "Terminé",
+      "status": "Full Time",
       "completed": true,
       "homeScore": 5,
       "awayScore": 1,
@@ -1748,7 +1748,7 @@
       "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/2980.png",
       "priority": 72,
       "featured": false,
-      "status": "Terminé",
+      "status": "Full Time",
       "completed": true,
       "homeScore": 4,
       "awayScore": 3,
@@ -1818,7 +1818,7 @@
       "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/1068.png",
       "priority": 72,
       "featured": false,
-      "status": "Terminé",
+      "status": "Full Time",
       "completed": true,
       "homeScore": 1,
       "awayScore": 1,
@@ -1901,7 +1901,7 @@
       "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/494.png",
       "priority": 42,
       "featured": false,
-      "status": "Terminé",
+      "status": "Full Time",
       "completed": true,
       "homeScore": 2,
       "awayScore": 2,
@@ -1971,7 +1971,7 @@
       "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/521.png",
       "priority": 42,
       "featured": false,
-      "status": "Terminé",
+      "status": "Full Time",
       "completed": true,
       "homeScore": 4,
       "awayScore": 0,
@@ -2054,7 +2054,7 @@
       "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/148.png",
       "priority": 42,
       "featured": false,
-      "status": "Terminé",
+      "status": "Full Time",
       "completed": true,
       "homeScore": 0,
       "awayScore": 1,
@@ -2124,7 +2124,7 @@
       "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/359.png",
       "priority": 102,
       "featured": true,
-      "status": "Terminé",
+      "status": "Full Time",
       "completed": true,
       "homeScore": 2,
       "awayScore": 2,
@@ -2194,7 +2194,7 @@
       "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/360.png",
       "priority": 72,
       "featured": false,
-      "status": "Terminé",
+      "status": "Full Time",
       "completed": true,
       "homeScore": 4,
       "awayScore": 1,
@@ -2264,7 +2264,7 @@
       "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/493.png",
       "priority": 72,
       "featured": false,
-      "status": "Terminé",
+      "status": "Full Time",
       "completed": true,
       "homeScore": 1,
       "awayScore": 0,
@@ -2347,7 +2347,7 @@
       "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/11420.png",
       "priority": 72,
       "featured": false,
-      "status": "Terminé",
+      "status": "Full Time",
       "completed": true,
       "homeScore": 4,
       "awayScore": 1,
@@ -2430,7 +2430,7 @@
       "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/432.png",
       "priority": 42,
       "featured": false,
-      "status": "Terminé",
+      "status": "Full Time",
       "completed": true,
       "homeScore": 2,
       "awayScore": 4,
@@ -2500,7 +2500,7 @@
       "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/510.png",
       "priority": 42,
       "featured": false,
-      "status": "Terminé",
+      "status": "Full Time",
       "completed": true,
       "homeScore": 3,
       "awayScore": 1,
@@ -2583,7 +2583,7 @@
       "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/175.png",
       "priority": 42,
       "featured": false,
-      "status": "Terminé",
+      "status": "Full Time",
       "completed": true,
       "homeScore": 3,
       "awayScore": 0,
@@ -2653,7 +2653,7 @@
       "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/142.png",
       "priority": 42,
       "featured": false,
-      "status": "Terminé",
+      "status": "Full Time",
       "completed": true,
       "homeScore": 1,
       "awayScore": 0,
@@ -2736,7 +2736,7 @@
       "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/4411.png",
       "priority": 42,
       "featured": false,
-      "status": "Terminé",
+      "status": "Full Time",
       "completed": true,
       "homeScore": 2,
       "awayScore": 3,
@@ -2806,7 +2806,7 @@
       "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/93.png",
       "priority": 33,
       "featured": false,
-      "status": "Terminé",
+      "status": "Full Time",
       "completed": true,
       "homeScore": 3,
       "awayScore": 1,
@@ -2953,7 +2953,7 @@
         "odd": 1.81,
         "probability": 0.6678844979508496,
         "value": 0.2088709412910379,
-        "capturedAt": "2026-10-22T04:38:03.113Z"
+        "capturedAt": "2026-10-22T06:47:17.136Z"
       }
     },
     {
@@ -2979,9 +2979,9 @@
       "homeGoals": 1.45,
       "awayGoals": 1.5,
       "odds": {
-        "home": 3.56,
-        "draw": 3.63,
-        "away": 1.99,
+        "home": 3.65,
+        "draw": 3.68,
+        "away": 1.96,
         "over": 1.86,
         "btts": 1.77
       },
@@ -2996,56 +2996,56 @@
         {
           "name": "Unibet (FR)",
           "away": 1.86,
-          "home": 3.4,
-          "draw": 3.7
+          "home": 3.5,
+          "draw": 3.65
         },
         {
           "name": "Betclic (FR)",
           "away": 1.87,
-          "home": 3.38,
-          "draw": 3.43
+          "home": 3.53,
+          "draw": 3.53
         },
         {
           "name": "Winamax (FR)",
-          "away": 1.94,
-          "home": 3.35,
-          "draw": 3.55
+          "away": 1.9,
+          "home": 3.4,
+          "draw": 3.6
         },
         {
           "name": "Winamax (DE)",
-          "away": 1.98,
-          "home": 3.4,
-          "draw": 3.65
+          "away": 1.94,
+          "home": 3.5,
+          "draw": 3.7
         },
         {
           "name": "1xBet",
-          "away": 2.06,
-          "home": 3.6,
-          "draw": 3.73
+          "away": 1.99,
+          "home": 3.79,
+          "draw": 3.77
         },
         {
           "name": "Marathon Bet",
-          "away": 2.03,
-          "home": 3.56,
-          "draw": 3.68
+          "away": 1.96,
+          "home": 3.74,
+          "draw": 3.72
         },
         {
           "name": "Betfair",
-          "away": 2.06,
-          "home": 3.85,
-          "draw": 3.75
+          "away": 2.02,
+          "home": 4,
+          "draw": 3.9
         },
         {
           "name": "Nordic Bet",
-          "away": 2.05,
-          "home": 3.65,
-          "draw": 3.55
+          "away": 1.98,
+          "home": 3.75,
+          "draw": 3.7
         },
         {
           "name": "Betsson",
-          "away": 2.05,
-          "home": 3.6,
-          "draw": 3.5
+          "away": 1.98,
+          "home": 3.7,
+          "draw": 3.65
         },
         {
           "name": "LeoVegas (SE)",
@@ -3073,39 +3073,39 @@
         },
         {
           "name": "Matchbook",
-          "away": 2.06,
-          "home": 3.85,
-          "draw": 3.75
+          "away": 2,
+          "home": 4,
+          "draw": 3.8
         },
         {
           "name": "Pinnacle",
-          "away": 2,
-          "home": 3.71,
-          "draw": 3.71
+          "away": 1.94,
+          "home": 3.91,
+          "draw": 3.78
         },
         {
           "name": "William Hill",
-          "away": 2,
+          "away": 1.95,
           "home": 3.5,
-          "draw": 3.4
+          "draw": 3.5
         },
         {
           "name": "888sport",
-          "away": 2,
+          "away": 1.95,
           "home": 3.5,
-          "draw": 3.4
+          "draw": 3.5
         },
         {
           "name": "Codere (IT)",
-          "away": 2.02,
-          "home": 3.55,
-          "draw": 3.6
+          "away": 1.98,
+          "home": 3.65,
+          "draw": 3.65
         },
         {
           "name": "BetOnline.ag",
-          "away": 2.04,
-          "home": 3.64,
-          "draw": 3.7
+          "away": 2,
+          "home": 3.75,
+          "draw": 3.73
         }
       ],
       "bookmakerCount": 20,
@@ -3123,21 +3123,21 @@
       ],
       "oddsMovement": {
         "home": {
-          "previous": 3.52,
-          "current": 3.56,
-          "percent": 1.1,
+          "previous": 3.56,
+          "current": 3.65,
+          "percent": 2.5,
           "significant": false
         },
         "draw": {
-          "previous": 3.65,
-          "current": 3.63,
-          "percent": -0.5,
+          "previous": 3.63,
+          "current": 3.68,
+          "percent": 1.4,
           "significant": false
         },
         "away": {
           "previous": 1.99,
-          "current": 1.99,
-          "percent": 0,
+          "current": 1.96,
+          "percent": -1.5,
           "significant": false
         },
         "over": {
@@ -3159,7 +3159,7 @@
         "odd": 1.77,
         "probability": 0.5946505317828121,
         "value": 0.052531441255577516,
-        "capturedAt": "2026-10-22T04:38:03.115Z"
+        "capturedAt": "2026-10-22T06:47:17.137Z"
       }
     },
     {
@@ -3185,9 +3185,9 @@
       "homeGoals": 1.26,
       "awayGoals": 1.76,
       "odds": {
-        "home": 1.98,
-        "draw": 3.72,
-        "away": 3.53,
+        "home": 2,
+        "draw": 3.7,
+        "away": 3.5,
         "over": 1.86,
         "btts": 1.77
       },
@@ -3214,27 +3214,27 @@
         },
         {
           "name": "Unibet (FR)",
-          "away": 3.1,
-          "home": 1.9,
-          "draw": 3.6
+          "away": 3.2,
+          "home": 1.92,
+          "draw": 3.4
         },
         {
           "name": "Betclic (FR)",
-          "away": 3.4,
-          "home": 1.84,
-          "draw": 3.53
+          "away": 3.3,
+          "home": 1.88,
+          "draw": 3.5
         },
         {
           "name": "Winamax (DE)",
-          "away": 3.4,
-          "home": 1.94,
-          "draw": 3.75
+          "away": 3.3,
+          "home": 1.98,
+          "draw": 3.7
         },
         {
           "name": "Winamax (FR)",
-          "away": 3.35,
-          "home": 1.9,
-          "draw": 3.65
+          "away": 3.25,
+          "home": 1.94,
+          "draw": 3.6
         },
         {
           "name": "Marathon Bet",
@@ -3250,20 +3250,20 @@
         },
         {
           "name": "Betfair",
-          "away": 3.75,
+          "away": 3.8,
           "home": 2.06,
-          "draw": 3.95
+          "draw": 3.9
         },
         {
           "name": "Nordic Bet",
-          "away": 3.75,
-          "home": 1.98,
+          "away": 3.65,
+          "home": 2.02,
           "draw": 3.7
         },
         {
           "name": "Betsson",
-          "away": 3.7,
-          "home": 1.98,
+          "away": 3.6,
+          "home": 2,
           "draw": 3.65
         },
         {
@@ -3292,33 +3292,33 @@
         },
         {
           "name": "Pinnacle",
-          "away": 3.73,
-          "home": 1.99,
-          "draw": 3.78
+          "away": 3.66,
+          "home": 2.02,
+          "draw": 3.75
         },
         {
           "name": "William Hill",
-          "away": 3.5,
+          "away": 3.4,
           "home": 2,
           "draw": 3.5
         },
         {
           "name": "888sport",
-          "away": 3.5,
+          "away": 3.4,
           "home": 2,
           "draw": 3.5
         },
         {
           "name": "Codere (IT)",
-          "away": 3.6,
-          "home": 1.99,
+          "away": 3.5,
+          "home": 2.03,
           "draw": 3.7
         },
         {
           "name": "Matchbook",
           "away": 3.75,
           "home": 2.06,
-          "draw": 3.95
+          "draw": 3.85
         },
         {
           "name": "BetOnline.ag",
@@ -3342,21 +3342,21 @@
       ],
       "oddsMovement": {
         "home": {
-          "previous": 2,
-          "current": 1.98,
-          "percent": -1,
+          "previous": 1.98,
+          "current": 2,
+          "percent": 1,
           "significant": false
         },
         "draw": {
-          "previous": 3.7,
-          "current": 3.72,
-          "percent": 0.5,
+          "previous": 3.72,
+          "current": 3.7,
+          "percent": -0.5,
           "significant": false
         },
         "away": {
-          "previous": 3.47,
-          "current": 3.53,
-          "percent": 1.7,
+          "previous": 3.53,
+          "current": 3.5,
+          "percent": -0.8,
           "significant": false
         },
         "over": {
@@ -3378,7 +3378,7 @@
         "odd": 1.77,
         "probability": 0.5931299015277438,
         "value": 0.04983992570410645,
-        "capturedAt": "2026-10-22T04:38:03.117Z"
+        "capturedAt": "2026-10-22T06:47:17.139Z"
       }
     },
     {
@@ -3404,9 +3404,9 @@
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
-        "home": 6.35,
-        "draw": 4.59,
-        "away": 1.46,
+        "home": 6.77,
+        "draw": 4.8,
+        "away": 1.42,
         "over": 2.19,
         "btts": 2.01
       },
@@ -3414,123 +3414,123 @@
       "bookmakerOffers": [
         {
           "name": "Winamax (FR)",
-          "away": 1.42,
-          "home": 5.6,
-          "draw": 4.5
+          "away": 1.39,
+          "home": 5.8,
+          "draw": 4.7
         },
         {
           "name": "Coolbet",
-          "away": 1.47,
-          "home": 6.25,
-          "draw": 4.75
+          "away": 1.42,
+          "home": 6.75,
+          "draw": 5
         },
         {
           "name": "Betclic (FR)",
-          "away": 1.39,
-          "home": 5.9,
-          "draw": 4.4
+          "away": 1.38,
+          "home": 6.25,
+          "draw": 4.65
         },
         {
           "name": "Unibet (FR)",
-          "away": 1.37,
-          "home": 5.8,
+          "away": 1.38,
+          "home": 6,
           "draw": 4.4
         },
         {
           "name": "Winamax (DE)",
-          "away": 1.44,
-          "home": 5.8,
-          "draw": 4.7
+          "away": 1.42,
+          "home": 6,
+          "draw": 4.9
         },
         {
           "name": "Betfair",
-          "away": 1.48,
-          "home": 7.2,
-          "draw": 5
+          "away": 1.45,
+          "home": 7.6,
+          "draw": 5.2
         },
         {
           "name": "Marathon Bet",
-          "away": 1.46,
-          "home": 6.65,
-          "draw": 4.75
+          "away": 1.43,
+          "home": 7,
+          "draw": 4.9
         },
         {
           "name": "1xBet",
-          "away": 1.48,
-          "home": 6.74,
-          "draw": 4.82
+          "away": 1.45,
+          "home": 7.1,
+          "draw": 4.97
         },
         {
           "name": "Nordic Bet",
-          "away": 1.46,
-          "home": 7.1,
-          "draw": 4.7
+          "away": 1.42,
+          "home": 7.5,
+          "draw": 4.9
         },
         {
           "name": "Betsson",
-          "away": 1.45,
-          "home": 7,
-          "draw": 4.6
+          "away": 1.41,
+          "home": 7.4,
+          "draw": 4.8
         },
         {
           "name": "Unibet (SE)",
-          "away": 1.54,
-          "home": 6.4,
-          "draw": 4.4
+          "away": 1.45,
+          "home": 7,
+          "draw": 4.75
         },
         {
           "name": "PMU (FR)",
-          "away": 1.43,
-          "home": 5.5,
-          "draw": 3.95
-        },
-        {
-          "name": "Unibet (NL)",
-          "away": 1.54,
-          "home": 6.4,
-          "draw": 4.4
-        },
-        {
-          "name": "LeoVegas (SE)",
-          "away": 1.49,
-          "home": 5.8,
+          "away": 1.36,
+          "home": 6.1,
           "draw": 4.2
         },
         {
+          "name": "Unibet (NL)",
+          "away": 1.45,
+          "home": 7,
+          "draw": 4.75
+        },
+        {
+          "name": "LeoVegas (SE)",
+          "away": 1.42,
+          "home": 6.5,
+          "draw": 4.4
+        },
+        {
           "name": "Matchbook",
-          "away": 1.49,
-          "home": 7.2,
-          "draw": 5
+          "away": 1.45,
+          "home": 7.6,
+          "draw": 5.1
         },
         {
           "name": "Pinnacle",
-          "away": 1.46,
-          "home": 6.64,
-          "draw": 4.83
+          "away": 1.43,
+          "home": 7.05,
+          "draw": 5.07
         },
         {
           "name": "William Hill",
-          "away": 1.44,
-          "home": 6,
-          "draw": 4.4
+          "away": 1.4,
+          "home": 6.5,
+          "draw": 4.6
         },
         {
           "name": "888sport",
-          "away": 1.44,
-          "home": 6,
-          "draw": 4.4
+          "away": 1.4,
+          "home": 6.5,
+          "draw": 4.6
         },
         {
           "name": "Codere (IT)",
-          "away": 1.47,
-          "home": 6.4,
-          "draw": 4.7
+          "away": 1.44,
+          "home": 6.6,
+          "draw": 4.9
         },
         {
           "name": "BetOnline.ag",
-          "away": 1.45,
-          "home": 6.65,
-          "draw": 4.8
+          "away": 1.43,
+          "home": 7.2,
+          "draw": 5.12
         }
       ],
       "bookmakerCount": 20,
@@ -3548,21 +3548,21 @@
       ],
       "oddsMovement": {
         "home": {
-          "previous": 5.89,
-          "current": 6.35,
-          "percent": 7.8,
+          "previous": 6.35,
+          "current": 6.77,
+          "percent": 6.6,
           "significant": true
         },
         "draw": {
-          "previous": 4.48,
-          "current": 4.59,
-          "percent": 2.5,
+          "previous": 4.59,
+          "current": 4.8,
+          "percent": 4.6,
           "significant": false
         },
         "away": {
-          "previous": 1.49,
-          "current": 1.46,
-          "percent": -2,
+          "previous": 1.46,
+          "current": 1.42,
+          "percent": -2.7,
           "significant": false
         },
         "over": {
@@ -3584,7 +3584,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T04:38:03.119Z"
+        "capturedAt": "2026-10-22T06:47:17.140Z"
       }
     },
     {
@@ -3610,9 +3610,9 @@
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
-        "home": 1.59,
-        "draw": 4.3,
-        "away": 5.02,
+        "home": 1.56,
+        "draw": 4.39,
+        "away": 5.19,
         "over": 2.19,
         "btts": 2.01
       },
@@ -3620,123 +3620,123 @@
       "bookmakerOffers": [
         {
           "name": "Winamax (DE)",
-          "home": 1.56,
-          "away": 4.8,
-          "draw": 4.4
+          "home": 1.52,
+          "away": 4.9,
+          "draw": 4.5
         },
         {
           "name": "Coolbet",
-          "home": 1.62,
-          "away": 5,
-          "draw": 4.3
+          "home": 1.58,
+          "away": 5.25,
+          "draw": 4.4
         },
         {
           "name": "Winamax (FR)",
-          "home": 1.52,
-          "away": 4.6,
-          "draw": 4.2
+          "home": 1.5,
+          "away": 4.7,
+          "draw": 4.3
         },
         {
           "name": "Unibet (FR)",
-          "home": 1.47,
+          "home": 1.5,
           "away": 4.8,
           "draw": 4.1
         },
         {
           "name": "Betclic (FR)",
           "home": 1.49,
-          "away": 4.8,
-          "draw": 4.15
+          "away": 5.1,
+          "draw": 4.3
         },
         {
           "name": "1xBet",
-          "home": 1.64,
-          "away": 5.17,
-          "draw": 4.39
+          "home": 1.6,
+          "away": 5.37,
+          "draw": 4.51
         },
         {
           "name": "Marathon Bet",
-          "home": 1.62,
-          "away": 5.1,
-          "draw": 4.33
+          "home": 1.58,
+          "away": 5.3,
+          "draw": 4.45
         },
         {
           "name": "Betfair",
-          "home": 1.64,
+          "home": 1.61,
           "away": 5.7,
-          "draw": 4.6
+          "draw": 4.7
         },
         {
           "name": "Nordic Bet",
           "home": 1.58,
-          "away": 5.5,
-          "draw": 4.4
+          "away": 5.55,
+          "draw": 4.45
         },
         {
           "name": "Betsson",
-          "home": 1.58,
-          "away": 5.4,
+          "home": 1.55,
+          "away": 5.45,
           "draw": 4.35
         },
         {
           "name": "LeoVegas (SE)",
-          "home": 1.6,
-          "away": 4.75,
+          "home": 1.56,
+          "away": 4.9,
           "draw": 4.1
         },
         {
           "name": "Unibet (SE)",
-          "home": 1.65,
-          "away": 5.1,
-          "draw": 4.35
+          "home": 1.62,
+          "away": 5.3,
+          "draw": 4.4
         },
         {
           "name": "PMU (FR)",
-          "home": 1.54,
-          "away": 4.5,
-          "draw": 3.9
+          "home": 1.51,
+          "away": 4.7,
+          "draw": 3.95
         },
         {
           "name": "Unibet (NL)",
-          "home": 1.65,
-          "away": 5.1,
-          "draw": 4.35
+          "home": 1.62,
+          "away": 5.3,
+          "draw": 4.4
         },
         {
           "name": "Matchbook",
-          "home": 1.64,
-          "away": 5.5,
-          "draw": 4.6
+          "home": 1.6,
+          "away": 5.7,
+          "draw": 4.7
         },
         {
           "name": "Pinnacle",
           "home": 1.57,
-          "away": 5.22,
-          "draw": 4.61
+          "away": 5.44,
+          "draw": 4.6
         },
         {
           "name": "William Hill",
-          "home": 1.62,
-          "away": 4.6,
-          "draw": 4
+          "home": 1.57,
+          "away": 4.8,
+          "draw": 4.2
         },
         {
           "name": "888sport",
-          "home": 1.61,
-          "away": 4.6,
-          "draw": 4
+          "home": 1.57,
+          "away": 4.8,
+          "draw": 4.2
         },
         {
           "name": "Codere (IT)",
-          "home": 1.59,
-          "away": 5.2,
-          "draw": 4.4
+          "home": 1.56,
+          "away": 5.4,
+          "draw": 4.5
         },
         {
           "name": "BetOnline.ag",
-          "home": 1.62,
-          "away": 5.05,
-          "draw": 4.5
+          "home": 1.58,
+          "away": 5.26,
+          "draw": 4.69
         }
       ],
       "bookmakerCount": 20,
@@ -3754,21 +3754,21 @@
       ],
       "oddsMovement": {
         "home": {
-          "previous": 1.61,
-          "current": 1.59,
-          "percent": -1.2,
+          "previous": 1.59,
+          "current": 1.56,
+          "percent": -1.9,
           "significant": false
         },
         "draw": {
-          "previous": 4.26,
-          "current": 4.3,
-          "percent": 0.9,
+          "previous": 4.3,
+          "current": 4.39,
+          "percent": 2.1,
           "significant": false
         },
         "away": {
-          "previous": 4.88,
-          "current": 5.02,
-          "percent": 2.9,
+          "previous": 5.02,
+          "current": 5.19,
+          "percent": 3.4,
           "significant": false
         },
         "over": {
@@ -3790,7 +3790,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T04:38:03.121Z"
+        "capturedAt": "2026-10-22T06:47:17.141Z"
       }
     },
     {
@@ -3816,9 +3816,9 @@
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
-        "home": 1.33,
-        "draw": 5.19,
-        "away": 8.63,
+        "home": 1.31,
+        "draw": 5.34,
+        "away": 9.12,
         "over": 2.19,
         "btts": 2.01
       },
@@ -3826,51 +3826,51 @@
       "bookmakerOffers": [
         {
           "name": "Winamax (DE)",
-          "home": 1.31,
-          "away": 7.5,
-          "draw": 5.5
+          "home": 1.3,
+          "away": 8,
+          "draw": 5.6
         },
         {
           "name": "Coolbet",
-          "home": 1.33,
-          "away": 9,
-          "draw": 5.25
+          "home": 1.3,
+          "away": 10,
+          "draw": 5.5
         },
         {
           "name": "Winamax (FR)",
-          "home": 1.29,
-          "away": 7.25,
-          "draw": 5.2
+          "home": 1.27,
+          "away": 7.5,
+          "draw": 5.3
         },
         {
           "name": "Unibet (FR)",
-          "home": 1.25,
-          "away": 7.7,
-          "draw": 4.9
+          "home": 1.26,
+          "away": 8,
+          "draw": 5
         },
         {
           "name": "Betclic (FR)",
           "home": 1.27,
-          "away": 7.75,
-          "draw": 4.95
+          "away": 8.5,
+          "draw": 5.25
         },
         {
           "name": "1xBet",
-          "home": 1.37,
-          "away": 9.1,
-          "draw": 5.22
+          "home": 1.34,
+          "away": 9.8,
+          "draw": 5.47
         },
         {
           "name": "Marathon Bet",
-          "home": 1.35,
-          "away": 9,
-          "draw": 5.15
+          "home": 1.32,
+          "away": 9.7,
+          "draw": 5.4
         },
         {
           "name": "Betfair",
-          "home": 1.35,
-          "away": 10,
-          "draw": 5.6
+          "home": 1.34,
+          "away": 11,
+          "draw": 5.8
         },
         {
           "name": "Nordic Bet",
@@ -3886,51 +3886,51 @@
         },
         {
           "name": "Unibet (NL)",
-          "home": 1.38,
-          "away": 8.5,
-          "draw": 5.2
+          "home": 1.35,
+          "away": 9.5,
+          "draw": 5.4
         },
         {
           "name": "Unibet (SE)",
-          "home": 1.38,
-          "away": 8.5,
-          "draw": 5.2
+          "home": 1.35,
+          "away": 9.5,
+          "draw": 5.4
         },
         {
           "name": "PMU (FR)",
-          "home": 1.3,
+          "home": 1.27,
           "away": 7.5,
-          "draw": 4.6
+          "draw": 4.75
         },
         {
           "name": "LeoVegas (SE)",
-          "home": 1.35,
-          "away": 7.5,
-          "draw": 4.8
+          "home": 1.32,
+          "away": 8,
+          "draw": 5
         },
         {
           "name": "Pinnacle",
-          "home": 1.34,
-          "away": 8.52,
+          "home": 1.33,
+          "away": 9.62,
           "draw": 5.47
         },
         {
           "name": "William Hill",
           "home": 1.33,
           "away": 8.5,
-          "draw": 4.8
+          "draw": 5
         },
         {
           "name": "888sport",
           "home": 1.33,
           "away": 8.5,
-          "draw": 4.8
+          "draw": 5
         },
         {
           "name": "Codere (IT)",
-          "home": 1.34,
-          "away": 8.4,
-          "draw": 5.4
+          "home": 1.32,
+          "away": 9,
+          "draw": 5.6
         },
         {
           "name": "BetOnline.ag",
@@ -3940,9 +3940,9 @@
         },
         {
           "name": "Matchbook",
-          "home": 1.35,
-          "away": 10,
-          "draw": 5.7
+          "home": 1.33,
+          "away": 10.5,
+          "draw": 5.8
         }
       ],
       "bookmakerCount": 20,
@@ -3961,21 +3961,21 @@
       "oddsMovement": {
         "home": {
           "previous": 1.33,
-          "current": 1.33,
-          "percent": 0,
+          "current": 1.31,
+          "percent": -1.5,
           "significant": false
         },
         "draw": {
-          "previous": 5.21,
-          "current": 5.19,
-          "percent": -0.4,
+          "previous": 5.19,
+          "current": 5.34,
+          "percent": 2.9,
           "significant": false
         },
         "away": {
-          "previous": 8.57,
-          "current": 8.63,
-          "percent": 0.7,
-          "significant": false
+          "previous": 8.63,
+          "current": 9.12,
+          "percent": 5.7,
+          "significant": true
         },
         "over": {
           "previous": 2.19,
@@ -3996,7 +3996,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T04:38:03.123Z"
+        "capturedAt": "2026-10-22T06:47:17.142Z"
       }
     },
     {
@@ -4022,7 +4022,7 @@
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
-        "home": 4.52,
+        "home": 4.55,
         "draw": 3.9,
         "away": 1.72,
         "over": 2.19,
@@ -4038,14 +4038,14 @@
         },
         {
           "name": "Betclic (FR)",
-          "home": 4.3,
-          "away": 1.63,
-          "draw": 3.65
+          "home": 4.4,
+          "away": 1.65,
+          "draw": 3.73
         },
         {
           "name": "Unibet (FR)",
           "home": 4.3,
-          "away": 1.61,
+          "away": 1.64,
           "draw": 3.6
         },
         {
@@ -4074,8 +4074,8 @@
         },
         {
           "name": "Betfair",
-          "home": 5,
-          "away": 1.78,
+          "home": 4.9,
+          "away": 1.8,
           "draw": 4.1
         },
         {
@@ -4116,26 +4116,26 @@
         },
         {
           "name": "Matchbook",
-          "home": 5,
-          "away": 1.78,
+          "home": 4.9,
+          "away": 1.79,
           "draw": 4.1
         },
         {
           "name": "Pinnacle",
-          "home": 4.64,
-          "away": 1.72,
-          "draw": 4.08
+          "home": 4.78,
+          "away": 1.74,
+          "draw": 3.96
         },
         {
           "name": "William Hill",
-          "home": 4.4,
-          "away": 1.73,
+          "home": 4.5,
+          "away": 1.7,
           "draw": 3.8
         },
         {
           "name": "888sport",
-          "home": 4.4,
-          "away": 1.73,
+          "home": 4.5,
+          "away": 1.7,
           "draw": 3.8
         },
         {
@@ -4146,9 +4146,9 @@
         },
         {
           "name": "BetOnline.ag",
-          "home": 4.55,
-          "away": 1.77,
-          "draw": 4
+          "home": 4.9,
+          "away": 1.71,
+          "draw": 4.04
         }
       ],
       "bookmakerCount": 20,
@@ -4166,8 +4166,8 @@
       ],
       "oddsMovement": {
         "home": {
-          "previous": 4.49,
-          "current": 4.52,
+          "previous": 4.52,
+          "current": 4.55,
           "percent": 0.7,
           "significant": false
         },
@@ -4202,7 +4202,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T04:38:03.124Z"
+        "capturedAt": "2026-10-22T06:47:17.142Z"
       }
     },
     {
@@ -4228,7 +4228,7 @@
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
-        "home": 11.69,
+        "home": 11.66,
         "draw": 6.95,
         "away": 1.21,
         "over": 2.19,
@@ -4250,9 +4250,9 @@
         },
         {
           "name": "Unibet (FR)",
-          "away": 1.15,
-          "home": 10,
-          "draw": 6.3
+          "away": 1.17,
+          "home": 9.5,
+          "draw": 6.2
         },
         {
           "name": "Winamax (FR)",
@@ -4262,15 +4262,15 @@
         },
         {
           "name": "Betclic (FR)",
-          "away": 1.16,
+          "away": 1.18,
           "home": 10,
-          "draw": 6.4
+          "draw": 6.75
         },
         {
           "name": "Betfair",
           "away": 1.24,
           "home": 13.5,
-          "draw": 7.8
+          "draw": 8
         },
         {
           "name": "Marathon Bet",
@@ -4287,8 +4287,8 @@
         {
           "name": "Matchbook",
           "away": 1.24,
-          "home": 14,
-          "draw": 8
+          "home": 13.5,
+          "draw": 7.6
         },
         {
           "name": "Nordic Bet",
@@ -4328,9 +4328,9 @@
         },
         {
           "name": "Pinnacle",
-          "away": 1.21,
-          "home": 12.09,
-          "draw": 7.41
+          "away": 1.22,
+          "home": 12.57,
+          "draw": 7.45
         },
         {
           "name": "William Hill",
@@ -4372,21 +4372,21 @@
       ],
       "oddsMovement": {
         "home": {
-          "previous": 11.37,
-          "current": 11.69,
-          "percent": 2.8,
+          "previous": 11.69,
+          "current": 11.66,
+          "percent": -0.3,
           "significant": false
         },
         "draw": {
-          "previous": 6.68,
+          "previous": 6.95,
           "current": 6.95,
-          "percent": 4,
+          "percent": 0,
           "significant": false
         },
         "away": {
-          "previous": 1.22,
+          "previous": 1.21,
           "current": 1.21,
-          "percent": -0.8,
+          "percent": 0,
           "significant": false
         },
         "over": {
@@ -4408,7 +4408,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T04:38:03.126Z"
+        "capturedAt": "2026-10-22T06:47:17.143Z"
       }
     },
     {
@@ -4478,7 +4478,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T04:38:03.128Z"
+        "capturedAt": "2026-10-22T06:47:17.144Z"
       }
     },
     {
@@ -4504,9 +4504,9 @@
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
-        "home": 2.14,
-        "draw": 3.8,
-        "away": 3.05,
+        "home": 2.08,
+        "draw": 3.81,
+        "away": 3.16,
         "over": 2.19,
         "btts": 2.01
       },
@@ -4514,117 +4514,117 @@
       "bookmakerOffers": [
         {
           "name": "Coolbet",
-          "home": 2.17,
-          "away": 3,
-          "draw": 3.85
+          "home": 2.08,
+          "away": 3.15,
+          "draw": 4
         },
         {
           "name": "Unibet (FR)",
-          "home": 1.97,
-          "away": 2.9,
+          "home": 1.96,
+          "away": 2.95,
           "draw": 3.6
         },
         {
           "name": "Betclic (FR)",
-          "home": 2,
-          "away": 2.92,
-          "draw": 3.58
+          "home": 1.96,
+          "away": 3,
+          "draw": 3.6
         },
         {
           "name": "Winamax (DE)",
-          "home": 2.05,
-          "away": 3,
+          "home": 2,
+          "away": 3.05,
           "draw": 3.9
         },
         {
           "name": "Winamax (FR)",
           "home": 2,
-          "away": 2.95,
-          "draw": 3.85
+          "away": 3,
+          "draw": 3.8
         },
         {
           "name": "Codere (IT)",
-          "home": 2.18,
-          "away": 3.05,
+          "home": 2.13,
+          "away": 3.15,
           "draw": 3.8
         },
         {
           "name": "Marathon Bet",
-          "home": 2.17,
-          "away": 3.1,
-          "draw": 3.9
+          "home": 2.12,
+          "away": 3.18,
+          "draw": 3.85
         },
         {
           "name": "1xBet",
-          "home": 2.19,
-          "away": 3.12,
-          "draw": 3.93
+          "home": 2.15,
+          "away": 3.23,
+          "draw": 3.9
         },
         {
           "name": "Betfair",
-          "home": 2.22,
-          "away": 3.2,
-          "draw": 4
+          "home": 2.18,
+          "away": 3.4,
+          "draw": 3.95
         },
         {
           "name": "Nordic Bet",
-          "home": 2.22,
+          "home": 2.1,
+          "away": 3.25,
+          "draw": 3.9
+        },
+        {
+          "name": "Betsson",
+          "home": 2.08,
+          "away": 3.2,
+          "draw": 3.85
+        },
+        {
+          "name": "LeoVegas (SE)",
+          "home": 2.05,
           "away": 3.1,
           "draw": 3.7
         },
         {
-          "name": "Betsson",
-          "home": 2.2,
-          "away": 3.1,
-          "draw": 3.65
-        },
-        {
-          "name": "LeoVegas (SE)",
-          "home": 2.14,
-          "away": 2.95,
-          "draw": 3.65
-        },
-        {
           "name": "Unibet (SE)",
-          "home": 2.23,
-          "away": 3.15,
+          "home": 2.12,
+          "away": 3.25,
           "draw": 3.9
         },
         {
           "name": "PMU (FR)",
-          "home": 2.05,
-          "away": 2.85,
-          "draw": 3.5
+          "home": 1.97,
+          "away": 2.95,
+          "draw": 3.55
         },
         {
           "name": "Unibet (NL)",
-          "home": 2.23,
-          "away": 3.15,
+          "home": 2.12,
+          "away": 3.25,
           "draw": 3.9
         },
         {
           "name": "Matchbook",
-          "home": 2.22,
-          "away": 3.2,
-          "draw": 4
+          "home": 2.16,
+          "away": 3.35,
+          "draw": 3.95
         },
         {
           "name": "Pinnacle",
-          "home": 2.17,
-          "away": 3.08,
-          "draw": 3.94
+          "home": 2.08,
+          "away": 3.31,
+          "draw": 3.87
         },
         {
           "name": "William Hill",
           "home": 2.1,
-          "away": 3,
-          "draw": 3.7
+          "away": 3.1,
+          "draw": 3.6
         },
         {
           "name": "888sport",
           "home": 2.1,
-          "away": 3,
-          "draw": 3.7
+          "away": 3.1,
+          "draw": 3.6
         },
         {
           "name": "BetOnline.ag",
@@ -4648,21 +4648,21 @@
       ],
       "oddsMovement": {
         "home": {
-          "previous": 2.12,
-          "current": 2.14,
-          "percent": 0.9,
+          "previous": 2.14,
+          "current": 2.08,
+          "percent": -2.8,
           "significant": false
         },
         "draw": {
-          "previous": 3.81,
-          "current": 3.8,
-          "percent": -0.3,
+          "previous": 3.8,
+          "current": 3.81,
+          "percent": 0.3,
           "significant": false
         },
         "away": {
-          "previous": 3.07,
-          "current": 3.05,
-          "percent": -0.7,
+          "previous": 3.05,
+          "current": 3.16,
+          "percent": 3.6,
           "significant": false
         },
         "over": {
@@ -4684,7 +4684,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T04:38:03.129Z"
+        "capturedAt": "2026-10-22T06:47:17.145Z"
       }
     },
     {
@@ -4712,7 +4712,7 @@
       "odds": {
         "home": 2.69,
         "draw": 3.49,
-        "away": 2.49,
+        "away": 2.5,
         "over": 2.19,
         "btts": 2.01
       },
@@ -4727,7 +4727,7 @@
         {
           "name": "Coolbet",
           "away": 2.5,
-          "home": 2.7,
+          "home": 2.65,
           "draw": 3.6
         },
         {
@@ -4744,9 +4744,9 @@
         },
         {
           "name": "Unibet (FR)",
-          "away": 2.25,
-          "home": 2.6,
-          "draw": 3.3
+          "away": 2.4,
+          "home": 2.5,
+          "draw": 3.2
         },
         {
           "name": "Winamax (DE)",
@@ -4762,21 +4762,21 @@
         },
         {
           "name": "Betfair",
-          "away": 2.6,
-          "home": 2.9,
+          "away": 2.64,
+          "home": 2.84,
           "draw": 3.6
         },
         {
           "name": "Nordic Bet",
           "away": 2.55,
-          "home": 2.72,
-          "draw": 3.55
+          "home": 2.75,
+          "draw": 3.45
         },
         {
           "name": "Betsson",
-          "away": 2.52,
-          "home": 2.68,
-          "draw": 3.5
+          "away": 2.55,
+          "home": 2.75,
+          "draw": 3.4
         },
         {
           "name": "Unibet (NL)",
@@ -4787,7 +4787,7 @@
         {
           "name": "LeoVegas (SE)",
           "away": 2.4,
-          "home": 2.6,
+          "home": 2.63,
           "draw": 3.5
         },
         {
@@ -4804,21 +4804,21 @@
         },
         {
           "name": "Pinnacle",
-          "away": 2.58,
-          "home": 2.7,
-          "draw": 3.57
+          "away": 2.55,
+          "home": 2.75,
+          "draw": 3.53
         },
         {
           "name": "William Hill",
           "away": 2.5,
           "home": 2.62,
-          "draw": 3.3
+          "draw": 3.4
         },
         {
           "name": "888sport",
           "away": 2.5,
           "home": 2.62,
-          "draw": 3.3
+          "draw": 3.4
         },
         {
           "name": "Codere (IT)",
@@ -4835,7 +4835,7 @@
         {
           "name": "Matchbook",
           "away": 2.62,
-          "home": 2.88,
+          "home": 2.84,
           "draw": 3.6
         }
       ],
@@ -4867,8 +4867,8 @@
         },
         "away": {
           "previous": 2.49,
-          "current": 2.49,
-          "percent": 0,
+          "current": 2.5,
+          "percent": 0.4,
           "significant": false
         },
         "over": {
@@ -4890,7 +4890,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T04:38:03.131Z"
+        "capturedAt": "2026-10-22T06:47:17.146Z"
       }
     },
     {
@@ -4960,7 +4960,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T04:38:03.132Z"
+        "capturedAt": "2026-10-22T06:47:17.146Z"
       }
     },
     {
@@ -4986,9 +4986,9 @@
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
-        "home": 6.15,
-        "draw": 4.71,
-        "away": 1.46,
+        "home": 6.36,
+        "draw": 4.73,
+        "away": 1.45,
         "over": 2.19,
         "btts": 2.01
       },
@@ -4996,9 +4996,9 @@
       "bookmakerOffers": [
         {
           "name": "Coolbet",
-          "home": 6.3,
-          "away": 1.53,
-          "draw": 4.6
+          "home": 6.65,
+          "away": 1.48,
+          "draw": 4.9
         },
         {
           "name": "Unibet (FR)",
@@ -5008,21 +5008,21 @@
         },
         {
           "name": "Betclic (FR)",
-          "home": 5.6,
-          "away": 1.4,
-          "draw": 4.35
+          "home": 5.75,
+          "away": 1.39,
+          "draw": 4.45
         },
         {
           "name": "Winamax (DE)",
-          "home": 5.6,
-          "away": 1.46,
-          "draw": 4.7
+          "home": 5.8,
+          "away": 1.44,
+          "draw": 4.8
         },
         {
           "name": "Winamax (FR)",
-          "home": 5.3,
-          "away": 1.44,
-          "draw": 4.5
+          "home": 5.5,
+          "away": 1.42,
+          "draw": 4.6
         },
         {
           "name": "Marathon Bet",
@@ -5032,27 +5032,27 @@
         },
         {
           "name": "1xBet",
-          "home": 6.08,
-          "away": 1.52,
-          "draw": 4.76
+          "home": 6.44,
+          "away": 1.48,
+          "draw": 4.97
         },
         {
           "name": "Betfair",
-          "home": 6.8,
+          "home": 7,
           "away": 1.5,
           "draw": 5.1
         },
         {
           "name": "Betsson",
-          "home": 6.5,
+          "home": 7,
           "away": 1.45,
-          "draw": 4.85
+          "draw": 4.6
         },
         {
           "name": "Nordic Bet",
-          "home": 6.6,
+          "home": 7.1,
           "away": 1.46,
-          "draw": 4.9
+          "draw": 4.7
         },
         {
           "name": "Unibet (NL)",
@@ -5080,38 +5080,38 @@
         },
         {
           "name": "Pinnacle",
-          "home": 6.17,
-          "away": 1.46,
-          "draw": 5.07
+          "home": 6.75,
+          "away": 1.44,
+          "draw": 4.92
         },
         {
           "name": "William Hill",
-          "home": 5.8,
+          "home": 6,
           "away": 1.44,
           "draw": 4.5
         },
         {
           "name": "888sport",
-          "home": 5.75,
+          "home": 6,
           "away": 1.44,
           "draw": 4.5
         },
         {
           "name": "Codere (IT)",
-          "home": 6,
-          "away": 1.49,
-          "draw": 4.7
-        },
-        {
-          "name": "BetOnline.ag",
-          "home": 6.44,
-          "away": 1.49,
+          "home": 6.2,
+          "away": 1.47,
           "draw": 4.8
         },
         {
+          "name": "BetOnline.ag",
+          "home": 6.75,
+          "away": 1.47,
+          "draw": 4.9
+        },
+        {
           "name": "Matchbook",
-          "home": 6.8,
-          "away": 1.5,
+          "home": 7,
+          "away": 1.48,
           "draw": 5.1
         }
       ],
@@ -5130,20 +5130,20 @@
       ],
       "oddsMovement": {
         "home": {
-          "previous": 5.99,
-          "current": 6.15,
-          "percent": 2.7,
+          "previous": 6.15,
+          "current": 6.36,
+          "percent": 3.4,
           "significant": false
         },
         "draw": {
-          "previous": 4.66,
-          "current": 4.71,
-          "percent": 1.1,
+          "previous": 4.71,
+          "current": 4.73,
+          "percent": 0.4,
           "significant": false
         },
         "away": {
-          "previous": 1.47,
-          "current": 1.46,
+          "previous": 1.46,
+          "current": 1.45,
           "percent": -0.7,
           "significant": false
         },
@@ -5166,7 +5166,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T04:38:03.134Z"
+        "capturedAt": "2026-10-22T06:47:17.147Z"
       }
     },
     {
@@ -5192,9 +5192,9 @@
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
-        "home": 5.62,
-        "draw": 4.35,
-        "away": 1.53,
+        "home": 5.73,
+        "draw": 4.38,
+        "away": 1.52,
         "over": 2.19,
         "btts": 2.01
       },
@@ -5202,14 +5202,14 @@
       "bookmakerOffers": [
         {
           "name": "Winamax (DE)",
-          "home": 5.2,
-          "away": 1.5,
+          "home": 5.4,
+          "away": 1.49,
           "draw": 4.5
         },
         {
           "name": "Winamax (FR)",
-          "home": 5,
-          "away": 1.48,
+          "home": 5.2,
+          "away": 1.46,
           "draw": 4.3
         },
         {
@@ -5220,14 +5220,14 @@
         },
         {
           "name": "Unibet (FR)",
-          "home": 5.2,
+          "home": 5.3,
           "away": 1.43,
-          "draw": 4.2
+          "draw": 4.1
         },
         {
           "name": "Betclic (FR)",
-          "home": 5.25,
-          "away": 1.45,
+          "home": 5.4,
+          "away": 1.43,
           "draw": 4.2
         },
         {
@@ -5246,7 +5246,7 @@
           "name": "Betfair",
           "home": 6.2,
           "away": 1.58,
-          "draw": 4.6
+          "draw": 4.7
         },
         {
           "name": "Nordic Bet",
@@ -5287,31 +5287,31 @@
         {
           "name": "Matchbook",
           "home": 6.2,
-          "away": 1.58,
-          "draw": 4.6
+          "away": 1.57,
+          "draw": 4.7
         },
         {
           "name": "Pinnacle",
-          "home": 5.76,
-          "away": 1.54,
-          "draw": 4.5
+          "home": 5.98,
+          "away": 1.51,
+          "draw": 4.62
         },
         {
           "name": "William Hill",
-          "home": 5,
-          "away": 1.55,
-          "draw": 4
+          "home": 5.5,
+          "away": 1.53,
+          "draw": 4.2
         },
         {
           "name": "888sport",
-          "home": 5,
+          "home": 5.5,
           "away": 1.53,
-          "draw": 4
+          "draw": 4.2
         },
         {
           "name": "Codere (IT)",
-          "home": 5.6,
-          "away": 1.54,
+          "home": 5.8,
+          "away": 1.52,
           "draw": 4.5
         },
         {
@@ -5336,21 +5336,21 @@
       ],
       "oddsMovement": {
         "home": {
-          "previous": 5.61,
-          "current": 5.62,
-          "percent": 0.2,
+          "previous": 5.62,
+          "current": 5.73,
+          "percent": 2,
           "significant": false
         },
         "draw": {
-          "previous": 4.34,
-          "current": 4.35,
-          "percent": 0.2,
+          "previous": 4.35,
+          "current": 4.38,
+          "percent": 0.7,
           "significant": false
         },
         "away": {
           "previous": 1.53,
-          "current": 1.53,
-          "percent": 0,
+          "current": 1.52,
+          "percent": -0.7,
           "significant": false
         },
         "over": {
@@ -5372,7 +5372,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T04:38:03.136Z"
+        "capturedAt": "2026-10-22T06:47:17.148Z"
       }
     },
     {
@@ -5442,7 +5442,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T04:38:03.137Z"
+        "capturedAt": "2026-10-22T06:47:17.149Z"
       }
     },
     {
@@ -5512,7 +5512,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T04:38:03.139Z"
+        "capturedAt": "2026-10-22T06:47:17.150Z"
       }
     },
     {
@@ -5538,9 +5538,9 @@
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
-        "home": 1.98,
-        "draw": 3.97,
-        "away": 3.32,
+        "home": 2,
+        "draw": 4.01,
+        "away": 3.27,
         "over": 2.19,
         "btts": 2.01
       },
@@ -5548,69 +5548,69 @@
       "bookmakerOffers": [
         {
           "name": "Winamax (DE)",
-          "away": 3.2,
+          "away": 3.1,
+          "home": 1.94,
+          "draw": 4.2
+        },
+        {
+          "name": "Winamax (FR)",
+          "away": 3.05,
           "home": 1.9,
           "draw": 4.1
         },
         {
-          "name": "Winamax (FR)",
-          "away": 3.15,
-          "home": 1.88,
-          "draw": 4
-        },
-        {
           "name": "Coolbet",
-          "away": 3.3,
+          "away": 3.25,
           "home": 2,
-          "draw": 4
+          "draw": 4.2
         },
         {
           "name": "Betclic (FR)",
-          "away": 3.2,
-          "home": 1.86,
-          "draw": 3.73
-        },
-        {
-          "name": "Unibet (FR)",
-          "away": 3,
-          "home": 1.93,
+          "away": 2.95,
+          "home": 1.96,
           "draw": 4
         },
         {
+          "name": "Unibet (FR)",
+          "away": 2.9,
+          "home": 1.98,
+          "draw": 4.1
+        },
+        {
           "name": "Codere (IT)",
-          "away": 3.35,
-          "home": 2,
+          "away": 3.25,
+          "home": 2.03,
           "draw": 3.95
         },
         {
           "name": "Marathon Bet",
-          "away": 3.54,
-          "home": 1.99,
-          "draw": 4.05
+          "away": 3.35,
+          "home": 2.07,
+          "draw": 4
         },
         {
           "name": "1xBet",
-          "away": 3.54,
-          "home": 1.99,
-          "draw": 4.05
+          "away": 3.35,
+          "home": 2.07,
+          "draw": 4
         },
         {
           "name": "Betfair",
-          "away": 3.4,
-          "home": 2.06,
+          "away": 3.5,
+          "home": 2.04,
           "draw": 4.3
         },
         {
           "name": "Nordic Bet",
-          "away": 3.5,
-          "home": 2,
-          "draw": 3.9
+          "away": 3.45,
+          "home": 2.02,
+          "draw": 3.95
         },
         {
           "name": "Betsson",
-          "away": 3.45,
-          "home": 1.98,
-          "draw": 3.85
+          "away": 3.4,
+          "home": 2,
+          "draw": 3.9
         },
         {
           "name": "Unibet (NL)",
@@ -5638,27 +5638,27 @@
         },
         {
           "name": "Matchbook",
-          "away": 3.45,
-          "home": 2.06,
-          "draw": 4.3
+          "away": 3.5,
+          "home": 2.04,
+          "draw": 4.2
         },
         {
           "name": "Pinnacle",
-          "away": 3.3,
-          "home": 2.06,
-          "draw": 4.08
+          "away": 3.41,
+          "home": 2.01,
+          "draw": 4.09
         },
         {
           "name": "William Hill",
-          "away": 3.3,
-          "home": 1.95,
-          "draw": 3.75
+          "away": 3.2,
+          "home": 2,
+          "draw": 3.8
         },
         {
           "name": "888sport",
-          "away": 3.3,
-          "home": 1.95,
-          "draw": 3.75
+          "away": 3.2,
+          "home": 2,
+          "draw": 3.8
         },
         {
           "name": "BetOnline.ag",
@@ -5682,20 +5682,20 @@
       ],
       "oddsMovement": {
         "home": {
-          "previous": 1.96,
-          "current": 1.98,
+          "previous": 1.98,
+          "current": 2,
           "percent": 1,
           "significant": false
         },
         "draw": {
-          "previous": 3.96,
-          "current": 3.97,
-          "percent": 0.3,
+          "previous": 3.97,
+          "current": 4.01,
+          "percent": 1,
           "significant": false
         },
         "away": {
-          "previous": 3.37,
-          "current": 3.32,
+          "previous": 3.32,
+          "current": 3.27,
           "percent": -1.5,
           "significant": false
         },
@@ -5718,7 +5718,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T04:38:03.140Z"
+        "capturedAt": "2026-10-22T06:47:17.150Z"
       }
     },
     {
@@ -5744,9 +5744,9 @@
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
-        "home": 1.76,
-        "draw": 3.83,
-        "away": 4.29,
+        "home": 1.74,
+        "draw": 3.84,
+        "away": 4.39,
         "over": 2.19,
         "btts": 2.01
       },
@@ -5754,63 +5754,63 @@
       "bookmakerOffers": [
         {
           "name": "Coolbet",
-          "away": 4.3,
-          "home": 1.8,
+          "away": 4.5,
+          "home": 1.75,
           "draw": 3.85
         },
         {
           "name": "Winamax (FR)",
-          "away": 3.9,
-          "home": 1.72,
-          "draw": 3.7
+          "away": 4,
+          "home": 1.7,
+          "draw": 3.75
         },
         {
           "name": "Betclic (FR)",
-          "away": 4.05,
-          "home": 1.68,
+          "away": 4.15,
+          "home": 1.65,
           "draw": 3.63
         },
         {
           "name": "Unibet (FR)",
-          "away": 4,
+          "away": 4.1,
           "home": 1.65,
           "draw": 3.6
         },
         {
           "name": "Winamax (DE)",
-          "away": 4,
-          "home": 1.76,
-          "draw": 3.85
+          "away": 4.1,
+          "home": 1.72,
+          "draw": 3.9
         },
         {
           "name": "1xBet",
-          "away": 4.3,
-          "home": 1.82,
-          "draw": 3.99
+          "away": 4.56,
+          "home": 1.77,
+          "draw": 4.03
         },
         {
           "name": "Marathon Bet",
-          "away": 4.25,
-          "home": 1.8,
-          "draw": 3.94
+          "away": 4.5,
+          "home": 1.75,
+          "draw": 3.98
         },
         {
           "name": "Betfair",
-          "away": 4.7,
-          "home": 1.81,
-          "draw": 4
+          "away": 4.8,
+          "home": 1.79,
+          "draw": 4.1
         },
         {
           "name": "Betsson",
-          "away": 4.45,
+          "away": 4.5,
           "home": 1.75,
-          "draw": 3.85
+          "draw": 3.9
         },
         {
           "name": "Nordic Bet",
-          "away": 4.5,
-          "home": 1.78,
-          "draw": 3.9
+          "away": 4.55,
+          "home": 1.75,
+          "draw": 3.95
         },
         {
           "name": "PMU (FR)",
@@ -5838,32 +5838,32 @@
         },
         {
           "name": "Matchbook",
-          "away": 4.7,
-          "home": 1.81,
+          "away": 4.8,
+          "home": 1.78,
           "draw": 4
         },
         {
           "name": "Pinnacle",
-          "away": 4.52,
-          "home": 1.78,
-          "draw": 3.86
+          "away": 4.66,
+          "home": 1.72,
+          "draw": 4.03
         },
         {
           "name": "William Hill",
-          "away": 4.2,
+          "away": 4.33,
           "home": 1.75,
-          "draw": 3.7
+          "draw": 3.6
         },
         {
           "name": "888sport",
-          "away": 4.2,
+          "away": 4.33,
           "home": 1.75,
-          "draw": 3.7
+          "draw": 3.6
         },
         {
           "name": "Codere (IT)",
-          "away": 4.3,
-          "home": 1.8,
+          "away": 4.4,
+          "home": 1.77,
           "draw": 3.85
         },
         {
@@ -5888,21 +5888,21 @@
       ],
       "oddsMovement": {
         "home": {
-          "previous": 1.77,
-          "current": 1.76,
-          "percent": -0.6,
+          "previous": 1.76,
+          "current": 1.74,
+          "percent": -1.1,
           "significant": false
         },
         "draw": {
-          "previous": 3.82,
-          "current": 3.83,
+          "previous": 3.83,
+          "current": 3.84,
           "percent": 0.3,
           "significant": false
         },
         "away": {
-          "previous": 4.27,
-          "current": 4.29,
-          "percent": 0.5,
+          "previous": 4.29,
+          "current": 4.39,
+          "percent": 2.3,
           "significant": false
         },
         "over": {
@@ -5924,7 +5924,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T04:38:03.142Z"
+        "capturedAt": "2026-10-22T06:47:17.151Z"
       }
     },
     {
@@ -5994,7 +5994,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T04:38:03.144Z"
+        "capturedAt": "2026-10-22T06:47:17.152Z"
       }
     },
     {
@@ -6064,7 +6064,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T04:38:03.146Z"
+        "capturedAt": "2026-10-22T06:47:17.153Z"
       }
     },
     {
@@ -6134,7 +6134,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T04:38:03.147Z"
+        "capturedAt": "2026-10-22T06:47:17.154Z"
       }
     },
     {
@@ -6204,7 +6204,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T04:38:03.149Z"
+        "capturedAt": "2026-10-22T06:47:17.155Z"
       }
     },
     {
@@ -6274,7 +6274,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T04:38:03.151Z"
+        "capturedAt": "2026-10-22T06:47:17.155Z"
       }
     },
     {
@@ -6344,7 +6344,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T04:38:03.152Z"
+        "capturedAt": "2026-10-22T06:47:17.156Z"
       }
     },
     {
@@ -6414,7 +6414,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T04:38:03.154Z"
+        "capturedAt": "2026-10-22T06:47:17.157Z"
       }
     },
     {
@@ -6484,7 +6484,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T04:38:03.155Z"
+        "capturedAt": "2026-10-22T06:47:17.158Z"
       }
     },
     {
@@ -6554,7 +6554,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T04:38:03.157Z"
+        "capturedAt": "2026-10-22T06:47:17.158Z"
       }
     },
     {
@@ -6624,7 +6624,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T04:38:03.158Z"
+        "capturedAt": "2026-10-22T06:47:17.159Z"
       }
     },
     {
@@ -6694,7 +6694,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T04:38:03.160Z"
+        "capturedAt": "2026-10-22T06:47:17.160Z"
       }
     },
     {
@@ -6764,7 +6764,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T04:38:03.161Z"
+        "capturedAt": "2026-10-22T06:47:17.161Z"
       }
     },
     {
@@ -6847,7 +6847,7 @@
         "odd": 2.01,
         "probability": 0.5927058281131319,
         "value": 0.19133871450739504,
-        "capturedAt": "2026-10-22T04:38:03.163Z"
+        "capturedAt": "2026-10-22T06:47:17.161Z"
       }
     },
     {
@@ -6917,7 +6917,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T04:38:03.164Z"
+        "capturedAt": "2026-10-22T06:47:17.162Z"
       }
     },
     {
@@ -6987,7 +6987,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T04:38:03.166Z"
+        "capturedAt": "2026-10-22T06:47:17.163Z"
       }
     },
     {
@@ -7057,7 +7057,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T04:38:03.168Z"
+        "capturedAt": "2026-10-22T06:47:17.164Z"
       }
     },
     {
@@ -7127,7 +7127,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T04:38:03.169Z"
+        "capturedAt": "2026-10-22T06:47:17.165Z"
       }
     },
     {
@@ -7197,7 +7197,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T04:38:03.171Z"
+        "capturedAt": "2026-10-22T06:47:17.165Z"
       }
     },
     {
@@ -7225,7 +7225,7 @@
       "odds": {
         "home": 3.14,
         "draw": 3.46,
-        "away": 2.24,
+        "away": 2.23,
         "over": 2.19,
         "btts": 2.01
       },
@@ -7246,8 +7246,8 @@
       "bookmakerOffers": [
         {
           "name": "MyBookie.ag",
-          "home": 3.02,
-          "away": 2.2,
+          "home": 3,
+          "away": 2.21,
           "draw": 3.38
         },
         {
@@ -7260,11 +7260,11 @@
           "name": "Winamax (FR)",
           "home": 3,
           "away": 2.1,
-          "draw": 3.4
+          "draw": 3.35
         },
         {
           "name": "Unibet (FR)",
-          "home": 3,
+          "home": 2.95,
           "away": 2.15,
           "draw": 3.3
         },
@@ -7276,13 +7276,13 @@
         },
         {
           "name": "Betclic (FR)",
-          "home": 3.03,
-          "away": 2.1,
+          "home": 3,
+          "away": 2.12,
           "draw": 3.4
         },
         {
           "name": "Betfair",
-          "home": 3.4,
+          "home": 3.35,
           "away": 2.32,
           "draw": 3.55
         },
@@ -7354,8 +7354,8 @@
         },
         {
           "name": "Matchbook",
-          "home": 3.4,
-          "away": 2.32,
+          "home": 3.35,
+          "away": 2.3,
           "draw": 3.55
         },
         {
@@ -7367,7 +7367,7 @@
         {
           "name": "Codere (IT)",
           "home": 3.1,
-          "away": 2.26,
+          "away": 2.27,
           "draw": 3.5
         },
         {
@@ -7384,14 +7384,14 @@
         },
         {
           "name": "BetOnline.ag",
-          "home": 3.15,
-          "away": 2.32,
+          "home": 3.25,
+          "away": 2.27,
           "draw": 3.49
         },
         {
           "name": "BetAnything",
-          "home": 3.15,
-          "away": 2.32,
+          "home": 3.25,
+          "away": 2.27,
           "draw": 3.49
         }
       ],
@@ -7410,21 +7410,21 @@
       ],
       "oddsMovement": {
         "home": {
-          "previous": 3.16,
+          "previous": 3.14,
           "current": 3.14,
-          "percent": -0.6,
+          "percent": 0,
           "significant": false
         },
         "draw": {
-          "previous": 3.47,
+          "previous": 3.46,
           "current": 3.46,
-          "percent": -0.3,
+          "percent": 0,
           "significant": false
         },
         "away": {
-          "previous": 2.23,
-          "current": 2.24,
-          "percent": 0.4,
+          "previous": 2.24,
+          "current": 2.23,
+          "percent": -0.4,
           "significant": false
         },
         "over": {
@@ -7446,7 +7446,7 @@
         "odd": 2.01,
         "probability": 0.6015278695656847,
         "value": 0.20907101782702608,
-        "capturedAt": "2026-10-22T04:38:03.173Z"
+        "capturedAt": "2026-10-22T06:47:17.166Z"
       }
     },
     {
@@ -7474,7 +7474,7 @@
       "odds": {
         "home": 1.75,
         "draw": 3.62,
-        "away": 4.81,
+        "away": 4.8,
         "over": 2.19,
         "btts": 2.01
       },
@@ -7501,9 +7501,9 @@
         },
         {
           "name": "Unibet (FR)",
-          "home": 1.66,
+          "home": 1.67,
           "away": 4.6,
-          "draw": 3.5
+          "draw": 3.4
         },
         {
           "name": "Tipico",
@@ -7537,9 +7537,9 @@
         },
         {
           "name": "Betclic (FR)",
-          "home": 1.67,
+          "home": 1.68,
           "away": 4.6,
-          "draw": 3.5
+          "draw": 3.48
         },
         {
           "name": "Marathon Bet",
@@ -7579,27 +7579,27 @@
         },
         {
           "name": "Betsson",
-          "home": 1.72,
+          "home": 1.7,
           "away": 5,
-          "draw": 3.6
+          "draw": 3.7
         },
         {
           "name": "Nordic Bet",
-          "home": 1.72,
+          "home": 1.7,
           "away": 4.95,
-          "draw": 3.55
+          "draw": 3.65
         },
         {
           "name": "Betfair",
-          "home": 1.8,
-          "away": 5.4,
+          "home": 1.81,
+          "away": 5.3,
           "draw": 3.75
         },
         {
           "name": "Matchbook",
-          "home": 1.81,
-          "away": 5.4,
-          "draw": 3.75
+          "home": 1.8,
+          "away": 5.3,
+          "draw": 3.7
         },
         {
           "name": "Codere (IT)",
@@ -7641,15 +7641,15 @@
           "significant": false
         },
         "draw": {
-          "previous": 3.63,
+          "previous": 3.62,
           "current": 3.62,
-          "percent": -0.3,
+          "percent": 0,
           "significant": false
         },
         "away": {
           "previous": 4.81,
-          "current": 4.81,
-          "percent": 0,
+          "current": 4.8,
+          "percent": -0.2,
           "significant": false
         },
         "over": {
@@ -7671,7 +7671,7 @@
         "odd": 2.01,
         "probability": 0.5381902377514081,
         "value": 0.08176237788033003,
-        "capturedAt": "2026-10-22T04:38:03.175Z"
+        "capturedAt": "2026-10-22T06:47:17.167Z"
       }
     },
     {
@@ -7698,8 +7698,8 @@
       "awayGoals": 1,
       "odds": {
         "home": 1.37,
-        "draw": 5.56,
-        "away": 6.77,
+        "draw": 5.54,
+        "away": 6.75,
         "over": 2.19,
         "btts": 2.01
       },
@@ -7728,7 +7728,7 @@
           "name": "Winamax (FR)",
           "away": 6,
           "home": 1.33,
-          "draw": 5.7
+          "draw": 5.6
         },
         {
           "name": "888sport",
@@ -7764,13 +7764,13 @@
           "name": "Winamax (DE)",
           "away": 6.25,
           "home": 1.35,
-          "draw": 6
+          "draw": 5.9
         },
         {
           "name": "Betclic (FR)",
           "away": 6.25,
           "home": 1.32,
-          "draw": 5.5
+          "draw": 5.4
         },
         {
           "name": "1xBet",
@@ -7816,9 +7816,9 @@
         },
         {
           "name": "Matchbook",
-          "away": 7.8,
-          "home": 1.42,
-          "draw": 5.8
+          "away": 7.6,
+          "home": 1.41,
+          "draw": 5.7
         },
         {
           "name": "GTbets",
@@ -7846,7 +7846,7 @@
         },
         {
           "name": "Betfair",
-          "away": 7.8,
+          "away": 7.6,
           "home": 1.42,
           "draw": 5.8
         },
@@ -7878,15 +7878,15 @@
           "significant": false
         },
         "draw": {
-          "previous": 5.55,
-          "current": 5.56,
-          "percent": 0.2,
+          "previous": 5.56,
+          "current": 5.54,
+          "percent": -0.4,
           "significant": false
         },
         "away": {
-          "previous": 6.76,
-          "current": 6.77,
-          "percent": 0.1,
+          "previous": 6.77,
+          "current": 6.75,
+          "percent": -0.3,
           "significant": false
         },
         "over": {
@@ -7908,7 +7908,7 @@
         "odd": 2.19,
         "probability": 0.6660112926264348,
         "value": 0.4585647308518921,
-        "capturedAt": "2026-10-22T04:38:03.177Z"
+        "capturedAt": "2026-10-22T06:47:17.169Z"
       }
     },
     {
@@ -7935,7 +7935,7 @@
       "awayGoals": 1.46,
       "odds": {
         "home": 2.13,
-        "draw": 3.39,
+        "draw": 3.37,
         "away": 3.42,
         "over": 2.19,
         "btts": 2.01
@@ -7965,7 +7965,7 @@
           "name": "Winamax (DE)",
           "away": 3.3,
           "home": 2.1,
-          "draw": 3.45
+          "draw": 3.4
         },
         {
           "name": "Winamax (FR)",
@@ -7982,8 +7982,8 @@
         {
           "name": "Betclic (FR)",
           "away": 3.28,
-          "home": 2.05,
-          "draw": 3.25
+          "home": 2.07,
+          "draw": 3.23
         },
         {
           "name": "1xBet",
@@ -7993,9 +7993,9 @@
         },
         {
           "name": "Tipico",
-          "away": 3.5,
-          "home": 2.05,
-          "draw": 3.5
+          "away": 3.4,
+          "home": 2.15,
+          "draw": 3.3
         },
         {
           "name": "Marathon Bet",
@@ -8053,8 +8053,8 @@
         },
         {
           "name": "Matchbook",
-          "away": 3.6,
-          "home": 2.26,
+          "away": 3.55,
+          "home": 2.24,
           "draw": 3.5
         },
         {
@@ -8067,7 +8067,7 @@
           "name": "Codere (IT)",
           "away": 3.4,
           "home": 2.17,
-          "draw": 3.4
+          "draw": 3.35
         },
         {
           "name": "Everygame",
@@ -8091,7 +8091,7 @@
           "name": "BetAnything",
           "away": 3.4,
           "home": 2.15,
-          "draw": 3.45
+          "draw": 3.4
         },
         {
           "name": "Coolbet",
@@ -8122,14 +8122,14 @@
         },
         "draw": {
           "previous": 3.39,
-          "current": 3.39,
-          "percent": 0,
+          "current": 3.37,
+          "percent": -0.6,
           "significant": false
         },
         "away": {
-          "previous": 3.43,
+          "previous": 3.42,
           "current": 3.42,
-          "percent": -0.3,
+          "percent": 0,
           "significant": false
         },
         "over": {
@@ -8151,7 +8151,7 @@
         "odd": 2.01,
         "probability": 0.6408824462462466,
         "value": 0.2881737169549554,
-        "capturedAt": "2026-10-22T04:38:03.179Z"
+        "capturedAt": "2026-10-22T06:47:17.169Z"
       }
     },
     {
@@ -8177,9 +8177,9 @@
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
-        "home": 2.23,
-        "draw": 3.39,
-        "away": 3.16,
+        "home": 2.24,
+        "draw": 3.38,
+        "away": 3.15,
         "over": 2.19,
         "btts": 2.01
       },
@@ -8241,7 +8241,7 @@
         },
         {
           "name": "Betfair",
-          "home": 2.34,
+          "home": 2.32,
           "away": 3.35,
           "draw": 3.6
         },
@@ -8283,7 +8283,7 @@
         },
         {
           "name": "Codere (IT)",
-          "home": 2.27,
+          "home": 2.28,
           "away": 3.1,
           "draw": 3.5
         },
@@ -8307,15 +8307,15 @@
         },
         {
           "name": "Nordic Bet",
-          "home": 2.18,
-          "away": 3.15,
-          "draw": 3.45
+          "home": 2.25,
+          "away": 3.1,
+          "draw": 3.4
         },
         {
           "name": "Betsson",
-          "home": 2.18,
-          "away": 3.15,
-          "draw": 3.45
+          "home": 2.25,
+          "away": 3.1,
+          "draw": 3.4
         }
       ],
       "bookmakerCount": 22,
@@ -8333,21 +8333,21 @@
       ],
       "oddsMovement": {
         "home": {
-          "previous": 2.24,
-          "current": 2.23,
-          "percent": -0.4,
+          "previous": 2.23,
+          "current": 2.24,
+          "percent": 0.4,
           "significant": false
         },
         "draw": {
-          "previous": 3.4,
-          "current": 3.39,
+          "previous": 3.39,
+          "current": 3.38,
           "percent": -0.3,
           "significant": false
         },
         "away": {
           "previous": 3.16,
-          "current": 3.16,
-          "percent": 0,
+          "current": 3.15,
+          "percent": -0.3,
           "significant": false
         },
         "over": {
@@ -8369,7 +8369,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T04:38:03.180Z"
+        "capturedAt": "2026-10-22T06:47:17.170Z"
       }
     },
     {
@@ -8439,7 +8439,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T04:38:03.182Z"
+        "capturedAt": "2026-10-22T06:47:17.171Z"
       }
     },
     {
@@ -8509,7 +8509,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T04:38:03.183Z"
+        "capturedAt": "2026-10-22T06:47:17.172Z"
       }
     },
     {
@@ -8579,7 +8579,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T04:38:03.184Z"
+        "capturedAt": "2026-10-22T06:47:17.172Z"
       }
     },
     {
@@ -8649,7 +8649,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T04:38:03.186Z"
+        "capturedAt": "2026-10-22T06:47:17.173Z"
       }
     },
     {
@@ -8719,7 +8719,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T04:38:03.187Z"
+        "capturedAt": "2026-10-22T06:47:17.174Z"
       }
     },
     {
@@ -8745,7 +8745,7 @@
       "homeGoals": 2.34,
       "awayGoals": 1.99,
       "odds": {
-        "home": 4.66,
+        "home": 4.67,
         "draw": 4.24,
         "away": 1.65,
         "over": 1.5,
@@ -8795,13 +8795,13 @@
           "name": "Betclic (FR)",
           "home": 4.35,
           "away": 1.57,
-          "draw": 3.93
+          "draw": 3.95
         },
         {
           "name": "MyBookie.ag",
           "home": 4.5,
           "away": 1.64,
-          "draw": 4,
+          "draw": 4.1,
           "btts": 1.56
         },
         {
@@ -8820,8 +8820,8 @@
         },
         {
           "name": "Betfair",
-          "home": 5.1,
-          "away": 1.69,
+          "home": 5.2,
+          "away": 1.7,
           "draw": 4.5
         },
         {
@@ -8935,9 +8935,9 @@
       ],
       "oddsMovement": {
         "home": {
-          "previous": 4.61,
-          "current": 4.66,
-          "percent": 1.1,
+          "previous": 4.66,
+          "current": 4.67,
+          "percent": 0.2,
           "significant": false
         },
         "draw": {
@@ -8947,9 +8947,9 @@
           "significant": false
         },
         "away": {
-          "previous": 1.66,
+          "previous": 1.65,
           "current": 1.65,
-          "percent": -0.6,
+          "percent": 0,
           "significant": false
         },
         "over": {
@@ -8971,7 +8971,7 @@
         "odd": 1.5,
         "probability": 0.8063784563094968,
         "value": 0.20956768446424512,
-        "capturedAt": "2026-10-22T04:38:03.189Z"
+        "capturedAt": "2026-10-22T06:47:17.175Z"
       }
     },
     {
@@ -8998,8 +8998,8 @@
       "awayGoals": 0.92,
       "odds": {
         "home": 1.41,
-        "draw": 4.52,
-        "away": 8.08,
+        "draw": 4.54,
+        "away": 8.06,
         "over": 1.8,
         "btts": 2.06
       },
@@ -9020,9 +9020,9 @@
       "bookmakerOffers": [
         {
           "name": "Winamax (DE)",
-          "home": 1.42,
-          "away": 7.25,
-          "draw": 4.4
+          "home": 1.41,
+          "away": 7.5,
+          "draw": 4.5
         },
         {
           "name": "Unibet (FR)",
@@ -9041,7 +9041,7 @@
         {
           "name": "Betclic (FR)",
           "home": 1.36,
-          "away": 6.6,
+          "away": 6.75,
           "draw": 4.3
         },
         {
@@ -9054,8 +9054,8 @@
           "name": "MyBookie.ag",
           "home": 1.41,
           "away": 6.9,
-          "draw": 4.4,
-          "btts": 2.02,
+          "draw": 4.5,
+          "btts": 2.03,
           "over": 1.78
         },
         {
@@ -9075,8 +9075,8 @@
         {
           "name": "Betfair",
           "home": 1.47,
-          "away": 9.2,
-          "draw": 4.6
+          "away": 9,
+          "draw": 4.7
         },
         {
           "name": "Marathon Bet",
@@ -9088,14 +9088,14 @@
         {
           "name": "Tipico",
           "home": 1.4,
-          "away": 8.5,
-          "draw": 4.4,
+          "away": 8,
+          "draw": 4.5,
           "over": 1.77
         },
         {
           "name": "Pinnacle",
           "home": 1.45,
-          "away": 8.42,
+          "away": 8.44,
           "draw": 4.38,
           "btts": 2.13
         },
@@ -9143,16 +9143,16 @@
         },
         {
           "name": "Matchbook",
-          "home": 1.47,
-          "away": 9.2,
+          "home": 1.46,
+          "away": 8.8,
           "draw": 4.6,
-          "btts": 2.14,
+          "btts": 2.12,
           "over": 1.9
         },
         {
           "name": "Codere (IT)",
           "home": 1.43,
-          "away": 7.2,
+          "away": 7.4,
           "draw": 4.7,
           "over": 1.76
         },
@@ -9214,15 +9214,15 @@
           "significant": false
         },
         "draw": {
-          "previous": 4.57,
-          "current": 4.52,
-          "percent": -1.1,
+          "previous": 4.52,
+          "current": 4.54,
+          "percent": 0.4,
           "significant": false
         },
         "away": {
-          "previous": 8.06,
-          "current": 8.08,
-          "percent": 0.2,
+          "previous": 8.08,
+          "current": 8.06,
+          "percent": -0.2,
           "significant": false
         },
         "over": {
@@ -9244,7 +9244,7 @@
         "odd": 2.06,
         "probability": 0.47125186472078917,
         "value": -0.029221158675174275,
-        "capturedAt": "2026-10-22T04:38:03.191Z"
+        "capturedAt": "2026-10-22T06:47:17.176Z"
       }
     },
     {
@@ -9408,7 +9408,7 @@
         },
         {
           "name": "Matchbook",
-          "home": 1.75,
+          "home": 1.74,
           "away": 4.8,
           "draw": 4.4,
           "btts": 1.6
@@ -9445,9 +9445,9 @@
         },
         {
           "name": "BetOnline.ag",
-          "home": 1.69,
-          "away": 4.6,
-          "draw": 4.38
+          "home": 1.68,
+          "away": 4.66,
+          "draw": 4.4
         }
       ],
       "bookmakerCount": 25,
@@ -9473,9 +9473,9 @@
           "significant": false
         },
         "draw": {
-          "previous": 4.24,
+          "previous": 4.23,
           "current": 4.23,
-          "percent": -0.2,
+          "percent": 0,
           "significant": false
         },
         "away": {
@@ -9503,7 +9503,7 @@
         "odd": 1.56,
         "probability": 0.617612503857168,
         "value": -0.036524493982817874,
-        "capturedAt": "2026-10-22T04:38:03.193Z"
+        "capturedAt": "2026-10-22T06:47:17.177Z"
       }
     },
     {
@@ -9530,8 +9530,8 @@
       "awayGoals": 0.69,
       "odds": {
         "home": 1.27,
-        "draw": 5.84,
-        "away": 10.2,
+        "draw": 5.85,
+        "away": 10.24,
         "over": 1.64,
         "btts": 1.69
       },
@@ -9582,9 +9582,9 @@
         },
         {
           "name": "Coolbet",
-          "home": 1.32,
-          "away": 10,
-          "draw": 5.8
+          "home": 1.3,
+          "away": 11,
+          "draw": 5.85
         },
         {
           "name": "Marathon Bet",
@@ -9595,13 +9595,13 @@
         {
           "name": "Pinnacle",
           "home": 1.29,
-          "away": 10.25,
+          "away": 10.27,
           "draw": 5.87
         },
         {
           "name": "Betclic (FR)",
           "home": 1.22,
-          "away": 9,
+          "away": 8.75,
           "draw": 5.4
         },
         {
@@ -9656,7 +9656,7 @@
           "name": "Everygame",
           "home": 1.25,
           "away": 9.5,
-          "draw": 5.25
+          "draw": 5.5
         },
         {
           "name": "BetOnline.ag",
@@ -9686,15 +9686,15 @@
           "significant": false
         },
         "draw": {
-          "previous": 5.85,
-          "current": 5.84,
-          "percent": -0.2,
+          "previous": 5.84,
+          "current": 5.85,
+          "percent": 0.2,
           "significant": false
         },
         "away": {
           "previous": 10.2,
-          "current": 10.2,
-          "percent": 0,
+          "current": 10.24,
+          "percent": 0.4,
           "significant": false
         },
         "over": {
@@ -9716,7 +9716,7 @@
         "odd": 1.27,
         "probability": 0.6592927610144189,
         "value": -0.16269819351168802,
-        "capturedAt": "2026-10-22T04:38:03.195Z"
+        "capturedAt": "2026-10-22T06:47:17.178Z"
       }
     },
     {
@@ -9743,7 +9743,7 @@
       "awayGoals": 1.07,
       "odds": {
         "home": 1.45,
-        "draw": 5.06,
+        "draw": 5.05,
         "away": 5.8,
         "over": 1.64,
         "btts": 1.69
@@ -9773,7 +9773,7 @@
           "name": "Winamax (FR)",
           "home": 1.42,
           "away": 5.3,
-          "draw": 5
+          "draw": 4.9
         },
         {
           "name": "888sport",
@@ -9789,9 +9789,9 @@
         },
         {
           "name": "Unibet (FR)",
-          "home": 1.39,
-          "away": 5.4,
-          "draw": 4.9
+          "home": 1.4,
+          "away": 5.3,
+          "draw": 4.8
         },
         {
           "name": "Marathon Bet",
@@ -9807,15 +9807,15 @@
         },
         {
           "name": "Winamax (DE)",
-          "home": 1.44,
+          "home": 1.45,
           "away": 5.5,
           "draw": 5.2
         },
         {
           "name": "Betclic (FR)",
-          "home": 1.38,
+          "home": 1.39,
           "away": 5.25,
-          "draw": 4.85
+          "draw": 4.8
         },
         {
           "name": "1xBet",
@@ -9861,13 +9861,13 @@
         },
         {
           "name": "Matchbook",
-          "home": 1.51,
+          "home": 1.5,
           "away": 6,
           "draw": 5.3
         },
         {
           "name": "Codere (IT)",
-          "home": 1.47,
+          "home": 1.48,
           "away": 5.6,
           "draw": 5.2
         },
@@ -9917,15 +9917,15 @@
       ],
       "oddsMovement": {
         "home": {
-          "previous": 1.46,
+          "previous": 1.45,
           "current": 1.45,
-          "percent": -0.7,
+          "percent": 0,
           "significant": false
         },
         "draw": {
-          "previous": 5.08,
-          "current": 5.06,
-          "percent": -0.4,
+          "previous": 5.06,
+          "current": 5.05,
+          "percent": -0.2,
           "significant": false
         },
         "away": {
@@ -9953,7 +9953,7 @@
         "odd": 1.64,
         "probability": 0.6263220655703309,
         "value": 0.02716818753534267,
-        "capturedAt": "2026-10-22T04:38:03.197Z"
+        "capturedAt": "2026-10-22T06:47:17.179Z"
       }
     },
     {
@@ -9979,7 +9979,7 @@
       "homeGoals": 1.44,
       "awayGoals": 1.61,
       "odds": {
-        "home": 2.79,
+        "home": 2.78,
         "draw": 3.37,
         "away": 2.49,
         "over": 1.64,
@@ -10028,7 +10028,7 @@
           "name": "Betclic (FR)",
           "away": 2.32,
           "home": 2.67,
-          "draw": 3.18
+          "draw": 3.17
         },
         {
           "name": "1xBet",
@@ -10098,9 +10098,9 @@
         },
         {
           "name": "Matchbook",
-          "away": 2.62,
-          "home": 2.98,
-          "draw": 3.5
+          "away": 2.6,
+          "home": 2.92,
+          "draw": 3.45
         },
         {
           "name": "Codere (IT)",
@@ -10123,7 +10123,7 @@
         {
           "name": "Betfair",
           "away": 2.62,
-          "home": 2.98,
+          "home": 2.94,
           "draw": 3.5
         },
         {
@@ -10161,14 +10161,14 @@
       "oddsMovement": {
         "home": {
           "previous": 2.79,
-          "current": 2.79,
-          "percent": 0,
+          "current": 2.78,
+          "percent": -0.4,
           "significant": false
         },
         "draw": {
-          "previous": 3.38,
+          "previous": 3.37,
           "current": 3.37,
-          "percent": -0.3,
+          "percent": 0,
           "significant": false
         },
         "away": {
@@ -10196,7 +10196,7 @@
         "odd": 1.69,
         "probability": 0.6105588715371804,
         "value": 0.03184449289783475,
-        "capturedAt": "2026-10-22T04:38:03.199Z"
+        "capturedAt": "2026-10-22T06:47:17.179Z"
       }
     },
     {
@@ -10223,7 +10223,7 @@
       "awayGoals": 1.23,
       "odds": {
         "home": 3,
-        "draw": 3.48,
+        "draw": 3.47,
         "away": 2.3,
         "over": 2.19,
         "btts": 2.01
@@ -10341,20 +10341,20 @@
         },
         {
           "name": "Betsson",
-          "home": 3.04,
-          "away": 2.28,
-          "draw": 3.51
+          "home": 3.05,
+          "away": 2.31,
+          "draw": 3.43
         },
         {
           "name": "Nordic Bet",
           "home": 3.05,
-          "away": 2.28,
-          "draw": 3.5
+          "away": 2.32,
+          "draw": 3.4
         },
         {
           "name": "Matchbook",
-          "home": 3.2,
-          "away": 2.42,
+          "home": 3.15,
+          "away": 2.4,
           "draw": 3.55
         },
         {
@@ -10416,8 +10416,8 @@
         },
         "draw": {
           "previous": 3.48,
-          "current": 3.48,
-          "percent": 0,
+          "current": 3.47,
+          "percent": -0.3,
           "significant": false
         },
         "away": {
@@ -10445,7 +10445,7 @@
         "odd": 2.01,
         "probability": 0.488061429473041,
         "value": -0.018996526759187726,
-        "capturedAt": "2026-10-22T04:38:03.200Z"
+        "capturedAt": "2026-10-22T06:47:17.180Z"
       }
     },
     {
@@ -10473,7 +10473,7 @@
       "odds": {
         "home": 1.75,
         "draw": 3.77,
-        "away": 4.52,
+        "away": 4.5,
         "over": 2.19,
         "btts": 2.01
       },
@@ -10494,8 +10494,8 @@
       "bookmakerOffers": [
         {
           "name": "Winamax (DE)",
-          "away": 4.3,
-          "home": 1.74,
+          "away": 4.2,
+          "home": 1.76,
           "draw": 3.85
         },
         {
@@ -10507,7 +10507,7 @@
         {
           "name": "Unibet (FR)",
           "away": 4.2,
-          "home": 1.67,
+          "home": 1.68,
           "draw": 3.5
         },
         {
@@ -10518,15 +10518,15 @@
         },
         {
           "name": "Winamax (FR)",
-          "away": 4.1,
+          "away": 4,
           "home": 1.7,
           "draw": 3.65
         },
         {
           "name": "Betclic (FR)",
-          "away": 4.2,
-          "home": 1.66,
-          "draw": 3.55
+          "away": 4.15,
+          "home": 1.67,
+          "draw": 3.53
         },
         {
           "name": "William Hill",
@@ -10602,9 +10602,9 @@
         },
         {
           "name": "Codere (IT)",
-          "away": 4.5,
-          "home": 1.78,
-          "draw": 3.8
+          "away": 4.4,
+          "home": 1.79,
+          "draw": 3.75
         },
         {
           "name": "Everygame",
@@ -10640,15 +10640,15 @@
           "significant": false
         },
         "draw": {
-          "previous": 3.78,
+          "previous": 3.77,
           "current": 3.77,
-          "percent": -0.3,
+          "percent": 0,
           "significant": false
         },
         "away": {
-          "previous": 4.53,
-          "current": 4.52,
-          "percent": -0.2,
+          "previous": 4.52,
+          "current": 4.5,
+          "percent": -0.4,
           "significant": false
         },
         "over": {
@@ -10670,7 +10670,7 @@
         "odd": 2.01,
         "probability": 0.6541207195385883,
         "value": 0.31478264627256225,
-        "capturedAt": "2026-10-22T04:38:03.202Z"
+        "capturedAt": "2026-10-22T06:47:17.181Z"
       }
     },
     {
@@ -10859,15 +10859,15 @@
           "significant": false
         },
         "draw": {
-          "previous": 3.59,
+          "previous": 3.58,
           "current": 3.58,
-          "percent": -0.3,
+          "percent": 0,
           "significant": false
         },
         "away": {
-          "previous": 2.81,
+          "previous": 2.8,
           "current": 2.8,
-          "percent": -0.4,
+          "percent": 0,
           "significant": false
         },
         "over": {
@@ -10889,7 +10889,7 @@
         "odd": 2.19,
         "probability": 0.6660112926264348,
         "value": 0.4585647308518921,
-        "capturedAt": "2026-10-22T04:38:03.203Z"
+        "capturedAt": "2026-10-22T06:47:17.182Z"
       }
     },
     {
@@ -10962,9 +10962,9 @@
         },
         {
           "name": "Tipico",
-          "home": 3.2,
+          "home": 3.3,
           "away": 2.1,
-          "draw": 3.7
+          "draw": 3.6
         },
         {
           "name": "Winamax (FR)",
@@ -10980,7 +10980,7 @@
         },
         {
           "name": "Betclic (FR)",
-          "home": 2.98,
+          "home": 2.97,
           "away": 2.05,
           "draw": 3.37
         },
@@ -11034,13 +11034,13 @@
         },
         {
           "name": "Betfair",
-          "home": 3.35,
-          "away": 2.22,
-          "draw": 3.75
+          "home": 3.4,
+          "away": 2.24,
+          "draw": 3.7
         },
         {
           "name": "Matchbook",
-          "home": 3.35,
+          "home": 3.3,
           "away": 2.22,
           "draw": 3.75
         },
@@ -11078,21 +11078,21 @@
       ],
       "oddsMovement": {
         "home": {
-          "previous": 3.2,
+          "previous": 3.19,
           "current": 3.19,
-          "percent": -0.3,
+          "percent": 0,
           "significant": false
         },
         "draw": {
-          "previous": 3.6,
+          "previous": 3.59,
           "current": 3.59,
-          "percent": -0.3,
+          "percent": 0,
           "significant": false
         },
         "away": {
-          "previous": 2.15,
+          "previous": 2.14,
           "current": 2.14,
-          "percent": -0.5,
+          "percent": 0,
           "significant": false
         },
         "over": {
@@ -11114,7 +11114,7 @@
         "odd": 2.01,
         "probability": 0.571014741630865,
         "value": 0.14773963067803852,
-        "capturedAt": "2026-10-22T04:38:03.205Z"
+        "capturedAt": "2026-10-22T06:47:17.182Z"
       }
     },
     {
@@ -11142,7 +11142,7 @@
       "odds": {
         "home": 1.82,
         "draw": 4,
-        "away": 3.84,
+        "away": 3.85,
         "over": 2.19,
         "btts": 2.01
       },
@@ -11265,8 +11265,8 @@
         },
         {
           "name": "Matchbook",
-          "home": 1.92,
-          "away": 3.95,
+          "home": 1.91,
+          "away": 4.1,
           "draw": 4.2
         },
         {
@@ -11290,7 +11290,7 @@
         {
           "name": "Betfair",
           "home": 1.92,
-          "away": 3.95,
+          "away": 4.1,
           "draw": 4.2
         },
         {
@@ -11315,21 +11315,21 @@
       ],
       "oddsMovement": {
         "home": {
-          "previous": 1.83,
+          "previous": 1.82,
           "current": 1.82,
-          "percent": -0.5,
+          "percent": 0,
           "significant": false
         },
         "draw": {
-          "previous": 4.01,
+          "previous": 4,
           "current": 4,
-          "percent": -0.2,
+          "percent": 0,
           "significant": false
         },
         "away": {
-          "previous": 3.85,
-          "current": 3.84,
-          "percent": -0.3,
+          "previous": 3.84,
+          "current": 3.85,
+          "percent": 0.3,
           "significant": false
         },
         "over": {
@@ -11351,7 +11351,7 @@
         "odd": 2.19,
         "probability": 0.7988517757536562,
         "value": 0.7494853889005071,
-        "capturedAt": "2026-10-22T04:38:03.207Z"
+        "capturedAt": "2026-10-22T06:47:17.183Z"
       }
     },
     {
@@ -11421,7 +11421,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T04:38:03.209Z"
+        "capturedAt": "2026-10-22T06:47:17.184Z"
       }
     },
     {
@@ -11491,7 +11491,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T04:38:03.210Z"
+        "capturedAt": "2026-10-22T06:47:17.185Z"
       }
     },
     {
@@ -11519,7 +11519,7 @@
       "odds": {
         "home": 1.4,
         "draw": 5.34,
-        "away": 6.3,
+        "away": 6.31,
         "over": 2.19,
         "btts": 2.01
       },
@@ -11527,9 +11527,9 @@
       "bookmakerOffers": [
         {
           "name": "Pinnacle",
-          "away": 6.41,
-          "home": 1.46,
-          "draw": 5.1
+          "away": 6.45,
+          "home": 1.45,
+          "draw": 5.13
         },
         {
           "name": "Winamax (FR)",
@@ -11570,7 +11570,7 @@
         {
           "name": "Winamax (DE)",
           "away": 5.5,
-          "home": 1.42,
+          "home": 1.41,
           "draw": 5.6
         },
         {
@@ -11625,11 +11625,11 @@
           "name": "Matchbook",
           "away": 6.8,
           "home": 1.45,
-          "draw": 5.8
+          "draw": 5.6
         },
         {
           "name": "Codere (IT)",
-          "away": 5.8,
+          "away": 6,
           "home": 1.43,
           "draw": 5.4
         },
@@ -11685,15 +11685,15 @@
           "significant": false
         },
         "draw": {
-          "previous": 5.38,
+          "previous": 5.34,
           "current": 5.34,
-          "percent": -0.7,
+          "percent": 0,
           "significant": false
         },
         "away": {
-          "previous": 6.31,
-          "current": 6.3,
-          "percent": -0.2,
+          "previous": 6.3,
+          "current": 6.31,
+          "percent": 0.2,
           "significant": false
         },
         "over": {
@@ -11715,7 +11715,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T04:38:03.212Z"
+        "capturedAt": "2026-10-22T06:47:17.186Z"
       }
     },
     {
@@ -11785,7 +11785,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T04:38:03.213Z"
+        "capturedAt": "2026-10-22T06:47:17.187Z"
       }
     },
     {
@@ -11848,7 +11848,7 @@
           "name": "Winamax (FR)",
           "away": 2.35,
           "home": 3,
-          "draw": 2.95
+          "draw": 2.9
         },
         {
           "name": "Unibet (FR)",
@@ -11930,7 +11930,7 @@
         },
         {
           "name": "Matchbook",
-          "away": 2.58,
+          "away": 2.56,
           "home": 3.3,
           "draw": 3.15
         },
@@ -11992,21 +11992,21 @@
       ],
       "oddsMovement": {
         "home": {
-          "previous": 3.15,
+          "previous": 3.14,
           "current": 3.14,
-          "percent": -0.3,
+          "percent": 0,
           "significant": false
         },
         "draw": {
-          "previous": 3.03,
+          "previous": 3.02,
           "current": 3.02,
-          "percent": -0.3,
+          "percent": 0,
           "significant": false
         },
         "away": {
-          "previous": 2.45,
+          "previous": 2.44,
           "current": 2.44,
-          "percent": -0.4,
+          "percent": 0,
           "significant": false
         },
         "over": {
@@ -12028,7 +12028,7 @@
         "odd": 3.14,
         "probability": 0.4227305176467725,
         "value": 0.3273738254108658,
-        "capturedAt": "2026-10-22T04:38:03.215Z"
+        "capturedAt": "2026-10-22T06:47:17.187Z"
       }
     },
     {
@@ -12056,7 +12056,7 @@
       "odds": {
         "home": 1.49,
         "draw": 4.62,
-        "away": 5.86,
+        "away": 5.85,
         "over": 2.19,
         "btts": 2.01
       },
@@ -12076,13 +12076,13 @@
         },
         {
           "name": "Winamax (FR)",
-          "home": 1.47,
+          "home": 1.46,
           "away": 5,
           "draw": 4.7
         },
         {
           "name": "Unibet (FR)",
-          "home": 1.42,
+          "home": 1.41,
           "away": 5.2,
           "draw": 4.5
         },
@@ -12161,8 +12161,8 @@
         {
           "name": "Matchbook",
           "home": 1.53,
-          "away": 6.8,
-          "draw": 4.9
+          "away": 6.6,
+          "draw": 4.8
         },
         {
           "name": "Codere (IT)",
@@ -12234,9 +12234,9 @@
           "significant": false
         },
         "away": {
-          "previous": 5.83,
-          "current": 5.86,
-          "percent": 0.5,
+          "previous": 5.86,
+          "current": 5.85,
+          "percent": -0.2,
           "significant": false
         },
         "over": {
@@ -12258,7 +12258,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T04:38:03.217Z"
+        "capturedAt": "2026-10-22T06:47:17.188Z"
       }
     },
     {
@@ -12285,8 +12285,8 @@
       "awayGoals": 1.15,
       "odds": {
         "home": 1.42,
-        "draw": 4.51,
-        "away": 7.71,
+        "draw": 4.49,
+        "away": 7.74,
         "over": 2.19,
         "btts": 2.01
       },
@@ -12302,25 +12302,25 @@
           "name": "Winamax (DE)",
           "home": 1.41,
           "away": 7.25,
-          "draw": 4.6
+          "draw": 4.5
         },
         {
           "name": "Winamax (FR)",
-          "home": 1.38,
+          "home": 1.39,
           "away": 6.75,
-          "draw": 4.4
+          "draw": 4.3
         },
         {
           "name": "Unibet (FR)",
           "home": 1.34,
-          "away": 7,
-          "draw": 4.3
+          "away": 7.4,
+          "draw": 4.2
         },
         {
           "name": "Betclic (FR)",
           "home": 1.35,
-          "away": 6.9,
-          "draw": 4.2
+          "away": 7.25,
+          "draw": 4.1
         },
         {
           "name": "1xBet",
@@ -12391,8 +12391,8 @@
         {
           "name": "Codere (IT)",
           "home": 1.43,
-          "away": 7.6,
-          "draw": 4.6
+          "away": 8,
+          "draw": 4.5
         },
         {
           "name": "GTbets",
@@ -12409,14 +12409,14 @@
         {
           "name": "Betfair",
           "home": 1.45,
-          "away": 9.4,
+          "away": 9.2,
           "draw": 4.7
         },
         {
           "name": "Matchbook",
           "home": 1.45,
-          "away": 9.4,
-          "draw": 4.7
+          "away": 9.2,
+          "draw": 4.6
         },
         {
           "name": "BetOnline.ag",
@@ -12458,15 +12458,15 @@
           "significant": false
         },
         "draw": {
-          "previous": 4.52,
-          "current": 4.51,
-          "percent": -0.2,
+          "previous": 4.51,
+          "current": 4.49,
+          "percent": -0.4,
           "significant": false
         },
         "away": {
           "previous": 7.71,
-          "current": 7.71,
-          "percent": 0,
+          "current": 7.74,
+          "percent": 0.4,
           "significant": false
         },
         "over": {
@@ -12488,7 +12488,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T04:38:03.218Z"
+        "capturedAt": "2026-10-22T06:47:17.189Z"
       }
     },
     {
@@ -12558,7 +12558,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T04:38:03.220Z"
+        "capturedAt": "2026-10-22T06:47:17.190Z"
       }
     },
     {
@@ -12628,7 +12628,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T04:38:03.221Z"
+        "capturedAt": "2026-10-22T06:47:17.190Z"
       }
     },
     {
@@ -12698,7 +12698,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T04:38:03.223Z"
+        "capturedAt": "2026-10-22T06:47:17.191Z"
       }
     },
     {
@@ -12725,10 +12725,10 @@
       "awayGoals": 1.99,
       "odds": {
         "home": 1.61,
-        "draw": 5.5,
-        "away": 3.89,
-        "over": 1.18,
-        "btts": 1.29
+        "draw": 5.56,
+        "away": 3.86,
+        "over": 1.17,
+        "btts": 1.27
       },
       "statsSource": "football-data.org",
       "homeStats": {
@@ -12761,8 +12761,8 @@
         {
           "name": "Betclic (FR)",
           "home": 1.54,
-          "away": 3.78,
-          "draw": 4.85
+          "away": 3.73,
+          "draw": 4.9
         },
         {
           "name": "Tipico",
@@ -12772,21 +12772,21 @@
         },
         {
           "name": "Winamax (FR)",
-          "home": 1.56,
-          "away": 3.6,
-          "draw": 5.2
+          "home": 1.58,
+          "away": 3.4,
+          "draw": 5.7
         },
         {
           "name": "Winamax (DE)",
           "home": 1.6,
-          "away": 3.75,
-          "draw": 5.4
+          "away": 3.55,
+          "draw": 5.9
         },
         {
           "name": "Unibet (FR)",
-          "home": 1.54,
-          "away": 3.8,
-          "draw": 4.8
+          "home": 1.55,
+          "away": 3.7,
+          "draw": 4.9
         },
         {
           "name": "William Hill",
@@ -12806,8 +12806,8 @@
           "name": "Pinnacle",
           "home": 1.66,
           "away": 3.78,
-          "draw": 5.88,
-          "btts": 1.31
+          "draw": 5.93,
+          "btts": 1.29
         },
         {
           "name": "Unibet (SE)",
@@ -12836,21 +12836,21 @@
         {
           "name": "Nordic Bet",
           "home": 1.58,
-          "away": 4.1,
-          "draw": 5.35,
-          "over": 1.17
+          "away": 4.05,
+          "draw": 5.55,
+          "over": 1.16
         },
         {
           "name": "Betsson",
           "home": 1.58,
-          "away": 4.15,
-          "draw": 5.4,
-          "over": 1.18
+          "away": 4.1,
+          "draw": 5.55,
+          "over": 1.17
         },
         {
           "name": "Betfair",
           "home": 1.69,
-          "away": 3.85,
+          "away": 3.9,
           "draw": 6.2
         },
         {
@@ -12868,9 +12868,8 @@
         {
           "name": "Matchbook",
           "home": 1.69,
-          "away": 3.85,
-          "draw": 6.2,
-          "btts": 1.31
+          "away": 3.9,
+          "draw": 6
         },
         {
           "name": "BetOnline.ag",
@@ -12885,7 +12884,7 @@
         "draw": 21,
         "away": 21,
         "over": 3,
-        "btts": 4
+        "btts": 3
       },
       "realOddsMarkets": [
         "home",
@@ -12902,37 +12901,37 @@
           "significant": false
         },
         "draw": {
-          "previous": 5.53,
-          "current": 5.5,
-          "percent": -0.5,
+          "previous": 5.5,
+          "current": 5.56,
+          "percent": 1.1,
           "significant": false
         },
         "away": {
-          "previous": 3.9,
-          "current": 3.89,
-          "percent": -0.3,
+          "previous": 3.89,
+          "current": 3.86,
+          "percent": -0.8,
           "significant": false
         },
         "over": {
-          "previous": 1.17,
-          "current": 1.18,
-          "percent": 0.9,
+          "previous": 1.18,
+          "current": 1.17,
+          "percent": -0.8,
           "significant": false
         },
         "btts": {
-          "previous": 1.28,
-          "current": 1.29,
-          "percent": 0.8,
+          "previous": 1.29,
+          "current": 1.27,
+          "percent": -1.6,
           "significant": false
         }
       },
       "suggestedPick": {
         "key": "over",
         "label": "Plus de 2,5 buts",
-        "odd": 1.18,
+        "odd": 1.17,
         "probability": 0.7830619236477961,
-        "value": -0.07598693009560065,
-        "capturedAt": "2026-10-22T04:38:03.225Z"
+        "value": -0.08381754933207852,
+        "capturedAt": "2026-10-22T06:47:17.192Z"
       }
     },
     {
@@ -13015,7 +13014,7 @@
         "odd": 1.64,
         "probability": 0.7375029454926858,
         "value": 0.20950483060800473,
-        "capturedAt": "2026-10-22T04:38:03.227Z"
+        "capturedAt": "2026-10-22T06:47:17.193Z"
       }
     },
     {
@@ -13042,9 +13041,9 @@
       "awayGoals": 1.38,
       "odds": {
         "home": 1.97,
-        "draw": 3.74,
-        "away": 3.57,
-        "over": 1.6,
+        "draw": 3.73,
+        "away": 3.58,
+        "over": 1.59,
         "btts": 1.55
       },
       "statsSource": "football-data.org",
@@ -13072,7 +13071,7 @@
         },
         {
           "name": "Winamax (FR)",
-          "away": 3.25,
+          "away": 3.3,
           "home": 1.92,
           "draw": 3.7
         },
@@ -13084,19 +13083,19 @@
         },
         {
           "name": "Winamax (DE)",
-          "away": 3.35,
-          "home": 1.98,
+          "away": 3.4,
+          "home": 1.96,
           "draw": 3.8
         },
         {
           "name": "Betclic (FR)",
-          "away": 3.3,
+          "away": 3.32,
           "home": 1.87,
-          "draw": 3.55
+          "draw": 3.53
         },
         {
           "name": "MyBookie.ag",
-          "away": 3.38,
+          "away": 3.4,
           "home": 1.96,
           "draw": 3.65,
           "btts": 1.53,
@@ -13119,7 +13118,7 @@
         {
           "name": "Betfair",
           "away": 3.7,
-          "home": 2.12,
+          "home": 2.08,
           "draw": 3.85
         },
         {
@@ -13198,11 +13197,10 @@
         },
         {
           "name": "Matchbook",
-          "away": 3.7,
-          "home": 2.12,
-          "draw": 3.85,
-          "btts": 1.59,
-          "over": 1.66
+          "away": 3.65,
+          "home": 2.06,
+          "draw": 3.8,
+          "over": 1.64
         },
         {
           "name": "GTbets",
@@ -13213,9 +13211,9 @@
         },
         {
           "name": "Coolbet",
-          "away": 3.62,
-          "home": 2.02,
-          "draw": 3.85
+          "away": 3.68,
+          "home": 2.07,
+          "draw": 3.76
         },
         {
           "name": "BetAnything",
@@ -13236,7 +13234,7 @@
         "draw": 25,
         "away": 25,
         "over": 12,
-        "btts": 5
+        "btts": 4
       },
       "realOddsMarkets": [
         "home",
@@ -13253,21 +13251,21 @@
           "significant": false
         },
         "draw": {
-          "previous": 3.75,
-          "current": 3.74,
+          "previous": 3.74,
+          "current": 3.73,
           "percent": -0.3,
           "significant": false
         },
         "away": {
-          "previous": 3.58,
-          "current": 3.57,
-          "percent": -0.3,
+          "previous": 3.57,
+          "current": 3.58,
+          "percent": 0.3,
           "significant": false
         },
         "over": {
           "previous": 1.6,
-          "current": 1.6,
-          "percent": 0,
+          "current": 1.59,
+          "percent": -0.6,
           "significant": false
         },
         "btts": {
@@ -13283,7 +13281,7 @@
         "odd": 1.55,
         "probability": 0.5544073402938634,
         "value": -0.14066862254451173,
-        "capturedAt": "2026-10-22T04:38:03.228Z"
+        "capturedAt": "2026-10-22T06:47:17.194Z"
       }
     },
     {
@@ -13309,9 +13307,9 @@
       "homeGoals": 1.5999999999999999,
       "awayGoals": 1.6,
       "odds": {
-        "home": 6.61,
+        "home": 6.53,
         "draw": 5.7,
-        "away": 1.36,
+        "away": 1.37,
         "over": 1.7,
         "btts": 1.65
       },
@@ -13320,13 +13318,13 @@
         {
           "name": "Pinnacle",
           "away": 1.39,
-          "home": 6.56,
-          "draw": 5.99
+          "home": 6.58,
+          "draw": 6
         },
         {
           "name": "Winamax (FR)",
           "away": 1.34,
-          "home": 5.7,
+          "home": 5.6,
           "draw": 5.7
         },
         {
@@ -13344,7 +13342,7 @@
         {
           "name": "Unibet (FR)",
           "away": 1.33,
-          "home": 5.7,
+          "home": 5.6,
           "draw": 5.5
         },
         {
@@ -13361,8 +13359,8 @@
         },
         {
           "name": "Winamax (DE)",
-          "away": 1.36,
-          "home": 6,
+          "away": 1.37,
+          "home": 5.9,
           "draw": 6
         },
         {
@@ -13379,14 +13377,14 @@
         },
         {
           "name": "Betsson",
-          "away": 1.33,
-          "home": 7.2,
+          "away": 1.34,
+          "home": 6.9,
           "draw": 5.75
         },
         {
           "name": "Nordic Bet",
-          "away": 1.33,
-          "home": 7.2,
+          "away": 1.34,
+          "home": 6.9,
           "draw": 5.8
         },
         {
@@ -13433,14 +13431,14 @@
         },
         {
           "name": "Betfair",
-          "away": 1.39,
+          "away": 1.4,
           "home": 7.4,
           "draw": 6
         },
         {
           "name": "Matchbook",
           "away": 1.39,
-          "home": 7.4,
+          "home": 6.6,
           "draw": 6
         },
         {
@@ -13472,20 +13470,20 @@
       "oddsMovement": {
         "home": {
           "previous": 6.61,
-          "current": 6.61,
-          "percent": 0,
+          "current": 6.53,
+          "percent": -1.2,
           "significant": false
         },
         "draw": {
-          "previous": 5.73,
+          "previous": 5.7,
           "current": 5.7,
-          "percent": -0.5,
+          "percent": 0,
           "significant": false
         },
         "away": {
           "previous": 1.36,
-          "current": 1.36,
-          "percent": 0,
+          "current": 1.37,
+          "percent": 0.7,
           "significant": false
         },
         "over": {
@@ -13507,7 +13505,7 @@
         "odd": 1.65,
         "probability": 0.6369874904740827,
         "value": 0.0510293592822364,
-        "capturedAt": "2026-10-22T04:38:03.230Z"
+        "capturedAt": "2026-10-22T06:47:17.195Z"
       }
     },
     {
@@ -13590,7 +13588,7 @@
         "odd": 1.64,
         "probability": 0.7733858563636606,
         "value": 0.2683528044364034,
-        "capturedAt": "2026-10-22T04:38:03.231Z"
+        "capturedAt": "2026-10-22T06:47:17.195Z"
       }
     },
     {
@@ -13616,7 +13614,7 @@
       "homeGoals": 1.5999999999999999,
       "awayGoals": 1.6,
       "odds": {
-        "home": 7.72,
+        "home": 7.7,
         "draw": 4.33,
         "away": 1.43,
         "over": 1.7,
@@ -13638,15 +13636,15 @@
         },
         {
           "name": "Codere (IT)",
-          "away": 1.45,
+          "away": 1.44,
           "home": 7.2,
-          "draw": 4.5
+          "draw": 4.6
         },
         {
           "name": "Betclic (FR)",
           "away": 1.37,
           "home": 6.6,
-          "draw": 4.2
+          "draw": 4.25
         },
         {
           "name": "Tipico",
@@ -13740,9 +13738,9 @@
         },
         {
           "name": "Matchbook",
-          "away": 1.47,
-          "home": 8.8,
-          "draw": 4.6
+          "away": 1.46,
+          "home": 8.2,
+          "draw": 4.4
         },
         {
           "name": "GTbets",
@@ -13785,14 +13783,14 @@
       "oddsMovement": {
         "home": {
           "previous": 7.72,
-          "current": 7.72,
-          "percent": 0,
+          "current": 7.7,
+          "percent": -0.3,
           "significant": false
         },
         "draw": {
-          "previous": 4.34,
+          "previous": 4.33,
           "current": 4.33,
-          "percent": -0.2,
+          "percent": 0,
           "significant": false
         },
         "away": {
@@ -13820,7 +13818,7 @@
         "odd": 1.65,
         "probability": 0.6369874904740827,
         "value": 0.0510293592822364,
-        "capturedAt": "2026-10-22T04:38:03.233Z"
+        "capturedAt": "2026-10-22T06:47:17.196Z"
       }
     },
     {
@@ -13846,7 +13844,7 @@
       "homeGoals": 1.26,
       "awayGoals": 2.07,
       "odds": {
-        "home": 5.12,
+        "home": 5.1,
         "draw": 3.89,
         "away": 1.66,
         "over": 1.7,
@@ -13967,12 +13965,12 @@
           "name": "Betfair",
           "away": 1.73,
           "home": 5.5,
-          "draw": 4
+          "draw": 3.95
         },
         {
           "name": "Matchbook",
-          "away": 1.73,
-          "home": 5.6,
+          "away": 1.68,
+          "home": 5.3,
           "draw": 4
         },
         {
@@ -14027,9 +14025,9 @@
       ],
       "oddsMovement": {
         "home": {
-          "previous": 5.13,
-          "current": 5.12,
-          "percent": -0.2,
+          "previous": 5.12,
+          "current": 5.1,
+          "percent": -0.4,
           "significant": false
         },
         "draw": {
@@ -14063,7 +14061,7 @@
         "odd": 1.7,
         "probability": 0.6465627736646911,
         "value": 0.09915671522997482,
-        "capturedAt": "2026-10-22T04:38:03.234Z"
+        "capturedAt": "2026-10-22T06:47:17.197Z"
       }
     },
     {
@@ -14270,9 +14268,9 @@
           "significant": false
         },
         "away": {
-          "previous": 5.08,
+          "previous": 5.07,
           "current": 5.07,
-          "percent": -0.2,
+          "percent": 0,
           "significant": false
         },
         "over": {
@@ -14294,7 +14292,7 @@
         "odd": 1.81,
         "probability": 0.5704393700277017,
         "value": 0.032495259750140226,
-        "capturedAt": "2026-10-22T04:38:03.236Z"
+        "capturedAt": "2026-10-22T06:47:17.198Z"
       }
     },
     {
@@ -14321,8 +14319,8 @@
       "awayGoals": 1.15,
       "odds": {
         "home": 1.43,
-        "draw": 5.14,
-        "away": 6.04,
+        "draw": 5.12,
+        "away": 6.03,
         "over": 1.79,
         "btts": 1.81
       },
@@ -14330,9 +14328,9 @@
       "bookmakerOffers": [
         {
           "name": "Tipico",
-          "away": 5.8,
+          "away": 6,
           "home": 1.4,
-          "draw": 5.5
+          "draw": 5.3
         },
         {
           "name": "888sport",
@@ -14342,15 +14340,15 @@
         },
         {
           "name": "Winamax (FR)",
-          "away": 5.5,
-          "home": 1.39,
+          "away": 5.4,
+          "home": 1.4,
           "draw": 5.1
         },
         {
           "name": "Unibet (FR)",
-          "away": 5.6,
-          "home": 1.39,
-          "draw": 4.9
+          "away": 5.5,
+          "home": 1.4,
+          "draw": 4.8
         },
         {
           "name": "William Hill",
@@ -14367,14 +14365,14 @@
         {
           "name": "Winamax (DE)",
           "away": 5.6,
-          "home": 1.41,
-          "draw": 5.3
+          "home": 1.42,
+          "draw": 5.2
         },
         {
           "name": "Betclic (FR)",
-          "away": 5.4,
-          "home": 1.39,
-          "draw": 4.7
+          "away": 5.25,
+          "home": 1.4,
+          "draw": 4.6
         },
         {
           "name": "Marathon Bet",
@@ -14421,7 +14419,7 @@
         {
           "name": "Codere (IT)",
           "away": 5.8,
-          "home": 1.46,
+          "home": 1.47,
           "draw": 5
         },
         {
@@ -14483,14 +14481,14 @@
         },
         "draw": {
           "previous": 5.14,
-          "current": 5.14,
-          "percent": 0,
+          "current": 5.12,
+          "percent": -0.4,
           "significant": false
         },
         "away": {
-          "previous": 6.09,
-          "current": 6.04,
-          "percent": -0.8,
+          "previous": 6.04,
+          "current": 6.03,
+          "percent": -0.2,
           "significant": false
         },
         "over": {
@@ -14512,7 +14510,7 @@
         "odd": 1.79,
         "probability": 0.5879181591415851,
         "value": 0.05237350486343728,
-        "capturedAt": "2026-10-22T04:38:03.238Z"
+        "capturedAt": "2026-10-22T06:47:17.198Z"
       }
     },
     {
@@ -14562,7 +14560,7 @@
         {
           "name": "MyBookie.ag",
           "home": 2.74,
-          "away": 2.34,
+          "away": 2.33,
           "draw": 3.48
         },
         {
@@ -14670,7 +14668,7 @@
         {
           "name": "Codere (IT)",
           "home": 2.8,
-          "away": 2.4,
+          "away": 2.39,
           "draw": 3.6
         },
         {
@@ -14688,8 +14686,8 @@
         {
           "name": "Matchbook",
           "home": 3,
-          "away": 2.46,
-          "draw": 3.75
+          "away": 2.44,
+          "draw": 3.7
         },
         {
           "name": "GTbets",
@@ -14761,7 +14759,7 @@
         "odd": 2.19,
         "probability": 0.7060078446013036,
         "value": 0.546157179676855,
-        "capturedAt": "2026-10-22T04:38:03.239Z"
+        "capturedAt": "2026-10-22T06:47:17.199Z"
       }
     },
     {
@@ -14787,9 +14785,9 @@
       "homeGoals": 1.26,
       "awayGoals": 1.3,
       "odds": {
-        "home": 4.61,
-        "draw": 3.96,
-        "away": 1.71,
+        "home": 4.64,
+        "draw": 3.97,
+        "away": 1.7,
         "over": 2.19,
         "btts": 2.01
       },
@@ -14810,14 +14808,14 @@
       "bookmakerOffers": [
         {
           "name": "Winamax (DE)",
-          "away": 1.7,
+          "away": 1.68,
           "home": 4.4,
-          "draw": 4
+          "draw": 4.1
         },
         {
           "name": "Unibet (FR)",
-          "away": 1.63,
-          "home": 4.3,
+          "away": 1.62,
+          "home": 4.4,
           "draw": 3.8
         },
         {
@@ -14828,20 +14826,20 @@
         },
         {
           "name": "Betclic (FR)",
-          "away": 1.62,
-          "home": 4.3,
-          "draw": 3.73
+          "away": 1.6,
+          "home": 4.35,
+          "draw": 3.75
         },
         {
           "name": "Winamax (FR)",
-          "away": 1.66,
-          "home": 4.2,
-          "draw": 3.9
+          "away": 1.64,
+          "home": 4.3,
+          "draw": 3.95
         },
         {
           "name": "MyBookie.ag",
-          "away": 1.68,
-          "home": 4.4,
+          "away": 1.67,
+          "home": 4.5,
           "draw": 3.85
         },
         {
@@ -14858,8 +14856,8 @@
         },
         {
           "name": "Betfair",
-          "away": 1.76,
-          "home": 4.9,
+          "away": 1.75,
+          "home": 5,
           "draw": 4.1
         },
         {
@@ -14918,8 +14916,8 @@
         },
         {
           "name": "Codere (IT)",
-          "away": 1.72,
-          "home": 4.6,
+          "away": 1.71,
+          "home": 4.7,
           "draw": 4
         },
         {
@@ -14930,13 +14928,13 @@
         },
         {
           "name": "Coolbet",
-          "away": 1.74,
-          "home": 4.8,
-          "draw": 4.05
+          "away": 1.73,
+          "home": 5,
+          "draw": 4.1
         },
         {
           "name": "Matchbook",
-          "away": 1.76,
+          "away": 1.74,
           "home": 4.9,
           "draw": 4.1
         },
@@ -14948,7 +14946,7 @@
         },
         {
           "name": "BetAnything",
-          "away": 1.74,
+          "away": 1.72,
           "home": 4.5,
           "draw": 4
         },
@@ -14975,20 +14973,20 @@
       "oddsMovement": {
         "home": {
           "previous": 4.61,
-          "current": 4.61,
-          "percent": 0,
+          "current": 4.64,
+          "percent": 0.7,
           "significant": false
         },
         "draw": {
           "previous": 3.96,
-          "current": 3.96,
-          "percent": 0,
+          "current": 3.97,
+          "percent": 0.3,
           "significant": false
         },
         "away": {
           "previous": 1.71,
-          "current": 1.71,
-          "percent": 0,
+          "current": 1.7,
+          "percent": -0.6,
           "significant": false
         },
         "over": {
@@ -15010,7 +15008,7 @@
         "odd": 2.01,
         "probability": 0.5211234600987366,
         "value": 0.04745815479846027,
-        "capturedAt": "2026-10-22T04:38:03.241Z"
+        "capturedAt": "2026-10-22T06:47:17.200Z"
       }
     },
     {
@@ -15037,8 +15035,8 @@
       "awayGoals": 1.53,
       "odds": {
         "home": 3.03,
-        "draw": 3.21,
-        "away": 2.43,
+        "draw": 3.2,
+        "away": 2.42,
         "over": 2.19,
         "btts": 2.01
       },
@@ -15107,7 +15105,7 @@
         },
         {
           "name": "Betfair",
-          "away": 2.56,
+          "away": 2.54,
           "home": 3.2,
           "draw": 3.3
         },
@@ -15179,9 +15177,9 @@
         },
         {
           "name": "Matchbook",
-          "away": 2.56,
-          "home": 3.2,
-          "draw": 3.3
+          "away": 2.5,
+          "home": 3.15,
+          "draw": 3.2
         },
         {
           "name": "GTbets",
@@ -15229,15 +15227,15 @@
           "significant": false
         },
         "draw": {
-          "previous": 3.22,
-          "current": 3.21,
+          "previous": 3.21,
+          "current": 3.2,
           "percent": -0.3,
           "significant": false
         },
         "away": {
           "previous": 2.43,
-          "current": 2.43,
-          "percent": 0,
+          "current": 2.42,
+          "percent": -0.4,
           "significant": false
         },
         "over": {
@@ -15256,10 +15254,10 @@
       "suggestedPick": {
         "key": "away",
         "label": "Leeds United",
-        "odd": 2.43,
+        "odd": 2.42,
         "probability": 0.49809064267109504,
-        "value": 0.21036026169076094,
-        "capturedAt": "2026-10-22T04:38:03.243Z"
+        "value": 0.20537935526404993,
+        "capturedAt": "2026-10-22T06:47:17.201Z"
       }
     },
     {
@@ -15285,9 +15283,9 @@
       "homeGoals": 1.26,
       "awayGoals": 0.61,
       "odds": {
-        "home": 1.62,
-        "draw": 3.83,
-        "away": 5.61,
+        "home": 1.61,
+        "draw": 3.85,
+        "away": 5.58,
         "over": 2.19,
         "btts": 2.01
       },
@@ -15368,45 +15366,45 @@
         },
         {
           "name": "PMU (FR)",
-          "home": 1.56,
+          "home": 1.55,
           "away": 5.4,
-          "draw": 3.5
+          "draw": 3.6
         },
         {
           "name": "Unibet (SE)",
-          "home": 1.66,
+          "home": 1.64,
           "away": 6.25,
-          "draw": 3.85
+          "draw": 3.95
         },
         {
           "name": "Unibet (NL)",
-          "home": 1.64,
+          "home": 1.62,
           "away": 6.25,
-          "draw": 3.85
+          "draw": 3.95
         },
         {
           "name": "LeoVegas (SE)",
-          "home": 1.6,
+          "home": 1.56,
           "away": 5.6,
-          "draw": 3.55
+          "draw": 3.65
         },
         {
           "name": "Betsson",
-          "home": 1.6,
+          "home": 1.58,
           "away": 6.1,
-          "draw": 3.7
+          "draw": 3.8
         },
         {
           "name": "Nordic Bet",
-          "home": 1.6,
+          "home": 1.58,
           "away": 6.1,
-          "draw": 3.7
+          "draw": 3.75
         },
         {
           "name": "Betfair",
           "home": 1.67,
           "away": 6,
-          "draw": 4.1
+          "draw": 4
         },
         {
           "name": "Codere (IT)",
@@ -15422,9 +15420,9 @@
         },
         {
           "name": "Matchbook",
-          "home": 1.67,
-          "away": 6,
-          "draw": 4.1
+          "home": 1.64,
+          "away": 5.5,
+          "draw": 4
         },
         {
           "name": "BetOnline.ag",
@@ -15449,20 +15447,20 @@
       "oddsMovement": {
         "home": {
           "previous": 1.62,
-          "current": 1.62,
-          "percent": 0,
+          "current": 1.61,
+          "percent": -0.6,
           "significant": false
         },
         "draw": {
-          "previous": 3.85,
-          "current": 3.83,
-          "percent": -0.5,
+          "previous": 3.83,
+          "current": 3.85,
+          "percent": 0.5,
           "significant": false
         },
         "away": {
           "previous": 5.61,
-          "current": 5.61,
-          "percent": 0,
+          "current": 5.58,
+          "percent": -0.5,
           "significant": false
         },
         "over": {
@@ -15481,10 +15479,10 @@
       "suggestedPick": {
         "key": "home",
         "label": "Athletic Club",
-        "odd": 1.62,
+        "odd": 1.61,
         "probability": 0.5225490157146672,
-        "value": -0.1534705945422391,
-        "capturedAt": "2026-10-22T04:38:03.244Z"
+        "value": -0.1586960846993858,
+        "capturedAt": "2026-10-22T06:47:17.202Z"
       }
     },
     {
@@ -15512,7 +15510,7 @@
       "odds": {
         "home": 2.85,
         "draw": 3.43,
-        "away": 2.41,
+        "away": 2.4,
         "over": 2.19,
         "btts": 2.01
       },
@@ -15630,8 +15628,8 @@
         {
           "name": "Betfair",
           "home": 3.05,
-          "away": 2.46,
-          "draw": 3.65
+          "away": 2.44,
+          "draw": 3.6
         },
         {
           "name": "Codere (IT)",
@@ -15648,8 +15646,8 @@
         {
           "name": "Matchbook",
           "home": 3.05,
-          "away": 2.46,
-          "draw": 3.65
+          "away": 2.42,
+          "draw": 3.55
         },
         {
           "name": "BetOnline.ag",
@@ -15679,15 +15677,15 @@
           "significant": false
         },
         "draw": {
-          "previous": 3.44,
+          "previous": 3.43,
           "current": 3.43,
-          "percent": -0.3,
+          "percent": 0,
           "significant": false
         },
         "away": {
           "previous": 2.41,
-          "current": 2.41,
-          "percent": 0,
+          "current": 2.4,
+          "percent": -0.4,
           "significant": false
         },
         "over": {
@@ -15709,7 +15707,7 @@
         "odd": 2.01,
         "probability": 0.579730317669545,
         "value": 0.1652579385157853,
-        "capturedAt": "2026-10-22T04:38:03.246Z"
+        "capturedAt": "2026-10-22T06:47:17.203Z"
       }
     },
     {
@@ -15736,8 +15734,8 @@
       "awayGoals": 1.61,
       "odds": {
         "home": 1.7,
-        "draw": 4.07,
-        "away": 4.44,
+        "draw": 4.05,
+        "away": 4.45,
         "over": 2.19,
         "btts": 2.01
       },
@@ -15770,9 +15768,9 @@
         },
         {
           "name": "Tipico",
-          "away": 4.5,
-          "home": 1.65,
-          "draw": 4.3
+          "away": 4.6,
+          "home": 1.67,
+          "draw": 4.1
         },
         {
           "name": "Winamax (FR)",
@@ -15854,7 +15852,7 @@
         },
         {
           "name": "Betfair",
-          "away": 4.6,
+          "away": 4.7,
           "home": 1.74,
           "draw": 4.3
         },
@@ -15872,9 +15870,9 @@
         },
         {
           "name": "Matchbook",
-          "away": 4.6,
-          "home": 1.75,
-          "draw": 4.4
+          "away": 4.7,
+          "home": 1.72,
+          "draw": 4.2
         },
         {
           "name": "BetOnline.ag",
@@ -15905,14 +15903,14 @@
         },
         "draw": {
           "previous": 4.07,
-          "current": 4.07,
-          "percent": 0,
+          "current": 4.05,
+          "percent": -0.5,
           "significant": false
         },
         "away": {
-          "previous": 4.45,
-          "current": 4.44,
-          "percent": -0.2,
+          "previous": 4.44,
+          "current": 4.45,
+          "percent": 0.2,
           "significant": false
         },
         "over": {
@@ -15934,7 +15932,7 @@
         "odd": 2.19,
         "probability": 0.7544784839865974,
         "value": 0.6523078799306483,
-        "capturedAt": "2026-10-22T04:38:03.248Z"
+        "capturedAt": "2026-10-22T06:47:17.203Z"
       }
     },
     {
@@ -16092,7 +16090,7 @@
           "name": "Matchbook",
           "away": 2.4,
           "home": 2.88,
-          "draw": 4
+          "draw": 3.95
         },
         {
           "name": "GTbets",
@@ -16128,9 +16126,9 @@
           "significant": false
         },
         "draw": {
-          "previous": 3.96,
+          "previous": 3.95,
           "current": 3.95,
-          "percent": -0.3,
+          "percent": 0,
           "significant": false
         },
         "away": {
@@ -16158,7 +16156,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T04:38:03.249Z"
+        "capturedAt": "2026-10-22T06:47:17.204Z"
       }
     },
     {
@@ -16184,9 +16182,9 @@
       "homeGoals": 1.44,
       "awayGoals": 1.76,
       "odds": {
-        "home": 1.77,
-        "draw": 4.11,
-        "away": 3.95,
+        "home": 1.78,
+        "draw": 4.1,
+        "away": 3.94,
         "over": 2.19,
         "btts": 2.01
       },
@@ -16214,7 +16212,7 @@
         {
           "name": "Winamax (DE)",
           "home": 1.76,
-          "away": 3.75,
+          "away": 3.7,
           "draw": 4.1
         },
         {
@@ -16225,14 +16223,14 @@
         },
         {
           "name": "Unibet (FR)",
-          "home": 1.67,
+          "home": 1.68,
           "away": 3.7,
           "draw": 3.9
         },
         {
           "name": "Betclic (FR)",
           "home": 1.69,
-          "away": 3.7,
+          "away": 3.68,
           "draw": 3.88
         },
         {
@@ -16303,8 +16301,8 @@
         },
         {
           "name": "Codere (IT)",
-          "home": 1.8,
-          "away": 3.95,
+          "home": 1.81,
+          "away": 3.9,
           "draw": 4.1
         },
         {
@@ -16322,8 +16320,8 @@
         {
           "name": "Matchbook",
           "home": 1.85,
-          "away": 4.1,
-          "draw": 4.4
+          "away": 3.95,
+          "draw": 4.3
         },
         {
           "name": "GTbets",
@@ -16366,20 +16364,20 @@
       "oddsMovement": {
         "home": {
           "previous": 1.77,
-          "current": 1.77,
-          "percent": 0,
+          "current": 1.78,
+          "percent": 0.6,
           "significant": false
         },
         "draw": {
-          "previous": 4.12,
-          "current": 4.11,
+          "previous": 4.11,
+          "current": 4.1,
           "percent": -0.2,
           "significant": false
         },
         "away": {
-          "previous": 3.97,
-          "current": 3.95,
-          "percent": -0.5,
+          "previous": 3.95,
+          "current": 3.94,
+          "percent": -0.3,
           "significant": false
         },
         "over": {
@@ -16401,7 +16399,7 @@
         "odd": 2.01,
         "probability": 0.6318150710765909,
         "value": 0.2699482928639474,
-        "capturedAt": "2026-10-22T04:38:03.251Z"
+        "capturedAt": "2026-10-22T06:47:17.205Z"
       }
     },
     {
@@ -16428,8 +16426,8 @@
       "awayGoals": 1.15,
       "odds": {
         "home": 2.1,
-        "draw": 3.28,
-        "away": 3.61,
+        "draw": 3.27,
+        "away": 3.6,
         "over": 2.19,
         "btts": 2.01
       },
@@ -16551,9 +16549,9 @@
         },
         {
           "name": "Matchbook",
-          "home": 2.2,
-          "away": 3.85,
-          "draw": 3.4
+          "home": 2.16,
+          "away": 3.8,
+          "draw": 3.25
         },
         {
           "name": "GTbets",
@@ -16601,15 +16599,15 @@
           "significant": false
         },
         "draw": {
-          "previous": 3.29,
-          "current": 3.28,
+          "previous": 3.28,
+          "current": 3.27,
           "percent": -0.3,
           "significant": false
         },
         "away": {
-          "previous": 3.6,
-          "current": 3.61,
-          "percent": 0.3,
+          "previous": 3.61,
+          "current": 3.6,
+          "percent": -0.3,
           "significant": false
         },
         "over": {
@@ -16631,7 +16629,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T04:38:03.252Z"
+        "capturedAt": "2026-10-22T06:47:17.206Z"
       }
     },
     {
@@ -16759,7 +16757,7 @@
           "name": "Codere (IT)",
           "home": 2.15,
           "away": 3.4,
-          "draw": 3.45
+          "draw": 3.4
         },
         {
           "name": "Everygame",
@@ -16825,9 +16823,9 @@
           "significant": false
         },
         "away": {
-          "previous": 3.51,
+          "previous": 3.52,
           "current": 3.52,
-          "percent": 0.3,
+          "percent": 0,
           "significant": false
         },
         "over": {
@@ -16849,7 +16847,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T04:38:03.254Z"
+        "capturedAt": "2026-10-22T06:47:17.206Z"
       }
     },
     {
@@ -17080,7 +17078,7 @@
         "odd": 2.19,
         "probability": 0.6809984281122743,
         "value": 0.4913865575658807,
-        "capturedAt": "2026-10-22T04:38:03.255Z"
+        "capturedAt": "2026-10-22T06:47:17.207Z"
       }
     },
     {
@@ -17107,7 +17105,7 @@
       "awayGoals": 1.53,
       "odds": {
         "home": 2.97,
-        "draw": 3.27,
+        "draw": 3.28,
         "away": 2.39,
         "over": 2.19,
         "btts": 2.01
@@ -17249,14 +17247,14 @@
         },
         {
           "name": "Nordic Bet",
-          "home": 2.95,
+          "home": 2.92,
           "away": 2.42,
-          "draw": 3.25
+          "draw": 3.3
         },
         {
           "name": "Betsson",
-          "home": 2.95,
-          "away": 2.42,
+          "home": 2.92,
+          "away": 2.4,
           "draw": 3.25
         }
       ],
@@ -17275,21 +17273,21 @@
       ],
       "oddsMovement": {
         "home": {
-          "previous": 2.99,
+          "previous": 2.97,
           "current": 2.97,
-          "percent": -0.7,
+          "percent": 0,
           "significant": false
         },
         "draw": {
-          "previous": 3.28,
-          "current": 3.27,
-          "percent": -0.3,
+          "previous": 3.27,
+          "current": 3.28,
+          "percent": 0.3,
           "significant": false
         },
         "away": {
-          "previous": 2.38,
+          "previous": 2.39,
           "current": 2.39,
-          "percent": 0.4,
+          "percent": 0,
           "significant": false
         },
         "over": {
@@ -17311,7 +17309,7 @@
         "odd": 2.01,
         "probability": 0.5803698603615437,
         "value": 0.1665434193267028,
-        "capturedAt": "2026-10-22T04:38:03.257Z"
+        "capturedAt": "2026-10-22T06:47:17.208Z"
       }
     },
     {
@@ -17394,7 +17392,7 @@
         "odd": 2.19,
         "probability": 0.7618966944464557,
         "value": 0.6685537608377379,
-        "capturedAt": "2026-10-22T04:38:03.258Z"
+        "capturedAt": "2026-10-22T06:47:17.208Z"
       }
     },
     {
@@ -17420,9 +17418,9 @@
       "homeGoals": 2.52,
       "awayGoals": 1.07,
       "odds": {
-        "home": 1.63,
-        "draw": 4.07,
-        "away": 4.92,
+        "home": 1.65,
+        "draw": 4.23,
+        "away": 5.09,
         "over": 2.19,
         "btts": 2.01
       },
@@ -17446,19 +17444,13 @@
           "home": 1.65,
           "away": 5.09,
           "draw": 4.23
-        },
-        {
-          "name": "Everygame",
-          "home": 1.6,
-          "away": 4.75,
-          "draw": 3.9
         }
       ],
-      "bookmakerCount": 2,
+      "bookmakerCount": 1,
       "oddsBookmakerCounts": {
-        "home": 2,
-        "draw": 2,
-        "away": 2,
+        "home": 1,
+        "draw": 1,
+        "away": 1,
         "over": 0,
         "btts": 0
       },
@@ -17469,21 +17461,21 @@
       ],
       "oddsMovement": {
         "home": {
-          "previous": 1.65,
-          "current": 1.63,
-          "percent": -1.2,
+          "previous": 1.63,
+          "current": 1.65,
+          "percent": 1.2,
           "significant": false
         },
         "draw": {
-          "previous": 4.23,
-          "current": 4.07,
-          "percent": -3.8,
+          "previous": 4.07,
+          "current": 4.23,
+          "percent": 3.9,
           "significant": false
         },
         "away": {
-          "previous": 5.09,
-          "current": 4.92,
-          "percent": -3.3,
+          "previous": 4.92,
+          "current": 5.09,
+          "percent": 3.5,
           "significant": false
         },
         "over": {
@@ -17505,7 +17497,7 @@
         "odd": 2.19,
         "probability": 0.6954786421933463,
         "value": 0.5230982264034285,
-        "capturedAt": "2026-10-22T04:38:03.260Z"
+        "capturedAt": "2026-10-22T06:47:17.209Z"
       }
     },
     {
@@ -17652,7 +17644,7 @@
           "name": "Betfair",
           "away": 4.3,
           "home": 2.02,
-          "draw": 3.4
+          "draw": 3.5
         },
         {
           "name": "Codere (IT)",
@@ -17668,9 +17660,9 @@
         },
         {
           "name": "Matchbook",
-          "away": 4.3,
+          "away": 4.2,
           "home": 2.02,
-          "draw": 3.45
+          "draw": 3.35
         },
         {
           "name": "BetOnline.ag",
@@ -17700,9 +17692,9 @@
           "significant": false
         },
         "draw": {
-          "previous": 3.36,
+          "previous": 3.35,
           "current": 3.35,
-          "percent": -0.3,
+          "percent": 0,
           "significant": false
         },
         "away": {
@@ -17730,7 +17722,7 @@
         "odd": 2.19,
         "probability": 0.7025295110180412,
         "value": 0.5385396291295101,
-        "capturedAt": "2026-10-22T04:38:03.261Z"
+        "capturedAt": "2026-10-22T06:47:17.210Z"
       }
     },
     {
@@ -17800,7 +17792,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T04:38:03.263Z"
+        "capturedAt": "2026-10-22T06:47:17.211Z"
       }
     },
     {
@@ -17870,7 +17862,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T04:38:03.264Z"
+        "capturedAt": "2026-10-22T06:47:17.211Z"
       }
     },
     {
@@ -17953,7 +17945,7 @@
         "odd": 1.81,
         "probability": 0.5907572264010241,
         "value": 0.06927057978585371,
-        "capturedAt": "2026-10-22T04:38:03.267Z"
+        "capturedAt": "2026-10-22T06:47:17.213Z"
       }
     },
     {
@@ -18023,7 +18015,7 @@
         "odd": 1.77,
         "probability": 0.5946505317828121,
         "value": 0.052531441255577516,
-        "capturedAt": "2026-10-22T04:38:03.268Z"
+        "capturedAt": "2026-10-22T06:47:17.213Z"
       }
     },
     {
@@ -18050,7 +18042,7 @@
       "awayGoals": 1.15,
       "odds": {
         "home": 2.79,
-        "draw": 3.36,
+        "draw": 3.38,
         "away": 2.4,
         "over": 2.19,
         "btts": 2.01
@@ -18168,8 +18160,8 @@
         {
           "name": "Betfair",
           "away": 2.46,
-          "home": 2.84,
-          "draw": 3.15
+          "home": 2.92,
+          "draw": 3.5
         }
       ],
       "bookmakerCount": 19,
@@ -18187,15 +18179,15 @@
       ],
       "oddsMovement": {
         "home": {
-          "previous": 2.78,
+          "previous": 2.79,
           "current": 2.79,
-          "percent": 0.4,
+          "percent": 0,
           "significant": false
         },
         "draw": {
-          "previous": 3.37,
-          "current": 3.36,
-          "percent": -0.3,
+          "previous": 3.36,
+          "current": 3.38,
+          "percent": 0.6,
           "significant": false
         },
         "away": {
@@ -18223,7 +18215,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T04:38:03.270Z"
+        "capturedAt": "2026-10-22T06:47:17.214Z"
       }
     },
     {
@@ -18406,21 +18398,21 @@
       ],
       "oddsMovement": {
         "home": {
-          "previous": 1.34,
+          "previous": 1.33,
           "current": 1.33,
-          "percent": -0.7,
+          "percent": 0,
           "significant": false
         },
         "draw": {
-          "previous": 4.82,
+          "previous": 4.81,
           "current": 4.81,
-          "percent": -0.2,
+          "percent": 0,
           "significant": false
         },
         "away": {
-          "previous": 8.48,
+          "previous": 8.54,
           "current": 8.54,
-          "percent": 0.7,
+          "percent": 0,
           "significant": false
         },
         "over": {
@@ -18442,7 +18434,7 @@
         "odd": 2.19,
         "probability": 0.4915652266646606,
         "value": 0.07652784639560672,
-        "capturedAt": "2026-10-22T04:38:03.271Z"
+        "capturedAt": "2026-10-22T06:47:17.215Z"
       }
     },
     {
@@ -18468,8 +18460,8 @@
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
-        "home": 4.42,
-        "draw": 3.64,
+        "home": 4.41,
+        "draw": 3.66,
         "away": 1.75,
         "over": 2.19,
         "btts": 2.01
@@ -18586,9 +18578,9 @@
         },
         {
           "name": "Betfair",
-          "away": 1.72,
-          "home": 4.7,
-          "draw": 3.55
+          "away": 1.77,
+          "home": 4.6,
+          "draw": 3.85
         }
       ],
       "bookmakerCount": 19,
@@ -18606,15 +18598,15 @@
       ],
       "oddsMovement": {
         "home": {
-          "previous": 4.39,
-          "current": 4.42,
-          "percent": 0.7,
+          "previous": 4.42,
+          "current": 4.41,
+          "percent": -0.2,
           "significant": false
         },
         "draw": {
-          "previous": 3.65,
-          "current": 3.64,
-          "percent": -0.3,
+          "previous": 3.64,
+          "current": 3.66,
+          "percent": 0.5,
           "significant": false
         },
         "away": {
@@ -18642,7 +18634,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T04:38:03.273Z"
+        "capturedAt": "2026-10-22T06:47:17.215Z"
       }
     },
     {
@@ -18712,7 +18704,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T04:38:03.274Z"
+        "capturedAt": "2026-10-22T06:47:17.216Z"
       }
     },
     {
@@ -18782,7 +18774,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T04:38:03.276Z"
+        "capturedAt": "2026-10-22T06:47:17.217Z"
       }
     },
     {
@@ -18852,7 +18844,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T04:38:03.278Z"
+        "capturedAt": "2026-10-22T06:47:17.218Z"
       }
     },
     {
@@ -18922,7 +18914,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T04:38:03.279Z"
+        "capturedAt": "2026-10-22T06:47:17.219Z"
       }
     },
     {
@@ -18992,7 +18984,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T04:38:03.281Z"
+        "capturedAt": "2026-10-22T06:47:17.221Z"
       }
     },
     {
@@ -19062,7 +19054,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T04:38:03.283Z"
+        "capturedAt": "2026-10-22T06:47:17.222Z"
       }
     },
     {
@@ -19132,7 +19124,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T04:38:03.285Z"
+        "capturedAt": "2026-10-22T06:47:17.224Z"
       }
     },
     {
@@ -19202,7 +19194,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T04:38:03.286Z"
+        "capturedAt": "2026-10-22T06:47:17.225Z"
       }
     },
     {
@@ -19285,7 +19277,7 @@
         "odd": 1.49,
         "probability": 0.7618966944464557,
         "value": 0.13522607472521897,
-        "capturedAt": "2026-10-22T04:38:03.288Z"
+        "capturedAt": "2026-10-22T06:47:17.226Z"
       }
     },
     {
@@ -19456,21 +19448,21 @@
       ],
       "oddsMovement": {
         "home": {
-          "previous": 1.55,
+          "previous": 1.56,
           "current": 1.56,
-          "percent": 0.6,
+          "percent": 0,
           "significant": false
         },
         "draw": {
-          "previous": 3.8,
+          "previous": 3.82,
           "current": 3.82,
-          "percent": 0.5,
+          "percent": 0,
           "significant": false
         },
         "away": {
-          "previous": 4.98,
+          "previous": 5.01,
           "current": 5.01,
-          "percent": 0.6,
+          "percent": 0,
           "significant": false
         },
         "over": {
@@ -19492,7 +19484,7 @@
         "odd": 1.56,
         "probability": 0.6011710839173101,
         "value": -0.062173109088996203,
-        "capturedAt": "2026-10-22T04:38:03.290Z"
+        "capturedAt": "2026-10-22T06:47:17.227Z"
       }
     },
     {
@@ -19575,7 +19567,7 @@
         "odd": 1.7,
         "probability": 0.7343183788049474,
         "value": 0.2483412439684105,
-        "capturedAt": "2026-10-22T04:38:03.291Z"
+        "capturedAt": "2026-10-22T06:47:17.228Z"
       }
     },
     {
@@ -19733,15 +19725,15 @@
       ],
       "oddsMovement": {
         "home": {
-          "previous": 5.29,
+          "previous": 5.34,
           "current": 5.34,
-          "percent": 0.9,
+          "percent": 0,
           "significant": false
         },
         "draw": {
-          "previous": 3.71,
+          "previous": 3.72,
           "current": 3.72,
-          "percent": 0.3,
+          "percent": 0,
           "significant": false
         },
         "away": {
@@ -19769,7 +19761,7 @@
         "odd": 1.65,
         "probability": 0.6369874904740827,
         "value": 0.0510293592822364,
-        "capturedAt": "2026-10-22T04:38:03.293Z"
+        "capturedAt": "2026-10-22T06:47:17.229Z"
       }
     },
     {
@@ -19795,7 +19787,7 @@
       "homeGoals": 1.8,
       "awayGoals": 1.61,
       "odds": {
-        "home": 3.72,
+        "home": 3.73,
         "draw": 3.68,
         "away": 1.87,
         "over": 1.7,
@@ -19914,8 +19906,8 @@
         },
         {
           "name": "Betfair",
-          "home": 3.6,
-          "away": 1.9,
+          "home": 3.85,
+          "away": 1.96,
           "draw": 3.8
         },
         {
@@ -19947,14 +19939,14 @@
       "oddsMovement": {
         "home": {
           "previous": 3.72,
-          "current": 3.72,
-          "percent": 0,
+          "current": 3.73,
+          "percent": 0.3,
           "significant": false
         },
         "draw": {
-          "previous": 3.67,
+          "previous": 3.68,
           "current": 3.68,
-          "percent": 0.3,
+          "percent": 0,
           "significant": false
         },
         "away": {
@@ -19982,7 +19974,7 @@
         "odd": 1.65,
         "probability": 0.6678844979508496,
         "value": 0.10200942161890181,
-        "capturedAt": "2026-10-22T04:38:03.294Z"
+        "capturedAt": "2026-10-22T06:47:17.230Z"
       }
     },
     {
@@ -20052,7 +20044,7 @@
         "odd": 1.79,
         "probability": 0.5879181591415851,
         "value": 0.05237350486343728,
-        "capturedAt": "2026-10-22T04:38:03.296Z"
+        "capturedAt": "2026-10-22T06:47:17.231Z"
       }
     },
     {
@@ -20135,7 +20127,7 @@
         "odd": 1.79,
         "probability": 0.8124678256535501,
         "value": 0.45431740791985487,
-        "capturedAt": "2026-10-22T04:38:03.298Z"
+        "capturedAt": "2026-10-22T06:47:17.231Z"
       }
     },
     {
@@ -20293,21 +20285,21 @@
       ],
       "oddsMovement": {
         "home": {
-          "previous": 2.82,
+          "previous": 2.83,
           "current": 2.83,
-          "percent": 0.4,
+          "percent": 0,
           "significant": false
         },
         "draw": {
-          "previous": 3.06,
+          "previous": 3.07,
           "current": 3.07,
-          "percent": 0.3,
+          "percent": 0,
           "significant": false
         },
         "away": {
-          "previous": 2.31,
+          "previous": 2.32,
           "current": 2.32,
-          "percent": 0.4,
+          "percent": 0,
           "significant": false
         },
         "over": {
@@ -20329,7 +20321,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T04:38:03.299Z"
+        "capturedAt": "2026-10-22T06:47:17.232Z"
       }
     },
     {
@@ -20399,7 +20391,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T04:38:03.301Z"
+        "capturedAt": "2026-10-22T06:47:17.233Z"
       }
     },
     {
@@ -20469,7 +20461,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T04:38:03.302Z"
+        "capturedAt": "2026-10-22T06:47:17.234Z"
       }
     },
     {
@@ -20552,7 +20544,7 @@
         "odd": 3.17,
         "probability": 0.4379563829499309,
         "value": 0.3883217339512808,
-        "capturedAt": "2026-10-22T04:38:03.304Z"
+        "capturedAt": "2026-10-22T06:47:17.234Z"
       }
     },
     {
@@ -20622,7 +20614,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T04:38:03.306Z"
+        "capturedAt": "2026-10-22T06:47:17.235Z"
       }
     },
     {
@@ -20692,7 +20684,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T04:38:03.308Z"
+        "capturedAt": "2026-10-22T06:47:17.236Z"
       }
     },
     {
@@ -20762,7 +20754,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T04:38:03.309Z"
+        "capturedAt": "2026-10-22T06:47:17.237Z"
       }
     },
     {
@@ -20832,7 +20824,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T04:38:03.311Z"
+        "capturedAt": "2026-10-22T06:47:17.238Z"
       }
     },
     {
@@ -20915,7 +20907,7 @@
         "odd": 2.19,
         "probability": 0.6641021755591567,
         "value": 0.4543837644745532,
-        "capturedAt": "2026-10-22T04:38:03.313Z"
+        "capturedAt": "2026-10-22T06:47:17.239Z"
       }
     },
     {
@@ -20998,7 +20990,7 @@
         "odd": 2.01,
         "probability": 0.5907572264010241,
         "value": 0.18742202506605832,
-        "capturedAt": "2026-10-22T04:38:03.315Z"
+        "capturedAt": "2026-10-22T06:47:17.239Z"
       }
     },
     {
@@ -21081,7 +21073,7 @@
         "odd": 2.01,
         "probability": 0.5624043101872587,
         "value": 0.1304326634763897,
-        "capturedAt": "2026-10-22T04:38:03.316Z"
+        "capturedAt": "2026-10-22T06:47:17.240Z"
       }
     },
     {
@@ -21239,15 +21231,15 @@
           "significant": false
         },
         "draw": {
-          "previous": 3.51,
+          "previous": 3.54,
           "current": 3.54,
-          "percent": 0.9,
+          "percent": 0,
           "significant": false
         },
         "away": {
-          "previous": 3.45,
+          "previous": 3.46,
           "current": 3.46,
-          "percent": 0.3,
+          "percent": 0,
           "significant": false
         },
         "over": {
@@ -21269,7 +21261,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T04:38:03.317Z"
+        "capturedAt": "2026-10-22T06:47:17.241Z"
       }
     },
     {
@@ -21296,8 +21288,8 @@
       "awayGoals": 1.61,
       "odds": {
         "home": 2.24,
-        "draw": 3.46,
-        "away": 2.95,
+        "draw": 3.47,
+        "away": 2.94,
         "over": 2.19,
         "btts": 2.01
       },
@@ -21414,9 +21406,9 @@
         },
         {
           "name": "Betfair",
-          "away": 3.05,
+          "away": 3,
           "home": 2.28,
-          "draw": 3.45
+          "draw": 3.5
         }
       ],
       "bookmakerCount": 17,
@@ -21440,15 +21432,15 @@
           "significant": false
         },
         "draw": {
-          "previous": 3.47,
-          "current": 3.46,
-          "percent": -0.3,
+          "previous": 3.46,
+          "current": 3.47,
+          "percent": 0.3,
           "significant": false
         },
         "away": {
-          "previous": 2.94,
-          "current": 2.95,
-          "percent": 0.3,
+          "previous": 2.95,
+          "current": 2.94,
+          "percent": -0.3,
           "significant": false
         },
         "over": {
@@ -21470,7 +21462,7 @@
         "odd": 2.01,
         "probability": 0.641790564678532,
         "value": 0.28999903500384927,
-        "capturedAt": "2026-10-22T04:38:03.319Z"
+        "capturedAt": "2026-10-22T06:47:17.242Z"
       }
     },
     {
@@ -21553,9 +21545,8 @@
         "odd": 2.01,
         "probability": 0.5481430069682987,
         "value": 0.10176744400628013,
-        "capturedAt": "2026-10-22T04:38:03.320Z"
+        "capturedAt": "2026-10-22T06:47:17.242Z"
       }
     }
-  ],
-  "scoresUpdatedAt": "2026-10-22T05:51:43.171Z"
+  ]
 }
