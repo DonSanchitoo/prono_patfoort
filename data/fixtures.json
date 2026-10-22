@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-22T12:17:40.356Z",
-  "oddsRefreshedAt": "2026-10-22T12:17:40.356Z",
+  "generatedAt": "2026-10-22T12:19:09.084Z",
+  "oddsRefreshedAt": "2026-10-22T12:19:09.084Z",
   "oddsRefreshHours": [
     7,
     14,
@@ -13,7 +13,14 @@
   "source": "ESPN + football-data.org + The Odds API",
   "providerStatus": "partial",
   "failures": [
-    "The Odds API soccer_italy_serie_a: HTTP 401"
+    "The Odds API soccer_epl: HTTP 401",
+    "The Odds API soccer_france_ligue_one: HTTP 401",
+    "The Odds API soccer_spain_la_liga: HTTP 401",
+    "The Odds API soccer_italy_serie_a: HTTP 401",
+    "The Odds API soccer_germany_bundesliga: HTTP 401",
+    "The Odds API soccer_uefa_champs_league: HTTP 401",
+    "The Odds API soccer_uefa_europa_league: HTTP 401",
+    "The Odds API soccer_uefa_europa_conference_league: HTTP 401"
   ],
   "coverage": {
     "historicalMatches": 400,
@@ -3043,7 +3050,7 @@
         "odd": 1.81,
         "probability": 0.6678844979508496,
         "value": 0.2088709412910379,
-        "capturedAt": "2026-10-22T12:17:39.687Z"
+        "capturedAt": "2026-10-22T12:19:08.409Z"
       }
     },
     {
@@ -3203,22 +3210,22 @@
       ],
       "oddsMovement": {
         "home": {
-          "previous": 3.78,
+          "previous": 2.38,
           "current": 2.38,
-          "percent": -37,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "draw": {
-          "previous": 3.68,
+          "previous": 3.18,
           "current": 3.18,
-          "percent": -13.6,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "away": {
-          "previous": 1.92,
+          "previous": 2.43,
           "current": 2.43,
-          "percent": 26.6,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "over": {
           "previous": 1.67,
@@ -3239,7 +3246,7 @@
         "odd": 1.6,
         "probability": 0.5946505317828121,
         "value": -0.04855914914750059,
-        "capturedAt": "2026-10-22T12:17:39.692Z"
+        "capturedAt": "2026-10-22T12:19:08.415Z"
       }
     },
     {
@@ -3417,22 +3424,22 @@
       ],
       "oddsMovement": {
         "home": {
-          "previous": 2,
+          "previous": 2.38,
           "current": 2.38,
-          "percent": 19,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "draw": {
-          "previous": 3.67,
+          "previous": 3.18,
           "current": 3.18,
-          "percent": -13.4,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "away": {
-          "previous": 3.51,
+          "previous": 2.43,
           "current": 2.43,
-          "percent": -30.8,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "over": {
           "previous": 1.69,
@@ -3453,7 +3460,7 @@
         "odd": 1.62,
         "probability": 0.5931299015277438,
         "value": -0.039129559525054924,
-        "capturedAt": "2026-10-22T12:17:39.698Z"
+        "capturedAt": "2026-10-22T12:19:08.421Z"
       }
     },
     {
@@ -3594,22 +3601,22 @@
       ],
       "oddsMovement": {
         "home": {
-          "previous": 7.18,
+          "previous": 2.38,
           "current": 2.38,
-          "percent": -66.9,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "draw": {
-          "previous": 4.96,
+          "previous": 3.31,
           "current": 3.31,
-          "percent": -33.3,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "away": {
-          "previous": 1.4,
+          "previous": 3.17,
           "current": 3.17,
-          "percent": 126.4,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "over": {
           "previous": 1.5,
@@ -3630,7 +3637,7 @@
         "odd": 1.71,
         "probability": 0.5230740993676228,
         "value": -0.10554329008136498,
-        "capturedAt": "2026-10-22T12:17:39.704Z"
+        "capturedAt": "2026-10-22T12:19:08.427Z"
       }
     },
     {
@@ -3741,22 +3748,22 @@
       ],
       "oddsMovement": {
         "home": {
-          "previous": 1.53,
+          "previous": 2.38,
           "current": 2.38,
-          "percent": 55.6,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "draw": {
-          "previous": 4.48,
+          "previous": 3.31,
           "current": 3.31,
-          "percent": -26.1,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "away": {
-          "previous": 5.48,
+          "previous": 3.17,
           "current": 3.17,
-          "percent": -42.2,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "over": {
           "previous": 1.52,
@@ -3777,7 +3784,7 @@
         "odd": 1.62,
         "probability": 0.5230740993676228,
         "value": -0.1526199590244509,
-        "capturedAt": "2026-10-22T12:17:39.710Z"
+        "capturedAt": "2026-10-22T12:19:08.432Z"
       }
     },
     {
@@ -3932,22 +3939,22 @@
       ],
       "oddsMovement": {
         "home": {
-          "previous": 1.3,
+          "previous": 2.38,
           "current": 2.38,
-          "percent": 83.1,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "draw": {
-          "previous": 5.45,
+          "previous": 3.31,
           "current": 3.31,
-          "percent": -39.3,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "away": {
-          "previous": 9.72,
+          "previous": 3.17,
           "current": 3.17,
-          "percent": -67.4,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "over": {
           "previous": 1.54,
@@ -3968,7 +3975,7 @@
         "odd": 1.96,
         "probability": 0.5230740993676228,
         "value": 0.025225234760540838,
-        "capturedAt": "2026-10-22T12:17:39.715Z"
+        "capturedAt": "2026-10-22T12:19:08.437Z"
       }
     },
     {
@@ -4137,22 +4144,22 @@
       ],
       "oddsMovement": {
         "home": {
-          "previous": 4.58,
+          "previous": 2.38,
           "current": 2.38,
-          "percent": -48,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "draw": {
-          "previous": 3.92,
+          "previous": 3.31,
           "current": 3.31,
-          "percent": -15.6,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "away": {
-          "previous": 1.71,
+          "previous": 3.17,
           "current": 3.17,
-          "percent": 85.4,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "over": {
           "previous": 1.82,
@@ -4173,7 +4180,7 @@
         "odd": 1.77,
         "probability": 0.5230740993676228,
         "value": -0.07415884411930762,
-        "capturedAt": "2026-10-22T12:17:39.720Z"
+        "capturedAt": "2026-10-22T12:19:08.442Z"
       }
     },
     {
@@ -4284,22 +4291,22 @@
       ],
       "oddsMovement": {
         "home": {
-          "previous": 12.03,
+          "previous": 2.38,
           "current": 2.38,
-          "percent": -80.2,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "draw": {
-          "previous": 7.03,
+          "previous": 3.31,
           "current": 3.31,
-          "percent": -52.9,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "away": {
-          "previous": 1.2,
+          "previous": 3.17,
           "current": 3.17,
-          "percent": 164.2,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "over": {
           "previous": 1.34,
@@ -4320,7 +4327,7 @@
         "odd": 1.8,
         "probability": 0.5230740993676228,
         "value": -0.05846662113827883,
-        "capturedAt": "2026-10-22T12:17:39.725Z"
+        "capturedAt": "2026-10-22T12:19:08.448Z"
       }
     },
     {
@@ -4390,7 +4397,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T12:17:39.731Z"
+        "capturedAt": "2026-10-22T12:19:08.454Z"
       }
     },
     {
@@ -4501,22 +4508,22 @@
       ],
       "oddsMovement": {
         "home": {
-          "previous": 2.21,
+          "previous": 2.38,
           "current": 2.38,
-          "percent": 7.7,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "draw": {
-          "previous": 3.72,
+          "previous": 3.31,
           "current": 3.31,
-          "percent": -11,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "away": {
-          "previous": 2.95,
+          "previous": 3.17,
           "current": 3.17,
-          "percent": 7.5,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "over": {
           "previous": 1.51,
@@ -4537,7 +4544,7 @@
         "odd": 2.38,
         "probability": 0.4398010464062029,
         "value": 0.0467264904467628,
-        "capturedAt": "2026-10-22T12:17:39.736Z"
+        "capturedAt": "2026-10-22T12:19:08.459Z"
       }
     },
     {
@@ -4692,22 +4699,22 @@
       ],
       "oddsMovement": {
         "home": {
-          "previous": 2.69,
+          "previous": 2.38,
           "current": 2.38,
-          "percent": -11.5,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "draw": {
-          "previous": 3.5,
+          "previous": 3.31,
           "current": 3.31,
-          "percent": -5.4,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "away": {
-          "previous": 2.51,
+          "previous": 3.17,
           "current": 3.17,
-          "percent": 26.3,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "over": {
           "previous": 1.71,
@@ -4728,7 +4735,7 @@
         "odd": 1.57,
         "probability": 0.5230740993676228,
         "value": -0.17877366399283212,
-        "capturedAt": "2026-10-22T12:17:39.742Z"
+        "capturedAt": "2026-10-22T12:19:08.464Z"
       }
     },
     {
@@ -4798,7 +4805,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T12:17:39.747Z"
+        "capturedAt": "2026-10-22T12:19:08.469Z"
       }
     },
     {
@@ -4953,22 +4960,22 @@
       ],
       "oddsMovement": {
         "home": {
-          "previous": 6.26,
+          "previous": 2.38,
           "current": 2.38,
-          "percent": -62,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "draw": {
-          "previous": 4.8,
+          "previous": 3.31,
           "current": 3.31,
-          "percent": -31,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "away": {
-          "previous": 1.45,
+          "previous": 3.17,
           "current": 3.17,
-          "percent": 118.6,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "over": {
           "previous": 1.56,
@@ -4989,7 +4996,7 @@
         "odd": 1.71,
         "probability": 0.5230740993676228,
         "value": -0.10554329008136498,
-        "capturedAt": "2026-10-22T12:17:39.752Z"
+        "capturedAt": "2026-10-22T12:19:08.474Z"
       }
     },
     {
@@ -5146,22 +5153,22 @@
       ],
       "oddsMovement": {
         "home": {
-          "previous": 5.88,
+          "previous": 2.38,
           "current": 2.38,
-          "percent": -59.5,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "draw": {
-          "previous": 4.41,
+          "previous": 3.31,
           "current": 3.31,
-          "percent": -24.9,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "away": {
-          "previous": 1.51,
+          "previous": 3.17,
           "current": 3.17,
-          "percent": 109.9,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "over": {
           "previous": 1.59,
@@ -5182,7 +5189,7 @@
         "odd": 1.71,
         "probability": 0.5230740993676228,
         "value": -0.10554329008136498,
-        "capturedAt": "2026-10-22T12:17:39.757Z"
+        "capturedAt": "2026-10-22T12:19:08.480Z"
       }
     },
     {
@@ -5252,7 +5259,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T12:17:39.762Z"
+        "capturedAt": "2026-10-22T12:19:08.485Z"
       }
     },
     {
@@ -5322,7 +5329,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T12:17:39.768Z"
+        "capturedAt": "2026-10-22T12:19:08.490Z"
       }
     },
     {
@@ -5446,21 +5453,21 @@
       ],
       "oddsMovement": {
         "home": {
-          "previous": 2.04,
+          "previous": 2.38,
           "current": 2.38,
-          "percent": 16.7,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "draw": {
-          "previous": 3.98,
+          "previous": 3.31,
           "current": 3.31,
-          "percent": -16.8,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "away": {
-          "previous": 3.18,
+          "previous": 3.17,
           "current": 3.17,
-          "percent": -0.3,
+          "percent": 0,
           "significant": false
         },
         "over": {
@@ -5482,7 +5489,7 @@
         "odd": 1.48,
         "probability": 0.6524806813096796,
         "value": -0.034328591661674124,
-        "capturedAt": "2026-10-22T12:17:39.773Z"
+        "capturedAt": "2026-10-22T12:19:08.495Z"
       }
     },
     {
@@ -5649,22 +5656,22 @@
       ],
       "oddsMovement": {
         "home": {
-          "previous": 1.7,
+          "previous": 2.38,
           "current": 2.38,
-          "percent": 40,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "draw": {
-          "previous": 3.94,
+          "previous": 3.31,
           "current": 3.31,
-          "percent": -16,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "away": {
-          "previous": 4.65,
+          "previous": 3.17,
           "current": 3.17,
-          "percent": -31.8,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "over": {
           "previous": 1.71,
@@ -5685,7 +5692,7 @@
         "odd": 1.71,
         "probability": 0.5230740993676228,
         "value": -0.10554329008136498,
-        "capturedAt": "2026-10-22T12:17:39.778Z"
+        "capturedAt": "2026-10-22T12:19:08.501Z"
       }
     },
     {
@@ -5755,7 +5762,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T12:17:39.783Z"
+        "capturedAt": "2026-10-22T12:19:08.506Z"
       }
     },
     {
@@ -5825,7 +5832,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T12:17:39.789Z"
+        "capturedAt": "2026-10-22T12:19:08.512Z"
       }
     },
     {
@@ -5895,7 +5902,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T12:17:39.794Z"
+        "capturedAt": "2026-10-22T12:19:08.517Z"
       }
     },
     {
@@ -5965,7 +5972,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T12:17:39.800Z"
+        "capturedAt": "2026-10-22T12:19:08.523Z"
       }
     },
     {
@@ -6035,7 +6042,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T12:17:39.806Z"
+        "capturedAt": "2026-10-22T12:19:08.529Z"
       }
     },
     {
@@ -6105,7 +6112,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T12:17:39.812Z"
+        "capturedAt": "2026-10-22T12:19:08.535Z"
       }
     },
     {
@@ -6175,7 +6182,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T12:17:39.817Z"
+        "capturedAt": "2026-10-22T12:19:08.540Z"
       }
     },
     {
@@ -6245,7 +6252,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T12:17:39.822Z"
+        "capturedAt": "2026-10-22T12:19:08.545Z"
       }
     },
     {
@@ -6315,7 +6322,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T12:17:39.828Z"
+        "capturedAt": "2026-10-22T12:19:08.551Z"
       }
     },
     {
@@ -6385,7 +6392,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T12:17:39.833Z"
+        "capturedAt": "2026-10-22T12:19:08.556Z"
       }
     },
     {
@@ -6455,7 +6462,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T12:17:39.838Z"
+        "capturedAt": "2026-10-22T12:19:08.561Z"
       }
     },
     {
@@ -6525,7 +6532,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T12:17:39.843Z"
+        "capturedAt": "2026-10-22T12:19:08.566Z"
       }
     },
     {
@@ -6608,7 +6615,7 @@
         "odd": 2.01,
         "probability": 0.5927058281131319,
         "value": 0.19133871450739504,
-        "capturedAt": "2026-10-22T12:17:39.848Z"
+        "capturedAt": "2026-10-22T12:19:08.571Z"
       }
     },
     {
@@ -6678,7 +6685,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T12:17:39.854Z"
+        "capturedAt": "2026-10-22T12:19:08.577Z"
       }
     },
     {
@@ -6748,7 +6755,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T12:17:39.859Z"
+        "capturedAt": "2026-10-22T12:19:08.582Z"
       }
     },
     {
@@ -6818,7 +6825,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T12:17:39.864Z"
+        "capturedAt": "2026-10-22T12:19:08.587Z"
       }
     },
     {
@@ -6888,7 +6895,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T12:17:39.870Z"
+        "capturedAt": "2026-10-22T12:19:08.593Z"
       }
     },
     {
@@ -6958,7 +6965,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T12:17:39.875Z"
+        "capturedAt": "2026-10-22T12:19:08.598Z"
       }
     },
     {
@@ -7168,22 +7175,22 @@
       ],
       "oddsMovement": {
         "home": {
-          "previous": 3.15,
+          "previous": 2.38,
           "current": 2.38,
-          "percent": -24.4,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "draw": {
-          "previous": 3.45,
+          "previous": 3.31,
           "current": 3.31,
-          "percent": -4.1,
+          "percent": 0,
           "significant": false
         },
         "away": {
-          "previous": 2.24,
+          "previous": 3.17,
           "current": 3.17,
-          "percent": 41.5,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "over": {
           "previous": 1.73,
@@ -7204,7 +7211,7 @@
         "odd": 1.59,
         "probability": 0.6015278695656847,
         "value": -0.04357068739056125,
-        "capturedAt": "2026-10-22T12:17:39.881Z"
+        "capturedAt": "2026-10-22T12:19:08.604Z"
       }
     },
     {
@@ -7251,22 +7258,22 @@
       },
       "oddsMovement": {
         "home": {
-          "previous": 1.74,
+          "previous": 2.38,
           "current": 2.38,
-          "percent": 36.8,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "draw": {
-          "previous": 3.61,
+          "previous": 3.31,
           "current": 3.31,
-          "percent": -8.3,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "away": {
-          "previous": 4.9,
+          "previous": 3.17,
           "current": 3.17,
-          "percent": -35.3,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "over": {
           "previous": 2.19,
@@ -7287,7 +7294,7 @@
         "odd": 2.01,
         "probability": 0.5381902377514081,
         "value": 0.08176237788033003,
-        "capturedAt": "2026-10-22T12:17:39.887Z"
+        "capturedAt": "2026-10-22T12:19:08.610Z"
       }
     },
     {
@@ -7421,22 +7428,22 @@
       ],
       "oddsMovement": {
         "home": {
-          "previous": 1.37,
+          "previous": 2.38,
           "current": 2.38,
-          "percent": 73.7,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "draw": {
-          "previous": 5.54,
+          "previous": 3.31,
           "current": 3.31,
-          "percent": -40.3,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "away": {
-          "previous": 6.78,
+          "previous": 3.17,
           "current": 3.17,
-          "percent": -53.2,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "over": {
           "previous": 1.27,
@@ -7457,7 +7464,7 @@
         "odd": 2.38,
         "probability": 0.6875339140742114,
         "value": 0.6363307154966231,
-        "capturedAt": "2026-10-22T12:17:39.894Z"
+        "capturedAt": "2026-10-22T12:19:08.616Z"
       }
     },
     {
@@ -7664,22 +7671,22 @@
       ],
       "oddsMovement": {
         "home": {
-          "previous": 2.13,
+          "previous": 2.38,
           "current": 2.38,
-          "percent": 11.7,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "draw": {
-          "previous": 3.37,
+          "previous": 3.31,
           "current": 3.31,
-          "percent": -1.8,
+          "percent": 0,
           "significant": false
         },
         "away": {
-          "previous": 3.43,
+          "previous": 3.17,
           "current": 3.17,
-          "percent": -7.6,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "over": {
           "previous": 1.96,
@@ -7700,7 +7707,7 @@
         "odd": 1.76,
         "probability": 0.6408824462462466,
         "value": 0.127953105393394,
-        "capturedAt": "2026-10-22T12:17:39.898Z"
+        "capturedAt": "2026-10-22T12:19:08.621Z"
       }
     },
     {
@@ -7734,21 +7741,21 @@
       },
       "oddsMovement": {
         "home": {
-          "previous": 2.24,
+          "previous": 2.38,
           "current": 2.38,
-          "percent": 6.2,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "draw": {
-          "previous": 3.38,
+          "previous": 3.31,
           "current": 3.31,
-          "percent": -2.1,
+          "percent": 0,
           "significant": false
         },
         "away": {
-          "previous": 3.15,
+          "previous": 3.17,
           "current": 3.17,
-          "percent": 0.6,
+          "percent": 0,
           "significant": false
         },
         "over": {
@@ -7770,7 +7777,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T12:17:39.903Z"
+        "capturedAt": "2026-10-22T12:19:08.626Z"
       }
     },
     {
@@ -7840,7 +7847,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T12:17:39.908Z"
+        "capturedAt": "2026-10-22T12:19:08.632Z"
       }
     },
     {
@@ -7910,7 +7917,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T12:17:39.913Z"
+        "capturedAt": "2026-10-22T12:19:08.637Z"
       }
     },
     {
@@ -7980,7 +7987,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T12:17:39.918Z"
+        "capturedAt": "2026-10-22T12:19:08.641Z"
       }
     },
     {
@@ -8050,7 +8057,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T12:17:39.922Z"
+        "capturedAt": "2026-10-22T12:19:08.646Z"
       }
     },
     {
@@ -8120,7 +8127,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T12:17:39.927Z"
+        "capturedAt": "2026-10-22T12:19:08.650Z"
       }
     },
     {
@@ -8214,22 +8221,22 @@
       ],
       "oddsMovement": {
         "home": {
-          "previous": 4.66,
+          "previous": 2.16,
           "current": 2.16,
-          "percent": -53.6,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "draw": {
-          "previous": 4.22,
+          "previous": 3.15,
           "current": 3.15,
-          "percent": -25.4,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "away": {
-          "previous": 1.65,
+          "previous": 2.28,
           "current": 2.28,
-          "percent": 38.2,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "over": {
           "previous": 1.5,
@@ -8250,7 +8257,7 @@
         "odd": 1.5,
         "probability": 0.8063784563094968,
         "value": 0.20956768446424512,
-        "capturedAt": "2026-10-22T12:17:39.933Z"
+        "capturedAt": "2026-10-22T12:19:08.656Z"
       }
     },
     {
@@ -8410,22 +8417,22 @@
       ],
       "oddsMovement": {
         "home": {
-          "previous": 1.42,
+          "previous": 1.68,
           "current": 1.68,
-          "percent": 18.3,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "draw": {
-          "previous": 4.49,
+          "previous": 3.59,
           "current": 3.59,
-          "percent": -20,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "away": {
-          "previous": 7.89,
+          "previous": 2.92,
           "current": 2.92,
-          "percent": -63,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "over": {
           "previous": 1.8,
@@ -8446,7 +8453,7 @@
         "odd": 1.68,
         "probability": 0.5153305849904217,
         "value": -0.1342446172160915,
-        "capturedAt": "2026-10-22T12:17:39.937Z"
+        "capturedAt": "2026-10-22T12:19:08.661Z"
       }
     },
     {
@@ -8551,16 +8558,16 @@
           "significant": false
         },
         "draw": {
-          "previous": 4.24,
+          "previous": 3.59,
           "current": 3.59,
-          "percent": -15.3,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "away": {
-          "previous": 4.46,
+          "previous": 2.92,
           "current": 2.92,
-          "percent": -34.5,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "over": {
           "previous": 1.49,
@@ -8581,7 +8588,7 @@
         "odd": 1.56,
         "probability": 0.617612503857168,
         "value": -0.036524493982817874,
-        "capturedAt": "2026-10-22T12:17:39.943Z"
+        "capturedAt": "2026-10-22T12:19:08.666Z"
       }
     },
     {
@@ -8628,22 +8635,22 @@
       },
       "oddsMovement": {
         "home": {
-          "previous": 1.27,
+          "previous": 1.68,
           "current": 1.68,
-          "percent": 32.3,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "draw": {
-          "previous": 5.84,
+          "previous": 3.59,
           "current": 3.59,
-          "percent": -38.5,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "away": {
-          "previous": 10.19,
+          "previous": 2.92,
           "current": 2.92,
-          "percent": -71.3,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "over": {
           "previous": 1.64,
@@ -8664,7 +8671,7 @@
         "odd": 1.68,
         "probability": 0.6592927610144189,
         "value": 0.10761183850422373,
-        "capturedAt": "2026-10-22T12:17:39.949Z"
+        "capturedAt": "2026-10-22T12:19:08.672Z"
       }
     },
     {
@@ -8711,22 +8718,22 @@
       },
       "oddsMovement": {
         "home": {
-          "previous": 1.46,
+          "previous": 1.68,
           "current": 1.68,
-          "percent": 15.1,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "draw": {
-          "previous": 5.04,
+          "previous": 3.59,
           "current": 3.59,
-          "percent": -28.8,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "away": {
-          "previous": 5.77,
+          "previous": 2.92,
           "current": 2.92,
-          "percent": -49.4,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "over": {
           "previous": 1.64,
@@ -8747,7 +8754,7 @@
         "odd": 1.64,
         "probability": 0.6263220655703309,
         "value": 0.02716818753534267,
-        "capturedAt": "2026-10-22T12:17:39.954Z"
+        "capturedAt": "2026-10-22T12:19:08.678Z"
       }
     },
     {
@@ -8794,22 +8801,22 @@
       },
       "oddsMovement": {
         "home": {
-          "previous": 2.78,
+          "previous": 1.68,
           "current": 1.68,
-          "percent": -39.6,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "draw": {
-          "previous": 3.37,
+          "previous": 3.59,
           "current": 3.59,
-          "percent": 6.5,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "away": {
-          "previous": 2.5,
+          "previous": 2.92,
           "current": 2.92,
-          "percent": 16.8,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "over": {
           "previous": 1.64,
@@ -8830,7 +8837,7 @@
         "odd": 1.69,
         "probability": 0.6105588715371804,
         "value": 0.03184449289783475,
-        "capturedAt": "2026-10-22T12:17:39.960Z"
+        "capturedAt": "2026-10-22T12:19:08.683Z"
       }
     },
     {
@@ -8877,22 +8884,22 @@
       },
       "oddsMovement": {
         "home": {
-          "previous": 3.01,
+          "previous": 2.38,
           "current": 2.38,
-          "percent": -20.9,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "draw": {
-          "previous": 3.45,
+          "previous": 3.31,
           "current": 3.31,
-          "percent": -4.1,
+          "percent": 0,
           "significant": false
         },
         "away": {
-          "previous": 2.3,
+          "previous": 3.17,
           "current": 3.17,
-          "percent": 37.8,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "over": {
           "previous": 2.19,
@@ -8913,7 +8920,7 @@
         "odd": 2.01,
         "probability": 0.488061429473041,
         "value": -0.018996526759187726,
-        "capturedAt": "2026-10-22T12:17:39.965Z"
+        "capturedAt": "2026-10-22T12:19:08.688Z"
       }
     },
     {
@@ -8960,22 +8967,22 @@
       },
       "oddsMovement": {
         "home": {
-          "previous": 1.76,
+          "previous": 2.38,
           "current": 2.38,
-          "percent": 35.2,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "draw": {
-          "previous": 3.76,
+          "previous": 3.31,
           "current": 3.31,
-          "percent": -12,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "away": {
-          "previous": 4.49,
+          "previous": 3.17,
           "current": 3.17,
-          "percent": -29.4,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "over": {
           "previous": 2.19,
@@ -8996,7 +9003,7 @@
         "odd": 2.01,
         "probability": 0.6541207195385883,
         "value": 0.31478264627256225,
-        "capturedAt": "2026-10-22T12:17:39.970Z"
+        "capturedAt": "2026-10-22T12:19:08.693Z"
       }
     },
     {
@@ -9043,22 +9050,22 @@
       },
       "oddsMovement": {
         "home": {
-          "previous": 2.37,
+          "previous": 2.38,
           "current": 2.38,
-          "percent": 0.4,
+          "percent": 0,
           "significant": false
         },
         "draw": {
-          "previous": 3.59,
+          "previous": 3.31,
           "current": 3.31,
-          "percent": -7.8,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "away": {
-          "previous": 2.78,
+          "previous": 3.17,
           "current": 3.17,
-          "percent": 14,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "over": {
           "previous": 2.19,
@@ -9079,7 +9086,7 @@
         "odd": 2.19,
         "probability": 0.6660112926264348,
         "value": 0.4585647308518921,
-        "capturedAt": "2026-10-22T12:17:39.975Z"
+        "capturedAt": "2026-10-22T12:19:08.699Z"
       }
     },
     {
@@ -9126,22 +9133,22 @@
       },
       "oddsMovement": {
         "home": {
-          "previous": 3.21,
+          "previous": 2.38,
           "current": 2.38,
-          "percent": -25.9,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "draw": {
-          "previous": 3.58,
+          "previous": 3.31,
           "current": 3.31,
-          "percent": -7.5,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "away": {
-          "previous": 2.14,
+          "previous": 3.17,
           "current": 3.17,
-          "percent": 48.1,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "over": {
           "previous": 2.19,
@@ -9162,7 +9169,7 @@
         "odd": 2.01,
         "probability": 0.571014741630865,
         "value": 0.14773963067803852,
-        "capturedAt": "2026-10-22T12:17:39.980Z"
+        "capturedAt": "2026-10-22T12:19:08.703Z"
       }
     },
     {
@@ -9209,22 +9216,22 @@
       },
       "oddsMovement": {
         "home": {
-          "previous": 1.82,
+          "previous": 2.38,
           "current": 2.38,
-          "percent": 30.8,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "draw": {
-          "previous": 3.99,
+          "previous": 3.31,
           "current": 3.31,
-          "percent": -17,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "away": {
-          "previous": 3.86,
+          "previous": 3.17,
           "current": 3.17,
-          "percent": -17.9,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "over": {
           "previous": 2.19,
@@ -9245,7 +9252,7 @@
         "odd": 2.19,
         "probability": 0.7988517757536562,
         "value": 0.7494853889005071,
-        "capturedAt": "2026-10-22T12:17:39.986Z"
+        "capturedAt": "2026-10-22T12:19:08.709Z"
       }
     },
     {
@@ -9315,7 +9322,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T12:17:39.991Z"
+        "capturedAt": "2026-10-22T12:19:08.714Z"
       }
     },
     {
@@ -9398,7 +9405,7 @@
         "odd": 2.19,
         "probability": 0.7662595626608991,
         "value": 0.6781084422273691,
-        "capturedAt": "2026-10-22T12:17:39.996Z"
+        "capturedAt": "2026-10-22T12:19:08.719Z"
       }
     },
     {
@@ -9445,22 +9452,22 @@
       },
       "oddsMovement": {
         "home": {
-          "previous": 1.42,
+          "previous": 2.38,
           "current": 2.38,
-          "percent": 67.6,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "draw": {
-          "previous": 5.31,
+          "previous": 3.31,
           "current": 3.31,
-          "percent": -37.7,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "away": {
-          "previous": 6.07,
+          "previous": 3.17,
           "current": 3.17,
-          "percent": -47.8,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "over": {
           "previous": 2.19,
@@ -9481,7 +9488,7 @@
         "odd": 2.19,
         "probability": 0.7747895147411783,
         "value": 0.6967890372831804,
-        "capturedAt": "2026-10-22T12:17:40.001Z"
+        "capturedAt": "2026-10-22T12:19:08.725Z"
       }
     },
     {
@@ -9551,7 +9558,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T12:17:40.007Z"
+        "capturedAt": "2026-10-22T12:19:08.730Z"
       }
     },
     {
@@ -9598,22 +9605,22 @@
       },
       "oddsMovement": {
         "home": {
-          "previous": 3.15,
+          "previous": 2.38,
           "current": 2.38,
-          "percent": -24.4,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "draw": {
-          "previous": 3.04,
+          "previous": 3.31,
           "current": 3.31,
-          "percent": 8.9,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "away": {
-          "previous": 2.43,
+          "previous": 3.17,
           "current": 3.17,
-          "percent": 30.5,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "over": {
           "previous": 2.19,
@@ -9634,7 +9641,7 @@
         "odd": 2.01,
         "probability": 0.4528199651518583,
         "value": -0.0898318700447649,
-        "capturedAt": "2026-10-22T12:17:40.012Z"
+        "capturedAt": "2026-10-22T12:19:08.735Z"
       }
     },
     {
@@ -9681,22 +9688,22 @@
       },
       "oddsMovement": {
         "home": {
-          "previous": 1.49,
+          "previous": 2.38,
           "current": 2.38,
-          "percent": 59.7,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "draw": {
-          "previous": 4.63,
+          "previous": 3.31,
           "current": 3.31,
-          "percent": -28.5,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "away": {
-          "previous": 5.89,
+          "previous": 3.17,
           "current": 3.17,
-          "percent": -46.2,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "over": {
           "previous": 2.19,
@@ -9717,7 +9724,7 @@
         "odd": 2.19,
         "probability": 0.6846659180585013,
         "value": 0.4994183605481177,
-        "capturedAt": "2026-10-22T12:17:40.016Z"
+        "capturedAt": "2026-10-22T12:19:08.740Z"
       }
     },
     {
@@ -9764,22 +9771,22 @@
       },
       "oddsMovement": {
         "home": {
-          "previous": 1.42,
+          "previous": 2.38,
           "current": 2.38,
-          "percent": 67.6,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "draw": {
-          "previous": 4.51,
+          "previous": 3.31,
           "current": 3.31,
-          "percent": -26.6,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "away": {
-          "previous": 7.71,
+          "previous": 3.17,
           "current": 3.17,
-          "percent": -58.9,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "over": {
           "previous": 2.19,
@@ -9800,7 +9807,7 @@
         "odd": 2.38,
         "probability": 0.7471052795730185,
         "value": 0.7781105653837841,
-        "capturedAt": "2026-10-22T12:17:40.021Z"
+        "capturedAt": "2026-10-22T12:19:08.745Z"
       }
     },
     {
@@ -9883,7 +9890,7 @@
         "odd": 2.19,
         "probability": 0.7375029454926858,
         "value": 0.6151314506289818,
-        "capturedAt": "2026-10-22T12:17:40.026Z"
+        "capturedAt": "2026-10-22T12:19:08.749Z"
       }
     },
     {
@@ -9953,7 +9960,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T12:17:40.031Z"
+        "capturedAt": "2026-10-22T12:19:08.755Z"
       }
     },
     {
@@ -10023,7 +10030,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T12:17:40.037Z"
+        "capturedAt": "2026-10-22T12:19:08.761Z"
       }
     },
     {
@@ -10112,22 +10119,22 @@
       ],
       "oddsMovement": {
         "home": {
-          "previous": 1.61,
+          "previous": 1.68,
           "current": 1.68,
-          "percent": 4.3,
+          "percent": 0,
           "significant": false
         },
         "draw": {
-          "previous": 5.63,
+          "previous": 3.4,
           "current": 3.4,
-          "percent": -39.6,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "away": {
-          "previous": 3.91,
+          "previous": 2.28,
           "current": 2.28,
-          "percent": -41.7,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "over": {
           "previous": 1.17,
@@ -10148,7 +10155,7 @@
         "odd": 1.17,
         "probability": 0.7830619236477961,
         "value": -0.08381754933207852,
-        "capturedAt": "2026-10-22T12:17:40.042Z"
+        "capturedAt": "2026-10-22T12:19:08.766Z"
       }
     },
     {
@@ -10231,7 +10238,7 @@
         "odd": 1.64,
         "probability": 0.7375029454926858,
         "value": 0.20950483060800473,
-        "capturedAt": "2026-10-22T12:17:40.048Z"
+        "capturedAt": "2026-10-22T12:19:08.773Z"
       }
     },
     {
@@ -10364,22 +10371,22 @@
       ],
       "oddsMovement": {
         "home": {
-          "previous": 1.99,
+          "previous": 1.68,
           "current": 1.68,
-          "percent": -15.6,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "draw": {
-          "previous": 3.74,
+          "previous": 3.59,
           "current": 3.59,
-          "percent": -4,
+          "percent": 0,
           "significant": false
         },
         "away": {
-          "previous": 3.51,
+          "previous": 2.92,
           "current": 2.92,
-          "percent": -16.8,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "over": {
           "previous": 1.59,
@@ -10400,7 +10407,7 @@
         "odd": 1.55,
         "probability": 0.5544073402938634,
         "value": -0.14066862254451173,
-        "capturedAt": "2026-10-22T12:17:40.054Z"
+        "capturedAt": "2026-10-22T12:19:08.778Z"
       }
     },
     {
@@ -10447,22 +10454,22 @@
       },
       "oddsMovement": {
         "home": {
-          "previous": 6.5,
+          "previous": 2.16,
           "current": 2.16,
-          "percent": -66.8,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "draw": {
-          "previous": 5.73,
+          "previous": 3.15,
           "current": 3.15,
-          "percent": -45,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "away": {
-          "previous": 1.37,
+          "previous": 2.28,
           "current": 2.28,
-          "percent": 66.4,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "over": {
           "previous": 1.7,
@@ -10483,7 +10490,7 @@
         "odd": 1.7,
         "probability": 0.8038963713457272,
         "value": 0.36662383128773635,
-        "capturedAt": "2026-10-22T12:17:40.060Z"
+        "capturedAt": "2026-10-22T12:19:08.784Z"
       }
     },
     {
@@ -10566,7 +10573,7 @@
         "odd": 1.64,
         "probability": 0.7733858563636606,
         "value": 0.2683528044364034,
-        "capturedAt": "2026-10-22T12:17:40.064Z"
+        "capturedAt": "2026-10-22T12:19:08.788Z"
       }
     },
     {
@@ -10613,22 +10620,22 @@
       },
       "oddsMovement": {
         "home": {
-          "previous": 7.63,
+          "previous": 2.16,
           "current": 2.16,
-          "percent": -71.7,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "draw": {
-          "previous": 4.32,
+          "previous": 3.15,
           "current": 3.15,
-          "percent": -27.1,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "away": {
-          "previous": 1.43,
+          "previous": 2.28,
           "current": 2.28,
-          "percent": 59.4,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "over": {
           "previous": 1.7,
@@ -10649,7 +10656,7 @@
         "odd": 1.65,
         "probability": 0.5803698603615437,
         "value": -0.04238973040345295,
-        "capturedAt": "2026-10-22T12:17:40.069Z"
+        "capturedAt": "2026-10-22T12:19:08.793Z"
       }
     },
     {
@@ -10696,22 +10703,22 @@
       },
       "oddsMovement": {
         "home": {
-          "previous": 5.11,
+          "previous": 2.16,
           "current": 2.16,
-          "percent": -57.7,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "draw": {
-          "previous": 3.89,
+          "previous": 3.15,
           "current": 3.15,
-          "percent": -19,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "away": {
-          "previous": 1.66,
+          "previous": 2.28,
           "current": 2.28,
-          "percent": 37.3,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "over": {
           "previous": 1.7,
@@ -10732,7 +10739,7 @@
         "odd": 1.7,
         "probability": 0.6465627736646911,
         "value": 0.09915671522997482,
-        "capturedAt": "2026-10-22T12:17:40.074Z"
+        "capturedAt": "2026-10-22T12:19:08.798Z"
       }
     },
     {
@@ -10779,22 +10786,22 @@
       },
       "oddsMovement": {
         "home": {
-          "previous": 1.55,
+          "previous": 1.82,
           "current": 1.82,
-          "percent": 17.4,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "draw": {
-          "previous": 4.55,
+          "previous": 3.56,
           "current": 3.56,
-          "percent": -21.8,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "away": {
-          "previous": 5.08,
+          "previous": 3.17,
           "current": 3.17,
-          "percent": -37.6,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "over": {
           "previous": 1.79,
@@ -10815,7 +10822,7 @@
         "odd": 1.81,
         "probability": 0.5704393700277017,
         "value": 0.032495259750140226,
-        "capturedAt": "2026-10-22T12:17:40.079Z"
+        "capturedAt": "2026-10-22T12:19:08.803Z"
       }
     },
     {
@@ -10862,22 +10869,22 @@
       },
       "oddsMovement": {
         "home": {
-          "previous": 1.43,
+          "previous": 1.82,
           "current": 1.82,
-          "percent": 27.3,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "draw": {
-          "previous": 5.15,
+          "previous": 3.56,
           "current": 3.56,
-          "percent": -30.9,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "away": {
-          "previous": 6.11,
+          "previous": 3.17,
           "current": 3.17,
-          "percent": -48.1,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "over": {
           "previous": 1.79,
@@ -10898,7 +10905,7 @@
         "odd": 1.79,
         "probability": 0.711166670566846,
         "value": 0.27298834031465447,
-        "capturedAt": "2026-10-22T12:17:40.084Z"
+        "capturedAt": "2026-10-22T12:19:08.809Z"
       }
     },
     {
@@ -10945,22 +10952,22 @@
       },
       "oddsMovement": {
         "home": {
-          "previous": 2.87,
+          "previous": 2.38,
           "current": 2.38,
-          "percent": -17.1,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "draw": {
-          "previous": 3.59,
+          "previous": 3.31,
           "current": 3.31,
-          "percent": -7.8,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "away": {
-          "previous": 2.33,
+          "previous": 3.17,
           "current": 3.17,
-          "percent": 36.1,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "over": {
           "previous": 2.19,
@@ -10981,7 +10988,7 @@
         "odd": 2.19,
         "probability": 0.7060078446013036,
         "value": 0.546157179676855,
-        "capturedAt": "2026-10-22T12:17:40.090Z"
+        "capturedAt": "2026-10-22T12:19:08.814Z"
       }
     },
     {
@@ -11028,22 +11035,22 @@
       },
       "oddsMovement": {
         "home": {
-          "previous": 4.64,
+          "previous": 2.38,
           "current": 2.38,
-          "percent": -48.7,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "draw": {
-          "previous": 3.97,
+          "previous": 3.31,
           "current": 3.31,
-          "percent": -16.6,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "away": {
-          "previous": 1.7,
+          "previous": 3.17,
           "current": 3.17,
-          "percent": 86.5,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "over": {
           "previous": 2.19,
@@ -11064,7 +11071,7 @@
         "odd": 2.01,
         "probability": 0.5211234600987366,
         "value": 0.04745815479846027,
-        "capturedAt": "2026-10-22T12:17:40.095Z"
+        "capturedAt": "2026-10-22T12:19:08.819Z"
       }
     },
     {
@@ -11111,22 +11118,22 @@
       },
       "oddsMovement": {
         "home": {
-          "previous": 3.04,
+          "previous": 2.38,
           "current": 2.38,
-          "percent": -21.7,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "draw": {
-          "previous": 3.21,
+          "previous": 3.31,
           "current": 3.31,
-          "percent": 3.1,
+          "percent": 0,
           "significant": false
         },
         "away": {
-          "previous": 2.43,
+          "previous": 3.17,
           "current": 3.17,
-          "percent": 30.5,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "over": {
           "previous": 2.19,
@@ -11147,7 +11154,7 @@
         "odd": 3.17,
         "probability": 0.49809064267109504,
         "value": 0.5789473372673712,
-        "capturedAt": "2026-10-22T12:17:40.100Z"
+        "capturedAt": "2026-10-22T12:19:08.824Z"
       }
     },
     {
@@ -11194,22 +11201,22 @@
       },
       "oddsMovement": {
         "home": {
-          "previous": 1.61,
+          "previous": 2.38,
           "current": 2.38,
-          "percent": 47.8,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "draw": {
-          "previous": 3.84,
+          "previous": 3.31,
           "current": 3.31,
-          "percent": -13.8,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "away": {
-          "previous": 5.64,
+          "previous": 3.17,
           "current": 3.17,
-          "percent": -43.8,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "over": {
           "previous": 2.19,
@@ -11230,7 +11237,7 @@
         "odd": 2.38,
         "probability": 0.5225490157146672,
         "value": 0.24366665740090787,
-        "capturedAt": "2026-10-22T12:17:40.105Z"
+        "capturedAt": "2026-10-22T12:19:08.829Z"
       }
     },
     {
@@ -11277,22 +11284,22 @@
       },
       "oddsMovement": {
         "home": {
-          "previous": 2.88,
+          "previous": 2.38,
           "current": 2.38,
-          "percent": -17.4,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "draw": {
-          "previous": 3.43,
+          "previous": 3.31,
           "current": 3.31,
-          "percent": -3.5,
+          "percent": 0,
           "significant": false
         },
         "away": {
-          "previous": 2.38,
+          "previous": 3.17,
           "current": 3.17,
-          "percent": 33.2,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "over": {
           "previous": 2.19,
@@ -11313,7 +11320,7 @@
         "odd": 2.01,
         "probability": 0.579730317669545,
         "value": 0.1652579385157853,
-        "capturedAt": "2026-10-22T12:17:40.110Z"
+        "capturedAt": "2026-10-22T12:19:08.835Z"
       }
     },
     {
@@ -11360,22 +11367,22 @@
       },
       "oddsMovement": {
         "home": {
-          "previous": 1.68,
+          "previous": 2.38,
           "current": 2.38,
-          "percent": 41.7,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "draw": {
-          "previous": 4.09,
+          "previous": 3.31,
           "current": 3.31,
-          "percent": -19.1,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "away": {
-          "previous": 4.54,
+          "previous": 3.17,
           "current": 3.17,
-          "percent": -30.2,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "over": {
           "previous": 2.19,
@@ -11396,7 +11403,7 @@
         "odd": 2.19,
         "probability": 0.7544784839865974,
         "value": 0.6523078799306483,
-        "capturedAt": "2026-10-22T12:17:40.115Z"
+        "capturedAt": "2026-10-22T12:19:08.840Z"
       }
     },
     {
@@ -11443,22 +11450,22 @@
       },
       "oddsMovement": {
         "home": {
-          "previous": 2.7,
+          "previous": 2.38,
           "current": 2.38,
-          "percent": -11.9,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "draw": {
-          "previous": 3.95,
+          "previous": 3.31,
           "current": 3.31,
-          "percent": -16.2,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "away": {
-          "previous": 2.3,
+          "previous": 3.17,
           "current": 3.17,
-          "percent": 37.8,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "over": {
           "previous": 2.19,
@@ -11479,7 +11486,7 @@
         "odd": 2.19,
         "probability": 0.7761860186992143,
         "value": 0.6998473809512793,
-        "capturedAt": "2026-10-22T12:17:40.121Z"
+        "capturedAt": "2026-10-22T12:19:08.846Z"
       }
     },
     {
@@ -11526,22 +11533,22 @@
       },
       "oddsMovement": {
         "home": {
-          "previous": 1.78,
+          "previous": 2.38,
           "current": 2.38,
-          "percent": 33.7,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "draw": {
-          "previous": 4.11,
+          "previous": 3.31,
           "current": 3.31,
-          "percent": -19.5,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "away": {
-          "previous": 3.89,
+          "previous": 3.17,
           "current": 3.17,
-          "percent": -18.5,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "over": {
           "previous": 2.19,
@@ -11562,7 +11569,7 @@
         "odd": 2.01,
         "probability": 0.6318150710765909,
         "value": 0.2699482928639474,
-        "capturedAt": "2026-10-22T12:17:40.126Z"
+        "capturedAt": "2026-10-22T12:19:08.851Z"
       }
     },
     {
@@ -11609,22 +11616,22 @@
       },
       "oddsMovement": {
         "home": {
-          "previous": 2.1,
+          "previous": 2.38,
           "current": 2.38,
-          "percent": 13.3,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "draw": {
-          "previous": 3.28,
+          "previous": 3.31,
           "current": 3.31,
-          "percent": 0.9,
+          "percent": 0,
           "significant": false
         },
         "away": {
-          "previous": 3.61,
+          "previous": 3.17,
           "current": 3.17,
-          "percent": -12.2,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "over": {
           "previous": 2.19,
@@ -11645,7 +11652,7 @@
         "odd": 2.01,
         "probability": 0.5959161563015666,
         "value": 0.19779147416614862,
-        "capturedAt": "2026-10-22T12:17:40.130Z"
+        "capturedAt": "2026-10-22T12:19:08.855Z"
       }
     },
     {
@@ -11692,22 +11699,22 @@
       },
       "oddsMovement": {
         "home": {
-          "previous": 2.09,
+          "previous": 2.38,
           "current": 2.38,
-          "percent": 13.9,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "draw": {
-          "previous": 3.33,
+          "previous": 3.31,
           "current": 3.31,
-          "percent": -0.6,
+          "percent": 0,
           "significant": false
         },
         "away": {
-          "previous": 3.54,
+          "previous": 3.17,
           "current": 3.17,
-          "percent": -10.5,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "over": {
           "previous": 2.19,
@@ -11728,7 +11735,7 @@
         "odd": 2.38,
         "probability": 0.5402704963551916,
         "value": 0.28584378132535604,
-        "capturedAt": "2026-10-22T12:17:40.135Z"
+        "capturedAt": "2026-10-22T12:19:08.860Z"
       }
     },
     {
@@ -11775,21 +11782,21 @@
       },
       "oddsMovement": {
         "home": {
-          "previous": 2.11,
+          "previous": 2.38,
           "current": 2.38,
-          "percent": 12.8,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "draw": {
-          "previous": 3.56,
+          "previous": 3.31,
           "current": 3.31,
-          "percent": -7,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "away": {
-          "previous": 3.26,
+          "previous": 3.17,
           "current": 3.17,
-          "percent": -2.8,
+          "percent": 0,
           "significant": false
         },
         "over": {
@@ -11811,7 +11818,7 @@
         "odd": 2.19,
         "probability": 0.6809984281122743,
         "value": 0.4913865575658807,
-        "capturedAt": "2026-10-22T12:17:40.141Z"
+        "capturedAt": "2026-10-22T12:19:08.865Z"
       }
     },
     {
@@ -11858,22 +11865,22 @@
       },
       "oddsMovement": {
         "home": {
-          "previous": 2.97,
+          "previous": 2.38,
           "current": 2.38,
-          "percent": -19.9,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "draw": {
-          "previous": 3.28,
+          "previous": 3.31,
           "current": 3.31,
-          "percent": 0.9,
+          "percent": 0,
           "significant": false
         },
         "away": {
-          "previous": 2.39,
+          "previous": 3.17,
           "current": 3.17,
-          "percent": 32.6,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "over": {
           "previous": 2.19,
@@ -11894,7 +11901,7 @@
         "odd": 2.01,
         "probability": 0.5803698603615437,
         "value": 0.1665434193267028,
-        "capturedAt": "2026-10-22T12:17:40.145Z"
+        "capturedAt": "2026-10-22T12:19:08.870Z"
       }
     },
     {
@@ -11977,7 +11984,7 @@
         "odd": 2.19,
         "probability": 0.7618966944464557,
         "value": 0.6685537608377379,
-        "capturedAt": "2026-10-22T12:17:40.150Z"
+        "capturedAt": "2026-10-22T12:19:08.875Z"
       }
     },
     {
@@ -12024,22 +12031,22 @@
       },
       "oddsMovement": {
         "home": {
-          "previous": 1.63,
+          "previous": 2.38,
           "current": 2.38,
-          "percent": 46,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "draw": {
-          "previous": 4.07,
+          "previous": 3.31,
           "current": 3.31,
-          "percent": -18.7,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "away": {
-          "previous": 4.92,
+          "previous": 3.17,
           "current": 3.17,
-          "percent": -35.6,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "over": {
           "previous": 2.19,
@@ -12060,7 +12067,7 @@
         "odd": 2.19,
         "probability": 0.6954786421933463,
         "value": 0.5230982264034285,
-        "capturedAt": "2026-10-22T12:17:40.155Z"
+        "capturedAt": "2026-10-22T12:19:08.880Z"
       }
     },
     {
@@ -12107,22 +12114,22 @@
       },
       "oddsMovement": {
         "home": {
-          "previous": 1.94,
+          "previous": 2.38,
           "current": 2.38,
-          "percent": 22.7,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "draw": {
-          "previous": 3.35,
+          "previous": 3.31,
           "current": 3.31,
-          "percent": -1.2,
+          "percent": 0,
           "significant": false
         },
         "away": {
-          "previous": 4.08,
+          "previous": 3.17,
           "current": 3.17,
-          "percent": -22.3,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "over": {
           "previous": 2.19,
@@ -12143,7 +12150,7 @@
         "odd": 2.19,
         "probability": 0.7025295110180412,
         "value": 0.5385396291295101,
-        "capturedAt": "2026-10-22T12:17:40.160Z"
+        "capturedAt": "2026-10-22T12:19:08.884Z"
       }
     },
     {
@@ -12213,7 +12220,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T12:17:40.165Z"
+        "capturedAt": "2026-10-22T12:19:08.890Z"
       }
     },
     {
@@ -12283,7 +12290,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T12:17:40.171Z"
+        "capturedAt": "2026-10-22T12:19:08.895Z"
       }
     },
     {
@@ -12366,7 +12373,7 @@
         "odd": 1.81,
         "probability": 0.5907572264010241,
         "value": 0.06927057978585371,
-        "capturedAt": "2026-10-22T12:17:40.176Z"
+        "capturedAt": "2026-10-22T12:19:08.901Z"
       }
     },
     {
@@ -12436,7 +12443,7 @@
         "odd": 1.77,
         "probability": 0.5946505317828121,
         "value": 0.052531441255577516,
-        "capturedAt": "2026-10-22T12:17:40.181Z"
+        "capturedAt": "2026-10-22T12:19:08.906Z"
       }
     },
     {
@@ -12483,22 +12490,22 @@
       },
       "oddsMovement": {
         "home": {
-          "previous": 2.8,
+          "previous": 2.38,
           "current": 2.38,
-          "percent": -15,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "draw": {
-          "previous": 3.37,
+          "previous": 3.31,
           "current": 3.31,
-          "percent": -1.8,
+          "percent": 0,
           "significant": false
         },
         "away": {
-          "previous": 2.4,
+          "previous": 3.17,
           "current": 3.17,
-          "percent": 32.1,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "over": {
           "previous": 2.19,
@@ -12519,7 +12526,7 @@
         "odd": 2.19,
         "probability": 0.6345130943529399,
         "value": 0.38958367663293836,
-        "capturedAt": "2026-10-22T12:17:40.186Z"
+        "capturedAt": "2026-10-22T12:19:08.911Z"
       }
     },
     {
@@ -12566,22 +12573,22 @@
       },
       "oddsMovement": {
         "home": {
-          "previous": 1.34,
+          "previous": 2.38,
           "current": 2.38,
-          "percent": 77.6,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "draw": {
-          "previous": 4.85,
+          "previous": 3.31,
           "current": 3.31,
-          "percent": -31.8,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "away": {
-          "previous": 8.73,
+          "previous": 3.17,
           "current": 3.17,
-          "percent": -63.7,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "over": {
           "previous": 2.19,
@@ -12602,7 +12609,7 @@
         "odd": 2.38,
         "probability": 0.6010412691802044,
         "value": 0.4304782206488864,
-        "capturedAt": "2026-10-22T12:17:40.191Z"
+        "capturedAt": "2026-10-22T12:19:08.916Z"
       }
     },
     {
@@ -12649,22 +12656,22 @@
       },
       "oddsMovement": {
         "home": {
-          "previous": 4.44,
+          "previous": 2.38,
           "current": 2.38,
-          "percent": -46.4,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "draw": {
-          "previous": 3.65,
+          "previous": 3.31,
           "current": 3.31,
-          "percent": -9.3,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "away": {
-          "previous": 1.75,
+          "previous": 3.17,
           "current": 3.17,
-          "percent": 81.1,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "over": {
           "previous": 2.19,
@@ -12685,7 +12692,7 @@
         "odd": 2.01,
         "probability": 0.5863727839270938,
         "value": 0.1786092956934584,
-        "capturedAt": "2026-10-22T12:17:40.196Z"
+        "capturedAt": "2026-10-22T12:19:08.920Z"
       }
     },
     {
@@ -12755,7 +12762,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T12:17:40.201Z"
+        "capturedAt": "2026-10-22T12:19:08.926Z"
       }
     },
     {
@@ -12825,7 +12832,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T12:17:40.207Z"
+        "capturedAt": "2026-10-22T12:19:08.932Z"
       }
     },
     {
@@ -12895,7 +12902,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T12:17:40.213Z"
+        "capturedAt": "2026-10-22T12:19:08.938Z"
       }
     },
     {
@@ -12965,7 +12972,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T12:17:40.218Z"
+        "capturedAt": "2026-10-22T12:19:08.943Z"
       }
     },
     {
@@ -13035,7 +13042,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T12:17:40.224Z"
+        "capturedAt": "2026-10-22T12:19:08.955Z"
       }
     },
     {
@@ -13105,7 +13112,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T12:17:40.230Z"
+        "capturedAt": "2026-10-22T12:19:08.961Z"
       }
     },
     {
@@ -13175,7 +13182,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T12:17:40.236Z"
+        "capturedAt": "2026-10-22T12:19:08.967Z"
       }
     },
     {
@@ -13245,7 +13252,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T12:17:40.242Z"
+        "capturedAt": "2026-10-22T12:19:08.972Z"
       }
     },
     {
@@ -13328,7 +13335,7 @@
         "odd": 1.49,
         "probability": 0.7618966944464557,
         "value": 0.13522607472521897,
-        "capturedAt": "2026-10-22T12:17:40.246Z"
+        "capturedAt": "2026-10-22T12:19:08.977Z"
       }
     },
     {
@@ -13375,22 +13382,22 @@
       },
       "oddsMovement": {
         "home": {
-          "previous": 1.56,
+          "previous": 1.68,
           "current": 1.68,
-          "percent": 7.7,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "draw": {
-          "previous": 3.83,
+          "previous": 3.59,
           "current": 3.59,
-          "percent": -6.3,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "away": {
-          "previous": 5.03,
+          "previous": 2.92,
           "current": 2.92,
-          "percent": -41.9,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "over": {
           "previous": 1.64,
@@ -13411,7 +13418,7 @@
         "odd": 1.68,
         "probability": 0.6011710839173101,
         "value": 0.009967420981080943,
-        "capturedAt": "2026-10-22T12:17:40.251Z"
+        "capturedAt": "2026-10-22T12:19:08.982Z"
       }
     },
     {
@@ -13494,7 +13501,7 @@
         "odd": 1.7,
         "probability": 0.7343183788049474,
         "value": 0.2483412439684105,
-        "capturedAt": "2026-10-22T12:17:40.256Z"
+        "capturedAt": "2026-10-22T12:19:08.987Z"
       }
     },
     {
@@ -13541,22 +13548,22 @@
       },
       "oddsMovement": {
         "home": {
-          "previous": 5.36,
+          "previous": 2.16,
           "current": 2.16,
-          "percent": -59.7,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "draw": {
-          "previous": 3.73,
+          "previous": 3.15,
           "current": 3.15,
-          "percent": -15.5,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "away": {
-          "previous": 1.62,
+          "previous": 2.28,
           "current": 2.28,
-          "percent": 40.7,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "over": {
           "previous": 1.7,
@@ -13577,7 +13584,7 @@
         "odd": 1.65,
         "probability": 0.5294831621573963,
         "value": -0.12635278244029613,
-        "capturedAt": "2026-10-22T12:17:40.260Z"
+        "capturedAt": "2026-10-22T12:19:08.991Z"
       }
     },
     {
@@ -13624,22 +13631,22 @@
       },
       "oddsMovement": {
         "home": {
-          "previous": 3.73,
+          "previous": 2.16,
           "current": 2.16,
-          "percent": -42.1,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "draw": {
-          "previous": 3.69,
+          "previous": 3.15,
           "current": 3.15,
-          "percent": -14.6,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "away": {
-          "previous": 1.88,
+          "previous": 2.28,
           "current": 2.28,
-          "percent": 21.3,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "over": {
           "previous": 1.7,
@@ -13660,7 +13667,7 @@
         "odd": 1.65,
         "probability": 0.6678844979508496,
         "value": 0.10200942161890181,
-        "capturedAt": "2026-10-22T12:17:40.265Z"
+        "capturedAt": "2026-10-22T12:19:08.996Z"
       }
     },
     {
@@ -13730,7 +13737,7 @@
         "odd": 1.79,
         "probability": 0.5879181591415851,
         "value": 0.05237350486343728,
-        "capturedAt": "2026-10-22T12:17:40.270Z"
+        "capturedAt": "2026-10-22T12:19:09.002Z"
       }
     },
     {
@@ -13813,7 +13820,7 @@
         "odd": 1.79,
         "probability": 0.8124678256535501,
         "value": 0.45431740791985487,
-        "capturedAt": "2026-10-22T12:17:40.277Z"
+        "capturedAt": "2026-10-22T12:19:09.008Z"
       }
     },
     {
@@ -13860,22 +13867,22 @@
       },
       "oddsMovement": {
         "home": {
-          "previous": 2.84,
+          "previous": 2.38,
           "current": 2.38,
-          "percent": -16.2,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "draw": {
-          "previous": 3.08,
+          "previous": 3.31,
           "current": 3.31,
-          "percent": 7.5,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "away": {
-          "previous": 2.32,
+          "previous": 3.17,
           "current": 3.17,
-          "percent": 36.6,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "over": {
           "previous": 2.19,
@@ -13896,7 +13903,7 @@
         "odd": 2.01,
         "probability": 0.6417844899785353,
         "value": 0.2899868248568558,
-        "capturedAt": "2026-10-22T12:17:40.281Z"
+        "capturedAt": "2026-10-22T12:19:09.013Z"
       }
     },
     {
@@ -13966,7 +13973,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T12:17:40.287Z"
+        "capturedAt": "2026-10-22T12:19:09.018Z"
       }
     },
     {
@@ -14036,7 +14043,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T12:17:40.293Z"
+        "capturedAt": "2026-10-22T12:19:09.024Z"
       }
     },
     {
@@ -14119,7 +14126,7 @@
         "odd": 3.17,
         "probability": 0.4379563829499309,
         "value": 0.3883217339512808,
-        "capturedAt": "2026-10-22T12:17:40.298Z"
+        "capturedAt": "2026-10-22T12:19:09.030Z"
       }
     },
     {
@@ -14189,7 +14196,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T12:17:40.304Z"
+        "capturedAt": "2026-10-22T12:19:09.035Z"
       }
     },
     {
@@ -14259,7 +14266,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T12:17:40.311Z"
+        "capturedAt": "2026-10-22T12:19:09.043Z"
       }
     },
     {
@@ -14329,7 +14336,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T12:17:40.316Z"
+        "capturedAt": "2026-10-22T12:19:09.048Z"
       }
     },
     {
@@ -14399,7 +14406,7 @@
         "odd": 2.01,
         "probability": 0.5230740993676228,
         "value": 0.05137893972892171,
-        "capturedAt": "2026-10-22T12:17:40.322Z"
+        "capturedAt": "2026-10-22T12:19:09.053Z"
       }
     },
     {
@@ -14482,7 +14489,7 @@
         "odd": 2.19,
         "probability": 0.6641021755591567,
         "value": 0.4543837644745532,
-        "capturedAt": "2026-10-22T12:17:40.327Z"
+        "capturedAt": "2026-10-22T12:19:09.059Z"
       }
     },
     {
@@ -14565,7 +14572,7 @@
         "odd": 2.01,
         "probability": 0.5907572264010241,
         "value": 0.18742202506605832,
-        "capturedAt": "2026-10-22T12:17:40.332Z"
+        "capturedAt": "2026-10-22T12:19:09.064Z"
       }
     },
     {
@@ -14648,7 +14655,7 @@
         "odd": 2.01,
         "probability": 0.5624043101872587,
         "value": 0.1304326634763897,
-        "capturedAt": "2026-10-22T12:17:40.337Z"
+        "capturedAt": "2026-10-22T12:19:09.068Z"
       }
     },
     {
@@ -14695,22 +14702,22 @@
       },
       "oddsMovement": {
         "home": {
-          "previous": 1.85,
+          "previous": 2.38,
           "current": 2.38,
-          "percent": 28.6,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "draw": {
-          "previous": 3.53,
+          "previous": 3.31,
           "current": 3.31,
-          "percent": -6.2,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "away": {
-          "previous": 3.46,
+          "previous": 3.17,
           "current": 3.17,
-          "percent": -8.4,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "over": {
           "previous": 2.19,
@@ -14731,7 +14738,7 @@
         "odd": 2.19,
         "probability": 0.6602601118038804,
         "value": 0.44596964485049817,
-        "capturedAt": "2026-10-22T12:17:40.341Z"
+        "capturedAt": "2026-10-22T12:19:09.073Z"
       }
     },
     {
@@ -14778,22 +14785,22 @@
       },
       "oddsMovement": {
         "home": {
-          "previous": 2.24,
+          "previous": 2.38,
           "current": 2.38,
-          "percent": 6.2,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "draw": {
-          "previous": 3.46,
+          "previous": 3.31,
           "current": 3.31,
-          "percent": -4.3,
+          "percent": 0,
           "significant": false
         },
         "away": {
-          "previous": 2.95,
+          "previous": 3.17,
           "current": 3.17,
-          "percent": 7.5,
-          "significant": true
+          "percent": 0,
+          "significant": false
         },
         "over": {
           "previous": 2.19,
@@ -14814,7 +14821,7 @@
         "odd": 2.01,
         "probability": 0.641790564678532,
         "value": 0.28999903500384927,
-        "capturedAt": "2026-10-22T12:17:40.346Z"
+        "capturedAt": "2026-10-22T12:19:09.078Z"
       }
     },
     {
@@ -14897,7 +14904,7 @@
         "odd": 2.01,
         "probability": 0.5481430069682987,
         "value": 0.10176744400628013,
-        "capturedAt": "2026-10-22T12:17:40.351Z"
+        "capturedAt": "2026-10-22T12:19:09.083Z"
       }
     }
   ]
