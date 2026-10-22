@@ -121,6 +121,7 @@ main{max-width:1320px;margin:0 auto;padding:28px 32px 64px;display:flex;flex-dir
 .past-prediction>b{display:flex;align-items:center;gap:6px;padding:9px 14px;border-radius:999px;font-size:12px;font-weight:800;letter-spacing:.06em;background:var(--danger-soft);color:var(--danger)}.past-prediction>b svg{width:15px;height:15px;stroke-width:3}.past-prediction.won>b{background:var(--accent);color:var(--on-accent)}
 .bookmaker-comparison summary{display:inline-flex;align-items:center;min-height:36px;color:var(--accent-text);font-weight:700;font-size:13px;cursor:pointer}
 .bookmaker-comparison>small{display:block;color:var(--muted);margin-top:8px;font-size:12px}.bookmaker-table{overflow-x:auto;margin-top:8px;border:1px solid var(--line);border-radius:var(--radius-sm)}.bookmaker-table table{min-width:560px}.bookmaker-table th,.bookmaker-table td{padding:9px 12px}.bookmaker-table td:not(:first-child){font-weight:700}
+.cached-odd{display:block;color:var(--muted);font-size:8px;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
 
 /* Colonne combiné */
 .builder{display:flex;flex-direction:column;gap:16px;scroll-margin-top:96px}
