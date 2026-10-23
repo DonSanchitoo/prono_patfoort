@@ -6,9 +6,9 @@ test('le catalogue : identifiants uniques, prix dans la fourchette de la rareté
   assert.ok(S.CATALOG.filter(e=>e.exclusive).every(e=>e.price===0&&e.rarity==='exclusive'));assert.ok(S.purchasable(S.CATALOG).every(e=>e.price>=300));assert.deepEqual(Object.keys(S.CATEGORIES).sort(),[...new Set(S.CATALOG.map(e=>e.category))].sort());
   assert.ok(S.CATALOG.some(e=>e.id==='acc-crown'&&e.exclusive)&&S.CATALOG.some(e=>e.id==='kit-champion'&&e.exclusive));
 });
-test('les trophées dorés et les prix de référence : ballon doré 50 000, soulier doré 20 000',()=>{const price=id=>S.CATALOG.find(e=>e.id===id).price;assert.equal(price('trophy-ball'),50000);assert.equal(price('trophy-boot'),20000);assert.ok(price('trophy-glove')>=25000);assert.ok(S.CATALOG.filter(e=>e.category==='background').length>=15)});
-test('aucune marque, aucun nom de stade réel : noms génériques seulement',()=>{
-  const names=S.CATALOG.map(e=>e.name).concat(S.PACKS.map(p=>p.name)).join(' ');assert.doesNotMatch(names,/Allianz|Camp Nou|Maracan|Bernab|Wembley|Parc des Princes|Spotify|Ballon d'Or|Nike|Adidas|Puma/i);
+test('les trophées portent les noms des récompenses du football et les prix de référence : Ballon d’or 50 000, Soulier d’or 20 000',()=>{const price=id=>S.CATALOG.find(e=>e.id===id).price,name=id=>S.CATALOG.find(e=>e.id===id).name;assert.equal(price('trophy-ball'),50000);assert.equal(price('trophy-boot'),20000);assert.deepEqual(['trophy-ball','trophy-boot','trophy-glove','trophy-pichichi'].map(name),['Ballon d’or','Soulier d’or','Gant d’or','Pichichi']);assert.ok(price('trophy-glove')>=25000);assert.ok(S.CATALOG.filter(e=>e.category==='background').length>=15)});
+test('aucun équipementier, aucun sponsor, aucune instance, aucun nom de stade réel (seuls les noms de récompenses sont repris du football)',()=>{
+  const names=S.CATALOG.map(e=>e.name).concat(S.PACKS.map(p=>p.name)).join(' ');assert.doesNotMatch(names,/Allianz|Camp Nou|Maracan|Bernab|Wembley|Parc des Princes|Spotify|Nike|Adidas|Puma|UEFA|FIFA|Champions League/i);
 });
 test('la vitrine du jour : 8 objets, la même pour tous, renouvelée chaque jour, sans exclusif',()=>{
   const a=S.dailyShowcase(S.CATALOG,'2026-10-22'),b=S.dailyShowcase(S.CATALOG,'2026-10-22'),c=S.dailyShowcase(S.CATALOG,'2026-10-23');

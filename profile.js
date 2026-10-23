@@ -1,5 +1,8 @@
 // Page profil (BET-50) : en-tête, onglets, carte joueur partageable, radar, saisons, trophées, compte et confidentialité. Chargée à la demande par app.js.
 // Les chiffres de la carte viennent de formules pures de model.js (cardAttributes, cardOverall) ; les données de la vue serveur public_player_card.
+import { avatarMarkup } from './avatar-view.js';
+import { sanitizeAvatar } from './avatar-config.js';
+import { CATALOG } from './shop.js';
 const NS = 'http://www.w3.org/2000/svg';
 const TABS = [['overview', 'Aperçu'], ['seasons', 'Saisons'], ['badges', 'Trophées'], ['bets', 'Mes paris'], ['avatar', 'Avatar', true], ['account', 'Compte et confidentialité', true]];
 const DIVISION_COLORS = ['#8a6d4b', '#b87333', '#9aa5b1', '#d4a017', '#2fa4a4', '#7a4dd8', '#C8F03C'];
@@ -8,7 +11,7 @@ export function initProfilePage(deps) {
   const { html, money, divisionBadge, levelInfo, avatarConfig, safeLogo, BADGES, echelonName, chevrons, divisionIndex, model, accountApi, getState, toast, openAvatar, openJoin, navigate, onLoggedOut } = deps;
   const { cardAttributes, cardOverall, cardProvisional, averageAttributes, CARD_ATTRIBUTES } = model;
   const root = document.querySelector('#profile-page');
-  let data = null, tab = 'overview', compare = null, target = null, token = 0;
+  let data = null, tab = 'overview', compare = null, target = null, token = 0, hero = null, studio = null, mountToken = 0;
 
   const dateLabel = value => value ? new Date(value).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' }) : '';
   const color = echelon => echelon == null ? '#6b7280' : DIVISION_COLORS[divisionIndex(echelon)];
@@ -61,7 +64,7 @@ export function initProfilePage(deps) {
     const form = info.self && state.serverBets?.length ? state.serverBets.filter(bet => bet.status === 'won' || bet.status === 'lost').slice(0, 10).map(bet => bet.status === 'won' ? 'V' : 'D').join('') : standing?.form ?? '';
     const stats = info.profile.period_stats?.season ?? { bets: 0, wins: 0, roi: 0 };
     const recent = info.badges.slice(0, 4).map(item => BADGES.find(badge => badge.id === item.badge)).filter(Boolean);
-    return `<div class="overview-grid"><div>${cardHtml(info)}<div class="card-actions">${info.self ? '<button class="button secondary" data-share-card>Partager ma carte</button>' : (getState().profile ? '<button class="button secondary" data-compare>' + (compare ? 'Masquer la comparaison' : 'Comparer avec moi') + '</button>' : '')}</div></div><div class="overview-side"><div class="key-numbers">${key('Rang du groupe', standing ? `${standing.rank}e` : '-')}${key('Points de ligue', standing ? Number(standing.points).toFixed(1) : '-')}${key('Paris réglés (saison)', Number(stats.bets) || 0)}${key('ROI (saison)', `${Number(stats.roi) >= 0 ? '+' : ''}${Number(stats.roi || 0).toFixed(1)} %`)}</div><div class="form-line"><small>Forme sur les ${info.self ? 10 : 5} derniers pronos</small><span>${form ? form.split('').map(letter => `<i class="fd ${letter === 'V' ? 'V' : letter === 'N' ? 'N' : 'D'}">${letter}</i>`).join('') : '<em>Pas encore de pronos réglés</em>'}</span></div>${info.self && deps.race?.() ? `<p class="league-race">${deps.race()}</p>` : ''}<div class="radar-box">${radar(series)}</div></div></div>${compare && info.own?.seasons ? seasonsCompare(info) : ''}<h3>Trophées récents</h3><div class="badge-grid">${recent.length ? recent.map(badge => `<div class="badge earned"><b>${html(badge.name)}</b><small>${html(badge.hint)}</small></div>`).join('') : '<p class="empty">Aucun trophée pour le moment.</p>'}</div>`;
+    return `<div class="overview-grid has-hero"><div class="avatar-hero" data-hero data-hero-id="${html(info.profile.user_id)}"><span class="hero-fallback">${avatarMarkup(info.profile, { cls: 'avatar-3d', kind: 'full', userId: info.profile.user_id, label: `Avatar de ${info.profile.nickname}` })}</span><div class="hero-actions"><button class="button secondary" data-hero-celebrate>Célébrer</button>${info.self ? '<button class="button secondary" data-tab="avatar">Personnaliser</button>' : ''}</div></div><div>${cardHtml(info)}<div class="card-actions">${info.self ? '<button class="button secondary" data-share-card>Partager ma carte</button>' : (getState().profile ? '<button class="button secondary" data-compare>' + (compare ? 'Masquer la comparaison' : 'Comparer avec moi') + '</button>' : '')}</div></div><div class="overview-side"><div class="key-numbers">${key('Rang du groupe', standing ? `${standing.rank}e` : '-')}${key('Points de ligue', standing ? Number(standing.points).toFixed(1) : '-')}${key('Paris réglés (saison)', Number(stats.bets) || 0)}${key('ROI (saison)', `${Number(stats.roi) >= 0 ? '+' : ''}${Number(stats.roi || 0).toFixed(1)} %`)}</div><div class="form-line"><small>Forme sur les ${info.self ? 10 : 5} derniers pronos</small><span>${form ? form.split('').map(letter => `<i class="fd ${letter === 'V' ? 'V' : letter === 'N' ? 'N' : 'D'}">${letter}</i>`).join('') : '<em>Pas encore de pronos réglés</em>'}</span></div>${info.self && deps.race?.() ? `<p class="league-race">${deps.race()}</p>` : ''}<div class="radar-box">${radar(series)}</div></div></div>${compare && info.own?.seasons ? seasonsCompare(info) : ''}<h3>Trophées récents</h3><div class="badge-grid">${recent.length ? recent.map(badge => `<div class="badge earned"><b>${html(badge.name)}</b><small>${html(badge.hint)}</small></div>`).join('') : '<p class="empty">Aucun trophée pour le moment.</p>'}</div>`;
   }
   function seasons(info) {
     const rows = info.seasons.slice().reverse();
@@ -69,7 +72,12 @@ export function initProfilePage(deps) {
   }
   function badges(info) {
     const earned = new Map(info.badges.map(item => [item.badge, item.earned_at]));
-    return `<div class="badge-grid">${BADGES.map(badge => `<div class="badge${earned.has(badge.id) ? ' earned' : ''}"><b>${html(badge.name)}</b><small>${html(badge.hint)}</small><em>${earned.has(badge.id) ? `Obtenu le ${dateLabel(earned.get(badge.id))}` : `+${badge.xp} XP`}</em></div>`).join('')}</div><h3>Vitrine</h3><p class="empty">La vitrine des objets dorés s’affichera ici avec la boutique.</p>`;
+    return `<div class="badge-grid">${BADGES.map(badge => `<div class="badge${earned.has(badge.id) ? ' earned' : ''}"><b>${html(badge.name)}</b><small>${html(badge.hint)}</small><em>${earned.has(badge.id) ? `Obtenu le ${dateLabel(earned.get(badge.id))}` : `+${badge.xp} XP`}</em></div>`).join('')}</div><h3>Vitrine</h3>${showcase(info)}`;
+  }
+  // Vitrine : les trophées que le joueur a posés devant son avatar.
+  function showcase(info) {
+    const ids = sanitizeAvatar(info.profile.avatar_config).showcase, items = ids.map(id => CATALOG.find(entry => entry.id === id)).filter(Boolean);
+    return items.length ? `<div class="badge-grid">${items.map(item => `<div class="badge earned"><b>${html(item.name)}</b><small>Posé devant son avatar</small></div>`).join('')}</div>` : `<p class="empty">${info.self ? 'Aucun trophée en vitrine : posez-en depuis le studio d’avatar (onglet Vitrine).' : 'Aucun trophée en vitrine.'}</p>`;
   }
   function bets(info) {
     if (info.self) return `<p class="muted">Votre historique complet est dans l’onglet « Mes paris ». Les autres joueurs ne voient le détail que si vous l’autorisez dans « Compte et confidentialité ».</p><button class="button secondary" data-open-bets>Ouvrir mes paris</button>`;
@@ -85,18 +93,43 @@ export function initProfilePage(deps) {
 <div class="settings-card"><h3>Mes données</h3><p class="muted">Téléchargez toutes vos données (profil, paris, ligues, XP, jetons) au format JSON.</p><button class="button secondary" data-export>Exporter mes données</button></div>
 <form data-form="delete" class="settings-card danger"><h3>Supprimer mon compte</h3><p class="muted">Définitif : votre profil, vos paris, vos classements, votre XP et vos jetons sont effacés. Saisissez votre pseudo <b>${html(profile.nickname)}</b> pour confirmer.</p><div class="settings-row"><input name="confirm" placeholder="Votre pseudo" required aria-label="Confirmation par le pseudo" autocomplete="off"><button class="button danger">Supprimer définitivement</button></div></form></div>`;
   }
-  function avatarTab(info) {
-    const config = avatarConfig(getState().profile);
-    return `<div class="avatar-tab"><div class="avatar-3d ${config.avatar} face-${config.face} accessory-${config.accessory}"><i></i><span></span><b></b><em></em></div><div><p class="muted">Le studio d’avatar 3D arrive avec le personnage du graphiste. En attendant, vous gardez votre avatar actuel.</p><button class="button secondary" data-open-avatar>Personnaliser mon avatar</button></div></div>`;
+  function avatarTab() { return '<div class="avatar-studio-slot" data-studio></div>'; }
+
+  // Avatar 3D : scène de l'en-tête de l'aperçu (Three.js chargé à la demande) et studio de l'onglet Avatar ; une seule scène à la fois, libérée au changement d'onglet.
+  function cleanup() { mountToken++; hero?.dispose(); hero = null; studio?.destroy(); studio = null; }
+  async function mountHero(info) {
+    const host = root.querySelector('[data-hero]'), mine = mountToken; if (!host) return;
+    try {
+      const { webglSupported, createStage } = await import('./avatar.js');
+      if (!webglSupported() || mine !== mountToken) return;
+      const stage = await createStage(host, { look: info.profile.avatar_config, view: 'full', label: `Avatar 3D de ${info.profile.nickname}` });
+      if (mine !== mountToken || !host.isConnected) { stage.dispose(); return; }
+      hero = stage; host.querySelector('.hero-fallback')?.remove(); host.classList.add('live');
+    } catch (error) { console.warn('Avatar 3D indisponible', error?.message); }
+  }
+  async function mountStudioTab(info) {
+    const host = root.querySelector('[data-studio]'), mine = mountToken; if (!host) return;
+    const { mountStudio } = await import('./avatar-studio.js');
+    if (mine !== mountToken) return;
+    const state = getState(), initial = sanitizeAvatar(info.profile.avatar_config ?? state.profile?.avatar2 ?? state.profile);
+    const handle = await mountStudio(host, {
+      html, toast, initial, authenticated: Boolean(info.self), userId: info.profile.user_id, loadContext: () => accountApi.avatarContext(), openShop: () => navigate('shop'), openJoin,
+      save: async (config, blobs) => { const saved = await accountApi.saveAvatar(config, blobs); data.profile.avatar_config = saved; const slot = root.querySelector('.profile-id')?.firstElementChild; if (slot) slot.outerHTML = avatarMarkup(data.profile, { cls: 'avatar-3d', userId: data.profile.user_id }); deps.onAvatarSaved?.(saved); return saved; }
+    });
+    if (mine !== mountToken) { handle.destroy(); return; }
+    studio = handle;
   }
 
   function render() {
+    cleanup();
     if (!data) { root.innerHTML = '<p class="empty">Chargement du profil…</p>'; return; }
+    if (data.failed) { root.innerHTML = `<p class="empty">${html(data.failed)}</p><button class="button secondary" data-reload-profile>Réessayer</button>`; return; }
     if (data.missing) { root.innerHTML = '<p class="empty">Ce joueur n’existe pas.</p><button class="button secondary" data-back-home>Retour</button>'; return; }
     if (data.private) { root.innerHTML = `<div class="profile-private"><h2>${html(data.profile.nickname)}</h2><p class="empty">Ce profil est privé.</p><button class="button secondary" data-back-home>Retour à la communauté</button></div>`; return; }
-    const info = data, level = levelInfo(info.xp), crest = clubCrest(info.profile), config = avatarConfig(info.profile.avatar_config ?? info.profile), visibleTabs = TABS.filter(([, , own]) => !own || info.self);
+    const info = data, level = levelInfo(info.xp), crest = clubCrest(info.profile), visibleTabs = TABS.filter(([, , own]) => !own || info.self);
     const body = { overview, seasons, badges, bets, avatar: avatarTab, account }[tab](info);
-    root.innerHTML = `<header class="profile-header" style="--banner:${color(info.echelon)}"><div class="profile-banner"></div><div class="profile-id"><div class="avatar-3d ${config.avatar} face-${config.face} accessory-${config.accessory}" aria-hidden="true"><i></i><span></span><b></b><em></em></div><div class="profile-title"><h2>${html(info.profile.nickname)}</h2>${info.equipped?.title ? `<small class="profile-subtitle">${html(info.equipped.title.asset ?? info.equipped.title.name)}</small>` : ''}<div class="profile-badges">${divisionBadge(info.echelon)}<span class="level-chip">${level.level}</span><b>${level.title}</b>${crest ? `<img class="profile-crest" src="${crest}" alt="${html(info.profile.heart_club_name ?? 'Club de cœur')}" width="26" height="26">` : ''}</div><small>Membre depuis le ${dateLabel(info.profile.joined_at)}${info.followers != null ? ` · ${info.followers} abonné${info.followers > 1 ? 's' : ''}` : ''}</small></div><div class="profile-actions">${info.self ? '<button class="button secondary" data-share-card>Partager ma carte</button><button class="button secondary" data-tab="account">Modifier le profil</button>' : (deps.extraActions?.(info) ?? '')}</div></div></header><div class="profile-tabs" role="tablist">${visibleTabs.map(([id, label]) => `<button role="tab" id="ptab-${id}" aria-selected="${tab === id}" data-tab="${id}">${label}</button>`).join('')}</div><div class="profile-body" role="tabpanel">${body}</div>`;
+    root.innerHTML = `<header class="profile-header" style="--banner:${color(info.echelon)}"><div class="profile-banner"></div><div class="profile-id">${avatarMarkup(info.profile, { cls: 'avatar-3d', userId: info.profile.user_id })}<div class="profile-title"><h2>${html(info.profile.nickname)}</h2>${info.equipped?.title ? `<small class="profile-subtitle">${html(info.equipped.title.asset ?? info.equipped.title.name)}</small>` : ''}<div class="profile-badges">${divisionBadge(info.echelon)}<span class="level-chip">${level.level}</span><b>${level.title}</b>${crest ? `<img class="profile-crest" src="${crest}" alt="${html(info.profile.heart_club_name ?? 'Club de cœur')}" width="26" height="26">` : ''}</div><small>Membre depuis le ${dateLabel(info.profile.joined_at)}${info.followers != null ? ` · ${info.followers} abonné${info.followers > 1 ? 's' : ''}` : ''}</small></div><div class="profile-actions">${info.self ? '<button class="button secondary" data-share-card>Partager ma carte</button><button class="button secondary" data-tab="account">Modifier le profil</button>' : (deps.extraActions?.(info) ?? '')}</div></div></header><div class="profile-tabs" role="tablist">${visibleTabs.map(([id, label]) => `<button role="tab" id="ptab-${id}" aria-selected="${tab === id}" data-tab="${id}">${label}</button>`).join('')}</div><div class="profile-body" role="tabpanel">${body}</div>`;
+    if (tab === 'overview') mountHero(info); else if (tab === 'avatar' && info.self) mountStudioTab(info);
   }
 
   async function show(next) {
@@ -108,16 +141,18 @@ export function initProfilePage(deps) {
       if (data.profile && !data.private && !data.missing && !data.self && getState().profile) { try { const own = await accountApi.loadPlayer({ self: true }); compare = null; data.own = own; } catch { /* comparaison indisponible */ } }
       if (data.self === false && deps.followers) data.followers = await deps.followers(data.profile.user_id);
       if (data.self && deps.followers) data.followers = await deps.followers(data.profile.user_id);
-    } catch (error) { if (mine === token) data = { missing: true }; console.warn('Profil indisponible', error?.message); }
+    } catch (error) { if (mine === token) data = { failed: error?.code === 'SCHEMA' ? error.message : 'Le profil n’a pas pu être chargé. Vérifiez votre connexion puis réessayez.' }; console.warn('Profil indisponible', error?.message); }
     render();
   }
 
   root.addEventListener('click', async event => {
+    if (event.target.closest('[data-reload-profile]')) { show(target); return; }
     const tabButton = event.target.closest('[data-tab]');
     if (tabButton) { tab = tabButton.dataset.tab; render(); root.querySelector(`#ptab-${tab}`)?.focus(); return; }
     if (event.target.closest('[data-share-card]')) { shareCard(data); return; }
     if (event.target.closest('[data-compare]')) { compare = compare ? null : (data.own?.raw ? { raw: data.own.raw } : null); if (!compare && !data.own) toast('Connectez-vous pour comparer'); render(); return; }
     if (event.target.closest('[data-open-avatar]')) { openAvatar(); return; }
+    if (event.target.closest('[data-hero-celebrate]')) { if (hero) hero.celebrate(); else toast('Le rendu 3D n’est pas disponible sur cet appareil'); return; }
     if (event.target.closest('[data-open-bets]')) { navigate('bankroll'); return; }
     if (event.target.closest('[data-back-home]')) { navigate('community'); return; }
     if (event.target.closest('[data-export]')) {
@@ -143,5 +178,5 @@ export function initProfilePage(deps) {
     } catch (error) { toast(error.message); }
     button.disabled = false;
   });
-  return { show, refresh: () => target && show(target) };
+  return { show, refresh: () => target && show(target), stop: cleanup };
 }
