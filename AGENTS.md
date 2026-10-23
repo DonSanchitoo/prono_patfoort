@@ -23,7 +23,7 @@ Aucun linter ni formateur n'est configuré. Lance `npm test` avant chaque commit
 
 - `data/fixtures.json` est le seul lien entre le pipeline (`scripts/*.mjs`, lancé par GitHub Actions) et le front. Il est régénéré et commité par un bot plusieurs fois par jour : fais `git pull --rebase` avant de pousser, et ne le modifie pas à la main.
 - `model.js` : calculs purs (Poisson, value, combinés, règlement), importés à la fois par `app.js` et par `scripts/update-fixtures.mjs`. Changer la logique de pronostic ici change le site **et** les pronostics enregistrés par le pipeline.
-- `app.js` : interface, rendu par `innerHTML` depuis un objet `state` global. `details.js` et `account.js` sont chargés à la demande.
+- `app.js` : interface, rendu par `innerHTML` depuis un objet `state` global. `details.js` et `account.js` sont chargés à la demande. Le direct ESPN utilise un scoreboard daté, la veille puis le résumé du match en secours, avec un rafraîchissement toutes les 20 secondes.
 - `app.js` et `model.js` sont écrits en style très compact (une fonction par ligne) : garder ce style.
 - `app.test.js` charge `app.js` avec des stubs de `localStorage`, `location` et `document` : tout nouvel accès au DOM ou au navigateur au niveau module doit rester compatible (ou être protégé par `typeof window !== 'undefined'`).
 - La liste `leagues` de `scripts/update-fixtures.mjs`, celle de `scripts/update-results.mjs` et l'objet `LEAGUES` de `app.js` doivent garder les mêmes libellés.
@@ -46,6 +46,7 @@ Avatar 3D (BET-49 ; `avatar-config.js` pur et testé par `avatar.test.js`, `avat
 ## Tickets et travail à deux
 
 - **Tickets BetMaster uniquement dans le YouTrack BetOptimum** (`betoptimum.youtrack.cloud`, projet `BET`), via le serveur MCP YouTrack configuré dans Codex. N'utilise aucune autre instance YouTrack pour ce dépôt.
+- Affecte immédiatement chaque nouveau ticket à l'utilisateur YouTrack `Victor.patfoort3`. Avant toute modification ou tout commentaire sur un ticket existant, vérifie qu'il est affecté à cet utilisateur ; sinon, n'y touche pas. La seule modification autorisée sur un ticket nouvellement créé et encore non affecté est son affectation immédiate à `Victor.patfoort3`.
 - Une branche par ticket, créée depuis `main` : `BET-<n>-<descriptif-court>` (ex. `BET-12-classement-buteurs`).
 - Le numéro du ticket figure dans chaque message de commit et dans le titre de la pull request (ex. `BET-12 Ajoute le classement des buteurs`).
 - Le ticket est fermé quand la pull request est fusionnée dans `main`.

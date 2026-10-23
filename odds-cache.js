@@ -13,10 +13,14 @@ export function isInSecondaryOddsWindow(match, now = Date.now()) {
 }
 
 export function mergeCachedSecondaryOffers(currentOffers = [], previousOffers = []) {
+  return mergeCachedOffers(currentOffers, previousOffers, ['over', 'btts']);
+}
+
+export function mergeCachedOffers(currentOffers = [], previousOffers = [], markets = ['home', 'draw', 'away', 'over', 'btts']) {
   const offers = currentOffers.map(offer => ({ ...offer }));
   for (const previous of previousOffers) {
     let offer = offers.find(item => item.name === previous.name);
-    for (const market of ['over', 'btts']) {
+    for (const market of markets) {
       const cached = Number(previous[market]);
       if (!Number.isFinite(cached) || cached <= 1 || Number(offer?.[market]) > 1) continue;
       if (!offer) { offer = { name: previous.name }; offers.push(offer); }
@@ -25,4 +29,12 @@ export function mergeCachedSecondaryOffers(currentOffers = [], previousOffers = 
     }
   }
   return offers;
+}
+
+export function summarizeOffers(offers = [], markets = ['home', 'draw', 'away', 'over', 'btts']) {
+  const prices = market => offers.map(offer => Number(offer[market])).filter(price => Number.isFinite(price) && price > 1);
+  const counts = Object.fromEntries(markets.map(market => [market, prices(market).length]));
+  const averages = Object.fromEntries(markets.map(market => { const values=prices(market); return [market,values.length?Number((values.reduce((sum,price)=>sum+price,0)/values.length).toFixed(2)):null] }));
+  const cachedMarkets = markets.filter(market => counts[market] > 0 && offers.filter(offer => Number(offer[market]) > 1).every(offer => offer[`${market}Cached`]));
+  return { counts, averages, cachedMarkets };
 }
