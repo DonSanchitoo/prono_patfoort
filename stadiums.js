@@ -1,6 +1,43 @@
 // Catalogue éditorial : clés ESPN uniquement, jamais de rapprochement par nom.
 // Chaque photo activée doit être locale et accompagnée de ses droits vérifiés.
-export const STADIUMS=Object.freeze({});
+export const STADIUMS=Object.freeze({
+  "160": {
+    "venueId": "2271",
+    "name": "Parc des Princes",
+    "image": "stadiums/parc-des-princes.webp",
+    "author": "Zakarie Faibis",
+    "source": "https://commons.wikimedia.org/wiki/File:Parc_des_Princes_Paris_Saint_Germain_z_31.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "176": {
+    "venueId": "3113",
+    "name": "Stade Vélodrome",
+    "image": "stadiums/velodrome.webp",
+    "author": "Zakarie Faibis",
+    "source": "https://commons.wikimedia.org/wiki/File:Stade_V%C3%A9lodrome_1.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "166": {
+    "venueId": "4947",
+    "name": "Decathlon Arena - Stade Pierre-Mauroy",
+    "image": "stadiums/pierre-mauroy.webp",
+    "author": "Liondartois",
+    "source": "https://commons.wikimedia.org/wiki/File:Lille_vs_PSG_2019_-_Stade_Pierre_Mauroy.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "363": {
+    "venueId": "249",
+    "name": "Stamford Bridge",
+    "image": "stadiums/stamford-bridge.webp",
+    "author": "WorldTraveller101",
+    "source": "https://commons.wikimedia.org/wiki/File:Stamford_Bridge_Stadium_Football_Pitch,_2.22.2013.jpg",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+  }
+});
 const escape=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export function stadiumFor(match,catalog=STADIUMS){
   if(match.neutralSite===true)return null;
