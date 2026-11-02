@@ -31,3 +31,5 @@ Après prolongation ou tirs au but, les nouveaux marchés utilisent seulement le
 Étape 1 : [diagnostic réussi](https://github.com/Patfoort47-gif/BetOptimum/actions/runs/41434367481), 13 rencontres, quatre compétitions, plusieurs bookmakers sur chaque sélection supplémentaire.
 
 Étape 2 : [diagnostic réussi](https://github.com/Patfoort47-gif/BetOptimum/actions/runs/41434955697), doubles chances et remboursé si nul confirmés sur 13 rencontres de quatre compétitions. Aucune ligne `team_totals` renvoyée dans ces réponses : les totaux par équipe restent absents de la collecte réelle observée. Le parseur et le règlement sont testés avec des données simulées ; leur couverture réelle reste à vérifier lorsqu’une ligne est fournie.
+
+Mise en production : V36 appliquée le 2 novembre 2026 au projet BetMaster ; le workflow de production utilise explicitement l’étape 2. Le paramètre du collecteur reste à 0 hors du workflow pour les autres usages. Une collecte manuelle d’administration est disponible pour vérifier une activation immédiate, sans nouvelle fréquence planifiée.

@@ -1,6 +1,7 @@
 name: Actualiser les matchs
 
 on:
+  workflow_dispatch:
   schedule:
     # 6 h et 14 h à Paris, avec les deux décalages UTC été/hiver.
     - cron: '0 4,5,12,13 * * *'
@@ -24,6 +25,10 @@ jobs:
       - name: Vérifier le créneau horaire de Paris
         id: schedule
         run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
           case "$(TZ=Europe/Paris date +%H)" in
             06|14) echo "run=true" >> "$GITHUB_OUTPUT" ;;
             *) echo "run=false" >> "$GITHUB_OUTPUT" ;;
@@ -41,7 +46,7 @@ jobs:
         if: steps.schedule.outputs.run == 'true'
         env:
           FOOTBALL_DATA_TOKEN: ${{ secrets.FOOTBALL_DATA_TOKEN }}
-          PROPLINE_MARKET_STAGE: ${{ vars.PROPLINE_MARKET_STAGE || '0' }}
+          PROPLINE_MARKET_STAGE: '2'
           PROPLINE_API_KEY: ${{ secrets.PROPLINE_API_KEY }}
         run: node scripts/update-fixtures.mjs
       - name: Publier les nouvelles données
