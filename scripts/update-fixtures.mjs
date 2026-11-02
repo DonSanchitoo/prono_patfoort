@@ -1,3 +1,4 @@
+import {venueFromCompetition} from '../stadiums.js';
 import {regulationScore} from '../regulation-score.js';
 import {marketKeys,LEGACY_MARKETS,STAGE_ONE} from '../markets.js';
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
@@ -120,7 +121,7 @@ const results = await Promise.allSettled(leagues.map(async ([slug, label, weight
     return {
       id: `espn-${event.id}`, date: kickoff.toISOString().slice(0, 10), kickoff: kickoff.toISOString(),
       time: kickoff.toLocaleTimeString('fr-FR', { timeZone: 'Europe/Paris', hour: '2-digit', minute: '2-digit' }),
-      league: label, home: homeTeam, away: awayTeam,
+      league: label, home: homeTeam, away: awayTeam, ...venueFromCompetition(competition),
       leagueLogo, leagueLogoDark, homeId: homeCompetitor?.team?.id ?? null, awayId: awayCompetitor?.team?.id ?? null, homeLogo: homeCompetitor?.team?.logo ?? null, awayLogo: awayCompetitor?.team?.logo ?? null,
       priority, featured: priority >= 75, status: event.status?.type?.description ?? 'Programmé',
       completed: event.status?.type?.completed === true, voided: voidStatuses.has(event.status?.type?.name), knockout: /round of|quarter|semi|final|knockout|play-?off/i.test(competition?.notes?.[0]?.headline ?? ''),
