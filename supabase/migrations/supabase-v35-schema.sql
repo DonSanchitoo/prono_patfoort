@@ -17,7 +17,7 @@ begin
     where (case when p_kind='followers' then f.followed_id else f.follower_id end)=p_user
       and (p.is_public or p.user_id=auth.uid())
     order by p.nickname,p.user_id limit 26 offset p_offset
-  ), numbered as (select *,row_number() over () as n from people)
+  ), numbered as (select *,row_number() over (order by nickname,user_id) as n from people)
   select jsonb_build_object('rows',coalesce(jsonb_agg(jsonb_build_object('user_id',user_id,'nickname',nickname) order by n) filter(where n<=25),'[]'::jsonb),'more',count(*)>25) into result from numbered;
   return result;
 end $$;

@@ -128,7 +128,7 @@ export function initProfilePage(deps) {
   function connectionPanel() {
     if (!connections) return '';
     const title = connections.kind === 'followers' ? 'Abonnés' : 'Abonnements';
-    return `<section class="connections-panel settings-card" aria-label="${title}" aria-live="polite"><div class="settings-row"><h3>${title}</h3><button class="button secondary" data-close-connections>Fermer la liste</button></div>${connections.loading ? '<p>Chargement…</p>' : connections.error ? '<p>Impossible de charger la liste.</p><button class="button secondary" data-connections="' + connections.kind + '">Réessayer</button>' : `<ul>${connections.rows.map(person => `<li><a href="#joueur-${encodeURIComponent(person.nickname)}">${html(person.nickname)}</a></li>`).join('')}</ul>${connections.rows.length ? '' : '<p class="empty">' + (connections.kind === 'followers' ? 'Aucun abonné pour le moment.' : 'Aucun abonnement pour le moment.') + '</p>'}${connections.more ? '<button class="button secondary" data-more-connections>Voir la suite</button>' : ''}`}</section>`;
+    return `<section class="connections-panel settings-card" aria-label="${title}" aria-live="polite"><p class="muted">Les profils privés sont masqués dans les listes.</p><div class="settings-row"><h3>${title}</h3><button class="button secondary" data-close-connections>Fermer la liste</button></div>${connections.loading ? '<p>Chargement…</p>' : connections.error ? '<p>Impossible de charger la liste.</p><button class="button secondary" data-connections="' + connections.kind + '">Réessayer</button>' : `<ul>${connections.rows.map(person => `<li><a href="#joueur-${encodeURIComponent(person.nickname)}">${html(person.nickname)}</a></li>`).join('')}</ul>${connections.rows.length ? '' : '<p class="empty">' + (connections.kind === 'followers' ? 'Aucun abonné pour le moment.' : 'Aucun abonnement pour le moment.') + '</p>'}${connections.more ? '<button class="button secondary" data-more-connections>Voir la suite</button>' : ''}`}</section>`;
   }
   async function loadConnections(kind, more = false) {
     const mine = ++connectionsRequest, current = data;
@@ -159,11 +159,12 @@ export function initProfilePage(deps) {
       const result = await accountApi.loadPlayer(next.self ? { self: true } : { nickname: next.nickname });
       if (mine !== token) return;
       data = result ?? { missing: true };
-      if (data.profile && !data.private && !data.missing && !data.self && getState().profile) { try { const own = await accountApi.loadPlayer({ self: true }); compare = null; data.own = own; } catch { /* comparaison indisponible */ } }
+      const loaded = data;
+      if (data.profile && !data.private && !data.missing && !data.self && getState().profile) { try { const own = await accountApi.loadPlayer({ self: true }); if (mine !== token) return; compare = null; loaded.own = own; } catch { /* comparaison indisponible */ } }
       if (data.profile && !data.private && !data.missing) { const current = data; try { const counts = await accountApi.community.connections(data.profile.user_id); if (mine !== token) return; current.connections = counts; } catch { /* Compteurs indisponibles : ne pas afficher un faux zéro. */ } }
       if (mine !== token) return;
     } catch (error) { if (mine === token) data = { failed: error?.code === 'SCHEMA' ? error.message : 'Le profil n’a pas pu être chargé. Vérifiez votre connexion puis réessayez.' }; console.warn('Profil indisponible', error?.message); }
-    render();
+    if (mine === token) render();
   }
 
   root.addEventListener('click', async event => {
