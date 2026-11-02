@@ -1,6 +1,5 @@
 // BET-98 : planification et calculs purs. Aucune destination ni clé fournisseur.
 import { analyseMatch } from './model.js';
-import { nextAllowed } from './notification-model.js';
 const formatters=new Map();
 function formatter(timezone) {
   if(!formatters.has(timezone)){if(formatters.size>=100)formatters.clear();formatters.set(timezone,new Intl.DateTimeFormat('en-CA',{timeZone:timezone,year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}));}
@@ -35,15 +34,10 @@ function daySchedule(now,prefs) {
 function dailyDue(now,prefs){return daySchedule(now,prefs).due[Number(prefs.briefing_minute??900)];}
 export function planBriefing(matches, prefs, now=Date.now()) {
   if(!prefs.enabled||!prefs.channels?.includes('email'))return null;
-  const today=dayMatches(matches,prefs,now),fav=today.filter(m=>favorite(m,prefs)),kinds=[];
+  if(!prefs.daily_briefing&&!prefs.favorite_briefing)return null;
   const daily=dailyDue(now,prefs);
-  if(prefs.daily_briefing&&(!prefs.daily_not_before||(daily>=Date.parse(prefs.daily_not_before)&&now>=Date.parse(prefs.daily_not_before)))&&Number.isFinite(daily)&&nextAllowed(daily,prefs)<=now)kinds.push('daily');
-  if(prefs.favorite_briefing&&fav.length){const first=Date.parse(fav[0].kickoff),due=nextAllowed(first-Number(prefs.favorite_lead_minutes??120)*60000,prefs);if(now>=due&&now<first)kinds.push('favorites');}
-  if(!kinds.length)return null;
-  // Une file différée ne peut pas envoyer le briefing d’hier.
-  let expiry=daySchedule(now,prefs).end;
-  if(kinds.includes('favorites'))expiry=Math.min(expiry,Date.parse(fav[0].kickoff));
-  return {briefing:true,kinds,daily_revision:prefs.daily_revision??0,date:localDate(now,prefs.timezone),kickoff:new Date(expiry).toISOString()};
+  if(!Number.isFinite(daily)||now<daily||prefs.daily_not_before&&(daily<Date.parse(prefs.daily_not_before)||now<Date.parse(prefs.daily_not_before)))return null;
+  return {briefing:true,kinds:['daily'],daily_revision:prefs.daily_revision??0,date:localDate(now,prefs.timezone),kickoff:new Date(daySchedule(now,prefs).end).toISOString()};
 }
 export function briefingPicks(matches,prefs,now=Date.now()) {
   const candidates=[];
@@ -78,7 +72,7 @@ export function ticketProjection(bets, matchIds) {
 }
 export function buildBriefing(matches,prefs,event,account,bets,now=Date.now(),generatedAt=null) {
   const today=dayMatches(matches,prefs,now).filter(m=>Date.parse(m.kickoff)>now),favorites=today.filter(m=>favorite(m,prefs));
-  const selected=event.kinds.includes('daily')?today:favorites;
+  const selected=today;
   const fresh=Number.isFinite(Date.parse(generatedAt))&&Date.parse(generatedAt)<=now&&now-Date.parse(generatedAt)<864e5;
   const picks=fresh?briefingPicks(selected,prefs,now):[];
   return {date:event.date,kinds:event.kinds,timezone:prefs.timezone,generatedAt,now:new Date(now).toISOString(),fresh,matches:selected,favorites,hero:picks[0]?.match??selected[0]??null,picks,bankroll:account&&Number.isFinite(Number(account.bankroll))?Number(account.bankroll):null,projection:ticketProjection(bets,selected.map(m=>m.id))};

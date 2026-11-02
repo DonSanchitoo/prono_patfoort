@@ -11,17 +11,17 @@ const bet=(id,key='home',extra={})=>({id,status:'pending',bet_type:'single',stak
 test('opt-in séparé, pas de favoris sans match, fusion des rendez-vous dus',()=>{
  assert.equal(planBriefing([], {...prefs,enabled:false},now),null);
  assert.equal(planBriefing([], {...prefs,channels:['web']},now),null);
- assert.equal(planBriefing([], {...prefs,daily_briefing:false},now),null);
+ assert.deepEqual(planBriefing([], {...prefs,daily_briefing:false},now).kinds,['daily']);
  assert.deepEqual(planBriefing([match()],prefs,now).kinds,['daily']);
  const early=match('early','2026-10-30T09:00:00Z');
- assert.deepEqual(planBriefing([early],prefs,now).kinds,['daily','favorites']);
- assert.equal(planBriefing([early],{...prefs,daily_briefing:false},Date.parse(early.kickoff)),null);
+ assert.deepEqual(planBriefing([early],prefs,now).kinds,['daily']);
+ assert.equal(planBriefing([early],{...prefs,daily_briefing:false,favorite_briefing:false},Date.parse(early.kickoff)),null);
  assert.equal(planBriefing([],{...prefs,briefing_minute:600},now),null);
 });
 test('date locale, plage silencieuse, jours sans matchs et passage de minuit',()=>{
  assert.equal(localDate('2026-10-30T23:30:00Z'),'2026-10-31');
- assert.equal(planBriefing([], {...prefs,quiet_end:600},now),null);
- assert.equal(planBriefing([match('m','2026-10-31T01:00:00Z')],{...prefs,daily_briefing:false},now),null);
+ assert.ok(planBriefing([], {...prefs,quiet_end:600},now));
+ assert.equal(planBriefing([match('m','2026-10-31T01:00:00Z')],{...prefs,daily_briefing:false,favorite_briefing:false},now),null);
  const event=planBriefing([],prefs,now);assert.equal(event.kickoff,'2026-10-30T23:00:00.000Z');
 });
 test('changement d’heure : heure inexistante reportée, heure répétée première occurrence',()=>{
@@ -53,7 +53,7 @@ test('relecture privée par propriétaire juste avant envoi et retrait immédiat
  const db=async(...args)=>{calls.push(args);return {account:{bankroll:150},bets:[bet('a')]};};
  const content=await prepareBriefing(db,'owner',e,prefs,[match()],new Date(now).toISOString(),now);
  assert.deepEqual(calls,[['rpc/notification_briefing_snapshot','POST',{p_user:'owner'}]]);assert.equal(content.bankroll,150);
- assert.equal(await prepareBriefing(db,'owner',e,{...prefs,daily_briefing:false},[match()],null,now),null);
+ assert.equal(await prepareBriefing(db,'owner',e,{...prefs,daily_briefing:false,favorite_briefing:false},[match()],null,now),null);
  assert.equal(await prepareBriefing(db,'owner',e,prefs,[match()],null,Date.parse('2026-10-31T08:00Z')),null);
  assert.equal(calls.length,1);
 });
@@ -74,16 +74,19 @@ test('livraison briefing par Resend avec HTML, texte, idempotence et reprise 429
  const env={SITE_URL:'https://example.com/',EMAIL_FROM:'bot@example.com',RESEND_API_KEY:'secret'};
  const e={briefing_content:b};
  const result=await deliver('email',{email:'owner@example.com'},e,98,env,async(url,init)=>{
-  const body=JSON.parse(init.body);assert.match(body.html,/Le fil de votre journée/);assert.match(body.text,/Bankroll/);assert.match(body.subject,/briefing/);assert.equal(init.headers['Idempotency-Key'],'bet-notification-98');return new Response('{}');
+  const body=JSON.parse(init.body);assert.match(body.html,/Mes matchs favoris/);assert.match(body.text,/Bankroll/);assert.match(body.subject,/briefing/);assert.equal(init.headers['Idempotency-Key'],'bet-notification-98');return new Response('{}');
  });assert.equal(result.status,'sent');
  assert.equal((await deliver('email',{email:'owner@example.com'},e,98,env,async()=>new Response('',{status:429}))).status,'pending');
 });
-test('email court : deux pistes, trois rendez-vous, sans projection financière détaillée et sans conseil périmé',()=>{
+test('BET-143 : trois conseils, favoris avant conseils, héros identifié sans répétition',()=>{
  const m=match(),b=buildBriefing([m],prefs,planBriefing([m],prefs,now),{bankroll:0},[],now,new Date(now).toISOString());
- b.matches=Array.from({length:12},(_,i)=>({...m,id:String(i),home:`Equipe ${i}`}));b.picks=Array.from({length:8},()=>b.picks[0]);
+ b.picks=Array.from({length:3},()=>b.picks[0]);
  const mail=briefingEmail(b,'https://example.com/');
- assert.equal((mail.text.match(/À analyser :/g)||[]).length,2);assert.ok(!mail.text.includes('retour brut'));assert.match(mail.text,/9 autre/);assert.match(mail.text,/0,00/);
- const stale=briefingEmail({...b,fresh:false},'https://example.com/');assert.ok(!stale.text.includes('À analyser :'));assert.match(stale.text,/aucun conseil publié/);
+ assert.ok(mail.text.indexOf('Mes matchs favoris')<mail.text.indexOf('Les 3 conseils du jour'));
+ assert.match(mail.text,/★ Le match du jour/);assert.match(mail.text,/3 · Lille/);assert.match(mail.text,/0,00/);
+ const limited=briefingEmail({...b,favorites:[],picks:b.picks.slice(0,1)},'https://example.com/');
+ assert.ok(!limited.text.includes('Mes matchs favoris'));assert.match(limited.text,/1 conseil/);
+ const stale=briefingEmail({...b,fresh:false},'https://example.com/');assert.match(stale.text,/aucun conseil publié/);
 });
 test('BET-125 : nouvelle heure future, aucun rattrapage et révision portée au worker',async()=>{
  const p={...prefs,favorite_briefing:false,quiet_start:0,quiet_end:0,briefing_minute:1080,daily_revision:1,daily_not_before:'2026-10-30T15:00:00Z'};
@@ -97,3 +100,9 @@ test('BET-125 : nouvelle heure future, aucun rattrapage et révision portée au 
  assert.equal(await prepareBriefing(db,'u',event,{...p,enabled:false},[],null,Date.parse('2026-10-30T17:00:00Z')),null);
 });
 test('BET-125 : un horaire déjà écoulé au changement d’heure attend le lendemain',()=>{const p={...prefs,favorite_briefing:false,quiet_start:0,quiet_end:0,briefing_minute:150,daily_revision:2,daily_not_before:'2026-10-25T01:15:00Z'};assert.equal(planBriefing([],p,Date.parse('2026-10-25T01:30:00Z')),null);assert.ok(planBriefing([],p,Date.parse('2026-10-26T01:30:00Z')));});
+
+test('BET-143 : favoris relus sur le compte au moment de la préparation',async()=>{
+ const m=match(),event=planBriefing([m],prefs,now);
+ const b=await prepareBriefing(async()=>({account:null,bets:[],favorites:{teams:[],leagues:[]}}),'u',event,prefs,[m],new Date(now).toISOString(),now);
+ assert.equal(b.favorites.length,0);assert.equal(b.matches.length,1);
+});

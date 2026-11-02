@@ -33,9 +33,9 @@ async function worker(matches:unknown[],generatedAt:string|null) {
  const prefs=await pageAll('notification_preferences','enabled=eq.true&select=*'),plans=await db('notification_plans?select=*'),entitlements=await pageAll('notification_entitlements','select=*');
  let queued=0;
  for(const p of prefs){const plan=plans.find((l:any)=>l.id===(entitlements.find((e:any)=>e.user_id===p.user_id)?.plan??'free'));if(!plan)continue;
-  const briefing=(p.teams.length+p.leagues.length<=plan.max_favorites)?planBriefing(matches,p):null;
+  const briefing=planBriefing(matches,p);
   if(briefing&&await db('rpc/enqueue_notification_briefing','POST',{p_user:p.user_id,p_event:briefing}))queued++;
-  for(const event of detectAlerts(matches,p,plan)) if(await db('rpc/enqueue_notification','POST',{p_user:p.user_id,p_key:event.key,p_event:event,p_due:event.due_at}))queued++;
+  for(const event of detectAlerts(matches,{...p,channels:p.channels.filter((c:string)=>c!=='email')},plan)) if(await db('rpc/enqueue_notification','POST',{p_user:p.user_id,p_key:event.key,p_event:event,p_due:event.due_at}))queued++;
  }
  const deliveries=await db('rpc/claim_notification_deliveries','POST',{});let sent=0;
  let webSender=null;
@@ -51,6 +51,7 @@ async function worker(matches:unknown[],generatedAt:string|null) {
    }
    const target=await unseal(e.encrypted,env.NOTIFICATION_ENCRYPTION_KEY);
    let payload=event.payload;
+   if(delivery.channel==='email'&&!payload.briefing&&!payload.test_channel){await db(`notification_deliveries?id=eq.${delivery.id}`,'PATCH',{status:'cancelled'});continue;}
    if(payload.briefing){
     if(delivery.channel!=='email'){await db(`notification_deliveries?id=eq.${delivery.id}`,'PATCH',{status:'cancelled'});continue;}
     // Une ancienne association email ne doit pas recevoir de données de compte après changement d’adresse.
