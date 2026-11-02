@@ -91,12 +91,12 @@ export function initProfilePage(deps) {
   }
   function account(info) {
     const profile = info.profile, state = getState();
-    return `<div class="account-settings"><form data-form="nickname" class="settings-card"><h3>Pseudo</h3><p class="muted">Modifiable une fois par mois. Votre pseudo est unique.</p><div class="settings-row"><input name="nickname" value="${html(profile.nickname)}" minlength="3" maxlength="24" pattern="[A-Za-zÀ-ÿ0-9_. -]{3,24}" required aria-label="Pseudo"><button class="button secondary">Changer</button></div></form>
+    return `<div class="account-settings"><header class="account-intro"><span class="account-eyebrow">ESPACE PERSONNEL</span><h3>Votre compte.<br>Vos règles du jeu.</h3><p>Une identité qui vous ressemble, une visibilité que vous maîtrisez.</p><div class="account-status"><span>✓ Mises et bankroll toujours privées</span><span>✓ Données exportables à tout moment</span></div></header><section class="account-group" aria-labelledby="account-identity"><div class="account-group-title"><span>01</span><div><h3 id="account-identity">Identité et sécurité</h3><p>Les clés de votre espace BetOptimum.</p></div></div><form data-form="nickname" class="settings-card"><h3>Pseudo</h3><p class="muted">Modifiable une fois par mois. Votre pseudo est unique.</p><div class="settings-row"><input name="nickname" value="${html(profile.nickname)}" minlength="3" maxlength="24" pattern="[A-Za-zÀ-ÿ0-9_. -]{3,24}" required aria-label="Pseudo"><button class="button secondary">Changer</button></div></form>
 <form data-form="email" class="settings-card"><h3>Adresse email</h3><p class="muted">Un lien de confirmation est envoyé à la nouvelle adresse.</p><div class="settings-row"><input name="email" type="email" placeholder="nouvelle@adresse.fr" required autocomplete="email" aria-label="Nouvelle adresse email"><button class="button secondary">Modifier</button></div></form>
 <form data-form="password" class="settings-card"><h3>Mot de passe</h3><div class="settings-row"><input name="password" type="password" minlength="8" placeholder="Nouveau mot de passe (8 caractères)" required autocomplete="new-password" aria-label="Nouveau mot de passe"><button class="button secondary">Modifier</button></div></form>
-<div class="settings-card"><h3>Confidentialité</h3><label class="switch-line"><input type="checkbox" data-setting="is_public" ${profile.is_public ? 'checked' : ''}><span><b>Profil public</b><small>Les autres joueurs voient votre profil, votre carte et vos trophées. Votre pseudo et vos résultats restent visibles dans les classements.</small></span></label><label class="switch-line"><input type="checkbox" data-setting="show_bets" ${profile.show_bets ? 'checked' : ''}><span><b>Détail de mes paris visible</b><small>Sélections, cotes et résultats, jamais les mises ni la bankroll.</small></span></label></div>
-<section class="settings-card" data-newsletter><h3>Newsletter BetOptimum</h3><p>Chargement de votre inscription…</p></section><div class="settings-card"><h3>Mes données</h3><p class="muted">Téléchargez toutes vos données (profil, paris, ligues, XP, jetons) au format JSON.</p><button class="button secondary" data-export>Exporter mes données</button></div>
-<form data-form="delete" class="settings-card danger"><h3>Supprimer mon compte</h3><p class="muted">Définitif : votre profil, vos paris, vos classements, votre XP et vos jetons sont effacés. Saisissez votre pseudo <b>${html(profile.nickname)}</b> pour confirmer.</p><div class="settings-row"><input name="confirm" placeholder="Votre pseudo" required aria-label="Confirmation par le pseudo" autocomplete="off"><button class="button danger">Supprimer définitivement</button></div></form></div>`;
+</section><section class="account-group" aria-labelledby="account-visibility"><div class="account-group-title"><span>02</span><div><h3 id="account-visibility">Votre visibilité au Club</h3><p>Choisissez ce que les autres joueurs peuvent découvrir.</p></div></div><div class="settings-card"><h3>Confidentialité</h3><label class="switch-line"><input type="checkbox" data-setting="is_public" ${profile.is_public ? 'checked' : ''}><span><b>Profil public</b><small>Les autres joueurs voient votre profil, votre carte et vos trophées. Votre pseudo et vos résultats restent visibles dans les classements.</small></span></label><label class="switch-line"><input type="checkbox" data-setting="show_bets" ${profile.show_bets ? 'checked' : ''}><span><b>Détail de mes paris visible</b><small>Sélections, cotes et résultats, jamais les mises ni la bankroll.</small></span></label></div>
+</section><section class="account-group" aria-labelledby="account-data"><div class="account-group-title"><span>03</span><div><h3 id="account-data">Préférences et données</h3><p>Gardez la main sur vos communications et votre historique.</p></div></div><section class="settings-card" data-newsletter><h3>Newsletter BetOptimum</h3><p>Chargement de votre inscription…</p></section><div class="settings-card"><h3>Mes données</h3><p class="muted">Téléchargez toutes vos données (profil, paris, ligues, XP, jetons) au format JSON.</p><button class="button secondary" data-export>Exporter mes données</button></div>
+</section><section class="account-group account-danger" aria-labelledby="account-danger"><div class="account-group-title"><span>!</span><div><h3 id="account-danger">Zone sensible</h3><p>La suppression du compte est irréversible.</p></div></div><form data-form="delete" class="settings-card danger"><h3>Supprimer mon compte</h3><p class="muted">Définitif : votre profil, vos paris, vos classements, votre XP et vos jetons sont effacés. Saisissez votre pseudo <b>${html(profile.nickname)}</b> pour confirmer.</p><div class="settings-row"><input name="confirm" placeholder="Votre pseudo" required aria-label="Confirmation par le pseudo" autocomplete="off"><button class="button danger">Supprimer définitivement</button></div></form></section><p class="settings-feedback" role="status" aria-live="polite"></p></div>`;
   }
   function avatarTab() { return '<div class="avatar-studio-slot" data-studio></div>'; }
 
@@ -186,22 +186,28 @@ export function initProfilePage(deps) {
     }
     deps.onClick?.(event, { data, show: () => show(target) });
   });
+  function settingsFeedback(message, failed = false) {
+    const host = root.querySelector('.settings-feedback');
+    if (host) { host.textContent = message; host.classList.toggle('failed', failed); }
+    toast(message);
+  }
   root.addEventListener('change', async event => {
     const setting = event.target.closest('[data-setting]');
     if (!setting) return;
-    try { await accountApi.updateSettings({ [setting.dataset.setting]: setting.checked }); data.profile[setting.dataset.setting] = setting.checked; toast('Préférence enregistrée'); } catch (error) { setting.checked = !setting.checked; toast(error.message); }
+    const current = data, checked = setting.checked; setting.disabled = true;
+    try { await accountApi.updateSettings({ [setting.dataset.setting]: checked }); current.profile[setting.dataset.setting] = checked; if (current === data) settingsFeedback('Préférence enregistrée'); } catch (error) { setting.checked = !checked; if (current === data) settingsFeedback(error.message, true); } finally { setting.disabled = false; }
   });
   root.addEventListener('submit', async event => {
     event.preventDefault();
     const form = event.target.closest('[data-form]'), values = Object.fromEntries(new FormData(form)), kind = form.dataset.form, button = form.querySelector('button');
-    button.disabled = true;
+    button.disabled = true; form.setAttribute('aria-busy', 'true');
     try {
-      if (kind === 'nickname') { const nickname = await accountApi.changeNickname(String(values.nickname).trim()); getState().profile.nickname = nickname; data.profile.nickname = nickname; deps.onNickname?.(nickname); toast('Pseudo modifié'); render(); }
-      else if (kind === 'email') { await accountApi.updateEmail(String(values.email).trim()); form.reset(); toast('Lien de confirmation envoyé à la nouvelle adresse'); }
-      else if (kind === 'password') { await accountApi.auth.updatePassword(String(values.password)); form.reset(); toast('Mot de passe modifié'); }
+      if (kind === 'nickname') { const nickname = await accountApi.changeNickname(String(values.nickname).trim()); getState().profile.nickname = nickname; data.profile.nickname = nickname; deps.onNickname?.(nickname); render(); settingsFeedback('Pseudo modifié'); }
+      else if (kind === 'email') { await accountApi.updateEmail(String(values.email).trim()); form.reset(); settingsFeedback('Lien de confirmation envoyé à la nouvelle adresse'); }
+      else if (kind === 'password') { await accountApi.auth.updatePassword(String(values.password)); form.reset(); settingsFeedback('Mot de passe modifié'); }
       else if (kind === 'delete') { await accountApi.deleteAccount(String(values.confirm)); toast('Votre compte a été supprimé'); onLoggedOut(); }
-    } catch (error) { toast(error.message); }
-    button.disabled = false;
+    } catch (error) { settingsFeedback(error.message, true); }
+    button.disabled = false; form.removeAttribute('aria-busy');
   });
   return { show, refresh: () => target && show(target), stop: cleanup };
 }
