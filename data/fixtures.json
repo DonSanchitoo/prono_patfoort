@@ -77,9 +77,19 @@
     "secondaryOddsMatches": 28,
     "statsMatches": 108,
     "oddsMatches": 114,
-    "settlements": 128
+    "settlements": 129
   },
   "settlements": [
+    {
+      "id": "espn-401874963",
+      "date": "2026-11-02",
+      "home": "Sassuolo",
+      "away": "Fiorentina",
+      "regulation": null,
+      "homeScore": 2,
+      "awayScore": 4,
+      "completed": true
+    },
     {
       "id": "espn-401879246",
       "date": "2026-11-01",
@@ -21433,13 +21443,13 @@
       "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/109.png",
       "priority": 31,
       "featured": false,
-      "status": "Scheduled",
-      "completed": false,
+      "status": "Terminé",
+      "completed": true,
       "voided": false,
       "knockout": false,
       "regulation": null,
-      "homeScore": 0,
-      "awayScore": 0,
+      "homeScore": 2,
+      "awayScore": 4,
       "homeGoals": 1.89,
       "awayGoals": 2.07,
       "odds": {
@@ -187026,5 +187036,5 @@
       }
     }
   ],
-  "scoresUpdatedAt": "2026-11-02T19:17:20.358Z"
+  "scoresUpdatedAt": "2026-11-02T20:06:47.542Z"
 }

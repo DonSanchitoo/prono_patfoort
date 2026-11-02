@@ -1,5 +1,17 @@
 [
   {
+    "id": "espn-401874963",
+    "date": "2026-11-02",
+    "league": "Serie A",
+    "match": "Sassuolo – Fiorentina",
+    "label": "Plus de 2,5 buts",
+    "key": "over",
+    "odd": 1.53,
+    "probability": 0.7559768865759381,
+    "status": "won",
+    "score": "2 : 4"
+  },
+  {
     "id": "espn-401875002",
     "date": "2026-11-01",
     "league": "Serie A",
