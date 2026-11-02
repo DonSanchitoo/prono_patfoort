@@ -72,6 +72,18 @@
     "score": "2 : 0"
   },
   {
+    "id": "espn-401878762",
+    "date": "2026-11-02",
+    "league": "Premier League",
+    "match": "Newcastle United – Everton",
+    "label": "Les deux marquent",
+    "key": "btts",
+    "odd": 1.57,
+    "probability": 0.5551107951770341,
+    "status": "lost",
+    "score": "0 : 1"
+  },
+  {
     "id": "espn-401875002",
     "date": "2026-11-01",
     "league": "Serie A",
