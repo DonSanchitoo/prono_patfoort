@@ -25,7 +25,7 @@ begin
  on conflict(user_id,event_key) do nothing returning id into eid;
  if eid is null then
   select id into eid from notification_events where user_id=p_user and event_key='briefing-unique:'||day;
-  select * into old from notification_deliveries where event_id=eid and channel='email' for update;
+  select * into old from notification_deliveries where event_id=eid and channel='email';
   if old.attempts>0 or old.status<>'cancelled' then return false;end if;
   update notification_events set payload=p_event||jsonb_build_object('briefing',true,'kinds',jsonb_build_array('daily')) where id=eid;
   update notification_deliveries set status='pending',due_at=now(),error=null where id=old.id;
