@@ -13,6 +13,7 @@ export function initProfilePage(deps) {
   const { html, money, divisionBadge, levelInfo, avatarConfig, safeLogo, BADGES, echelonName, chevrons, divisionIndex, model, accountApi, getState, toast, openAvatar, openJoin, navigate, onLoggedOut } = deps;
   const { cardAttributes, cardOverall, cardProvisional, averageAttributes, CARD_ATTRIBUTES } = model;
   const root = document.querySelector('#profile-page');
+  let connections = null, connectionsRequest = 0;
   let data = null, tab = 'overview', compare = null, target = null, token = 0, hero = null, studio = null, notifications = null, mountToken = 0;
 
   const dateLabel = value => value ? new Date(value).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' }) : '';
@@ -123,6 +124,19 @@ export function initProfilePage(deps) {
     studio = handle;
   }
 
+  function connectionPanel() {
+    if (!connections) return '';
+    const title = connections.kind === 'followers' ? 'Abonnés' : 'Abonnements';
+    return `<section class="connections-panel settings-card" aria-label="${title}" aria-live="polite"><div class="settings-row"><h3>${title}</h3><button class="button secondary" data-close-connections>Fermer la liste</button></div>${connections.loading ? '<p>Chargement…</p>' : connections.error ? '<p>Impossible de charger la liste.</p><button class="button secondary" data-connections="' + connections.kind + '">Réessayer</button>' : `<ul>${connections.rows.map(person => `<li><a href="#joueur-${encodeURIComponent(person.nickname)}">${html(person.nickname)}</a></li>`).join('')}</ul>${connections.rows.length ? '' : '<p class="empty">' + (connections.kind === 'followers' ? 'Aucun abonné pour le moment.' : 'Aucun abonnement pour le moment.') + '</p>'}${connections.more ? '<button class="button secondary" data-more-connections>Voir la suite</button>' : ''}`}</section>`;
+  }
+  async function loadConnections(kind, more = false) {
+    const mine = ++connectionsRequest, current = data;
+    const previous = more ? connections.rows : [];
+    connections = { kind, rows: previous, loading: true }; render();
+    try { const result = await accountApi.community.connections(current.profile.user_id, kind, previous.length); if (mine !== connectionsRequest || current !== data) return; connections = { kind, rows: [...previous, ...result.rows], more: result.more }; }
+    catch { if (mine !== connectionsRequest || current !== data) return; connections = { kind, rows: [], error: true }; }
+    render(); root.querySelector('[data-close-connections]')?.focus();
+  }
   function render() {
     cleanup();
     if (!data) { root.innerHTML = '<p class="empty">Chargement du profil…</p>'; return; }
@@ -131,26 +145,30 @@ export function initProfilePage(deps) {
     if (data.private) { root.innerHTML = `<div class="profile-private"><h2>${html(data.profile.nickname)}</h2><p class="empty">Ce profil est privé.</p><button class="button secondary" data-back-home>Retour à la communauté</button></div>`; return; }
     const info = data, level = levelInfo(info.xp), crest = clubCrest(info.profile), visibleTabs = TABS.filter(([, , own]) => !own || info.self);
     const body = { overview, seasons, badges, bets, avatar: avatarTab, notifications: () => '<div data-notifications></div>', account }[tab](info);
-    root.innerHTML = `<header class="profile-header" style="--banner:${color(info.echelon)}"><div class="profile-banner"></div><div class="profile-id">${avatarMarkup(info.profile, { cls: 'avatar-3d', userId: info.profile.user_id })}<div class="profile-title"><h2>${html(info.profile.nickname)}</h2>${info.equipped?.title ? `<small class="profile-subtitle">${html(info.equipped.title.asset ?? info.equipped.title.name)}</small>` : ''}<div class="profile-badges">${divisionBadge(info.echelon)}<span class="level-chip">${level.level}</span><b>${level.title}</b>${crest ? `<img class="profile-crest" src="${crest}" alt="${html(info.profile.heart_club_name ?? 'Club de cœur')}" width="26" height="26">` : ''}</div><small>Membre depuis le ${dateLabel(info.profile.joined_at)}${info.followers != null ? ` · ${info.followers} abonné${info.followers > 1 ? 's' : ''}` : ''}</small></div><div class="profile-actions">${info.self ? '<button class="button secondary" data-share-card>Partager ma carte</button><button class="button secondary" data-tab="account">Modifier le profil</button>' : (deps.extraActions?.(info) ?? '')}</div></div></header><div class="profile-tabs" role="tablist">${visibleTabs.map(([id, label]) => `<button role="tab" id="ptab-${id}" aria-selected="${tab === id}" data-tab="${id}">${label}</button>`).join('')}</div><div class="profile-body" role="tabpanel">${body}</div>`;
+    root.innerHTML = `<header class="profile-header" style="--banner:${color(info.echelon)}"><div class="profile-banner"></div><div class="profile-id">${avatarMarkup(info.profile, { cls: 'avatar-3d', userId: info.profile.user_id })}<div class="profile-title"><h2>${html(info.profile.nickname)}</h2>${info.equipped?.title ? `<small class="profile-subtitle">${html(info.equipped.title.asset ?? info.equipped.title.name)}</small>` : ''}<div class="profile-badges">${divisionBadge(info.echelon)}<span class="level-chip">${level.level}</span><b>${level.title}</b>${crest ? `<img class="profile-crest" src="${crest}" alt="${html(info.profile.heart_club_name ?? 'Club de cœur')}" width="26" height="26">` : ''}</div><small>Membre depuis le ${dateLabel(info.profile.joined_at)}</small><div class="profile-connections">${['followers', 'following'].map(kind => `<button class="button secondary" data-connections="${kind}"><b>${info.connections?.[kind] ?? '?'}</b> ${kind === 'followers' ? 'Abonné' : 'Abonnement'}${info.connections?.[kind] === 1 ? '' : 's'}</button>`).join('')}</div></div><div class="profile-actions">${info.self ? '<button class="button secondary" data-share-card>Partager ma carte</button><button class="button secondary" data-tab="account">Modifier le profil</button>' : (deps.extraActions?.(info) ?? '')}</div></div></header><div class="profile-tabs" role="tablist">${visibleTabs.map(([id, label]) => `<button role="tab" id="ptab-${id}" aria-selected="${tab === id}" data-tab="${id}">${label}</button>`).join('')}</div>${connectionPanel()}<div class="profile-body" role="tabpanel">${body}</div>`;
     if (tab === 'notifications' && info.self) { const mine = mountToken; import('./notification-page.js').then(async ({ mountNotifications }) => { if (mine !== mountToken) return; const handle = await mountNotifications(root.querySelector('[data-notifications]'), { api: accountApi.notifications, html, toast, getState }); if (mine !== mountToken) handle.destroy(); else notifications = handle; }).catch(() => { if (mine === mountToken) root.querySelector('[data-notifications]').textContent = 'Les alertes sont indisponibles.'; }); }
     if (tab === 'account' && info.self) { const mine=mountToken; import('./newsletter.js').then(({mountNewsletter})=>{if(mine===mountToken)return mountNewsletter(root.querySelector('[data-newsletter]'),{api:accountApi.newsletter,html,toast});}).catch(()=>{if(mine===mountToken)root.querySelector('[data-newsletter]').textContent='La newsletter est momentanément indisponible.';}); }
     if (tab === 'overview') mountHero(info); else if (tab === 'avatar' && info.self) mountStudioTab(info);
   }
 
   async function show(next) {
-    target = next; const mine = ++token; tab = next.tab ?? 'overview'; compare = null; data = null; render();
+    connections = null; connectionsRequest++; target = next; const mine = ++token; tab = next.tab ?? 'overview'; compare = null; data = null; render();
     try {
       const result = await accountApi.loadPlayer(next.self ? { self: true } : { nickname: next.nickname });
       if (mine !== token) return;
       data = result ?? { missing: true };
       if (data.profile && !data.private && !data.missing && !data.self && getState().profile) { try { const own = await accountApi.loadPlayer({ self: true }); compare = null; data.own = own; } catch { /* comparaison indisponible */ } }
-      if (data.self === false && deps.followers) data.followers = await deps.followers(data.profile.user_id);
-      if (data.self && deps.followers) data.followers = await deps.followers(data.profile.user_id);
+      if (data.profile && !data.private && !data.missing) { const current = data; try { const counts = await accountApi.community.connections(data.profile.user_id); if (mine !== token) return; current.connections = counts; } catch { /* Compteurs indisponibles : ne pas afficher un faux zéro. */ } }
+      if (mine !== token) return;
     } catch (error) { if (mine === token) data = { failed: error?.code === 'SCHEMA' ? error.message : 'Le profil n’a pas pu être chargé. Vérifiez votre connexion puis réessayez.' }; console.warn('Profil indisponible', error?.message); }
     render();
   }
 
   root.addEventListener('click', async event => {
+    const connectionButton = event.target.closest('[data-connections]');
+    if (connectionButton) { loadConnections(connectionButton.dataset.connections); return; }
+    if (event.target.closest('[data-more-connections]')) { loadConnections(connections.kind, true); return; }
+    if (event.target.closest('[data-close-connections]')) { const kind = connections.kind; connections = null; connectionsRequest++; render(); root.querySelector(`[data-connections="${kind}"]`)?.focus(); return; }
     if (event.target.closest('[data-reload-profile]')) { show(target); return; }
     const tabButton = event.target.closest('[data-tab]');
     if (tabButton) { tab = tabButton.dataset.tab; render(); root.querySelector(`#ptab-${tab}`)?.focus(); return; }
