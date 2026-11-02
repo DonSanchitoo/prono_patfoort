@@ -90,6 +90,8 @@ export function cardAttributes(raw={}){
     DIS:raw.avgStakeRatio==null?50:scale99(.2-Number(raw.avgStakeRatio),0,.18) // discipline : mise moyenne rapportée au capital initial
   };
 }
+// BET-147 : les axes inconnus restent absents, sans note fictive.
+export function cardRadarAttributes(raw={}){raw=raw??{};const valid=key=>raw[key]!=null&&Number.isFinite(Number(raw[key]))&&Number(raw[key])>=0,attributes=cardAttributes(Object.fromEntries(Object.entries(raw).filter(([key])=>valid(key)))),has=(...keys)=>keys.every(valid);return{PRÉ:has('settled','wins')&&Number(raw.settled)>0&&Number(raw.wins)<=Number(raw.settled)?attributes.PRÉ:null,VAL:has('settled','staked','returned')&&Number(raw.settled)>0&&Number(raw.staked)>0?attributes.VAL:null,RÉG:valid('activeDays30')?attributes.RÉG:null,AUD:valid('avgOdds')&&Number(raw.avgOdds)>0?attributes.AUD:null,VOL:valid('tickets30')?attributes.VOL:null,DIS:valid('avgStakeRatio')&&has('settled')&&Number(raw.settled)>0?attributes.DIS:null}}
 export const cardOverall=attributes=>Math.min(99,Math.max(1,Math.round(.2*attributes.PRÉ+.2*attributes.VAL+.2*attributes.RÉG+.1*attributes.AUD+.1*attributes.VOL+.2*attributes.DIS)));
 export const cardProvisional=raw=>(Number(raw?.settled)||0)<CARD_PROVISIONAL_BELOW;
 // Moyenne des attributs d'un groupe de joueurs, pour le radar comparé.

@@ -6,26 +6,30 @@ import { profileHistory } from './profile-history.js';
 import { seasonLabel } from './league.js';
 import { CATALOG } from './shop.js';
 const NS = 'http://www.w3.org/2000/svg';
-const TABS = [['overview', 'Aperçu'], ['seasons', 'Saisons'], ['badges', 'Trophées'], ['bets', 'Mes paris'], ['avatar', 'Avatar', true], ['notifications', 'Mes alertes', true], ['account', 'Compte et confidentialité', true]];
+const TABS = [['overview', 'Aperçu'], ['badges', 'Trophées'], ['bets', 'Mes paris'], ['avatar', 'Avatar', true], ['notifications', 'Mes alertes', true], ['account', 'Compte et confidentialité', true]];
 const DIVISION_COLORS = ['#8a6d4b', '#b87333', '#9aa5b1', '#d4a017', '#2fa4a4', '#7a4dd8', '#C8F03C'];
 
 export function initProfilePage(deps) {
   const { html, money, divisionBadge, levelInfo, avatarConfig, safeLogo, BADGES, echelonName, chevrons, divisionIndex, model, accountApi, getState, toast, openAvatar, openJoin, navigate, onLoggedOut } = deps;
-  const { cardAttributes, cardOverall, cardProvisional, averageAttributes, CARD_ATTRIBUTES } = model;
+  const { cardAttributes, cardOverall, cardProvisional, cardRadarAttributes, CARD_ATTRIBUTES } = model;
   const root = document.querySelector('#profile-page');
+  let connections = null, connectionsRequest = 0;
   let data = null, tab = 'overview', compare = null, target = null, token = 0, hero = null, studio = null, notifications = null, mountToken = 0;
 
   const dateLabel = value => value ? new Date(value).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' }) : '';
   const color = echelon => echelon == null ? '#6b7280' : DIVISION_COLORS[divisionIndex(echelon)];
   const clubCrest = profile => profile.heart_club_id && /^\d{1,8}$/.test(profile.heart_club_id) ? safeLogo(`https://a.espncdn.com/i/teamlogos/soccer/500/${profile.heart_club_id}.png`) : null;
 
-  // Radar des 6 attributs : joueur affiché, moyenne du groupe, et vos propres attributs en mode comparaison.
-  function radar(series) {
-    const size = 320, center = size / 2, radius = 112, count = CARD_ATTRIBUTES.length, point = (index, value) => { const angle = -Math.PI / 2 + index * 2 * Math.PI / count, distance = radius * value / 99; return [center + Math.cos(angle) * distance, center + Math.sin(angle) * distance]; };
-    const rings = [33, 66, 99].map(level => `<polygon points="${CARD_ATTRIBUTES.map((_, index) => point(index, level).join(',')).join(' ')}" fill="none" stroke="var(--line-strong)" stroke-width="1"/>`).join('');
-    const axes = CARD_ATTRIBUTES.map((name, index) => { const [x, y] = point(index, 99), [lx, ly] = point(index, 120); return `<line x1="${center}" y1="${center}" x2="${x}" y2="${y}" stroke="var(--line)"/><text x="${lx}" y="${ly}" text-anchor="middle" dominant-baseline="middle" font-size="11" font-weight="700" fill="var(--muted)">${name}</text>`; }).join('');
-    const shapes = series.map(item => `<polygon points="${CARD_ATTRIBUTES.map((name, index) => point(index, item.values[name]).join(',')).join(' ')}" fill="${item.fill}" fill-opacity=".22" stroke="${item.stroke}" stroke-width="2.5" ${item.dash ? 'stroke-dasharray="5 4"' : ''}/>`).join('');
-    return `<h3 class="radar-title">Votre profil de pronostiqueur</h3><p class="radar-subtitle">Six attributs sur 99 · comparaison avec votre groupe</p><svg class="radar" viewBox="0 0 ${size} ${size}" role="img" aria-label="Radar des attributs : ${html(series.map(item => `${item.label} ${CARD_ATTRIBUTES.map(name => `${name} ${item.values[name]}`).join(', ')}`).join(' ; '))}">${rings}${axes}${shapes}</svg><div class="radar-legend">${series.map(item => `<span><i style="background:${item.stroke}"></i>${html(item.label)}</span>`).join('')}</div><dl class="radar-attributes">${CARD_ATTRIBUTES.map((name, index) => `<div><dt>${['Précision', 'Rendement', 'Régularité', 'Audace', 'Volume', 'Discipline'][index]} <small>${name}</small></dt><dd>${Number(series[0].values[name])}<small>/99</small></dd></div>`).join('')}</dl>`;
+  // Une seule série, issue des mêmes formules que la carte ; axes absents explicités.
+  function radar(raw, nickname) {
+    const values = cardRadarAttributes(raw), size = 320, center = 160, radius = 112;
+    const point = (index, value) => { const angle = -Math.PI / 2 + index * Math.PI / 3; return [center + Math.cos(angle) * radius * value / 99, center + Math.sin(angle) * radius * value / 99]; };
+    const rings = [33,66,99].map(value => `<polygon points="${CARD_ATTRIBUTES.map((_,i)=>point(i,value).join(',')).join(' ')}" fill="none" stroke="var(--line-strong)"/>`).join('');
+    const axes = CARD_ATTRIBUTES.map((name,i) => { const [x,y]=point(i,99),[lx,ly]=point(i,120); return `<line x1="160" y1="160" x2="${x}" y2="${y}" stroke="var(--line)"/><text x="${lx}" y="${ly}" text-anchor="middle" dominant-baseline="middle" font-size="11" fill="var(--muted)">${name}</text>`; }).join('');
+    const complete = CARD_ATTRIBUTES.every(key=>values[key]!=null);
+    const shape = complete ? `<polygon data-radar-series points="${CARD_ATTRIBUTES.map((name,i)=>point(i,values[name]).join(',')).join(' ')}" fill="var(--accent)" fill-opacity=".22" stroke="var(--accent-text)" stroke-width="2.5"/>` : CARD_ATTRIBUTES.map((name,i)=>{if(values[name]==null)return '';const [x,y]=point(i,values[name]);return `<circle cx="${x}" cy="${y}" r="4" fill="var(--accent-text)"/>`;}).join('');
+    const formulas = ['Part des paris gagnés : 20 % → 20, 70 % → 99.', 'ROI des mises : -30 % → 20, +40 % → 99. Remboursements exclus.', 'Jours actifs sur 30 jours : 0 → 20, 20 → 99.', 'Cote moyenne hors systèmes : 1,3 → 20, 4 → 99.', 'Tickets sur 30 jours : échelle logarithmique de 0 → 20 à 100 → 99.', 'Mise moyenne / capital initial : 20 % → 20, 2 % → 99.'];
+    return `<h3 class="radar-title">Profil de pronostiqueur</h3><p class="radar-subtitle">${html(nickname)} · résultats certifiés · notes sur 99${cardProvisional(raw) ? ' · provisoires (moins de 10 paris réglés)' : ''}</p>${complete ? '' : '<p class="muted">Données incomplètes : seuls les axes connus sont affichés, sans courbe estimée.</p>'}<svg class="radar" viewBox="0 0 ${size} ${size}" role="img" aria-label="${html(CARD_ATTRIBUTES.map(key=>key+' : '+(values[key]??'indisponible')).join(', '))}">${rings}${axes}${shape}</svg><dl class="radar-attributes">${CARD_ATTRIBUTES.map((name,i)=>`<div><dt>${['Précision','Rendement','Régularité','Audace','Volume','Discipline'][i]} <small>${name}</small></dt><dd>${values[name]??'N/D'}${values[name]==null?'':'<small>/99</small>'}</dd></div>`).join('')}</dl><details><summary>Comprendre les calculs</summary><p>Notes bornées entre 20 et 99, interpolation linéaire sauf Volume. N/D : donnée indisponible.</p><ul>${formulas.map((formula,i)=>`<li><b>${CARD_ATTRIBUTES[i]}</b> : ${formula}</li>`).join('')}</ul></details>`;
   }
   function attributesOf(raw) { return cardAttributes(raw); }
   function cardHtml(info) {
@@ -57,17 +61,15 @@ export function initProfilePage(deps) {
     return `<h3>Bilan saison par saison</h3><div class="compare-table"><div class="compare-row compare-head"><span>Saison</span><b>${html(info.profile.nickname)}</b><b>Vous</b></div>${months.map(month => `<div class="compare-row"><span>${seasonLabel(month)}</span><b>${cell(info.seasons.find(row => row.season === month))}</b><b>${cell(info.own.seasons.find(row => row.season === month))}</b></div>`).join('') || '<p class="empty">Aucune saison terminée.</p>'}</div>`;
   }
   function overview(info) {
-    const attributes = attributesOf(info.raw), group = info.groupRaws.length ? averageAttributes(info.groupRaws.map(attributesOf)) : null, mine = compare ? attributesOf(compare.raw) : null, standing = info.standing, state = getState();
-    const series = [{ label: info.profile.nickname, values: attributes, stroke: 'var(--accent-text)', fill: 'var(--accent)' }];
-    if (group) series.push({ label: 'Moyenne du groupe', values: group, stroke: '#7a8a96', fill: '#7a8a96', dash: true });
-    if (mine && !info.self) series.push({ label: 'Vous', values: mine, stroke: '#e0663c', fill: '#e0663c' });
+    const standing = info.standing, state = getState();
     const key = (label, value) => `<div class="key-number"><small>${label}</small><strong>${value}</strong></div>`;
     const personal = info.self ? profileHistory(state.history) : null;
     const form = personal ? personal.form : standing?.form ?? '';
     const historySummary = personal ? `<section class="settings-card"><h3>Tout votre historique</h3><p class="muted">Paris certifiés et ${personal.legacy} ancien${personal.legacy > 1 ? 's' : ''} pari${personal.legacy > 1 ? 's' : ''}. Ce bilan personnel reste privé ; la carte publique et les ligues utilisent les résultats certifiés.</p><div class="key-numbers">${key('Paris réglés', personal.settled)}${key('Paris gagnés', personal.wins)}${key('Réussite', personal.winrate == null ? '-' : personal.winrate.toFixed(1) + ' %')}${key('ROI historique', personal.roi == null ? '-' : personal.roi.toFixed(1) + ' %')}</div><p class="muted">${personal.pending} en attente · ${personal.void} remboursé${personal.void > 1 ? 's' : ''} (exclus du ROI et du taux de réussite)</p></section>` : '';
     const stats = info.profile.period_stats?.season ?? { bets: 0, wins: 0, roi: 0 };
     const recent = info.badges.slice(0, 4).map(item => BADGES.find(badge => badge.id === item.badge)).filter(Boolean);
-    return `<div class="overview-grid has-hero"><div class="avatar-hero" data-hero data-hero-id="${html(info.profile.user_id)}"><span class="hero-fallback">${avatarMarkup(info.profile, { cls: 'avatar-3d', kind: 'full', userId: info.profile.user_id, label: `Avatar de ${info.profile.nickname}` })}</span><div class="hero-actions"><button class="button secondary" data-hero-celebrate>Célébrer</button>${info.self ? '<button class="button secondary" data-tab="avatar">Personnaliser</button>' : ''}</div></div><div>${cardHtml(info)}<div class="card-actions">${info.self ? '<button class="button secondary" data-share-card>Partager ma carte</button>' : (getState().profile ? '<button class="button secondary" data-compare>' + (compare ? 'Masquer la comparaison' : 'Comparer avec moi') + '</button>' : '')}</div></div><div class="overview-side">${historySummary}<div class="key-numbers">${key('Rang du groupe', standing ? `${standing.rank}e` : '-')}${key('Points de ligue', standing ? Number(standing.points).toFixed(1) : '-')}${key('Paris réglés (saison)', Number(stats.bets) || 0)}${key('ROI (saison)', `${Number(stats.roi) >= 0 ? '+' : ''}${Number(stats.roi || 0).toFixed(1)} %`)}</div><div class="form-line"><small>Forme sur les ${info.self ? 10 : 5} derniers pronos</small><span>${form ? form.split('').map(letter => `<i class="fd ${letter === 'V' ? 'V' : letter === 'N' ? 'N' : 'D'}">${letter}</i>`).join('') : '<em>Pas encore de pronos réglés</em>'}</span></div>${info.self && deps.race?.() ? `<p class="league-race">${deps.race()}</p>` : ''}<div class="radar-box">${radar(series)}</div></div></div>${compare && info.own?.seasons ? seasonsCompare(info) : ''}<h3>Trophées récents</h3><div class="badge-grid">${recent.length ? recent.map(badge => `<div class="badge earned"><b>${html(badge.name)}</b><small>${html(badge.hint)}</small></div>`).join('') : '<p class="empty">Aucun trophée pour le moment.</p>'}</div>`;
+    const trophies = `<section class="overview-trophies settings-card"><div class="settings-row"><h3>Trophées récents</h3><button class="button secondary" data-tab="badges">Tout voir</button></div><div class="badge-grid">${recent.length ? recent.map(badge => `<div class="badge earned"><b>${html(badge.name)}</b><small>${html(badge.hint)}</small></div>`).join('') : '<p class="empty">Aucun trophée pour le moment.</p>'}</div></section>`;
+    return `<div class="overview-grid has-hero"><div class="avatar-hero" data-hero data-hero-id="${html(info.profile.user_id)}"><span class="hero-fallback">${avatarMarkup(info.profile, { cls: 'avatar-3d', kind: 'full', userId: info.profile.user_id, label: `Avatar de ${info.profile.nickname}` })}</span><div class="hero-actions"><button class="button secondary" data-hero-celebrate>Célébrer</button>${info.self ? '<button class="button secondary" data-tab="avatar">Personnaliser</button>' : ''}</div></div><div class="overview-card">${cardHtml(info)}<div class="card-actions">${info.self ? '<button class="button secondary" data-share-card>Partager ma carte</button>' : (getState().profile ? '<button class="button secondary" data-compare>' + (compare ? 'Masquer la comparaison' : 'Comparer avec moi') + '</button>' : '')}</div></div><div class="overview-side">${trophies}<div class="key-numbers">${key('Rang du groupe', standing ? `${standing.rank}e` : '-')}${key('Points de ligue', standing ? Number(standing.points).toFixed(1) : '-')}${key('Paris réglés (saison)', Number(stats.bets) || 0)}${key('ROI (saison)', `${Number(stats.roi) >= 0 ? '+' : ''}${Number(stats.roi || 0).toFixed(1)} %`)}</div><div class="form-line"><small>Forme sur les ${info.self ? 10 : 5} derniers pronos</small><span>${form ? form.split('').map(letter => `<i class="fd ${letter === 'V' ? 'V' : letter === 'N' ? 'N' : 'D'}">${letter}</i>`).join('') : '<em>Pas encore de pronos réglés</em>'}</span></div>${info.self && deps.race?.() ? `<p class="league-race">${deps.race()}</p>` : ''}<div class="radar-box">${radar(info.raw, info.profile.nickname)}</div></div></div>${historySummary}${compare && info.own?.seasons ? seasonsCompare(info) : ''}`;
   }
   function seasons(info) {
     const rows = info.seasons.slice().reverse();
@@ -89,12 +91,12 @@ export function initProfilePage(deps) {
   }
   function account(info) {
     const profile = info.profile, state = getState();
-    return `<div class="account-settings"><form data-form="nickname" class="settings-card"><h3>Pseudo</h3><p class="muted">Modifiable une fois par mois. Votre pseudo est unique.</p><div class="settings-row"><input name="nickname" value="${html(profile.nickname)}" minlength="3" maxlength="24" pattern="[A-Za-zÀ-ÿ0-9_. -]{3,24}" required aria-label="Pseudo"><button class="button secondary">Changer</button></div></form>
+    return `<div class="account-settings"><header class="account-intro"><span class="account-eyebrow">ESPACE PERSONNEL</span><h3>Votre compte.<br>Vos règles du jeu.</h3><p>Une identité qui vous ressemble, une visibilité que vous maîtrisez.</p><div class="account-status"><span>✓ Mises et bankroll toujours privées</span><span>✓ Données exportables à tout moment</span></div></header><section class="account-group" aria-labelledby="account-identity"><div class="account-group-title"><span>01</span><div><h3 id="account-identity">Identité et sécurité</h3><p>Les clés de votre espace BetOptimum.</p></div></div><form data-form="nickname" class="settings-card"><h3>Pseudo</h3><p class="muted">Modifiable une fois par mois. Votre pseudo est unique.</p><div class="settings-row"><input name="nickname" value="${html(profile.nickname)}" minlength="3" maxlength="24" pattern="[A-Za-zÀ-ÿ0-9_. -]{3,24}" required aria-label="Pseudo"><button class="button secondary">Changer</button></div></form>
 <form data-form="email" class="settings-card"><h3>Adresse email</h3><p class="muted">Un lien de confirmation est envoyé à la nouvelle adresse.</p><div class="settings-row"><input name="email" type="email" placeholder="nouvelle@adresse.fr" required autocomplete="email" aria-label="Nouvelle adresse email"><button class="button secondary">Modifier</button></div></form>
 <form data-form="password" class="settings-card"><h3>Mot de passe</h3><div class="settings-row"><input name="password" type="password" minlength="8" placeholder="Nouveau mot de passe (8 caractères)" required autocomplete="new-password" aria-label="Nouveau mot de passe"><button class="button secondary">Modifier</button></div></form>
-<div class="settings-card"><h3>Confidentialité</h3><label class="switch-line"><input type="checkbox" data-setting="is_public" ${profile.is_public ? 'checked' : ''}><span><b>Profil public</b><small>Les autres joueurs voient votre profil, votre carte et vos trophées. Votre pseudo et vos résultats restent visibles dans les classements.</small></span></label><label class="switch-line"><input type="checkbox" data-setting="show_bets" ${profile.show_bets ? 'checked' : ''}><span><b>Détail de mes paris visible</b><small>Sélections, cotes et résultats, jamais les mises ni la bankroll.</small></span></label></div>
-<section class="settings-card" data-newsletter><h3>Newsletter BetOptimum</h3><p>Chargement de votre inscription…</p></section><div class="settings-card"><h3>Mes données</h3><p class="muted">Téléchargez toutes vos données (profil, paris, ligues, XP, jetons) au format JSON.</p><button class="button secondary" data-export>Exporter mes données</button></div>
-<form data-form="delete" class="settings-card danger"><h3>Supprimer mon compte</h3><p class="muted">Définitif : votre profil, vos paris, vos classements, votre XP et vos jetons sont effacés. Saisissez votre pseudo <b>${html(profile.nickname)}</b> pour confirmer.</p><div class="settings-row"><input name="confirm" placeholder="Votre pseudo" required aria-label="Confirmation par le pseudo" autocomplete="off"><button class="button danger">Supprimer définitivement</button></div></form></div>`;
+</section><section class="account-group" aria-labelledby="account-visibility"><div class="account-group-title"><span>02</span><div><h3 id="account-visibility">Votre visibilité au Club</h3><p>Choisissez ce que les autres joueurs peuvent découvrir.</p></div></div><div class="settings-card"><h3>Confidentialité</h3><label class="switch-line"><input type="checkbox" data-setting="is_public" ${profile.is_public ? 'checked' : ''}><span><b>Profil public</b><small>Les autres joueurs voient votre profil, votre carte et vos trophées. Votre pseudo et vos résultats restent visibles dans les classements.</small></span></label><label class="switch-line"><input type="checkbox" data-setting="show_bets" ${profile.show_bets ? 'checked' : ''}><span><b>Détail de mes paris visible</b><small>Sélections, cotes et résultats, jamais les mises ni la bankroll.</small></span></label></div>
+</section><section class="account-group" aria-labelledby="account-data"><div class="account-group-title"><span>03</span><div><h3 id="account-data">Préférences et données</h3><p>Gardez la main sur vos communications et votre historique.</p></div></div><section class="settings-card" data-newsletter><h3>Newsletter BetOptimum</h3><p>Chargement de votre inscription…</p></section><div class="settings-card"><h3>Mes données</h3><p class="muted">Téléchargez toutes vos données (profil, paris, ligues, XP, jetons) au format JSON.</p><button class="button secondary" data-export>Exporter mes données</button></div>
+</section><section class="account-group account-danger" aria-labelledby="account-danger"><div class="account-group-title"><span>!</span><div><h3 id="account-danger">Zone sensible</h3><p>La suppression du compte est irréversible.</p></div></div><form data-form="delete" class="settings-card danger"><h3>Supprimer mon compte</h3><p class="muted">Définitif : votre profil, vos paris, vos classements, votre XP et vos jetons sont effacés. Saisissez votre pseudo <b>${html(profile.nickname)}</b> pour confirmer.</p><div class="settings-row"><input name="confirm" placeholder="Votre pseudo" required aria-label="Confirmation par le pseudo" autocomplete="off"><button class="button danger">Supprimer définitivement</button></div></form></section><p class="settings-feedback" role="status" aria-live="polite"></p></div>`;
   }
   function avatarTab() { return '<div class="avatar-studio-slot" data-studio></div>'; }
 
@@ -123,6 +125,19 @@ export function initProfilePage(deps) {
     studio = handle;
   }
 
+  function connectionPanel() {
+    if (!connections) return '';
+    const title = connections.kind === 'followers' ? 'Abonnés' : 'Abonnements';
+    return `<section class="connections-panel settings-card" aria-label="${title}" aria-live="polite"><p class="muted">Les profils privés sont masqués dans les listes.</p><div class="settings-row"><h3>${title}</h3><button class="button secondary" data-close-connections>Fermer la liste</button></div>${connections.loading ? '<p>Chargement…</p>' : connections.error ? '<p>Impossible de charger la liste.</p><button class="button secondary" data-connections="' + connections.kind + '">Réessayer</button>' : `<ul>${connections.rows.map(person => `<li><a href="#joueur-${encodeURIComponent(person.nickname)}">${html(person.nickname)}</a></li>`).join('')}</ul>${connections.rows.length ? '' : '<p class="empty">' + (connections.kind === 'followers' ? 'Aucun abonné pour le moment.' : 'Aucun abonnement pour le moment.') + '</p>'}${connections.more ? '<button class="button secondary" data-more-connections>Voir la suite</button>' : ''}`}</section>`;
+  }
+  async function loadConnections(kind, more = false) {
+    const mine = ++connectionsRequest, current = data;
+    const previous = more ? connections.rows : [];
+    connections = { kind, rows: previous, loading: true }; render();
+    try { const result = await accountApi.community.connections(current.profile.user_id, kind, previous.length); if (mine !== connectionsRequest || current !== data) return; connections = { kind, rows: [...previous, ...result.rows], more: result.more }; }
+    catch { if (mine !== connectionsRequest || current !== data) return; connections = { kind, rows: [], error: true }; }
+    render(); root.querySelector('[data-close-connections]')?.focus();
+  }
   function render() {
     cleanup();
     if (!data) { root.innerHTML = '<p class="empty">Chargement du profil…</p>'; return; }
@@ -130,27 +145,33 @@ export function initProfilePage(deps) {
     if (data.missing) { root.innerHTML = '<p class="empty">Ce joueur n’existe pas.</p><button class="button secondary" data-back-home>Retour</button>'; return; }
     if (data.private) { root.innerHTML = `<div class="profile-private"><h2>${html(data.profile.nickname)}</h2><p class="empty">Ce profil est privé.</p><button class="button secondary" data-back-home>Retour à la communauté</button></div>`; return; }
     const info = data, level = levelInfo(info.xp), crest = clubCrest(info.profile), visibleTabs = TABS.filter(([, , own]) => !own || info.self);
+    if (!visibleTabs.some(([id]) => id === tab)) tab = 'overview';
     const body = { overview, seasons, badges, bets, avatar: avatarTab, notifications: () => '<div data-notifications></div>', account }[tab](info);
-    root.innerHTML = `<header class="profile-header" style="--banner:${color(info.echelon)}"><div class="profile-banner"></div><div class="profile-id">${avatarMarkup(info.profile, { cls: 'avatar-3d', userId: info.profile.user_id })}<div class="profile-title"><h2>${html(info.profile.nickname)}</h2>${info.equipped?.title ? `<small class="profile-subtitle">${html(info.equipped.title.asset ?? info.equipped.title.name)}</small>` : ''}<div class="profile-badges">${divisionBadge(info.echelon)}<span class="level-chip">${level.level}</span><b>${level.title}</b>${crest ? `<img class="profile-crest" src="${crest}" alt="${html(info.profile.heart_club_name ?? 'Club de cœur')}" width="26" height="26">` : ''}</div><small>Membre depuis le ${dateLabel(info.profile.joined_at)}${info.followers != null ? ` · ${info.followers} abonné${info.followers > 1 ? 's' : ''}` : ''}</small></div><div class="profile-actions">${info.self ? '<button class="button secondary" data-share-card>Partager ma carte</button><button class="button secondary" data-tab="account">Modifier le profil</button>' : (deps.extraActions?.(info) ?? '')}</div></div></header><div class="profile-tabs" role="tablist">${visibleTabs.map(([id, label]) => `<button role="tab" id="ptab-${id}" aria-selected="${tab === id}" data-tab="${id}">${label}</button>`).join('')}</div><div class="profile-body" role="tabpanel">${body}</div>`;
+    root.innerHTML = `<header class="profile-header" style="--banner:${color(info.echelon)}"><div class="profile-banner"></div><div class="profile-id">${avatarMarkup(info.profile, { cls: 'avatar-3d', userId: info.profile.user_id })}<div class="profile-title"><h2>${html(info.profile.nickname)}</h2>${info.equipped?.title ? `<small class="profile-subtitle">${html(info.equipped.title.asset ?? info.equipped.title.name)}</small>` : ''}<div class="profile-badges">${divisionBadge(info.echelon)}<span class="level-chip">${level.level}</span><b>${level.title}</b>${crest ? `<img class="profile-crest" src="${crest}" alt="${html(info.profile.heart_club_name ?? 'Club de cœur')}" width="26" height="26">` : ''}</div><small>Membre depuis le ${dateLabel(info.profile.joined_at)}</small><div class="profile-connections">${['followers', 'following'].map(kind => `<button class="button secondary" data-connections="${kind}"><b>${info.connections?.[kind] ?? '?'}</b> ${kind === 'followers' ? 'Abonné' : 'Abonnement'}${info.connections?.[kind] === 1 ? '' : 's'}</button>`).join('')}</div></div><div class="profile-actions">${info.self ? '<button class="button secondary" data-share-card>Partager ma carte</button><button class="button secondary" data-tab="account">Modifier le profil</button>' : (deps.extraActions?.(info) ?? '')}</div></div></header><div class="profile-tabs" role="tablist">${visibleTabs.map(([id, label]) => `<button role="tab" id="ptab-${id}" aria-selected="${tab === id}" data-tab="${id}">${label}</button>`).join('')}</div>${connectionPanel()}<div class="profile-body" role="tabpanel">${body}</div>`;
     if (tab === 'notifications' && info.self) { const mine = mountToken; import('./notification-page.js').then(async ({ mountNotifications }) => { if (mine !== mountToken) return; const handle = await mountNotifications(root.querySelector('[data-notifications]'), { api: accountApi.notifications, html, toast, getState }); if (mine !== mountToken) handle.destroy(); else notifications = handle; }).catch(() => { if (mine === mountToken) root.querySelector('[data-notifications]').textContent = 'Les alertes sont indisponibles.'; }); }
     if (tab === 'account' && info.self) { const mine=mountToken; import('./newsletter.js').then(({mountNewsletter})=>{if(mine===mountToken)return mountNewsletter(root.querySelector('[data-newsletter]'),{api:accountApi.newsletter,html,toast});}).catch(()=>{if(mine===mountToken)root.querySelector('[data-newsletter]').textContent='La newsletter est momentanément indisponible.';}); }
     if (tab === 'overview') mountHero(info); else if (tab === 'avatar' && info.self) mountStudioTab(info);
   }
 
   async function show(next) {
-    target = next; const mine = ++token; tab = next.tab ?? 'overview'; compare = null; data = null; render();
+    connections = null; connectionsRequest++; target = next; const mine = ++token; tab = next.tab ?? 'overview'; compare = null; data = null; render();
     try {
       const result = await accountApi.loadPlayer(next.self ? { self: true } : { nickname: next.nickname });
       if (mine !== token) return;
       data = result ?? { missing: true };
-      if (data.profile && !data.private && !data.missing && !data.self && getState().profile) { try { const own = await accountApi.loadPlayer({ self: true }); compare = null; data.own = own; } catch { /* comparaison indisponible */ } }
-      if (data.self === false && deps.followers) data.followers = await deps.followers(data.profile.user_id);
-      if (data.self && deps.followers) data.followers = await deps.followers(data.profile.user_id);
+      const loaded = data;
+      if (data.profile && !data.private && !data.missing && !data.self && getState().profile) { try { const own = await accountApi.loadPlayer({ self: true }); if (mine !== token) return; compare = null; loaded.own = own; } catch { /* comparaison indisponible */ } }
+      if (data.profile && !data.private && !data.missing) { const current = data; try { const counts = await accountApi.community.connections(data.profile.user_id); if (mine !== token) return; current.connections = counts; } catch { /* Compteurs indisponibles : ne pas afficher un faux zéro. */ } }
+      if (mine !== token) return;
     } catch (error) { if (mine === token) data = { failed: error?.code === 'SCHEMA' ? error.message : 'Le profil n’a pas pu être chargé. Vérifiez votre connexion puis réessayez.' }; console.warn('Profil indisponible', error?.message); }
-    render();
+    if (mine === token) render();
   }
 
   root.addEventListener('click', async event => {
+    const connectionButton = event.target.closest('[data-connections]');
+    if (connectionButton) { loadConnections(connectionButton.dataset.connections); return; }
+    if (event.target.closest('[data-more-connections]')) { loadConnections(connections.kind, true); return; }
+    if (event.target.closest('[data-close-connections]')) { const kind = connections.kind; connections = null; connectionsRequest++; render(); root.querySelector(`[data-connections="${kind}"]`)?.focus(); return; }
     if (event.target.closest('[data-reload-profile]')) { show(target); return; }
     const tabButton = event.target.closest('[data-tab]');
     if (tabButton) { tab = tabButton.dataset.tab; render(); root.querySelector(`#ptab-${tab}`)?.focus(); return; }
@@ -166,22 +187,28 @@ export function initProfilePage(deps) {
     }
     deps.onClick?.(event, { data, show: () => show(target) });
   });
+  function settingsFeedback(message, failed = false) {
+    const host = root.querySelector('.settings-feedback');
+    if (host) { host.textContent = message; host.classList.toggle('failed', failed); }
+    toast(message);
+  }
   root.addEventListener('change', async event => {
     const setting = event.target.closest('[data-setting]');
     if (!setting) return;
-    try { await accountApi.updateSettings({ [setting.dataset.setting]: setting.checked }); data.profile[setting.dataset.setting] = setting.checked; toast('Préférence enregistrée'); } catch (error) { setting.checked = !setting.checked; toast(error.message); }
+    const current = data, checked = setting.checked; setting.disabled = true;
+    try { await accountApi.updateSettings({ [setting.dataset.setting]: checked }); current.profile[setting.dataset.setting] = checked; if (current === data) settingsFeedback('Préférence enregistrée'); } catch (error) { setting.checked = !checked; if (current === data) settingsFeedback(error.message, true); } finally { setting.disabled = false; }
   });
   root.addEventListener('submit', async event => {
     event.preventDefault();
     const form = event.target.closest('[data-form]'), values = Object.fromEntries(new FormData(form)), kind = form.dataset.form, button = form.querySelector('button');
-    button.disabled = true;
+    button.disabled = true; form.setAttribute('aria-busy', 'true');
     try {
-      if (kind === 'nickname') { const nickname = await accountApi.changeNickname(String(values.nickname).trim()); getState().profile.nickname = nickname; data.profile.nickname = nickname; deps.onNickname?.(nickname); toast('Pseudo modifié'); render(); }
-      else if (kind === 'email') { await accountApi.updateEmail(String(values.email).trim()); form.reset(); toast('Lien de confirmation envoyé à la nouvelle adresse'); }
-      else if (kind === 'password') { await accountApi.auth.updatePassword(String(values.password)); form.reset(); toast('Mot de passe modifié'); }
+      if (kind === 'nickname') { const nickname = await accountApi.changeNickname(String(values.nickname).trim()); getState().profile.nickname = nickname; data.profile.nickname = nickname; deps.onNickname?.(nickname); render(); settingsFeedback('Pseudo modifié'); }
+      else if (kind === 'email') { await accountApi.updateEmail(String(values.email).trim()); form.reset(); settingsFeedback('Lien de confirmation envoyé à la nouvelle adresse'); }
+      else if (kind === 'password') { await accountApi.auth.updatePassword(String(values.password)); form.reset(); settingsFeedback('Mot de passe modifié'); }
       else if (kind === 'delete') { await accountApi.deleteAccount(String(values.confirm)); toast('Votre compte a été supprimé'); onLoggedOut(); }
-    } catch (error) { toast(error.message); }
-    button.disabled = false;
+    } catch (error) { settingsFeedback(error.message, true); }
+    button.disabled = false; form.removeAttribute('aria-busy');
   });
   return { show, refresh: () => target && show(target), stop: cleanup };
 }
