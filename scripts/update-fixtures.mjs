@@ -1,5 +1,5 @@
 import {regulationScore} from '../regulation-score.js';
-import {marketKeys} from '../markets.js';
+import {marketKeys,LEGACY_MARKETS,STAGE_ONE} from '../markets.js';
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { parisDate, pickDailyChallenge, recommendedMarket } from '../model.js';
 import { ODDS_REFRESH_HOURS, SECONDARY_ODDS_WINDOW_HOURS, mergeCachedOffers, summarizeOffers } from '../odds-cache.js';
@@ -87,9 +87,10 @@ function teamForm(team, history) {
 }
 
 function consensus(currentOffers = [], previousOffers = []) {
-  const mergedOffers = mergeCachedOffers(currentOffers, previousOffers);
+  const stage=Number(process.env.PROPLINE_MARKET_STAGE??0),keys=marketKeys(Object.assign({},...currentOffers,...previousOffers)).filter(key=>LEGACY_MARKETS.includes(key)||stage>=2||(stage===1&&STAGE_ONE.includes(key)));
+  const mergedOffers = mergeCachedOffers(currentOffers, previousOffers,keys);
   if (!mergedOffers.length) return null;
-  const summary=summarizeOffers(mergedOffers);
+  const summary=summarizeOffers(mergedOffers,keys);
   return { offers:mergedOffers, counts:summary.counts, cachedMarkets:summary.cachedMarkets, ...summary.averages };
 }
 

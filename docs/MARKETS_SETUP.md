@@ -25,3 +25,9 @@ Les cartes gardent les cinq choix essentiels visibles. Les choix supplémentaire
 `npm test`, `node scripts/prepare-pages.mjs`, puis `PGLITE_MODULE=… node scripts/check-markets-sql.mjs` pour la recette SQL isolée. Tester à 320 et 1280 px : ouverture des familles, sélection, conservation lors d’une nouvelle sélection, comparaison horizontale et absence de débordement de la page. Vérifier dans le diagnostic réel les lignes exactes, les variantes régionales et les moyennes. Le contrôle du compte fournisseur peut refuser certains nouveaux marchés : garder alors l’étape précédente active.
 
 Après prolongation ou tirs au but, les nouveaux marchés utilisent seulement les deux premières périodes ESPN. Si ces scores manquent, leur règlement attend une vérification ; il ne reprend pas le score final. Le champ `fixtures.regulation` conserve cette information. Les cinq marchés historiques conservent leur traitement existant.
+
+## Validation réelle du 2 novembre 2026
+
+Étape 1 : [diagnostic réussi](https://github.com/Patfoort47-gif/BetOptimum/actions/runs/41434367481), 13 rencontres, quatre compétitions, plusieurs bookmakers sur chaque sélection supplémentaire.
+
+Étape 2 : [diagnostic réussi](https://github.com/Patfoort47-gif/BetOptimum/actions/runs/41434955697), doubles chances et remboursé si nul confirmés sur 13 rencontres de quatre compétitions. Aucune ligne `team_totals` renvoyée dans ces réponses : les totaux par équipe restent absents de la collecte réelle observée. Le parseur et le règlement sont testés avec des données simulées ; leur couverture réelle reste à vérifier lorsqu’une ligne est fournie.

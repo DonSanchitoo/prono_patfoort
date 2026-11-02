@@ -23,7 +23,7 @@ export function propLineOffers(event,now=Date.now(),stage=0){
     const identity=BOOKS[book.key]??{key:book.key,name:book.title??book.key};
     const offer={...identity};
     for(const market of book.markets??[]){
-      if(market.period||(market.team&&market.key!=='team_totals'))continue;
+      if(market.suspended_at||market.period||(market.team&&market.key!=='team_totals'))continue;
       const updated=Date.parse(market.last_update);
       if(!Number.isFinite(updated)||updated>now+60000||now-updated>60*60000)continue;
       for(const outcome of market.outcomes??[]){
@@ -61,7 +61,7 @@ export function supplementOffers(primary,extra){
   return offers;
 }
 export async function collectPropLine(matches,leagueSports,{key=process.env.PROPLINE_API_KEY,fetchImpl=fetch,now=Date.now(),maxRequests=8,stage=Number(process.env.PROPLINE_MARKET_STAGE??0)}={}){
-  const result={offersByMatch:new Map(),requested:0,succeeded:0,failures:[]};if(!key){result.failures.push('PropLine : secret PROPLINE_API_KEY absent');return result;}
+  const result={offersByMatch:new Map(),requested:0,succeeded:0,failures:[]};if(![0,1,2].includes(stage)){result.failures.push('PropLine : étape de marchés invalide');return result}if(!key){result.failures.push('PropLine : secret PROPLINE_API_KEY absent');return result;}
   const eligible=matches.filter(match=>!match.completed&&Date.parse(match.kickoff)>now&&Date.parse(match.kickoff)<=now+7*86400000&&!match.voided&&leagueSports[match.league]);
   for(const sport of [...new Set(eligible.map(match=>leagueSports[match.league]))]){
     if(result.requested>=maxRequests){result.failures.push('PropLine : budget de requêtes atteint');break}

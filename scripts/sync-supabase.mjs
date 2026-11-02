@@ -73,7 +73,7 @@ export async function settleDailyPicks(admin, results) {
 }
 export async function loadResults(admin, settlements, now = Date.now()) {
   const since = new Date(now - 60 * 864e5).toISOString();
-  return buildResults(settlements, await admin.select('fixtures', `kickoff=gte.${since}&select=id,home,away,kickoff,completed,voided,home_score,away_score&limit=5000`), now);
+  return buildResults(settlements, await admin.select('fixtures', `kickoff=gte.${since}&select=id,home,away,kickoff,completed,voided,home_score,away_score,regulation&limit=5000`), now);
 }
 // Value bets gagnés : paris simples dont la cote dépassait de plus de 3 % la probabilité du modèle au moment du règlement.
 export function valueBetIds(decisions, bets, matches) {
