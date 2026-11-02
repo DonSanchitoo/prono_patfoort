@@ -12,7 +12,7 @@ BetOptimum : application web **statique** (HTML + JS vanilla en module ES, sans 
 npm start          # python3 -m http.server 4173 → http://localhost:4173
 npm test           # node --test (exécute tests/app.test.js, tests/club.test.js, tests/league.test.js, tests/special.test.js, tests/rewards.test.js, tests/auth-model.test.js, tests/community.test.js, tests/shop.test.js et tests/avatar.test.js)
 node --test --test-name-pattern="combiné" tests/app.test.js   # un seul test (filtre sur le nom)
-node scripts/update-fixtures.mjs   # régénère data/fixtures.json (requiert FOOTBALL_DATA_TOKEN et THE_ODDS_API_KEY, sinon données partielles)
+node scripts/update-fixtures.mjs   # régénère data/fixtures.json (requiert FOOTBALL_DATA_TOKEN et PROPLINE_API_KEY, sinon données partielles)
 node scripts/update-results.mjs    # met à jour uniquement les scores ESPN (sans clé)
 ```
 
@@ -69,7 +69,7 @@ Les paris des joueurs connectés sont **enregistrés et réglés côté serveur*
 
 ## Contraintes
 
-- Les secrets `FOOTBALL_DATA_TOKEN`, `THE_ODDS_API_KEY` et `SUPABASE_SERVICE_ROLE_KEY` n'existent que dans GitHub Actions ; rien ne doit les exposer dans `data/fixtures.json` ni côté navigateur.
+- Les secrets `FOOTBALL_DATA_TOKEN`, `PROPLINE_API_KEY` et `SUPABASE_SERVICE_ROLE_KEY` n'existent que dans GitHub Actions ; rien ne doit les exposer dans `data/fixtures.json` ni côté navigateur.
 - Les marchés +2,5 buts et BTTS sont souvent des estimations internes ; l'interface distingue cotes réelles (« MOYENNE · n bookmakers ») et estimées. Conserver cette distinction et les mentions « paris virtuels / 18+ / aucune garantie ».
 - Les pages Confidentialité et Mentions légales (fenêtres en bas de `index.html`) décrivent les données réellement collectées et les services tiers contactés (Supabase et son stockage d'images d'avatar, Google Fonts, ESPN, jsDelivr pour le client Supabase et Three.js) : les mettre à jour à chaque nouveau service ou nouvelle donnée.
 - Pas de tiret cadratin (—) ni demi-cadratin (–) dans les textes affichés : utiliser « · », « : » ou « - ».
