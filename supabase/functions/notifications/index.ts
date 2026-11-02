@@ -35,20 +35,15 @@ async function worker(matches:unknown[],generatedAt:string|null) {
  for(const p of prefs){const plan=plans.find((l:any)=>l.id===(entitlements.find((e:any)=>e.user_id===p.user_id)?.plan??'free'));if(!plan)continue;
   const briefing=planBriefing(matches,p);
   if(briefing&&await db('rpc/enqueue_notification_briefing','POST',{p_user:p.user_id,p_event:briefing}))queued++;
-  for(const event of detectAlerts(matches,{...p,channels:p.channels.filter((c:string)=>c!=='email')},plan)) if(await db('rpc/enqueue_notification','POST',{p_user:p.user_id,p_key:event.key,p_event:event,p_due:event.due_at}))queued++;
+  for(const event of detectAlerts(matches,{...p,channels:p.channels.filter((c:string)=>!['email','web'].includes(c))},plan)) if(await db('rpc/enqueue_notification','POST',{p_user:p.user_id,p_key:event.key,p_event:event,p_due:event.due_at}))queued++;
  }
  const deliveries=await db('rpc/claim_notification_deliveries','POST',{});let sent=0;
- let webSender=null;
  for(const delivery of deliveries){
   try {
    // Relit le consentement juste avant l’appel au fournisseur, même après la réservation de la file.
    const [p]=await db(`notification_preferences?user_id=eq.${delivery.user_id}&enabled=eq.true&select=*`),[e]=await db(`notification_endpoints?user_id=eq.${delivery.user_id}&channel=eq.${delivery.channel}&select=encrypted`),[event]=await db(`notification_events?id=eq.${delivery.event_id}&select=payload`);
    if(!p?.channels.includes(delivery.channel)||!e){await db(`notification_deliveries?id=eq.${delivery.id}`,'PATCH',{status:'cancelled'});continue;}
-   // Initialisation seulement pour une livraison web : un VAPID invalide n’arrête pas les autres canaux.
-   if(delivery.channel==='web'&&!webSender&&env.VAPID_PUBLIC_KEY&&env.VAPID_PRIVATE_KEY&&env.VAPID_SUBJECT){
-    try {const {default:webpush}=await import('npm:web-push@3.6.7');webpush.setVapidDetails(env.VAPID_SUBJECT,env.VAPID_PUBLIC_KEY,env.VAPID_PRIVATE_KEY);webSender=(target:any,payload:string)=>webpush.sendNotification(target,payload,{TTL:300,timeout:10000});}
-    catch {reportNotificationFailure(new NotificationFailure('web-push','WEB_PUSH_SETUP'),crypto.randomUUID());await db(`notification_deliveries?id=eq.${delivery.id}&status=eq.sending`,'PATCH',{status:'failed',error:'Configuration Web Push invalide'});continue;}
-   }
+   if(delivery.channel==='web'){await db(`notification_deliveries?id=eq.${delivery.id}`,'PATCH',{status:'cancelled'});continue;}
    const target=await unseal(e.encrypted,env.NOTIFICATION_ENCRYPTION_KEY);
    let payload=event.payload;
    if(delivery.channel==='email'&&!payload.briefing&&!payload.test_channel){await db(`notification_deliveries?id=eq.${delivery.id}`,'PATCH',{status:'cancelled'});continue;}
@@ -67,7 +62,7 @@ async function worker(matches:unknown[],generatedAt:string|null) {
     const [latest]=await db(`notification_preferences?user_id=eq.${delivery.user_id}&enabled=eq.true&select=*`);
     if(!latest?.channels.includes('email')||latest.updated_at!==p.updated_at||Date.parse(payload.kickoff)<=Date.now()){await db(`notification_deliveries?id=eq.${delivery.id}`,'PATCH',{status:'cancelled'});continue;}
    }
-   const result=await deliver(delivery.channel,target,payload,delivery.id,env,fetch,webSender);
+   const result=await deliver(delivery.channel,target,payload,delivery.id,env,fetch);
    const status=result.status==='pending'&&delivery.attempts>=4?'failed':result.status;
    await db(`notification_deliveries?id=eq.${delivery.id}&status=eq.sending`,'PATCH',{status,error:result.error??null,...(status==='sent'?{sent_at:new Date().toISOString()}:{}),...(status==='pending'?{due_at:new Date(Date.now()+(result.retry??300)*1000).toISOString()}: {})});
    if(result.expired)await db(`notification_endpoints?user_id=eq.${delivery.user_id}&channel=eq.${delivery.channel}`,'DELETE');if(status==='sent')sent++;
@@ -110,13 +105,13 @@ Deno.serve(async request=>{
   }
   if(body.action==='connect'){
    const channel=body.channel;
-   if(!['web','discord','email'].includes(channel))return json({error:'Canal invalide'},400);
+   if(!['discord','email'].includes(channel))return json({error:'Canal invalide'},400);
    if(!config.available[channel])return json({error:'Canal non configuré'},503);
    if(channel==='email'&&!user.email_confirmed_at)return json({error:'Confirmez votre adresse email'},400);
    await endpoint(uid,channel,channel==='email'?{email:user.email}:body.destination);return json({ok:true});
   }
   if(body.action==='test'){
-   if(!['web','telegram','discord','email'].includes(body.channel))return json({error:'Canal invalide'},400);
+   if(!['telegram','discord','email'].includes(body.channel))return json({error:'Canal invalide'},400);
    if(!config.available[body.channel])return json({error:'Canal non configuré'},503);
    // Le test utilise la même file et les mêmes limites que les alertes.
    const event={match_id:'test',home:'Test',away:'BetOptimum',label:'Vos alertes fonctionnent',odd:2,bookmaker:'Démonstration',value:.1,confidence:.6,movement:0,kickoff:new Date(Date.now()+864e5).toISOString(),test_channel:body.channel};
