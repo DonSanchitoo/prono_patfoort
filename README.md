@@ -24,9 +24,9 @@ Sans compte, les données utilisateur restent dans `localStorage`. Avec un compt
 
 ## Données sportives
 
-Le workflow `Actualiser les matchs` consolide chaque jour les calendriers ESPN, les résultats historiques de football-data.org et les cotes de The Odds API. Il enregistre les sept prochains jours dans `data/fixtures.json`, puis republie GitHub Pages. Toutes les cotes 1N2, Over 2,5 et BTTS sont rafraîchies ensemble à 7 h, 14 h et 19 h, heure de Paris, sans appel nocturne. Les marchés Over 2,5 et BTTS couvrent les rencontres des prochaines 48 heures dans les régions Europe et Royaume-Uni. Lorsqu’un bookmaker ne renvoie temporairement plus l’un de ces marchés, sa dernière cote réelle est conservée en cache. Les autres valeurs restent des estimations internes clairement identifiées.
+Le workflow `Actualiser les matchs` consolide chaque jour les calendriers ESPN, les résultats historiques de football-data.org et les cotes de PropLine. Il enregistre les sept prochains jours dans `data/fixtures.json`, puis republie GitHub Pages. Toutes les cotes 1N2, Over 2,5 et BTTS sont rafraîchies ensemble à 6 h et 14 h, heure de Paris, sans appel nocturne. Les marchés Over 2,5 et BTTS couvrent les rencontres des prochaines 48 heures chez les bookmakers disponibles. Lorsqu’un bookmaker ne renvoie temporairement plus l’un de ces marchés, sa dernière cote réelle est conservée en cache. Les autres valeurs restent des estimations internes clairement identifiées.
 
-Deux secrets GitHub Actions sont requis : `FOOTBALL_DATA_TOKEN` et `THE_ODDS_API_KEY`. Ils ne sont jamais envoyés au navigateur ni écrits dans les données publiées.
+Deux secrets GitHub Actions sont requis : `FOOTBALL_DATA_TOKEN`. Ils ne sont jamais envoyés au navigateur ni écrits dans les données publiées.
 
 Les scores ESPN des sept derniers jours sont également conservés dans le flux. À chaque chargement, les paris virtuels en attente sont réglés automatiquement : la mise est débitée au placement, un ticket gagnant crédite `mise × cote`, et un ticket perdant ne crédite aucun retour. Un ticket ne peut être réglé qu’une seule fois.
 

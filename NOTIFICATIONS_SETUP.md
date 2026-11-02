@@ -9,7 +9,7 @@ L’interface est dans Mon profil > Mes alertes. Aucun canal n’est actif par d
 3. Configurer dans les secrets Edge : `SITE_URL` (URL HTTPS complète du site, avec son sous-répertoire et son `/` final), `NOTIFICATION_ENCRYPTION_KEY` (32 octets aléatoires encodés en base64), `NOTIFICATION_WORKER_SECRET` (au moins 32 octets aléatoires). `SUPABASE_URL` et `SUPABASE_SERVICE_ROLE_KEY` sont fournis par Supabase à la fonction. Aucune de ces valeurs ne doit être copiée dans le front ni dans Git.
 4. Ajouter `NOTIFICATION_WORKER_SECRET` aux secrets GitHub Actions et vérifier `SUPABASE_URL`. Le workflow `notifications.yml` traite la file toutes les cinq minutes et après la collecte des matchs. Sans secret, il ne fait aucun envoi. Il ne contacte pas le fournisseur de cotes : les données de `fixtures.json` de moins de 24 h alimentent la détection. Une file déjà constituée continue à être traitée sans nouvelle détection.
 
-Le rythme des cotes reste 7 h, 14 h et 19 h à Paris, pour les deux formules. La priorité premium ordonne la file ; elle ne promet pas des cotes collectées plus vite. Une planification GitHub Actions peut être retardée et ne constitue pas une garantie de temps réel.
+Le rythme des cotes reste 6 h et 14 h à Paris, pour les deux formules. La priorité premium ordonne la file ; elle ne promet pas des cotes collectées plus vite. Une planification GitHub Actions peut être retardée et ne constitue pas une garantie de temps réel.
 
 ## Canaux
 
