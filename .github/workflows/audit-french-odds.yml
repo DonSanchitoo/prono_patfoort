@@ -1,6 +1,12 @@
 name: Diagnostiquer les marchés des bookmakers français
 on:
   workflow_dispatch:
+    inputs:
+      stage:
+        description: 'Étape de diagnostic uniquement (0, 1 ou 2)'
+        default: '0'
+        type: choice
+        options: ['0', '1', '2']
 permissions:
   contents: read
 jobs:
@@ -14,6 +20,7 @@ jobs:
           node-version: 20
       - name: Comparer les marchés fournisseur et les cotes explicites
         env:
+          PROPLINE_MARKET_STAGE: ${{ inputs.stage }}
           PROPLINE_API_KEY: ${{ secrets.PROPLINE_API_KEY }}
         run: node scripts/check-propline.mjs
       - uses: actions/upload-artifact@v4

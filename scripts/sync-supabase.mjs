@@ -1,3 +1,4 @@
+import {marketKeys} from '../markets.js';
 // Synchronise les matchs avec Supabase puis règle les paris certifiés en attente (BET-52).
 // Lancé par les workflows après la mise à jour de data/fixtures.json ; sans SUPABASE_SERVICE_ROLE_KEY il ne fait rien.
 import { readFile } from 'node:fs/promises';
@@ -15,20 +16,20 @@ const MARKETS = ['home', 'draw', 'away', 'over', 'btts'];
 const STALE_DAYS = 10;
 // Ligne de la table fixtures pour un match de data/fixtures.json.
 export function fixtureRow(match, now = new Date()) {
-  const odds = Object.fromEntries(MARKETS.filter(key => Number(match.odds?.[key]) > 1).map(key => [key, Number(match.odds[key])]));
+  const odds = Object.fromEntries(marketKeys(match.odds).filter(key => Number(match.odds?.[key]) > 1).map(key => [key, Number(match.odds[key])]));
   return { id: match.id, league: match.league, round: match.round ?? null, home: match.home, away: match.away, home_id: match.homeId ?? null, away_id: match.awayId ?? null,
     kickoff: match.kickoff ?? `${match.date}T12:00:00Z`, status: match.status ?? 'Programmé', completed: match.completed === true, voided: match.voided === true,
     home_score: Number.isFinite(match.homeScore) ? match.homeScore : null, away_score: Number.isFinite(match.awayScore) ? match.awayScore : null,
-    odds, odds_source: Object.fromEntries(Object.keys(odds).map(key => [key, match.realOddsMarkets?.includes(key) ? 'real' : 'estimated'])), updated_at: now.toISOString() };
+    regulation: match.regulation ?? null, odds, odds_source: Object.fromEntries(Object.keys(odds).map(key => [key, match.realOddsMarkets?.includes(key) ? 'real' : 'estimated'])), updated_at: now.toISOString() };
 }
 // Résultats utilisables par settleTicket : scores terminés, matchs annulés, et matchs jamais joués au bout de STALE_DAYS jours.
 export function buildResults(settlements, fixtureRows = [], now = Date.now()) {
   const byId = new Map();
-  for (const item of settlements ?? []) if (item.completed || item.voided) byId.set(item.id, { id: item.id, home: item.home, away: item.away, homeScore: item.homeScore, awayScore: item.awayScore, completed: item.completed === true, voided: item.voided === true });
+  for (const item of settlements ?? []) if (item.completed || item.voided) byId.set(item.id, { id: item.id, home: item.home, away: item.away, homeScore: item.homeScore, awayScore: item.awayScore, regulation:item.regulation, completed: item.completed === true, voided: item.voided === true });
   for (const row of fixtureRows) {
     if (byId.has(row.id)) continue;
     if (row.voided || (!row.completed && Date.parse(row.kickoff) < now - STALE_DAYS * 864e5)) byId.set(row.id, { id: row.id, voided: true });
-    else if (row.completed && Number.isFinite(row.home_score) && Number.isFinite(row.away_score)) byId.set(row.id, { id: row.id, home: row.home, away: row.away, homeScore: row.home_score, awayScore: row.away_score, completed: true });
+    else if (row.completed && Number.isFinite(row.home_score) && Number.isFinite(row.away_score)) byId.set(row.id, { id: row.id, home: row.home, away: row.away, homeScore: row.home_score, awayScore: row.away_score, regulation:row.regulation, completed: true });
   }
   return [...byId.values()];
 }
@@ -72,7 +73,7 @@ export async function settleDailyPicks(admin, results) {
 }
 export async function loadResults(admin, settlements, now = Date.now()) {
   const since = new Date(now - 60 * 864e5).toISOString();
-  return buildResults(settlements, await admin.select('fixtures', `kickoff=gte.${since}&select=id,home,away,kickoff,completed,voided,home_score,away_score&limit=5000`), now);
+  return buildResults(settlements, await admin.select('fixtures', `kickoff=gte.${since}&select=id,home,away,kickoff,completed,voided,home_score,away_score,regulation&limit=5000`), now);
 }
 // Value bets gagnés : paris simples dont la cote dépassait de plus de 3 % la probabilité du modèle au moment du règlement.
 export function valueBetIds(decisions, bets, matches) {

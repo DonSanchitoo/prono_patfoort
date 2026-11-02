@@ -1,3 +1,4 @@
+import {marketKeys} from './markets.js';
 export const SECONDARY_ODDS_WINDOW_HOURS = 48;
 export const ODDS_REFRESH_HOURS = [6, 14];
 
@@ -16,7 +17,7 @@ export function mergeCachedSecondaryOffers(currentOffers = [], previousOffers = 
   return mergeCachedOffers(currentOffers, previousOffers, ['over', 'btts']);
 }
 
-export function mergeCachedOffers(currentOffers = [], previousOffers = [], markets = ['home', 'draw', 'away', 'over', 'btts']) {
+export function mergeCachedOffers(currentOffers = [], previousOffers = [], markets = marketKeys(Object.assign({},...currentOffers,...previousOffers))) {
   const sameBook = (a, b) => a.key && b.key ? a.key === b.key : a.name === b.name;
   const offers = [];
   for (const current of currentOffers) {
@@ -44,7 +45,7 @@ export function mergeCachedOffers(currentOffers = [], previousOffers = [], marke
   return offers;
 }
 
-export function summarizeOffers(offers = [], markets = ['home', 'draw', 'away', 'over', 'btts']) {
+export function summarizeOffers(offers = [], markets = marketKeys(Object.assign({},...offers))) {
   const prices = market => offers.map(offer => Number(offer[market])).filter(price => Number.isFinite(price) && price > 1);
   const counts = Object.fromEntries(markets.map(market => [market, prices(market).length]));
   const averages = Object.fromEntries(markets.map(market => { const values=prices(market); return [market,values.length?Number((values.reduce((sum,price)=>sum+price,0)/values.length).toFixed(2)):null] }));

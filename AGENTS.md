@@ -79,3 +79,7 @@ Classements (BET-132, remplace la transition BET-131) : `supabase/migrations/sup
 
 
 Cotes françaises (BET-151) : `scripts/propline-odds.mjs` complète seulement BTTS et Over 2,5 de Betclic FR et Winamax FR via PropLine (`PROPLINE_API_KEY` dans Actions). Un appel groupé par compétition ayant un match dans les 48 h, aux créneaux existants ; aucun appel navigateur. Prix américains convertis explicitement, périodes et totaux équipe exclus, cotes de plus d’une heure ignorées à la collecte. Rapprochement unique par ESPN ou équipes orientées et horaire à 15 min près ; aucune variante DE fusionnée avec FR. Les offres primaires restent prioritaires, la provenance par marché est conservée dans le cache. Guide : `docs/PROPLINE_SETUP.md`.
+
+Marchés BET-153 : `markets.js` définit les identifiants, lignes et règles de résultat. V36 après V35 valide les nouveaux choix côté serveur ; activation progressive par `PROPLINE_MARKET_STAGE` (0 par défaut), voir `docs/MARKETS_SETUP.md`. Les recommandations automatiques restent limitées aux cinq marchés historiques.
+
+Production BET-153 : V36 appliquée, étape 2 activée explicitement dans `update-fixtures.yml`. Collectes planifiées à 6 h et 14 h Paris ; `workflow_dispatch` permet une collecte manuelle d’administration (notamment au déploiement), jamais depuis le navigateur.

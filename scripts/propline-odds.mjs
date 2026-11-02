@@ -1,3 +1,4 @@
+import {LEGACY_MARKETS,STAGE_ONE,marketSpec} from '../markets.js';
 // Server-side only. PropLine prices are American unless price_decimal is supplied.
 import {sameTeam} from '../team-match.js';
 import {isInSecondaryOddsWindow} from '../odds-cache.js';
@@ -15,26 +16,39 @@ export function matchPropLineEvent(match,events){
   const named=near.filter(event=>event.espn_event_id==null&&sameTeam(event.home_team,match.home)&&sameTeam(event.away_team,match.away));
   return named.length===1?named[0]:null;
 }
-export function propLineOffers(event,now=Date.now()){
+export function propLineOffers(event,now=Date.now(),stage=0){
   const offers=[];
   for(const book of event?.bookmakers??[]){
     if(!book.key||/exchange|betfair|matchbook|smarkets|polymarket|kalshi/i.test(book.key)||book.type==='exchange'||book.type==='prediction_market')continue;
     const identity=BOOKS[book.key]??{key:book.key,name:book.title??book.key};
     const offer={...identity};
     for(const market of book.markets??[]){
-      if(market.period||market.team)continue;
+      if(market.suspended_at||market.period||(market.team&&market.key!=='team_totals'))continue;
       const updated=Date.parse(market.last_update);
       if(!Number.isFinite(updated)||updated>now+60000||now-updated>60*60000)continue;
       for(const outcome of market.outcomes??[]){
-        if(outcome.team||outcome.redacted||outcome.restricted)continue;
+        if((outcome.team&&market.key!=='team_totals')||outcome.redacted||outcome.restricted)continue;
         if(outcome.last_seen_at&&Date.parse(outcome.last_seen_at)<updated)continue;
-        const key=market.key==='h2h'?(sameTeam(outcome.name,event.home_team)?'home':sameTeam(outcome.name,event.away_team)?'away':/^draw$/i.test(outcome.name)?'draw':null):market.key==='totals'&&Number(outcome.point)===2.5&&/^over$/i.test(outcome.name)?'over':market.key==='both_teams_to_score'&&/^yes$/i.test(outcome.name)?'btts':null;
+        let key=null;
+        if(market.key==='h2h')key=sameTeam(outcome.name,event.home_team)?'home':sameTeam(outcome.name,event.away_team)?'away':/^draw$/i.test(outcome.name)?'draw':null;
+        else if(market.key==='both_teams_to_score')key=/^yes$/i.test(outcome.name)?'btts':/^no$/i.test(outcome.name)?'bttsNo':null;
+        else if(market.key==='totals'&&/^(over|under)$/i.test(outcome.name)&&[1.5,2.5,3.5].includes(Number(outcome.point))){const side=outcome.name.toLowerCase();key=Number(outcome.point)===2.5?(side==='over'?'over':'under'):side+String(Number(outcome.point)*10)}
+        else if(market.key==='double_chance'){
+          key=({'1N':'homeDraw','1X':'homeDraw','N2':'drawAway','X2':'drawAway','12':'homeAway'})[outcome.name];
+          if(!key){const parts=String(outcome.name??'').split('/').map(name=>name.trim()),home=parts.some(name=>sameTeam(name,event.home_team)),away=parts.some(name=>sameTeam(name,event.away_team)),draw=parts.some(name=>/^draw$/i.test(name));if(parts.length===2)key=home&&draw?'homeDraw':away&&draw?'drawAway':home&&away?'homeAway':null;}
+        }
+        else if(market.key==='draw_no_bet')key=sameTeam(outcome.name,event.home_team)?'homeDnb':sameTeam(outcome.name,event.away_team)?'awayDnb':null;
+        else if(market.key==='team_totals'&&/^(over|under)$/i.test(outcome.name)){
+          const team=outcome.team??market.team,side=sameTeam(team,event.home_team)?'home':sameTeam(team,event.away_team)?'away':null,line=Number(outcome.point);
+          if(side&&[.5,1.5,2.5,3.5,4.5,5.5].includes(line))key=side+outcome.name[0].toUpperCase()+outcome.name.slice(1).toLowerCase()+String(line*10).padStart(2,'0');
+        }
+        if(!key||!marketSpec(key)||(!LEGACY_MARKETS.includes(key)&&(stage<1||(!STAGE_ONE.includes(key)&&stage<2))))continue;
         const price=decimalPrice(outcome);if(!key||!price)continue;
         if(offer[key]&&Date.parse(offer[`${key}UpdatedAt`])>=updated)continue;
         offer[key]=price;offer[`${key}UpdatedAt`]=market.last_update;offer[`${key}Source`]='PropLine';
       }
     }
-    if(['home','draw','away','over','btts'].some(key=>offer[key])){const existing=offers.find(item=>item.key===offer.key);if(existing){for(const key of ['home','draw','away','over','btts'])if(offer[key]&&(!existing[key]||Date.parse(offer[`${key}UpdatedAt`])>Date.parse(existing[`${key}UpdatedAt`]))){existing[key]=offer[key];existing[`${key}UpdatedAt`]=offer[`${key}UpdatedAt`];existing[`${key}Source`]='PropLine'}}else offers.push(offer)}
+    if(Object.keys(offer).some(key=>marketSpec(key))){const existing=offers.find(item=>item.key===offer.key);if(existing){for(const key of Object.keys(offer).filter(key=>marketSpec(key)))if(offer[key]&&(!existing[key]||Date.parse(offer[`${key}UpdatedAt`])>Date.parse(existing[`${key}UpdatedAt`]))){existing[key]=offer[key];existing[`${key}UpdatedAt`]=offer[`${key}UpdatedAt`];existing[`${key}Source`]='PropLine'}}else offers.push(offer)}
   }
   return offers;
 }
@@ -46,20 +60,20 @@ export function supplementOffers(primary,extra){
   }
   return offers;
 }
-export async function collectPropLine(matches,leagueSports,{key=process.env.PROPLINE_API_KEY,fetchImpl=fetch,now=Date.now(),maxRequests=8}={}){
-  const result={offersByMatch:new Map(),requested:0,succeeded:0,failures:[]};if(!key){result.failures.push('PropLine : secret PROPLINE_API_KEY absent');return result;}
+export async function collectPropLine(matches,leagueSports,{key=process.env.PROPLINE_API_KEY,fetchImpl=fetch,now=Date.now(),maxRequests=8,stage=Number(process.env.PROPLINE_MARKET_STAGE??0)}={}){
+  const result={offersByMatch:new Map(),requested:0,succeeded:0,failures:[]};if(![0,1,2].includes(stage)){result.failures.push('PropLine : étape de marchés invalide');return result}if(!key){result.failures.push('PropLine : secret PROPLINE_API_KEY absent');return result;}
   const eligible=matches.filter(match=>!match.completed&&Date.parse(match.kickoff)>now&&Date.parse(match.kickoff)<=now+7*86400000&&!match.voided&&leagueSports[match.league]);
   for(const sport of [...new Set(eligible.map(match=>leagueSports[match.league]))]){
     if(result.requested>=maxRequests){result.failures.push('PropLine : budget de requêtes atteint');break}
     result.requested++;
     try{
-      const query=new URLSearchParams({markets:'h2h,totals,both_teams_to_score',max_age:'3600'});
+      const query=new URLSearchParams({markets:stage>=2?'h2h,totals,both_teams_to_score,double_chance,draw_no_bet,team_totals':'h2h,totals,both_teams_to_score',max_age:'3600'});
       const response=await fetchImpl(`https://api.prop-line.com/v1/sports/${encodeURIComponent(sport)}/odds?${query}`,{headers:{'X-API-Key':key},signal:AbortSignal.timeout(20000),redirect:'error'});
       if(!response.ok){result.failures.push(`PropLine ${sport}: HTTP ${response.status}`);if([401,403,429].includes(response.status))break;continue}
       const events=await response.json();if(!Array.isArray(events))throw new Error('format');
       result.succeeded++;
       for(const match of eligible.filter(match=>leagueSports[match.league]===sport)){
-        let offers=propLineOffers(matchPropLineEvent(match,events),now);if(!isInSecondaryOddsWindow(match,now))offers=offers.map(offer=>Object.fromEntries(Object.entries(offer).filter(([key])=>!key.startsWith('over')&&!key.startsWith('btts')))).filter(offer=>offer.home||offer.draw||offer.away);if(offers.length)result.offersByMatch.set(match.id,offers);
+        let offers=propLineOffers(matchPropLineEvent(match,events),now,stage);if(!isInSecondaryOddsWindow(match,now))offers=offers.map(offer=>Object.fromEntries(Object.entries(offer).filter(([key])=>['key','name','home','draw','away'].includes(key)||/^(home|draw|away)(UpdatedAt|Source)$/.test(key)))).filter(offer=>offer.home||offer.draw||offer.away);if(offers.length)result.offersByMatch.set(match.id,offers);
       }
     }catch{result.failures.push(`PropLine ${sport}: collecte indisponible`)}
   }
