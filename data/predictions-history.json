@@ -12,6 +12,66 @@
     "score": "2 : 4"
   },
   {
+    "id": "espn-401882824",
+    "date": "2026-11-02",
+    "league": "La Liga",
+    "match": "Deportivo – Osasuna",
+    "label": "Plus de 2,5 buts",
+    "key": "over",
+    "odd": 2.17,
+    "probability": 0.6324771550595598,
+    "status": "won",
+    "score": "2 : 1"
+  },
+  {
+    "id": "espn-401874971",
+    "date": "2026-11-02",
+    "league": "Serie A",
+    "match": "Atalanta – Parma",
+    "label": "Plus de 2,5 buts",
+    "key": "over",
+    "odd": 1.54,
+    "probability": 0.6698056996226207,
+    "status": "won",
+    "score": "0 : 3"
+  },
+  {
+    "id": "espn-401876419",
+    "date": "2026-11-02",
+    "league": "Ligue 1",
+    "match": "Lorient – Brest",
+    "label": "Les deux marquent",
+    "key": "btts",
+    "odd": 1.79,
+    "probability": 0.5230665207414825,
+    "status": "lost",
+    "score": "0 : 2"
+  },
+  {
+    "id": "espn-401876703",
+    "date": "2026-11-02",
+    "league": "Ligue 2",
+    "match": "Red Star FC 93 – AS Nancy Lorraine",
+    "label": "Les deux marquent",
+    "key": "btts",
+    "odd": 2.01,
+    "probability": 0.5230665207414825,
+    "status": "won",
+    "score": "1 : 4"
+  },
+  {
+    "id": "espn-401876702",
+    "date": "2026-11-02",
+    "league": "Ligue 2",
+    "match": "Stade de Reims – Sochaux",
+    "label": "Les deux marquent",
+    "key": "btts",
+    "odd": 2.01,
+    "probability": 0.5230665207414825,
+    "status": "lost",
+    "score": "2 : 0"
+  },
+  {
     "id": "espn-401875002",
     "date": "2026-11-01",
     "league": "Serie A",
