@@ -86,6 +86,7 @@
       "date": "2026-11-01",
       "home": "Liverpool",
       "away": "Arsenal",
+      "regulation": null,
       "homeScore": 0,
       "awayScore": 1,
       "completed": true
@@ -95,6 +96,7 @@
       "date": "2026-11-01",
       "home": "Strasbourg",
       "away": "AJ Auxerre",
+      "regulation": null,
       "homeScore": 5,
       "awayScore": 1,
       "completed": true
@@ -104,6 +106,7 @@
       "date": "2026-11-01",
       "home": "Lyon",
       "away": "Angers",
+      "regulation": null,
       "homeScore": 2,
       "awayScore": 0,
       "completed": true
@@ -113,6 +116,7 @@
       "date": "2026-11-01",
       "home": "Paris FC",
       "away": "AS Monaco",
+      "regulation": null,
       "homeScore": 3,
       "awayScore": 1,
       "completed": true
@@ -122,6 +126,7 @@
       "date": "2026-11-01",
       "home": "Marseille",
       "away": "Toulouse",
+      "regulation": null,
       "homeScore": 2,
       "awayScore": 0,
       "completed": true
@@ -131,6 +136,7 @@
       "date": "2026-11-01",
       "home": "Getafe",
       "away": "Sevilla",
+      "regulation": null,
       "homeScore": 3,
       "awayScore": 1,
       "completed": true
@@ -140,6 +146,7 @@
       "date": "2026-11-01",
       "home": "Racing Santander",
       "away": "Real Madrid",
+      "regulation": null,
       "homeScore": 0,
       "awayScore": 3,
       "completed": true
@@ -149,6 +156,7 @@
       "date": "2026-11-01",
       "home": "Elche",
       "away": "Valencia",
+      "regulation": null,
       "homeScore": 0,
       "awayScore": 1,
       "completed": true
@@ -158,6 +166,7 @@
       "date": "2026-11-01",
       "home": "Athletic Club",
       "away": "Real Sociedad",
+      "regulation": null,
       "homeScore": 2,
       "awayScore": 1,
       "completed": true
@@ -167,6 +176,7 @@
       "date": "2026-11-01",
       "home": "Como",
       "away": "Venezia",
+      "regulation": null,
       "homeScore": 1,
       "awayScore": 0,
       "completed": true
@@ -176,6 +186,7 @@
       "date": "2026-11-01",
       "home": "Frosinone",
       "away": "Torino",
+      "regulation": null,
       "homeScore": 2,
       "awayScore": 0,
       "completed": true
@@ -185,6 +196,7 @@
       "date": "2026-11-01",
       "home": "Lazio",
       "away": "Cagliari",
+      "regulation": null,
       "homeScore": 2,
       "awayScore": 1,
       "completed": true
@@ -194,6 +206,7 @@
       "date": "2026-11-01",
       "home": "Lecce",
       "away": "Genoa",
+      "regulation": null,
       "homeScore": 1,
       "awayScore": 2,
       "completed": true
@@ -203,6 +216,7 @@
       "date": "2026-11-01",
       "home": "Juventus",
       "away": "Napoli",
+      "regulation": null,
       "homeScore": 2,
       "awayScore": 0,
       "completed": true
@@ -212,6 +226,7 @@
       "date": "2026-11-01",
       "home": "1. FC Union Berlin",
       "away": "FC Cologne",
+      "regulation": null,
       "homeScore": 1,
       "awayScore": 1,
       "completed": true
@@ -221,6 +236,7 @@
       "date": "2026-11-01",
       "home": "Eintracht Frankfurt",
       "away": "Hamburg SV",
+      "regulation": null,
       "homeScore": 3,
       "awayScore": 1,
       "completed": true
@@ -230,6 +246,7 @@
       "date": "2026-10-31",
       "home": "Chelsea",
       "away": "Manchester United",
+      "regulation": null,
       "homeScore": 2,
       "awayScore": 0,
       "completed": true
@@ -239,6 +256,7 @@
       "date": "2026-10-31",
       "home": "AFC Bournemouth",
       "away": "Leeds United",
+      "regulation": null,
       "homeScore": 2,
       "awayScore": 0,
       "completed": true
@@ -248,6 +266,7 @@
       "date": "2026-10-31",
       "home": "Brentford",
       "away": "Nottingham Forest",
+      "regulation": null,
       "homeScore": 2,
       "awayScore": 0,
       "completed": true
@@ -257,6 +276,7 @@
       "date": "2026-10-31",
       "home": "Coventry City",
       "away": "Sunderland",
+      "regulation": null,
       "homeScore": 3,
       "awayScore": 1,
       "completed": true
@@ -266,6 +286,7 @@
       "date": "2026-10-31",
       "home": "Hull City",
       "away": "Ipswich Town",
+      "regulation": null,
       "homeScore": 2,
       "awayScore": 2,
       "completed": true
@@ -275,6 +296,7 @@
       "date": "2026-10-31",
       "home": "Manchester City",
       "away": "Brighton & Hove Albion",
+      "regulation": null,
       "homeScore": 0,
       "awayScore": 1,
       "completed": true
@@ -284,6 +306,7 @@
       "date": "2026-10-31",
       "home": "Tottenham Hotspur",
       "away": "Crystal Palace",
+      "regulation": null,
       "homeScore": 2,
       "awayScore": 0,
       "completed": true
@@ -293,6 +316,7 @@
       "date": "2026-10-31",
       "home": "Aston Villa",
       "away": "Fulham",
+      "regulation": null,
       "homeScore": 1,
       "awayScore": 1,
       "completed": true
@@ -302,6 +326,7 @@
       "date": "2026-10-31",
       "home": "Troyes",
       "away": "Le Mans",
+      "regulation": null,
       "homeScore": 2,
       "awayScore": 0,
       "completed": true
@@ -311,6 +336,7 @@
       "date": "2026-10-31",
       "home": "Levante",
       "away": "Atlético Madrid",
+      "regulation": null,
       "homeScore": 0,
       "awayScore": 2,
       "completed": true
@@ -320,6 +346,7 @@
       "date": "2026-10-31",
       "home": "Rayo Vallecano",
       "away": "Celta Vigo",
+      "regulation": null,
       "homeScore": 3,
       "awayScore": 0,
       "completed": true
@@ -329,6 +356,7 @@
       "date": "2026-10-31",
       "home": "Real Betis",
       "away": "Málaga",
+      "regulation": null,
       "homeScore": 2,
       "awayScore": 1,
       "completed": true
@@ -338,6 +366,7 @@
       "date": "2026-10-31",
       "home": "Barcelona",
       "away": "Alavés",
+      "regulation": null,
       "homeScore": 6,
       "awayScore": 1,
       "completed": true
@@ -347,6 +376,7 @@
       "date": "2026-10-31",
       "home": "Bologna",
       "away": "Monza",
+      "regulation": null,
       "homeScore": 2,
       "awayScore": 1,
       "completed": true
@@ -356,6 +386,7 @@
       "date": "2026-10-31",
       "home": "Udinese",
       "away": "AS Roma",
+      "regulation": null,
       "homeScore": 2,
       "awayScore": 5,
       "completed": true
@@ -365,6 +396,7 @@
       "date": "2026-10-31",
       "home": "AC Milan",
       "away": "Internazionale",
+      "regulation": null,
       "homeScore": 3,
       "awayScore": 1,
       "completed": true
@@ -374,6 +406,7 @@
       "date": "2026-10-31",
       "home": "Bayer Leverkusen",
       "away": "VfB Stuttgart",
+      "regulation": null,
       "homeScore": 2,
       "awayScore": 4,
       "completed": true
@@ -383,6 +416,7 @@
       "date": "2026-10-31",
       "home": "Borussia Mönchengladbach",
       "away": "SC Paderborn 07",
+      "regulation": null,
       "homeScore": 0,
       "awayScore": 0,
       "completed": true
@@ -392,6 +426,7 @@
       "date": "2026-10-31",
       "home": "FC Augsburg",
       "away": "SC Freiburg",
+      "regulation": null,
       "homeScore": 1,
       "awayScore": 2,
       "completed": true
@@ -401,6 +436,7 @@
       "date": "2026-10-31",
       "home": "Schalke 04",
       "away": "RB Leipzig",
+      "regulation": null,
       "homeScore": 0,
       "awayScore": 2,
       "completed": true
@@ -410,6 +446,7 @@
       "date": "2026-10-31",
       "home": "Werder Bremen",
       "away": "TSG Hoffenheim",
+      "regulation": null,
       "homeScore": 2,
       "awayScore": 0,
       "completed": true
@@ -419,6 +456,7 @@
       "date": "2026-10-31",
       "home": "Bayern Munich",
       "away": "Borussia Dortmund",
+      "regulation": null,
       "homeScore": 2,
       "awayScore": 2,
       "completed": true
@@ -428,6 +466,7 @@
       "date": "2026-10-31",
       "home": "Annecy",
       "away": "Montpellier",
+      "regulation": null,
       "homeScore": 0,
       "awayScore": 3,
       "completed": true
@@ -437,6 +476,7 @@
       "date": "2026-10-31",
       "home": "Guingamp",
       "away": "Saint-Étienne",
+      "regulation": null,
       "homeScore": 3,
       "awayScore": 0,
       "completed": true
@@ -446,6 +486,7 @@
       "date": "2026-10-30",
       "home": "Le Havre AC",
       "away": "Paris Saint-Germain",
+      "regulation": null,
       "homeScore": 1,
       "awayScore": 5,
       "completed": true
@@ -455,6 +496,7 @@
       "date": "2026-10-30",
       "home": "Nice",
       "away": "Stade Rennais",
+      "regulation": null,
       "homeScore": 5,
       "awayScore": 2,
       "completed": true
@@ -464,6 +506,7 @@
       "date": "2026-10-30",
       "home": "Lille",
       "away": "Lens",
+      "regulation": null,
       "homeScore": 1,
       "awayScore": 0,
       "completed": true
@@ -473,6 +516,7 @@
       "date": "2026-10-30",
       "home": "Villarreal",
       "away": "Espanyol",
+      "regulation": null,
       "homeScore": 0,
       "awayScore": 1,
       "completed": true
@@ -482,6 +526,7 @@
       "date": "2026-10-30",
       "home": "SV Elversberg",
       "away": "Mainz",
+      "regulation": null,
       "homeScore": 4,
       "awayScore": 1,
       "completed": true
@@ -491,6 +536,7 @@
       "date": "2026-10-30",
       "home": "Grenoble",
       "away": "Dijon FCO",
+      "regulation": null,
       "homeScore": 1,
       "awayScore": 3,
       "completed": true
@@ -500,6 +546,7 @@
       "date": "2026-10-30",
       "home": "Metz",
       "away": "Pau",
+      "regulation": null,
       "homeScore": 1,
       "awayScore": 3,
       "completed": true
@@ -509,6 +556,7 @@
       "date": "2026-10-30",
       "home": "Nantes",
       "away": "Clermont Foot",
+      "regulation": null,
       "homeScore": 1,
       "awayScore": 1,
       "completed": true
@@ -518,6 +566,7 @@
       "date": "2026-10-30",
       "home": "Rodez Aveyron",
       "away": "Dunkerque",
+      "regulation": null,
       "homeScore": 1,
       "awayScore": 0,
       "completed": true
@@ -527,6 +576,7 @@
       "date": "2026-10-30",
       "home": "Stade Laval",
       "away": "Boulogne",
+      "regulation": null,
       "homeScore": 1,
       "awayScore": 0,
       "completed": true
@@ -1321,7 +1371,8 @@
         "basis": "model-only",
         "modelVersion": "poisson-audit-v2",
         "capturedAt": "2026-10-30T18:30:33.955Z"
-      }
+      },
+      "regulation": null
     },
     {
       "id": "espn-401882817",
@@ -1409,7 +1460,8 @@
         "basis": "model-only",
         "modelVersion": "poisson-audit-v2",
         "capturedAt": "2026-10-30T18:30:33.958Z"
-      }
+      },
+      "regulation": null
     },
     {
       "id": "espn-401884746",
@@ -1497,7 +1549,8 @@
         "basis": "model-only",
         "modelVersion": "poisson-audit-v2",
         "capturedAt": "2026-10-30T18:30:33.961Z"
-      }
+      },
+      "regulation": null
     },
     {
       "id": "espn-401876416",
@@ -1585,7 +1638,8 @@
         "basis": "model-only",
         "modelVersion": "poisson-audit-v2",
         "capturedAt": "2026-10-30T18:30:33.965Z"
-      }
+      },
+      "regulation": null
     },
     {
       "id": "espn-401876420",
@@ -1673,7 +1727,8 @@
         "basis": "model-only",
         "modelVersion": "poisson-audit-v2",
         "capturedAt": "2026-10-30T18:30:33.968Z"
-      }
+      },
+      "regulation": null
     },
     {
       "id": "espn-401876708",
@@ -1748,7 +1803,8 @@
         "basis": "model-only",
         "modelVersion": "poisson-audit-v2",
         "capturedAt": "2026-10-30T18:30:33.971Z"
-      }
+      },
+      "regulation": null
     },
     {
       "id": "espn-401876705",
@@ -1823,7 +1879,8 @@
         "basis": "model-only",
         "modelVersion": "poisson-audit-v2",
         "capturedAt": "2026-10-30T18:30:33.974Z"
-      }
+      },
+      "regulation": null
     },
     {
       "id": "espn-401876704",
@@ -1898,7 +1955,8 @@
         "basis": "model-only",
         "modelVersion": "poisson-audit-v2",
         "capturedAt": "2026-10-30T18:30:33.977Z"
-      }
+      },
+      "regulation": null
     },
     {
       "id": "espn-401876701",
@@ -1973,7 +2031,8 @@
         "basis": "model-only",
         "modelVersion": "poisson-audit-v2",
         "capturedAt": "2026-10-30T18:30:33.981Z"
-      }
+      },
+      "regulation": null
     },
     {
       "id": "espn-401876706",
@@ -2048,7 +2107,8 @@
         "basis": "model-only",
         "modelVersion": "poisson-audit-v2",
         "capturedAt": "2026-10-30T18:30:33.984Z"
-      }
+      },
+      "regulation": null
     },
     {
       "id": "espn-401879248",
@@ -2136,7 +2196,8 @@
         "basis": "model-only",
         "modelVersion": "poisson-audit-v2",
         "capturedAt": "2026-10-31T13:37:49.016Z"
-      }
+      },
+      "regulation": null
     },
     {
       "id": "espn-401884754",
@@ -2224,7 +2285,8 @@
         "basis": "model-only",
         "modelVersion": "poisson-audit-v2",
         "capturedAt": "2026-10-31T18:27:37.335Z"
-      }
+      },
+      "regulation": null
     },
     {
       "id": "espn-401874795",
@@ -2312,7 +2374,8 @@
         "basis": "model-only",
         "modelVersion": "poisson-audit-v2",
         "capturedAt": "2026-10-31T18:27:37.340Z"
-      }
+      },
+      "regulation": null
     },
     {
       "id": "espn-401879245",
@@ -2400,7 +2463,8 @@
         "basis": "model-only",
         "modelVersion": "poisson-audit-v2",
         "capturedAt": "2026-10-31T13:37:49.034Z"
-      }
+      },
+      "regulation": null
     },
     {
       "id": "espn-401882820",
@@ -2488,7 +2552,8 @@
         "basis": "model-only",
         "modelVersion": "poisson-audit-v2",
         "capturedAt": "2026-10-31T13:37:49.045Z"
-      }
+      },
+      "regulation": null
     },
     {
       "id": "espn-401882822",
@@ -2576,7 +2641,8 @@
         "basis": "model-only",
         "modelVersion": "poisson-audit-v2",
         "capturedAt": "2026-10-31T18:27:37.355Z"
-      }
+      },
+      "regulation": null
     },
     {
       "id": "espn-401879251",
@@ -2664,7 +2730,8 @@
         "basis": "model-only",
         "modelVersion": "poisson-audit-v2",
         "capturedAt": "2026-10-31T13:37:49.057Z"
-      }
+      },
+      "regulation": null
     },
     {
       "id": "espn-401879249",
@@ -2752,7 +2819,8 @@
         "basis": "model-only",
         "modelVersion": "poisson-audit-v2",
         "capturedAt": "2026-10-31T13:37:49.062Z"
-      }
+      },
+      "regulation": null
     },
     {
       "id": "espn-401879247",
@@ -2840,7 +2908,8 @@
         "basis": "model-only",
         "modelVersion": "poisson-audit-v2",
         "capturedAt": "2026-10-31T13:37:49.066Z"
-      }
+      },
+      "regulation": null
     },
     {
       "id": "espn-401878763",
@@ -2928,7 +2997,8 @@
         "basis": "model-only",
         "modelVersion": "poisson-audit-v2",
         "capturedAt": "2026-10-31T13:37:49.071Z"
-      }
+      },
+      "regulation": null
     },
     {
       "id": "espn-401878761",
@@ -3016,7 +3086,8 @@
         "basis": "model-only",
         "modelVersion": "poisson-audit-v2",
         "capturedAt": "2026-10-31T18:27:37.379Z"
-      }
+      },
+      "regulation": null
     },
     {
       "id": "espn-401879250",
@@ -3104,7 +3175,8 @@
         "basis": "model-only",
         "modelVersion": "poisson-audit-v2",
         "capturedAt": "2026-10-31T18:27:37.388Z"
-      }
+      },
+      "regulation": null
     },
     {
       "id": "espn-401882818",
@@ -3192,7 +3264,8 @@
         "basis": "model-only",
         "modelVersion": "poisson-audit-v2",
         "capturedAt": "2026-10-31T13:37:49.087Z"
-      }
+      },
+      "regulation": null
     },
     {
       "id": "espn-401882825",
@@ -3280,7 +3353,8 @@
         "basis": "model-only",
         "modelVersion": "poisson-audit-v2",
         "capturedAt": "2026-10-31T18:27:37.399Z"
-      }
+      },
+      "regulation": null
     },
     {
       "id": "espn-401884753",
@@ -3368,7 +3442,8 @@
         "basis": "model-only",
         "modelVersion": "poisson-audit-v2",
         "capturedAt": "2026-10-31T13:37:49.097Z"
-      }
+      },
+      "regulation": null
     },
     {
       "id": "espn-401884749",
@@ -3456,7 +3531,8 @@
         "basis": "model-only",
         "modelVersion": "poisson-audit-v2",
         "capturedAt": "2026-10-31T13:37:49.103Z"
-      }
+      },
+      "regulation": null
     },
     {
       "id": "espn-401884751",
@@ -3544,7 +3620,8 @@
         "basis": "model-only",
         "modelVersion": "poisson-audit-v2",
         "capturedAt": "2026-10-31T13:37:49.108Z"
-      }
+      },
+      "regulation": null
     },
     {
       "id": "espn-401884747",
@@ -3632,7 +3709,8 @@
         "basis": "model-only",
         "modelVersion": "poisson-audit-v2",
         "capturedAt": "2026-10-31T13:37:49.113Z"
-      }
+      },
+      "regulation": null
     },
     {
       "id": "espn-401884748",
@@ -3720,7 +3798,8 @@
         "basis": "model-only",
         "modelVersion": "poisson-audit-v2",
         "capturedAt": "2026-10-31T13:37:49.118Z"
-      }
+      },
+      "regulation": null
     },
     {
       "id": "espn-401874798",
@@ -3808,7 +3887,8 @@
         "basis": "model-only",
         "modelVersion": "poisson-audit-v2",
         "capturedAt": "2026-10-31T13:37:49.122Z"
-      }
+      },
+      "regulation": null
     },
     {
       "id": "espn-401874990",
@@ -3896,7 +3976,8 @@
         "basis": "model-only",
         "modelVersion": "poisson-audit-v2",
         "capturedAt": "2026-10-31T18:27:37.432Z"
-      }
+      },
+      "regulation": null
     },
     {
       "id": "espn-401876413",
@@ -3984,7 +4065,8 @@
         "basis": "model-only",
         "modelVersion": "poisson-audit-v2",
         "capturedAt": "2026-10-31T18:27:37.437Z"
-      }
+      },
+      "regulation": null
     },
     {
       "id": "espn-401876709",
@@ -4059,7 +4141,8 @@
         "basis": "model-only",
         "modelVersion": "poisson-audit-v2",
         "capturedAt": "2026-10-31T13:37:49.136Z"
-      }
+      },
+      "regulation": null
     },
     {
       "id": "espn-401876707",
@@ -4134,7 +4217,8 @@
         "basis": "model-only",
         "modelVersion": "poisson-audit-v2",
         "capturedAt": "2026-10-31T18:27:37.446Z"
-      }
+      },
+      "regulation": null
     },
     {
       "id": "espn-401879246",
@@ -4661,7 +4745,8 @@
         "basis": "real-odds",
         "modelVersion": "poisson-audit-v2",
         "capturedAt": "2026-11-01T13:39:46.246Z"
-      }
+      },
+      "regulation": null
     },
     {
       "id": "espn-401874949",
@@ -5173,7 +5258,8 @@
         "basis": "real-odds",
         "modelVersion": "poisson-audit-v2",
         "capturedAt": "2026-11-01T18:28:01.032Z"
-      }
+      },
+      "regulation": null
     },
     {
       "id": "espn-401882819",
@@ -5589,7 +5675,8 @@
         "basis": "real-odds",
         "modelVersion": "poisson-audit-v2",
         "capturedAt": "2026-11-01T13:39:46.260Z"
-      }
+      },
+      "regulation": null
     },
     {
       "id": "espn-401876417",
@@ -6041,7 +6128,8 @@
         "basis": "real-odds",
         "modelVersion": "poisson-audit-v2",
         "capturedAt": "2026-11-01T18:28:01.045Z"
-      }
+      },
+      "regulation": null
     },
     {
       "id": "espn-401882821",
@@ -6460,7 +6548,8 @@
         "basis": "real-odds",
         "modelVersion": "poisson-audit-v2",
         "capturedAt": "2026-11-01T13:39:46.278Z"
-      }
+      },
+      "regulation": null
     },
     {
       "id": "espn-401882823",
@@ -6930,7 +7019,8 @@
         "basis": "real-odds",
         "modelVersion": "poisson-audit-v2",
         "capturedAt": "2026-11-01T18:28:01.058Z"
-      }
+      },
+      "regulation": null
     },
     {
       "id": "espn-401882826",
@@ -7394,7 +7484,8 @@
         "basis": "real-odds",
         "modelVersion": "poisson-audit-v2",
         "capturedAt": "2026-11-01T18:28:01.066Z"
-      }
+      },
+      "regulation": null
     },
     {
       "id": "espn-401884750",
@@ -7469,7 +7560,8 @@
         "basis": "model-only",
         "modelVersion": "poisson-audit-v2",
         "capturedAt": "2026-11-01T13:39:46.300Z"
-      }
+      },
+      "regulation": null
     },
     {
       "id": "espn-401884752",
@@ -7544,7 +7636,8 @@
         "basis": "model-only",
         "modelVersion": "poisson-audit-v2",
         "capturedAt": "2026-11-01T18:28:01.081Z"
-      }
+      },
+      "regulation": null
     },
     {
       "id": "espn-401875002",
@@ -7999,7 +8092,8 @@
         "basis": "real-odds",
         "modelVersion": "poisson-audit-v2",
         "capturedAt": "2026-11-01T06:39:36.365Z"
-      }
+      },
+      "regulation": null
     },
     {
       "id": "espn-401874782",
@@ -8454,7 +8548,8 @@
         "basis": "real-odds",
         "modelVersion": "poisson-audit-v2",
         "capturedAt": "2026-11-01T13:39:46.320Z"
-      }
+      },
+      "regulation": null
     },
     {
       "id": "espn-401874983",
@@ -8960,7 +9055,8 @@
         "basis": "real-odds",
         "modelVersion": "poisson-audit-v2",
         "capturedAt": "2026-11-01T13:39:46.331Z"
-      }
+      },
+      "regulation": null
     },
     {
       "id": "espn-401874968",
@@ -9460,7 +9556,8 @@
         "basis": "real-odds",
         "modelVersion": "poisson-audit-v2",
         "capturedAt": "2026-11-01T18:28:01.106Z"
-      }
+      },
+      "regulation": null
     },
     {
       "id": "espn-401876414",
@@ -9924,7 +10021,8 @@
         "basis": "real-odds",
         "modelVersion": "poisson-audit-v2",
         "capturedAt": "2026-11-01T13:39:46.344Z"
-      }
+      },
+      "regulation": null
     },
     {
       "id": "espn-401876418",
@@ -10394,7 +10492,8 @@
         "basis": "real-odds",
         "modelVersion": "poisson-audit-v2",
         "capturedAt": "2026-11-01T13:39:46.350Z"
-      }
+      },
+      "regulation": null
     },
     {
       "id": "espn-401876415",
@@ -10873,7 +10972,8 @@
         "basis": "real-odds",
         "modelVersion": "poisson-audit-v2",
         "capturedAt": "2026-11-01T13:39:46.358Z"
-      }
+      },
+      "regulation": null
     },
     {
       "id": "espn-401878762",
@@ -43746,5 +43846,5 @@
       }
     }
   ],
-  "scoresUpdatedAt": "2026-11-02T11:17:07.890Z"
+  "scoresUpdatedAt": "2026-11-02T11:26:55.126Z"
 }
