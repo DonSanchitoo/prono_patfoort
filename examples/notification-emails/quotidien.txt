@@ -2,28 +2,42 @@ MAQUETTE · DONNÉES FICTIVES
 
 Votre pause foot du jour
 
+Mes matchs favoris
+Lens - Rennes
+Ligue 1 · 19:00 (Europe/Paris)
+Voir le match : https://patfoort47-gif.github.io/BetOptimum/#match-lens-rennes
+
+Lille - Paris
+Ligue 1 · 21:00 (Europe/Paris)
+Voir le match : https://patfoort47-gif.github.io/BetOptimum/#match-lille-paris
+
+Le match du jour
 Madrid - Barcelone
 Liga · 22:00 (Europe/Paris)
-3 rencontre(s) à retrouver sur le site.
+Voir le match : https://patfoort47-gif.github.io/BetOptimum/#match-madrid-barcelona
 
-À analyser : Madrid - Barcelone
+Les 3 conseils du jour
+1 · Madrid - Barcelone
 Plus de 2,5 buts · cote 2.00
+Probabilité du modèle : 64 % · value 28.1 %. Ces seuils expliquent ce conseil, sans garantie de résultat.
 Bookmaker fictif · cote réelle, actualisée le 10/04/2027 07:55:00.
-Probabilité du modèle : 64 %. Une estimation ne garantit aucun résultat.
+Voir l’analyse : https://patfoort47-gif.github.io/BetOptimum/#match-madrid-barcelona
 
-À analyser : Lens - Rennes
+2 · Lens - Rennes
 Plus de 2,5 buts · cote 2.00
+Probabilité du modèle : 62 % · value 24.0 %. Ces seuils expliquent ce conseil, sans garantie de résultat.
 Bookmaker fictif · cote réelle, actualisée le 10/04/2027 07:55:00.
-Probabilité du modèle : 62 %. Une estimation ne garantit aucun résultat.
+Voir l’analyse : https://patfoort47-gif.github.io/BetOptimum/#match-lens-rennes
+
+3 · Lille - Paris
+Plus de 2,5 buts · cote 2.00
+Probabilité du modèle : 60 % · value 19.8 %. Ces seuils expliquent ce conseil, sans garantie de résultat.
+Bookmaker fictif · cote réelle, actualisée le 10/04/2027 07:55:00.
+Voir l’analyse : https://patfoort47-gif.github.io/BetOptimum/#match-lille-paris
 
 Votre espace
 Bankroll disponible : 1 245,50 €.
-Retrouvez vos paris, leurs détails et leurs scénarios sur votre profil.
-
-Le fil de votre journée
-19:00 · Lens - Rennes · FAVORI
-21:00 · Lille - Paris · FAVORI
-22:00 · Madrid - Barcelone
+Retrouvez vos paris et leurs détails sur votre profil.
 
 Découvrir ma journée : https://patfoort47-gif.github.io/BetOptimum/#match-madrid-barcelona
 
