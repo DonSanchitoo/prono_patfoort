@@ -537,3 +537,6 @@ dialog .modal-head .icon-button,dialog .dialog-tools .icon-button{flex:none;min-
 
 @container(max-width:660px){.market-grid-wrap .markets{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @container(max-width:430px){.market-grid-wrap .markets{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* BET-142 : le choix et le tableau forment un seul panneau. */
+.club-ranking-heading{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-bottom:20px;border-bottom:1px solid var(--line);margin-bottom:20px}.club-ranking-heading h3{margin:0}.club-ranking-heading label{display:grid;gap:8px;color:var(--muted);font-size:13px}.club-ranking-heading select{min-width:220px;max-width:100%}.club-ranking>.card,.club-ranking>#club-general>.card{border:0;box-shadow:none;background:transparent;padding:0}.club-ranking .league-head{margin-top:0}@media(max-width:700px){.club-ranking-heading{align-items:stretch;flex-direction:column;gap:12px}.club-ranking-heading select{width:100%;min-width:0}}

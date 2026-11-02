@@ -171,11 +171,12 @@
       <p class="section-subtitle club-section-description" id="club-section-description">Choisissez une compétition, retrouvez votre place et visez le podium.</p>
       <div data-cpanel="league">
         <p><button class="button secondary" data-open-dialog="rules-dialog" data-section="points">Comment sont calculés les points ?</button></p>
-        <div class="club-arena card"><div><p class="eyebrow">LA COURSE AU CLASSEMENT</p><h3>Chaque prono peut faire la différence</h3><p>Vos pronostics éligibles comptent automatiquement dans les compétitions publiques gratuites.</p></div><label>Classement<select id="club-league-select"><option value="general">Tous les joueurs</option><option value="group">Mon groupe de division</option></select></label></div>
+        <div class="club-arena card"><div><p class="eyebrow">LA COURSE AU CLASSEMENT</p><h3>Chaque prono peut faire la différence</h3><p>Vos pronostics éligibles comptent automatiquement dans les compétitions publiques gratuites.</p></div></div>
+        <section class="card club-ranking" aria-label="Classements des joueurs"><header class="club-ranking-heading"><h3>Votre classement</h3><label>Classement<select id="club-league-select"><option value="general">Tous les joueurs</option><option value="group">Mon groupe</option></select></label></header>
         <section id="club-competition" class="card" hidden aria-live="polite"></section>
-        <section id="my-leagues" class="my-leagues" aria-label="Mes ligues" hidden></section>
+
         <section id="my-league" class="my-league card" aria-label="Ma ligue" hidden></section>
-        <section id="league-catalog" class="league-catalog card" aria-label="Catalogue des ligues" hidden></section>
+
       <div id="club-general">
         <section id="podium" class="podium card" aria-label="Podium de la saison" hidden></section>
         <section class="general card" aria-label="Classement général">
@@ -184,6 +185,9 @@
           <div class="pager"><button class="button secondary" id="general-prev">Précédent</button><span id="general-page">Page 1</span><button class="button secondary" id="general-next">Suivant</button></div>
         </section>
       </div>
+        </section>
+        <section id="my-leagues" class="my-leagues" aria-label="Mes ligues" hidden></section>
+        <section id="league-catalog" class="league-catalog card" aria-label="Catalogue des ligues" hidden></section>
       </div>
       <div data-cpanel="follows" hidden><section id="follows-panel" class="follows card" aria-label="Joueurs suivis"></section></div>
       <div data-cpanel="private" hidden><section id="private-leagues" class="private-leagues card" aria-label="Ligues privées" hidden></section></div>
