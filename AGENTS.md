@@ -37,7 +37,7 @@ Avatar 3D (BET-49 ; `avatar-config.js` pur et testé par `tests/avatar.test.js`,
 
 ## Contraintes
 
-- Les secrets `FOOTBALL_DATA_TOKEN`, `THE_ODDS_API_KEY` et `SUPABASE_SERVICE_ROLE_KEY` n'existent que dans GitHub Actions ; rien ne doit les exposer dans `data/fixtures.json` ni côté navigateur.
+- Les secrets `FOOTBALL_DATA_TOKEN`, `PROPLINE_API_KEY` et `SUPABASE_SERVICE_ROLE_KEY` n'existent que dans GitHub Actions ; rien ne doit les exposer dans `data/fixtures.json` ni côté navigateur.
 - L'interface distingue cotes réelles (« MOYENNE · n bookmakers ») et estimées. Conserver cette distinction et les mentions « paris virtuels / 18+ / aucune garantie ».
 - Les pages Confidentialité et Mentions légales (bas de `index.html`) décrivent les données collectées et les services tiers contactés (Supabase et son stockage d'images d'avatar, Google Fonts, ESPN, jsDelivr pour le client Supabase et Three.js) : les mettre à jour à chaque nouveau service ou nouvelle donnée.
 - Pas de tiret cadratin ni demi-cadratin dans les textes affichés : utiliser « · », « : » ou « - ».
