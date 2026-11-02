@@ -1,3 +1,4 @@
+import {regulationScore} from '../regulation-score.js';
 import { readFile, writeFile } from 'node:fs/promises';
 import { selectionResult } from '../model.js';
 
@@ -20,7 +21,7 @@ for (const league of leagues) {
       const away = competition?.competitors?.find(team => team.homeAway === 'away');
       if (voidStatuses.has(event.status?.type?.name) && home && away) { settlements.push({ id:`espn-${event.id}`, date:event.date.slice(0,10), home:home.team?.displayName, away:away.team?.displayName, completed:false, voided:true }); continue; }
       if (!event.status?.type?.completed || home?.score == null || away?.score == null) continue;
-      settlements.push({ id:`espn-${event.id}`, date:event.date.slice(0,10), home:home.team?.displayName, away:away.team?.displayName, homeScore:Number(home.score), awayScore:Number(away.score), completed:true });
+      settlements.push({ id:`espn-${event.id}`, date:event.date.slice(0,10), home:home.team?.displayName, away:away.team?.displayName, regulation:regulationScore(event), homeScore:Number(home.score), awayScore:Number(away.score), completed:true });
     }
   }
 }
@@ -34,7 +35,7 @@ for (const match of data.matches ?? []) {
   const result = merged.get(match.id);
   if (!result) continue;
   if (result.voided) { match.voided = true; match.status = 'Annulé'; continue; }
-  match.completed = true; match.status = 'Terminé'; match.homeScore = result.homeScore; match.awayScore = result.awayScore;
+  match.completed = true; match.status = 'Terminé'; match.homeScore = result.homeScore; match.awayScore = result.awayScore; match.regulation = result.regulation;
 }
 data.scoresUpdatedAt = new Date().toISOString();
 data.coverage = {...data.coverage, settlements:data.settlements.length};

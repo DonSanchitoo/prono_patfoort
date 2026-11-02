@@ -25,9 +25,15 @@ test('BET-153 : remboursement en simple, combiné et système sans modifier les 
  assert.deepEqual(settleTicket({betType:'multiple',stake:10,items,systemLines:[{indexes:[0,1],stake:10,odds:3.6}]},results),{status:'won',payout:18});assert.equal(items[0].odd,2);
 });
 test('BET-153 : lignes séparées, prix réellement fournis et activation progressive',()=>{
- const now=Date.now(),stamp=new Date(now).toISOString(),e={home_team:'Alpha',away_team:'Beta',bookmakers:[{key:'test_fr',markets:[{key:'totals',last_update:stamp,outcomes:[{name:'Under',point:2.5,price:110},{name:'Over',point:1.5,price:-125},{name:'Over',point:2,price:100}]},{key:'both_teams_to_score',last_update:stamp,outcomes:[{name:'No',price:120}]},{key:'draw_no_bet',last_update:stamp,outcomes:[{name:'Alpha',price:100}]},{key:'team_totals',team:'Alpha',last_update:stamp,outcomes:[{name:'Over',point:1.5,price:120}]}]}]};
+ const now=Date.now(),stamp=new Date(now).toISOString(),e={home_team:'Alpha',away_team:'Beta',bookmakers:[{key:'test_fr',markets:[{key:'totals',last_update:stamp,outcomes:[{name:'Under',point:2.5,price:110},{name:'Over',point:1.5,price:-125},{name:'Over',point:2,price:100}]},{key:'both_teams_to_score',last_update:stamp,outcomes:[{name:'No',price:120}]},{key:'double_chance',last_update:stamp,outcomes:[{name:'Alpha/Draw',price:-150},{name:'Draw/Beta',price:-110},{name:'Alpha/Beta',price:-200}]},{key:'draw_no_bet',last_update:stamp,outcomes:[{name:'Alpha',price:100}]},{key:'team_totals',team:'Alpha',last_update:stamp,outcomes:[{name:'Over',point:1.5,price:120}]}]}]};
  assert.deepEqual(propLineOffers(e,now,0),[]);const first=propLineOffers(e,now,1)[0];assert.equal(first.under,2.1);assert.equal(first.over15,1.8);assert.equal(first.bttsNo,2.2);assert.equal(first.homeDnb,undefined);assert.equal(first.homeOver15,undefined);
- const second=propLineOffers(e,now,2)[0];assert.equal(second.homeOver15,2.2);assert.equal(second.homeDnb,2);assert.equal(second.over,undefined);
+ const second=propLineOffers(e,now,2)[0];assert.equal(second.homeOver15,2.2);assert.equal(second.homeDnb,2);assert.equal(second.homeDraw,1.6667);assert.equal(second.drawAway,1.9091);assert.equal(second.homeAway,1.5);assert.equal(second.over,undefined);
  const cache=mergeCachedOffers([],[second]);assert.equal(cache[0].homeOver15Cached,true);assert.equal(summarizeOffers(cache).counts.homeOver15,1);assert.equal(summarizeOffers(cache).averages.over15,1.8);
  const row=fixtureRow({...match,realOddsMarkets:['homeOver15']});assert.equal(row.odds.homeOver15,2);assert.equal(row.odds_source.homeOver15,'real');
+});
+const {regulationScore}=await import('../regulation-score.js');
+test('BET-153 : prolongation et tirs au but ne remplacent pas le score réglementaire',()=>{
+ const event={status:{period:4,type:{name:'STATUS_FINAL_AET'}},competitions:[{competitors:[{homeAway:'home',score:2,linescores:[{value:0},{value:1},{value:1},{value:0}]},{homeAway:'away',score:1,linescores:[{value:1},{value:0},{value:0},{value:0}]}]}]},regulation=regulationScore(event);
+ assert.deepEqual(regulation,{extraTime:true,home:1,away:1});const r={id:'m',completed:true,homeScore:2,awayScore:1,regulation};assert.equal(selectionResult({matchId:'m',key:'homeDnb'},[r]).status,'void');assert.equal(selectionResult({matchId:'m',key:'under'},[r]).status,'won');assert.equal(selectionResult({matchId:'m',key:'home'},[r]).status,'won');
+ assert.equal(selectionResult({matchId:'m',key:'homeDnb'},[{...r,regulation:{extraTime:true,home:null,away:null}}]).status,'pending');
 });

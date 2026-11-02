@@ -1,5 +1,6 @@
 -- BET-153 : après V35. Aucune réécriture de paris historiques.
 begin;
+alter table public.fixtures add column if not exists regulation jsonb;
 create or replace function public.market_label(k text, home_team text, away_team text)
 returns text language plpgsql immutable set search_path=public as $$
 declare side text; direction text; line text;

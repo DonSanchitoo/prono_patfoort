@@ -23,3 +23,5 @@ Les cartes gardent les cinq choix essentiels visibles. Les choix supplémentaire
 ## Recette
 
 `npm test`, `node scripts/prepare-pages.mjs`, puis `PGLITE_MODULE=… node scripts/check-markets-sql.mjs` pour la recette SQL isolée. Tester à 320 et 1280 px : ouverture des familles, sélection, conservation lors d’une nouvelle sélection, comparaison horizontale et absence de débordement de la page. Vérifier dans le diagnostic réel les lignes exactes, les variantes régionales et les moyennes. Le contrôle du compte fournisseur peut refuser certains nouveaux marchés : garder alors l’étape précédente active.
+
+Après prolongation ou tirs au but, les nouveaux marchés utilisent seulement les deux premières périodes ESPN. Si ces scores manquent, leur règlement attend une vérification ; il ne reprend pas le score final. Le champ `fixtures.regulation` conserve cette information. Les cinq marchés historiques conservent leur traitement existant.

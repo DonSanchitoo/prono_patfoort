@@ -1,3 +1,4 @@
+import {regulationScore} from '../regulation-score.js';
 import {marketKeys} from '../markets.js';
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { parisDate, pickDailyChallenge, recommendedMarket } from '../model.js';
@@ -122,6 +123,7 @@ const results = await Promise.allSettled(leagues.map(async ([slug, label, weight
       leagueLogo, leagueLogoDark, homeId: homeCompetitor?.team?.id ?? null, awayId: awayCompetitor?.team?.id ?? null, homeLogo: homeCompetitor?.team?.logo ?? null, awayLogo: awayCompetitor?.team?.logo ?? null,
       priority, featured: priority >= 75, status: event.status?.type?.description ?? 'Programmé',
       completed: event.status?.type?.completed === true, voided: voidStatuses.has(event.status?.type?.name), knockout: /round of|quarter|semi|final|knockout|play-?off/i.test(competition?.notes?.[0]?.headline ?? ''),
+      regulation: regulationScore(event),
       homeScore: homeCompetitor?.score == null ? null : Number(homeCompetitor.score),
       awayScore: awayCompetitor?.score == null ? null : Number(awayCompetitor.score),
       ...model(homeTeam, awayTeam, priority)
@@ -136,7 +138,7 @@ const unique = allUnique
   .filter(match => match.date >= historyStart.toISOString().slice(0, 10) && match.date <= end.toISOString().slice(0, 10))
   .sort((a, b) => a.date.localeCompare(b.date) || b.priority - a.priority);
 const settlements = allUnique.filter(match => match.completed && Number.isFinite(match.homeScore) && Number.isFinite(match.awayScore))
-  .map(({id,date,home,away,homeScore,awayScore,completed})=>({id,date,home,away,homeScore,awayScore,completed}));
+  .map(({id,date,home,away,homeScore,awayScore,completed,regulation})=>({id,date,home,away,homeScore,awayScore,completed,regulation}));
 const providerFailures = [...failures];
 let history = [];
 try { history = await footballHistory(); } catch (error) { providerFailures.push(error.message); }

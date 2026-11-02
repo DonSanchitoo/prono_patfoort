@@ -20,16 +20,16 @@ export function fixtureRow(match, now = new Date()) {
   return { id: match.id, league: match.league, round: match.round ?? null, home: match.home, away: match.away, home_id: match.homeId ?? null, away_id: match.awayId ?? null,
     kickoff: match.kickoff ?? `${match.date}T12:00:00Z`, status: match.status ?? 'Programmé', completed: match.completed === true, voided: match.voided === true,
     home_score: Number.isFinite(match.homeScore) ? match.homeScore : null, away_score: Number.isFinite(match.awayScore) ? match.awayScore : null,
-    odds, odds_source: Object.fromEntries(Object.keys(odds).map(key => [key, match.realOddsMarkets?.includes(key) ? 'real' : 'estimated'])), updated_at: now.toISOString() };
+    regulation: match.regulation ?? null, odds, odds_source: Object.fromEntries(Object.keys(odds).map(key => [key, match.realOddsMarkets?.includes(key) ? 'real' : 'estimated'])), updated_at: now.toISOString() };
 }
 // Résultats utilisables par settleTicket : scores terminés, matchs annulés, et matchs jamais joués au bout de STALE_DAYS jours.
 export function buildResults(settlements, fixtureRows = [], now = Date.now()) {
   const byId = new Map();
-  for (const item of settlements ?? []) if (item.completed || item.voided) byId.set(item.id, { id: item.id, home: item.home, away: item.away, homeScore: item.homeScore, awayScore: item.awayScore, completed: item.completed === true, voided: item.voided === true });
+  for (const item of settlements ?? []) if (item.completed || item.voided) byId.set(item.id, { id: item.id, home: item.home, away: item.away, homeScore: item.homeScore, awayScore: item.awayScore, regulation:item.regulation, completed: item.completed === true, voided: item.voided === true });
   for (const row of fixtureRows) {
     if (byId.has(row.id)) continue;
     if (row.voided || (!row.completed && Date.parse(row.kickoff) < now - STALE_DAYS * 864e5)) byId.set(row.id, { id: row.id, voided: true });
-    else if (row.completed && Number.isFinite(row.home_score) && Number.isFinite(row.away_score)) byId.set(row.id, { id: row.id, home: row.home, away: row.away, homeScore: row.home_score, awayScore: row.away_score, completed: true });
+    else if (row.completed && Number.isFinite(row.home_score) && Number.isFinite(row.away_score)) byId.set(row.id, { id: row.id, home: row.home, away: row.away, homeScore: row.home_score, awayScore: row.away_score, regulation:row.regulation, completed: true });
   }
   return [...byId.values()];
 }

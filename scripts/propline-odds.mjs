@@ -33,7 +33,10 @@ export function propLineOffers(event,now=Date.now(),stage=0){
         if(market.key==='h2h')key=sameTeam(outcome.name,event.home_team)?'home':sameTeam(outcome.name,event.away_team)?'away':/^draw$/i.test(outcome.name)?'draw':null;
         else if(market.key==='both_teams_to_score')key=/^yes$/i.test(outcome.name)?'btts':/^no$/i.test(outcome.name)?'bttsNo':null;
         else if(market.key==='totals'&&/^(over|under)$/i.test(outcome.name)&&[1.5,2.5,3.5].includes(Number(outcome.point))){const side=outcome.name.toLowerCase();key=Number(outcome.point)===2.5?(side==='over'?'over':'under'):side+String(Number(outcome.point)*10)}
-        else if(market.key==='double_chance')key=({'1N':'homeDraw','1X':'homeDraw','N2':'drawAway','X2':'drawAway','12':'homeAway'})[outcome.name];
+        else if(market.key==='double_chance'){
+          key=({'1N':'homeDraw','1X':'homeDraw','N2':'drawAway','X2':'drawAway','12':'homeAway'})[outcome.name];
+          if(!key){const parts=String(outcome.name??'').split('/').map(name=>name.trim()),home=parts.some(name=>sameTeam(name,event.home_team)),away=parts.some(name=>sameTeam(name,event.away_team)),draw=parts.some(name=>/^draw$/i.test(name));if(parts.length===2)key=home&&draw?'homeDraw':away&&draw?'drawAway':home&&away?'homeAway':null;}
+        }
         else if(market.key==='draw_no_bet')key=sameTeam(outcome.name,event.home_team)?'homeDnb':sameTeam(outcome.name,event.away_team)?'awayDnb':null;
         else if(market.key==='team_totals'&&/^(over|under)$/i.test(outcome.name)){
           const team=outcome.team??market.team,side=sameTeam(team,event.home_team)?'home':sameTeam(team,event.away_team)?'away':null,line=Number(outcome.point);
