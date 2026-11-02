@@ -31,7 +31,7 @@ function daySchedule(now,prefs) {
   }
   return schedules.get(key);
 }
-function dailyDue(now,prefs){return daySchedule(now,prefs).due[Number(prefs.briefing_minute??900)];}
+function dailyDue(now,prefs){return daySchedule(now,prefs).due[Number(prefs.briefing_minute??660)];}
 export function planBriefing(matches, prefs, now=Date.now()) {
   if(!prefs.enabled||!prefs.channels?.includes('email'))return null;
   if(!prefs.daily_briefing&&!prefs.favorite_briefing)return null;
