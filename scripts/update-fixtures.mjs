@@ -1,3 +1,4 @@
+import {marketKeys} from '../markets.js';
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { parisDate, pickDailyChallenge, recommendedMarket } from '../model.js';
 import { ODDS_REFRESH_HOURS, SECONDARY_ODDS_WINDOW_HOURS, mergeCachedOffers, summarizeOffers } from '../odds-cache.js';
@@ -151,7 +152,7 @@ const enriched = unique.map(match => {
   const previous = previousData.matches?.find(item=>item.id===match.id);
   const realOdds = consensus(propLineResult.offersByMatch.get(match.id), previous?.bookmakerOffers);
   if (realOdds) {
-    const realMarkets = ['home','draw','away','over','btts'].filter(key => realOdds[key]);
+    const realMarkets = marketKeys(realOdds).filter(key => realOdds[key]);
     match.odds = {...match.odds,...Object.fromEntries(realMarkets.map(key => [key,realOdds[key]]))};
     match.oddsSource = realOdds.offers.some(offer=>Object.keys(offer).some(key=>key.endsWith('Source')&&offer[key]==='PropLine')) ? 'PropLine' : 'Cache historique'; match.bookmakerOffers = realOdds.offers; match.bookmakerCount = realOdds.offers.length; match.oddsBookmakerCounts = realOdds.counts; match.realOddsMarkets = realMarkets; match.oddsCachedMarkets=realOdds.cachedMarkets;
   }

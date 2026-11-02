@@ -97,3 +97,5 @@ Contrôle : `league_rounds` contient la semaine courante ; `public_weekly_standi
 
 ### Compteurs et listes de suivi (BET-145)
 Appliquer `supabase/migrations/supabase-v35-schema.sql` après V34 avant publication. La RPC `profile_connections` renvoie les deux compteurs réels et des listes paginées de 25 profils. Un profil privé est consultable uniquement par son propriétaire ; les personnes privées sont masquées des listes (les compteurs conservent le total réel). Les politiques RLS de `follows` restent inchangées.
+
+Marchés prioritaires BET-153 : appliquer V36 après V35, puis suivre [les étapes d’activation](docs/MARKETS_SETUP.md). Ne pas activer de nouveaux marchés avant migration et validation fournisseur.
