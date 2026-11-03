@@ -1,10 +1,12 @@
 // Boutique et usages des jetons (BET-62) : catalogue, raretés, vitrine du jour, packs, revente. Fonctions pures, sans DOM ni réseau.
 // Les jetons n'ont aucune valeur : ils ne s'achètent pas, ne s'échangent pas, ne se convertissent pas. Noms génériques (aucune marque) en attendant l'avis juridique (BET-63).
 export const RARITIES = { common: { label: 'Commun', min: 300, max: 800 }, rare: { label: 'Rare', min: 1500, max: 3000 }, epic: { label: 'Épique', min: 5000, max: 20000 }, legendary: { label: 'Légendaire', min: 25000, max: 50000 }, exclusive: { label: 'Exclusif', min: 0, max: 0 } };
-export const CATEGORIES = { kit: 'Maillots', accessory: 'Accessoires', trophy: 'Trophées', background: 'Fonds et stades', base: 'Socles', frame: 'Cadres de carte', celebration: 'Célébrations', title: 'Titres' };
+export const CATEGORIES = { kit: 'Maillots', accessory: 'Accessoires', trophy: 'Trophées', background: 'Fonds et stades', base: 'Socles', frame: 'Cadres de carte', cardbg: 'Fonds de carte', cardfont: 'Polices du numéro', cardfx: 'Effets de carte', celebration: 'Célébrations', victoryfx: 'Effets de victoire', sound: 'Ambiances sonores', title: 'Titres' };
 export const WEEKLY_DISCOUNT = .3, PACK_DISCOUNT = .2, RESALE_SHARE = .3, SHOWCASE_SIZE = 8;
-// Seuls le titre et le cadre de carte s'affichent aujourd'hui ; le reste s'affichera sur l'avatar 3D dès sa livraison (BET-47 et BET-49).
-export const DISPLAYABLE = ['title', 'frame'];
+// Objets équipés qui s'affichent sur la carte joueur et que les autres joueurs voient (vue public_equipped) ; le reste se porte sur l'avatar 3D (BET-49).
+export const DISPLAYABLE = ['title', 'frame', 'cardbg', 'cardfont', 'cardfx'];
+// Objets qui s'équipent : ceux de la carte, plus les effets de victoire et les ambiances sonores, joués seulement chez leur propriétaire (BET-62).
+export const EQUIPPABLE = [...DISPLAYABLE, 'victoryfx', 'sound'];
 
 const item = (id, category, name, rarity, price, extra = {}) => ({ id, category, name, rarity, price, ...extra });
 const kits = [['lime', 'Lime'], ['blue', 'Bleu'], ['red', 'Rouge'], ['white', 'Blanc'], ['black', 'Noir'], ['orange', 'Orange']].map(([key, label], index) => item(`kit-plain-${key}`, 'kit', `Maillot uni ${label}`, 'common', 400 + (index % 3) * 150));
@@ -23,9 +25,16 @@ const bases = [item('base-grass', 'base', 'Socle gazon', 'common', 500), item('b
 const frames = [item('frame-bronze', 'frame', 'Cadre bronze', 'common', 500, { asset: 'bronze' }), item('frame-silver', 'frame', 'Cadre argent', 'rare', 1500, { asset: 'silver' }), item('frame-neon', 'frame', 'Cadre néon', 'rare', 2200, { asset: 'neon' }), item('frame-gold', 'frame', 'Cadre or', 'epic', 6000, { asset: 'gold' })];
 const celebrations = [item('celeb-fist', 'celebration', 'Poing levé', 'common', 600), item('celeb-slide', 'celebration', 'Glissade à genoux', 'rare', 1800), item('celeb-flip', 'celebration', 'Salto', 'rare', 2200)];
 celebrations.push(item('celeb-heart', 'celebration', 'Cœur aux supporters', 'common', 800), item('celeb-archer', 'celebration', 'L’Archer', 'rare', 1900), item('celeb-dance', 'celebration', 'Pas de victoire', 'rare', 2300));
+// Carte joueur : fond, police du numéro et effet brillant (BET-62). `asset` désigne le style défini dans card-style.js.
+const cardBackgrounds = [item('cardbg-pitch', 'cardbg', 'Fond pelouse', 'common', 600, { asset: 'pitch' }), item('cardbg-night', 'cardbg', 'Fond nuit de match', 'common', 700, { asset: 'night' }), item('cardbg-aurora', 'cardbg', 'Fond aurore', 'rare', 1800, { asset: 'aurora' }), item('cardbg-gold', 'cardbg', 'Fond or', 'epic', 5500, { asset: 'gold' })];
+const cardFonts = [item('cardfont-serif', 'cardfont', 'Numéro à empattements', 'common', 400, { asset: 'serif' }), item('cardfont-mono', 'cardfont', 'Numéro machine', 'common', 500, { asset: 'mono' }), item('cardfont-slant', 'cardfont', 'Numéro penché', 'rare', 1500, { asset: 'slant' }), item('cardfont-impact', 'cardfont', 'Numéro affiche', 'rare', 1600, { asset: 'impact' })];
+const cardEffects = [item('cardfx-shine', 'cardfx', 'Reflet', 'rare', 1800, { asset: 'shine' }), item('cardfx-sparkle', 'cardfx', 'Étincelles', 'rare', 2400, { asset: 'sparkle' }), item('cardfx-holo', 'cardfx', 'Brillant holographique', 'epic', 6500, { asset: 'holo' })];
+// Effets de victoire et ambiances sonores (BET-62) : joués avec la célébration d'un prono gagné ; le son reste coupé tant que le joueur ne l'active pas.
+const victoryEffects = [item('victoryfx-confetti', 'victoryfx', 'Confettis aux couleurs du club', 'rare', 1500, { asset: 'confetti' }), item('victoryfx-smoke', 'victoryfx', 'Fumigènes aux couleurs du club', 'rare', 2200, { asset: 'smoke' })];
+const sounds = [item('sound-siren', 'sound', 'Sirène de but', 'common', 800, { asset: 'siren' }), item('sound-chants', 'sound', 'Chants de tribune', 'rare', 2000, { asset: 'chants' })];
 const titles = [item('title-strategist', 'title', 'Le Stratège', 'common', 300, { asset: 'Le Stratège' }), item('title-lynx', 'title', 'Œil de lynx', 'rare', 1500, { asset: 'Œil de lynx' }), item('title-cool', 'title', 'Sang-froid', 'rare', 2000, { asset: 'Sang-froid' }), item('title-legend', 'title', 'Légende vivante', 'epic', 8000, { asset: 'Légende vivante' })];
 const exclusives = [item('acc-crown', 'accessory', 'Couronne du Master', 'exclusive', 0, { exclusive: true }), item('kit-champion', 'kit', 'Maillot de champion', 'exclusive', 0, { exclusive: true })];
-export const CATALOG = [...kits, ...stripes, ...retro, ...newKits, ...accessories, ...trophies, ...stadiumItems, ...simpleBackgrounds, ...bases, ...frames, ...celebrations, ...titles, ...exclusives];
+export const CATALOG = [...kits, ...stripes, ...retro, ...newKits, ...accessories, ...trophies, ...stadiumItems, ...simpleBackgrounds, ...bases, ...frames, ...cardBackgrounds, ...cardFonts, ...cardEffects, ...celebrations, ...victoryEffects, ...sounds, ...titles, ...exclusives];
 // Packs stade : stade (intérieur et extérieur), maillot uni et écharpe, moins cher que les éléments séparés.
 export const PACKS = stadiums.map(([key, label]) => ({ id: `pack-${key}`, name: `Pack stade de ${label}`, components: [`bg-${key}-in`, `bg-${key}-out`, 'kit-plain-lime', 'acc-scarf'] }));
 

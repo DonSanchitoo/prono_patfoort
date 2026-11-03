@@ -55,6 +55,10 @@ Diagnostic confirmé pour BET-92 : la réponse reçue est `{"code":"P0001","deta
 
 Exécuter `supabase-v22-schema.sql` après V17. Cette migration étend la validation stricte sans modifier les inventaires, les soldes ou les avatars existants, et ajoute les nouveaux objets au catalogue serveur. Trois maillots à motifs, deux trophées génériques, deux ambiances et deux stades (intérieur et extérieur), ainsi que trois célébrations sont disponibles. Les aperçus et le rendu équipé partagent les mêmes textures et identifiants. Les règles d’achat et de possession continuent à être vérifiées par les RPC du Club. Le pipeline conserve la synchronisation du catalogue et des prix.
 
+## Carte personnalisée, effets de victoire et sons (BET-62, complément)
+
+Exécuter `supabase-v24-schema.sql` après V16 (réexécutable, sans effet sur les inventaires ni les équipements). Elle ajoute fonds, polices du numéro et effets de carte à la vue `public_equipped` et insère dans `shop_items` les quinze nouveaux objets (cartes, effets de victoire, ambiances sonores). Sans cette migration, la boutique propose déjà les objets (le catalogue est synchronisé par le pipeline) mais les autres joueurs ne voient pas encore le fond, la police et l'effet de votre carte. Aucun secret ni service supplémentaire : le son est synthétisé dans le navigateur.
+
 ## Alertes multicanales (BET-69)
 
 La migration `supabase-v23-schema.sql` et la fonction Edge ne sont pas déployées par GitHub Pages. Suivre [NOTIFICATIONS_SETUP.md](NOTIFICATIONS_SETUP.md) pour la configuration, les canaux, le consentement, les quotas et la rotation des secrets. Sans cette configuration, le site affiche une indisponibilité explicite et aucun envoi ne se produit.

@@ -5,6 +5,7 @@ import { sanitizeAvatar } from './avatar-config.js';
 import { profileHistory } from './profile-history.js';
 import { seasonLabel } from './league.js';
 import { CATALOG } from './shop.js';
+import { cardStyle } from './card-style.js';
 const NS = 'http://www.w3.org/2000/svg';
 const TABS = [['overview', 'Aperçu'], ['seasons', 'Saisons'], ['badges', 'Trophées'], ['bets', 'Mes paris'], ['avatar', 'Avatar', true], ['notifications', 'Mes alertes', true], ['account', 'Compte et confidentialité', true]];
 const DIVISION_COLORS = ['#8a6d4b', '#b87333', '#9aa5b1', '#d4a017', '#2fa4a4', '#7a4dd8', '#C8F03C'];
@@ -30,19 +31,20 @@ export function initProfilePage(deps) {
   function attributesOf(raw) { return cardAttributes(raw); }
   function cardHtml(info) {
     const attributes = attributesOf(info.raw), overall = cardOverall(attributes), provisional = cardProvisional(info.raw), level = levelInfo(info.xp);
-    return `<div class="player-card${info.equipped?.frame ? ` frame-${html(info.equipped.frame.asset)}` : ''}" style="--card:${color(info.echelon)}" id="player-card"><div class="card-top"><b class="card-overall">${overall}</b><span>${info.echelon == null ? 'Placement' : html(echelonName(info.echelon))}<em>${info.echelon == null ? '' : chevrons(info.echelon)}</em></span></div><strong class="card-name">${html(info.profile.nickname)}</strong><small>Niv. ${level.level} · ${level.title}${provisional ? ' · provisoire' : ''}</small><div class="card-attrs">${CARD_ATTRIBUTES.map(name => `<span><b>${attributes[name]}</b>${name}</span>`).join('')}</div></div>`;
+    return `<div class="player-card${info.equipped?.frame ? ` frame-${html(info.equipped.frame.asset)}` : ''}${cardStyle(info.equipped).classes.map(name => ` ${name}`).join('')}" style="--card:${color(info.echelon)}" id="player-card"><div class="card-top"><b class="card-overall">${overall}</b><span>${info.echelon == null ? 'Placement' : html(echelonName(info.echelon))}<em>${info.echelon == null ? '' : chevrons(info.echelon)}</em></span></div><strong class="card-name">${html(info.profile.nickname)}</strong><small>Niv. ${level.level} · ${level.title}${provisional ? ' · provisoire' : ''}</small><div class="card-attrs">${CARD_ATTRIBUTES.map(name => `<span><b>${attributes[name]}</b>${name}</span>`).join('')}</div></div>`;
   }
   // Partage de la carte en image : canvas vers PNG, partage natif sur téléphone, sinon téléchargement.
   async function shareCard(info) {
     const attributes = attributesOf(info.raw), overall = cardOverall(attributes), level = levelInfo(info.xp), canvas = document.createElement('canvas');
     canvas.width = 600; canvas.height = 800; const ctx = canvas.getContext('2d'), accent = color(info.echelon);
-    const gradient = ctx.createLinearGradient(0, 0, 600, 800); gradient.addColorStop(0, accent); gradient.addColorStop(1, '#0A0C0B'); ctx.fillStyle = gradient; ctx.fillRect(0, 0, 600, 800);
+    const style = cardStyle(info.equipped), gradient = ctx.createLinearGradient(0, 0, 600, 800); gradient.addColorStop(0, style.bg?.[0] ?? accent); gradient.addColorStop(1, style.bg?.[1] ?? '#0A0C0B'); ctx.fillStyle = gradient; ctx.fillRect(0, 0, 600, 800);
     ctx.fillStyle = 'rgba(10,12,11,.78)'; ctx.beginPath(); ctx.moveTo(300, 40); ctx.lineTo(560, 110); ctx.lineTo(560, 520); ctx.quadraticCurveTo(560, 700, 300, 770); ctx.quadraticCurveTo(40, 700, 40, 520); ctx.lineTo(40, 110); ctx.closePath(); ctx.fill(); ctx.strokeStyle = accent; ctx.lineWidth = 6; ctx.stroke();
-    ctx.fillStyle = '#F4F7F2'; ctx.textAlign = 'center'; ctx.font = '800 120px "Barlow Condensed", Impact, sans-serif'; ctx.fillText(String(overall), 300, 220);
+    ctx.fillStyle = '#F4F7F2'; ctx.textAlign = 'center'; ctx.font = style.font ? `${style.font.style} 800 112px ${style.font.family}` : '800 120px "Barlow Condensed", Impact, sans-serif'; ctx.fillText(String(overall), 300, 220);
     ctx.font = '700 28px Inter, sans-serif'; ctx.fillStyle = accent; ctx.fillText(info.echelon == null ? 'Saison de placement' : `${echelonName(info.echelon)} ${chevrons(info.echelon)}`, 300, 270);
     ctx.fillStyle = '#F4F7F2'; ctx.font = '800 54px "Barlow Condensed", Impact, sans-serif'; ctx.fillText(info.profile.nickname.toUpperCase(), 300, 345, 440);
     ctx.font = '600 22px Inter, sans-serif'; ctx.fillStyle = '#C9D3C6'; ctx.fillText(`Niveau ${level.level} · ${level.title}${cardProvisional(info.raw) ? ' · provisoire' : ''}`, 300, 385);
     CARD_ATTRIBUTES.forEach((name, index) => { const x = 130 + (index % 3) * 170, y = 470 + Math.floor(index / 3) * 110; ctx.fillStyle = '#F4F7F2'; ctx.font = '800 56px "Barlow Condensed", Impact, sans-serif'; ctx.fillText(String(attributes[name]), x, y); ctx.fillStyle = '#9FB09A'; ctx.font = '700 20px Inter, sans-serif'; ctx.fillText(name, x, y + 30); });
+    if (style.fx) { const shine = ctx.createLinearGradient(80, 40, 520, 760); shine.addColorStop(0, 'rgba(255,255,255,0)'); shine.addColorStop(.5, style.fx === 'holo' ? 'rgba(160,120,255,.22)' : 'rgba(255,255,255,.18)'); shine.addColorStop(1, 'rgba(255,255,255,0)'); ctx.fillStyle = shine; ctx.fillRect(0, 0, 600, 800); }
     ctx.fillStyle = '#9FB09A'; ctx.font = '500 16px Inter, sans-serif'; ctx.fillText('BetMaster · paris virtuels · 18+', 300, 740);
     const blob = await new Promise(resolve => canvas.toBlob(resolve, 'image/png'));
     if (!blob) { toast('Impossible de générer l’image de la carte'); return; }
