@@ -117,3 +117,6 @@ Cotes françaises (BET-151) : `scripts/propline-odds.mjs` complète seulement BT
 Marchés BET-153 : `markets.js` définit les identifiants, lignes et règles de résultat. V36 après V35 valide les nouveaux choix côté serveur ; activation progressive par `PROPLINE_MARKET_STAGE` (0 par défaut), voir `docs/MARKETS_SETUP.md`. Les recommandations automatiques restent limitées aux cinq marchés historiques.
 
 Production BET-153 : V36 appliquée, étape 2 activée explicitement dans `update-fixtures.yml`. Collectes planifiées à 6 h et 14 h Paris ; `workflow_dispatch` permet une collecte manuelle d’administration (notamment au déploiement), jamais depuis le navigateur.
+
+
+Classement confirmé (BET-169) : V38 après V37. `ranking-policy.js` et les fonctions SQL appliquent la règle V3 aux périodes commençant le 9 novembre 2026 ou après. Le barème numérique V2, ROI et critères de promotion restent inchangés. Avant 10 décisions gagnées/perdues, rang public NULL, zone provisoire distincte, aucun podium/titre confirmé. Ne pas utiliser l’ordre interne des tables pour présenter un rang provisoire. Archives inchangées ; guide `docs/RANKING_CONFIRMATION.md`.

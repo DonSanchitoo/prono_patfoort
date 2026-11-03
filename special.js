@@ -2,6 +2,7 @@
 // Mêmes règles que la fonction SQL special_try_pick (supabase/migrations/supabase-v9-schema.sql) : le serveur décide, ces fonctions servent à planifier les journées,
 // à prévenir le joueur sur le ticket (« Ce pari compte pour ») et aux tests.
 import { tieBreak, weekKey, leagueRoi } from './model.js';
+import {rankPeriod,decidedEntry} from './ranking-policy.js';
 
 export const MAX_SPECIAL_LEAGUES = Infinity, CHAMPION_SHARE = .6, ONE_X_TWO = ['home', 'draw', 'away'];
 const text = value => String(value ?? '');
@@ -47,10 +48,10 @@ export function championEligible(playedRounds, roundsSinceJoining) { return roun
 export function tier(rank, size) { return size > 0 && rank <= Math.max(1, Math.ceil(size * .01)) ? 'top1' : size > 0 && rank <= Math.max(1, Math.ceil(size * .1)) ? 'top10' : null; }
 
 // Classement d'une ligue : points des pronos réglés. picks : [{user_id, points, status, settled_at}] ; members : [{user_id, joined_at}] ; scope : 'season' ou 'AAAA-MM' (mois de Paris du règlement).
-export function specialStandings(picks, members, scope = 'season', monthOf = date => String(date).slice(0, 7)) {
+export function specialStandings(picks, members, scope = 'season', monthOf = date => String(date).slice(0, 7), periodStart = null) {
   const byUser = new Map();
   for (const pick of picks) if (pick.status !== 'pending' && (scope === 'season' || monthOf(pick.settled_at) === scope)) byUser.set(pick.user_id, [...(byUser.get(pick.user_id) ?? []), pick]);
-  const rows = members.map(member => { const own = byUser.get(member.user_id) ?? [], points = Math.round(own.reduce((sum, pick) => sum + Number(pick.points), 0) * 100) / 100; return { user_id: member.user_id, points, picks: own.length, wins: own.filter(pick => Number(pick.points) > 0).length, roi: leagueRoi(points, own.filter(pick => Number(pick.points) !== 0).length), joinedAt: member.joined_at }; });
+  const rows = members.map(member => { const own = byUser.get(member.user_id) ?? [], points = Math.round(own.reduce((sum, pick) => sum + Number(pick.points), 0) * 100) / 100; return { user_id: member.user_id, points, picks: own.length, decided:own.filter(decidedEntry).length, wins: own.filter(pick => Number(pick.points) > 0).length, roi: leagueRoi(points, own.filter(pick=>Number(pick.points)!==0).length), joinedAt: member.joined_at }; });
   rows.sort((a, b) => tieBreak(a, b));
-  return rows.map(({ joinedAt, ...row }, index) => ({ ...row, rank: index + 1 }));
+  return rankPeriod(rows.map(({joinedAt,...row})=>row),periodStart);
 }

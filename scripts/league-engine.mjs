@@ -29,9 +29,9 @@ export async function recomputeStandings(admin, now = new Date(), season = seaso
   const [players, members, entries, daily, old] = await Promise.all([
     admin.selectAll('player_league', 'select=user_id,echelon,joined_at,inactive'),
     admin.selectAll('group_members', `season=eq.${season}&select=user_id,group_id`),
-    admin.selectAll('league_entries', `season=eq.${season}&league=eq.general&select=user_id,points,settled_at`),
+    admin.selectAll('league_ranking_entries', `season=eq.${season}&select=user_id,points,settled_at,decided`),
     admin.selectAll('daily_participation', `season=eq.${season}&select=user_id,played,good,offered`),
-    admin.selectAll('standings', `season=eq.${season}&select=user_id,rank,prev_rank,snapshot_date`)
+    admin.selectAll('standings', `season=eq.${season}&select=user_id,rank,prev_rank,snapshot_date,confirmed`)
   ]);
   const group = new Map(members.map(member => [member.user_id, member.group_id])), withEntries = new Set(entries.map(entry => entry.user_id));
   const roster = players.filter(player => group.has(player.user_id) || player.echelon == null || withEntries.has(player.user_id))
@@ -58,11 +58,17 @@ export function planClosure({ season, players, standings, groups, groupMembers, 
   const standing = new Map(standings.map(row => [row.user_id, row])), label = new Map(groups.map(group => [group.id, group.label])), member = new Map(groupMembers.map(item => [item.user_id, item.group_id]));
   const input = players.map(player => {
     const row = standing.get(player.user_id);
-    return { id: player.user_id, echelon: player.echelon, group: label.get(member.get(player.user_id)) ?? '', points: Number(row?.points ?? 0), roi: Number(row?.roi ?? 0), wins: Number(row?.wins ?? 0), dailyGood: Number(row?.daily_good ?? 0), joinedAt: player.joined_at, active: Number(row?.picks ?? 0) > 0, qualified: row?.qualified ?? true, protected: Boolean(player.protected) };
+    return { id: player.user_id, echelon: player.echelon, group: label.get(member.get(player.user_id)) ?? '', points: Number(row?.points ?? 0), roi: Number(row?.roi ?? 0), wins: Number(row?.wins ?? 0), dailyGood: Number(row?.daily_good ?? 0), joinedAt: player.joined_at, active: Number(row?.picks ?? 0) > 0, qualified: row?.qualified ?? true, protected: Boolean(player.protected),confirmed:row?.confirmed!==false,ranking_version:row?.ranking_version??2 };
   });
-  const result = closeSeason(input, { barrage: weekendPoints });
+  const waiting=input.filter(p=>p.ranking_version===3&&!p.confirmed&&p.echelon==null),result = closeSeason(input.filter(p=>!waiting.includes(p)), { barrage: weekendPoints });
+  for(const p of waiting)result.moves.push({id:p.id,from:null,to:null,outcome:'PLACE',protectedNext:false,inactive:false});
   const points = new Map(input.map(player => [player.id, player.points]));
-  const results = result.moves.map(move => ({ user_id: move.id, from_echelon: move.from, to_echelon: move.to, outcome: move.outcome, group_rank: move.groupRank ?? null, group_size: move.groupSize ?? null, points: points.get(move.id), protected: move.protectedNext, inactive: move.inactive, barrage: Boolean(move.barrage), ...unlockPlan(move) }));
+  const inputById=new Map(input.map(player=>[player.id,player]));
+  const results = result.moves.map(move => {
+    const player=inputById.get(move.id),version=player?.ranking_version??2,confirmed=player?.confirmed!==false;
+    const groupSize=version===3?input.filter(p=>p.confirmed&&p.group===player.group&&p.echelon===move.from).length:move.groupSize??null;
+    return {ranking_version:version,confirmed,user_id:move.id,from_echelon:move.from,to_echelon:move.to,outcome:move.outcome,group_rank:confirmed?move.groupRank??null:null,group_size:groupSize,points:points.get(move.id),protected:move.protectedNext,inactive:move.inactive,barrage:Boolean(move.barrage),...unlockPlan(move)};
+  });
   return { season, next: nextSeason(season), results, groups: result.groups };
 }
 
@@ -70,7 +76,7 @@ export async function closeOneSeason(admin, season) {
   await recomputeStandings(admin, new Date(), season, lastDayOf(season));
   const [players, standings, groups, groupMembers] = await Promise.all([
     admin.selectAll('player_league', 'select=user_id,echelon,joined_at,protected,inactive'),
-    admin.selectAll('standings', `season=eq.${season}&select=user_id,points,roi,wins,daily_good,picks,qualified,rank`),
+    admin.selectAll('standings', `season=eq.${season}&select=user_id,points,roi,wins,daily_good,picks,qualified,rank,confirmed,ranking_version`),
     admin.selectAll('league_groups', `season=eq.${season}&select=id,label`),
     admin.selectAll('group_members', `season=eq.${season}&select=user_id,group_id`)
   ]);
@@ -80,7 +86,7 @@ export async function closeOneSeason(admin, season) {
   // BET-133 : la fin d’année archive les points, les divisions évoluent uniquement chaque semaine.
   const rounds = await admin.select('league_rounds', `season=eq.${season}&select=week_start&limit=1`);
   if(rounds.length){
-    plan.results=players.map(player=>({user_id:player.user_id,from_echelon:player.echelon,to_echelon:player.echelon,outcome:'MAINTENU',group_rank:standings.find(row=>row.user_id===player.user_id)?.rank??null,group_size:groupMembers.filter(m=>m.group_id===groupMembers.find(m=>m.user_id===player.user_id)?.group_id).length,points:Number(standings.find(row=>row.user_id===player.user_id)?.points??0),protected:player.protected,inactive:player.inactive,unlocks:[],revoke:[]}));
+    plan.results=players.map(player=>({user_id:player.user_id,from_echelon:player.echelon,to_echelon:player.echelon,outcome:'MAINTENU',ranking_version:standings.find(row=>row.user_id===player.user_id)?.ranking_version??2,group_rank:standings.find(row=>row.user_id===player.user_id)?.confirmed===false?null:standings.find(row=>row.user_id===player.user_id)?.rank??null,group_size:groupMembers.filter(m=>m.group_id===groupMembers.find(m=>m.user_id===player.user_id)?.group_id&&standings.find(row=>row.user_id===m.user_id)?.confirmed!==false).length,points:Number(standings.find(row=>row.user_id===player.user_id)?.points??0),protected:player.protected,inactive:player.inactive,unlocks:[],revoke:[]}));
     const roster=await admin.selectAll('league_groups', `season=eq.${season}&select=id,label,echelon`);
     plan.groups=roster.map(group=>({...group,members:groupMembers.filter(m=>m.group_id===group.id).map(m=>m.user_id)}));
   }

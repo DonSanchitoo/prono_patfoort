@@ -1,4 +1,6 @@
-# BET-169 : proposition à valider avant toute bascule
+# BET-169 : proposition validée le 3 novembre 2026
+
+Validation explicite reçue dans le chat et inscrite dans YouTrack le 3 novembre 2026. Implémentation et calendrier : `../RANKING_CONFIRMATION.md`.
 
 Étude au 3 novembre 2026. Aucun moteur ni classement de production modifié par cette PR. Reproduction : `node scripts/study-league-scoring.mjs` (fixture réelle anonymisée versionnée, semaine du 2 novembre). Le deuxième argument permet une autre semaine : `node scripts/study-league-scoring.mjs docs/studies/BET-169-anonymized.json 2026-10-26`.
 

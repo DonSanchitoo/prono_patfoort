@@ -1,5 +1,6 @@
 // Ligue générale (BET-55) : fonctions pures sans DOM ni réseau, utilisées par scripts/close-season.mjs, le calcul des classements et le site.
 import { tieBreak, leagueRoi, MIN_RANKED_PICKS } from './model.js';
+import {rankPeriod,decidedEntry} from './ranking-policy.js';
 
 export const DIVISIONS = ['District', 'Régional', 'National', 'Pro', 'Élite'];
 // 17 échelons, du plus bas au plus haut : District III, II, I ... Élite III, II, I, Champions, Master.
@@ -55,7 +56,7 @@ export function makeGroups(ranked) {
   return result;
 }
 
-const byRank = (a, b) => tieBreak(a, b);
+const byRank = (a, b) => Number(b.confirmed!==false)-Number(a.confirmed!==false)||tieBreak(a, b);
 // Rangs dans les groupes : 1 = premier du groupe.
 function withGroupRanks(players) {
   const groups = new Map();
@@ -187,16 +188,16 @@ export function computeStandings({ season, members, entries, participation = {},
   for (const entry of entries) byUser.set(entry.user_id, [...(byUser.get(entry.user_id) ?? []), entry]);
   const rows = members.map(member => {
     const own = (byUser.get(member.user_id) ?? []).slice().sort((a, b) => String(b.settled_at).localeCompare(String(a.settled_at))), played = participation[member.user_id] ?? { played: 0, good: 0, offered: 0 };
-    const points = own.reduce((sum, entry) => sum + Number(entry.points), 0), wins = own.filter(entry => Number(entry.points) > 0).length, decided = own.filter(entry => Number(entry.points) !== 0).length;
-    return { season, user_id: member.user_id, group_id: member.group_id ?? null, points: Math.round(points * 100) / 100, picks: own.length, wins, roi: leagueRoi(Math.round(points * 100) / 100, decided),
+    const points = own.reduce((sum, entry) => sum + Number(entry.points), 0), wins = own.filter(entry => Number(entry.points) > 0).length, decided = own.filter(decidedEntry).length;
+    return { season, user_id: member.user_id, group_id: member.group_id ?? null, points: Math.round(points * 100) / 100, picks: own.length, wins, decided, roi: leagueRoi(Math.round(points * 100) / 100, own.filter(entry=>Number(entry.points)!==0).length),
       form: own.slice(0, 5).map(entry => Number(entry.points) > 0 ? 'V' : Number(entry.points) < 0 ? 'D' : 'N').join(''), daily_good: Number(played.good) || 0,
-      qualified: decided >= MIN_RANKED_PICKS && (!Number(played.offered) || Number(played.played) >= Number(played.offered) * .5), joinedAt: member.joined_at };
+      qualified: own.filter(entry=>Number(entry.points)!==0).length >= MIN_RANKED_PICKS && (!Number(played.offered) || Number(played.played) >= Number(played.offered) * .5), joinedAt: member.joined_at };
   });
   const cohorts = new Map();
   for (const row of rows) cohorts.set(row.group_id, [...(cohorts.get(row.group_id) ?? []), row]);
-  for (const cohort of cohorts.values()) cohort.sort((a, b) => tieBreak(a, b)).forEach((row, index) => { row.rank = index + 1; });
+  for (const cohort of cohorts.values()) for(const ranked of rankPeriod(cohort,/^\d{4}-(\d{4}|\d{2})$/.test(season)?seasonDates(season).start:null))Object.assign(cohort.find(row=>row.user_id===ranked.user_id),ranked);
   return rows.map(({ joinedAt, ...row }) => {
     const before = previous[row.user_id], newDay = !before || before.snapshot_date !== today;
-    return { ...row, prev_rank: before ? (newDay ? before.rank : before.prev_rank ?? before.rank) : null, snapshot_date: newDay ? today : before.snapshot_date, updated_at: new Date().toISOString() };
+    return { ...row, rank:row.rank??rows.filter(x=>x.group_id===row.group_id).length, prev_rank: row.confirmed===false||before?.confirmed===false?null:before ? (newDay ? before.rank : before.prev_rank ?? before.rank) : null, snapshot_date: newDay ? today : before.snapshot_date, updated_at: new Date().toISOString() };
   });
 }

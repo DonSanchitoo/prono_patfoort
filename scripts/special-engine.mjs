@@ -28,19 +28,19 @@ export async function settleGridPicks(admin, results) {
 }
 
 // Lignes de special_standings pour une ligue : classement de la saison et du mois en cours, avec les journées jouées.
-export function standingRows(leagueId, members, picks, month, now = new Date()) {
+export function standingRows(leagueId, members, picks, month, now = new Date(), seasonStart = null) {
   const played = new Map();
   for (const pick of picks) played.set(pick.user_id, new Set([...(played.get(pick.user_id) ?? []), pick.round_id]));
   const monthOf = date => monthKey(date);
-  return [['season', specialStandings(picks, members, 'season', monthOf)], [month, specialStandings(picks, members, month, monthOf)]]
-    .flatMap(([scope, rows]) => rows.map(row => ({ league_id: leagueId, scope, user_id: row.user_id, points: row.points, picks: row.picks, wins: row.wins, roi: row.roi, rank: row.rank, played_rounds: played.get(row.user_id)?.size ?? 0, updated_at: now.toISOString() })));
+  return [['season', specialStandings(picks, members, 'season', monthOf,seasonStart)], [month, specialStandings(picks, members, month, monthOf,`${month}-01`)]]
+    .flatMap(([scope, rows]) => rows.map(row => ({ league_id: leagueId, scope, user_id: row.user_id, points: row.points, picks: row.picks, wins: row.wins, roi: row.roi, rank: row.rank??rows.length, decided:row.decided,confirmed:row.confirmed,ranking_version:row.ranking_version, played_rounds: played.get(row.user_id)?.size ?? 0, updated_at: now.toISOString() })));
 }
 export async function recomputeSpecialStandings(admin, now = new Date()) {
-  const month = monthKey(now), leagues = await admin.selectAll('special_leagues', 'open=eq.true&select=id');
+  const month = monthKey(now), leagues = await admin.selectAll('special_leagues', 'open=eq.true&select=id,season_start');
   const [members, picks] = await Promise.all([admin.selectAll('league_members', 'select=league_id,user_id,joined_at'), admin.selectAll('special_picks', 'select=league_id,user_id,round_id,points,status,settled_at')]);
   let count = 0;
   for (const league of leagues) {
-    const rows = standingRows(league.id, members.filter(item => item.league_id === league.id), picks.filter(item => item.league_id === league.id), month, now);
+    const rows = standingRows(league.id, members.filter(item => item.league_id === league.id), picks.filter(item => item.league_id === league.id), month, now,league.season_start);
     await admin.upsert('special_standings', rows, 'league_id,scope,user_id');
     count += rows.length;
   }
@@ -49,13 +49,13 @@ export async function recomputeSpecialStandings(admin, now = new Date()) {
 
 // Titres d'une saison de ligue spéciale terminée : champion (60 % des journées jouées depuis l'arrivée) et paliers Top 1 % / Top 10 %.
 export function planTitles({ league, rounds, members, picks, season }) {
-  const ranked = specialStandings(picks, members), size = ranked.filter(row => row.picks > 0).length, titles = [];
+  const ranked = specialStandings(picks, members,'season',undefined,league.season_start), size = ranked.filter(row => row.picks > 0&&row.confirmed).length, titles = [];
   const roundsFor = member => rounds.filter(round => new Date(round.starts_at) >= new Date(member.joined_at) && new Date(round.ends_at) <= new Date(`${league.season_end}T23:59:59Z`));
   const joined = new Map(members.map(member => [member.user_id, member]));
   const played = userId => new Set(picks.filter(pick => pick.user_id === userId && pick.status !== 'pending').map(pick => pick.round_id));
-  const champion = ranked.find(row => row.picks > 0 && championEligible(played(row.user_id).size, roundsFor(joined.get(row.user_id)).length));
+  const champion = ranked.find(row => row.confirmed&&row.picks > 0 && championEligible(played(row.user_id).size, roundsFor(joined.get(row.user_id)).length));
   if (champion) titles.push({ league_id: league.id, season, user_id: champion.user_id, kind: 'champion' });
-  for (const row of ranked) { const level = row.picks > 0 ? tier(row.rank, size) : null; if (level) titles.push({ league_id: league.id, season, user_id: row.user_id, kind: level }); }
+  for (const row of ranked) { const level = row.confirmed&&row.picks > 0 ? tier(row.rank, size) : null; if (level) titles.push({ league_id: league.id, season, user_id: row.user_id, kind: level }); }
   return titles;
 }
 export const leagueSeasonLabel = league => `${league.season_start.slice(0, 4)}-${league.season_end.slice(2, 4)}`;
