@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { createAdmin } from '../scripts/supabase-admin.mjs';
-import { updateStreaks } from '../scripts/token-engine.mjs';
+import { payGeneralSeasons, updateStreaks } from '../scripts/token-engine.mjs';
 
 test('la synchronisation conserve le fuseau de Paris dans les filtres REST des paris et défis', async () => {
   const queries = [];
@@ -18,3 +18,18 @@ test('la synchronisation conserve le fuseau de Paris dans les filtres REST des p
     assert.equal(query.searchParams.get('limit'), '1000');
   }
 });
+
+// BET-164 : la clôture annuelle (saisons BET-78 « 2026-2027 ») ne doit pas planter et doit filtrer depuis le 1er juillet.
+for (const [season, now, betsFrom, picksFrom] of [['2026-2027', '2027-07-01T00:30:00Z', '2026-06-28T00:00:00.000Z', '2026-07-01'], ['2026-10', '2026-11-01T00:30:00Z', '2026-09-28T00:00:00.000Z', '2026-10-01']]) {
+  test(`la paie de fin de saison ${season} filtre les paris et les défis depuis le début de la saison`, async () => {
+    const queries = [];
+    const admin = createAdmin({ SUPABASE_URL: 'https://example.supabase.co', SUPABASE_SERVICE_ROLE_KEY: 'test-key-without-real-access' }, async url => {
+      const parsed = new URL(url);
+      queries.push(parsed);
+      return { ok: true, text: async () => JSON.stringify(parsed.pathname === '/rest/v1/league_seasons' ? [{ season }] : []) };
+    });
+    assert.equal(await payGeneralSeasons(admin, new Date(now)), 0);
+    assert.equal(queries.find(url => url.pathname === '/rest/v1/bets').searchParams.get('settled_at'), `gte.${betsFrom}`);
+    assert.equal(queries.find(url => url.pathname === '/rest/v1/daily_picks').searchParams.get('day'), `gte.${picksFrom}`);
+  });
+}
