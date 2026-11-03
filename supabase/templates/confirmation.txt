@@ -1,0 +1,18 @@
+Bienvenue au Club BetOptimum : confirme ton adresse
+
+BIENVENUE AU CLUB
+Le coup d’envoi, c’est maintenant.
+
+Bienvenue sur BetOptimum !
+Ton inscription est presque terminée. Confirme ton adresse e-mail pour activer ton compte et rejoindre le Club.
+
+Confirmer mon adresse e-mail : {{ .ConfirmationURL }}
+
+Analyse les matchs. Affine tes pronostics. Défie le Club.
+
+Tu n’es pas à l’origine de cette inscription ? Tu peux ignorer cet e-mail.
+
+À tout de suite,
+L’équipe BetOptimum
+
+Paris virtuels · 18+ · Aucune garantie de résultat
