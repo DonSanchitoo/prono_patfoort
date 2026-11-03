@@ -46,7 +46,7 @@ export function planActivities({ now = new Date(), days = 7, bets = [], seasonRe
   for (const badge of badges) if (recent(badge.earned_at)) add(badge.user_id, `badge:${badge.badge}`, 'badge', { badge: badge.badge }, badge.earned_at);
   for (const [user, xp] of Object.entries(xpMap)) { const milestone = Math.floor(levelFromXp(xp).level / 50) * 50; if (milestone >= 50) add(user, `level:${milestone}`, 'level', { level: milestone }); }
   for (const join of privateJoins) if (recent(join.joined_at)) add(join.user_id, `private:${join.league_id}`, 'private-join', {}, join.joined_at);
-  for (const row of standings) if (row.prev_rank != null && row.prev_rank > row.rank && Number(row.picks) > 0) add(row.user_id, `overtake:${row.season}:${today}`, 'overtake', { rank: row.rank, from: row.prev_rank });
+  for (const row of standings) if (row.confirmed!==false&&row.prev_rank != null && row.prev_rank > row.rank && Number(row.picks) > 0) add(row.user_id, `overtake:${row.season}:${today}`, 'overtake', { rank: row.rank, from: row.prev_rank });
   return rows;
 }
 // Joueurs à suivre : profils publics qui ne sont ni vous ni déjà suivis, classés par échelon (+2), division (+1) et club de cœur (+2) communs.

@@ -9,7 +9,7 @@ export async function closeWeeklyRounds(admin,now=new Date()) {
  for(const round of rounds){
   const [players,standings,groups,members]=await Promise.all([
    admin.selectAll('player_league','select=user_id,echelon,joined_at,protected,inactive'),
-   admin.rpc('league_round_standings',{p_week:round.week_start}),
+   admin.rpc('league_round_ranking',{p_week:round.week_start}),
    admin.selectAll('league_groups',`season=eq.${seasonKey(now)}&select=id,label`),
    admin.selectAll('group_members',`season=eq.${seasonKey(now)}&select=user_id,group_id`)
   ]);
