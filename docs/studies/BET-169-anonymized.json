@@ -1,0 +1,252 @@
+[
+  {
+    "player": 2,
+    "season": "2026-2027",
+    "week_start": "2026-10-26",
+    "settled_at": "2026-10-30 19:59:20.40406+00",
+    "points": "14.30",
+    "status": "won",
+    "odd": "2.43",
+    "kind": "single"
+  },
+  {
+    "player": 2,
+    "season": "2026-2027",
+    "week_start": "2026-10-26",
+    "settled_at": "2026-10-30 19:59:21.040589+00",
+    "points": "10.10",
+    "status": "won",
+    "odd": "2.01",
+    "kind": "single"
+  },
+  {
+    "player": 3,
+    "season": "2026-2027",
+    "week_start": "2026-10-26",
+    "settled_at": "2026-10-30 19:59:21.40419+00",
+    "points": "27.39",
+    "status": "won",
+    "odd": "3.7386",
+    "kind": "combined"
+  },
+  {
+    "player": 2,
+    "season": "2026-2027",
+    "week_start": "2026-10-26",
+    "settled_at": "2026-10-30 21:55:24.49405+00",
+    "points": "11.90",
+    "status": "won",
+    "odd": "2.19",
+    "kind": "single"
+  },
+  {
+    "player": 2,
+    "season": "2026-2027",
+    "week_start": "2026-10-26",
+    "settled_at": "2026-10-31 21:52:35.007386+00",
+    "points": "-10.00",
+    "status": "lost",
+    "odd": "3.0351",
+    "kind": "combined"
+  },
+  {
+    "player": 2,
+    "season": "2026-2027",
+    "week_start": "2026-10-26",
+    "settled_at": "2026-11-01 18:28:28.423506+00",
+    "points": "-10.00",
+    "status": "lost",
+    "odd": "3.37",
+    "kind": "daily"
+  },
+  {
+    "player": 2,
+    "season": "2026-2027",
+    "week_start": "2026-10-26",
+    "settled_at": "2026-11-01 19:54:26.676592+00",
+    "points": "-10.00",
+    "status": "lost",
+    "odd": "3.36",
+    "kind": "daily"
+  },
+  {
+    "player": 2,
+    "season": "2026-2027",
+    "week_start": "2026-10-26",
+    "settled_at": "2026-11-01 22:53:58.859134+00",
+    "points": "-10.00",
+    "status": "lost",
+    "odd": "3.60",
+    "kind": "daily"
+  },
+  {
+    "player": 2,
+    "season": "2026-2027",
+    "week_start": "2026-11-02",
+    "settled_at": "2026-11-02 20:07:02.166596+00",
+    "points": "4.80",
+    "status": "won",
+    "odd": "1.48",
+    "kind": "single"
+  },
+  {
+    "player": 2,
+    "season": "2026-2027",
+    "week_start": "2026-11-02",
+    "settled_at": "2026-11-02 20:07:03.246762+00",
+    "points": "-10.00",
+    "status": "lost",
+    "odd": "3.65",
+    "kind": "daily"
+  },
+  {
+    "player": 3,
+    "season": "2026-2027",
+    "week_start": "2026-11-02",
+    "settled_at": "2026-11-02 20:07:03.454687+00",
+    "points": "13.30",
+    "status": "won",
+    "odd": "2.33",
+    "kind": "daily"
+  },
+  {
+    "player": 3,
+    "season": "2026-2027",
+    "week_start": "2026-11-02",
+    "settled_at": "2026-11-02 21:58:42.127423+00",
+    "points": "19.72",
+    "status": "won",
+    "odd": "2.9722",
+    "kind": "combined"
+  },
+  {
+    "player": 2,
+    "season": "2026-2027",
+    "week_start": "2026-11-02",
+    "settled_at": "2026-11-02 21:58:42.812715+00",
+    "points": "-10.00",
+    "status": "lost",
+    "odd": "1.5",
+    "kind": "single"
+  },
+  {
+    "player": 2,
+    "season": "2026-2027",
+    "week_start": "2026-11-02",
+    "settled_at": "2026-11-02 21:58:42.96401+00",
+    "points": "13.80",
+    "status": "won",
+    "odd": "2.38",
+    "kind": "single"
+  },
+  {
+    "player": 2,
+    "season": "2026-2027",
+    "week_start": "2026-11-02",
+    "settled_at": "2026-11-02 21:58:43.855821+00",
+    "points": "11.70",
+    "status": "won",
+    "odd": "2.17",
+    "kind": "single"
+  },
+  {
+    "player": 1,
+    "season": "2026-2027",
+    "week_start": "2026-11-02",
+    "settled_at": "2026-11-02 21:58:44.179732+00",
+    "points": "40.00",
+    "status": "won",
+    "odd": "10.27703754",
+    "kind": "combined"
+  },
+  {
+    "player": 2,
+    "season": "2026-2027",
+    "week_start": "2026-11-02",
+    "settled_at": "2026-11-02 21:58:44.734685+00",
+    "points": "-10.00",
+    "status": "lost",
+    "odd": "1.79",
+    "kind": "single"
+  },
+  {
+    "player": 2,
+    "season": "2026-2027",
+    "week_start": "2026-11-02",
+    "settled_at": "2026-11-02 21:58:44.890925+00",
+    "points": "10.10",
+    "status": "won",
+    "odd": "2.01",
+    "kind": "single"
+  },
+  {
+    "player": 2,
+    "season": "2026-2027",
+    "week_start": "2026-11-02",
+    "settled_at": "2026-11-02 21:58:46.032345+00",
+    "points": "11.50",
+    "status": "won",
+    "odd": "2.15",
+    "kind": "daily"
+  },
+  {
+    "player": 2,
+    "season": "2026-2027",
+    "week_start": "2026-11-02",
+    "settled_at": "2026-11-02 21:58:46.229808+00",
+    "points": "-10.00",
+    "status": "lost",
+    "odd": "1.50",
+    "kind": "daily"
+  },
+  {
+    "player": 3,
+    "season": "2026-2027",
+    "week_start": "2026-11-02",
+    "settled_at": "2026-11-02 21:58:46.404638+00",
+    "points": "-10.00",
+    "status": "lost",
+    "odd": "3.23",
+    "kind": "daily"
+  },
+  {
+    "player": 3,
+    "season": "2026-2027",
+    "week_start": "2026-11-02",
+    "settled_at": "2026-11-02 21:58:46.586515+00",
+    "points": "-10.00",
+    "status": "lost",
+    "odd": "1.50",
+    "kind": "daily"
+  },
+  {
+    "player": 2,
+    "season": "2026-2027",
+    "week_start": "2026-11-02",
+    "settled_at": "2026-11-02 22:58:02.179069+00",
+    "points": "-10.00",
+    "status": "lost",
+    "odd": "2.18",
+    "kind": "single"
+  },
+  {
+    "player": 2,
+    "season": "2026-2027",
+    "week_start": "2026-11-02",
+    "settled_at": "2026-11-02 22:58:03.383127+00",
+    "points": "-10.00",
+    "status": "lost",
+    "odd": "2.18",
+    "kind": "daily"
+  },
+  {
+    "player": 3,
+    "season": "2026-2027",
+    "week_start": "2026-11-02",
+    "settled_at": "2026-11-02 22:58:03.724973+00",
+    "points": "-10.00",
+    "status": "lost",
+    "odd": "2.18",
+    "kind": "daily"
+  }
+]

@@ -1,0 +1,727 @@
+{
+  "week": "2026-11-02",
+  "parameters": {
+    "k": 10,
+    "threshold": 10,
+    "cap": 5,
+    "stake": 10
+  },
+  "real": {
+    "J2": {
+      "n": 11,
+      "wins": 5,
+      "roi": -7.36,
+      "raw": -8.1,
+      "positive": 51.9,
+      "weighted": -4.24,
+      "confirmed": true,
+      "threshold": 10,
+      "k": 10
+    },
+    "J3": {
+      "n": 5,
+      "wins": 2,
+      "roi": 6.04,
+      "raw": 3.02,
+      "positive": 33.02,
+      "weighted": 1.01,
+      "confirmed": false,
+      "threshold": 10,
+      "k": 10
+    },
+    "J1": {
+      "n": 1,
+      "wins": 1,
+      "roi": 400,
+      "raw": 40,
+      "positive": 40,
+      "weighted": 3.64,
+      "confirmed": false,
+      "threshold": 10,
+      "k": 10
+    }
+  },
+  "rankings": {
+    "raw": [
+      {
+        "player": "J1",
+        "n": 1,
+        "wins": 1,
+        "roi": 400,
+        "raw": 40,
+        "positive": 40,
+        "weighted": 3.64,
+        "confirmed": false,
+        "threshold": 10,
+        "k": 10
+      },
+      {
+        "player": "J3",
+        "n": 5,
+        "wins": 2,
+        "roi": 6.04,
+        "raw": 3.02,
+        "positive": 33.02,
+        "weighted": 1.01,
+        "confirmed": false,
+        "threshold": 10,
+        "k": 10
+      },
+      {
+        "player": "J2",
+        "n": 11,
+        "wins": 5,
+        "roi": -7.36,
+        "raw": -8.1,
+        "positive": 51.9,
+        "weighted": -4.24,
+        "confirmed": true,
+        "threshold": 10,
+        "k": 10
+      }
+    ],
+    "positive": [
+      {
+        "player": "J2",
+        "n": 11,
+        "wins": 5,
+        "roi": -7.36,
+        "raw": -8.1,
+        "positive": 51.9,
+        "weighted": -4.24,
+        "confirmed": true,
+        "threshold": 10,
+        "k": 10
+      },
+      {
+        "player": "J1",
+        "n": 1,
+        "wins": 1,
+        "roi": 400,
+        "raw": 40,
+        "positive": 40,
+        "weighted": 3.64,
+        "confirmed": false,
+        "threshold": 10,
+        "k": 10
+      },
+      {
+        "player": "J3",
+        "n": 5,
+        "wins": 2,
+        "roi": 6.04,
+        "raw": 3.02,
+        "positive": 33.02,
+        "weighted": 1.01,
+        "confirmed": false,
+        "threshold": 10,
+        "k": 10
+      }
+    ],
+    "weighted": [
+      {
+        "player": "J1",
+        "n": 1,
+        "wins": 1,
+        "roi": 400,
+        "raw": 40,
+        "positive": 40,
+        "weighted": 3.64,
+        "confirmed": false,
+        "threshold": 10,
+        "k": 10
+      },
+      {
+        "player": "J3",
+        "n": 5,
+        "wins": 2,
+        "roi": 6.04,
+        "raw": 3.02,
+        "positive": 33.02,
+        "weighted": 1.01,
+        "confirmed": false,
+        "threshold": 10,
+        "k": 10
+      },
+      {
+        "player": "J2",
+        "n": 11,
+        "wins": 5,
+        "roi": -7.36,
+        "raw": -8.1,
+        "positive": 51.9,
+        "weighted": -4.24,
+        "confirmed": true,
+        "threshold": 10,
+        "k": 10
+      }
+    ],
+    "threshold": [
+      {
+        "player": "J2",
+        "n": 11,
+        "wins": 5,
+        "roi": -7.36,
+        "raw": -8.1,
+        "positive": 51.9,
+        "weighted": -4.24,
+        "confirmed": true,
+        "threshold": 10,
+        "k": 10
+      },
+      {
+        "player": "J1",
+        "n": 1,
+        "wins": 1,
+        "roi": 400,
+        "raw": 40,
+        "positive": 40,
+        "weighted": 3.64,
+        "confirmed": false,
+        "threshold": 10,
+        "k": 10
+      },
+      {
+        "player": "J3",
+        "n": 5,
+        "wins": 2,
+        "roi": 6.04,
+        "raw": 3.02,
+        "positive": 33.02,
+        "weighted": 1.01,
+        "confirmed": false,
+        "threshold": 10,
+        "k": 10
+      }
+    ]
+  },
+  "comparableOdds": {
+    "A": {
+      "n": 1,
+      "wins": 1,
+      "roi": 100,
+      "raw": 10,
+      "positive": 10,
+      "weighted": 0.91,
+      "confirmed": false,
+      "threshold": 10,
+      "k": 10
+    },
+    "B": {
+      "n": 11,
+      "wins": 5,
+      "roi": -9.09,
+      "raw": -10,
+      "positive": 50,
+      "weighted": -5.24,
+      "confirmed": true,
+      "threshold": 10,
+      "k": 10
+    },
+    "C": {
+      "n": 20,
+      "wins": 10,
+      "roi": 0,
+      "raw": 0,
+      "positive": 100,
+      "weighted": 0,
+      "confirmed": true,
+      "threshold": 10,
+      "k": 10
+    }
+  },
+  "volumes": {
+    "n3": {
+      "n": 3,
+      "wins": 1,
+      "roi": -33.33,
+      "raw": -10,
+      "positive": 10,
+      "weighted": -2.31,
+      "confirmed": false,
+      "threshold": 10,
+      "k": 10
+    },
+    "n10": {
+      "n": 10,
+      "wins": 5,
+      "roi": 0,
+      "raw": 0,
+      "positive": 50,
+      "weighted": 0,
+      "confirmed": true,
+      "threshold": 10,
+      "k": 10
+    },
+    "n30": {
+      "n": 30,
+      "wins": 15,
+      "roi": 0,
+      "raw": 0,
+      "positive": 150,
+      "weighted": 0,
+      "confirmed": true,
+      "threshold": 10,
+      "k": 10
+    },
+    "n100": {
+      "n": 100,
+      "wins": 50,
+      "roi": 0,
+      "raw": 0,
+      "positive": 500,
+      "weighted": 0,
+      "confirmed": true,
+      "threshold": 10,
+      "k": 10
+    }
+  },
+  "exactSameRate": [
+    {
+      "rate": 0,
+      "rows": [
+        {
+          "n": 3,
+          "wins": 0,
+          "roi": -100,
+          "raw": -30,
+          "positive": 0,
+          "weighted": -6.92,
+          "confirmed": false,
+          "threshold": 10,
+          "k": 10
+        },
+        {
+          "n": 10,
+          "wins": 0,
+          "roi": -100,
+          "raw": -100,
+          "positive": 0,
+          "weighted": -50,
+          "confirmed": true,
+          "threshold": 10,
+          "k": 10
+        },
+        {
+          "n": 30,
+          "wins": 0,
+          "roi": -100,
+          "raw": -300,
+          "positive": 0,
+          "weighted": -225,
+          "confirmed": true,
+          "threshold": 10,
+          "k": 10
+        },
+        {
+          "n": 100,
+          "wins": 0,
+          "roi": -100,
+          "raw": -1000,
+          "positive": 0,
+          "weighted": -909.09,
+          "confirmed": true,
+          "threshold": 10,
+          "k": 10
+        }
+      ]
+    },
+    {
+      "rate": 1,
+      "rows": [
+        {
+          "n": 3,
+          "wins": 3,
+          "roi": 100,
+          "raw": 30,
+          "positive": 30,
+          "weighted": 6.92,
+          "confirmed": false,
+          "threshold": 10,
+          "k": 10
+        },
+        {
+          "n": 10,
+          "wins": 10,
+          "roi": 100,
+          "raw": 100,
+          "positive": 100,
+          "weighted": 50,
+          "confirmed": true,
+          "threshold": 10,
+          "k": 10
+        },
+        {
+          "n": 30,
+          "wins": 30,
+          "roi": 100,
+          "raw": 300,
+          "positive": 300,
+          "weighted": 225,
+          "confirmed": true,
+          "threshold": 10,
+          "k": 10
+        },
+        {
+          "n": 100,
+          "wins": 100,
+          "roi": 100,
+          "raw": 1000,
+          "positive": 1000,
+          "weighted": 909.09,
+          "confirmed": true,
+          "threshold": 10,
+          "k": 10
+        }
+      ]
+    }
+  ],
+  "sensitivity": {
+    "k": [
+      {
+        "k": 5,
+        "ranking": [
+          {
+            "player": "J1",
+            "n": 1,
+            "wins": 1,
+            "roi": 400,
+            "raw": 40,
+            "positive": 40,
+            "weighted": 6.67,
+            "confirmed": false,
+            "threshold": 10,
+            "k": 5
+          },
+          {
+            "player": "J3",
+            "n": 5,
+            "wins": 2,
+            "roi": 6.04,
+            "raw": 3.02,
+            "positive": 33.02,
+            "weighted": 1.51,
+            "confirmed": false,
+            "threshold": 10,
+            "k": 5
+          },
+          {
+            "player": "J2",
+            "n": 11,
+            "wins": 5,
+            "roi": -7.36,
+            "raw": -8.1,
+            "positive": 51.9,
+            "weighted": -5.57,
+            "confirmed": true,
+            "threshold": 10,
+            "k": 5
+          }
+        ]
+      },
+      {
+        "k": 10,
+        "ranking": [
+          {
+            "player": "J1",
+            "n": 1,
+            "wins": 1,
+            "roi": 400,
+            "raw": 40,
+            "positive": 40,
+            "weighted": 3.64,
+            "confirmed": false,
+            "threshold": 10,
+            "k": 10
+          },
+          {
+            "player": "J3",
+            "n": 5,
+            "wins": 2,
+            "roi": 6.04,
+            "raw": 3.02,
+            "positive": 33.02,
+            "weighted": 1.01,
+            "confirmed": false,
+            "threshold": 10,
+            "k": 10
+          },
+          {
+            "player": "J2",
+            "n": 11,
+            "wins": 5,
+            "roi": -7.36,
+            "raw": -8.1,
+            "positive": 51.9,
+            "weighted": -4.24,
+            "confirmed": true,
+            "threshold": 10,
+            "k": 10
+          }
+        ]
+      },
+      {
+        "k": 20,
+        "ranking": [
+          {
+            "player": "J1",
+            "n": 1,
+            "wins": 1,
+            "roi": 400,
+            "raw": 40,
+            "positive": 40,
+            "weighted": 1.9,
+            "confirmed": false,
+            "threshold": 10,
+            "k": 20
+          },
+          {
+            "player": "J3",
+            "n": 5,
+            "wins": 2,
+            "roi": 6.04,
+            "raw": 3.02,
+            "positive": 33.02,
+            "weighted": 0.6,
+            "confirmed": false,
+            "threshold": 10,
+            "k": 20
+          },
+          {
+            "player": "J2",
+            "n": 11,
+            "wins": 5,
+            "roi": -7.36,
+            "raw": -8.1,
+            "positive": 51.9,
+            "weighted": -2.87,
+            "confirmed": true,
+            "threshold": 10,
+            "k": 20
+          }
+        ]
+      }
+    ],
+    "threshold": [
+      {
+        "threshold": 5,
+        "ranking": [
+          {
+            "player": "J3",
+            "n": 5,
+            "wins": 2,
+            "roi": 6.04,
+            "raw": 3.02,
+            "positive": 33.02,
+            "weighted": 1.01,
+            "confirmed": true,
+            "threshold": 5,
+            "k": 10
+          },
+          {
+            "player": "J2",
+            "n": 11,
+            "wins": 5,
+            "roi": -7.36,
+            "raw": -8.1,
+            "positive": 51.9,
+            "weighted": -4.24,
+            "confirmed": true,
+            "threshold": 5,
+            "k": 10
+          },
+          {
+            "player": "J1",
+            "n": 1,
+            "wins": 1,
+            "roi": 400,
+            "raw": 40,
+            "positive": 40,
+            "weighted": 3.64,
+            "confirmed": false,
+            "threshold": 5,
+            "k": 10
+          }
+        ]
+      },
+      {
+        "threshold": 10,
+        "ranking": [
+          {
+            "player": "J2",
+            "n": 11,
+            "wins": 5,
+            "roi": -7.36,
+            "raw": -8.1,
+            "positive": 51.9,
+            "weighted": -4.24,
+            "confirmed": true,
+            "threshold": 10,
+            "k": 10
+          },
+          {
+            "player": "J1",
+            "n": 1,
+            "wins": 1,
+            "roi": 400,
+            "raw": 40,
+            "positive": 40,
+            "weighted": 3.64,
+            "confirmed": false,
+            "threshold": 10,
+            "k": 10
+          },
+          {
+            "player": "J3",
+            "n": 5,
+            "wins": 2,
+            "roi": 6.04,
+            "raw": 3.02,
+            "positive": 33.02,
+            "weighted": 1.01,
+            "confirmed": false,
+            "threshold": 10,
+            "k": 10
+          }
+        ]
+      },
+      {
+        "threshold": 20,
+        "ranking": [
+          {
+            "player": "J1",
+            "n": 1,
+            "wins": 1,
+            "roi": 400,
+            "raw": 40,
+            "positive": 40,
+            "weighted": 3.64,
+            "confirmed": false,
+            "threshold": 20,
+            "k": 10
+          },
+          {
+            "player": "J3",
+            "n": 5,
+            "wins": 2,
+            "roi": 6.04,
+            "raw": 3.02,
+            "positive": 33.02,
+            "weighted": 1.01,
+            "confirmed": false,
+            "threshold": 20,
+            "k": 10
+          },
+          {
+            "player": "J2",
+            "n": 11,
+            "wins": 5,
+            "roi": -7.36,
+            "raw": -8.1,
+            "positive": 51.9,
+            "weighted": -4.24,
+            "confirmed": false,
+            "threshold": 20,
+            "k": 10
+          }
+        ]
+      }
+    ]
+  },
+  "sameSuccessRate": [
+    {
+      "n": 3,
+      "wins": 1,
+      "roi": -16.67,
+      "raw": -5,
+      "positive": 15,
+      "weighted": -1.15,
+      "confirmed": false,
+      "threshold": 10,
+      "k": 10
+    },
+    {
+      "n": 10,
+      "wins": 3,
+      "roi": -25,
+      "raw": -25,
+      "positive": 45,
+      "weighted": -12.5,
+      "confirmed": true,
+      "threshold": 10,
+      "k": 10
+    },
+    {
+      "n": 30,
+      "wins": 10,
+      "roi": -16.67,
+      "raw": -50,
+      "positive": 150,
+      "weighted": -37.5,
+      "confirmed": true,
+      "threshold": 10,
+      "k": 10
+    },
+    {
+      "n": 100,
+      "wins": 33,
+      "roi": -17.5,
+      "raw": -175,
+      "positive": 495,
+      "weighted": -159.09,
+      "confirmed": true,
+      "threshold": 10,
+      "k": 10
+    }
+  ],
+  "odds": [
+    {
+      "odd": 1.1,
+      "n": 10,
+      "wins": 6,
+      "roi": -34,
+      "raw": -34,
+      "positive": 6,
+      "weighted": -17,
+      "confirmed": true,
+      "threshold": 10,
+      "k": 10
+    },
+    {
+      "odd": 2,
+      "n": 10,
+      "wins": 6,
+      "roi": 20,
+      "raw": 20,
+      "positive": 60,
+      "weighted": 10,
+      "confirmed": true,
+      "threshold": 10,
+      "k": 10
+    },
+    {
+      "odd": 5,
+      "n": 10,
+      "wins": 6,
+      "roi": 200,
+      "raw": 200,
+      "positive": 240,
+      "weighted": 100,
+      "confirmed": true,
+      "threshold": 10,
+      "k": 10
+    },
+    {
+      "odd": 10,
+      "n": 10,
+      "wins": 6,
+      "roi": 200,
+      "raw": 200,
+      "positive": 240,
+      "weighted": 100,
+      "confirmed": true,
+      "threshold": 10,
+      "k": 10
+    }
+  ]
+}
