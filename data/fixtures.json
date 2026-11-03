@@ -77,9 +77,29 @@
     "secondaryOddsMatches": 37,
     "statsMatches": 103,
     "oddsMatches": 114,
-    "settlements": 131
+    "settlements": 133
   },
   "settlements": [
+    {
+      "id": "espn-401915311",
+      "date": "2026-11-03",
+      "home": "Galatasaray",
+      "away": "VfB Stuttgart",
+      "regulation": null,
+      "homeScore": 2,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401915310",
+      "date": "2026-11-03",
+      "home": "Shakhtar Donetsk",
+      "away": "Sporting CP",
+      "regulation": null,
+      "homeScore": 0,
+      "awayScore": 1,
+      "completed": true
+    },
     {
       "id": "espn-401878762",
       "date": "2026-11-02",
@@ -74742,12 +74762,12 @@
       "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/134.png",
       "priority": 42,
       "featured": false,
-      "status": "Scheduled",
-      "completed": false,
+      "status": "Terminé",
+      "completed": true,
       "voided": false,
       "knockout": false,
       "regulation": null,
-      "homeScore": 0,
+      "homeScore": 2,
       "awayScore": 0,
       "homeGoals": 1.71,
       "awayGoals": 2.3,
@@ -82600,13 +82620,13 @@
       "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/2250.png",
       "priority": 42,
       "featured": false,
-      "status": "Scheduled",
-      "completed": false,
+      "status": "Terminé",
+      "completed": true,
       "voided": false,
       "knockout": false,
       "regulation": null,
       "homeScore": 0,
-      "awayScore": 0,
+      "awayScore": 1,
       "homeGoals": 1.44,
       "awayGoals": 1.53,
       "odds": {
@@ -283593,5 +283613,5 @@
       }
     }
   ],
-  "scoresUpdatedAt": "2026-11-03T19:16:24.423Z"
+  "scoresUpdatedAt": "2026-11-03T20:09:32.552Z"
 }
