@@ -22,3 +22,5 @@ Captures `docs/recette/BET-168-*.png` : recette navigateur avec réponses de l�
 À compléter avant clôture : recette de bout en bout avec un compte de démonstration autorisé et captures avant/après de son historique réel, lecteur d’écran réel. Les captures de test ne valent pas validation d’un compte connecté en production.
 
 Production : V37 appliquée et vérification en transaction annulée sur trois comptes existants : nombre de tickets, limite de 20, solde exact et dernier point de courbe identique au compte. Droit EXECUTE présent pour authenticated, absent pour anon. Aucun résultat de pari ni solde modifié.
+
+La RPC est déclarée STABLE : le compte et les mouvements sont lus dans le même snapshot PostgreSQL, même si un règlement concurrent intervient pendant la requête.

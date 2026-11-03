@@ -1,7 +1,7 @@
 -- BET-168 : lecture privée paginée et agrégats calculés sur le serveur.
 begin;
 create or replace function public.my_bet_dashboard(p_days integer default null, p_status text default 'all', p_search text default '', p_page integer default 1)
-returns jsonb language plpgsql security definer set search_path = public as $$
+returns jsonb language plpgsql stable security definer set search_path = public as $$
 declare uid uuid := auth.uid(); since timestamptz; acct public.player_accounts; output jsonb;
 begin
   if uid is null then raise exception 'AUTH_REQUIRED'; end if;
