@@ -33,3 +33,13 @@ Après prolongation ou tirs au but, les nouveaux marchés utilisent seulement le
 Étape 2 : [diagnostic réussi](https://github.com/Patfoort47-gif/BetOptimum/actions/runs/41434955697), doubles chances et remboursé si nul confirmés sur 13 rencontres de quatre compétitions. Aucune ligne `team_totals` renvoyée dans ces réponses : les totaux par équipe restent absents de la collecte réelle observée. Le parseur et le règlement sont testés avec des données simulées ; leur couverture réelle reste à vérifier lorsqu’une ligne est fournie.
 
 Mise en production : V36 appliquée le 2 novembre 2026 au projet BetMaster ; le workflow de production utilise explicitement l’étape 2. Le paramètre du collecteur reste à 0 hors du workflow pour les autres usages. Une collecte manuelle d’administration est disponible pour vérifier une activation immédiate, sans nouvelle fréquence planifiée.
+
+## Inventaire de tous les marchés (BET-154, lot 1)
+
+Avant d’activer d’autres familles (périodes, joueurs, corners, cartons, combinés), il faut savoir ce que PropLine sert réellement avec notre compte. Le workflow manuel **« Inventorier les marchés PropLine »** (`.github/workflows/inventory-propline.yml`, `scripts/propline-inventory.mjs`) le relève en lecture seule :
+
+- pour chaque compétition suivie, la liste des matchs à venir puis, pour 2 matchs au plus, les marchés stockés en match complet, en 1re et en 2e mi-temps (`/events/{id}/markets`, `period=h1|h2`) ;
+- 56 requêtes par défaut (de quoi couvrir les 8 compétitions) (entrée `budget`, 60 au plus), une par une, sans nouvelle tentative, arrêt au premier refus d’accès ou de quota ;
+- rapport `propline-inventory.md` et `propline-inventory.json` en artefact du job (7 jours) et dans son résumé : clé fournisseur, période, famille proposée, déjà collectée ou non, nombre de matchs, nombre d’issues, compétitions.
+
+Il n’écrit rien dans le dépôt, ne touche ni `data/fixtures.json` ni Supabase et ne déploie rien. Une clé relevée n’est ni une couverture garantie ni un marché jouable : la matrice marché × données × probabilités × règlement × couverture et l’ordre d’activation sont établis ensuite (BET-170), et un marché non réglable de manière fiable reste désactivé pour les paris.

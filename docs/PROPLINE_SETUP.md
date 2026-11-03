@@ -13,3 +13,7 @@ Les collectes ont lieu à 6 h et 14 h Europe/Paris. Le cron couvre les deux déc
 ## Validation avant fusion
 
 Exécuter le diagnostic `scripts/check-propline.mjs` avec le secret Actions, sur plusieurs compétitions et rencontres. Vérifier 1N2, Over 2,5 et BTTS Oui chez plusieurs bookmakers et les identifiants régionaux. Les tests simulés ne prouvent pas la couverture réelle du fournisseur. Vérifier les données publiées après la première collecte, les moyennes et compteurs, les dates et les replis en cache. Le direct ESPN et le règlement restent inchangés.
+
+## Inventaire (BET-154)
+
+Le diagnostic `scripts/propline-inventory.mjs` est lancé à la main et consomme au plus 60 requêtes (56 par défaut), en plus des seize requêtes quotidiennes de la collecte. Le lancer en dehors des créneaux de 6 h et 14 h et vérifier le quota du compte avant. Voir `docs/MARKETS_SETUP.md`.
