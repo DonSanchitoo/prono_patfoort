@@ -1,10 +1,12 @@
 // Boutique et usages des jetons (BET-62) : catalogue, raretés, vitrine du jour, packs, revente. Fonctions pures, sans DOM ni réseau.
 // Les jetons n'ont aucune valeur : ils ne s'achètent pas, ne s'échangent pas, ne se convertissent pas. Noms génériques (aucune marque) en attendant l'avis juridique (BET-63).
 export const RARITIES = { common: { label: 'Commun', min: 300, max: 800 }, rare: { label: 'Rare', min: 1500, max: 3000 }, epic: { label: 'Épique', min: 5000, max: 20000 }, legendary: { label: 'Légendaire', min: 25000, max: 50000 }, exclusive: { label: 'Exclusif', min: 0, max: 0 } };
-export const CATEGORIES = { kit: 'Maillots', accessory: 'Accessoires', trophy: 'Trophées', background: 'Fonds et stades', base: 'Socles', frame: 'Cadres de carte', celebration: 'Célébrations', title: 'Titres' };
+export const CATEGORIES = { kit: 'Maillots', accessory: 'Accessoires', trophy: 'Trophées', background: 'Fonds et stades', base: 'Socles', frame: 'Cadres de carte', celebration: 'Célébrations', title: 'Titres', effect: 'Effets de victoire', sound: 'Ambiance sonore', 'card-bg': 'Fonds de carte', 'card-font': 'Police du numéro', 'card-shine': 'Effet brillant' };
 export const WEEKLY_DISCOUNT = .3, PACK_DISCOUNT = .2, RESALE_SHARE = .3, SHOWCASE_SIZE = 8;
-// Seuls le titre et le cadre de carte s'affichent aujourd'hui ; le reste s'affichera sur l'avatar 3D dès sa livraison (BET-47 et BET-49).
-export const DISPLAYABLE = ['title', 'frame'];
+// Objets équipés hors avatar 3D (equipped_items, un objet par catégorie) : titre et cadre (BET-62), effets de victoire, sons et personnalisation de la carte (BET-163).
+// Seuls les objets de la carte joueur sont publics (vue public_equipped, V37) ; effets et sons restent privés.
+export const DISPLAYABLE = ['title', 'frame', 'effect', 'sound', 'card-bg', 'card-font', 'card-shine'];
+export const CARD_SLOTS = ['card-bg', 'card-font', 'card-shine'], BET163_CATEGORIES = ['effect', 'sound', ...CARD_SLOTS];
 
 const item = (id, category, name, rarity, price, extra = {}) => ({ id, category, name, rarity, price, ...extra });
 const kits = [['lime', 'Lime'], ['blue', 'Bleu'], ['red', 'Rouge'], ['white', 'Blanc'], ['black', 'Noir'], ['orange', 'Orange']].map(([key, label], index) => item(`kit-plain-${key}`, 'kit', `Maillot uni ${label}`, 'common', 400 + (index % 3) * 150));
@@ -24,8 +26,14 @@ const frames = [item('frame-bronze', 'frame', 'Cadre bronze', 'common', 500, { a
 const celebrations = [item('celeb-fist', 'celebration', 'Poing levé', 'common', 600), item('celeb-slide', 'celebration', 'Glissade à genoux', 'rare', 1800), item('celeb-flip', 'celebration', 'Salto', 'rare', 2200)];
 celebrations.push(item('celeb-heart', 'celebration', 'Cœur aux supporters', 'common', 800), item('celeb-archer', 'celebration', 'L’Archer', 'rare', 1900), item('celeb-dance', 'celebration', 'Pas de victoire', 'rare', 2300));
 const titles = [item('title-strategist', 'title', 'Le Stratège', 'common', 300, { asset: 'Le Stratège' }), item('title-lynx', 'title', 'Œil de lynx', 'rare', 1500, { asset: 'Œil de lynx' }), item('title-cool', 'title', 'Sang-froid', 'rare', 2000, { asset: 'Sang-froid' }), item('title-legend', 'title', 'Légende vivante', 'epic', 8000, { asset: 'Légende vivante' })];
+// BET-163 : célébration des pronos gagnés (effets en canvas, sons synthétisés, coupés par défaut) et personnalisation de la carte joueur. L'asset désigne le rendu.
+const effects = [item('effect-confetti', 'effect', 'Pluie de confettis', 'common', 600, { asset: 'confetti' }), item('effect-smoke', 'effect', 'Fumigènes de tribune', 'rare', 1800, { asset: 'smoke' }), item('effect-fireworks', 'effect', 'Feu d’artifice', 'epic', 5500, { asset: 'fireworks' })];
+const sounds = [item('sound-siren', 'sound', 'Sirène de but', 'common', 500, { asset: 'siren' }), item('sound-drums', 'sound', 'Tambours de tribune', 'rare', 1600, { asset: 'drums' }), item('sound-horn', 'sound', 'Corne de supporters', 'rare', 2000, { asset: 'horn' })];
+const cardBackgrounds = [item('cardbg-pitch', 'card-bg', 'Fond pelouse', 'common', 400, { asset: 'pitch' }), item('cardbg-night', 'card-bg', 'Fond nuit étoilée', 'common', 700, { asset: 'night' }), item('cardbg-carbon', 'card-bg', 'Fond carbone', 'rare', 1500, { asset: 'carbon' }), item('cardbg-aurora', 'card-bg', 'Fond aurore boréale', 'rare', 2400, { asset: 'aurora' })];
+const cardFonts = [item('cardfont-classic', 'card-font', 'Numéro classique', 'common', 300, { asset: 'classic' }), item('cardfont-stencil', 'card-font', 'Numéro pochoir', 'common', 600, { asset: 'stencil' }), item('cardfont-retro', 'card-font', 'Numéro rétro', 'rare', 1500, { asset: 'retro' })];
+const cardShines = [item('cardshine-gloss', 'card-shine', 'Reflet satiné', 'rare', 1800, { asset: 'gloss' }), item('cardshine-holo', 'card-shine', 'Reflet holographique', 'epic', 5000, { asset: 'holo' })];
 const exclusives = [item('acc-crown', 'accessory', 'Couronne du Master', 'exclusive', 0, { exclusive: true }), item('kit-champion', 'kit', 'Maillot de champion', 'exclusive', 0, { exclusive: true })];
-export const CATALOG = [...kits, ...stripes, ...retro, ...newKits, ...accessories, ...trophies, ...stadiumItems, ...simpleBackgrounds, ...bases, ...frames, ...celebrations, ...titles, ...exclusives];
+export const CATALOG = [...kits, ...stripes, ...retro, ...newKits, ...accessories, ...trophies, ...stadiumItems, ...simpleBackgrounds, ...bases, ...frames, ...celebrations, ...titles, ...effects, ...sounds, ...cardBackgrounds, ...cardFonts, ...cardShines, ...exclusives];
 // Packs stade : stade (intérieur et extérieur), maillot uni et écharpe, moins cher que les éléments séparés.
 export const PACKS = stadiums.map(([key, label]) => ({ id: `pack-${key}`, name: `Pack stade de ${label}`, components: [`bg-${key}-in`, `bg-${key}-out`, 'kit-plain-lime', 'acc-scarf'] }));
 

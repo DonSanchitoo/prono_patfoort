@@ -1,6 +1,6 @@
 // Boutique et duels (BET-62) : catalogue et objet de la semaine envoyés à Supabase, duels réglés après le défi du jour.
 // Décisions pures dans shop.js ; ce fichier écrit avec la clé service_role (jetons : journal token_ledger, jamais d'écriture depuis le navigateur).
-import { CATALOG, PACKS, duelWinner, packPrice, weeklyItem } from '../shop.js';
+import { BET163_CATEGORIES, CATALOG, PACKS, duelWinner, packPrice, weeklyItem } from '../shop.js';
 import { defaultAvatar, applyItem } from '../avatar-config.js';
 import { parisDate, weekKey } from '../model.js';
 
@@ -16,6 +16,9 @@ export async function syncShop(admin, now = new Date()) {
   // Ne pas vendre un objet que l’ancienne validation SQL refuse ensuite d’enregistrer.
   let ready = false; try { ready = await admin.rpc('avatar_config_valid', { cfg: applyItem(defaultAvatar(), 'celeb-heart') }); } catch { /* V17 ou V22 non appliquée */ }
   if (ready !== true) rows = rows.filter(row => !newIds.has(row.id));
+  // BET-163 : effets, sons et personnalisation de carte seulement après V37, qui rend publics les objets de la carte (sinon un objet acheté ne s'afficherait pas).
+  let cardReady = false; try { cardReady = await admin.rpc('equipped_slot_public', { p_slot: 'card-bg' }); } catch { /* V37 non appliquée */ }
+  if (cardReady !== true) rows = rows.filter(row => !BET163_CATEGORIES.includes(row.category));
   await admin.upsert('shop_items', rows, 'id');
   await admin.upsert('shop_weekly', [{ week: weekKey(now), item_id: weeklyItem(CATALOG.filter(entry => rows.some(row => row.id === entry.id)), weekKey(now)) }], 'week');
   return rows.length;

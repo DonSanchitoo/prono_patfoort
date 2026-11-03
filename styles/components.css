@@ -594,3 +594,30 @@ dialog .modal-head .icon-button,dialog .dialog-tools .icon-button{flex:none;min-
 
 .stadium-placeholder{position:absolute;inset:0;z-index:-2;overflow:hidden;background:linear-gradient(145deg,#132b4a,#245958 70%,#b2a66d)}.stadium-placeholder img{width:100%;height:100%;object-fit:cover;object-position:center 55%}.stadium-placeholder-name{position:absolute;top:14px;left:14px;width:max-content;max-width:calc(100% - 28px);padding:5px 8px;border-radius:6px;background:#061124e8;color:#fff;font-size:11px;line-height:1.4;overflow-wrap:anywhere}.stadium-placeholder-name small{display:block;font-size:10px;color:#e2e7ed}.stadium-ready .stadium-placeholder,.stadium-ready .stadium-placeholder-name{visibility:hidden}
 @media(max-width:700px){.match-hero:has(.stadium-placeholder){min-height:300px;padding:88px 12px 22px}.match-hero:has(.stadium-placeholder) .match-teams{margin-top:8px}.match-stadium-photo,.stadium-placeholder img{object-position:center 50%}.stadium-name,.stadium-placeholder-name{top:10px;left:10px;max-width:calc(100% - 20px)}}
+
+/* BET-163 : personnalisation de la carte joueur (fond, police du numéro, effet brillant). La carte garde ses couleurs propres dans les deux thèmes. */
+.player-card.cardbg-pitch{background:repeating-linear-gradient(180deg,#ffffff0f 0 18px,#0000 18px 36px),linear-gradient(155deg,#1f6b35,#0b2a16 80%)}
+.player-card.cardbg-night{background:radial-gradient(circle at 20% 18%,#f4f7f2cc 0 1px,#0000 2px),radial-gradient(circle at 72% 30%,#f4f7f2aa 0 1px,#0000 2px),radial-gradient(circle at 40% 62%,#f4f7f299 0 1px,#0000 2px),radial-gradient(circle at 85% 78%,#f4f7f2bb 0 1px,#0000 2px),linear-gradient(160deg,#1b2350,#05070f 82%)}
+.player-card.cardbg-carbon{background:repeating-linear-gradient(45deg,#ffffff0d 0 4px,#0000 4px 9px),linear-gradient(155deg,#2a2d31,#0d0e10 80%)}
+.player-card.cardbg-aurora{background:linear-gradient(180deg,#0f3d4a,#1f8a70 45%,#5b2a86 75%,#0A0C0B)}
+.player-card.cardfont-classic .card-overall{font-family:Georgia,"Times New Roman",serif;font-weight:800}
+.player-card.cardfont-stencil .card-overall{font-family:"Stencil","Arial Black",Impact,sans-serif;font-weight:900;letter-spacing:.04em}
+.player-card.cardfont-retro .card-overall{font-family:"Courier New",Courier,monospace;font-weight:700}
+.player-card.cardshine-gloss,.player-card.cardshine-holo{overflow:hidden;isolation:isolate}
+.player-card.cardshine-gloss::after,.player-card.cardshine-holo::after{content:"";position:absolute;inset:-40% -60%;pointer-events:none;z-index:1;background:linear-gradient(115deg,#fff0 40%,#ffffff38 50%,#fff0 60%);transform:translateX(-60%);animation:card-shine 4.5s ease-in-out infinite}
+.player-card.cardshine-holo::after{background:linear-gradient(115deg,#ff5ec400 20%,#ff5ec433 35%,#5ee7ff38 48%,#c8f03c33 60%,#a46bff00 75%);mix-blend-mode:screen}
+@keyframes card-shine{0%,30%{transform:translateX(-60%)}70%,100%{transform:translateX(60%)}}
+@media(prefers-reduced-motion:reduce){.player-card.cardshine-gloss::after,.player-card.cardshine-holo::after{display:none;animation:none}}
+.shop-card .player-card.card-preview{height:116px;padding:12px 10px;border-radius:18px 18px 34px 34px/14px 14px 40px 40px;display:flex;flex-direction:column;justify-content:center;box-shadow:none}
+.shop-card .player-card.card-preview .card-overall{font-size:52px}.shop-card .player-card.card-preview small{font-size:10px;letter-spacing:.08em}
+
+/* BET-163 : célébration d'un prono gagné (onglet Matchs) et effets de victoire en surimpression, sans bloquer l'interface. */
+.victory-canvas{position:fixed;inset:0;width:100vw;height:100vh;z-index:70;pointer-events:none}
+.victory-pop{position:fixed;left:50%;top:calc(var(--header-offset) + 12px);z-index:71;display:flex;align-items:center;gap:14px;max-width:calc(100% - 32px);padding:12px 12px 12px 16px;border-radius:var(--radius);background:var(--surface);color:var(--text);border:1px solid var(--accent-text);box-shadow:0 18px 40px #0005;transform:translateX(-50%);animation:victory-in .35s ease-out}
+.victory-avatar .avatar-3d{width:64px;height:64px;border-radius:22px;animation:victory-jump .7s ease-in-out 3}
+.victory-avatar .avatar-3d b{font-size:22px}.victory-avatar .avatar-3d i,.victory-avatar .avatar-3d span{width:8px;height:8px;top:18px}.victory-avatar .avatar-3d i{left:16px}.victory-avatar .avatar-3d span{right:16px}
+.victory-text{display:flex;flex-direction:column;min-width:0}.victory-text strong{font-family:var(--display);font-size:26px;line-height:1;color:var(--accent-text);text-transform:uppercase}.victory-text small{color:var(--muted)}
+@keyframes victory-in{from{opacity:0;transform:translate(-50%,-12px)}to{opacity:1;transform:translate(-50%,0)}}
+@keyframes victory-jump{0%,100%{transform:translateY(0)}40%{transform:translateY(-18px) scale(1.04)}60%{transform:translateY(-14px)}}
+@media(max-width:700px){.victory-pop{top:calc(12px + env(safe-area-inset-top));gap:10px}.victory-avatar .avatar-3d{width:52px;height:52px}.victory-text strong{font-size:22px}}
+@media(prefers-reduced-motion:reduce){.victory-pop,.victory-avatar .avatar-3d{animation:none}}
