@@ -18,3 +18,11 @@ Déployer uniquement `mailer_templates_confirmation_content` et `mailer_subjects
 - Contrôler connexion et récupération indépendantes, consentements newsletter/alertes inchangés.
 
 Ne fermer le ticket qu’après ces vérifications. Aucun compte ni destinataire de recette n’est inventé.
+
+## État réel de livraison au 3 novembre 2026
+
+Le site Pages actuel est `https://patfoort47-gif.github.io/BetOptimum/`. Cette adresse exacte a été ajoutée aux redirections Auth autorisées ; l’ancienne adresse `prono_patfoort` et le `site_url` sont conservés. Les options `emailRedirectTo` du code ne changent pas.
+
+L’installation du template via Management a été tentée puis refusée : « Email template modification is not available for free tier projects using the default email provider. Please upgrade your plan or configure a custom SMTP provider. » L’objet et le contenu envoyés restent donc ceux du fournisseur par défaut. Après configuration SMTP ou changement d’offre, réappliquer le template et vérifier sa relecture avant toute déclaration de succès.
+
+Les captures `docs/recette/BET-167-preview-*.png` sont des **aperçus navigateur** du HTML avec une adresse de démonstration invalide, sans jeton. Elles ne remplacent pas la recette mail requise.
