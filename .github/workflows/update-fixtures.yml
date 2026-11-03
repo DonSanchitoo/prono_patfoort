@@ -49,6 +49,11 @@ jobs:
           PROPLINE_MARKET_STAGE: '2'
           PROPLINE_API_KEY: ${{ secrets.PROPLINE_API_KEY }}
         run: node scripts/update-fixtures.mjs
+      - name: Compléter les lieux des rencontres
+        if: steps.schedule.outputs.run == 'true'
+        run: |
+          node scripts/enrich-stadium-venues.mjs
+          node scripts/check-stadium-coverage.mjs --report
       - name: Publier les nouvelles données
         if: steps.schedule.outputs.run == 'true'
         run: |
