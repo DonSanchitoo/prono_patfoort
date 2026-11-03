@@ -63,7 +63,8 @@ export function initProfilePage(deps) {
   function overview(info) {
     const standing = info.standing, state = getState();
     const key = (label, value) => `<div class="key-number"><small>${label}</small><strong>${value}</strong></div>`;
-    const personal = info.self ? profileHistory(state.history) : null;
+    const personal = info.self ? profileHistory(state.history.filter(b=>b.legacy)) : null;
+    if(personal&&info.historySummary){const s=info.historySummary;for(const key of ['total','settled','wins','pending','void','staked','returned'])personal[key]+=Number(s[key]);personal.profit=personal.returned-personal.staked;personal.roi=personal.staked?personal.profit/personal.staked*100:null;personal.winrate=personal.settled?personal.wins/personal.settled*100:null;personal.form=s.form||personal.form;}
     const form = personal ? personal.form : standing?.form ?? '';
     const historySummary = personal ? `<section class="settings-card"><h3>Tout votre historique</h3><p class="muted">Paris certifiés et ${personal.legacy} ancien${personal.legacy > 1 ? 's' : ''} pari${personal.legacy > 1 ? 's' : ''}. Ce bilan personnel reste privé ; la carte publique et les ligues utilisent les résultats certifiés.</p><div class="key-numbers">${key('Paris réglés', personal.settled)}${key('Paris gagnés', personal.wins)}${key('Réussite', personal.winrate == null ? '-' : personal.winrate.toFixed(1) + ' %')}${key('ROI historique', personal.roi == null ? '-' : personal.roi.toFixed(1) + ' %')}</div><p class="muted">${personal.pending} en attente · ${personal.void} remboursé${personal.void > 1 ? 's' : ''} (exclus du ROI et du taux de réussite)</p></section>` : '';
     const stats = info.profile.period_stats?.season ?? { bets: 0, wins: 0, roi: 0 };
