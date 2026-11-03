@@ -1,5 +1,29 @@
 [
   {
+    "id": "espn-401915311",
+    "date": "2026-11-03",
+    "league": "Ligue des champions",
+    "match": "Galatasaray – VfB Stuttgart",
+    "label": "Plus de 2,5 buts",
+    "key": "over",
+    "odd": 1.33,
+    "probability": 0.7633582854899844,
+    "status": "lost",
+    "score": "2 : 0"
+  },
+  {
+    "id": "espn-401915310",
+    "date": "2026-11-03",
+    "league": "Ligue des champions",
+    "match": "Shakhtar Donetsk – Sporting CP",
+    "label": "Les deux marquent",
+    "key": "btts",
+    "odd": 1.59,
+    "probability": 0.5978398843337909,
+    "status": "lost",
+    "score": "0 : 1"
+  },
+  {
     "id": "espn-401874963",
     "date": "2026-11-02",
     "league": "Serie A",
