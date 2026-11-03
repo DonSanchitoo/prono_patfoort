@@ -5,9 +5,30 @@ import { sanitizeAvatar } from './avatar-config.js';
 import { profileHistory } from './profile-history.js';
 import { seasonLabel } from './league.js';
 import { CATALOG } from './shop.js';
+import { CELEBRATION_PENDING_KEY, celebrationColors, equippedOf, soundEnabled } from './celebration-model.js';
 const NS = 'http://www.w3.org/2000/svg';
 const TABS = [['overview', 'Aperçu'], ['badges', 'Trophées'], ['bets', 'Mes paris'], ['avatar', 'Avatar', true], ['notifications', 'Mes alertes', true], ['account', 'Compte et confidentialité', true]];
 const DIVISION_COLORS = ['#8a6d4b', '#b87333', '#9aa5b1', '#d4a017', '#2fa4a4', '#7a4dd8', '#C8F03C'];
+// Personnalisation de la carte (BET-163) : fond, police du numéro et effet brillant équipés, publics par la vue public_equipped (V39). Mêmes choix dans l'image partagée.
+const CARD_LOOK = [['card-bg', 'cardbg'], ['card-font', 'cardfont'], ['card-shine', 'cardshine']];
+const cardAsset = (equipped, slot) => /^[a-z]{1,20}$/.test(equipped?.[slot]?.asset ?? '') ? equipped[slot].asset : null;
+const cardLook = equipped => CARD_LOOK.map(([slot, prefix]) => cardAsset(equipped, slot) ? ` ${prefix}-${cardAsset(equipped, slot)}` : '').join('');
+const CARD_FONTS = { classic: 'Georgia, "Times New Roman", serif', stencil: '"Stencil", "Arial Black", Impact, sans-serif', retro: '"Courier New", Courier, monospace' };
+function paintCardBackground(ctx, asset, accent) {
+  const fill = (stops, x1 = 0, y1 = 0, x2 = 600, y2 = 800) => { const g = ctx.createLinearGradient(x1, y1, x2, y2); stops.forEach(([at, c]) => g.addColorStop(at, c)); ctx.fillStyle = g; ctx.fillRect(0, 0, 600, 800); };
+  if (asset === 'pitch') { fill([[0, '#1f6b35'], [1, '#0b2a16']]); ctx.fillStyle = 'rgba(255,255,255,.06)'; for (let y = 0; y < 800; y += 80) ctx.fillRect(0, y, 600, 40); return; }
+  if (asset === 'night') { fill([[0, '#1b2350'], [1, '#05070f']]); ctx.fillStyle = 'rgba(244,247,242,.8)'; for (let i = 0; i < 70; i++) { const x = (i * 137) % 600, y = (i * 241) % 800; ctx.fillRect(x, y, i % 3 ? 2 : 3, i % 3 ? 2 : 3); } return; }
+  if (asset === 'carbon') { fill([[0, '#2a2d31'], [1, '#0d0e10']]); ctx.strokeStyle = 'rgba(255,255,255,.05)'; ctx.lineWidth = 6; for (let x = -800; x < 600; x += 16) { ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x + 800, 800); ctx.stroke(); } return; }
+  if (asset === 'aurora') { fill([[0, '#0f3d4a'], [.45, '#1f8a70'], [.75, '#5b2a86'], [1, '#0A0C0B']], 0, 0, 0, 800); return; }
+  fill([[0, accent], [1, '#0A0C0B']]);
+}
+function paintCardShine(ctx, asset) {
+  if (!['gloss', 'holo'].includes(asset)) return;
+  const g = ctx.createLinearGradient(80, 40, 520, 770);
+  if (asset === 'gloss') { g.addColorStop(0, 'rgba(255,255,255,0)'); g.addColorStop(.42, 'rgba(255,255,255,0)'); g.addColorStop(.5, 'rgba(255,255,255,.22)'); g.addColorStop(.58, 'rgba(255,255,255,0)'); g.addColorStop(1, 'rgba(255,255,255,0)'); }
+  else ['#ff5ec4', '#5ee7ff', '#c8f03c', '#ffd25e', '#a46bff'].forEach((c, i, all) => g.addColorStop(i / (all.length - 1), `${c}33`));
+  ctx.fillStyle = g; ctx.fill();
+}
 
 export function initProfilePage(deps) {
   const { html, money, divisionBadge, levelInfo, avatarConfig, safeLogo, BADGES, echelonName, chevrons, divisionIndex, model, accountApi, getState, toast, openAvatar, openJoin, navigate, onLoggedOut } = deps;
@@ -34,20 +55,22 @@ export function initProfilePage(deps) {
   function attributesOf(raw) { return cardAttributes(raw); }
   function cardHtml(info) {
     const attributes = attributesOf(info.raw), overall = cardOverall(attributes), provisional = cardProvisional(info.raw), level = levelInfo(info.xp);
-    return `<div class="player-card${info.equipped?.frame ? ` frame-${html(info.equipped.frame.asset)}` : ''}" style="--card:${color(info.echelon)}" id="player-card"><div class="card-top"><b class="card-overall">${overall}</b><span>${info.echelon == null ? 'Placement' : html(echelonName(info.echelon))}<em>${info.echelon == null ? '' : chevrons(info.echelon)}</em></span></div><strong class="card-name">${html(info.profile.nickname)}</strong><small>Niv. ${level.level} · ${level.title}${provisional ? ' · provisoire' : ''}</small><div class="card-attrs">${CARD_ATTRIBUTES.map(name => `<span><b>${attributes[name]}</b>${name}</span>`).join('')}</div></div>`;
+    return `<div class="player-card${info.equipped?.frame ? ` frame-${html(info.equipped.frame.asset)}` : ''}${cardLook(info.equipped)}" style="--card:${color(info.echelon)}" id="player-card"><div class="card-top"><b class="card-overall">${overall}</b><span>${info.echelon == null ? 'Placement' : html(echelonName(info.echelon))}<em>${info.echelon == null ? '' : chevrons(info.echelon)}</em></span></div><strong class="card-name">${html(info.profile.nickname)}</strong><small>Niv. ${level.level} · ${level.title}${provisional ? ' · provisoire' : ''}</small><div class="card-attrs">${CARD_ATTRIBUTES.map(name => `<span><b>${attributes[name]}</b>${name}</span>`).join('')}</div></div>`;
   }
   // Partage de la carte en image : canvas vers PNG, partage natif sur téléphone, sinon téléchargement.
   async function shareCard(info) {
     const attributes = attributesOf(info.raw), overall = cardOverall(attributes), level = levelInfo(info.xp), canvas = document.createElement('canvas');
     canvas.width = 600; canvas.height = 800; const ctx = canvas.getContext('2d'), accent = color(info.echelon);
-    const gradient = ctx.createLinearGradient(0, 0, 600, 800); gradient.addColorStop(0, accent); gradient.addColorStop(1, '#0A0C0B'); ctx.fillStyle = gradient; ctx.fillRect(0, 0, 600, 800);
-    ctx.fillStyle = 'rgba(10,12,11,.78)'; ctx.beginPath(); ctx.moveTo(300, 40); ctx.lineTo(560, 110); ctx.lineTo(560, 520); ctx.quadraticCurveTo(560, 700, 300, 770); ctx.quadraticCurveTo(40, 700, 40, 520); ctx.lineTo(40, 110); ctx.closePath(); ctx.fill(); ctx.strokeStyle = accent; ctx.lineWidth = 6; ctx.stroke();
-    ctx.fillStyle = '#F4F7F2'; ctx.textAlign = 'center'; ctx.font = '800 120px "Barlow Condensed", Impact, sans-serif'; ctx.fillText(String(overall), 300, 220);
+    paintCardBackground(ctx, cardAsset(info.equipped, 'card-bg'), accent);
+    const shield = () => { ctx.beginPath(); ctx.moveTo(300, 40); ctx.lineTo(560, 110); ctx.lineTo(560, 520); ctx.quadraticCurveTo(560, 700, 300, 770); ctx.quadraticCurveTo(40, 700, 40, 520); ctx.lineTo(40, 110); ctx.closePath(); };
+    ctx.fillStyle = 'rgba(10,12,11,.78)'; shield(); ctx.fill(); ctx.strokeStyle = accent; ctx.lineWidth = 6; ctx.stroke();
+    ctx.fillStyle = '#F4F7F2'; ctx.textAlign = 'center'; ctx.font = `800 120px ${CARD_FONTS[cardAsset(info.equipped, 'card-font')] ?? '"Barlow Condensed", Impact, sans-serif'}`; ctx.fillText(String(overall), 300, 220);
     ctx.font = '700 28px Inter, sans-serif'; ctx.fillStyle = accent; ctx.fillText(info.echelon == null ? 'Saison de placement' : `${echelonName(info.echelon)} ${chevrons(info.echelon)}`, 300, 270);
     ctx.fillStyle = '#F4F7F2'; ctx.font = '800 54px "Barlow Condensed", Impact, sans-serif'; ctx.fillText(info.profile.nickname.toUpperCase(), 300, 345, 440);
     ctx.font = '600 22px Inter, sans-serif'; ctx.fillStyle = '#C9D3C6'; ctx.fillText(`Niveau ${level.level} · ${level.title}${cardProvisional(info.raw) ? ' · provisoire' : ''}`, 300, 385);
     CARD_ATTRIBUTES.forEach((name, index) => { const x = 130 + (index % 3) * 170, y = 470 + Math.floor(index / 3) * 110; ctx.fillStyle = '#F4F7F2'; ctx.font = '800 56px "Barlow Condensed", Impact, sans-serif'; ctx.fillText(String(attributes[name]), x, y); ctx.fillStyle = '#9FB09A'; ctx.font = '700 20px Inter, sans-serif'; ctx.fillText(name, x, y + 30); });
     ctx.fillStyle = '#9FB09A'; ctx.font = '500 16px Inter, sans-serif'; ctx.fillText('BetOptimum · paris virtuels · 18+', 300, 740);
+    shield(); paintCardShine(ctx, cardAsset(info.equipped, 'card-shine'));
     const blob = await new Promise(resolve => canvas.toBlob(resolve, 'image/png'));
     if (!blob) { toast('Impossible de générer l’image de la carte'); return; }
     const file = new File([blob], `carte-${info.profile.nickname}.png`, { type: 'image/png' });
@@ -96,7 +119,7 @@ export function initProfilePage(deps) {
 <form data-form="email" class="settings-card"><h3>Adresse email</h3><p class="muted">Un lien de confirmation est envoyé à la nouvelle adresse.</p><div class="settings-row"><input name="email" type="email" placeholder="nouvelle@adresse.fr" required autocomplete="email" aria-label="Nouvelle adresse email"><button class="button secondary">Modifier</button></div></form>
 <form data-form="password" class="settings-card"><h3>Mot de passe</h3><div class="settings-row"><input name="password" type="password" minlength="8" placeholder="Nouveau mot de passe (8 caractères)" required autocomplete="new-password" aria-label="Nouveau mot de passe"><button class="button secondary">Modifier</button></div></form>
 </section><section class="account-group" aria-labelledby="account-visibility"><div class="account-group-title"><span>02</span><div><h3 id="account-visibility">Votre visibilité au Club</h3><p>Choisissez ce que les autres joueurs peuvent découvrir.</p></div></div><div class="settings-card"><h3>Confidentialité</h3><label class="switch-line"><input type="checkbox" data-setting="is_public" ${profile.is_public ? 'checked' : ''}><span><b>Profil public</b><small>Les autres joueurs voient votre profil, votre carte et vos trophées. Votre pseudo et vos résultats restent visibles dans les classements.</small></span></label><label class="switch-line"><input type="checkbox" data-setting="show_bets" ${profile.show_bets ? 'checked' : ''}><span><b>Détail de mes paris visible</b><small>Sélections, cotes et résultats, jamais les mises ni la bankroll.</small></span></label></div>
-</section><section class="account-group" aria-labelledby="account-data"><div class="account-group-title"><span>03</span><div><h3 id="account-data">Préférences et données</h3><p>Gardez la main sur vos communications et votre historique.</p></div></div><section class="settings-card" data-newsletter><h3>Newsletter BetOptimum</h3><p>Chargement de votre inscription…</p></section><div class="settings-card"><h3>Mes données</h3><p class="muted">Téléchargez toutes vos données (profil, paris, ligues, XP, jetons) au format JSON.</p><button class="button secondary" data-export>Exporter mes données</button></div>
+</section><section class="account-group" aria-labelledby="account-data"><div class="account-group-title"><span>03</span><div><h3 id="account-data">Préférences et données</h3><p>Gardez la main sur vos communications et votre historique.</p></div></div><div class="settings-card"><h3>Célébrations</h3><label class="switch-line"><input type="checkbox" data-pref="celebrationSound" ${soundEnabled(state.profile) ? 'checked' : ''}><span><b>Activer le son des célébrations</b><small>Coupé par défaut. Quand un prono est gagné, l’ambiance sonore équipée en boutique se joue tout de suite si vous avez déjà touché la page, sinon à votre premier clic ou à votre première touche pendant la célébration. Sons créés par le navigateur, aucun fichier téléchargé.</small></span></label></div><section class="settings-card" data-newsletter><h3>Newsletter BetOptimum</h3><p>Chargement de votre inscription…</p></section><div class="settings-card"><h3>Mes données</h3><p class="muted">Téléchargez toutes vos données (profil, paris, ligues, XP, jetons) au format JSON.</p><button class="button secondary" data-export>Exporter mes données</button></div>
 </section><section class="account-group account-danger" aria-labelledby="account-danger"><div class="account-group-title"><span>!</span><div><h3 id="account-danger">Zone sensible</h3><p>La suppression du compte est irréversible.</p></div></div><form data-form="delete" class="settings-card danger"><h3>Supprimer mon compte</h3><p class="muted">Définitif : votre profil, vos paris, vos classements, votre XP et vos jetons sont effacés. Saisissez votre pseudo <b>${html(profile.nickname)}</b> pour confirmer.</p><div class="settings-row"><input name="confirm" placeholder="Votre pseudo" required aria-label="Confirmation par le pseudo" autocomplete="off"><button class="button danger">Supprimer définitivement</button></div></form></section><p class="settings-feedback" role="status" aria-live="polite"></p></div>`;
   }
   function avatarTab() { return '<div class="avatar-studio-slot" data-studio></div>'; }
@@ -111,7 +134,15 @@ export function initProfilePage(deps) {
       const stage = await createStage(host, { look: info.profile.avatar_config, view: 'full', label: `Avatar 3D de ${info.profile.nickname}` });
       if (mine !== mountToken || !host.isConnected) { stage.dispose(); return; }
       hero = stage; host.querySelector('.hero-fallback')?.remove(); host.classList.add('live');
+      if (info.self) { const key = `${CELEBRATION_PENDING_KEY}:${info.profile.user_id}`; let pending = false; try { pending = localStorage.getItem(key) === '1'; localStorage.removeItem(key); } catch { /* stockage indisponible */ } if (pending && !matchMedia('(prefers-reduced-motion: reduce)').matches) celebrateHero(info); }
     } catch (error) { console.warn('Avatar 3D indisponible', error?.message); }
+  }
+  // Célébration 3D équipée, avec l'effet de victoire et, si le joueur l'a activé, le son équipé (objets privés : seulement sur son propre profil).
+  async function celebrateHero(info) {
+    if (!hero) return; hero.celebrate();
+    if (!info.self) return;
+    const state = getState(), equipped = state.progress?.equipped;
+    try { const { playEffect, playSound } = await import('./victory-effects.js'); playEffect(equippedOf(equipped, 'effect'), { colors: celebrationColors(info.profile.avatar_config) }); if (soundEnabled(state.profile)) playSound(equippedOf(equipped, 'sound')); } catch { /* effets indisponibles : la célébration 3D suffit */ }
   }
   async function mountStudioTab(info) {
     const host = root.querySelector('[data-studio]'), mine = mountToken; if (!host) return;
@@ -179,7 +210,7 @@ export function initProfilePage(deps) {
     if (event.target.closest('[data-share-card]')) { shareCard(data); return; }
     if (event.target.closest('[data-compare]')) { compare = compare ? null : (data.own?.raw ? { raw: data.own.raw } : null); if (!compare && !data.own) toast('Connectez-vous pour comparer'); render(); return; }
     if (event.target.closest('[data-open-avatar]')) { openAvatar(); return; }
-    if (event.target.closest('[data-hero-celebrate]')) { if (hero) hero.celebrate(); else toast('Le rendu 3D n’est pas disponible sur cet appareil'); return; }
+    if (event.target.closest('[data-hero-celebrate]')) { if (hero) celebrateHero(data); else toast('Le rendu 3D n’est pas disponible sur cet appareil'); return; }
     if (event.target.closest('[data-open-bets]')) { navigate('bankroll'); return; }
     if (event.target.closest('[data-back-home]')) { navigate('community'); return; }
     if (event.target.closest('[data-export]')) {
@@ -194,6 +225,8 @@ export function initProfilePage(deps) {
     toast(message);
   }
   root.addEventListener('change', async event => {
+    const pref = event.target.closest('[data-pref]');
+    if (pref) { deps.setPreference?.(pref.dataset.pref, pref.checked); settingsFeedback(pref.checked ? 'Son des célébrations activé' : 'Son des célébrations coupé'); return; }
     const setting = event.target.closest('[data-setting]');
     if (!setting) return;
     const current = data, checked = setting.checked; setting.disabled = true;

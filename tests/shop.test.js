@@ -77,3 +77,29 @@ test('le catalogue serveur ne vend les nouveaux objets qu’après validation de
   assert.ok(items.some(i=>i.id===weekly));
  }
 });
+// BET-163 · effets de victoire, ambiance sonore et personnalisation de la carte
+test('les nouvelles catégories : effets, sons, fonds, polices et effets brillants, avec leurs libellés français et des prix dans la fourchette',()=>{
+  const count=category=>S.CATALOG.filter(e=>e.category===category).length;
+  assert.deepEqual(S.BET163_CATEGORIES,['effect','sound','card-bg','card-font','card-shine']);
+  assert.deepEqual(S.BET163_CATEGORIES.map(c=>S.CATEGORIES[c]),['Effets de victoire','Ambiance sonore','Fonds de carte','Police du numéro','Effet brillant']);
+  assert.deepEqual(S.BET163_CATEGORIES.map(count),[3,3,4,3,2]);
+  const fresh=S.CATALOG.filter(e=>S.BET163_CATEGORIES.includes(e.category));assert.ok(fresh.every(S.validPrice));assert.ok(fresh.every(e=>!e.exclusive&&/^[a-z]{1,20}$/.test(e.asset)));
+  assert.deepEqual(['effect-confetti','effect-smoke','effect-fireworks'].map(id=>S.CATALOG.find(e=>e.id===id).rarity),['common','rare','epic']);
+  assert.ok(S.BET163_CATEGORIES.every(c=>S.DISPLAYABLE.includes(c)));assert.deepEqual(S.CARD_SLOTS,['card-bg','card-font','card-shine']);
+  assert.doesNotMatch(fresh.map(e=>e.name).join(' '),/Allianz|Nike|Adidas|Puma|UEFA|FIFA|Champions League|Spotify|—|–/i);
+});
+test('le catalogue serveur ne vend les effets, sons et objets de carte qu’après la migration V39',async()=>{
+ for(const v37 of [false,true]){
+  const writes=[],admin={rpc:async name=>name==='equipped_slot_public'?v37:true,upsert:async(table,rows)=>writes.push({table,rows})};
+  await E.syncShop(admin,new Date('2026-11-03T12:00:00Z'));
+  const items=writes.find(w=>w.table==='shop_items').rows,weekly=writes.find(w=>w.table==='shop_weekly').rows[0].item_id;
+  for(const id of ['effect-confetti','sound-horn','cardbg-pitch','cardfont-retro','cardshine-holo'])assert.equal(items.some(i=>i.id===id),v37,id);
+  assert.ok(items.some(i=>i.id==='celeb-heart'));assert.ok(items.some(i=>i.id===weekly));
+ }
+ const writes=[],admin={rpc:async name=>{if(name==='equipped_slot_public')throw new Error('42883');return true},upsert:async(table,rows)=>writes.push({table,rows})};
+ await E.syncShop(admin,new Date('2026-11-03T12:00:00Z'));assert.ok(!writes.find(w=>w.table==='shop_items').rows.some(i=>S.BET163_CATEGORIES.includes(i.category)));
+});
+test('V39 rend publics le titre, le cadre et les objets de la carte, jamais les effets ni les sons',async()=>{
+  const {readFile}=await import('node:fs/promises'),sql=await readFile(new URL('../supabase/migrations/supabase-v39-schema.sql',import.meta.url),'utf8'),list=/p_slot in \(([^)]*)\)/.exec(sql)[1].split(',').map(v=>v.trim().replace(/'/g,''));
+  assert.deepEqual(list,['title','frame',...S.CARD_SLOTS]);assert.match(sql,/create or replace view public\.public_equipped as[\s\S]*where public\.equipped_slot_public\(e\.slot\)/);
+});
