@@ -70,7 +70,7 @@ export async function payGeneralSeasons(admin, now = new Date()) {
       admin.selectAll('season_results', `season=eq.${season}&select=user_id,from_echelon,to_echelon,outcome,group_rank,group_size,barrage`),
       admin.selectAll('daily_participation', `season=eq.${season}&select=user_id,played,offered`),
       admin.selectAll('league_entries', `league=eq.general&season=eq.${season}&select=id,user_id,bet_id,daily_pick_id,points,settled_at`),
-      admin.selectAll('bets', `settled_at=gte.${new Date(Date.parse(`${season}-01T00:00:00Z`) - 3 * DAY).toISOString()}&select=id,odds`), admin.selectAll('daily_picks', `day=gte.${season}-01&select=id,odd`)
+      admin.selectAll('bets', `settled_at=gte.${new Date(Date.parse(`${seasonDates(season).start}T00:00:00Z`) - 3 * DAY).toISOString()}&select=id,odds`), admin.selectAll('daily_picks', `day=gte.${seasonDates(season).start}&select=id,odd`)
     ]);
     const sequences = entrySequences(entries, new Map(bets.map(bet => [bet.id, bet])), new Map(dailyPicks.map(pick => [pick.id, pick]))), plan = planGeneralRewards({ season, results, participation: Object.fromEntries(participation.map(item => [item.user_id, item])), sequences });
     await admin.insertIgnore('season_rewards', plan.rewards, 'season,league,user_id');
