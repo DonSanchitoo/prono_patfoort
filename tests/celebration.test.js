@@ -40,3 +40,19 @@ test('chaque effet et chaque son de la boutique a un rendu, et rien ne se joue h
   assert.equal(V.effectKind('effect-inconnu'),null);assert.equal(V.soundKind('celeb-jump'),null);assert.equal(V.effectKind(null),null);
   assert.equal(typeof V.playEffect('effect-confetti'),'function');assert.equal(V.playSound('sound-siren'),false);
 });
+// BET-163 (relecture) : à l'ouverture du site, sans geste du joueur, le son attend le premier geste pendant la célébration.
+test('le son de la célébration attend le premier geste du joueur, sauf clic sur Fermer',()=>{
+  const listeners={},sounds=[],node=()=>({className:'',innerHTML:'',setAttribute(){},remove(){this.removed=true},querySelector:()=>({addEventListener(type,fn){node.closeFn=fn}})});
+  const saved={document:globalThis.document,navigator:Object.getOwnPropertyDescriptor(globalThis,'navigator'),AudioContext:globalThis.AudioContext};
+  const gain=()=>({gain:{setValueAtTime(){},linearRampToValueAtTime(){},exponentialRampToValueAtTime(){},value:0},connect(){}}),osc=()=>({type:'',frequency:{setValueAtTime(){},linearRampToValueAtTime(){},exponentialRampToValueAtTime(){},value:0},connect(){},start(){},stop(){}});
+  globalThis.document={querySelector:()=>null,createElement:node,body:{append(){}},addEventListener(type,fn){listeners[type]=fn},removeEventListener(type){delete listeners[type]}};
+  Object.defineProperty(globalThis,'navigator',{value:{userActivation:{hasBeenActive:false}},configurable:true});
+  globalThis.AudioContext=class{constructor(){sounds.push(1);this.currentTime=0;this.destination={}}createGain(){return gain()}createOscillator(){return osc()}createBiquadFilter(){return {type:'',frequency:{value:0},connect(){}}}resume(){return Promise.resolve()}close(){return Promise.resolve()}};
+  try{
+    const close=V.showVictory({sound:'sound-siren'});assert.equal(sounds.length,0);assert.ok(listeners.pointerup&&listeners.keydown);
+    navigator.userActivation.hasBeenActive=true;listeners.pointerup({target:{closest:()=>null}});assert.equal(sounds.length,1);assert.equal(listeners.pointerup,undefined);close();navigator.userActivation.hasBeenActive=false;
+    V.showVictory({sound:'sound-siren'});listeners.pointerup({target:{closest:sel=>sel==='[data-victory-close]'?{}:null}});assert.equal(sounds.length,1);assert.ok(listeners.pointerup);node.closeFn();assert.equal(listeners.pointerup,undefined);
+  }finally{
+    globalThis.document=saved.document;globalThis.AudioContext=saved.AudioContext;if(saved.navigator)Object.defineProperty(globalThis,'navigator',saved.navigator);else delete globalThis.navigator;
+  }
+});

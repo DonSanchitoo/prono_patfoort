@@ -66,6 +66,8 @@ const SOUNDS = {
 export const soundKind = id => { const kind = String(id ?? '').replace(/^sound-/, ''); return Object.hasOwn(SOUNDS, kind) ? kind : null; };
 // Le navigateur n'autorise le son qu'après un geste du joueur : sans geste connu, aucun contexte audio n'est créé.
 export const audioAllowed = () => typeof navigator === 'undefined' || navigator.userActivation?.hasBeenActive !== false;
+// Durée d'affichage de la célébration quand le son attend le premier geste du joueur.
+export const DEFERRED_SOUND_MS = 8000;
 export function playSound(id, { volume = .18 } = {}) {
   const kind = soundKind(id), Context = globalThis.AudioContext ?? globalThis.webkitAudioContext;
   if (!kind || !Context || !audioAllowed()) return false;
@@ -87,10 +89,15 @@ export function showVictory({ avatar = '', effect = null, sound = null, colors =
   pop.innerHTML = `<div class="victory-avatar">${avatar}</div><div class="victory-text"><strong>Prono gagné !</strong><small>${count > 1 ? `${count} pronos gagnés depuis votre dernière visite` : 'Bravo, votre pronostic est validé'}</small></div><button class="icon-button" type="button" data-victory-close aria-label="Fermer la célébration"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>`;
   document.body.append(pop);
   const stopEffect = playEffect(effect, { colors });
-  if (sound) playSound(sound);
+  // Sans geste du joueur à l'ouverture du site, le son attend son premier geste tant que la célébration est affichée (sauf clic sur Fermer).
+  const deferred = Boolean(sound && soundKind(sound) && !audioAllowed());
+  if (sound && !deferred) playSound(sound);
+  const onGesture = event => { if (event.target?.closest?.('[data-victory-close]')) return; stopListening(); playSound(sound); };
+  const stopListening = () => { document.removeEventListener('pointerup', onGesture, true); document.removeEventListener('keydown', onGesture, true); };
+  if (deferred) { document.addEventListener('pointerup', onGesture, true); document.addEventListener('keydown', onGesture, true); }
   let closed = false;
-  const close = () => { if (closed) return; closed = true; clearTimeout(timer); stopEffect(); pop.remove(); onClose(); };
-  const timer = setTimeout(close, CELEBRATION_MS + 400);
+  const close = () => { if (closed) return; closed = true; clearTimeout(timer); stopListening(); stopEffect(); pop.remove(); onClose(); };
+  const timer = setTimeout(close, deferred ? DEFERRED_SOUND_MS : CELEBRATION_MS + 400);
   pop.querySelector('[data-victory-close]').addEventListener('click', close);
   return close;
 }
