@@ -88,7 +88,7 @@ test('les nouvelles catégories : effets, sons, fonds, polices et effets brillan
   assert.ok(S.BET163_CATEGORIES.every(c=>S.DISPLAYABLE.includes(c)));assert.deepEqual(S.CARD_SLOTS,['card-bg','card-font','card-shine']);
   assert.doesNotMatch(fresh.map(e=>e.name).join(' '),/Allianz|Nike|Adidas|Puma|UEFA|FIFA|Champions League|Spotify|—|–/i);
 });
-test('le catalogue serveur ne vend les effets, sons et objets de carte qu’après la migration V37',async()=>{
+test('le catalogue serveur ne vend les effets, sons et objets de carte qu’après la migration V39',async()=>{
  for(const v37 of [false,true]){
   const writes=[],admin={rpc:async name=>name==='equipped_slot_public'?v37:true,upsert:async(table,rows)=>writes.push({table,rows})};
   await E.syncShop(admin,new Date('2026-11-03T12:00:00Z'));
@@ -99,7 +99,7 @@ test('le catalogue serveur ne vend les effets, sons et objets de carte qu’apr�
  const writes=[],admin={rpc:async name=>{if(name==='equipped_slot_public')throw new Error('42883');return true},upsert:async(table,rows)=>writes.push({table,rows})};
  await E.syncShop(admin,new Date('2026-11-03T12:00:00Z'));assert.ok(!writes.find(w=>w.table==='shop_items').rows.some(i=>S.BET163_CATEGORIES.includes(i.category)));
 });
-test('V37 rend publics le titre, le cadre et les objets de la carte, jamais les effets ni les sons',async()=>{
-  const {readFile}=await import('node:fs/promises'),sql=await readFile(new URL('../supabase/migrations/supabase-v37-schema.sql',import.meta.url),'utf8'),list=/p_slot in \(([^)]*)\)/.exec(sql)[1].split(',').map(v=>v.trim().replace(/'/g,''));
+test('V39 rend publics le titre, le cadre et les objets de la carte, jamais les effets ni les sons',async()=>{
+  const {readFile}=await import('node:fs/promises'),sql=await readFile(new URL('../supabase/migrations/supabase-v39-schema.sql',import.meta.url),'utf8'),list=/p_slot in \(([^)]*)\)/.exec(sql)[1].split(',').map(v=>v.trim().replace(/'/g,''));
   assert.deepEqual(list,['title','frame',...S.CARD_SLOTS]);assert.match(sql,/create or replace view public\.public_equipped as[\s\S]*where public\.equipped_slot_public\(e\.slot\)/);
 });

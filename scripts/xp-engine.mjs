@@ -26,7 +26,7 @@ export function buildXpInputs({ entries, bets, dailyPicks, challenges, specialPi
   for (const [user, picks] of group(dailyPicks, 'user_id')) for (const [day, list] of group(picks, 'day')) dailyDays.push({ user_id: user, day, played: list.length, offered: offered.get(day) ?? 0, settled: list.every(pick => pick.status !== 'pending') });
   const sequences = entrySequences(entries, betById, pickById);
   const titled = new Set(titles.map(title => `${title.league_id}|${title.season}`)), specials = [];
-  for (const [league, rows] of group(standings.filter(row => row.scope === 'season' && row.picks > 0), 'league_id')) for (const season of [...titled].filter(key => key.startsWith(`${league}|`)).map(key => key.split('|')[1])) for (const row of rows) specials.push({ user_id: row.user_id, league_id: league, season, rank: row.rank, size: rows.length });
+  for (const [league, rows] of group(standings.filter(row => row.scope === 'season' && row.picks > 0&&row.confirmed!==false), 'league_id')) for (const season of [...titled].filter(key => key.startsWith(`${league}|`)).map(key => key.split('|')[1])) for (const row of rows) specials.push({ user_id: row.user_id, league_id: league, season, rank: row.rank, size: rows.length });
   const stats = {};
   const users = new Set([...entries, ...bets, ...dailyPicks, ...specialPicks, ...seasonResults, ...titles].map(item => item.user_id));
   for (const user of users) {
@@ -48,7 +48,7 @@ export async function awardXp(admin, now = new Date()) {
     admin.selectAll('daily_challenges', `day=gte.${sinceDay}&select=day,picks`),
     admin.selectAll('special_picks', 'status=neq.pending&select=id,user_id,source,bet_id,status,odd'),
     admin.selectAll('season_results', 'select=season,user_id,outcome,group_rank,group_size'),
-    admin.selectAll('special_standings', 'scope=eq.season&select=league_id,scope,user_id,picks,rank'),
+    admin.selectAll('special_standings', 'scope=eq.season&select=league_id,scope,user_id,picks,rank,confirmed'),
     admin.selectAll('special_titles', 'select=league_id,season,user_id,kind'),
     admin.selectAll('user_badges', 'select=user_id,badge'),
     admin.selectAll('inventories', 'select=user_id,item_id'),

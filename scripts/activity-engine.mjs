@@ -13,7 +13,7 @@ export async function emitActivities(admin, now = new Date(), season = seasonKey
     admin.selectAll('user_badges', `earned_at=gte.${since}&select=user_id,badge,earned_at`),
     admin.selectAll('public_xp', 'select=user_id,xp'),
     admin.selectAll('private_league_members', `joined_at=gte.${since}&select=user_id,league_id,joined_at`),
-    admin.selectAll('standings', `season=eq.${season}&select=season,user_id,rank,prev_rank,picks`)
+    admin.selectAll('standings', `season=eq.${season}&select=season,user_id,rank,prev_rank,picks,confirmed`)
   ]);
   const names = new Map(leagues.map(league => [league.id, league.name]));
   const rows = planActivities({ now, today: parisDate(now),

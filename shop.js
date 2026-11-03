@@ -4,7 +4,7 @@ export const RARITIES = { common: { label: 'Commun', min: 300, max: 800 }, rare:
 export const CATEGORIES = { kit: 'Maillots', accessory: 'Accessoires', trophy: 'Trophées', background: 'Fonds et stades', base: 'Socles', frame: 'Cadres de carte', celebration: 'Célébrations', title: 'Titres', effect: 'Effets de victoire', sound: 'Ambiance sonore', 'card-bg': 'Fonds de carte', 'card-font': 'Police du numéro', 'card-shine': 'Effet brillant' };
 export const WEEKLY_DISCOUNT = .3, PACK_DISCOUNT = .2, RESALE_SHARE = .3, SHOWCASE_SIZE = 8;
 // Objets équipés hors avatar 3D (equipped_items, un objet par catégorie) : titre et cadre (BET-62), effets de victoire, sons et personnalisation de la carte (BET-163).
-// Seuls les objets de la carte joueur sont publics (vue public_equipped, V37) ; effets et sons restent privés.
+// Seuls les objets de la carte joueur sont publics (vue public_equipped, V39) ; effets et sons restent privés.
 export const DISPLAYABLE = ['title', 'frame', 'effect', 'sound', 'card-bg', 'card-font', 'card-shine'];
 export const CARD_SLOTS = ['card-bg', 'card-font', 'card-shine'], BET163_CATEGORIES = ['effect', 'sound', ...CARD_SLOTS];
 

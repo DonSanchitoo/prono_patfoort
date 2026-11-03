@@ -29,12 +29,12 @@ export function planGeneralRewards({ season, results, participation, sequences }
 
 // Récompenses de fin de compétition d'une ligue spéciale : tirelire, régularité (journées jouées depuis l'arrivée), prime de classement, difficulté de la ligue, titre de champion.
 export function planSpecialRewards({ league, season, rounds, members, picks, ranked, titles }) {
-  const size = ranked.filter(row => row.picks > 0).length, rewards = [], ledger = [], joined = new Map(members.map(member => [member.user_id, member]));
+  const size = ranked.filter(row => row.picks > 0&&row.confirmed!==false).length, rewards = [], ledger = [], joined = new Map(members.map(member => [member.user_id, member]));
   for (const row of ranked.filter(item => item.picks > 0)) {
     const own = picks.filter(pick => pick.user_id === row.user_id && pick.status !== 'pending').sort((a, b) => String(a.settled_at).localeCompare(String(b.settled_at))).map(pick => ({ id: pick.id, points: pick.points, odds: Number(pick.odd) }));
     const available = rounds.filter(round => new Date(round.starts_at) >= new Date(joined.get(row.user_id)?.joined_at ?? 0)).length, playedRounds = new Set(picks.filter(pick => pick.user_id === row.user_id).map(pick => pick.round_id)).size;
     const feats = titles.some(title => title.user_id === row.user_id && title.kind === 'champion') ? ['special-champion'] : [];
-    const reward = seasonReward({ piggy: piggyBank(own).total, share: available ? playedRounds / available : 0, prize: rankPrize(row.rank, size), difficulty: Number(league.difficulty) || 1, feats });
+    const reward = seasonReward({ piggy: piggyBank(own).total, share: available ? playedRounds / available : 0, prize:row.confirmed===false?0:rankPrize(row.rank, size), difficulty: Number(league.difficulty) || 1, feats });
     rewards.push({ season, league: league.id, user_id: row.user_id, piggy: reward.piggy, regularity: reward.regularity, prize: reward.prize, difficulty: reward.difficulty, feats, total: reward.total });
     if (reward.total > 0) ledger.push({ user_id: row.user_id, delta: reward.total, reason: 'season', ref: `${season}:${league.id}` });
   }
@@ -42,7 +42,7 @@ export function planSpecialRewards({ league, season, rounds, members, picks, ran
 }
 // Petite prime mensuelle pour les 3 premiers du classement du mois d'une ligue spéciale.
 export function planMonthlyPrizes({ league, month, standings }) {
-  return standings.filter(row => row.picks > 0).sort((a, b) => a.rank - b.rank).slice(0, 3).map((row, index) => ({ user_id: row.user_id, delta: Math.round(SPECIAL_MONTH_TOKENS[index] * (Number(league.difficulty) || 1)), reason: 'special-month', ref: `${league.id}:${month}` }));
+  return standings.filter(row => row.picks > 0&&row.confirmed!==false).sort((a, b) => a.rank - b.rank).slice(0, 3).map((row, index) => ({ user_id: row.user_id, delta: Math.round(SPECIAL_MONTH_TOKENS[index] * (Number(league.difficulty) || 1)), reason: 'special-month', ref: `${league.id}:${month}` }));
 }
 
 const DAY = 864e5;
@@ -85,7 +85,7 @@ export async function paySpecialLeagues(admin, now = new Date()) {
   const today = now.toISOString().slice(0, 10), current = monthKey(now), leagues = await admin.selectAll('special_leagues', 'open=eq.true&select=id,season_start,season_end,difficulty');
   let paid = 0;
   for (const league of leagues) {
-    const standings = await admin.selectAll('special_standings', `league_id=eq.${league.id}&select=user_id,scope,picks,rank`);
+    const standings = await admin.selectAll('special_standings', `league_id=eq.${league.id}&select=user_id,scope,picks,rank,confirmed`);
     for (const month of [...new Set(standings.map(row => row.scope))].filter(scope => /^\d{4}-\d{2}$/.test(scope) && scope < current)) {
       const ledger = planMonthlyPrizes({ league, month, standings: standings.filter(row => row.scope === month) });
       await admin.insertIgnore('token_ledger', ledger, 'user_id,reason,ref'); paid += ledger.length;
