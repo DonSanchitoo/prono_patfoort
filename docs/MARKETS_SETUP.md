@@ -9,6 +9,7 @@ La variable Actions `PROPLINE_MARKET_STAGE` vaut **0 par défaut**. Elle sélect
 - **0** : 1N2, Over exactement 2,5, BTTS Oui (BET-152).
 - **1** : ajoute BTTS Non, Under 2,5, Over et Under 1,5 et 3,5. Même requête et même fréquence.
 - **2** : ajoute double chance 1N/N2/12, domicile/extérieur remboursé si nul et totaux par équipe sur les demi-lignes 0,5 à 5,5 effectivement fournies. Une ligne non prise en charge reste ignorée, sans arrondi ni substitution d’une ligne voisine.
+- **3** : après V40, ajoute le [premier lot BET-170](MARKETS_PRODUCTION.md) : scores exacts, handicaps européens, marges de victoire et demi-lignes de buts supplémentaires, sans modèle ni value.
 
 Utiliser d’abord le workflow de diagnostic avec l’étape choisie. Il reste sans écriture et sans déploiement ; il vérifie les prix réels. Ne pas passer la variable de production à 1 ou 2 tant que le diagnostic correspondant et la migration SQL ne sont pas validés. Les marchés indisponibles ne sont ni inventés ni proposés ; les cinq marchés historiques conservent leur repli estimé. Un nouveau marché doit avoir une cote réelle côté serveur.
 
@@ -42,4 +43,9 @@ Avant d’activer d’autres familles (périodes, joueurs, corners, cartons, com
 - 56 requêtes par défaut (de quoi couvrir les 8 compétitions) (entrée `budget`, 60 au plus), une par une, sans nouvelle tentative, arrêt au premier refus d’accès ou de quota ;
 - rapport `propline-inventory.md` et `propline-inventory.json` en artefact du job (7 jours) et dans son résumé : clé fournisseur, période, famille proposée, déjà collectée ou non, nombre de matchs, nombre d’issues, compétitions.
 
-Il n’écrit rien dans le dépôt, ne touche ni `data/fixtures.json` ni Supabase et ne déploie rien. Une clé relevée n’est ni une couverture garantie ni un marché jouable : la matrice marché × données × probabilités × règlement × couverture et l’ordre d’activation sont établis ensuite (BET-170), et un marché non réglable de manière fiable reste désactivé pour les paris.
+Il n’écrit rien dans le dépôt, ne touche ni `data/fixtures.json` ni Supabase et ne déploie rien. Une clé relevée n’est ni une couverture garantie ni un marché jouable : la [matrice BET-170](MARKETS_INVENTORY.md) documente le relevé réel du 3 novembre, les données nécessaires, les exclusions et les lots d’activation, et un marché non réglable de manière fiable reste désactivé pour les paris.
+
+Le diagnostic reconnaît le champ réel `outcomes_count`. Une période est seulement un filtre demandé : des catalogues identiques à `full` déclenchent un avertissement, sans annoncer une couverture H1/H2. Les compteurs d’issues ne prouvent ni le nombre de bookmakers ni la présence de prix jouables. Le JSON historique est conservé tel quel dans `docs/evidence/` : ses compteurs inconnus ne doivent pas être interprétés comme des zéros réels.
+Les nouveaux rapports conservent aussi `samples` (événement, compétition, période demandée et clés/compteurs), pour vérifier les ressemblances par match plutôt que sur la seule agrégation. Cela ne transforme pas une période demandée en période confirmée.
+
+BET-170 : V40 est appliquée et `update-fixtures.yml` fixe explicitement `PROPLINE_MARKET_STAGE=3` pour la production. Le défaut du collecteur hors workflow reste 0. La vérification en lecture seule de V40 précède la collecte à l’étape 3. [Procédure complète, validation réelle et retour arrière](MARKETS_PRODUCTION.md).
