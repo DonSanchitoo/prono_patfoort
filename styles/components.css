@@ -657,6 +657,7 @@ dialog .modal-head .icon-button,dialog .dialog-tools .icon-button{flex:none;min-
   .analytics-kpis,.prediction-kpi-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .radar-box,canvas,svg.radar{max-width:100%}
   .history-legs{min-width:0}.private-invite{flex-wrap:wrap}
+  .mobile-nav button{font-size:10px}
   .club-table-scroll{overflow:visible}
   .club-table{min-width:0;display:block}
   .club-table caption{display:block}
@@ -674,5 +675,5 @@ dialog .modal-head .icon-button,dialog .dialog-tools .icon-button{flex:none;min-
   .hero h1{font-size:32px}.hero-main{padding:20px}
   .stats-grid{gap:8px}.stats-grid article{padding:14px}.stats-grid strong{font-size:26px}
   .topbar{gap:6px;padding-inline:12px}.brand-name{font-size:18px}.topbar-actions{gap:4px}
-  .mobile-nav{left:0;right:0;padding:3px;gap:0}.mobile-nav button{font-size:8px}
+  .mobile-nav{left:0;right:0;padding:3px;gap:0}.mobile-nav button{font-size:10px}
 }
