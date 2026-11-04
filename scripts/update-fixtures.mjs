@@ -1,8 +1,9 @@
+import {selectionSnapshot} from '../selection-snapshot.js';
 import {venueFromCompetition} from '../stadiums.js';
 import {regulationScore} from '../regulation-score.js';
 import {marketKeys,marketEnabled,isExtendedMarket,EXTENDED_ODDS_MAX_AGE} from '../markets.js';
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
-import { parisDate, pickDailyChallenge, recommendedMarket } from '../model.js';
+import { parisDate, pickDailyChallenge } from '../model.js';
 import { ODDS_REFRESH_HOURS, SECONDARY_ODDS_WINDOW_HOURS, mergeCachedOffers, summarizeOffers } from '../odds-cache.js';
 import { sameTeam } from '../team-match.js';
 import { collectPropLine } from './propline-odds.mjs';
@@ -162,7 +163,7 @@ const enriched = unique.map(match => {
     match.marketValidUntil = realOdds.validUntil; match.oddsSource = realOdds.offers.some(offer=>Object.keys(offer).some(key=>key.endsWith('Source')&&offer[key]==='PropLine')) ? 'PropLine' : 'Cache historique'; match.bookmakerOffers = realOdds.offers; match.bookmakerCount = realOdds.offers.length; match.oddsBookmakerCounts = realOdds.counts; match.realOddsMarkets = realMarkets; match.oddsCachedMarkets=realOdds.cachedMarkets;
   }
   if (previous?.odds) match.oddsMovement=Object.fromEntries(Object.keys(match.odds).map(key=>{const before=Number(previous.odds[key]),current=Number(match.odds[key]),percent=before&&current?Number(((current-before)/before*100).toFixed(1)):0;return[key,{previous:before,current,percent,significant:Math.abs(percent)>=5}]}));
-  match.suggestedPick=match.completed&&previous?.suggestedPick?previous.suggestedPick:{...recommendedMarket(match),capturedAt:new Date().toISOString()};
+  match.suggestedPick=selectionSnapshot(match,previous);
   return match;
 });
 // Diagnostic de couverture à chaque collecte, sans nouvel appel fournisseur.
