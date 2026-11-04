@@ -635,3 +635,21 @@ dialog .modal-head .icon-button,dialog .dialog-tools .icon-button{flex:none;min-
 .personal-summary{grid-template-columns:repeat(4,minmax(0,1fr))}.personal-summary>div:first-child{border-color:var(--accent-text)}.dashboard-charts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.dashboard-charts .card{min-width:0;padding:20px}.dashboard-charts h3{margin-top:0}.dashboard-charts p{color:var(--muted);font-size:13px;line-height:1.6}.dashboard-charts svg{display:block;width:100%;height:auto;color:var(--muted);font-size:13px}.dashboard-charts details summary,.dashboard-accounting>summary{cursor:pointer;min-height:44px;align-content:center;color:var(--accent-text)}.dashboard-distribution{grid-column:1/-1}.dashboard-accounting .personal-summary{margin-top:12px;grid-template-columns:repeat(auto-fit,minmax(160px,1fr))}.dashboard-accounting .personal-summary>div:first-child{border-color:var(--line)}
 @media(max-width:700px){.personal-summary{grid-template-columns:repeat(2,minmax(0,1fr))}.dashboard-charts{grid-template-columns:minmax(0,1fr)}.dashboard-charts .card{padding:14px}}
 @media(max-width:700px){.dashboard-charts svg text{font-size:24px}}
+
+/* BET-178 : badge contenu, grille explicite et filigrane décoratif. */
+section.club-ranking{padding:clamp(14px,3vw,24px)}
+.special-head{flex-wrap:wrap;isolation:isolate}.special-head>div{min-width:0;overflow-wrap:anywhere}
+.special-head .competition-badge{position:relative;z-index:0;display:grid;place-items:center;flex:0 0 32px;width:32px;height:32px;min-width:32px;max-width:32px;overflow:hidden;contain:size layout}
+.special-head .competition-badge img{display:block;width:32px;height:32px;max-width:100%;max-height:100%;object-fit:contain}
+.grid-entry{display:flex;flex-direction:column;gap:8px;margin-left:auto}.grid-entry small{font-size:12px;color:var(--muted)}
+.grid-guide{margin:20px 0 12px;padding:18px;border:1px solid var(--accent-text);border-radius:16px;background:var(--accent-soft)}.grid-guide h3{margin:6px 0}.grid-guide ol{padding-left:20px;margin:10px 0 0;line-height:1.7;font-size:14px}
+.special-pick-status{grid-column:1/-1;font-size:12px}.special-match[aria-busy=true]{border-color:var(--accent-text)}
+.league-ranking-surface{position:relative;isolation:isolate;overflow:hidden;border:1px solid var(--line-strong);border-radius:18px;padding:16px;margin-top:18px;background:color-mix(in srgb,var(--surface) 88%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.league-ranking-surface>*:not(.league-watermark){position:relative;z-index:1}
+.league-watermark{position:absolute;inset:0;z-index:0;display:grid;place-items:center;pointer-events:none;user-select:none;opacity:.06;overflow:hidden}
+.league-watermark img{width:min(70%,280px);height:280px;max-height:85%;object-fit:contain}
+.league-ranking-surface .club-table tbody tr:nth-child(even){background:color-mix(in srgb,var(--surface-2) 65%,transparent)}
+@media(max-width:700px){.grid-entry{margin-left:0;width:100%}.grid-entry .button{width:100%;min-height:48px}.special-dialog{padding:16px;max-height:calc(100dvh - 24px);overflow-y:auto}.special-head h2{font-size:24px}.special-markets{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.special-markets .daily-odd{min-width:0;min-height:48px;padding:8px 4px}.grid-guide,.league-ranking-surface{padding:12px}}
+@media(prefers-reduced-transparency:reduce){.league-ranking-surface{background:var(--surface);backdrop-filter:none;-webkit-backdrop-filter:none}}
+.special-dialog .dialog-tools{top:-22px;margin:-22px -22px 12px;padding:16px 22px 12px}
+@media(max-width:700px){.special-dialog .dialog-tools{top:-16px;margin:-16px -16px 12px;padding:12px 16px}}
