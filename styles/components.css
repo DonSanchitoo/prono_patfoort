@@ -626,3 +626,5 @@ dialog .modal-head .icon-button,dialog .dialog-tools .icon-button{flex:none;min-
 
 /* BET-169 : la confirmation est annoncée par du texte, sans dépendre de la couleur. */
 .club-table caption{text-align:left;font-weight:800;padding:14px 10px;color:var(--text)}.club-table .provisional td:first-child{font-size:.75rem}.club-table-scroll+.club-table-scroll{margin-top:22px}
+
+.daily-selection{padding:20px;margin-block:20px}.daily-selection h3{margin:8px 0}.daily-selection .safe-pick{width:100%;text-align:left}.daily-selection .analysis-note{line-height:1.6}

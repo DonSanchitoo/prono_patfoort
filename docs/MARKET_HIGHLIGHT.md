@@ -29,3 +29,9 @@ Les cartes présentent d'abord le pronostic, puis deux chiffres séparés : cote
 La source reste visible (« MOYENNE », « CACHE » ou « ESTIMÉE »). L'ancienneté est raccourcie (« Il y a 7 h », « Offre ancienne · 18 h », « Date inconnue »). « Sources et dates des cotes », juste sous la grille, fournit le nombre de bookmakers, les dates complètes en heure de Paris, l'ancienneté précise et les explications. Son ouverture n'ajoute aucune sélection et reste conservée pendant l'actualisation.
 
 Recette dédiée : `NODE_PATH=/tmp/bet-ui-tools/node_modules node scripts/check-market-readability.cjs`. Huit combinaisons largeur/thème, comparaison des prix et confiances avec le modèle, dates complètes, ancienneté visible, noms longs, alignement ordinateur, sélection et revalidation, audit axe. Les tests purs de `tests/market-card.test.js` vérifient aussi les dates absentes, les estimations et l'échappement des libellés. Aucun fournisseur supplémentaire n'est contacté.
+
+## BET-175 : sélection du jour
+
+Le bloc « Sélection du jour » compare les probabilités de gain de tous les marchés reconnus du calendrier du jour (heure de Paris), y compris scores exacts, handicaps et marges. La même grille de scores Poisson sert à chaque événement ; un nul remboursé ne compte pas comme une victoire. Aucun bonus de value ni plafond de cote ne modifie l'ordre. Seules les cotes strictement supérieures à 1,15, disponibles selon la politique des 10 bookmakers et non expirées, sont admissibles. Matchs commencés, terminés, annulés ou sans moyennes valides exclus. Aucun candidat : état vide explicite.
+
+Ce choix est indépendant des filtres de consultation et du défi gratuit 1N2. Les recommandations historiques et leurs instantanés restent inchangés ; les nouveaux marchés gardent leur présentation manuelle ailleurs. `forecastMatch(..., {includeExtended:true})` ouvre le calcul complet uniquement pour ce bloc. Tests : `tests/daily-selection.test.js`.
