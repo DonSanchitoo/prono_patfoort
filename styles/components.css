@@ -650,6 +650,7 @@ dialog .modal-head .icon-button,dialog .dialog-tools .icon-button{flex:none;min-
   .special-markets{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
   .special-markets .daily-odd{min-width:0;padding:8px 4px;overflow-wrap:anywhere}
   .special-dialog{padding:16px;max-height:calc(100dvh - 24px);overflow-y:auto;overscroll-behavior:contain}
+  .special-dialog .dialog-tools{top:-16px;margin:-16px -16px 12px;padding:12px 16px}
   .special-dialog h2{font-size:24px;overflow-wrap:anywhere}
   .daily-teams strong{overflow-wrap:anywhere}.daily-odds>*{min-width:0;flex:1}
   .club-arena select{width:100%}.club-arena>*,.community-panel>*,.profile-panel>*{min-width:0}
