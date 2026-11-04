@@ -635,3 +635,44 @@ dialog .modal-head .icon-button,dialog .dialog-tools .icon-button{flex:none;min-
 .personal-summary{grid-template-columns:repeat(4,minmax(0,1fr))}.personal-summary>div:first-child{border-color:var(--accent-text)}.dashboard-charts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.dashboard-charts .card{min-width:0;padding:20px}.dashboard-charts h3{margin-top:0}.dashboard-charts p{color:var(--muted);font-size:13px;line-height:1.6}.dashboard-charts svg{display:block;width:100%;height:auto;color:var(--muted);font-size:13px}.dashboard-charts details summary,.dashboard-accounting>summary{cursor:pointer;min-height:44px;align-content:center;color:var(--accent-text)}.dashboard-distribution{grid-column:1/-1}.dashboard-accounting .personal-summary{margin-top:12px;grid-template-columns:repeat(auto-fit,minmax(160px,1fr))}.dashboard-accounting .personal-summary>div:first-child{border-color:var(--line)}
 @media(max-width:700px){.personal-summary{grid-template-columns:repeat(2,minmax(0,1fr))}.dashboard-charts{grid-template-columns:minmax(0,1fr)}.dashboard-charts .card{padding:14px}}
 @media(max-width:700px){.dashboard-charts svg text{font-size:24px}}
+
+/* BET-177 : contenu mobile lisible et commandes accessibles au pouce. */
+@media(max-width:700px){
+  button,input,select,textarea,summary{touch-action:manipulation}
+  .button,.text-button,.icon-button,.favorite-toggle,.sheet-arrow,.sheet-close,.details-button,
+  .profile-tabs button,.community-tabs button,.period-switch button,.detail-tabs button,
+  .studio-tabs button,.date-chip{min-height:44px}
+  .icon-button,.favorite-toggle,.sheet-arrow,.sheet-close{min-width:44px}
+  input:not([type=checkbox]):not([type=radio]),select,textarea{font-size:16px;max-width:100%;min-width:0}
+  .community-tabs,.profile-tabs{flex-wrap:wrap;overflow:visible;gap:4px}
+  .community-tabs button,.profile-tabs button{flex:1 1 auto;white-space:normal;padding:10px}
+  .special-head>div,.daily-head>div,.club-player>span{min-width:0;overflow-wrap:anywhere}
+  .special-markets{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+  .special-markets .daily-odd{min-width:0;padding:8px 4px;overflow-wrap:anywhere}
+  .special-dialog{padding:16px;max-height:calc(100dvh - 24px);overflow-y:auto;overscroll-behavior:contain}
+  .special-dialog h2{font-size:24px;overflow-wrap:anywhere}
+  .daily-teams strong{overflow-wrap:anywhere}.daily-odds>*{min-width:0;flex:1}
+  .club-arena select{width:100%}.club-arena>*,.community-panel>*,.profile-panel>*{min-width:0}
+  .league-cards,.two-cols,.squad-list{grid-template-columns:minmax(0,1fr)}
+  .analytics-kpis,.prediction-kpi-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .radar-box,canvas,svg.radar{max-width:100%}
+  .history-legs{min-width:0}.private-invite{flex-wrap:wrap}
+  .club-table-scroll{overflow:visible}
+  .club-table{min-width:0;display:block}
+  .club-table caption{display:block}
+  .club-table thead{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip-path:inset(50%)}
+  .club-table tbody{display:grid;gap:12px}
+  .club-table tr{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px 12px;padding:12px;border:1px solid var(--line);border-radius:14px;background:var(--surface)}
+  .club-table th[scope=row]{grid-column:1/-1;grid-row:1;min-width:0;padding:0;text-align:left}
+  .club-table td{display:flex;align-items:baseline;justify-content:space-between;gap:6px;padding:8px 0;min-width:0;overflow-wrap:anywhere}
+  .club-table td:first-child{grid-column:1/-1;box-shadow:none;padding-top:0}
+  .club-table td:before{content:attr(data-label);font-size:11px;font-weight:400;color:var(--muted);text-align:left}
+  .club-table .club-player{gap:8px}.club-player .text-button{text-align:left;overflow-wrap:anywhere}
+}
+@media(max-width:380px){
+  .hero-actions,.heading-actions{grid-template-columns:minmax(0,1fr)}
+  .hero h1{font-size:32px}.hero-main{padding:20px}
+  .stats-grid{gap:8px}.stats-grid article{padding:14px}.stats-grid strong{font-size:26px}
+  .topbar{gap:6px;padding-inline:12px}.brand-name{font-size:18px}.topbar-actions{gap:4px}
+  .mobile-nav{left:0;right:0;padding:3px;gap:0}.mobile-nav button{font-size:8px}
+}
