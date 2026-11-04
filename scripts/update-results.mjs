@@ -1,3 +1,4 @@
+import {selectionSnapshot} from '../selection-snapshot.js';
 import {regulationScore} from '../regulation-score.js';
 import { readFile, writeFile } from 'node:fs/promises';
 import { selectionResult } from '../model.js';
@@ -37,6 +38,7 @@ for (const match of data.matches ?? []) {
   if (result.voided) { match.voided = true; match.status = 'Annulé'; continue; }
   match.completed = true; match.status = 'Terminé'; match.homeScore = result.homeScore; match.awayScore = result.awayScore; match.regulation = result.regulation;
 }
+for(const match of data.matches??[])match.suggestedPick=selectionSnapshot(match);
 data.scoresUpdatedAt = new Date().toISOString();
 data.coverage = {...data.coverage, settlements:data.settlements.length};
 await writeFile(file, `${JSON.stringify(data, null, 2)}\n`);
@@ -45,7 +47,7 @@ let predictionHistory=[];
 try{predictionHistory=JSON.parse(await readFile(historyFile,'utf8'))}catch{}
 const predictions=new Map(predictionHistory.map(item=>[item.id,item]));
 for(const match of data.matches??[]){
-  if(!match.completed||!match.suggestedPick||predictions.has(match.id))continue;
+  if(!match.completed||!match.suggestedPick?.key||predictions.has(match.id))continue;
   const pick=match.suggestedPick,status=selectionResult({...pick,matchId:match.id},[match]).status;
   if(status==='pending')continue;
   predictions.set(match.id,{id:match.id,date:match.date,league:match.league,match:`${match.home} – ${match.away}`,label:pick.label,key:pick.key,odd:pick.odd,probability:pick.probability,status,score:`${match.homeScore} : ${match.awayScore}`});
