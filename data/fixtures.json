@@ -77,9 +77,19 @@
     "secondaryOddsMatches": 37,
     "statsMatches": 103,
     "oddsMatches": 114,
-    "settlements": 140
+    "settlements": 141
   },
   "settlements": [
+    {
+      "id": "espn-401915551",
+      "date": "2026-11-04",
+      "home": "Stade Rennais",
+      "away": "Olympiacos",
+      "regulation": null,
+      "homeScore": 0,
+      "awayScore": 0,
+      "completed": true
+    },
     {
       "id": "espn-401915311",
       "date": "2026-11-03",
@@ -103671,8 +103681,8 @@
       "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/435.png",
       "priority": 28,
       "featured": false,
-      "status": "Scheduled",
-      "completed": false,
+      "status": "Terminé",
+      "completed": true,
       "voided": false,
       "knockout": false,
       "regulation": null,
@@ -218095,5 +218105,5 @@
       }
     }
   ],
-  "scoresUpdatedAt": "2026-11-04T10:55:42.996Z"
+  "scoresUpdatedAt": "2026-11-04T18:39:31.400Z"
 }
