@@ -108,3 +108,9 @@ Appliquer `supabase/migrations/supabase-v40-schema.sql` après V39 avant l’act
 
 ### Seuil de dix bookmakers (BET-170)
 Appliquer `supabase/migrations/supabase-v41-schema.sql` après V40 puis synchroniser le calendrier courant pour remplir `fixtures.odds_bookmaker_counts`. Tickets, défi du jour et grilles refusent toute nouvelle sélection sous dix bookmakers. Les prix déjà enregistrés dans les paris restent inchangés. Recette isolée : `scripts/check-quote-policy-sql.mjs`.
+
+### V42 : avatar d'inscription (BET-176)
+
+Appliquer `supabase/migrations/supabase-v42-schema.sql` après V41, avant publication du correctif d'inscription. Le déclencheur de création du profil reprend `avatar2` seulement si sa configuration est valide et entièrement gratuite, avec révision d'image à zéro. Une métadonnée invalide ou contenant un objet verrouillé conserve le repli historique. La confirmation email ne réécrit pas le profil. Les profils existants ne sont pas écrasés ; le navigateur récupère le choix d'inscription lorsque seul un ancien état sans avatar v2 existe, puis le publie normalement. Un profil v2 sauvegardé reste prioritaire sur les métadonnées et sur le stockage de navigation.
+
+Recette isolée : `NODE_PATH=work/ui-tools/node_modules node scripts/check-registration-avatar.cjs`. Aucune requête à la production.
