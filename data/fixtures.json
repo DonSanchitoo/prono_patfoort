@@ -77,7 +77,7 @@
     "secondaryOddsMatches": 37,
     "statsMatches": 103,
     "oddsMatches": 114,
-    "settlements": 150
+    "settlements": 151
   },
   "settlements": [
     {
@@ -177,6 +177,16 @@
       "away": "Sabah FK",
       "regulation": null,
       "homeScore": 4,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401933098",
+      "date": "2026-11-04",
+      "home": "Sporting Club Baie-Mahault",
+      "away": "Siroco Les Abymes",
+      "regulation": null,
+      "homeScore": 0,
       "awayScore": 1,
       "completed": true
     },
@@ -218195,5 +218205,5 @@
       }
     }
   ],
-  "scoresUpdatedAt": "2026-11-05T00:23:04.863Z"
+  "scoresUpdatedAt": "2026-11-05T07:55:03.008Z"
 }
