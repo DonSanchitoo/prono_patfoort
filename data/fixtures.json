@@ -77,7 +77,7 @@
     "secondaryOddsMatches": 37,
     "statsMatches": 103,
     "oddsMatches": 114,
-    "settlements": 199
+    "settlements": 200
   },
   "settlements": [
     {
@@ -208,6 +208,16 @@
       "regulation": null,
       "homeScore": 2,
       "awayScore": 4,
+      "completed": true
+    },
+    {
+      "id": "espn-401933097",
+      "date": "2026-11-06",
+      "home": "Olympique De Cayenne",
+      "away": "AS Etoile Matoury",
+      "regulation": null,
+      "homeScore": 1,
+      "awayScore": 3,
       "completed": true
     },
     {
@@ -218685,5 +218695,5 @@
       }
     }
   ],
-  "scoresUpdatedAt": "2026-11-07T00:07:18.877Z"
+  "scoresUpdatedAt": "2026-11-07T05:58:39.865Z"
 }
