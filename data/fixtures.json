@@ -77,7 +77,7 @@
     "secondaryOddsMatches": 37,
     "statsMatches": 103,
     "oddsMatches": 114,
-    "settlements": 280
+    "settlements": 283
   },
   "settlements": [
     {
@@ -340,6 +340,36 @@
       },
       "homeScore": 2,
       "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401876404",
+      "date": "2026-11-08",
+      "home": "Lens",
+      "away": "Marseille",
+      "regulation": null,
+      "homeScore": 1,
+      "awayScore": 2,
+      "completed": true
+    },
+    {
+      "id": "espn-401882816",
+      "date": "2026-11-08",
+      "home": "Atlético Madrid",
+      "away": "Barcelona",
+      "regulation": null,
+      "homeScore": 1,
+      "awayScore": 2,
+      "completed": true
+    },
+    {
+      "id": "espn-401875003",
+      "date": "2026-11-08",
+      "home": "Fiorentina",
+      "away": "Juventus",
+      "regulation": null,
+      "homeScore": 2,
+      "awayScore": 2,
       "completed": true
     },
     {
@@ -184501,13 +184531,13 @@
       "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/83.png",
       "priority": 93,
       "featured": true,
-      "status": "Scheduled",
-      "completed": false,
+      "status": "Terminé",
+      "completed": true,
       "voided": false,
       "knockout": false,
       "regulation": null,
-      "homeScore": 0,
-      "awayScore": 0,
+      "homeScore": 1,
+      "awayScore": 2,
       "homeGoals": 1.8,
       "awayGoals": 1.38,
       "odds": {
@@ -194772,13 +194802,13 @@
       "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/111.png",
       "priority": 61,
       "featured": false,
-      "status": "Scheduled",
-      "completed": false,
+      "status": "Terminé",
+      "completed": true,
       "voided": false,
       "knockout": false,
       "regulation": null,
-      "homeScore": 0,
-      "awayScore": 0,
+      "homeScore": 2,
+      "awayScore": 2,
       "homeGoals": 1.44,
       "awayGoals": 1.46,
       "odds": {
@@ -196213,13 +196243,13 @@
       "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/176.png",
       "priority": 60,
       "featured": false,
-      "status": "Scheduled",
-      "completed": false,
+      "status": "Terminé",
+      "completed": true,
       "voided": false,
       "knockout": false,
       "regulation": null,
-      "homeScore": 0,
-      "awayScore": 0,
+      "homeScore": 1,
+      "awayScore": 2,
       "homeGoals": 1.35,
       "awayGoals": 1.76,
       "odds": {
@@ -219543,5 +219573,5 @@
       }
     }
   ],
-  "scoresUpdatedAt": "2026-11-08T20:28:55.414Z"
+  "scoresUpdatedAt": "2026-11-09T00:55:44.916Z"
 }

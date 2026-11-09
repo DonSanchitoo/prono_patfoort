@@ -300,6 +300,42 @@
     "score": "2 : 1"
   },
   {
+    "id": "espn-401882816",
+    "date": "2026-11-08",
+    "league": "La Liga",
+    "match": "Atlético Madrid – Barcelona",
+    "label": "Atlético Madrid",
+    "key": "home",
+    "odd": 3.54,
+    "probability": 0.47449338821531906,
+    "status": "lost",
+    "score": "1 : 2"
+  },
+  {
+    "id": "espn-401875003",
+    "date": "2026-11-08",
+    "league": "Serie A",
+    "match": "Fiorentina – Juventus",
+    "label": "Fiorentina",
+    "key": "home",
+    "odd": 3.5,
+    "probability": 0.37166373004731534,
+    "status": "lost",
+    "score": "2 : 2"
+  },
+  {
+    "id": "espn-401876404",
+    "date": "2026-11-08",
+    "league": "Ligue 1",
+    "match": "Lens – Marseille",
+    "label": "Marseille",
+    "key": "away",
+    "odd": 3.11,
+    "probability": 0.4717253931626732,
+    "status": "won",
+    "score": "1 : 2"
+  },
+  {
     "id": "espn-401878760",
     "date": "2026-11-07",
     "league": "Premier League",
