@@ -1,5 +1,29 @@
 [
   {
+    "id": "espn-401928550",
+    "date": "2026-11-10",
+    "league": "Copa del Rey",
+    "match": "Trival Valderas – Leganés",
+    "label": "Les deux marquent",
+    "key": "btts",
+    "odd": 2.01,
+    "probability": 0.5230665207414825,
+    "status": "lost",
+    "score": "0 : 1"
+  },
+  {
+    "id": "espn-401928504",
+    "date": "2026-11-10",
+    "league": "Copa del Rey",
+    "match": "Tavernes de la Valldigna – Valencia",
+    "label": "Les deux marquent",
+    "key": "btts",
+    "odd": 2.01,
+    "probability": 0.5230665207414825,
+    "status": "lost",
+    "score": "0 : 6"
+  },
+  {
     "id": "espn-401931098",
     "date": "2026-11-09",
     "league": "FA Cup",
@@ -1704,6 +1728,18 @@
     "score": "4 : 1"
   },
   {
+    "id": "espn-401928519",
+    "date": "2026-11-04",
+    "league": "Copa del Rey",
+    "match": "Amorebieta – UD Logroñés",
+    "label": "Les deux marquent",
+    "key": "btts",
+    "odd": 2.01,
+    "probability": 0.5230665207414825,
+    "status": "lost",
+    "score": "1 : 0"
+  },
+  {
     "id": "espn-401915311",
     "date": "2026-11-03",
     "league": "Ligue des champions",
@@ -1810,6 +1846,30 @@
     "probability": 0.87107310323009,
     "status": "won",
     "score": "4 : 0"
+  },
+  {
+    "id": "espn-401928514",
+    "date": "2026-11-03",
+    "league": "Copa del Rey",
+    "match": "Anaitasuna – Alavés",
+    "label": "Les deux marquent",
+    "key": "btts",
+    "odd": 2.01,
+    "probability": 0.5230665207414825,
+    "status": "won",
+    "score": "1 : 6"
+  },
+  {
+    "id": "espn-401928516",
+    "date": "2026-11-03",
+    "league": "Copa del Rey",
+    "match": "CD Pamplona – Eibar",
+    "label": "Les deux marquent",
+    "key": "btts",
+    "odd": 2.01,
+    "probability": 0.5230665207414825,
+    "status": "lost",
+    "score": "0 : 3"
   },
   {
     "id": "espn-401874963",

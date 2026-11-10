@@ -77,9 +77,69 @@
     "secondaryOddsMatches": 37,
     "statsMatches": 103,
     "oddsMatches": 114,
-    "settlements": 284
+    "settlements": 290
   },
   "settlements": [
+    {
+      "id": "espn-401928514",
+      "date": "2026-11-10",
+      "home": "Anaitasuna",
+      "away": "Alavés",
+      "regulation": null,
+      "homeScore": 1,
+      "awayScore": 6,
+      "completed": true
+    },
+    {
+      "id": "espn-401928516",
+      "date": "2026-11-10",
+      "home": "CD Pamplona",
+      "away": "Eibar",
+      "regulation": null,
+      "homeScore": 0,
+      "awayScore": 3,
+      "completed": true
+    },
+    {
+      "id": "espn-401928519",
+      "date": "2026-11-10",
+      "home": "Amorebieta",
+      "away": "UD Logroñés",
+      "regulation": null,
+      "homeScore": 1,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401928528",
+      "date": "2026-11-10",
+      "home": "Mijas Las Lagunas",
+      "away": "Real Jaen CF",
+      "regulation": null,
+      "homeScore": 1,
+      "awayScore": 2,
+      "completed": true
+    },
+    {
+      "id": "espn-401928550",
+      "date": "2026-11-10",
+      "home": "Trival Valderas",
+      "away": "Leganés",
+      "regulation": null,
+      "homeScore": 0,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401928504",
+      "date": "2026-11-10",
+      "home": "Tavernes de la Valldigna",
+      "away": "Valencia",
+      "regulation": null,
+      "homeScore": 0,
+      "awayScore": 6,
+      "completed": true
+    },
     {
       "id": "espn-401931098",
       "date": "2026-11-09",
@@ -73129,13 +73189,13 @@
       "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/96.png",
       "priority": 26,
       "featured": false,
-      "status": "Scheduled",
-      "completed": false,
+      "status": "Terminé",
+      "completed": true,
       "voided": false,
       "knockout": false,
       "regulation": null,
-      "homeScore": 0,
-      "awayScore": 0,
+      "homeScore": 1,
+      "awayScore": 6,
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
@@ -73212,13 +73272,13 @@
       "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/3752.png",
       "priority": 26,
       "featured": false,
-      "status": "Scheduled",
-      "completed": false,
+      "status": "Terminé",
+      "completed": true,
       "voided": false,
       "knockout": false,
       "regulation": null,
       "homeScore": 0,
-      "awayScore": 0,
+      "awayScore": 3,
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
@@ -108655,12 +108715,12 @@
       "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/7206.png",
       "priority": 26,
       "featured": false,
-      "status": "Scheduled",
-      "completed": false,
+      "status": "Terminé",
+      "completed": true,
       "voided": false,
       "knockout": false,
       "regulation": null,
-      "homeScore": 0,
+      "homeScore": 1,
       "awayScore": 0,
       "homeGoals": 1.45,
       "awayGoals": 1.15,
@@ -219509,13 +219569,13 @@
       "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/17534.png",
       "priority": 26,
       "featured": false,
-      "status": "Scheduled",
-      "completed": false,
+      "status": "Terminé",
+      "completed": true,
       "voided": false,
       "knockout": false,
       "regulation": null,
       "homeScore": 0,
-      "awayScore": 0,
+      "awayScore": 1,
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
@@ -219560,13 +219620,13 @@
       "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/94.png",
       "priority": 26,
       "featured": false,
-      "status": "Scheduled",
-      "completed": false,
+      "status": "Terminé",
+      "completed": true,
       "voided": false,
       "knockout": false,
       "regulation": null,
       "homeScore": 0,
-      "awayScore": 0,
+      "awayScore": 6,
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
@@ -219591,5 +219651,5 @@
       }
     }
   ],
-  "scoresUpdatedAt": "2026-11-10T17:51:44.968Z"
+  "scoresUpdatedAt": "2026-11-10T23:23:01.671Z"
 }
