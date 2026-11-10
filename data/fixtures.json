@@ -77,9 +77,23 @@
     "secondaryOddsMatches": 37,
     "statsMatches": 103,
     "oddsMatches": 114,
-    "settlements": 283
+    "settlements": 284
   },
   "settlements": [
+    {
+      "id": "espn-401931098",
+      "date": "2026-11-09",
+      "home": "Plymouth Parkway",
+      "away": "Berkhamsted",
+      "regulation": {
+        "extraTime": true,
+        "home": null,
+        "away": null
+      },
+      "homeScore": 2,
+      "awayScore": 1,
+      "completed": true
+    },
     {
       "id": "espn-401879244",
       "date": "2026-11-08",
@@ -219408,13 +219422,17 @@
       "awayLogo": "",
       "priority": 27,
       "featured": false,
-      "status": "Scheduled",
-      "completed": false,
+      "status": "Terminé",
+      "completed": true,
       "voided": false,
       "knockout": false,
-      "regulation": null,
-      "homeScore": 0,
-      "awayScore": 0,
+      "regulation": {
+        "extraTime": true,
+        "home": null,
+        "away": null
+      },
+      "homeScore": 2,
+      "awayScore": 1,
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
@@ -219573,5 +219591,5 @@
       }
     }
   ],
-  "scoresUpdatedAt": "2026-11-09T18:49:53.230Z"
+  "scoresUpdatedAt": "2026-11-10T02:09:10.735Z"
 }
