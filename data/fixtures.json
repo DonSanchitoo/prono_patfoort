@@ -77,9 +77,29 @@
     "secondaryOddsMatches": 37,
     "statsMatches": 103,
     "oddsMatches": 114,
-    "settlements": 290
+    "settlements": 292
   },
   "settlements": [
+    {
+      "id": "espn-401861146",
+      "date": "2026-11-12",
+      "home": "Armenia",
+      "away": "Cyprus",
+      "regulation": null,
+      "homeScore": 1,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401861145",
+      "date": "2026-11-12",
+      "home": "Türkiye",
+      "away": "Belgium",
+      "regulation": null,
+      "homeScore": 1,
+      "awayScore": 2,
+      "completed": true
+    },
     {
       "id": "espn-401928514",
       "date": "2026-11-10",
@@ -219651,5 +219671,5 @@
       }
     }
   ],
-  "scoresUpdatedAt": "2026-11-12T11:10:46.564Z"
+  "scoresUpdatedAt": "2026-11-12T18:56:39.038Z"
 }
