@@ -1608,6 +1608,18 @@
     "score": "1 : 1"
   },
   {
+    "id": "espn-401928527",
+    "date": "2026-11-05",
+    "league": "Copa del Rey",
+    "match": "CD Tarancon – Levante",
+    "label": "Les deux marquent",
+    "key": "btts",
+    "odd": 2.01,
+    "probability": 0.5230665207414825,
+    "status": "won",
+    "score": "1 : 2"
+  },
+  {
     "id": "espn-401915551",
     "date": "2026-11-04",
     "league": "Europa League",
@@ -1738,6 +1750,18 @@
     "probability": 0.5230665207414825,
     "status": "lost",
     "score": "1 : 0"
+  },
+  {
+    "id": "espn-401928506",
+    "date": "2026-11-04",
+    "league": "Copa del Rey",
+    "match": "Calvo Sotelo – Albacete",
+    "label": "Les deux marquent",
+    "key": "btts",
+    "odd": 2.01,
+    "probability": 0.5230665207414825,
+    "status": "lost",
+    "score": "0 : 3"
   },
   {
     "id": "espn-401915311",

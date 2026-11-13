@@ -77,7 +77,7 @@
     "secondaryOddsMatches": 37,
     "statsMatches": 103,
     "oddsMatches": 114,
-    "settlements": 292
+    "settlements": 302
   },
   "settlements": [
     {
@@ -97,6 +97,114 @@
       "away": "Belgium",
       "regulation": null,
       "homeScore": 1,
+      "awayScore": 2,
+      "completed": true
+    },
+    {
+      "id": "espn-401932846",
+      "date": "2026-11-12",
+      "home": "Chambéry Savoie",
+      "away": "Grenoble",
+      "regulation": null,
+      "homeScore": 0,
+      "awayScore": 2,
+      "completed": true
+    },
+    {
+      "id": "espn-401928506",
+      "date": "2026-11-12",
+      "home": "CS Puertollano",
+      "away": "Albacete",
+      "regulation": null,
+      "homeScore": 0,
+      "awayScore": 3,
+      "completed": true
+    },
+    {
+      "id": "espn-401928551",
+      "date": "2026-11-12",
+      "home": "CD Artistico Navalcarnero",
+      "away": "Real Betis",
+      "regulation": {
+        "extraTime": true,
+        "home": null,
+        "away": null
+      },
+      "homeScore": 2,
+      "awayScore": 3,
+      "completed": true
+    },
+    {
+      "id": "espn-401928527",
+      "date": "2026-11-12",
+      "home": "CD Tarancon",
+      "away": "Levante",
+      "regulation": {
+        "extraTime": true,
+        "home": null,
+        "away": null
+      },
+      "homeScore": 1,
+      "awayScore": 2,
+      "completed": true
+    },
+    {
+      "id": "espn-401861147",
+      "date": "2026-11-12",
+      "home": "Albania",
+      "away": "Finland",
+      "regulation": null,
+      "homeScore": 2,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401861148",
+      "date": "2026-11-12",
+      "home": "Czechia",
+      "away": "Spain",
+      "regulation": null,
+      "homeScore": 0,
+      "awayScore": 2,
+      "completed": true
+    },
+    {
+      "id": "espn-401861150",
+      "date": "2026-11-12",
+      "home": "England",
+      "away": "Croatia",
+      "regulation": null,
+      "homeScore": 2,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401861151",
+      "date": "2026-11-12",
+      "home": "Italy",
+      "away": "France",
+      "regulation": null,
+      "homeScore": 3,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401861152",
+      "date": "2026-11-12",
+      "home": "Montenegro",
+      "away": "Latvia",
+      "regulation": null,
+      "homeScore": 2,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401861149",
+      "date": "2026-11-12",
+      "home": "San Marino",
+      "away": "Belarus",
+      "regulation": null,
+      "homeScore": 0,
       "awayScore": 2,
       "completed": true
     },
@@ -109067,13 +109175,13 @@
       "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/2737.png",
       "priority": 26,
       "featured": false,
-      "status": "Scheduled",
-      "completed": false,
+      "status": "Terminé",
+      "completed": true,
       "voided": false,
       "knockout": false,
       "regulation": null,
       "homeScore": 0,
-      "awayScore": 0,
+      "awayScore": 3,
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
@@ -129604,13 +129712,17 @@
       "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/1538.png",
       "priority": 26,
       "featured": false,
-      "status": "Scheduled",
-      "completed": false,
+      "status": "Terminé",
+      "completed": true,
       "voided": false,
       "knockout": false,
-      "regulation": null,
-      "homeScore": 0,
-      "awayScore": 0,
+      "regulation": {
+        "extraTime": true,
+        "home": null,
+        "away": null
+      },
+      "homeScore": 1,
+      "awayScore": 2,
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
@@ -219671,5 +219783,5 @@
       }
     }
   ],
-  "scoresUpdatedAt": "2026-11-12T18:56:39.038Z"
+  "scoresUpdatedAt": "2026-11-13T00:24:51.891Z"
 }
