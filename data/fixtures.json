@@ -77,7 +77,7 @@
     "secondaryOddsMatches": 37,
     "statsMatches": 103,
     "oddsMatches": 114,
-    "settlements": 324
+    "settlements": 368
   },
   "settlements": [
     {
@@ -162,6 +162,486 @@
       "regulation": null,
       "homeScore": 0,
       "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401932836",
+      "date": "2026-11-14",
+      "home": "Chalon-sur-Saone",
+      "away": "Hauts Lyonnais",
+      "regulation": null,
+      "homeScore": 0,
+      "awayScore": 3,
+      "completed": true
+    },
+    {
+      "id": "espn-401932777",
+      "date": "2026-11-14",
+      "home": "Choisy Au Bac",
+      "away": "Caen",
+      "regulation": null,
+      "homeScore": 0,
+      "awayScore": 2,
+      "completed": true
+    },
+    {
+      "id": "espn-401932778",
+      "date": "2026-11-14",
+      "home": "Firminy",
+      "away": "Annecy",
+      "regulation": {
+        "extraTime": true,
+        "home": null,
+        "away": null
+      },
+      "homeScore": 1,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401932832",
+      "date": "2026-11-14",
+      "home": "IC Croix",
+      "away": "ES Thaon",
+      "regulation": null,
+      "homeScore": 1,
+      "awayScore": 2,
+      "completed": true
+    },
+    {
+      "id": "espn-401932803",
+      "date": "2026-11-14",
+      "home": "Le Poire SV",
+      "away": "Vertou",
+      "regulation": null,
+      "homeScore": 2,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401932834",
+      "date": "2026-11-14",
+      "home": "Pont-de-Cheruy",
+      "away": "Bourg-Peronnas",
+      "regulation": null,
+      "homeScore": 1,
+      "awayScore": 5,
+      "completed": true
+    },
+    {
+      "id": "espn-401932758",
+      "date": "2026-11-14",
+      "home": "Saint Sebastien",
+      "away": "La Baule-Le Pouliguen",
+      "regulation": null,
+      "homeScore": 0,
+      "awayScore": 2,
+      "completed": true
+    },
+    {
+      "id": "espn-401932844",
+      "date": "2026-11-14",
+      "home": "Tinteniac St Domineuc",
+      "away": "Concarneau",
+      "regulation": null,
+      "homeScore": 1,
+      "awayScore": 4,
+      "completed": true
+    },
+    {
+      "id": "espn-401932757",
+      "date": "2026-11-14",
+      "home": "Koetzingue",
+      "away": "Biesheim",
+      "regulation": null,
+      "homeScore": 1,
+      "awayScore": 3,
+      "completed": true
+    },
+    {
+      "id": "espn-401932802",
+      "date": "2026-11-14",
+      "home": "Amneville",
+      "away": "Sundhoffen",
+      "regulation": null,
+      "homeScore": 0,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401932822",
+      "date": "2026-11-14",
+      "home": "Asptt Dijon",
+      "away": "Selongey",
+      "regulation": null,
+      "homeScore": 0,
+      "awayScore": 2,
+      "completed": true
+    },
+    {
+      "id": "espn-401932768",
+      "date": "2026-11-14",
+      "home": "Caen",
+      "away": "FC Chambly",
+      "regulation": null,
+      "homeScore": 2,
+      "awayScore": 3,
+      "completed": true
+    },
+    {
+      "id": "espn-401933060",
+      "date": "2026-11-14",
+      "home": "Chateaubriant",
+      "away": "Horizon Patho",
+      "regulation": null,
+      "homeScore": 5,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401932808",
+      "date": "2026-11-14",
+      "home": "Contres",
+      "away": "ESA Linas-Montlhery",
+      "regulation": null,
+      "homeScore": 0,
+      "awayScore": 4,
+      "completed": true
+    },
+    {
+      "id": "espn-401932738",
+      "date": "2026-11-14",
+      "home": "Cournon",
+      "away": "Chassieu Declines FC",
+      "regulation": {
+        "extraTime": true,
+        "home": null,
+        "away": null
+      },
+      "homeScore": 2,
+      "awayScore": 2,
+      "completed": true
+    },
+    {
+      "id": "espn-401932839",
+      "date": "2026-11-14",
+      "home": "Dunkerque",
+      "away": "US Quevilly",
+      "regulation": null,
+      "homeScore": 0,
+      "awayScore": 3,
+      "completed": true
+    },
+    {
+      "id": "espn-401932737",
+      "date": "2026-11-14",
+      "home": "Grau-Du-Roi",
+      "away": "Riviera",
+      "regulation": null,
+      "homeScore": 2,
+      "awayScore": 4,
+      "completed": true
+    },
+    {
+      "id": "espn-401932835",
+      "date": "2026-11-14",
+      "home": "GSI Pontivy",
+      "away": "Rennes TA",
+      "regulation": {
+        "extraTime": true,
+        "home": null,
+        "away": null
+      },
+      "homeScore": 2,
+      "awayScore": 2,
+      "completed": true
+    },
+    {
+      "id": "espn-401932829",
+      "date": "2026-11-14",
+      "home": "Le Touquet",
+      "away": "Avranches",
+      "regulation": null,
+      "homeScore": 2,
+      "awayScore": 3,
+      "completed": true
+    },
+    {
+      "id": "espn-401932740",
+      "date": "2026-11-14",
+      "home": "Lyon-la-Duchere",
+      "away": "US Feurs",
+      "regulation": null,
+      "homeScore": 1,
+      "awayScore": 4,
+      "completed": true
+    },
+    {
+      "id": "espn-401932812",
+      "date": "2026-11-14",
+      "home": "Pays de Saint-Omer",
+      "away": "AF Virois",
+      "regulation": {
+        "extraTime": true,
+        "home": null,
+        "away": null
+      },
+      "homeScore": 2,
+      "awayScore": 2,
+      "completed": true
+    },
+    {
+      "id": "espn-401932814",
+      "date": "2026-11-14",
+      "home": "Racing Besancon",
+      "away": "Am. du Personnel Municipal Metz",
+      "regulation": null,
+      "homeScore": 4,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401932818",
+      "date": "2026-11-14",
+      "home": "Sag Cestas",
+      "away": "Bayonne",
+      "regulation": null,
+      "homeScore": 0,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401932831",
+      "date": "2026-11-14",
+      "home": "Saint-Brieuc",
+      "away": "Rouen",
+      "regulation": {
+        "extraTime": true,
+        "home": null,
+        "away": null
+      },
+      "homeScore": 0,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401932830",
+      "date": "2026-11-14",
+      "home": "St-Ouen L'Aumone",
+      "away": "Boulogne",
+      "regulation": null,
+      "homeScore": 1,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401932813",
+      "date": "2026-11-14",
+      "home": "Stade Béthunois",
+      "away": "AS Nancy Lorraine",
+      "regulation": {
+        "extraTime": true,
+        "home": null,
+        "away": null
+      },
+      "homeScore": 3,
+      "awayScore": 3,
+      "completed": true
+    },
+    {
+      "id": "espn-401932801",
+      "date": "2026-11-14",
+      "home": "Strasbourg Koenigshoffen",
+      "away": "Oberlauterbach",
+      "regulation": null,
+      "homeScore": 1,
+      "awayScore": 2,
+      "completed": true
+    },
+    {
+      "id": "espn-401932811",
+      "date": "2026-11-14",
+      "home": "US Cheminots Paray-Foot",
+      "away": "Villefranche",
+      "regulation": null,
+      "homeScore": 0,
+      "awayScore": 3,
+      "completed": true
+    },
+    {
+      "id": "espn-401932842",
+      "date": "2026-11-14",
+      "home": "Vesoul",
+      "away": "FC Fleury 91",
+      "regulation": {
+        "extraTime": true,
+        "home": null,
+        "away": null
+      },
+      "homeScore": 2,
+      "awayScore": 2,
+      "completed": true
+    },
+    {
+      "id": "espn-401932765",
+      "date": "2026-11-14",
+      "home": "Vitre",
+      "away": "Saint-Pierre Milizac",
+      "regulation": null,
+      "homeScore": 1,
+      "awayScore": 2,
+      "completed": true
+    },
+    {
+      "id": "espn-401932806",
+      "date": "2026-11-14",
+      "home": "Balma",
+      "away": "Castanet",
+      "regulation": {
+        "extraTime": true,
+        "home": null,
+        "away": null
+      },
+      "homeScore": 1,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401932760",
+      "date": "2026-11-14",
+      "home": "Avenir Foot Lozere",
+      "away": "Entente Crest-Aouste",
+      "regulation": null,
+      "homeScore": 1,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401932809",
+      "date": "2026-11-14",
+      "home": "Boulazac",
+      "away": "Anglet Genets",
+      "regulation": {
+        "extraTime": true,
+        "home": null,
+        "away": null
+      },
+      "homeScore": 3,
+      "awayScore": 3,
+      "completed": true
+    },
+    {
+      "id": "espn-401932804",
+      "date": "2026-11-14",
+      "home": "Bressuire",
+      "away": "FC Challans",
+      "regulation": null,
+      "homeScore": 3,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401932817",
+      "date": "2026-11-14",
+      "home": "Brive",
+      "away": "Angouleme",
+      "regulation": null,
+      "homeScore": 0,
+      "awayScore": 3,
+      "completed": true
+    },
+    {
+      "id": "espn-401932825",
+      "date": "2026-11-14",
+      "home": "Cercle Paul Bert Brequigny Football",
+      "away": "Montlucon Football",
+      "regulation": null,
+      "homeScore": 0,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401932827",
+      "date": "2026-11-14",
+      "home": "Chauny",
+      "away": "Le Pays Du Valois",
+      "regulation": null,
+      "homeScore": 0,
+      "awayScore": 2,
+      "completed": true
+    },
+    {
+      "id": "espn-401932815",
+      "date": "2026-11-14",
+      "home": "ES Buxerolles",
+      "away": "Sablé FC",
+      "regulation": null,
+      "homeScore": 0,
+      "awayScore": 7,
+      "completed": true
+    },
+    {
+      "id": "espn-401932837",
+      "date": "2026-11-14",
+      "home": "FC Lourdes",
+      "away": "Pau",
+      "regulation": null,
+      "homeScore": 0,
+      "awayScore": 4,
+      "completed": true
+    },
+    {
+      "id": "espn-401932828",
+      "date": "2026-11-14",
+      "home": "Lannion",
+      "away": "Guingamp",
+      "regulation": {
+        "extraTime": true,
+        "home": null,
+        "away": null
+      },
+      "homeScore": 0,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401932826",
+      "date": "2026-11-14",
+      "home": "St Andre St Macaire",
+      "away": "Nueillaubiers",
+      "regulation": null,
+      "homeScore": 0,
+      "awayScore": 2,
+      "completed": true
+    },
+    {
+      "id": "espn-401932824",
+      "date": "2026-11-14",
+      "home": "Olympique des Membres de Cambrai Amerique",
+      "away": "SC Amiens",
+      "regulation": null,
+      "homeScore": 0,
+      "awayScore": 4,
+      "completed": true
+    },
+    {
+      "id": "espn-401861164",
+      "date": "2026-11-14",
+      "home": "Georgia",
+      "away": "Hungary",
+      "regulation": null,
+      "homeScore": 0,
+      "awayScore": 2,
+      "completed": true
+    },
+    {
+      "id": "espn-401861165",
+      "date": "2026-11-14",
+      "home": "Norway",
+      "away": "Wales",
+      "regulation": null,
+      "homeScore": 3,
+      "awayScore": 1,
       "completed": true
     },
     {
@@ -220011,5 +220491,5 @@
       }
     }
   ],
-  "scoresUpdatedAt": "2026-11-14T17:08:39.495Z"
+  "scoresUpdatedAt": "2026-11-14T21:30:22.279Z"
 }
