@@ -77,9 +77,93 @@
     "secondaryOddsMatches": 37,
     "statsMatches": 103,
     "oddsMatches": 114,
-    "settlements": 316
+    "settlements": 324
   },
   "settlements": [
+    {
+      "id": "espn-401932858",
+      "date": "2026-11-14",
+      "home": "Balagne",
+      "away": "Montpellier",
+      "regulation": null,
+      "homeScore": 0,
+      "awayScore": 5,
+      "completed": true
+    },
+    {
+      "id": "espn-401932857",
+      "date": "2026-11-14",
+      "home": "Le Puy",
+      "away": "Diables Noirs",
+      "regulation": null,
+      "homeScore": 4,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401932840",
+      "date": "2026-11-14",
+      "home": "Tourcoing",
+      "away": "Stade de Reims",
+      "regulation": null,
+      "homeScore": 0,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401932856",
+      "date": "2026-11-14",
+      "home": "Versailles 78",
+      "away": "Rodez Aveyron",
+      "regulation": null,
+      "homeScore": 3,
+      "awayScore": 2,
+      "completed": true
+    },
+    {
+      "id": "espn-401932843",
+      "date": "2026-11-14",
+      "home": "CA Boulay",
+      "away": "Sochaux",
+      "regulation": {
+        "extraTime": true,
+        "home": null,
+        "away": null
+      },
+      "homeScore": 2,
+      "awayScore": 2,
+      "completed": true
+    },
+    {
+      "id": "espn-401932776",
+      "date": "2026-11-14",
+      "home": "Rhone Crussol Foot",
+      "away": "Frejus",
+      "regulation": null,
+      "homeScore": 0,
+      "awayScore": 3,
+      "completed": true
+    },
+    {
+      "id": "espn-401932833",
+      "date": "2026-11-14",
+      "home": "Fontenay Foot",
+      "away": "Clermont Foot",
+      "regulation": null,
+      "homeScore": 0,
+      "awayScore": 5,
+      "completed": true
+    },
+    {
+      "id": "espn-401861163",
+      "date": "2026-11-14",
+      "home": "Kosovo",
+      "away": "Israel",
+      "regulation": null,
+      "homeScore": 0,
+      "awayScore": 0,
+      "completed": true
+    },
     {
       "id": "espn-401932838",
       "date": "2026-11-13",
@@ -219927,5 +220011,5 @@
       }
     }
   ],
-  "scoresUpdatedAt": "2026-11-14T10:28:20.174Z"
+  "scoresUpdatedAt": "2026-11-14T17:08:39.495Z"
 }
