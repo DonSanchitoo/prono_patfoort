@@ -77,9 +77,19 @@
     "secondaryOddsMatches": 37,
     "statsMatches": 103,
     "oddsMatches": 114,
-    "settlements": 375
+    "settlements": 376
   },
   "settlements": [
+    {
+      "id": "espn-401933039",
+      "date": "2026-11-15",
+      "home": "AS Tefana",
+      "away": "Thionville",
+      "regulation": null,
+      "homeScore": 0,
+      "awayScore": 0,
+      "completed": true
+    },
     {
       "id": "espn-401932858",
       "date": "2026-11-14",
@@ -220569,5 +220579,5 @@
       }
     }
   ],
-  "scoresUpdatedAt": "2026-11-15T01:56:15.988Z"
+  "scoresUpdatedAt": "2026-11-15T09:26:24.901Z"
 }
