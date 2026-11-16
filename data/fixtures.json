@@ -77,9 +77,59 @@
     "secondaryOddsMatches": 37,
     "statsMatches": 103,
     "oddsMatches": 114,
-    "settlements": 417
+    "settlements": 422
   },
   "settlements": [
+    {
+      "id": "espn-401861180",
+      "date": "2026-11-16",
+      "home": "Faroe Islands",
+      "away": "Moldova",
+      "regulation": null,
+      "homeScore": 1,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401861181",
+      "date": "2026-11-16",
+      "home": "Kazakhstan",
+      "away": "Slovakia",
+      "regulation": null,
+      "homeScore": 2,
+      "awayScore": 2,
+      "completed": true
+    },
+    {
+      "id": "espn-401861183",
+      "date": "2026-11-16",
+      "home": "Estonia",
+      "away": "Bulgaria",
+      "regulation": null,
+      "homeScore": 2,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401861182",
+      "date": "2026-11-16",
+      "home": "Iceland",
+      "away": "Luxembourg",
+      "regulation": null,
+      "homeScore": 3,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401861184",
+      "date": "2026-11-16",
+      "home": "Lithuania",
+      "away": "Liechtenstein",
+      "regulation": null,
+      "homeScore": 2,
+      "awayScore": 1,
+      "completed": true
+    },
     {
       "id": "espn-401933039",
       "date": "2026-11-15",
@@ -221017,5 +221067,5 @@
       }
     }
   ],
-  "scoresUpdatedAt": "2026-11-16T09:44:16.861Z"
+  "scoresUpdatedAt": "2026-11-16T20:29:41.320Z"
 }
