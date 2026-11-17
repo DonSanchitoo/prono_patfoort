@@ -77,9 +77,89 @@
     "secondaryOddsMatches": 37,
     "statsMatches": 103,
     "oddsMatches": 114,
-    "settlements": 427
+    "settlements": 435
   },
   "settlements": [
+    {
+      "id": "espn-401861196",
+      "date": "2026-11-17",
+      "home": "Bosnia-Herzegovina",
+      "away": "Romania",
+      "regulation": null,
+      "homeScore": 2,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401861194",
+      "date": "2026-11-17",
+      "home": "Denmark",
+      "away": "Norway",
+      "regulation": null,
+      "homeScore": 2,
+      "awayScore": 3,
+      "completed": true
+    },
+    {
+      "id": "espn-401861191",
+      "date": "2026-11-17",
+      "home": "Hungary",
+      "away": "Northern Ireland",
+      "regulation": null,
+      "homeScore": 1,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401861193",
+      "date": "2026-11-17",
+      "home": "Israel",
+      "away": "Austria",
+      "regulation": null,
+      "homeScore": 1,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401861195",
+      "date": "2026-11-17",
+      "home": "Poland",
+      "away": "Sweden",
+      "regulation": null,
+      "homeScore": 1,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401861192",
+      "date": "2026-11-17",
+      "home": "Republic of Ireland",
+      "away": "Kosovo",
+      "regulation": null,
+      "homeScore": 3,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401861190",
+      "date": "2026-11-17",
+      "home": "Ukraine",
+      "away": "Georgia",
+      "regulation": null,
+      "homeScore": 1,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401861189",
+      "date": "2026-11-17",
+      "home": "Wales",
+      "away": "Portugal",
+      "regulation": null,
+      "homeScore": 2,
+      "awayScore": 3,
+      "completed": true
+    },
     {
       "id": "espn-401861180",
       "date": "2026-11-16",
@@ -221117,5 +221197,5 @@
       }
     }
   ],
-  "scoresUpdatedAt": "2026-11-17T13:27:49.917Z"
+  "scoresUpdatedAt": "2026-11-17T22:25:01.771Z"
 }
