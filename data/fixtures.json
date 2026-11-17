@@ -77,7 +77,7 @@
     "secondaryOddsMatches": 37,
     "statsMatches": 103,
     "oddsMatches": 114,
-    "settlements": 422
+    "settlements": 427
   },
   "settlements": [
     {
@@ -128,6 +128,56 @@
       "regulation": null,
       "homeScore": 2,
       "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401861185",
+      "date": "2026-11-16",
+      "home": "Germany",
+      "away": "Netherlands",
+      "regulation": null,
+      "homeScore": 5,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401861179",
+      "date": "2026-11-16",
+      "home": "Gibraltar",
+      "away": "Malta",
+      "regulation": null,
+      "homeScore": 1,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401861188",
+      "date": "2026-11-16",
+      "home": "Greece",
+      "away": "Serbia",
+      "regulation": null,
+      "homeScore": 1,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401861187",
+      "date": "2026-11-16",
+      "home": "North Macedonia",
+      "away": "Slovenia",
+      "regulation": null,
+      "homeScore": 0,
+      "awayScore": 3,
+      "completed": true
+    },
+    {
+      "id": "espn-401861186",
+      "date": "2026-11-16",
+      "home": "Switzerland",
+      "away": "Scotland",
+      "regulation": null,
+      "homeScore": 4,
+      "awayScore": 0,
       "completed": true
     },
     {
@@ -221067,5 +221117,5 @@
       }
     }
   ],
-  "scoresUpdatedAt": "2026-11-16T20:29:41.320Z"
+  "scoresUpdatedAt": "2026-11-17T03:54:27.335Z"
 }
