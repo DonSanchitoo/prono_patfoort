@@ -1620,6 +1620,18 @@
     "score": "1 : 2"
   },
   {
+    "id": "espn-401928505",
+    "date": "2026-11-05",
+    "league": "Copa del Rey",
+    "match": "Alcoyano – Mallorca",
+    "label": "Les deux marquent",
+    "key": "btts",
+    "odd": 2.01,
+    "probability": 0.5230665207414825,
+    "status": "won",
+    "score": "1 : 3"
+  },
+  {
     "id": "espn-401915551",
     "date": "2026-11-04",
     "league": "Europa League",
@@ -1762,6 +1774,42 @@
     "probability": 0.5230665207414825,
     "status": "lost",
     "score": "0 : 3"
+  },
+  {
+    "id": "espn-401928518",
+    "date": "2026-11-04",
+    "league": "Copa del Rey",
+    "match": "Portugalete – Real Unión Irun",
+    "label": "Les deux marquent",
+    "key": "btts",
+    "odd": 2.01,
+    "probability": 0.5230665207414825,
+    "status": "lost",
+    "score": "0 : 0"
+  },
+  {
+    "id": "espn-401928497",
+    "date": "2026-11-04",
+    "league": "Copa del Rey",
+    "match": "Utebo – CD Sabadell",
+    "label": "Les deux marquent",
+    "key": "btts",
+    "odd": 2.01,
+    "probability": 0.5230665207414825,
+    "status": "lost",
+    "score": "0 : 3"
+  },
+  {
+    "id": "espn-401928532",
+    "date": "2026-11-04",
+    "league": "Copa del Rey",
+    "match": "Badajoz – Tenerife",
+    "label": "Les deux marquent",
+    "key": "btts",
+    "odd": 2.01,
+    "probability": 0.5230665207414825,
+    "status": "won",
+    "score": "2 : 5"
   },
   {
     "id": "espn-401915311",

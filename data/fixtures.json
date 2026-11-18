@@ -77,9 +77,57 @@
     "secondaryOddsMatches": 37,
     "statsMatches": 103,
     "oddsMatches": 114,
-    "settlements": 435
+    "settlements": 439
   },
   "settlements": [
+    {
+      "id": "espn-401928518",
+      "date": "2026-11-18",
+      "home": "Portugalete",
+      "away": "Real Unión Irun",
+      "regulation": {
+        "extraTime": true,
+        "home": null,
+        "away": null
+      },
+      "homeScore": 0,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401928497",
+      "date": "2026-11-18",
+      "home": "Utebo",
+      "away": "CD Sabadell",
+      "regulation": null,
+      "homeScore": 0,
+      "awayScore": 3,
+      "completed": true
+    },
+    {
+      "id": "espn-401928505",
+      "date": "2026-11-18",
+      "home": "Alcoyano",
+      "away": "Mallorca",
+      "regulation": {
+        "extraTime": true,
+        "home": null,
+        "away": null
+      },
+      "homeScore": 1,
+      "awayScore": 3,
+      "completed": true
+    },
+    {
+      "id": "espn-401928532",
+      "date": "2026-11-18",
+      "home": "Badajoz",
+      "away": "Tenerife",
+      "regulation": null,
+      "homeScore": 2,
+      "awayScore": 5,
+      "completed": true
+    },
     {
       "id": "espn-401861196",
       "date": "2026-11-17",
@@ -110174,11 +110222,15 @@
       "awayLogo": "",
       "priority": 26,
       "featured": false,
-      "status": "Scheduled",
-      "completed": false,
+      "status": "Terminé",
+      "completed": true,
       "voided": false,
       "knockout": false,
-      "regulation": null,
+      "regulation": {
+        "extraTime": true,
+        "home": null,
+        "away": null
+      },
       "homeScore": 0,
       "awayScore": 0,
       "homeGoals": 1.45,
@@ -110506,13 +110558,13 @@
       "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/11487.png",
       "priority": 26,
       "featured": false,
-      "status": "Scheduled",
-      "completed": false,
+      "status": "Terminé",
+      "completed": true,
       "voided": false,
       "knockout": false,
       "regulation": null,
       "homeScore": 0,
-      "awayScore": 0,
+      "awayScore": 3,
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
@@ -110672,13 +110724,13 @@
       "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/245.png",
       "priority": 26,
       "featured": false,
-      "status": "Scheduled",
-      "completed": false,
+      "status": "Terminé",
+      "completed": true,
       "voided": false,
       "knockout": false,
       "regulation": null,
-      "homeScore": 0,
-      "awayScore": 0,
+      "homeScore": 2,
+      "awayScore": 5,
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
@@ -131213,13 +131265,17 @@
       "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/84.png",
       "priority": 26,
       "featured": false,
-      "status": "Scheduled",
-      "completed": false,
+      "status": "Terminé",
+      "completed": true,
       "voided": false,
       "knockout": false,
-      "regulation": null,
-      "homeScore": 0,
-      "awayScore": 0,
+      "regulation": {
+        "extraTime": true,
+        "home": null,
+        "away": null
+      },
+      "homeScore": 1,
+      "awayScore": 3,
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
@@ -221197,5 +221253,5 @@
       }
     }
   ],
-  "scoresUpdatedAt": "2026-11-18T13:58:43.033Z"
+  "scoresUpdatedAt": "2026-11-18T21:57:12.618Z"
 }
