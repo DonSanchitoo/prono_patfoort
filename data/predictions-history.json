@@ -1812,6 +1812,30 @@
     "score": "2 : 5"
   },
   {
+    "id": "espn-401928524",
+    "date": "2026-11-04",
+    "league": "Copa del Rey",
+    "match": "CD Minera – FC Cartagena",
+    "label": "Les deux marquent",
+    "key": "btts",
+    "odd": 2.01,
+    "probability": 0.5230665207414825,
+    "status": "won",
+    "score": "1 : 2"
+  },
+  {
+    "id": "espn-401928500",
+    "date": "2026-11-04",
+    "league": "Copa del Rey",
+    "match": "Reus FC Reddis – Barakaldo",
+    "label": "Les deux marquent",
+    "key": "btts",
+    "odd": 2.01,
+    "probability": 0.5230665207414825,
+    "status": "won",
+    "score": "1 : 1"
+  },
+  {
     "id": "espn-401915311",
     "date": "2026-11-03",
     "league": "Ligue des champions",

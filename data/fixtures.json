@@ -77,7 +77,7 @@
     "secondaryOddsMatches": 37,
     "statsMatches": 103,
     "oddsMatches": 114,
-    "settlements": 439
+    "settlements": 441
   },
   "settlements": [
     {
@@ -126,6 +126,34 @@
       "regulation": null,
       "homeScore": 2,
       "awayScore": 5,
+      "completed": true
+    },
+    {
+      "id": "espn-401928524",
+      "date": "2026-11-18",
+      "home": "CD Minera",
+      "away": "FC Cartagena",
+      "regulation": {
+        "extraTime": true,
+        "home": null,
+        "away": null
+      },
+      "homeScore": 1,
+      "awayScore": 2,
+      "completed": true
+    },
+    {
+      "id": "espn-401928500",
+      "date": "2026-11-18",
+      "home": "Reus FC Reddis",
+      "away": "Barakaldo",
+      "regulation": {
+        "extraTime": true,
+        "home": null,
+        "away": null
+      },
+      "homeScore": 1,
+      "awayScore": 1,
       "completed": true
     },
     {
@@ -110392,13 +110420,17 @@
       "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/5419.png",
       "priority": 26,
       "featured": false,
-      "status": "Scheduled",
-      "completed": false,
+      "status": "Terminé",
+      "completed": true,
       "voided": false,
       "knockout": false,
-      "regulation": null,
-      "homeScore": 0,
-      "awayScore": 0,
+      "regulation": {
+        "extraTime": true,
+        "home": null,
+        "away": null
+      },
+      "homeScore": 1,
+      "awayScore": 2,
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
@@ -110475,13 +110507,17 @@
       "awayLogo": "",
       "priority": 26,
       "featured": false,
-      "status": "Scheduled",
-      "completed": false,
+      "status": "Terminé",
+      "completed": true,
       "voided": false,
       "knockout": false,
-      "regulation": null,
-      "homeScore": 0,
-      "awayScore": 0,
+      "regulation": {
+        "extraTime": true,
+        "home": null,
+        "away": null
+      },
+      "homeScore": 1,
+      "awayScore": 1,
       "homeGoals": 1.45,
       "awayGoals": 1.15,
       "odds": {
@@ -221253,5 +221289,5 @@
       }
     }
   ],
-  "scoresUpdatedAt": "2026-11-18T21:57:12.618Z"
+  "scoresUpdatedAt": "2026-11-19T03:28:16.416Z"
 }
