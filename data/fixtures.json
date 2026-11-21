@@ -77,7 +77,7 @@
     "secondaryOddsMatches": 37,
     "statsMatches": 103,
     "oddsMatches": 114,
-    "settlements": 465
+    "settlements": 477
   },
   "settlements": [
     {
@@ -238,6 +238,126 @@
       "regulation": null,
       "homeScore": 1,
       "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401879232",
+      "date": "2026-11-21",
+      "home": "Newcastle United",
+      "away": "Arsenal",
+      "regulation": null,
+      "homeScore": 2,
+      "awayScore": 2,
+      "completed": true
+    },
+    {
+      "id": "espn-401876398",
+      "date": "2026-11-21",
+      "home": "Nice",
+      "away": "Paris Saint-Germain",
+      "regulation": null,
+      "homeScore": 2,
+      "awayScore": 3,
+      "completed": true
+    },
+    {
+      "id": "espn-401876399",
+      "date": "2026-11-21",
+      "home": "AS Monaco",
+      "away": "AJ Auxerre",
+      "regulation": null,
+      "homeScore": 1,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401876403",
+      "date": "2026-11-21",
+      "home": "Lens",
+      "away": "Toulouse",
+      "regulation": null,
+      "homeScore": 1,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401876402",
+      "date": "2026-11-21",
+      "home": "Lille",
+      "away": "Lyon",
+      "regulation": null,
+      "homeScore": 0,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401876396",
+      "date": "2026-11-21",
+      "home": "Strasbourg",
+      "away": "Brest",
+      "regulation": null,
+      "homeScore": 0,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401882797",
+      "date": "2026-11-21",
+      "home": "Sevilla",
+      "away": "Real Betis",
+      "regulation": null,
+      "homeScore": 1,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401882798",
+      "date": "2026-11-21",
+      "home": "Real Madrid",
+      "away": "Celta Vigo",
+      "regulation": null,
+      "homeScore": 2,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401874967",
+      "date": "2026-11-21",
+      "home": "Parma",
+      "away": "AS Roma",
+      "regulation": null,
+      "homeScore": 1,
+      "awayScore": 5,
+      "completed": true
+    },
+    {
+      "id": "espn-401875067",
+      "date": "2026-11-21",
+      "home": "Napoli",
+      "away": "Torino",
+      "regulation": null,
+      "homeScore": 1,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401884729",
+      "date": "2026-11-21",
+      "home": "Schalke 04",
+      "away": "VfB Stuttgart",
+      "regulation": null,
+      "homeScore": 0,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401876684",
+      "date": "2026-11-21",
+      "home": "Stade de Reims",
+      "away": "Saint-Étienne",
+      "regulation": null,
+      "homeScore": 0,
+      "awayScore": 1,
       "completed": true
     },
     {
@@ -221529,5 +221649,5 @@
       }
     }
   ],
-  "scoresUpdatedAt": "2026-11-21T17:32:56.871Z"
+  "scoresUpdatedAt": "2026-11-21T23:16:32.716Z"
 }
