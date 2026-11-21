@@ -77,9 +77,169 @@
     "secondaryOddsMatches": 37,
     "statsMatches": 103,
     "oddsMatches": 114,
-    "settlements": 449
+    "settlements": 465
   },
   "settlements": [
+    {
+      "id": "espn-401879233",
+      "date": "2026-11-21",
+      "home": "Manchester City",
+      "away": "Fulham",
+      "regulation": null,
+      "homeScore": 1,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401879238",
+      "date": "2026-11-21",
+      "home": "AFC Bournemouth",
+      "away": "Nottingham Forest",
+      "regulation": null,
+      "homeScore": 2,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401878756",
+      "date": "2026-11-21",
+      "home": "Aston Villa",
+      "away": "Sunderland",
+      "regulation": null,
+      "homeScore": 0,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401879236",
+      "date": "2026-11-21",
+      "home": "Chelsea",
+      "away": "Leeds United",
+      "regulation": null,
+      "homeScore": 1,
+      "awayScore": 4,
+      "completed": true
+    },
+    {
+      "id": "espn-401879235",
+      "date": "2026-11-21",
+      "home": "Coventry City",
+      "away": "Crystal Palace",
+      "regulation": null,
+      "homeScore": 3,
+      "awayScore": 2,
+      "completed": true
+    },
+    {
+      "id": "espn-401878754",
+      "date": "2026-11-21",
+      "home": "Tottenham Hotspur",
+      "away": "Ipswich Town",
+      "regulation": null,
+      "homeScore": 2,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401882806",
+      "date": "2026-11-21",
+      "home": "Alavés",
+      "away": "Deportivo",
+      "regulation": null,
+      "homeScore": 3,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401882799",
+      "date": "2026-11-21",
+      "home": "Rayo Vallecano",
+      "away": "Valencia",
+      "regulation": null,
+      "homeScore": 0,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401875056",
+      "date": "2026-11-21",
+      "home": "Como",
+      "away": "Cagliari",
+      "regulation": null,
+      "homeScore": 2,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401874981",
+      "date": "2026-11-21",
+      "home": "Lazio",
+      "away": "Lecce",
+      "regulation": null,
+      "homeScore": 3,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401884732",
+      "date": "2026-11-21",
+      "home": "1. FC Union Berlin",
+      "away": "RB Leipzig",
+      "regulation": null,
+      "homeScore": 1,
+      "awayScore": 5,
+      "completed": true
+    },
+    {
+      "id": "espn-401884735",
+      "date": "2026-11-21",
+      "home": "Bayer Leverkusen",
+      "away": "SC Paderborn 07",
+      "regulation": null,
+      "homeScore": 4,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401884731",
+      "date": "2026-11-21",
+      "home": "Borussia Mönchengladbach",
+      "away": "Borussia Dortmund",
+      "regulation": null,
+      "homeScore": 0,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401884734",
+      "date": "2026-11-21",
+      "home": "Eintracht Frankfurt",
+      "away": "TSG Hoffenheim",
+      "regulation": null,
+      "homeScore": 1,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401884728",
+      "date": "2026-11-21",
+      "home": "SV Elversberg",
+      "away": "SC Freiburg",
+      "regulation": null,
+      "homeScore": 0,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401876689",
+      "date": "2026-11-21",
+      "home": "Stade Laval",
+      "away": "Montpellier",
+      "regulation": null,
+      "homeScore": 1,
+      "awayScore": 0,
+      "completed": true
+    },
     {
       "id": "espn-401876395",
       "date": "2026-11-20",
@@ -221369,5 +221529,5 @@
       }
     }
   ],
-  "scoresUpdatedAt": "2026-11-21T09:50:39.089Z"
+  "scoresUpdatedAt": "2026-11-21T17:32:56.871Z"
 }
