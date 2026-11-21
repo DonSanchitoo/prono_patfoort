@@ -77,9 +77,89 @@
     "secondaryOddsMatches": 37,
     "statsMatches": 103,
     "oddsMatches": 114,
-    "settlements": 441
+    "settlements": 449
   },
   "settlements": [
+    {
+      "id": "espn-401876395",
+      "date": "2026-11-20",
+      "home": "Troyes",
+      "away": "Le Havre AC",
+      "regulation": null,
+      "homeScore": 3,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401882805",
+      "date": "2026-11-20",
+      "home": "Athletic Club",
+      "away": "Espanyol",
+      "regulation": null,
+      "homeScore": 0,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401884736",
+      "date": "2026-11-20",
+      "home": "Bayern Munich",
+      "away": "FC Cologne",
+      "regulation": null,
+      "homeScore": 1,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401876691",
+      "date": "2026-11-20",
+      "home": "Annecy",
+      "away": "Clermont Foot",
+      "regulation": null,
+      "homeScore": 4,
+      "awayScore": 2,
+      "completed": true
+    },
+    {
+      "id": "espn-401876687",
+      "date": "2026-11-20",
+      "home": "AS Nancy Lorraine",
+      "away": "Dijon FCO",
+      "regulation": null,
+      "homeScore": 1,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401876690",
+      "date": "2026-11-20",
+      "home": "Guingamp",
+      "away": "Rodez Aveyron",
+      "regulation": null,
+      "homeScore": 1,
+      "awayScore": 3,
+      "completed": true
+    },
+    {
+      "id": "espn-401876688",
+      "date": "2026-11-20",
+      "home": "Metz",
+      "away": "Boulogne",
+      "regulation": null,
+      "homeScore": 2,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401876685",
+      "date": "2026-11-20",
+      "home": "Red Star FC 93",
+      "away": "Pau",
+      "regulation": null,
+      "homeScore": 2,
+      "awayScore": 1,
+      "completed": true
+    },
     {
       "id": "espn-401928518",
       "date": "2026-11-18",
@@ -221289,5 +221369,5 @@
       }
     }
   ],
-  "scoresUpdatedAt": "2026-11-20T20:20:07.205Z"
+  "scoresUpdatedAt": "2026-11-21T01:35:53.766Z"
 }
