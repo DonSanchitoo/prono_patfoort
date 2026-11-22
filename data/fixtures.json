@@ -77,9 +77,139 @@
     "secondaryOddsMatches": 37,
     "statsMatches": 103,
     "oddsMatches": 114,
-    "settlements": 477
+    "settlements": 490
   },
   "settlements": [
+    {
+      "id": "espn-401879234",
+      "date": "2026-11-22",
+      "home": "Hull City",
+      "away": "Brighton & Hove Albion",
+      "regulation": null,
+      "homeScore": 2,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401878755",
+      "date": "2026-11-22",
+      "home": "Liverpool",
+      "away": "Manchester United",
+      "regulation": null,
+      "homeScore": 4,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401876397",
+      "date": "2026-11-22",
+      "home": "Paris FC",
+      "away": "Angers",
+      "regulation": null,
+      "homeScore": 4,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401876401",
+      "date": "2026-11-22",
+      "home": "Lorient",
+      "away": "Stade Rennais",
+      "regulation": null,
+      "homeScore": 1,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401882804",
+      "date": "2026-11-22",
+      "home": "Barcelona",
+      "away": "Villarreal",
+      "regulation": null,
+      "homeScore": 3,
+      "awayScore": 2,
+      "completed": true
+    },
+    {
+      "id": "espn-401882800",
+      "date": "2026-11-22",
+      "home": "Racing Santander",
+      "away": "Real Sociedad",
+      "regulation": null,
+      "homeScore": 3,
+      "awayScore": 2,
+      "completed": true
+    },
+    {
+      "id": "espn-401882801",
+      "date": "2026-11-22",
+      "home": "Osasuna",
+      "away": "Málaga",
+      "regulation": null,
+      "homeScore": 1,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401875008",
+      "date": "2026-11-22",
+      "home": "Juventus",
+      "away": "Venezia",
+      "regulation": null,
+      "homeScore": 4,
+      "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401875047",
+      "date": "2026-11-22",
+      "home": "Bologna",
+      "away": "Udinese",
+      "regulation": null,
+      "homeScore": 1,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401874960",
+      "date": "2026-11-22",
+      "home": "Sassuolo",
+      "away": "Genoa",
+      "regulation": null,
+      "homeScore": 0,
+      "awayScore": 2,
+      "completed": true
+    },
+    {
+      "id": "espn-401874989",
+      "date": "2026-11-22",
+      "home": "AC Milan",
+      "away": "Frosinone",
+      "regulation": null,
+      "homeScore": 5,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401884733",
+      "date": "2026-11-22",
+      "home": "FC Augsburg",
+      "away": "Mainz",
+      "regulation": null,
+      "homeScore": 3,
+      "awayScore": 1,
+      "completed": true
+    },
+    {
+      "id": "espn-401884730",
+      "date": "2026-11-22",
+      "home": "Werder Bremen",
+      "away": "Hamburg SV",
+      "regulation": null,
+      "homeScore": 4,
+      "awayScore": 0,
+      "completed": true
+    },
     {
       "id": "espn-401879233",
       "date": "2026-11-21",
@@ -221649,5 +221779,5 @@
       }
     }
   ],
-  "scoresUpdatedAt": "2026-11-22T11:25:04.090Z"
+  "scoresUpdatedAt": "2026-11-22T19:40:31.235Z"
 }
