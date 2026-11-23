@@ -77,7 +77,7 @@
     "secondaryOddsMatches": 37,
     "statsMatches": 103,
     "oddsMatches": 114,
-    "settlements": 490
+    "settlements": 493
   },
   "settlements": [
     {
@@ -208,6 +208,36 @@
       "regulation": null,
       "homeScore": 4,
       "awayScore": 0,
+      "completed": true
+    },
+    {
+      "id": "espn-401876400",
+      "date": "2026-11-22",
+      "home": "Marseille",
+      "away": "Le Mans",
+      "regulation": null,
+      "homeScore": 2,
+      "awayScore": 3,
+      "completed": true
+    },
+    {
+      "id": "espn-401882803",
+      "date": "2026-11-22",
+      "home": "Getafe",
+      "away": "Atlético Madrid",
+      "regulation": null,
+      "homeScore": 0,
+      "awayScore": 3,
+      "completed": true
+    },
+    {
+      "id": "espn-401875001",
+      "date": "2026-11-22",
+      "home": "Atalanta",
+      "away": "Internazionale",
+      "regulation": null,
+      "homeScore": 4,
+      "awayScore": 4,
       "completed": true
     },
     {
@@ -221779,5 +221809,5 @@
       }
     }
   ],
-  "scoresUpdatedAt": "2026-11-22T19:40:31.235Z"
+  "scoresUpdatedAt": "2026-11-23T00:54:05.293Z"
 }
