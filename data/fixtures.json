@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-25T13:49:14.863Z",
+  "generatedAt": "2026-11-26T13:29:24.497Z",
   "oddsRefreshedAt": "2026-11-03T05:38:47.465Z",
   "oddsRefreshHours": [
     6,
@@ -10,7 +10,7 @@
   "secondaryOddsWindowHours": 48,
   "movementThresholdPercent": 5,
   "dailyChallenge": {
-    "date": "2026-11-25",
+    "date": "2026-11-26",
     "picks": []
   },
   "source": "ESPN + football-data.org + PropLine",
@@ -27,399 +27,9 @@
     "secondaryOddsMatches": 0,
     "statsMatches": 0,
     "oddsMatches": 0,
-    "settlements": 81
+    "settlements": 75
   },
   "settlements": [
-    {
-      "id": "espn-401915378",
-      "date": "2026-11-25",
-      "home": "Sabah FK",
-      "away": "Barcelona",
-      "regulation": null,
-      "homeScore": 1,
-      "awayScore": 4,
-      "completed": true
-    },
-    {
-      "id": "espn-401915293",
-      "date": "2026-11-25",
-      "home": "Slavia Prague",
-      "away": "Villarreal",
-      "regulation": null,
-      "homeScore": 0,
-      "awayScore": 1,
-      "completed": true
-    },
-    {
-      "id": "espn-401915291",
-      "date": "2026-11-25",
-      "home": "Atlético Madrid",
-      "away": "Viking FK",
-      "regulation": null,
-      "homeScore": 2,
-      "awayScore": 0,
-      "completed": true
-    },
-    {
-      "id": "espn-401915292",
-      "date": "2026-11-25",
-      "home": "Club Brugge",
-      "away": "Liverpool",
-      "regulation": null,
-      "homeScore": 0,
-      "awayScore": 3,
-      "completed": true
-    },
-    {
-      "id": "espn-401915376",
-      "date": "2026-11-25",
-      "home": "Internazionale",
-      "away": "VfB Stuttgart",
-      "regulation": null,
-      "homeScore": 2,
-      "awayScore": 0,
-      "completed": true
-    },
-    {
-      "id": "espn-401915377",
-      "date": "2026-11-25",
-      "home": "Lille",
-      "away": "Bayern Munich",
-      "regulation": null,
-      "homeScore": 2,
-      "awayScore": 1,
-      "completed": true
-    },
-    {
-      "id": "espn-401915374",
-      "date": "2026-11-25",
-      "home": "Paris Saint-Germain",
-      "away": "AS Roma",
-      "regulation": null,
-      "homeScore": 2,
-      "awayScore": 2,
-      "completed": true
-    },
-    {
-      "id": "espn-401915375",
-      "date": "2026-11-25",
-      "home": "Shakhtar Donetsk",
-      "away": "Fenerbahce",
-      "regulation": null,
-      "homeScore": 0,
-      "awayScore": 1,
-      "completed": true
-    },
-    {
-      "id": "espn-401915373",
-      "date": "2026-11-25",
-      "home": "Sporting CP",
-      "away": "Manchester United",
-      "regulation": null,
-      "homeScore": 2,
-      "awayScore": 2,
-      "completed": true
-    },
-    {
-      "id": "espn-401915380",
-      "date": "2026-11-24",
-      "home": "Bodo/Glimt",
-      "away": "LASK Linz",
-      "regulation": null,
-      "homeScore": 1,
-      "awayScore": 0,
-      "completed": true
-    },
-    {
-      "id": "espn-401915300",
-      "date": "2026-11-24",
-      "home": "Galatasaray",
-      "away": "Aston Villa",
-      "regulation": null,
-      "homeScore": 1,
-      "awayScore": 0,
-      "completed": true
-    },
-    {
-      "id": "espn-401915295",
-      "date": "2026-11-24",
-      "home": "Arsenal",
-      "away": "Borussia Dortmund",
-      "regulation": null,
-      "homeScore": 1,
-      "awayScore": 1,
-      "completed": true
-    },
-    {
-      "id": "espn-401915296",
-      "date": "2026-11-24",
-      "home": "Como",
-      "away": "AEK Athens",
-      "regulation": null,
-      "homeScore": 1,
-      "awayScore": 0,
-      "completed": true
-    },
-    {
-      "id": "espn-401915294",
-      "date": "2026-11-24",
-      "home": "Feyenoord Rotterdam",
-      "away": "FC Porto",
-      "regulation": null,
-      "homeScore": 0,
-      "awayScore": 1,
-      "completed": true
-    },
-    {
-      "id": "espn-401915379",
-      "date": "2026-11-24",
-      "home": "Manchester City",
-      "away": "Napoli",
-      "regulation": null,
-      "homeScore": 2,
-      "awayScore": 2,
-      "completed": true
-    },
-    {
-      "id": "espn-401915299",
-      "date": "2026-11-24",
-      "home": "RB Leipzig",
-      "away": "Lens",
-      "regulation": null,
-      "homeScore": 3,
-      "awayScore": 1,
-      "completed": true
-    },
-    {
-      "id": "espn-401915298",
-      "date": "2026-11-24",
-      "home": "Real Madrid",
-      "away": "PSV Eindhoven",
-      "regulation": null,
-      "homeScore": 5,
-      "awayScore": 1,
-      "completed": true
-    },
-    {
-      "id": "espn-401915297",
-      "date": "2026-11-24",
-      "home": "Slovan Bratislava",
-      "away": "Real Betis",
-      "regulation": null,
-      "homeScore": 0,
-      "awayScore": 2,
-      "completed": true
-    },
-    {
-      "id": "espn-401879237",
-      "date": "2026-11-23",
-      "home": "Brentford",
-      "away": "Everton",
-      "regulation": null,
-      "homeScore": 4,
-      "awayScore": 0,
-      "completed": true
-    },
-    {
-      "id": "espn-401882802",
-      "date": "2026-11-23",
-      "home": "Levante",
-      "away": "Elche",
-      "regulation": null,
-      "homeScore": 1,
-      "awayScore": 1,
-      "completed": true
-    },
-    {
-      "id": "espn-401875009",
-      "date": "2026-11-23",
-      "home": "Monza",
-      "away": "Fiorentina",
-      "regulation": null,
-      "homeScore": 3,
-      "awayScore": 0,
-      "completed": true
-    },
-    {
-      "id": "espn-401876686",
-      "date": "2026-11-23",
-      "home": "Nantes",
-      "away": "Grenoble",
-      "regulation": null,
-      "homeScore": 1,
-      "awayScore": 0,
-      "completed": true
-    },
-    {
-      "id": "espn-401876683",
-      "date": "2026-11-23",
-      "home": "Sochaux",
-      "away": "Dunkerque",
-      "regulation": null,
-      "homeScore": 2,
-      "awayScore": 3,
-      "completed": true
-    },
-    {
-      "id": "espn-401879234",
-      "date": "2026-11-22",
-      "home": "Hull City",
-      "away": "Brighton & Hove Albion",
-      "regulation": null,
-      "homeScore": 2,
-      "awayScore": 0,
-      "completed": true
-    },
-    {
-      "id": "espn-401878755",
-      "date": "2026-11-22",
-      "home": "Liverpool",
-      "away": "Manchester United",
-      "regulation": null,
-      "homeScore": 4,
-      "awayScore": 0,
-      "completed": true
-    },
-    {
-      "id": "espn-401876397",
-      "date": "2026-11-22",
-      "home": "Paris FC",
-      "away": "Angers",
-      "regulation": null,
-      "homeScore": 4,
-      "awayScore": 0,
-      "completed": true
-    },
-    {
-      "id": "espn-401876401",
-      "date": "2026-11-22",
-      "home": "Lorient",
-      "away": "Stade Rennais",
-      "regulation": null,
-      "homeScore": 1,
-      "awayScore": 1,
-      "completed": true
-    },
-    {
-      "id": "espn-401876400",
-      "date": "2026-11-22",
-      "home": "Marseille",
-      "away": "Le Mans",
-      "regulation": null,
-      "homeScore": 2,
-      "awayScore": 3,
-      "completed": true
-    },
-    {
-      "id": "espn-401882804",
-      "date": "2026-11-22",
-      "home": "Barcelona",
-      "away": "Villarreal",
-      "regulation": null,
-      "homeScore": 3,
-      "awayScore": 2,
-      "completed": true
-    },
-    {
-      "id": "espn-401882800",
-      "date": "2026-11-22",
-      "home": "Racing Santander",
-      "away": "Real Sociedad",
-      "regulation": null,
-      "homeScore": 3,
-      "awayScore": 2,
-      "completed": true
-    },
-    {
-      "id": "espn-401882801",
-      "date": "2026-11-22",
-      "home": "Osasuna",
-      "away": "Málaga",
-      "regulation": null,
-      "homeScore": 1,
-      "awayScore": 0,
-      "completed": true
-    },
-    {
-      "id": "espn-401882803",
-      "date": "2026-11-22",
-      "home": "Getafe",
-      "away": "Atlético Madrid",
-      "regulation": null,
-      "homeScore": 0,
-      "awayScore": 3,
-      "completed": true
-    },
-    {
-      "id": "espn-401875008",
-      "date": "2026-11-22",
-      "home": "Juventus",
-      "away": "Venezia",
-      "regulation": null,
-      "homeScore": 4,
-      "awayScore": 0,
-      "completed": true
-    },
-    {
-      "id": "espn-401875047",
-      "date": "2026-11-22",
-      "home": "Bologna",
-      "away": "Udinese",
-      "regulation": null,
-      "homeScore": 1,
-      "awayScore": 1,
-      "completed": true
-    },
-    {
-      "id": "espn-401874960",
-      "date": "2026-11-22",
-      "home": "Sassuolo",
-      "away": "Genoa",
-      "regulation": null,
-      "homeScore": 0,
-      "awayScore": 2,
-      "completed": true
-    },
-    {
-      "id": "espn-401874989",
-      "date": "2026-11-22",
-      "home": "AC Milan",
-      "away": "Frosinone",
-      "regulation": null,
-      "homeScore": 5,
-      "awayScore": 1,
-      "completed": true
-    },
-    {
-      "id": "espn-401875001",
-      "date": "2026-11-22",
-      "home": "Atalanta",
-      "away": "Internazionale",
-      "regulation": null,
-      "homeScore": 4,
-      "awayScore": 4,
-      "completed": true
-    },
-    {
-      "id": "espn-401884733",
-      "date": "2026-11-22",
-      "home": "FC Augsburg",
-      "away": "Mainz",
-      "regulation": null,
-      "homeScore": 3,
-      "awayScore": 1,
-      "completed": true
-    },
-    {
-      "id": "espn-401884730",
-      "date": "2026-11-22",
-      "home": "Werder Bremen",
-      "away": "Hamburg SV",
-      "regulation": null,
-      "homeScore": 4,
-      "awayScore": 0,
-      "completed": true
-    },
     {
       "id": "espn-401879233",
       "date": "2026-11-21",
@@ -491,6 +101,46 @@
       "regulation": null
     },
     {
+      "id": "espn-401879234",
+      "date": "2026-11-22",
+      "home": "Hull City",
+      "away": "Brighton & Hove Albion",
+      "homeScore": 2,
+      "awayScore": 0,
+      "completed": true,
+      "regulation": null
+    },
+    {
+      "id": "espn-401878755",
+      "date": "2026-11-22",
+      "home": "Liverpool",
+      "away": "Manchester United",
+      "homeScore": 4,
+      "awayScore": 0,
+      "completed": true,
+      "regulation": null
+    },
+    {
+      "id": "espn-401879237",
+      "date": "2026-11-23",
+      "home": "Brentford",
+      "away": "Everton",
+      "homeScore": 4,
+      "awayScore": 0,
+      "completed": true,
+      "regulation": null
+    },
+    {
+      "id": "espn-401876395",
+      "date": "2026-11-20",
+      "home": "Troyes",
+      "away": "Le Havre AC",
+      "homeScore": 3,
+      "awayScore": 1,
+      "completed": true,
+      "regulation": null
+    },
+    {
       "id": "espn-401876398",
       "date": "2026-11-21",
       "home": "Nice",
@@ -541,6 +191,46 @@
       "regulation": null
     },
     {
+      "id": "espn-401876397",
+      "date": "2026-11-22",
+      "home": "Paris FC",
+      "away": "Angers",
+      "homeScore": 4,
+      "awayScore": 0,
+      "completed": true,
+      "regulation": null
+    },
+    {
+      "id": "espn-401876401",
+      "date": "2026-11-22",
+      "home": "Lorient",
+      "away": "Stade Rennais",
+      "homeScore": 1,
+      "awayScore": 1,
+      "completed": true,
+      "regulation": null
+    },
+    {
+      "id": "espn-401876400",
+      "date": "2026-11-22",
+      "home": "Marseille",
+      "away": "Le Mans",
+      "homeScore": 2,
+      "awayScore": 3,
+      "completed": true,
+      "regulation": null
+    },
+    {
+      "id": "espn-401882805",
+      "date": "2026-11-20",
+      "home": "Athletic Club",
+      "away": "Espanyol",
+      "homeScore": 0,
+      "awayScore": 1,
+      "completed": true,
+      "regulation": null
+    },
+    {
       "id": "espn-401882806",
       "date": "2026-11-21",
       "home": "Alavés",
@@ -576,6 +266,56 @@
       "home": "Real Madrid",
       "away": "Celta Vigo",
       "homeScore": 2,
+      "awayScore": 1,
+      "completed": true,
+      "regulation": null
+    },
+    {
+      "id": "espn-401882804",
+      "date": "2026-11-22",
+      "home": "Barcelona",
+      "away": "Villarreal",
+      "homeScore": 3,
+      "awayScore": 2,
+      "completed": true,
+      "regulation": null
+    },
+    {
+      "id": "espn-401882800",
+      "date": "2026-11-22",
+      "home": "Racing Santander",
+      "away": "Real Sociedad",
+      "homeScore": 3,
+      "awayScore": 2,
+      "completed": true,
+      "regulation": null
+    },
+    {
+      "id": "espn-401882801",
+      "date": "2026-11-22",
+      "home": "Osasuna",
+      "away": "Málaga",
+      "homeScore": 1,
+      "awayScore": 0,
+      "completed": true,
+      "regulation": null
+    },
+    {
+      "id": "espn-401882803",
+      "date": "2026-11-22",
+      "home": "Getafe",
+      "away": "Atlético Madrid",
+      "homeScore": 0,
+      "awayScore": 3,
+      "completed": true,
+      "regulation": null
+    },
+    {
+      "id": "espn-401882802",
+      "date": "2026-11-23",
+      "home": "Levante",
+      "away": "Elche",
+      "homeScore": 1,
       "awayScore": 1,
       "completed": true,
       "regulation": null
@@ -617,6 +357,76 @@
       "away": "Torino",
       "homeScore": 1,
       "awayScore": 0,
+      "completed": true,
+      "regulation": null
+    },
+    {
+      "id": "espn-401875008",
+      "date": "2026-11-22",
+      "home": "Juventus",
+      "away": "Venezia",
+      "homeScore": 4,
+      "awayScore": 0,
+      "completed": true,
+      "regulation": null
+    },
+    {
+      "id": "espn-401875047",
+      "date": "2026-11-22",
+      "home": "Bologna",
+      "away": "Udinese",
+      "homeScore": 1,
+      "awayScore": 1,
+      "completed": true,
+      "regulation": null
+    },
+    {
+      "id": "espn-401874960",
+      "date": "2026-11-22",
+      "home": "Sassuolo",
+      "away": "Genoa",
+      "homeScore": 0,
+      "awayScore": 2,
+      "completed": true,
+      "regulation": null
+    },
+    {
+      "id": "espn-401874989",
+      "date": "2026-11-22",
+      "home": "AC Milan",
+      "away": "Frosinone",
+      "homeScore": 5,
+      "awayScore": 1,
+      "completed": true,
+      "regulation": null
+    },
+    {
+      "id": "espn-401875001",
+      "date": "2026-11-22",
+      "home": "Atalanta",
+      "away": "Internazionale",
+      "homeScore": 4,
+      "awayScore": 4,
+      "completed": true,
+      "regulation": null
+    },
+    {
+      "id": "espn-401875009",
+      "date": "2026-11-23",
+      "home": "Monza",
+      "away": "Fiorentina",
+      "homeScore": 3,
+      "awayScore": 0,
+      "completed": true,
+      "regulation": null
+    },
+    {
+      "id": "espn-401884736",
+      "date": "2026-11-20",
+      "home": "Bayern Munich",
+      "away": "FC Cologne",
+      "homeScore": 1,
+      "awayScore": 1,
       "completed": true,
       "regulation": null
     },
@@ -681,52 +491,202 @@
       "regulation": null
     },
     {
-      "id": "espn-401876689",
-      "date": "2026-11-21",
-      "home": "Stade Laval",
-      "away": "Montpellier",
-      "homeScore": 1,
-      "awayScore": 0,
-      "completed": true,
-      "regulation": null
-    },
-    {
-      "id": "espn-401876684",
-      "date": "2026-11-21",
-      "home": "Stade de Reims",
-      "away": "Saint-Étienne",
-      "homeScore": 0,
-      "awayScore": 1,
-      "completed": true,
-      "regulation": null
-    },
-    {
-      "id": "espn-401876395",
-      "date": "2026-11-20",
-      "home": "Troyes",
-      "away": "Le Havre AC",
+      "id": "espn-401884733",
+      "date": "2026-11-22",
+      "home": "FC Augsburg",
+      "away": "Mainz",
       "homeScore": 3,
       "awayScore": 1,
       "completed": true,
       "regulation": null
     },
     {
-      "id": "espn-401882805",
-      "date": "2026-11-20",
-      "home": "Athletic Club",
-      "away": "Espanyol",
+      "id": "espn-401884730",
+      "date": "2026-11-22",
+      "home": "Werder Bremen",
+      "away": "Hamburg SV",
+      "homeScore": 4,
+      "awayScore": 0,
+      "completed": true,
+      "regulation": null
+    },
+    {
+      "id": "espn-401915380",
+      "date": "2026-11-24",
+      "home": "Bodo/Glimt",
+      "away": "LASK Linz",
+      "homeScore": 1,
+      "awayScore": 0,
+      "completed": true,
+      "regulation": null
+    },
+    {
+      "id": "espn-401915300",
+      "date": "2026-11-24",
+      "home": "Galatasaray",
+      "away": "Aston Villa",
+      "homeScore": 1,
+      "awayScore": 0,
+      "completed": true,
+      "regulation": null
+    },
+    {
+      "id": "espn-401915295",
+      "date": "2026-11-24",
+      "home": "Arsenal",
+      "away": "Borussia Dortmund",
+      "homeScore": 1,
+      "awayScore": 1,
+      "completed": true,
+      "regulation": null
+    },
+    {
+      "id": "espn-401915296",
+      "date": "2026-11-24",
+      "home": "Como",
+      "away": "AEK Athens",
+      "homeScore": 1,
+      "awayScore": 0,
+      "completed": true,
+      "regulation": null
+    },
+    {
+      "id": "espn-401915294",
+      "date": "2026-11-24",
+      "home": "Feyenoord Rotterdam",
+      "away": "FC Porto",
       "homeScore": 0,
       "awayScore": 1,
       "completed": true,
       "regulation": null
     },
     {
-      "id": "espn-401884736",
-      "date": "2026-11-20",
-      "home": "Bayern Munich",
-      "away": "FC Cologne",
-      "homeScore": 1,
+      "id": "espn-401915379",
+      "date": "2026-11-24",
+      "home": "Manchester City",
+      "away": "Napoli",
+      "homeScore": 2,
+      "awayScore": 2,
+      "completed": true,
+      "regulation": null
+    },
+    {
+      "id": "espn-401915299",
+      "date": "2026-11-24",
+      "home": "RB Leipzig",
+      "away": "Lens",
+      "homeScore": 3,
       "awayScore": 1,
+      "completed": true,
+      "regulation": null
+    },
+    {
+      "id": "espn-401915298",
+      "date": "2026-11-24",
+      "home": "Real Madrid",
+      "away": "PSV Eindhoven",
+      "homeScore": 5,
+      "awayScore": 1,
+      "completed": true,
+      "regulation": null
+    },
+    {
+      "id": "espn-401915297",
+      "date": "2026-11-24",
+      "home": "Slovan Bratislava",
+      "away": "Real Betis",
+      "homeScore": 0,
+      "awayScore": 2,
+      "completed": true,
+      "regulation": null
+    },
+    {
+      "id": "espn-401915378",
+      "date": "2026-11-25",
+      "home": "Sabah FK",
+      "away": "Barcelona",
+      "homeScore": 1,
+      "awayScore": 4,
+      "completed": true,
+      "regulation": null
+    },
+    {
+      "id": "espn-401915293",
+      "date": "2026-11-25",
+      "home": "Slavia Prague",
+      "away": "Villarreal",
+      "homeScore": 0,
+      "awayScore": 1,
+      "completed": true,
+      "regulation": null
+    },
+    {
+      "id": "espn-401915291",
+      "date": "2026-11-25",
+      "home": "Atlético Madrid",
+      "away": "Viking FK",
+      "homeScore": 2,
+      "awayScore": 0,
+      "completed": true,
+      "regulation": null
+    },
+    {
+      "id": "espn-401915292",
+      "date": "2026-11-25",
+      "home": "Club Brugge",
+      "away": "Liverpool",
+      "homeScore": 0,
+      "awayScore": 3,
+      "completed": true,
+      "regulation": null
+    },
+    {
+      "id": "espn-401915376",
+      "date": "2026-11-25",
+      "home": "Internazionale",
+      "away": "VfB Stuttgart",
+      "homeScore": 2,
+      "awayScore": 0,
+      "completed": true,
+      "regulation": null
+    },
+    {
+      "id": "espn-401915377",
+      "date": "2026-11-25",
+      "home": "Lille",
+      "away": "Bayern Munich",
+      "homeScore": 2,
+      "awayScore": 1,
+      "completed": true,
+      "regulation": null
+    },
+    {
+      "id": "espn-401915374",
+      "date": "2026-11-25",
+      "home": "Paris Saint-Germain",
+      "away": "AS Roma",
+      "homeScore": 2,
+      "awayScore": 2,
+      "completed": true,
+      "regulation": null
+    },
+    {
+      "id": "espn-401915375",
+      "date": "2026-11-25",
+      "home": "Shakhtar Donetsk",
+      "away": "Fenerbahce",
+      "homeScore": 0,
+      "awayScore": 1,
+      "completed": true,
+      "regulation": null
+    },
+    {
+      "id": "espn-401915373",
+      "date": "2026-11-25",
+      "home": "Sporting CP",
+      "away": "Manchester United",
+      "homeScore": 2,
+      "awayScore": 2,
       "completed": true,
       "regulation": null
     },
@@ -781,1411 +741,47 @@
       "regulation": null
     },
     {
-      "id": "espn-401928518",
-      "date": "2026-11-18",
-      "home": "Portugalete",
-      "away": "Real Unión Irun",
-      "homeScore": 0,
+      "id": "espn-401876689",
+      "date": "2026-11-21",
+      "home": "Stade Laval",
+      "away": "Montpellier",
+      "homeScore": 1,
       "awayScore": 0,
       "completed": true,
-      "regulation": {
-        "extraTime": true,
-        "home": null,
-        "away": null
-      }
+      "regulation": null
     },
     {
-      "id": "espn-401928497",
-      "date": "2026-11-18",
-      "home": "Utebo",
-      "away": "CD Sabadell",
+      "id": "espn-401876684",
+      "date": "2026-11-21",
+      "home": "Stade de Reims",
+      "away": "Saint-Étienne",
       "homeScore": 0,
-      "awayScore": 3,
-      "completed": true,
-      "regulation": null
-    },
-    {
-      "id": "espn-401928505",
-      "date": "2026-11-18",
-      "home": "Alcoyano",
-      "away": "Mallorca",
-      "homeScore": 1,
-      "awayScore": 3,
-      "completed": true,
-      "regulation": {
-        "extraTime": true,
-        "home": null,
-        "away": null
-      }
-    },
-    {
-      "id": "espn-401928532",
-      "date": "2026-11-18",
-      "home": "Badajoz",
-      "away": "Tenerife",
-      "homeScore": 2,
-      "awayScore": 5,
-      "completed": true,
-      "regulation": null
-    },
-    {
-      "id": "espn-401928524",
-      "date": "2026-11-18",
-      "home": "CD Minera",
-      "away": "FC Cartagena",
-      "homeScore": 1,
-      "awayScore": 2,
-      "completed": true,
-      "regulation": {
-        "extraTime": true,
-        "home": null,
-        "away": null
-      }
-    },
-    {
-      "id": "espn-401928500",
-      "date": "2026-11-18",
-      "home": "Reus FC Reddis",
-      "away": "Barakaldo",
-      "homeScore": 1,
       "awayScore": 1,
       "completed": true,
-      "regulation": {
-        "extraTime": true,
-        "home": null,
-        "away": null
-      }
+      "regulation": null
+    },
+    {
+      "id": "espn-401876686",
+      "date": "2026-11-23",
+      "home": "Nantes",
+      "away": "Grenoble",
+      "homeScore": 1,
+      "awayScore": 0,
+      "completed": true,
+      "regulation": null
+    },
+    {
+      "id": "espn-401876683",
+      "date": "2026-11-23",
+      "home": "Sochaux",
+      "away": "Dunkerque",
+      "homeScore": 2,
+      "awayScore": 3,
+      "completed": true,
+      "regulation": null
     }
   ],
   "matches": [
-    {
-      "id": "espn-401878755",
-      "date": "2026-11-22",
-      "kickoff": "2026-11-22T16:30:00.000Z",
-      "time": "17:30",
-      "league": "Premier League",
-      "home": "Liverpool",
-      "away": "Manchester United",
-      "neutralSite": false,
-      "venue": {
-        "id": "192",
-        "name": "Anfield"
-      },
-      "leagueLogo": "https://a.espncdn.com/i/leaguelogos/soccer/500/23.png",
-      "leagueLogoDark": "https://a.espncdn.com/i/leaguelogos/soccer/500-dark/23.png",
-      "homeId": "364",
-      "awayId": "360",
-      "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/364.png",
-      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/360.png",
-      "priority": 94,
-      "featured": true,
-      "status": "Terminé",
-      "completed": true,
-      "voided": false,
-      "knockout": false,
-      "regulation": null,
-      "homeScore": 4,
-      "awayScore": 0,
-      "homeGoals": 2.05,
-      "awayGoals": 1.6,
-      "odds": {
-        "home": 1.68,
-        "draw": 3.4,
-        "away": 2.28,
-        "over": 1.49,
-        "btts": 1.51
-      },
-      "oddsMovement": {
-        "home": {
-          "previous": 1.68,
-          "current": 1.68,
-          "percent": 0,
-          "significant": false
-        },
-        "draw": {
-          "previous": 3.4,
-          "current": 3.4,
-          "percent": 0,
-          "significant": false
-        },
-        "away": {
-          "previous": 2.28,
-          "current": 2.28,
-          "percent": 0,
-          "significant": false
-        },
-        "over": {
-          "previous": 1.49,
-          "current": 1.49,
-          "percent": 0,
-          "significant": false
-        },
-        "btts": {
-          "previous": 1.51,
-          "current": 1.51,
-          "percent": 0,
-          "significant": false
-        }
-      },
-      "suggestedPick": {
-        "key": "over",
-        "label": "Plus de 2,5 buts",
-        "family": "Buts",
-        "odd": 1.49,
-        "probability": 0.7060078446013035,
-        "refundProbability": 0,
-        "value": null,
-        "real": false,
-        "basis": "model-only",
-        "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-23T13:57:54.783Z"
-      }
-    },
-    {
-      "id": "espn-401882804",
-      "date": "2026-11-22",
-      "kickoff": "2026-11-22T13:00:00.000Z",
-      "time": "14:00",
-      "league": "La Liga",
-      "home": "Barcelona",
-      "away": "Villarreal",
-      "neutralSite": false,
-      "venue": {
-        "id": "1625",
-        "name": "Spotify Camp Nou"
-      },
-      "leagueLogo": "https://a.espncdn.com/i/leaguelogos/soccer/500/15.png",
-      "leagueLogoDark": "https://a.espncdn.com/i/leaguelogos/soccer/500-dark/15.png",
-      "homeId": "83",
-      "awayId": "102",
-      "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/83.png",
-      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/102.png",
-      "priority": 63,
-      "featured": false,
-      "status": "Terminé",
-      "completed": true,
-      "voided": false,
-      "knockout": false,
-      "regulation": null,
-      "homeScore": 3,
-      "awayScore": 2,
-      "homeGoals": 2.05,
-      "awayGoals": 1.25,
-      "odds": {
-        "home": 1.68,
-        "draw": 3.59,
-        "away": 2.92,
-        "over": 1.64,
-        "btts": 1.69
-      },
-      "oddsMovement": {
-        "home": {
-          "previous": 1.68,
-          "current": 1.68,
-          "percent": 0,
-          "significant": false
-        },
-        "draw": {
-          "previous": 3.59,
-          "current": 3.59,
-          "percent": 0,
-          "significant": false
-        },
-        "away": {
-          "previous": 2.92,
-          "current": 2.92,
-          "percent": 0,
-          "significant": false
-        },
-        "over": {
-          "previous": 1.64,
-          "current": 1.64,
-          "percent": 0,
-          "significant": false
-        },
-        "btts": {
-          "previous": 1.69,
-          "current": 1.69,
-          "percent": 0,
-          "significant": false
-        }
-      },
-      "suggestedPick": {
-        "key": "over",
-        "label": "Plus de 2,5 buts",
-        "family": "Buts",
-        "odd": 1.64,
-        "probability": 0.6405735336749162,
-        "refundProbability": 0,
-        "value": null,
-        "real": false,
-        "basis": "model-only",
-        "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-23T13:57:54.784Z"
-      }
-    },
-    {
-      "id": "espn-401882803",
-      "date": "2026-11-22",
-      "kickoff": "2026-11-22T20:00:00.000Z",
-      "time": "21:00",
-      "league": "La Liga",
-      "home": "Getafe",
-      "away": "Atlético Madrid",
-      "neutralSite": false,
-      "venue": {
-        "id": "4154",
-        "name": "Estadio Coliseum"
-      },
-      "leagueLogo": "https://a.espncdn.com/i/leaguelogos/soccer/500/15.png",
-      "leagueLogoDark": "https://a.espncdn.com/i/leaguelogos/soccer/500-dark/15.png",
-      "homeId": "2922",
-      "awayId": "1068",
-      "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/2922.png",
-      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/1068.png",
-      "priority": 63,
-      "featured": false,
-      "status": "Terminé",
-      "completed": true,
-      "voided": false,
-      "knockout": false,
-      "regulation": null,
-      "homeScore": 0,
-      "awayScore": 3,
-      "homeGoals": 1.5999999999999999,
-      "awayGoals": 1.6,
-      "odds": {
-        "home": 2.16,
-        "draw": 3.15,
-        "away": 2.28,
-        "over": 1.7,
-        "btts": 1.65
-      },
-      "oddsMovement": {
-        "home": {
-          "previous": 2.16,
-          "current": 2.16,
-          "percent": 0,
-          "significant": false
-        },
-        "draw": {
-          "previous": 3.15,
-          "current": 3.15,
-          "percent": 0,
-          "significant": false
-        },
-        "away": {
-          "previous": 2.28,
-          "current": 2.28,
-          "percent": 0,
-          "significant": false
-        },
-        "over": {
-          "previous": 1.7,
-          "current": 1.7,
-          "percent": 0,
-          "significant": false
-        },
-        "btts": {
-          "previous": 1.65,
-          "current": 1.65,
-          "percent": 0,
-          "significant": false
-        }
-      },
-      "suggestedPick": {
-        "key": "btts",
-        "label": "Les deux marquent",
-        "family": "Équipes",
-        "odd": 1.65,
-        "probability": 0.6369691679890548,
-        "refundProbability": 0,
-        "value": null,
-        "real": false,
-        "basis": "model-only",
-        "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-23T13:57:54.784Z"
-      }
-    },
-    {
-      "id": "espn-401875008",
-      "date": "2026-11-22",
-      "kickoff": "2026-11-22T11:30:00.000Z",
-      "time": "12:30",
-      "league": "Serie A",
-      "home": "Juventus",
-      "away": "Venezia",
-      "neutralSite": false,
-      "venue": {
-        "id": "4600",
-        "name": "Allianz Stadium"
-      },
-      "leagueLogo": "https://a.espncdn.com/i/leaguelogos/soccer/500/12.png",
-      "leagueLogoDark": "https://a.espncdn.com/i/leaguelogos/soccer/500-dark/12.png",
-      "homeId": "111",
-      "awayId": "17530",
-      "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/111.png",
-      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/17530.png",
-      "priority": 61,
-      "featured": false,
-      "status": "Terminé",
-      "completed": true,
-      "voided": false,
-      "knockout": false,
-      "regulation": null,
-      "homeScore": 4,
-      "awayScore": 0,
-      "homeGoals": 2.05,
-      "awayGoals": 1.25,
-      "odds": {
-        "home": 1.68,
-        "draw": 3.59,
-        "away": 2.92,
-        "over": 1.64,
-        "btts": 1.69
-      },
-      "oddsMovement": {
-        "home": {
-          "previous": 1.68,
-          "current": 1.68,
-          "percent": 0,
-          "significant": false
-        },
-        "draw": {
-          "previous": 3.59,
-          "current": 3.59,
-          "percent": 0,
-          "significant": false
-        },
-        "away": {
-          "previous": 2.92,
-          "current": 2.92,
-          "percent": 0,
-          "significant": false
-        },
-        "over": {
-          "previous": 1.64,
-          "current": 1.64,
-          "percent": 0,
-          "significant": false
-        },
-        "btts": {
-          "previous": 1.69,
-          "current": 1.69,
-          "percent": 0,
-          "significant": false
-        }
-      },
-      "suggestedPick": {
-        "key": "over",
-        "label": "Plus de 2,5 buts",
-        "family": "Buts",
-        "odd": 1.64,
-        "probability": 0.6405735336749162,
-        "refundProbability": 0,
-        "value": null,
-        "real": false,
-        "basis": "model-only",
-        "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-23T13:57:54.785Z"
-      }
-    },
-    {
-      "id": "espn-401874989",
-      "date": "2026-11-22",
-      "kickoff": "2026-11-22T17:00:00.000Z",
-      "time": "18:00",
-      "league": "Serie A",
-      "home": "AC Milan",
-      "away": "Frosinone",
-      "neutralSite": false,
-      "venue": {
-        "id": "26",
-        "name": "San Siro"
-      },
-      "leagueLogo": "https://a.espncdn.com/i/leaguelogos/soccer/500/12.png",
-      "leagueLogoDark": "https://a.espncdn.com/i/leaguelogos/soccer/500-dark/12.png",
-      "homeId": "103",
-      "awayId": "4057",
-      "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/103.png",
-      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/4057.png",
-      "priority": 61,
-      "featured": false,
-      "status": "Terminé",
-      "completed": true,
-      "voided": false,
-      "knockout": false,
-      "regulation": null,
-      "homeScore": 5,
-      "awayScore": 1,
-      "homeGoals": 2.05,
-      "awayGoals": 1.25,
-      "odds": {
-        "home": 1.68,
-        "draw": 3.59,
-        "away": 2.92,
-        "over": 1.64,
-        "btts": 1.69
-      },
-      "oddsMovement": {
-        "home": {
-          "previous": 1.68,
-          "current": 1.68,
-          "percent": 0,
-          "significant": false
-        },
-        "draw": {
-          "previous": 3.59,
-          "current": 3.59,
-          "percent": 0,
-          "significant": false
-        },
-        "away": {
-          "previous": 2.92,
-          "current": 2.92,
-          "percent": 0,
-          "significant": false
-        },
-        "over": {
-          "previous": 1.64,
-          "current": 1.64,
-          "percent": 0,
-          "significant": false
-        },
-        "btts": {
-          "previous": 1.69,
-          "current": 1.69,
-          "percent": 0,
-          "significant": false
-        }
-      },
-      "suggestedPick": {
-        "key": "over",
-        "label": "Plus de 2,5 buts",
-        "family": "Buts",
-        "odd": 1.64,
-        "probability": 0.6405735336749162,
-        "refundProbability": 0,
-        "value": null,
-        "real": false,
-        "basis": "model-only",
-        "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-23T13:57:54.786Z"
-      }
-    },
-    {
-      "id": "espn-401875001",
-      "date": "2026-11-22",
-      "kickoff": "2026-11-22T19:45:00.000Z",
-      "time": "20:45",
-      "league": "Serie A",
-      "home": "Atalanta",
-      "away": "Internazionale",
-      "neutralSite": false,
-      "venue": {
-        "id": "4253",
-        "name": "New Balance Arena"
-      },
-      "leagueLogo": "https://a.espncdn.com/i/leaguelogos/soccer/500/12.png",
-      "leagueLogoDark": "https://a.espncdn.com/i/leaguelogos/soccer/500-dark/12.png",
-      "homeId": "105",
-      "awayId": "110",
-      "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/105.png",
-      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/110.png",
-      "priority": 61,
-      "featured": false,
-      "status": "Terminé",
-      "completed": true,
-      "voided": false,
-      "knockout": false,
-      "regulation": null,
-      "homeScore": 4,
-      "awayScore": 4,
-      "homeGoals": 1.5999999999999999,
-      "awayGoals": 1.6,
-      "odds": {
-        "home": 2.16,
-        "draw": 3.15,
-        "away": 2.28,
-        "over": 1.7,
-        "btts": 1.65
-      },
-      "oddsMovement": {
-        "home": {
-          "previous": 2.16,
-          "current": 2.16,
-          "percent": 0,
-          "significant": false
-        },
-        "draw": {
-          "previous": 3.15,
-          "current": 3.15,
-          "percent": 0,
-          "significant": false
-        },
-        "away": {
-          "previous": 2.28,
-          "current": 2.28,
-          "percent": 0,
-          "significant": false
-        },
-        "over": {
-          "previous": 1.7,
-          "current": 1.7,
-          "percent": 0,
-          "significant": false
-        },
-        "btts": {
-          "previous": 1.65,
-          "current": 1.65,
-          "percent": 0,
-          "significant": false
-        }
-      },
-      "suggestedPick": {
-        "key": "btts",
-        "label": "Les deux marquent",
-        "family": "Équipes",
-        "odd": 1.65,
-        "probability": 0.6369691679890548,
-        "refundProbability": 0,
-        "value": null,
-        "real": false,
-        "basis": "model-only",
-        "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-23T13:57:54.787Z"
-      }
-    },
-    {
-      "id": "espn-401876400",
-      "date": "2026-11-22",
-      "kickoff": "2026-11-22T19:45:00.000Z",
-      "time": "20:45",
-      "league": "Ligue 1",
-      "home": "Marseille",
-      "away": "Le Mans",
-      "neutralSite": false,
-      "venue": {
-        "id": "3113",
-        "name": "Stade Vélodrome"
-      },
-      "leagueLogo": "https://a.espncdn.com/i/leaguelogos/soccer/500/9.png",
-      "leagueLogoDark": "https://a.espncdn.com/i/leaguelogos/soccer/500-dark/9.png",
-      "homeId": "176",
-      "awayId": "2697",
-      "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/176.png",
-      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/2697.png",
-      "priority": 60,
-      "featured": false,
-      "status": "Terminé",
-      "completed": true,
-      "voided": false,
-      "knockout": false,
-      "regulation": null,
-      "homeScore": 2,
-      "awayScore": 3,
-      "homeGoals": 1.9,
-      "awayGoals": 1.15,
-      "odds": {
-        "home": 1.82,
-        "draw": 3.56,
-        "away": 3.17,
-        "over": 1.79,
-        "btts": 1.81
-      },
-      "oddsMovement": {
-        "home": {
-          "previous": 1.82,
-          "current": 1.82,
-          "percent": 0,
-          "significant": false
-        },
-        "draw": {
-          "previous": 3.56,
-          "current": 3.56,
-          "percent": 0,
-          "significant": false
-        },
-        "away": {
-          "previous": 3.17,
-          "current": 3.17,
-          "percent": 0,
-          "significant": false
-        },
-        "over": {
-          "previous": 1.79,
-          "current": 1.79,
-          "percent": 0,
-          "significant": false
-        },
-        "btts": {
-          "previous": 1.81,
-          "current": 1.81,
-          "percent": 0,
-          "significant": false
-        }
-      },
-      "suggestedPick": {
-        "key": "over",
-        "label": "Plus de 2,5 buts",
-        "family": "Buts",
-        "odd": 1.79,
-        "probability": 0.5879181591415857,
-        "refundProbability": 0,
-        "value": null,
-        "real": false,
-        "basis": "model-only",
-        "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-23T13:57:54.787Z"
-      }
-    },
-    {
-      "id": "espn-401879234",
-      "date": "2026-11-22",
-      "kickoff": "2026-11-22T14:00:00.000Z",
-      "time": "15:00",
-      "league": "Premier League",
-      "home": "Hull City",
-      "away": "Brighton & Hove Albion",
-      "neutralSite": false,
-      "venue": {
-        "id": "3670",
-        "name": "The MKM Stadium"
-      },
-      "leagueLogo": "https://a.espncdn.com/i/leaguelogos/soccer/500/23.png",
-      "leagueLogoDark": "https://a.espncdn.com/i/leaguelogos/soccer/500-dark/23.png",
-      "homeId": "306",
-      "awayId": "331",
-      "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/306.png",
-      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/331.png",
-      "priority": 34,
-      "featured": false,
-      "status": "Terminé",
-      "completed": true,
-      "voided": false,
-      "knockout": false,
-      "regulation": null,
-      "homeScore": 2,
-      "awayScore": 0,
-      "homeGoals": 1.45,
-      "awayGoals": 1.15,
-      "odds": {
-        "home": 2.38,
-        "draw": 3.31,
-        "away": 3.17,
-        "over": 2.19,
-        "btts": 2.01
-      },
-      "oddsMovement": {
-        "home": {
-          "previous": 2.38,
-          "current": 2.38,
-          "percent": 0,
-          "significant": false
-        },
-        "draw": {
-          "previous": 3.31,
-          "current": 3.31,
-          "percent": 0,
-          "significant": false
-        },
-        "away": {
-          "previous": 3.17,
-          "current": 3.17,
-          "percent": 0,
-          "significant": false
-        },
-        "over": {
-          "previous": 2.19,
-          "current": 2.19,
-          "percent": 0,
-          "significant": false
-        },
-        "btts": {
-          "previous": 2.01,
-          "current": 2.01,
-          "percent": 0,
-          "significant": false
-        }
-      },
-      "suggestedPick": {
-        "key": "btts",
-        "label": "Les deux marquent",
-        "family": "Équipes",
-        "odd": 2.01,
-        "probability": 0.5230665207414825,
-        "refundProbability": 0,
-        "value": null,
-        "real": false,
-        "basis": "model-only",
-        "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-23T13:57:54.788Z"
-      }
-    },
-    {
-      "id": "espn-401882800",
-      "date": "2026-11-22",
-      "kickoff": "2026-11-22T15:15:00.000Z",
-      "time": "16:15",
-      "league": "La Liga",
-      "home": "Racing Santander",
-      "away": "Real Sociedad",
-      "neutralSite": false,
-      "venue": {
-        "id": "10643",
-        "name": "El Sardineros"
-      },
-      "leagueLogo": "https://a.espncdn.com/i/leaguelogos/soccer/500/15.png",
-      "leagueLogoDark": "https://a.espncdn.com/i/leaguelogos/soccer/500-dark/15.png",
-      "homeId": "87",
-      "awayId": "89",
-      "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/87.png",
-      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/89.png",
-      "priority": 33,
-      "featured": false,
-      "status": "Terminé",
-      "completed": true,
-      "voided": false,
-      "knockout": false,
-      "regulation": null,
-      "homeScore": 3,
-      "awayScore": 2,
-      "homeGoals": 1.45,
-      "awayGoals": 1.15,
-      "odds": {
-        "home": 2.38,
-        "draw": 3.31,
-        "away": 3.17,
-        "over": 2.19,
-        "btts": 2.01
-      },
-      "oddsMovement": {
-        "home": {
-          "previous": 2.38,
-          "current": 2.38,
-          "percent": 0,
-          "significant": false
-        },
-        "draw": {
-          "previous": 3.31,
-          "current": 3.31,
-          "percent": 0,
-          "significant": false
-        },
-        "away": {
-          "previous": 3.17,
-          "current": 3.17,
-          "percent": 0,
-          "significant": false
-        },
-        "over": {
-          "previous": 2.19,
-          "current": 2.19,
-          "percent": 0,
-          "significant": false
-        },
-        "btts": {
-          "previous": 2.01,
-          "current": 2.01,
-          "percent": 0,
-          "significant": false
-        }
-      },
-      "suggestedPick": {
-        "key": "btts",
-        "label": "Les deux marquent",
-        "family": "Équipes",
-        "odd": 2.01,
-        "probability": 0.5230665207414825,
-        "refundProbability": 0,
-        "value": null,
-        "real": false,
-        "basis": "model-only",
-        "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-23T13:57:54.789Z"
-      }
-    },
-    {
-      "id": "espn-401882801",
-      "date": "2026-11-22",
-      "kickoff": "2026-11-22T17:30:00.000Z",
-      "time": "18:30",
-      "league": "La Liga",
-      "home": "Osasuna",
-      "away": "Málaga",
-      "neutralSite": false,
-      "venue": {
-        "id": "10629",
-        "name": "El Sadar"
-      },
-      "leagueLogo": "https://a.espncdn.com/i/leaguelogos/soccer/500/15.png",
-      "leagueLogoDark": "https://a.espncdn.com/i/leaguelogos/soccer/500-dark/15.png",
-      "homeId": "97",
-      "awayId": "99",
-      "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/97.png",
-      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/99.png",
-      "priority": 33,
-      "featured": false,
-      "status": "Terminé",
-      "completed": true,
-      "voided": false,
-      "knockout": false,
-      "regulation": null,
-      "homeScore": 1,
-      "awayScore": 0,
-      "homeGoals": 1.45,
-      "awayGoals": 1.15,
-      "odds": {
-        "home": 2.38,
-        "draw": 3.31,
-        "away": 3.17,
-        "over": 2.19,
-        "btts": 2.01
-      },
-      "oddsMovement": {
-        "home": {
-          "previous": 2.38,
-          "current": 2.38,
-          "percent": 0,
-          "significant": false
-        },
-        "draw": {
-          "previous": 3.31,
-          "current": 3.31,
-          "percent": 0,
-          "significant": false
-        },
-        "away": {
-          "previous": 3.17,
-          "current": 3.17,
-          "percent": 0,
-          "significant": false
-        },
-        "over": {
-          "previous": 2.19,
-          "current": 2.19,
-          "percent": 0,
-          "significant": false
-        },
-        "btts": {
-          "previous": 2.01,
-          "current": 2.01,
-          "percent": 0,
-          "significant": false
-        }
-      },
-      "suggestedPick": {
-        "key": "btts",
-        "label": "Les deux marquent",
-        "family": "Équipes",
-        "odd": 2.01,
-        "probability": 0.5230665207414825,
-        "refundProbability": 0,
-        "value": null,
-        "real": false,
-        "basis": "model-only",
-        "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-23T13:57:54.789Z"
-      }
-    },
-    {
-      "id": "espn-401884733",
-      "date": "2026-11-22",
-      "kickoff": "2026-11-22T14:30:00.000Z",
-      "time": "15:30",
-      "league": "Bundesliga",
-      "home": "FC Augsburg",
-      "away": "Mainz",
-      "neutralSite": false,
-      "venue": {
-        "id": "9608",
-        "name": "WWK Arena"
-      },
-      "leagueLogo": "https://a.espncdn.com/i/leaguelogos/soccer/500/10.png",
-      "leagueLogoDark": "https://a.espncdn.com/i/leaguelogos/soccer/500-dark/10.png",
-      "homeId": "3841",
-      "awayId": "2950",
-      "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/3841.png",
-      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/2950.png",
-      "priority": 32,
-      "featured": false,
-      "status": "Terminé",
-      "completed": true,
-      "voided": false,
-      "knockout": false,
-      "regulation": null,
-      "homeScore": 3,
-      "awayScore": 1,
-      "homeGoals": 1.45,
-      "awayGoals": 1.15,
-      "odds": {
-        "home": 2.38,
-        "draw": 3.31,
-        "away": 3.17,
-        "over": 2.19,
-        "btts": 2.01
-      },
-      "oddsMovement": {
-        "home": {
-          "previous": 2.38,
-          "current": 2.38,
-          "percent": 0,
-          "significant": false
-        },
-        "draw": {
-          "previous": 3.31,
-          "current": 3.31,
-          "percent": 0,
-          "significant": false
-        },
-        "away": {
-          "previous": 3.17,
-          "current": 3.17,
-          "percent": 0,
-          "significant": false
-        },
-        "over": {
-          "previous": 2.19,
-          "current": 2.19,
-          "percent": 0,
-          "significant": false
-        },
-        "btts": {
-          "previous": 2.01,
-          "current": 2.01,
-          "percent": 0,
-          "significant": false
-        }
-      },
-      "suggestedPick": {
-        "key": "btts",
-        "label": "Les deux marquent",
-        "family": "Équipes",
-        "odd": 2.01,
-        "probability": 0.5230665207414825,
-        "refundProbability": 0,
-        "value": null,
-        "real": false,
-        "basis": "model-only",
-        "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-23T13:57:54.790Z"
-      }
-    },
-    {
-      "id": "espn-401884730",
-      "date": "2026-11-22",
-      "kickoff": "2026-11-22T16:30:00.000Z",
-      "time": "17:30",
-      "league": "Bundesliga",
-      "home": "Werder Bremen",
-      "away": "Hamburg SV",
-      "neutralSite": false,
-      "venue": {
-        "id": "10021",
-        "name": "Weserstadion"
-      },
-      "leagueLogo": "https://a.espncdn.com/i/leaguelogos/soccer/500/10.png",
-      "leagueLogoDark": "https://a.espncdn.com/i/leaguelogos/soccer/500-dark/10.png",
-      "homeId": "137",
-      "awayId": "127",
-      "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/137.png",
-      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/127.png",
-      "priority": 32,
-      "featured": false,
-      "status": "Terminé",
-      "completed": true,
-      "voided": false,
-      "knockout": false,
-      "regulation": null,
-      "homeScore": 4,
-      "awayScore": 0,
-      "homeGoals": 1.45,
-      "awayGoals": 1.15,
-      "odds": {
-        "home": 2.38,
-        "draw": 3.31,
-        "away": 3.17,
-        "over": 2.19,
-        "btts": 2.01
-      },
-      "oddsMovement": {
-        "home": {
-          "previous": 2.38,
-          "current": 2.38,
-          "percent": 0,
-          "significant": false
-        },
-        "draw": {
-          "previous": 3.31,
-          "current": 3.31,
-          "percent": 0,
-          "significant": false
-        },
-        "away": {
-          "previous": 3.17,
-          "current": 3.17,
-          "percent": 0,
-          "significant": false
-        },
-        "over": {
-          "previous": 2.19,
-          "current": 2.19,
-          "percent": 0,
-          "significant": false
-        },
-        "btts": {
-          "previous": 2.01,
-          "current": 2.01,
-          "percent": 0,
-          "significant": false
-        }
-      },
-      "suggestedPick": {
-        "key": "btts",
-        "label": "Les deux marquent",
-        "family": "Équipes",
-        "odd": 2.01,
-        "probability": 0.5230665207414825,
-        "refundProbability": 0,
-        "value": null,
-        "real": false,
-        "basis": "model-only",
-        "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-23T13:57:54.791Z"
-      }
-    },
-    {
-      "id": "espn-401875047",
-      "date": "2026-11-22",
-      "kickoff": "2026-11-22T14:00:00.000Z",
-      "time": "15:00",
-      "league": "Serie A",
-      "home": "Bologna",
-      "away": "Udinese",
-      "neutralSite": false,
-      "venue": {
-        "id": "10719",
-        "name": "Renato Dall'Ara"
-      },
-      "leagueLogo": "https://a.espncdn.com/i/leaguelogos/soccer/500/12.png",
-      "leagueLogoDark": "https://a.espncdn.com/i/leaguelogos/soccer/500-dark/12.png",
-      "homeId": "107",
-      "awayId": "118",
-      "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/107.png",
-      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/118.png",
-      "priority": 31,
-      "featured": false,
-      "status": "Terminé",
-      "completed": true,
-      "voided": false,
-      "knockout": false,
-      "regulation": null,
-      "homeScore": 1,
-      "awayScore": 1,
-      "homeGoals": 1.45,
-      "awayGoals": 1.15,
-      "odds": {
-        "home": 2.38,
-        "draw": 3.31,
-        "away": 3.17,
-        "over": 2.19,
-        "btts": 2.01
-      },
-      "oddsMovement": {
-        "home": {
-          "previous": 2.38,
-          "current": 2.38,
-          "percent": 0,
-          "significant": false
-        },
-        "draw": {
-          "previous": 3.31,
-          "current": 3.31,
-          "percent": 0,
-          "significant": false
-        },
-        "away": {
-          "previous": 3.17,
-          "current": 3.17,
-          "percent": 0,
-          "significant": false
-        },
-        "over": {
-          "previous": 2.19,
-          "current": 2.19,
-          "percent": 0,
-          "significant": false
-        },
-        "btts": {
-          "previous": 2.01,
-          "current": 2.01,
-          "percent": 0,
-          "significant": false
-        }
-      },
-      "suggestedPick": {
-        "key": "btts",
-        "label": "Les deux marquent",
-        "family": "Équipes",
-        "odd": 2.01,
-        "probability": 0.5230665207414825,
-        "refundProbability": 0,
-        "value": null,
-        "real": false,
-        "basis": "model-only",
-        "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-23T13:57:54.791Z"
-      }
-    },
-    {
-      "id": "espn-401874960",
-      "date": "2026-11-22",
-      "kickoff": "2026-11-22T14:00:00.000Z",
-      "time": "15:00",
-      "league": "Serie A",
-      "home": "Sassuolo",
-      "away": "Genoa",
-      "neutralSite": false,
-      "venue": {
-        "id": "5275",
-        "name": "Mapei Stadium"
-      },
-      "leagueLogo": "https://a.espncdn.com/i/leaguelogos/soccer/500/12.png",
-      "leagueLogoDark": "https://a.espncdn.com/i/leaguelogos/soccer/500-dark/12.png",
-      "homeId": "3997",
-      "awayId": "3263",
-      "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/3997.png",
-      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/3263.png",
-      "priority": 31,
-      "featured": false,
-      "status": "Terminé",
-      "completed": true,
-      "voided": false,
-      "knockout": false,
-      "regulation": null,
-      "homeScore": 0,
-      "awayScore": 2,
-      "homeGoals": 1.45,
-      "awayGoals": 1.15,
-      "odds": {
-        "home": 2.38,
-        "draw": 3.31,
-        "away": 3.17,
-        "over": 2.19,
-        "btts": 2.01
-      },
-      "oddsMovement": {
-        "home": {
-          "previous": 2.38,
-          "current": 2.38,
-          "percent": 0,
-          "significant": false
-        },
-        "draw": {
-          "previous": 3.31,
-          "current": 3.31,
-          "percent": 0,
-          "significant": false
-        },
-        "away": {
-          "previous": 3.17,
-          "current": 3.17,
-          "percent": 0,
-          "significant": false
-        },
-        "over": {
-          "previous": 2.19,
-          "current": 2.19,
-          "percent": 0,
-          "significant": false
-        },
-        "btts": {
-          "previous": 2.01,
-          "current": 2.01,
-          "percent": 0,
-          "significant": false
-        }
-      },
-      "suggestedPick": {
-        "key": "btts",
-        "label": "Les deux marquent",
-        "family": "Équipes",
-        "odd": 2.01,
-        "probability": 0.5230665207414825,
-        "refundProbability": 0,
-        "value": null,
-        "real": false,
-        "basis": "model-only",
-        "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-23T13:57:54.792Z"
-      }
-    },
-    {
-      "id": "espn-401876397",
-      "date": "2026-11-22",
-      "kickoff": "2026-11-22T14:00:00.000Z",
-      "time": "15:00",
-      "league": "Ligue 1",
-      "home": "Paris FC",
-      "away": "Angers",
-      "neutralSite": false,
-      "venue": {
-        "id": "6856",
-        "name": "Stade Jean Bouin"
-      },
-      "leagueLogo": "https://a.espncdn.com/i/leaguelogos/soccer/500/9.png",
-      "leagueLogoDark": "https://a.espncdn.com/i/leaguelogos/soccer/500-dark/9.png",
-      "homeId": "6851",
-      "awayId": "7868",
-      "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/6851.png",
-      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/7868.png",
-      "priority": 30,
-      "featured": false,
-      "status": "Terminé",
-      "completed": true,
-      "voided": false,
-      "knockout": false,
-      "regulation": null,
-      "homeScore": 4,
-      "awayScore": 0,
-      "homeGoals": 1.45,
-      "awayGoals": 1.15,
-      "odds": {
-        "home": 2.38,
-        "draw": 3.31,
-        "away": 3.17,
-        "over": 2.19,
-        "btts": 2.01
-      },
-      "oddsMovement": {
-        "home": {
-          "previous": 2.38,
-          "current": 2.38,
-          "percent": 0,
-          "significant": false
-        },
-        "draw": {
-          "previous": 3.31,
-          "current": 3.31,
-          "percent": 0,
-          "significant": false
-        },
-        "away": {
-          "previous": 3.17,
-          "current": 3.17,
-          "percent": 0,
-          "significant": false
-        },
-        "over": {
-          "previous": 2.19,
-          "current": 2.19,
-          "percent": 0,
-          "significant": false
-        },
-        "btts": {
-          "previous": 2.01,
-          "current": 2.01,
-          "percent": 0,
-          "significant": false
-        }
-      },
-      "suggestedPick": {
-        "key": "btts",
-        "label": "Les deux marquent",
-        "family": "Équipes",
-        "odd": 2.01,
-        "probability": 0.5230665207414825,
-        "refundProbability": 0,
-        "value": null,
-        "real": false,
-        "basis": "model-only",
-        "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-23T13:57:54.793Z"
-      }
-    },
-    {
-      "id": "espn-401876401",
-      "date": "2026-11-22",
-      "kickoff": "2026-11-22T16:15:00.000Z",
-      "time": "17:15",
-      "league": "Ligue 1",
-      "home": "Lorient",
-      "away": "Stade Rennais",
-      "neutralSite": false,
-      "venue": {
-        "id": "2332",
-        "name": "Stade du Moustoir - Yves Allainmat"
-      },
-      "leagueLogo": "https://a.espncdn.com/i/leaguelogos/soccer/500/9.png",
-      "leagueLogoDark": "https://a.espncdn.com/i/leaguelogos/soccer/500-dark/9.png",
-      "homeId": "273",
-      "awayId": "169",
-      "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/273.png",
-      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/169.png",
-      "priority": 30,
-      "featured": false,
-      "status": "Terminé",
-      "completed": true,
-      "voided": false,
-      "knockout": false,
-      "regulation": null,
-      "homeScore": 1,
-      "awayScore": 1,
-      "homeGoals": 1.45,
-      "awayGoals": 1.15,
-      "odds": {
-        "home": 2.38,
-        "draw": 3.31,
-        "away": 3.17,
-        "over": 2.19,
-        "btts": 2.01
-      },
-      "oddsMovement": {
-        "home": {
-          "previous": 2.38,
-          "current": 2.38,
-          "percent": 0,
-          "significant": false
-        },
-        "draw": {
-          "previous": 3.31,
-          "current": 3.31,
-          "percent": 0,
-          "significant": false
-        },
-        "away": {
-          "previous": 3.17,
-          "current": 3.17,
-          "percent": 0,
-          "significant": false
-        },
-        "over": {
-          "previous": 2.19,
-          "current": 2.19,
-          "percent": 0,
-          "significant": false
-        },
-        "btts": {
-          "previous": 2.01,
-          "current": 2.01,
-          "percent": 0,
-          "significant": false
-        }
-      },
-      "suggestedPick": {
-        "key": "btts",
-        "label": "Les deux marquent",
-        "family": "Équipes",
-        "odd": 2.01,
-        "probability": 0.5230665207414825,
-        "refundProbability": 0,
-        "value": null,
-        "real": false,
-        "basis": "model-only",
-        "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-23T13:57:54.793Z"
-      }
-    },
     {
       "id": "espn-401879237",
       "date": "2026-11-23",
@@ -2207,7 +803,7 @@
       "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/368.png",
       "priority": 34,
       "featured": false,
-      "status": "Terminé",
+      "status": "Full Time",
       "completed": true,
       "voided": false,
       "knockout": false,
@@ -2290,7 +886,7 @@
       "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/3751.png",
       "priority": 33,
       "featured": false,
-      "status": "Terminé",
+      "status": "Full Time",
       "completed": true,
       "voided": false,
       "knockout": false,
@@ -2373,7 +969,7 @@
       "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/109.png",
       "priority": 31,
       "featured": false,
-      "status": "Terminé",
+      "status": "Full Time",
       "completed": true,
       "voided": false,
       "knockout": false,
@@ -2456,7 +1052,7 @@
       "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/6994.png",
       "priority": 18,
       "featured": false,
-      "status": "Terminé",
+      "status": "Full Time",
       "completed": true,
       "voided": false,
       "knockout": false,
@@ -2539,7 +1135,7 @@
       "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/7732.png",
       "priority": 18,
       "featured": false,
-      "status": "Terminé",
+      "status": "Full Time",
       "completed": true,
       "voided": false,
       "knockout": false,
@@ -2622,7 +1218,7 @@
       "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/124.png",
       "priority": 102,
       "featured": true,
-      "status": "Terminé",
+      "status": "Full Time",
       "completed": true,
       "voided": false,
       "knockout": false,
@@ -2705,7 +1301,7 @@
       "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/114.png",
       "priority": 102,
       "featured": true,
-      "status": "Terminé",
+      "status": "Full Time",
       "completed": true,
       "voided": false,
       "knockout": false,
@@ -2788,7 +1384,7 @@
       "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/148.png",
       "priority": 72,
       "featured": false,
-      "status": "Terminé",
+      "status": "Full Time",
       "completed": true,
       "voided": false,
       "knockout": false,
@@ -2871,7 +1467,7 @@
       "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/4411.png",
       "priority": 42,
       "featured": false,
-      "status": "Terminé",
+      "status": "Full Time",
       "completed": true,
       "voided": false,
       "knockout": false,
@@ -2954,7 +1550,7 @@
       "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/362.png",
       "priority": 42,
       "featured": false,
-      "status": "Terminé",
+      "status": "Full Time",
       "completed": true,
       "voided": false,
       "knockout": false,
@@ -3037,7 +1633,7 @@
       "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/887.png",
       "priority": 42,
       "featured": false,
-      "status": "Terminé",
+      "status": "Full Time",
       "completed": true,
       "voided": false,
       "knockout": false,
@@ -3120,7 +1716,7 @@
       "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/437.png",
       "priority": 42,
       "featured": false,
-      "status": "Terminé",
+      "status": "Full Time",
       "completed": true,
       "voided": false,
       "knockout": false,
@@ -3203,7 +1799,7 @@
       "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/175.png",
       "priority": 42,
       "featured": false,
-      "status": "Terminé",
+      "status": "Full Time",
       "completed": true,
       "voided": false,
       "knockout": false,
@@ -3286,7 +1882,7 @@
       "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/244.png",
       "priority": 42,
       "featured": false,
-      "status": "Terminé",
+      "status": "Full Time",
       "completed": true,
       "voided": false,
       "knockout": false,
@@ -3369,7 +1965,7 @@
       "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/83.png",
       "priority": 72,
       "featured": false,
-      "status": "Terminé",
+      "status": "Full Time",
       "completed": true,
       "voided": false,
       "knockout": false,
@@ -3452,7 +2048,7 @@
       "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/510.png",
       "priority": 72,
       "featured": false,
-      "status": "Terminé",
+      "status": "Full Time",
       "completed": true,
       "voided": false,
       "knockout": false,
@@ -3535,7 +2131,7 @@
       "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/364.png",
       "priority": 72,
       "featured": false,
-      "status": "Terminé",
+      "status": "Full Time",
       "completed": true,
       "voided": false,
       "knockout": false,
@@ -3618,7 +2214,7 @@
       "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/134.png",
       "priority": 72,
       "featured": false,
-      "status": "Terminé",
+      "status": "Full Time",
       "completed": true,
       "voided": false,
       "knockout": false,
@@ -3701,7 +2297,7 @@
       "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/132.png",
       "priority": 72,
       "featured": false,
-      "status": "Terminé",
+      "status": "Full Time",
       "completed": true,
       "voided": false,
       "knockout": false,
@@ -3784,7 +2380,7 @@
       "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/104.png",
       "priority": 72,
       "featured": false,
-      "status": "Terminé",
+      "status": "Full Time",
       "completed": true,
       "voided": false,
       "knockout": false,
@@ -3867,7 +2463,7 @@
       "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/360.png",
       "priority": 72,
       "featured": false,
-      "status": "Terminé",
+      "status": "Full Time",
       "completed": true,
       "voided": false,
       "knockout": false,
@@ -3950,7 +2546,7 @@
       "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/102.png",
       "priority": 42,
       "featured": false,
-      "status": "Terminé",
+      "status": "Full Time",
       "completed": true,
       "voided": false,
       "knockout": false,
@@ -4033,7 +2629,7 @@
       "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/436.png",
       "priority": 42,
       "featured": false,
-      "status": "Terminé",
+      "status": "Full Time",
       "completed": true,
       "voided": false,
       "knockout": false,
@@ -4175,7 +2771,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.685Z"
+        "capturedAt": "2026-11-26T13:29:24.283Z"
       }
     },
     {
@@ -4258,7 +2854,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.687Z"
+        "capturedAt": "2026-11-26T13:29:24.293Z"
       }
     },
     {
@@ -4341,7 +2937,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.690Z"
+        "capturedAt": "2026-11-26T13:29:24.299Z"
       }
     },
     {
@@ -4424,7 +3020,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.692Z"
+        "capturedAt": "2026-11-26T13:29:24.301Z"
       }
     },
     {
@@ -4507,7 +3103,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.694Z"
+        "capturedAt": "2026-11-26T13:29:24.304Z"
       }
     },
     {
@@ -4590,7 +3186,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.695Z"
+        "capturedAt": "2026-11-26T13:29:24.306Z"
       }
     },
     {
@@ -4673,7 +3269,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.696Z"
+        "capturedAt": "2026-11-26T13:29:24.308Z"
       }
     },
     {
@@ -4756,7 +3352,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.696Z"
+        "capturedAt": "2026-11-26T13:29:24.310Z"
       }
     },
     {
@@ -4839,7 +3435,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.697Z"
+        "capturedAt": "2026-11-26T13:29:24.312Z"
       }
     },
     {
@@ -4922,7 +3518,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.698Z"
+        "capturedAt": "2026-11-26T13:29:24.314Z"
       }
     },
     {
@@ -5005,7 +3601,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.699Z"
+        "capturedAt": "2026-11-26T13:29:24.317Z"
       }
     },
     {
@@ -5088,7 +3684,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.700Z"
+        "capturedAt": "2026-11-26T13:29:24.319Z"
       }
     },
     {
@@ -5171,7 +3767,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.701Z"
+        "capturedAt": "2026-11-26T13:29:24.320Z"
       }
     },
     {
@@ -5254,7 +3850,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.702Z"
+        "capturedAt": "2026-11-26T13:29:24.321Z"
       }
     },
     {
@@ -5337,7 +3933,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.703Z"
+        "capturedAt": "2026-11-26T13:29:24.322Z"
       }
     },
     {
@@ -5420,7 +4016,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.704Z"
+        "capturedAt": "2026-11-26T13:29:24.323Z"
       }
     },
     {
@@ -5503,7 +4099,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.704Z"
+        "capturedAt": "2026-11-26T13:29:24.324Z"
       }
     },
     {
@@ -5586,7 +4182,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.705Z"
+        "capturedAt": "2026-11-26T13:29:24.325Z"
       }
     },
     {
@@ -5669,7 +4265,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.706Z"
+        "capturedAt": "2026-11-26T13:29:24.326Z"
       }
     },
     {
@@ -5752,7 +4348,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.707Z"
+        "capturedAt": "2026-11-26T13:29:24.327Z"
       }
     },
     {
@@ -5835,7 +4431,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.708Z"
+        "capturedAt": "2026-11-26T13:29:24.328Z"
       }
     },
     {
@@ -5918,7 +4514,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.709Z"
+        "capturedAt": "2026-11-26T13:29:24.329Z"
       }
     },
     {
@@ -6001,7 +4597,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.710Z"
+        "capturedAt": "2026-11-26T13:29:24.330Z"
       }
     },
     {
@@ -6084,7 +4680,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.711Z"
+        "capturedAt": "2026-11-26T13:29:24.331Z"
       }
     },
     {
@@ -6167,7 +4763,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.712Z"
+        "capturedAt": "2026-11-26T13:29:24.332Z"
       }
     },
     {
@@ -6250,7 +4846,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.713Z"
+        "capturedAt": "2026-11-26T13:29:24.333Z"
       }
     },
     {
@@ -6333,7 +4929,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.713Z"
+        "capturedAt": "2026-11-26T13:29:24.334Z"
       }
     },
     {
@@ -6416,7 +5012,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.714Z"
+        "capturedAt": "2026-11-26T13:29:24.335Z"
       }
     },
     {
@@ -6499,7 +5095,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.715Z"
+        "capturedAt": "2026-11-26T13:29:24.336Z"
       }
     },
     {
@@ -6582,7 +5178,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.716Z"
+        "capturedAt": "2026-11-26T13:29:24.337Z"
       }
     },
     {
@@ -6665,7 +5261,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.717Z"
+        "capturedAt": "2026-11-26T13:29:24.338Z"
       }
     },
     {
@@ -6748,7 +5344,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.718Z"
+        "capturedAt": "2026-11-26T13:29:24.339Z"
       }
     },
     {
@@ -6831,7 +5427,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.719Z"
+        "capturedAt": "2026-11-26T13:29:24.340Z"
       }
     },
     {
@@ -6914,7 +5510,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.719Z"
+        "capturedAt": "2026-11-26T13:29:24.341Z"
       }
     },
     {
@@ -6997,7 +5593,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.720Z"
+        "capturedAt": "2026-11-26T13:29:24.342Z"
       }
     },
     {
@@ -7080,7 +5676,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.721Z"
+        "capturedAt": "2026-11-26T13:29:24.343Z"
       }
     },
     {
@@ -7163,7 +5759,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.722Z"
+        "capturedAt": "2026-11-26T13:29:24.344Z"
       }
     },
     {
@@ -7246,7 +5842,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.723Z"
+        "capturedAt": "2026-11-26T13:29:24.345Z"
       }
     },
     {
@@ -7329,7 +5925,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.724Z"
+        "capturedAt": "2026-11-26T13:29:24.346Z"
       }
     },
     {
@@ -7412,7 +6008,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.725Z"
+        "capturedAt": "2026-11-26T13:29:24.347Z"
       }
     },
     {
@@ -7495,7 +6091,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.725Z"
+        "capturedAt": "2026-11-26T13:29:24.348Z"
       }
     },
     {
@@ -7578,7 +6174,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.726Z"
+        "capturedAt": "2026-11-26T13:29:24.349Z"
       }
     },
     {
@@ -7661,7 +6257,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.727Z"
+        "capturedAt": "2026-11-26T13:29:24.350Z"
       }
     },
     {
@@ -7744,7 +6340,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.728Z"
+        "capturedAt": "2026-11-26T13:29:24.351Z"
       }
     },
     {
@@ -7827,7 +6423,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.729Z"
+        "capturedAt": "2026-11-26T13:29:24.352Z"
       }
     },
     {
@@ -7910,7 +6506,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.730Z"
+        "capturedAt": "2026-11-26T13:29:24.353Z"
       }
     },
     {
@@ -7993,7 +6589,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.731Z"
+        "capturedAt": "2026-11-26T13:29:24.354Z"
       }
     },
     {
@@ -8076,7 +6672,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.731Z"
+        "capturedAt": "2026-11-26T13:29:24.355Z"
       }
     },
     {
@@ -8159,7 +6755,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.732Z"
+        "capturedAt": "2026-11-26T13:29:24.356Z"
       }
     },
     {
@@ -8242,7 +6838,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.733Z"
+        "capturedAt": "2026-11-26T13:29:24.357Z"
       }
     },
     {
@@ -8325,7 +6921,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.734Z"
+        "capturedAt": "2026-11-26T13:29:24.358Z"
       }
     },
     {
@@ -8408,7 +7004,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.735Z"
+        "capturedAt": "2026-11-26T13:29:24.359Z"
       }
     },
     {
@@ -8491,7 +7087,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.736Z"
+        "capturedAt": "2026-11-26T13:29:24.360Z"
       }
     },
     {
@@ -8574,7 +7170,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.737Z"
+        "capturedAt": "2026-11-26T13:29:24.361Z"
       }
     },
     {
@@ -8657,7 +7253,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.738Z"
+        "capturedAt": "2026-11-26T13:29:24.362Z"
       }
     },
     {
@@ -8740,7 +7336,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.738Z"
+        "capturedAt": "2026-11-26T13:29:24.363Z"
       }
     },
     {
@@ -8823,7 +7419,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.739Z"
+        "capturedAt": "2026-11-26T13:29:24.364Z"
       }
     },
     {
@@ -8906,7 +7502,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.740Z"
+        "capturedAt": "2026-11-26T13:29:24.365Z"
       }
     },
     {
@@ -8989,7 +7585,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.741Z"
+        "capturedAt": "2026-11-26T13:29:24.366Z"
       }
     },
     {
@@ -9072,7 +7668,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.742Z"
+        "capturedAt": "2026-11-26T13:29:24.367Z"
       }
     },
     {
@@ -9155,7 +7751,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.743Z"
+        "capturedAt": "2026-11-26T13:29:24.368Z"
       }
     },
     {
@@ -9238,7 +7834,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.744Z"
+        "capturedAt": "2026-11-26T13:29:24.369Z"
       }
     },
     {
@@ -9321,7 +7917,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.745Z"
+        "capturedAt": "2026-11-26T13:29:24.370Z"
       }
     },
     {
@@ -9404,7 +8000,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.746Z"
+        "capturedAt": "2026-11-26T13:29:24.371Z"
       }
     },
     {
@@ -9487,7 +8083,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.747Z"
+        "capturedAt": "2026-11-26T13:29:24.372Z"
       }
     },
     {
@@ -9570,7 +8166,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.748Z"
+        "capturedAt": "2026-11-26T13:29:24.373Z"
       }
     },
     {
@@ -9653,7 +8249,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.749Z"
+        "capturedAt": "2026-11-26T13:29:24.374Z"
       }
     },
     {
@@ -9736,7 +8332,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.749Z"
+        "capturedAt": "2026-11-26T13:29:24.375Z"
       }
     },
     {
@@ -9819,7 +8415,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.750Z"
+        "capturedAt": "2026-11-26T13:29:24.376Z"
       }
     },
     {
@@ -9902,7 +8498,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.751Z"
+        "capturedAt": "2026-11-26T13:29:24.377Z"
       }
     },
     {
@@ -9985,7 +8581,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.752Z"
+        "capturedAt": "2026-11-26T13:29:24.378Z"
       }
     },
     {
@@ -10068,7 +8664,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.753Z"
+        "capturedAt": "2026-11-26T13:29:24.379Z"
       }
     },
     {
@@ -10151,7 +8747,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.754Z"
+        "capturedAt": "2026-11-26T13:29:24.380Z"
       }
     },
     {
@@ -10234,7 +8830,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.755Z"
+        "capturedAt": "2026-11-26T13:29:24.381Z"
       }
     },
     {
@@ -10317,7 +8913,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.756Z"
+        "capturedAt": "2026-11-26T13:29:24.381Z"
       }
     },
     {
@@ -10400,7 +8996,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.756Z"
+        "capturedAt": "2026-11-26T13:29:24.383Z"
       }
     },
     {
@@ -10483,7 +9079,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.757Z"
+        "capturedAt": "2026-11-26T13:29:24.383Z"
       }
     },
     {
@@ -10566,7 +9162,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.758Z"
+        "capturedAt": "2026-11-26T13:29:24.384Z"
       }
     },
     {
@@ -10649,7 +9245,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.759Z"
+        "capturedAt": "2026-11-26T13:29:24.385Z"
       }
     },
     {
@@ -10732,7 +9328,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.760Z"
+        "capturedAt": "2026-11-26T13:29:24.386Z"
       }
     },
     {
@@ -10815,7 +9411,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.761Z"
+        "capturedAt": "2026-11-26T13:29:24.387Z"
       }
     },
     {
@@ -10898,7 +9494,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.762Z"
+        "capturedAt": "2026-11-26T13:29:24.388Z"
       }
     },
     {
@@ -10981,7 +9577,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.763Z"
+        "capturedAt": "2026-11-26T13:29:24.389Z"
       }
     },
     {
@@ -11064,7 +9660,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.764Z"
+        "capturedAt": "2026-11-26T13:29:24.390Z"
       }
     },
     {
@@ -11147,7 +9743,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.764Z"
+        "capturedAt": "2026-11-26T13:29:24.391Z"
       }
     },
     {
@@ -11230,7 +9826,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.765Z"
+        "capturedAt": "2026-11-26T13:29:24.392Z"
       }
     },
     {
@@ -11313,7 +9909,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.766Z"
+        "capturedAt": "2026-11-26T13:29:24.393Z"
       }
     },
     {
@@ -11396,7 +9992,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.767Z"
+        "capturedAt": "2026-11-26T13:29:24.394Z"
       }
     },
     {
@@ -11479,7 +10075,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.768Z"
+        "capturedAt": "2026-11-26T13:29:24.395Z"
       }
     },
     {
@@ -11562,7 +10158,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.769Z"
+        "capturedAt": "2026-11-26T13:29:24.396Z"
       }
     },
     {
@@ -11645,7 +10241,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.770Z"
+        "capturedAt": "2026-11-26T13:29:24.397Z"
       }
     },
     {
@@ -11728,7 +10324,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.771Z"
+        "capturedAt": "2026-11-26T13:29:24.398Z"
       }
     },
     {
@@ -11811,7 +10407,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.771Z"
+        "capturedAt": "2026-11-26T13:29:24.399Z"
       }
     },
     {
@@ -11894,7 +10490,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.772Z"
+        "capturedAt": "2026-11-26T13:29:24.400Z"
       }
     },
     {
@@ -11977,7 +10573,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.773Z"
+        "capturedAt": "2026-11-26T13:29:24.401Z"
       }
     },
     {
@@ -12060,7 +10656,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.774Z"
+        "capturedAt": "2026-11-26T13:29:24.402Z"
       }
     },
     {
@@ -12143,7 +10739,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.775Z"
+        "capturedAt": "2026-11-26T13:29:24.403Z"
       }
     },
     {
@@ -12226,7 +10822,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.776Z"
+        "capturedAt": "2026-11-26T13:29:24.404Z"
       }
     },
     {
@@ -12309,7 +10905,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.777Z"
+        "capturedAt": "2026-11-26T13:29:24.405Z"
       }
     },
     {
@@ -12392,7 +10988,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.778Z"
+        "capturedAt": "2026-11-26T13:29:24.406Z"
       }
     },
     {
@@ -12475,7 +11071,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.778Z"
+        "capturedAt": "2026-11-26T13:29:24.407Z"
       }
     },
     {
@@ -12558,7 +11154,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.779Z"
+        "capturedAt": "2026-11-26T13:29:24.408Z"
       }
     },
     {
@@ -12641,7 +11237,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.780Z"
+        "capturedAt": "2026-11-26T13:29:24.409Z"
       }
     },
     {
@@ -12724,7 +11320,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.781Z"
+        "capturedAt": "2026-11-26T13:29:24.410Z"
       }
     },
     {
@@ -12807,7 +11403,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.782Z"
+        "capturedAt": "2026-11-26T13:29:24.411Z"
       }
     },
     {
@@ -12890,7 +11486,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.783Z"
+        "capturedAt": "2026-11-26T13:29:24.412Z"
       }
     },
     {
@@ -12973,7 +11569,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.784Z"
+        "capturedAt": "2026-11-26T13:29:24.413Z"
       }
     },
     {
@@ -13056,7 +11652,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.784Z"
+        "capturedAt": "2026-11-26T13:29:24.414Z"
       }
     },
     {
@@ -13139,7 +11735,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.785Z"
+        "capturedAt": "2026-11-26T13:29:24.415Z"
       }
     },
     {
@@ -13222,7 +11818,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.786Z"
+        "capturedAt": "2026-11-26T13:29:24.416Z"
       }
     },
     {
@@ -13305,7 +11901,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.787Z"
+        "capturedAt": "2026-11-26T13:29:24.417Z"
       }
     },
     {
@@ -13388,7 +11984,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.788Z"
+        "capturedAt": "2026-11-26T13:29:24.418Z"
       }
     },
     {
@@ -13471,7 +12067,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.789Z"
+        "capturedAt": "2026-11-26T13:29:24.419Z"
       }
     },
     {
@@ -13554,7 +12150,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.790Z"
+        "capturedAt": "2026-11-26T13:29:24.420Z"
       }
     },
     {
@@ -13637,7 +12233,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.791Z"
+        "capturedAt": "2026-11-26T13:29:24.421Z"
       }
     },
     {
@@ -13720,7 +12316,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.792Z"
+        "capturedAt": "2026-11-26T13:29:24.422Z"
       }
     },
     {
@@ -13803,7 +12399,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.793Z"
+        "capturedAt": "2026-11-26T13:29:24.423Z"
       }
     },
     {
@@ -13886,7 +12482,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.793Z"
+        "capturedAt": "2026-11-26T13:29:24.424Z"
       }
     },
     {
@@ -13969,7 +12565,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.794Z"
+        "capturedAt": "2026-11-26T13:29:24.425Z"
       }
     },
     {
@@ -14052,7 +12648,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.795Z"
+        "capturedAt": "2026-11-26T13:29:24.426Z"
       }
     },
     {
@@ -14135,7 +12731,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.796Z"
+        "capturedAt": "2026-11-26T13:29:24.427Z"
       }
     },
     {
@@ -14218,7 +12814,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.797Z"
+        "capturedAt": "2026-11-26T13:29:24.428Z"
       }
     },
     {
@@ -14301,7 +12897,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.798Z"
+        "capturedAt": "2026-11-26T13:29:24.429Z"
       }
     },
     {
@@ -14384,7 +12980,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.799Z"
+        "capturedAt": "2026-11-26T13:29:24.429Z"
       }
     },
     {
@@ -14467,7 +13063,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.800Z"
+        "capturedAt": "2026-11-26T13:29:24.431Z"
       }
     },
     {
@@ -14550,7 +13146,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.800Z"
+        "capturedAt": "2026-11-26T13:29:24.431Z"
       }
     },
     {
@@ -14633,7 +13229,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.801Z"
+        "capturedAt": "2026-11-26T13:29:24.432Z"
       }
     },
     {
@@ -14716,7 +13312,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.802Z"
+        "capturedAt": "2026-11-26T13:29:24.434Z"
       }
     },
     {
@@ -14799,7 +13395,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.803Z"
+        "capturedAt": "2026-11-26T13:29:24.434Z"
       }
     },
     {
@@ -14882,7 +13478,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.804Z"
+        "capturedAt": "2026-11-26T13:29:24.436Z"
       }
     },
     {
@@ -14922,6 +13518,38 @@
         "over": 1.79,
         "btts": 1.81
       },
+      "oddsMovement": {
+        "home": {
+          "previous": 1.82,
+          "current": 1.82,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.56,
+          "current": 3.56,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 3.17,
+          "current": 3.17,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 1.79,
+          "current": 1.79,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 1.81,
+          "current": 1.81,
+          "percent": 0,
+          "significant": false
+        }
+      },
       "suggestedPick": {
         "key": "over",
         "label": "Plus de 2,5 buts",
@@ -14933,7 +13561,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.805Z"
+        "capturedAt": "2026-11-26T13:29:24.436Z"
       }
     },
     {
@@ -14973,6 +13601,38 @@
         "over": 1.79,
         "btts": 1.81
       },
+      "oddsMovement": {
+        "home": {
+          "previous": 1.82,
+          "current": 1.82,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.56,
+          "current": 3.56,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 3.17,
+          "current": 3.17,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 1.79,
+          "current": 1.79,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 1.81,
+          "current": 1.81,
+          "percent": 0,
+          "significant": false
+        }
+      },
       "suggestedPick": {
         "key": "over",
         "label": "Plus de 2,5 buts",
@@ -14984,7 +13644,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.811Z"
+        "capturedAt": "2026-11-26T13:29:24.437Z"
       }
     },
     {
@@ -15024,6 +13684,38 @@
         "over": 2.19,
         "btts": 2.01
       },
+      "oddsMovement": {
+        "home": {
+          "previous": 2.38,
+          "current": 2.38,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.31,
+          "current": 3.31,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 3.17,
+          "current": 3.17,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
+      },
       "suggestedPick": {
         "key": "btts",
         "label": "Les deux marquent",
@@ -15035,7 +13727,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.812Z"
+        "capturedAt": "2026-11-26T13:29:24.438Z"
       }
     },
     {
@@ -15075,6 +13767,38 @@
         "over": 2.19,
         "btts": 2.01
       },
+      "oddsMovement": {
+        "home": {
+          "previous": 2.38,
+          "current": 2.38,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.31,
+          "current": 3.31,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 3.17,
+          "current": 3.17,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
+      },
       "suggestedPick": {
         "key": "btts",
         "label": "Les deux marquent",
@@ -15086,7 +13810,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.813Z"
+        "capturedAt": "2026-11-26T13:29:24.440Z"
       }
     },
     {
@@ -15126,6 +13850,38 @@
         "over": 2.19,
         "btts": 2.01
       },
+      "oddsMovement": {
+        "home": {
+          "previous": 2.38,
+          "current": 2.38,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.31,
+          "current": 3.31,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 3.17,
+          "current": 3.17,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
+      },
       "suggestedPick": {
         "key": "btts",
         "label": "Les deux marquent",
@@ -15137,7 +13893,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.814Z"
+        "capturedAt": "2026-11-26T13:29:24.441Z"
       }
     },
     {
@@ -15177,6 +13933,38 @@
         "over": 2.19,
         "btts": 2.01
       },
+      "oddsMovement": {
+        "home": {
+          "previous": 2.38,
+          "current": 2.38,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.31,
+          "current": 3.31,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 3.17,
+          "current": 3.17,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
+      },
       "suggestedPick": {
         "key": "btts",
         "label": "Les deux marquent",
@@ -15188,7 +13976,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.816Z"
+        "capturedAt": "2026-11-26T13:29:24.442Z"
       }
     },
     {
@@ -15228,6 +14016,38 @@
         "over": 2.19,
         "btts": 2.01
       },
+      "oddsMovement": {
+        "home": {
+          "previous": 2.38,
+          "current": 2.38,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.31,
+          "current": 3.31,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 3.17,
+          "current": 3.17,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
+      },
       "suggestedPick": {
         "key": "btts",
         "label": "Les deux marquent",
@@ -15239,7 +14059,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.818Z"
+        "capturedAt": "2026-11-26T13:29:24.443Z"
       }
     },
     {
@@ -15279,6 +14099,38 @@
         "over": 2.19,
         "btts": 2.01
       },
+      "oddsMovement": {
+        "home": {
+          "previous": 2.38,
+          "current": 2.38,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.31,
+          "current": 3.31,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 3.17,
+          "current": 3.17,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
+      },
       "suggestedPick": {
         "key": "btts",
         "label": "Les deux marquent",
@@ -15290,7 +14142,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.819Z"
+        "capturedAt": "2026-11-26T13:29:24.444Z"
       }
     },
     {
@@ -15330,6 +14182,38 @@
         "over": 2.19,
         "btts": 2.01
       },
+      "oddsMovement": {
+        "home": {
+          "previous": 2.38,
+          "current": 2.38,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.31,
+          "current": 3.31,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 3.17,
+          "current": 3.17,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
+      },
       "suggestedPick": {
         "key": "btts",
         "label": "Les deux marquent",
@@ -15341,7 +14225,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.821Z"
+        "capturedAt": "2026-11-26T13:29:24.445Z"
       }
     },
     {
@@ -15381,6 +14265,38 @@
         "over": 2.19,
         "btts": 2.01
       },
+      "oddsMovement": {
+        "home": {
+          "previous": 2.38,
+          "current": 2.38,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.31,
+          "current": 3.31,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 3.17,
+          "current": 3.17,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
+      },
       "suggestedPick": {
         "key": "btts",
         "label": "Les deux marquent",
@@ -15392,7 +14308,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.823Z"
+        "capturedAt": "2026-11-26T13:29:24.446Z"
       }
     },
     {
@@ -15432,6 +14348,38 @@
         "over": 2.19,
         "btts": 2.01
       },
+      "oddsMovement": {
+        "home": {
+          "previous": 2.38,
+          "current": 2.38,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.31,
+          "current": 3.31,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 3.17,
+          "current": 3.17,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
+      },
       "suggestedPick": {
         "key": "btts",
         "label": "Les deux marquent",
@@ -15443,7 +14391,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.824Z"
+        "capturedAt": "2026-11-26T13:29:24.447Z"
       }
     },
     {
@@ -15483,6 +14431,38 @@
         "over": 2.19,
         "btts": 2.01
       },
+      "oddsMovement": {
+        "home": {
+          "previous": 2.38,
+          "current": 2.38,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.31,
+          "current": 3.31,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 3.17,
+          "current": 3.17,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
+      },
       "suggestedPick": {
         "key": "btts",
         "label": "Les deux marquent",
@@ -15494,7 +14474,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.826Z"
+        "capturedAt": "2026-11-26T13:29:24.448Z"
       }
     },
     {
@@ -15534,6 +14514,38 @@
         "over": 2.19,
         "btts": 2.01
       },
+      "oddsMovement": {
+        "home": {
+          "previous": 2.38,
+          "current": 2.38,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.31,
+          "current": 3.31,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 3.17,
+          "current": 3.17,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
+      },
       "suggestedPick": {
         "key": "btts",
         "label": "Les deux marquent",
@@ -15545,7 +14557,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.828Z"
+        "capturedAt": "2026-11-26T13:29:24.449Z"
       }
     },
     {
@@ -15585,6 +14597,38 @@
         "over": 2.19,
         "btts": 2.01
       },
+      "oddsMovement": {
+        "home": {
+          "previous": 2.38,
+          "current": 2.38,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.31,
+          "current": 3.31,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 3.17,
+          "current": 3.17,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
+      },
       "suggestedPick": {
         "key": "btts",
         "label": "Les deux marquent",
@@ -15596,7 +14640,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.830Z"
+        "capturedAt": "2026-11-26T13:29:24.450Z"
       }
     },
     {
@@ -15636,6 +14680,38 @@
         "over": 2.19,
         "btts": 2.01
       },
+      "oddsMovement": {
+        "home": {
+          "previous": 2.38,
+          "current": 2.38,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.31,
+          "current": 3.31,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 3.17,
+          "current": 3.17,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
+      },
       "suggestedPick": {
         "key": "btts",
         "label": "Les deux marquent",
@@ -15647,7 +14723,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.831Z"
+        "capturedAt": "2026-11-26T13:29:24.451Z"
       }
     },
     {
@@ -15687,6 +14763,38 @@
         "over": 2.19,
         "btts": 2.01
       },
+      "oddsMovement": {
+        "home": {
+          "previous": 2.38,
+          "current": 2.38,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.31,
+          "current": 3.31,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 3.17,
+          "current": 3.17,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
+      },
       "suggestedPick": {
         "key": "btts",
         "label": "Les deux marquent",
@@ -15698,7 +14806,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.833Z"
+        "capturedAt": "2026-11-26T13:29:24.452Z"
       }
     },
     {
@@ -15738,6 +14846,38 @@
         "over": 1.49,
         "btts": 1.51
       },
+      "oddsMovement": {
+        "home": {
+          "previous": 1.68,
+          "current": 1.68,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.4,
+          "current": 3.4,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 2.28,
+          "current": 2.28,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 1.49,
+          "current": 1.49,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 1.51,
+          "current": 1.51,
+          "percent": 0,
+          "significant": false
+        }
+      },
       "suggestedPick": {
         "key": "over",
         "label": "Plus de 2,5 buts",
@@ -15749,7 +14889,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.834Z"
+        "capturedAt": "2026-11-26T13:29:24.452Z"
       }
     },
     {
@@ -15789,6 +14929,38 @@
         "over": 1.64,
         "btts": 1.69
       },
+      "oddsMovement": {
+        "home": {
+          "previous": 1.68,
+          "current": 1.68,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.59,
+          "current": 3.59,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 2.92,
+          "current": 2.92,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 1.64,
+          "current": 1.64,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 1.69,
+          "current": 1.69,
+          "percent": 0,
+          "significant": false
+        }
+      },
       "suggestedPick": {
         "key": "over",
         "label": "Plus de 2,5 buts",
@@ -15800,7 +14972,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.836Z"
+        "capturedAt": "2026-11-26T13:29:24.454Z"
       }
     },
     {
@@ -15840,6 +15012,38 @@
         "over": 1.64,
         "btts": 1.69
       },
+      "oddsMovement": {
+        "home": {
+          "previous": 1.68,
+          "current": 1.68,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.59,
+          "current": 3.59,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 2.92,
+          "current": 2.92,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 1.64,
+          "current": 1.64,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 1.69,
+          "current": 1.69,
+          "percent": 0,
+          "significant": false
+        }
+      },
       "suggestedPick": {
         "key": "over",
         "label": "Plus de 2,5 buts",
@@ -15851,7 +15055,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.837Z"
+        "capturedAt": "2026-11-26T13:29:24.454Z"
       }
     },
     {
@@ -15891,6 +15095,38 @@
         "over": 1.64,
         "btts": 1.69
       },
+      "oddsMovement": {
+        "home": {
+          "previous": 1.68,
+          "current": 1.68,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.59,
+          "current": 3.59,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 2.92,
+          "current": 2.92,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 1.64,
+          "current": 1.64,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 1.69,
+          "current": 1.69,
+          "percent": 0,
+          "significant": false
+        }
+      },
       "suggestedPick": {
         "key": "over",
         "label": "Plus de 2,5 buts",
@@ -15902,7 +15138,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.837Z"
+        "capturedAt": "2026-11-26T13:29:24.455Z"
       }
     },
     {
@@ -15942,6 +15178,38 @@
         "over": 1.7,
         "btts": 1.65
       },
+      "oddsMovement": {
+        "home": {
+          "previous": 2.16,
+          "current": 2.16,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.15,
+          "current": 3.15,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 2.28,
+          "current": 2.28,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 1.7,
+          "current": 1.7,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 1.65,
+          "current": 1.65,
+          "percent": 0,
+          "significant": false
+        }
+      },
       "suggestedPick": {
         "key": "btts",
         "label": "Les deux marquent",
@@ -15953,7 +15221,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.838Z"
+        "capturedAt": "2026-11-26T13:29:24.456Z"
       }
     },
     {
@@ -15993,6 +15261,38 @@
         "over": 1.7,
         "btts": 1.65
       },
+      "oddsMovement": {
+        "home": {
+          "previous": 2.16,
+          "current": 2.16,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.15,
+          "current": 3.15,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 2.28,
+          "current": 2.28,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 1.7,
+          "current": 1.7,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 1.65,
+          "current": 1.65,
+          "percent": 0,
+          "significant": false
+        }
+      },
       "suggestedPick": {
         "key": "btts",
         "label": "Les deux marquent",
@@ -16004,7 +15304,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.839Z"
+        "capturedAt": "2026-11-26T13:29:24.457Z"
       }
     },
     {
@@ -16044,6 +15344,38 @@
         "over": 1.7,
         "btts": 1.65
       },
+      "oddsMovement": {
+        "home": {
+          "previous": 2.16,
+          "current": 2.16,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.15,
+          "current": 3.15,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 2.28,
+          "current": 2.28,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 1.7,
+          "current": 1.7,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 1.65,
+          "current": 1.65,
+          "percent": 0,
+          "significant": false
+        }
+      },
       "suggestedPick": {
         "key": "btts",
         "label": "Les deux marquent",
@@ -16055,7 +15387,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.840Z"
+        "capturedAt": "2026-11-26T13:29:24.458Z"
       }
     },
     {
@@ -16095,6 +15427,38 @@
         "over": 1.86,
         "btts": 1.77
       },
+      "oddsMovement": {
+        "home": {
+          "previous": 2.38,
+          "current": 2.38,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.18,
+          "current": 3.18,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 2.43,
+          "current": 2.43,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 1.86,
+          "current": 1.86,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 1.77,
+          "current": 1.77,
+          "percent": 0,
+          "significant": false
+        }
+      },
       "suggestedPick": {
         "key": "btts",
         "label": "Les deux marquent",
@@ -16106,7 +15470,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.841Z"
+        "capturedAt": "2026-11-26T13:29:24.459Z"
       }
     },
     {
@@ -16146,6 +15510,38 @@
         "over": 2.19,
         "btts": 2.01
       },
+      "oddsMovement": {
+        "home": {
+          "previous": 2.38,
+          "current": 2.38,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.31,
+          "current": 3.31,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 3.17,
+          "current": 3.17,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
+      },
       "suggestedPick": {
         "key": "btts",
         "label": "Les deux marquent",
@@ -16157,7 +15553,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.842Z"
+        "capturedAt": "2026-11-26T13:29:24.460Z"
       }
     },
     {
@@ -16197,6 +15593,38 @@
         "over": 2.19,
         "btts": 2.01
       },
+      "oddsMovement": {
+        "home": {
+          "previous": 2.38,
+          "current": 2.38,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.31,
+          "current": 3.31,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 3.17,
+          "current": 3.17,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
+      },
       "suggestedPick": {
         "key": "btts",
         "label": "Les deux marquent",
@@ -16208,7 +15636,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.843Z"
+        "capturedAt": "2026-11-26T13:29:24.461Z"
       }
     },
     {
@@ -16248,6 +15676,38 @@
         "over": 2.19,
         "btts": 2.01
       },
+      "oddsMovement": {
+        "home": {
+          "previous": 2.38,
+          "current": 2.38,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.31,
+          "current": 3.31,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 3.17,
+          "current": 3.17,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
+      },
       "suggestedPick": {
         "key": "btts",
         "label": "Les deux marquent",
@@ -16259,7 +15719,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.844Z"
+        "capturedAt": "2026-11-26T13:29:24.462Z"
       }
     },
     {
@@ -16299,6 +15759,38 @@
         "over": 2.19,
         "btts": 2.01
       },
+      "oddsMovement": {
+        "home": {
+          "previous": 2.38,
+          "current": 2.38,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.31,
+          "current": 3.31,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 3.17,
+          "current": 3.17,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
+      },
       "suggestedPick": {
         "key": "btts",
         "label": "Les deux marquent",
@@ -16310,7 +15802,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.845Z"
+        "capturedAt": "2026-11-26T13:29:24.463Z"
       }
     },
     {
@@ -16350,6 +15842,38 @@
         "over": 2.19,
         "btts": 2.01
       },
+      "oddsMovement": {
+        "home": {
+          "previous": 2.38,
+          "current": 2.38,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.31,
+          "current": 3.31,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 3.17,
+          "current": 3.17,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
+      },
       "suggestedPick": {
         "key": "btts",
         "label": "Les deux marquent",
@@ -16361,7 +15885,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.846Z"
+        "capturedAt": "2026-11-26T13:29:24.464Z"
       }
     },
     {
@@ -16401,6 +15925,38 @@
         "over": 2.19,
         "btts": 2.01
       },
+      "oddsMovement": {
+        "home": {
+          "previous": 2.38,
+          "current": 2.38,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.31,
+          "current": 3.31,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 3.17,
+          "current": 3.17,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
+      },
       "suggestedPick": {
         "key": "btts",
         "label": "Les deux marquent",
@@ -16412,7 +15968,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.846Z"
+        "capturedAt": "2026-11-26T13:29:24.465Z"
       }
     },
     {
@@ -16452,6 +16008,38 @@
         "over": 2.19,
         "btts": 2.01
       },
+      "oddsMovement": {
+        "home": {
+          "previous": 2.38,
+          "current": 2.38,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.31,
+          "current": 3.31,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 3.17,
+          "current": 3.17,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
+      },
       "suggestedPick": {
         "key": "btts",
         "label": "Les deux marquent",
@@ -16463,7 +16051,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.847Z"
+        "capturedAt": "2026-11-26T13:29:24.466Z"
       }
     },
     {
@@ -16503,6 +16091,38 @@
         "over": 2.19,
         "btts": 2.01
       },
+      "oddsMovement": {
+        "home": {
+          "previous": 2.38,
+          "current": 2.38,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.31,
+          "current": 3.31,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 3.17,
+          "current": 3.17,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
+      },
       "suggestedPick": {
         "key": "btts",
         "label": "Les deux marquent",
@@ -16514,7 +16134,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.848Z"
+        "capturedAt": "2026-11-26T13:29:24.467Z"
       }
     },
     {
@@ -16554,6 +16174,38 @@
         "over": 2.19,
         "btts": 2.01
       },
+      "oddsMovement": {
+        "home": {
+          "previous": 2.38,
+          "current": 2.38,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.31,
+          "current": 3.31,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 3.17,
+          "current": 3.17,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
+      },
       "suggestedPick": {
         "key": "btts",
         "label": "Les deux marquent",
@@ -16565,7 +16217,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.849Z"
+        "capturedAt": "2026-11-26T13:29:24.468Z"
       }
     },
     {
@@ -16605,6 +16257,38 @@
         "over": 2.19,
         "btts": 2.01
       },
+      "oddsMovement": {
+        "home": {
+          "previous": 2.38,
+          "current": 2.38,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.31,
+          "current": 3.31,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 3.17,
+          "current": 3.17,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
+      },
       "suggestedPick": {
         "key": "btts",
         "label": "Les deux marquent",
@@ -16616,7 +16300,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.850Z"
+        "capturedAt": "2026-11-26T13:29:24.469Z"
       }
     },
     {
@@ -16656,6 +16340,38 @@
         "over": 2.19,
         "btts": 2.01
       },
+      "oddsMovement": {
+        "home": {
+          "previous": 2.38,
+          "current": 2.38,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.31,
+          "current": 3.31,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 3.17,
+          "current": 3.17,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
+      },
       "suggestedPick": {
         "key": "btts",
         "label": "Les deux marquent",
@@ -16667,7 +16383,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.851Z"
+        "capturedAt": "2026-11-26T13:29:24.470Z"
       }
     },
     {
@@ -16707,6 +16423,38 @@
         "over": 2.19,
         "btts": 2.01
       },
+      "oddsMovement": {
+        "home": {
+          "previous": 2.38,
+          "current": 2.38,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.31,
+          "current": 3.31,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 3.17,
+          "current": 3.17,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
+      },
       "suggestedPick": {
         "key": "btts",
         "label": "Les deux marquent",
@@ -16718,7 +16466,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.852Z"
+        "capturedAt": "2026-11-26T13:29:24.471Z"
       }
     },
     {
@@ -16758,6 +16506,38 @@
         "over": 2.19,
         "btts": 2.01
       },
+      "oddsMovement": {
+        "home": {
+          "previous": 2.38,
+          "current": 2.38,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.31,
+          "current": 3.31,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 3.17,
+          "current": 3.17,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
+      },
       "suggestedPick": {
         "key": "btts",
         "label": "Les deux marquent",
@@ -16769,7 +16549,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.853Z"
+        "capturedAt": "2026-11-26T13:29:24.472Z"
       }
     },
     {
@@ -16809,6 +16589,38 @@
         "over": 2.19,
         "btts": 2.01
       },
+      "oddsMovement": {
+        "home": {
+          "previous": 2.38,
+          "current": 2.38,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.31,
+          "current": 3.31,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 3.17,
+          "current": 3.17,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
+      },
       "suggestedPick": {
         "key": "btts",
         "label": "Les deux marquent",
@@ -16820,7 +16632,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.853Z"
+        "capturedAt": "2026-11-26T13:29:24.473Z"
       }
     },
     {
@@ -16860,6 +16672,38 @@
         "over": 2.19,
         "btts": 2.01
       },
+      "oddsMovement": {
+        "home": {
+          "previous": 2.38,
+          "current": 2.38,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.31,
+          "current": 3.31,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 3.17,
+          "current": 3.17,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
+      },
       "suggestedPick": {
         "key": "btts",
         "label": "Les deux marquent",
@@ -16871,7 +16715,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.854Z"
+        "capturedAt": "2026-11-26T13:29:24.474Z"
       }
     },
     {
@@ -16911,6 +16755,38 @@
         "over": 2.19,
         "btts": 2.01
       },
+      "oddsMovement": {
+        "home": {
+          "previous": 2.38,
+          "current": 2.38,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.31,
+          "current": 3.31,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 3.17,
+          "current": 3.17,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
+      },
       "suggestedPick": {
         "key": "btts",
         "label": "Les deux marquent",
@@ -16922,7 +16798,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.855Z"
+        "capturedAt": "2026-11-26T13:29:24.475Z"
       }
     },
     {
@@ -16962,6 +16838,38 @@
         "over": 2.19,
         "btts": 2.01
       },
+      "oddsMovement": {
+        "home": {
+          "previous": 2.38,
+          "current": 2.38,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.31,
+          "current": 3.31,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 3.17,
+          "current": 3.17,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
+      },
       "suggestedPick": {
         "key": "btts",
         "label": "Les deux marquent",
@@ -16973,7 +16881,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.856Z"
+        "capturedAt": "2026-11-26T13:29:24.476Z"
       }
     },
     {
@@ -17013,6 +16921,38 @@
         "over": 2.19,
         "btts": 2.01
       },
+      "oddsMovement": {
+        "home": {
+          "previous": 2.38,
+          "current": 2.38,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.31,
+          "current": 3.31,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 3.17,
+          "current": 3.17,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
+      },
       "suggestedPick": {
         "key": "btts",
         "label": "Les deux marquent",
@@ -17024,7 +16964,7 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.857Z"
+        "capturedAt": "2026-11-26T13:29:24.477Z"
       }
     },
     {
@@ -17064,6 +17004,38 @@
         "over": 2.19,
         "btts": 2.01
       },
+      "oddsMovement": {
+        "home": {
+          "previous": 2.38,
+          "current": 2.38,
+          "percent": 0,
+          "significant": false
+        },
+        "draw": {
+          "previous": 3.31,
+          "current": 3.31,
+          "percent": 0,
+          "significant": false
+        },
+        "away": {
+          "previous": 3.17,
+          "current": 3.17,
+          "percent": 0,
+          "significant": false
+        },
+        "over": {
+          "previous": 2.19,
+          "current": 2.19,
+          "percent": 0,
+          "significant": false
+        },
+        "btts": {
+          "previous": 2.01,
+          "current": 2.01,
+          "percent": 0,
+          "significant": false
+        }
+      },
       "suggestedPick": {
         "key": "btts",
         "label": "Les deux marquent",
@@ -17075,9 +17047,416 @@
         "real": false,
         "basis": "model-only",
         "modelVersion": "poisson-value-v3",
-        "capturedAt": "2026-11-25T13:49:14.858Z"
+        "capturedAt": "2026-11-26T13:29:24.478Z"
+      }
+    },
+    {
+      "id": "espn-401912261",
+      "date": "2026-12-03",
+      "kickoff": "2026-12-03T20:00:00.000Z",
+      "time": "21:00",
+      "league": "Coppa Italia",
+      "home": "Juventus",
+      "away": "Sassuolo",
+      "neutralSite": false,
+      "venue": {
+        "id": "4600",
+        "name": "Allianz Stadium"
+      },
+      "leagueLogo": "https://a.espncdn.com/i/leaguelogos/soccer/500/2192.png",
+      "leagueLogoDark": null,
+      "homeId": "111",
+      "awayId": "3997",
+      "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/111.png",
+      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/3997.png",
+      "priority": 55,
+      "featured": false,
+      "status": "Scheduled",
+      "completed": false,
+      "voided": false,
+      "knockout": false,
+      "regulation": null,
+      "homeScore": 0,
+      "awayScore": 0,
+      "homeGoals": 1.9,
+      "awayGoals": 1.15,
+      "odds": {
+        "home": 1.82,
+        "draw": 3.56,
+        "away": 3.17,
+        "over": 1.79,
+        "btts": 1.81
+      },
+      "suggestedPick": {
+        "key": "over",
+        "label": "Plus de 2,5 buts",
+        "family": "Buts",
+        "odd": 1.79,
+        "probability": 0.5879181591415857,
+        "refundProbability": 0,
+        "value": null,
+        "real": false,
+        "basis": "model-only",
+        "modelVersion": "poisson-value-v3",
+        "capturedAt": "2026-11-26T13:29:24.479Z"
+      }
+    },
+    {
+      "id": "espn-401878749",
+      "date": "2026-12-03",
+      "kickoff": "2026-12-03T20:00:00.000Z",
+      "time": "21:00",
+      "league": "Premier League",
+      "home": "Tottenham Hotspur",
+      "away": "Fulham",
+      "neutralSite": false,
+      "venue": {
+        "id": "7827",
+        "name": "Tottenham Hotspur Stadium"
+      },
+      "leagueLogo": "https://a.espncdn.com/i/leaguelogos/soccer/500/23.png",
+      "leagueLogoDark": "https://a.espncdn.com/i/leaguelogos/soccer/500-dark/23.png",
+      "homeId": "367",
+      "awayId": "370",
+      "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/367.png",
+      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/370.png",
+      "priority": 34,
+      "featured": false,
+      "status": "Scheduled",
+      "completed": false,
+      "voided": false,
+      "knockout": false,
+      "regulation": null,
+      "homeScore": 0,
+      "awayScore": 0,
+      "homeGoals": 1.45,
+      "awayGoals": 1.15,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 2.19,
+        "btts": 2.01
+      },
+      "suggestedPick": {
+        "key": "btts",
+        "label": "Les deux marquent",
+        "family": "Équipes",
+        "odd": 2.01,
+        "probability": 0.5230665207414825,
+        "refundProbability": 0,
+        "value": null,
+        "real": false,
+        "basis": "model-only",
+        "modelVersion": "poisson-value-v3",
+        "capturedAt": "2026-11-26T13:29:24.484Z"
+      }
+    },
+    {
+      "id": "espn-401936409",
+      "date": "2026-12-03",
+      "kickoff": "2026-12-03T18:00:00.000Z",
+      "time": "19:00",
+      "league": "Copa del Rey",
+      "home": "Atlético Paso",
+      "away": "Sevilla",
+      "neutralSite": false,
+      "venue": {
+        "id": "9345",
+        "name": "Campo Municipal de El Paso"
+      },
+      "leagueLogo": "https://a.espncdn.com/i/leaguelogos/soccer/500/80.png",
+      "leagueLogoDark": "https://a.espncdn.com/i/leaguelogos/soccer/500-dark/80.png",
+      "homeId": "21717",
+      "awayId": "243",
+      "homeLogo": "",
+      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/243.png",
+      "priority": 26,
+      "featured": false,
+      "status": "Scheduled",
+      "completed": false,
+      "voided": false,
+      "knockout": false,
+      "regulation": null,
+      "homeScore": 0,
+      "awayScore": 0,
+      "homeGoals": 1.45,
+      "awayGoals": 1.15,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 2.19,
+        "btts": 2.01
+      },
+      "suggestedPick": {
+        "key": "btts",
+        "label": "Les deux marquent",
+        "family": "Équipes",
+        "odd": 2.01,
+        "probability": 0.5230665207414825,
+        "refundProbability": 0,
+        "value": null,
+        "real": false,
+        "basis": "model-only",
+        "modelVersion": "poisson-value-v3",
+        "capturedAt": "2026-11-26T13:29:24.485Z"
+      }
+    },
+    {
+      "id": "espn-401936420",
+      "date": "2026-12-03",
+      "kickoff": "2026-12-03T18:00:00.000Z",
+      "time": "19:00",
+      "league": "Copa del Rey",
+      "home": "Real Ávila",
+      "away": "Getafe",
+      "neutralSite": false,
+      "venue": {
+        "id": "10136",
+        "name": "Municipal Adolfo Suárez"
+      },
+      "leagueLogo": "https://a.espncdn.com/i/leaguelogos/soccer/500/80.png",
+      "leagueLogoDark": "https://a.espncdn.com/i/leaguelogos/soccer/500-dark/80.png",
+      "homeId": "22439",
+      "awayId": "2922",
+      "homeLogo": "",
+      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/2922.png",
+      "priority": 26,
+      "featured": false,
+      "status": "Scheduled",
+      "completed": false,
+      "voided": false,
+      "knockout": false,
+      "regulation": null,
+      "homeScore": 0,
+      "awayScore": 0,
+      "homeGoals": 1.45,
+      "awayGoals": 1.15,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 2.19,
+        "btts": 2.01
+      },
+      "suggestedPick": {
+        "key": "btts",
+        "label": "Les deux marquent",
+        "family": "Équipes",
+        "odd": 2.01,
+        "probability": 0.5230665207414825,
+        "refundProbability": 0,
+        "value": null,
+        "real": false,
+        "basis": "model-only",
+        "modelVersion": "poisson-value-v3",
+        "capturedAt": "2026-11-26T13:29:24.486Z"
+      }
+    },
+    {
+      "id": "espn-401936418",
+      "date": "2026-12-03",
+      "kickoff": "2026-12-03T20:00:00.000Z",
+      "time": "21:00",
+      "league": "Copa del Rey",
+      "home": "Amorebieta",
+      "away": "Osasuna",
+      "neutralSite": false,
+      "venue": {
+        "id": "6801",
+        "name": "Urritxe"
+      },
+      "leagueLogo": "https://a.espncdn.com/i/leaguelogos/soccer/500/80.png",
+      "leagueLogoDark": "https://a.espncdn.com/i/leaguelogos/soccer/500-dark/80.png",
+      "homeId": "12587",
+      "awayId": "97",
+      "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/12587.png",
+      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/97.png",
+      "priority": 26,
+      "featured": false,
+      "status": "Scheduled",
+      "completed": false,
+      "voided": false,
+      "knockout": false,
+      "regulation": null,
+      "homeScore": 0,
+      "awayScore": 0,
+      "homeGoals": 1.45,
+      "awayGoals": 1.15,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 2.19,
+        "btts": 2.01
+      },
+      "suggestedPick": {
+        "key": "btts",
+        "label": "Les deux marquent",
+        "family": "Équipes",
+        "odd": 2.01,
+        "probability": 0.5230665207414825,
+        "refundProbability": 0,
+        "value": null,
+        "real": false,
+        "basis": "model-only",
+        "modelVersion": "poisson-value-v3",
+        "capturedAt": "2026-11-26T13:29:24.489Z"
+      }
+    },
+    {
+      "id": "espn-401936407",
+      "date": "2026-12-03",
+      "kickoff": "2026-12-03T20:00:00.000Z",
+      "time": "21:00",
+      "league": "Copa del Rey",
+      "home": "Coria",
+      "away": "Málaga",
+      "neutralSite": false,
+      "venue": {
+        "id": "8567",
+        "name": "Estadio La Isla"
+      },
+      "leagueLogo": "https://a.espncdn.com/i/leaguelogos/soccer/500/80.png",
+      "leagueLogoDark": "https://a.espncdn.com/i/leaguelogos/soccer/500-dark/80.png",
+      "homeId": "20821",
+      "awayId": "99",
+      "homeLogo": "",
+      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/99.png",
+      "priority": 26,
+      "featured": false,
+      "status": "Scheduled",
+      "completed": false,
+      "voided": false,
+      "knockout": false,
+      "regulation": null,
+      "homeScore": 0,
+      "awayScore": 0,
+      "homeGoals": 1.45,
+      "awayGoals": 1.15,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 2.19,
+        "btts": 2.01
+      },
+      "suggestedPick": {
+        "key": "btts",
+        "label": "Les deux marquent",
+        "family": "Équipes",
+        "odd": 2.01,
+        "probability": 0.5230665207414825,
+        "refundProbability": 0,
+        "value": null,
+        "real": false,
+        "basis": "model-only",
+        "modelVersion": "poisson-value-v3",
+        "capturedAt": "2026-11-26T13:29:24.491Z"
+      }
+    },
+    {
+      "id": "espn-401936410",
+      "date": "2026-12-03",
+      "kickoff": "2026-12-03T20:00:00.000Z",
+      "time": "21:00",
+      "league": "Copa del Rey",
+      "home": "Real Jaen CF",
+      "away": "Valencia",
+      "neutralSite": false,
+      "venue": {
+        "id": "10830",
+        "name": "Nuevo Estadio Municipal de La Victoria"
+      },
+      "leagueLogo": "https://a.espncdn.com/i/leaguelogos/soccer/500/80.png",
+      "leagueLogoDark": "https://a.espncdn.com/i/leaguelogos/soccer/500-dark/80.png",
+      "homeId": "5401",
+      "awayId": "94",
+      "homeLogo": "",
+      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/94.png",
+      "priority": 26,
+      "featured": false,
+      "status": "Scheduled",
+      "completed": false,
+      "voided": false,
+      "knockout": false,
+      "regulation": null,
+      "homeScore": 0,
+      "awayScore": 0,
+      "homeGoals": 1.45,
+      "awayGoals": 1.15,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 2.19,
+        "btts": 2.01
+      },
+      "suggestedPick": {
+        "key": "btts",
+        "label": "Les deux marquent",
+        "family": "Équipes",
+        "odd": 2.01,
+        "probability": 0.5230665207414825,
+        "refundProbability": 0,
+        "value": null,
+        "real": false,
+        "basis": "model-only",
+        "modelVersion": "poisson-value-v3",
+        "capturedAt": "2026-11-26T13:29:24.493Z"
+      }
+    },
+    {
+      "id": "espn-401936419",
+      "date": "2026-12-03",
+      "kickoff": "2026-12-03T20:00:00.000Z",
+      "time": "21:00",
+      "league": "Copa del Rey",
+      "home": "Real Zaragoza",
+      "away": "Burgos",
+      "neutralSite": false,
+      "venue": {
+        "id": "10354",
+        "name": "Ibercaja Estadio"
+      },
+      "leagueLogo": "https://a.espncdn.com/i/leaguelogos/soccer/500/80.png",
+      "leagueLogoDark": "https://a.espncdn.com/i/leaguelogos/soccer/500-dark/80.png",
+      "homeId": "91",
+      "awayId": "12597",
+      "homeLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/91.png",
+      "awayLogo": "https://a.espncdn.com/i/teamlogos/soccer/500/12597.png",
+      "priority": 26,
+      "featured": false,
+      "status": "Scheduled",
+      "completed": false,
+      "voided": false,
+      "knockout": false,
+      "regulation": null,
+      "homeScore": 0,
+      "awayScore": 0,
+      "homeGoals": 1.45,
+      "awayGoals": 1.15,
+      "odds": {
+        "home": 2.38,
+        "draw": 3.31,
+        "away": 3.17,
+        "over": 2.19,
+        "btts": 2.01
+      },
+      "suggestedPick": {
+        "key": "btts",
+        "label": "Les deux marquent",
+        "family": "Équipes",
+        "odd": 2.01,
+        "probability": 0.5230665207414825,
+        "refundProbability": 0,
+        "value": null,
+        "real": false,
+        "basis": "model-only",
+        "modelVersion": "poisson-value-v3",
+        "capturedAt": "2026-11-26T13:29:24.495Z"
       }
     }
-  ],
-  "scoresUpdatedAt": "2026-11-26T05:04:36.224Z"
+  ]
 }
